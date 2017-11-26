@@ -25,5 +25,5 @@ cat headers.csv | sort -u  > headers_unique.csv
 
 find $1 -iname "*.csv" | while read f
 do
-    cat "${f}" | grep -i "Number of Infants given BCG"  >>  headers.csv
+    cat "${f}" | grep -i "Number of Infants given BCG"  >>  INFANTS_GIVEN_BCG.csv
 done
