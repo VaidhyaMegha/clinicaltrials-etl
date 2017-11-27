@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/file_headers.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert2csv.sh" afterPath="$PROJECT_DIR$/convert2csv.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/convert2csv.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
-              <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+              <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -353,12 +355,12 @@
       <workItem from="1509886134097" duration="415000" />
       <workItem from="1510285049851" duration="29000" />
       <workItem from="1510504370373" duration="501000" />
-      <workItem from="1511705077653" duration="19080000" />
+      <workItem from="1511705077653" duration="19181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33222000" />
+    <option name="totallyTimeSpent" value="33323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1922" height="1092" extended-state="6" />
@@ -818,7 +820,7 @@
     <entry file="file://$PROJECT_DIR$/convert2csv.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
-          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
           <folding />
         </state>
       </provider>

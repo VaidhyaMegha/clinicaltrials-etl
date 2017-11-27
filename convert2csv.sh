@@ -27,10 +27,10 @@ done
 # Pick Header rows
 find temp -iname "*.csv" | while read f
 do
-    cat "${f}" | grep -i "Number" | sed  's/,/\n/g'  | xargs -I line echo "${f},"line >>  file_headers.csv
+    cat "${f}" | grep -i "Number" | sed  's/,/\n/g'  | xargs -I line echo "${f},"line >>  HMIS_file_headers.csv
 done
 
 
 # find unique columns
-cat file_headers.csv | cut -d, -f2 |  sort -u  > headers.csv
+cat HMIS_file_headers.csv | cut -d, -f2 |  sort -u  > headers.csv
 
