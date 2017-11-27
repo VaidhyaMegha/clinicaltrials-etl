@@ -32,5 +32,5 @@ done
 
 
 # find unique columns
-cat file_headers.csv | cut -d| -f2 |  sort -u  > headers.csv
+cat file_headers.csv | cut -d, -f2 |  sort -u  > headers.csv
 
