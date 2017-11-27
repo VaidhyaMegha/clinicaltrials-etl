@@ -1,29 +1,36 @@
 #!/usr/bin/env bash
 set -ex
 
+# To Execute this script provide folder containing dataset, as zip files, as argument
+# ./convert2csv.sh  datasets/datainsights-in
+
+
 # Cleanup
-rm headers.csv
-find $1 -name "*.csv" -delete
+rm -f file_headers.csv
+rm -rf temp
+
+mkdir temp
+
+# Find and unzip zip files into temp directory
+find $1 -iname "*.zip" | while read f
+do
+     unzip ${f} -d temp/
+done
 
 # Convert to CSV
-find $1 -iname "*.xls" | while read f
+find temp -iname "*.xls" | while read f
 do
      libreoffice --headless --convert-to csv "${f}" --outdir "$(dirname "${f}")"
 done
 
 
 # Pick Header rows
-find $1 -iname "*.csv" | while read f
+find temp -iname "*.csv" | while read f
 do
-    cat "${f}" | grep -i "Number" | sed  's/,/\n/g'  | sort -u  >>  headers.csv
+    cat "${f}" | grep -i "Number" | sed  's/,/\n/g'  | xargs -I line echo "${f},"line >>  file_headers.csv
 done
 
 
 # find unique columns
-cat headers.csv | sort -u  > headers_unique.csv
+cat file_headers.csv | cut -d| -f2 |  sort -u  > headers.csv
 
-
-find $1 -iname "*.csv" | while read f
-do
-    cat "${f}" | grep -i "Number of Infants given BCG"  >>  INFANTS_GIVEN_BCG.csv
-done

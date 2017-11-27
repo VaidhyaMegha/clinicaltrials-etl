@@ -11,6 +11,13 @@ Three focus ares
 - Data outliers (anomalies) ex: Aizwal 2009-10 no data for most of the metrics
 
 
+References
+----------
+- https://docs.aws.amazon.com/athena/latest/ug/code-samples.html
+- https://docs.aws.amazon.com/athena/latest/ug/getting-started.html
+- https://aws.amazon.com/about-aws/whats-new/2017/05/amazon-athena-adds-api-cli-aws-sdk-support-and-audit-logging-with-aws-cloudtrail/
+- https://aws.amazon.com/blogs/big-data/10-best-practices-for-amazon-redshift-spectrum/
+- https://wiki.openoffice.org/wiki/Documentation/DevGuide/Spreadsheets/Filter_Options#Filter_Options_for_the_CSV_Filter
 
 
 Anaemia 
