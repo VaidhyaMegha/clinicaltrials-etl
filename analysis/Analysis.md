@@ -20,6 +20,15 @@ References
 - https://wiki.openoffice.org/wiki/Documentation/DevGuide/Spreadsheets/Filter_Options#Filter_Options_for_the_CSV_Filter
 
 
+App Ideas
+----------------
+ex: based on blood bank data build a geo-location aware app to find closest/best-match blood bank.
+
+Platform for real time monitoring of blood bank capacity (falls into a category EHR, HMS)
+B+,1200L
+A+,2000L
+AB-,10L
+
 Anaemia 
 -------
 
