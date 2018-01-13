@@ -36,7 +36,7 @@ for i in ${!formats[*]}; do
     done
 done
 
-aws --profile=personal s3 sync ${s3_bucket_local} s3://datainsights-in/
+aws --profile=personal s3 sync ${s3_bucket_local} s3://datainsights-results/
 
 ### now loop through the above array
 #for i in ${!formats[*]}; do
