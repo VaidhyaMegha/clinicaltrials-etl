@@ -12,7 +12,12 @@ rm -f catalog.csv
 find ${input} | grep json | while read f
 do
     index_name=$(jq '.index_name' ${f})
+    source=$(jq '.source' ${f})
+    sector=$(jq '.sector' ${f})
+    org=$(jq '.org' ${f})
     title=$(jq '.title' ${f})
+
     f=${f//datasets\//}
-    echo "\""${f}"\","${index_name}","${title} >> catalog.csv
+
+    echo "\""${f}"\"|"${index_name}"|"${source}"|"${sector}"|"${org}"|"${title} >> catalog.csv
 done
