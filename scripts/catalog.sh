@@ -6,11 +6,13 @@ set -ex
 
 input=$1
 
-rm catalog.csv
+rm -f catalog.csv
 
 ## now loop through the above array
-find ${input} | grep json | xargs -I {} cat {} | grep -oE "\"title\":\"[^\"]*\"" | while read f
+find ${input} | grep json | while read f
 do
-    f=${f//\"title\":/}
-    echo "\"data.gov.in\","${f} >> catalog.csv
+    index_name=$(jq '.index_name' ${f})
+    title=$(jq '.title' ${f})
+    f=${f//datasets\//}
+    echo "\""${f}"\","${index_name}","${title} >> catalog.csv
 done
