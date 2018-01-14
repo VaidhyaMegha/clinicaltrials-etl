@@ -2,35 +2,17 @@
 set -ex
 
 # To Execute this script provide folder containing dataset, as zip files, as argument
-# ./convert2csv.sh  datasets/datainsights-in
+# ./scripts/convert2json.sh  datasets/datainsights-in
 
 
-# Cleanup
-rm -f file_headers.csv
-rm -rf temp
-
-mkdir temp
-
-# Find and unzip zip files into temp directory
-find $1 -iname "*.zip" | while read f
-do
-     unzip ${f} -d temp/
-done
-
-# Convert to CSV
-find temp -iname "*.xls" | while read f
-do
-     libreoffice --headless --convert-to json "${f}" --outdir "$(dirname "${f}")"
-done
+./scripts/convert2csv.sh $1
 
 
 # Pick Header rows
-find temp -iname "*.json" | while read f
+find temp -iname "*.csv" | while read f
 do
-    cat "${f}" | grep -i "Number" | sed  's/,/\n/g'  | xargs -I line echo "${f},"line >>  HMIS_file_headers.csv
+    g=${f//\.csv/\.json}
+    csvtojson parse --noheader=true "${f}" > "${g}"
 done
 
-
-# find unique columns
-cat HMIS_file_headers.csv | cut -d, -f2 |  sort -u  > headers.csv
 

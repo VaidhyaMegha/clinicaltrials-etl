@@ -2,7 +2,7 @@
 set -ex
 
 # To Execute this script provide folder containing dataset, as zip files, as argument
-# ./convert2csv.sh  datasets/datainsights-in
+# ./scripts/convert2csv.sh  datasets/datainsights-in
 
 
 # Cleanup

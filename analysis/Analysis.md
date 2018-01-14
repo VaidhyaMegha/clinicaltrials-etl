@@ -32,6 +32,7 @@ Artifacts
 
 References
 ----------
+- https://github.com/Keyang/node-csvtojson
 - https://docs.aws.amazon.com/athena/latest/ug/code-samples.html
 - https://docs.aws.amazon.com/athena/latest/ug/getting-started.html
 - https://aws.amazon.com/about-aws/whats-new/2017/05/amazon-athena-adds-api-cli-aws-sdk-support-and-audit-logging-with-aws-cloudtrail/
