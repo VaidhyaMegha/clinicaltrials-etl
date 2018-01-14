@@ -2,7 +2,9 @@ Focus
 -----
 - DATA ---> Health ---> Open Health Data ---> India
     - HMIS (in-progress)
+        -  PUBLISHEDREPORTS - PERFORMANCE OF KEY HMIS INDICATORS(UPTO DISTRICT LEVEL)
     - data.gov.in (in-progress)
+        - APIs
     - clinicaltrials.gov
     - opentrials.net
     - https://www.healthdata.gov/search/type/dataset
