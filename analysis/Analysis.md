@@ -16,7 +16,6 @@ Artifacts
 - Focused actions --> APP ex: 
     - based on blood bank data build a geo-location aware app to find closest/best-match blood bank.
     
-    
             Platform for real time monitoring of blood bank capacity (falls into a category EHR, HMS)
             B+,1200L
             A+,2000L
