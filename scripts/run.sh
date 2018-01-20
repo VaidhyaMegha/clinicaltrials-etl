@@ -1,17 +1,22 @@
 #!/usr/bin/env bash
 
+source $(pwd)/env.sh
+
+cd ${DATA_HOME}
+
 # HMIS Processing
-./HMIS/convert2csv.sh  datasets/datainsights-in/HMIS
-./HMIS/convert2json.sh  temp/HMIS
+${SCRIPTS_HOME}HMIS/convert2csv.sh  "datainsights-in/HMIS"
+${SCRIPTS_HOME}HMIS/convert2json.sh  "datainsights-results/HMIS"
 
 # data.gov.in
-./data.gov.in/apis.sh datasets/datainsights-in/data.gov.in/
-./data.gov.in/catalog.sh datasets/datainsights-results/data.gov.in/api/download
+${SCRIPTS_HOME}data.gov.in/apis.sh "datainsights-in/data.gov.in/" "datainsights-results/data.gov.in/api/"
+${SCRIPTS_HOME}data.gov.in/catalog.sh "datainsights-results/data.gov.in/api"
 
 # ClinicalTrials
-./clinicaltrials/aact/extract.sh  "../datasets/datainsights-in/clinicaltrials/aact" "../datasets/datainsights-results/clinicaltrials/aact"
+
+${SCRIPTS_HOME}clinicaltrials/aact/extract.sh  "datainsights-in/clinicaltrials/aact" "datainsights-results/clinicaltrials/aact"
 
 # Mesh RDF
-./Ontologies/mesh/rdf_extract.sh  "../datasets/datainsights-in/Ontologies/mesh/rdf" "../datasets/datainsights-results/Ontologies/mesh/rdf"
+${SCRIPTS_HOME}Ontologies/mesh/rdf_extract.sh  "datainsights-in/Ontologies/mesh/rdf" "datainsights-results/Ontologies/mesh/rdf"
 
 aws --profile=personal s3 sync ${s3_bucket_local} s3://datainsights-results/

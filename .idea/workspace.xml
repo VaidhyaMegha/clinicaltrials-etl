@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/Ontologies/mesh/rdf_extract.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/clinicaltrials/aact/extract.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/run.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/utility.sh" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HMIS_file_headers.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/headers.csv" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scripts/apis.sh" afterPath="$PROJECT_DIR$/scripts/data.gov.in/apis.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scripts/catalog.sh" afterPath="$PROJECT_DIR$/scripts/data.gov.in/catalog.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scripts/convert2csv.sh" afterPath="$PROJECT_DIR$/scripts/HMIS/convert2csv.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scripts/convert2json.sh" afterPath="$PROJECT_DIR$/scripts/HMIS/convert2json.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/env.sh" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog.csv" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/HMIS/convert2csv.sh" afterPath="$PROJECT_DIR$/scripts/HMIS/convert2csv.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/Ontologies/mesh/rdf_extract.sh" afterPath="$PROJECT_DIR$/scripts/Ontologies/mesh/rdf_extract.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/clinicaltrials/aact/extract.sh" afterPath="$PROJECT_DIR$/scripts/clinicaltrials/aact/extract.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/data.gov.in/apis.sh" afterPath="$PROJECT_DIR$/scripts/data.gov.in/apis.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/data.gov.in/catalog.sh" afterPath="$PROJECT_DIR$/scripts/data.gov.in/catalog.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/run.sh" afterPath="$PROJECT_DIR$/scripts/run.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,38 +29,28 @@
       <file leaf-file-name="convert2csv.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/HMIS/convert2csv.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="54" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="54" />
+            <state relative-caret-position="144">
+              <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="convert2json.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="convert2json.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/HMIS/convert2json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="35" />
+            <state relative-caret-position="306">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apis.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="apis.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/data.gov.in/apis.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="extract.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/clinicaltrials/aact/extract.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+            <state relative-caret-position="126">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -71,8 +59,18 @@
       <file leaf-file-name="rdf_extract.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/Ontologies/mesh/rdf_extract.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="115" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="115" />
+            <state relative-caret-position="144">
+              <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="extract.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/clinicaltrials/aact/extract.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -81,8 +79,18 @@
       <file leaf-file-name="run.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/run.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="117" lean-forward="false" selection-start-line="14" selection-start-column="117" selection-end-line="14" selection-end-column="117" />
+            <state relative-caret-position="144">
+              <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="catalog.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/data.gov.in/catalog.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="21" column="92" lean-forward="false" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="92" />
               <folding />
             </state>
           </provider>
@@ -98,21 +106,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="catalog.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/data.gov.in/catalog.sh">
+      <file leaf-file-name="env.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/env.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="81" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="81" />
+            <state relative-caret-position="54">
+              <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="catalog.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog.csv">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64692">
-              <caret line="3594" column="0" lean-forward="false" selection-start-line="3594" selection-start-column="0" selection-end-line="3594" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -132,7 +140,13 @@
       <find>find temp -iname &quot;*.csv&quot; | while read f</find>
       <find>Number of Infants given BCG</find>
       <find>lat</find>
+      <find>mesh</find>
+      <find>./</find>
     </findStrings>
+    <replaceStrings>
+      <replace>${SCRIPT}</replace>
+      <replace>${SCRIPTS_HOME}</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -149,7 +163,6 @@
         <option value="$PROJECT_DIR$/datasets/List.csv" />
         <option value="$PROJECT_DIR$/usecases/Analysis.md" />
         <option value="$PROJECT_DIR$/datasources/data_gov_in_api_endpoints.csv" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/analysis/xml_to_csv2.xslt" />
         <option value="$PROJECT_DIR$/analysis/xmltransform.sh" />
         <option value="$PROJECT_DIR$/temp/bloodbanks_key_value.xml.csv" />
@@ -167,17 +180,19 @@
         <option value="$PROJECT_DIR$/scripts/convert2csv.sh" />
         <option value="$PROJECT_DIR$/analysis/Analysis.md" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/scripts/data.gov.in/catalog.sh" />
-        <option value="$PROJECT_DIR$/scripts/HMIS/convert2csv.sh" />
         <option value="$PROJECT_DIR$/scripts/HMIS/convert2json.sh" />
         <option value="$PROJECT_DIR$/scripts/clincialtrials/aact/convert2csv.sh" />
-        <option value="$PROJECT_DIR$/scripts/data.gov.in/apis.sh" />
         <option value="$PROJECT_DIR$/scripts/clincialtrials/aact/extract.sh" />
-        <option value="$PROJECT_DIR$/scripts/clinicaltrials/aact/extract.sh" />
         <option value="$PROJECT_DIR$/scripts/Ontologies/mesh/extract.sh" />
-        <option value="$PROJECT_DIR$/scripts/Ontologies/mesh/rdf_extract.sh" />
         <option value="$PROJECT_DIR$/scripts/utility.sh" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/scripts/clinicaltrials/aact/extract.sh" />
+        <option value="$PROJECT_DIR$/scripts/HMIS/convert2csv.sh" />
+        <option value="$PROJECT_DIR$/scripts/Ontologies/mesh/rdf_extract.sh" />
+        <option value="$PROJECT_DIR$/scripts/data.gov.in/apis.sh" />
+        <option value="$PROJECT_DIR$/scripts/data.gov.in/catalog.sh" />
         <option value="$PROJECT_DIR$/scripts/run.sh" />
+        <option value="$PROJECT_DIR$/scripts/env.sh" />
       </list>
     </option>
   </component>
@@ -227,58 +242,7 @@
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataInsights" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataInsights" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="datainsights-in" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataInsights" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="datainsights-in" type="462c0819:PsiDirectoryNode" />
-              <item name="clinicaltrials" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataInsights" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="datainsights-in" type="462c0819:PsiDirectoryNode" />
-              <item name="clinicaltrials" type="462c0819:PsiDirectoryNode" />
-              <item name="aact" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataInsights" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="datainsights-in" type="462c0819:PsiDirectoryNode" />
-              <item name="Ontologies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataInsights" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="datainsights-in" type="462c0819:PsiDirectoryNode" />
-              <item name="Ontologies" type="462c0819:PsiDirectoryNode" />
-              <item name="mesh" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataInsights" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="datainsights-in" type="462c0819:PsiDirectoryNode" />
-              <item name="Ontologies" type="462c0819:PsiDirectoryNode" />
-              <item name="mesh" type="462c0819:PsiDirectoryNode" />
-              <item name="rdf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataInsights" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="datainsights-results" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -508,12 +472,12 @@
       <workItem from="1515894921592" duration="5394000" />
       <workItem from="1515905275887" duration="6158000" />
       <workItem from="1516457314802" duration="2510000" />
-      <workItem from="1516460263489" duration="2557000" />
+      <workItem from="1516460263489" duration="11343000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79810000" />
+    <option name="totallyTimeSpent" value="88596000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -532,7 +496,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22371967" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21078168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -597,26 +561,9 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/0e4d6a14-3af0-4be2-87d1-16259191265d.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/2ee6a6f7-8e5f-4b6e-94c7-c5a5303019ef.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/03d767fc-cc9d-4a34-b29c-1463175beb2e.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/7f902f2c-9418-49fb-9785-7f14962c4d2e.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/8e8cc605-5395-4691-a1c1-2921b15d31c0.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/38d46d0b-aed4-4cbe-a94b-39f2eaab55f6.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/872a4c11-f55c-4fec-8d30-8f0205e11821.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/89225ca5-8c10-4cee-a76e-8a6cb9c1711d.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/6376342f-8606-4923-8c2c-ff478bc3e4d8.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/aa0cbfbe-2e69-4cae-a2f1-4d76f730ce2b.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/ade78d4e-2659-4572-80ce-3a2abb324fc7.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/e9ed0d92-ec86-4d28-96be-78dbc85ef59b.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/e32b99ba-9f7f-48fe-bfd5-fd9e2bd8870e.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/eb01bc75-4fae-486a-a916-c4a93d570fc6.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/fe39af67-f231-4f83-bb4a-e9a5ecb29e33.json" />
-    <entry file="file://$PROJECT_DIR$/output/data.gov.in/c44360dc-bf00-470f-851d-567058ee2a1b.json" />
-    <entry file="file://$PROJECT_DIR$/0e4d6a14-3af0-4be2-87d1-16259191265d?format=json&amp;api-key=579b464db66ec23bdd0000013909768f85ab43d265ee826acf566584" />
     <entry file="file://$PROJECT_DIR$/03d767fc-cc9d-4a34-b29c-1463175beb2e?format=json&amp;api-key=579b464db66ec23bdd0000013909768f85ab43d265ee826acf566584" />
     <entry file="file://$PROJECT_DIR$/02d44f8f-b7ad-41cd-9125-58feb921c566?format=json&amp;api-key=579b464db66ec23bdd0000013909768f85ab43d265ee826acf566584" />
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/data.gov.in/api/download/8e8cc605-5395-4691-a1c1-2921b15d31c0.json">
+    <entry file="file://$PROJECT_DIR$/data/datainsights-results/data.gov.in/api/download/8e8cc605-5395-4691-a1c1-2921b15d31c0.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -625,49 +572,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/data.gov.in/api/log/8e8cc605-5395-4691-a1c1-2921b15d31c0.json.log" />
     <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/data.gov.in/api/log/045d2e71-e691-4229-bc5f-381b97277e16.json.log" />
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/data.gov.in/api/download/fe39af67-f231-4f83-bb4a-e9a5ecb29e33.json">
+    <entry file="file://$PROJECT_DIR$/data/datainsights-results/data.gov.in/api/download/fe39af67-f231-4f83-bb4a-e9a5ecb29e33.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/data.gov.in/api/download/0be8e2fa-6771-4d73-b7dc-56f1a7fe8660.json">
+    <entry file="file://$PROJECT_DIR$/data/datainsights-results/data.gov.in/api/download/0be8e2fa-6771-4d73-b7dc-56f1a7fe8660.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/data.gov.in/api/download/0d82108a-a3d7-43e8-803b-f16e49c2c40e.json">
+    <entry file="file://$PROJECT_DIR$/data/datainsights-results/data.gov.in/api/download/0d82108a-a3d7-43e8-803b-f16e49c2c40e.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/data.gov.in/api/download/0a66c1e3-ede4-45a9-998f-04c68fc8ee0c.json">
+    <entry file="file://$PROJECT_DIR$/data/datainsights-results/data.gov.in/api/download/0a66c1e3-ede4-45a9-998f-04c68fc8ee0c.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/data.gov.in/api/download/0a9b30d8-bc95-4fc3-9438-97c01e16c9da.json">
+    <entry file="file://$PROJECT_DIR$/data/datainsights-results/data.gov.in/api/download/0a9b30d8-bc95-4fc3-9438-97c01e16c9da.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="133" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="133" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/data.gov.in/api/download/0a1e9a26-e069-4465-81b9-f6958379ca12.json">
+    <entry file="file://$PROJECT_DIR$/data/datainsights-results/data.gov.in/api/download/0a1e9a26-e069-4465-81b9-f6958379ca12.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="403" lean-forward="false" selection-start-line="0" selection-start-column="403" selection-end-line="0" selection-end-column="403" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/data.gov.in/api/download/0a9b30d8-bc95-4fc3-9438-97c01e16c9da.csv">
+    <entry file="file://$PROJECT_DIR$/data/datainsights-results/data.gov.in/api/download/0a9b30d8-bc95-4fc3-9438-97c01e16c9da.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -675,21 +622,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datasets/datainsights-in/HMIS_Additional_Datasets/98fa254e-c5f8-4910-a19b-4828939b477d?format=csv&amp;api-key=579b464db66ec23bdd0000013909768f85ab43d265ee826acf566584" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/analysis/DataSources.md" />
-    <entry file="file://$PROJECT_DIR$/datasets/List.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HMIS_file_headers.csv" />
     <entry file="file://$PROJECT_DIR$/snippets/datasources/data_gov_in_api_endpoints.csv">
       <provider selected="true" editor-type-id="text-editor">
@@ -729,23 +662,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/HMIS/convert2csv.sh">
+    <entry file="file://$PROJECT_DIR$/data/List.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="54" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="54" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/HMIS/convert2json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="35" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/temp/Ontologies/mesh/rdf/mesh.nt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-162641">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/temp/clinicaltrials/aact/baseline_measurements.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="296">
+          <caret line="1558" column="318" lean-forward="false" selection-start-line="1558" selection-start-column="318" selection-end-line="1558" selection-end-column="318" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/clinicaltrials/aact/brief_summaries.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/clinicaltrials/aact/browse_conditions.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/clinicaltrials/aact/browse_interventions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/clinicaltrials/aact/calculated_values.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="50" column="50" lean-forward="true" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/clinicaltrials/aact/id_information.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/clinicaltrials/aact/intervention_other_names.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/clinicaltrials/aact/keywords.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/clinicaltrials/aact/interventions.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/clinicaltrials/aact/links.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-879076">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/clinicaltrials/aact/milestones.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/clinicaltrials/aact/outcome_analyses.txt">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -760,10 +775,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/temp/clinicaltrials/aact/file_headers.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/datainsights-results/clinicaltrials/aact/file_headers.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/datainsights-results/HMIS/HMIS_file_headers.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/datainsights-results/catalog.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/HMIS/convert2csv.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/clinicaltrials/aact/extract.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        <state relative-caret-position="360">
+          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/data.gov.in/catalog.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="92" lean-forward="false" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="92" />
           <folding />
         </state>
       </provider>
@@ -776,34 +846,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/Ontologies/mesh/rdf_extract.sh">
+    <entry file="file://$PROJECT_DIR$/scripts/env.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="115" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="115" />
+        <state relative-caret-position="54">
+          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/run.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="117" lean-forward="false" selection-start-line="14" selection-start-column="117" selection-end-line="14" selection-end-column="117" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/data.gov.in/catalog.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="81" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="81" />
+        <state relative-caret-position="144">
+          <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/data.gov.in/apis.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/Ontologies/mesh/rdf_extract.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/HMIS/convert2json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>

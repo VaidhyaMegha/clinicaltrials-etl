@@ -2,27 +2,22 @@
 set -ex
 
 # To Execute this script provide folder containing dataset, as zip files, as argument
-# ./data.gov.in/apis.sh datasets/datainsights-in/data.gov.in/
+# ./data.gov.in/apis.sh datasets/datainsights-in/data.gov.in/ datasets/datainsights-results/data.gov.in/api/
 
 
-# Cleanup
-source="data.gov.in"
-s3_bucket_local="datasets/datainsights-results/"
+source $(pwd)/env.sh
+source $(pwd)/utility.sh
 
-output_folder=${s3_bucket_local}${source}"/api/download/"
-log_folder=${s3_bucket_local}${source}"/api/log/"
+input=$1
+OUT_DIR=${2:-'temp/data.gov.in/api/'}
 
-rm -rf ${output_folder}
-rm -rf ${log_folder}
+cleanup  ${OUT_DIR}
 
-mkdir -p ${output_folder}
-mkdir -p ${log_folder}
 
 api_key="579b464db66ec23bdd0000013909768f85ab43d265ee826acf566584"
 prefix_url="https://api.data.gov.in/resource"
 suffix_url="&api-key="${api_key}
 
-input=$1
 formats=( "json" "csv" "xml" )
 
 
@@ -32,6 +27,6 @@ for i in ${!formats[*]}; do
     do
         f=${f//\/api/}
         wget -q ${prefix_url}${f}"?format="${formats[${i}]}${suffix_url} \
-             -O ${output_folder}/${f}.${formats[${i}]} -o ${log_folder}/${f}.${formats[${i}]}.log || true
+             -O ${OUT_DIR}/${f}.${formats[${i}]} -o ${LOG_HOME}/${f}.${formats[${i}]}.log || true
     done
 done

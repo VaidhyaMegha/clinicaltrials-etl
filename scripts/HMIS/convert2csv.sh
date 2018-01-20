@@ -5,6 +5,7 @@ set -ex
 # ./HMIS/convert2csv.sh  datasets/datainsights-in/HMIS
 
 
+source $(pwd)/env.sh
 source $(pwd)/utility.sh
 
 OUT_DIR="temp/HMIS"
@@ -21,12 +22,12 @@ done
 
 
 # Pick Header rows
-find temp -iname "*.csv" | while read f
+find ${OUT_DIR} -iname "*.csv" | while read f
 do
-    cat "${f}" | grep -ai "Number" | sed  's/,/\n/g'  | xargs -I line echo "${f},"line >>  ${OUT_DIR}/HMIS_file_headers.csv
+    cat "${f}" | grep -ai "Number" | sed  's/,/\n/g'  | xargs -I line echo "${f},"line >>  ${OUT_DIR}/file_headers.csv
 done
 
 
 # find unique columns
-cat HMIS_file_headers.csv | cut -d, -f2 |  sort -u  > ${OUT_DIR}/headers.csv
+cat ${OUT_DIR}/file_headers.csv | cut -d, -f2 |  sort -u  > ${OUT_DIR}/headers.csv
 

@@ -2,7 +2,7 @@
 set -ex
 
 # To Execute this script provide folder containing dataset, as zip files, as argument
-# ./data.gov.in/catalog.sh datasets/datainsights-results/data.gov.in/api/download
+# ./data.gov.in/catalog.sh datasets/datainsights-results/data.gov.in/api
 
 input=$1
 
@@ -19,5 +19,5 @@ do
 
     f=${f//datasets\//}
 
-    echo "\""${f}"\"|"${index_name}"|"${source}"|"${sector}"|"${org}"|"${title} >> catalog.csv
+    echo "\""${f}"\"|"${index_name}"|"${source}"|"${sector}"|"${org}"|"${title} >> ${input}/catalog.csv
 done
