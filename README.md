@@ -31,9 +31,17 @@ Artifacts
         ex: JSY,  number of Pregnant women received TT2 or Booster
     - Data outliers (anomalies) ex: Aizwal 2009-10 no data for most of the metrics
 
+Ideas
+-----
+- aact inspired project for data.gov.in to use RSS Feeds from data.gov.in and use it to generate jsons (and postgreSQL database?)
+- OCR and CV based mobile app on BYOD for tabulating blood bank repositories 
+    - Incentive for hospitals - free, easy access through apps, analytics
 
-References
-----------
+Reference Projects, Tools and Articles
+--------------------------------------
+- https://github.com/HHS/meshrdf
+- https://github.com/EBISPOT/lodestar
+- https://github.com/openlink/virtuoso-opensource
 - https://github.com/Keyang/node-csvtojson
 - https://docs.aws.amazon.com/athena/latest/ug/code-samples.html
 - https://docs.aws.amazon.com/athena/latest/ug/getting-started.html
