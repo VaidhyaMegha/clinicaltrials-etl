@@ -22,7 +22,7 @@ Artifacts
             B+,1200L
             A+,2000L
             AB-,10L
-- Analytical reports --> Papers
+- Analytical reports --> Papers (ex: https://timesofindia.indiatimes.com/india/fertility-rate-below-replacement-level-for-all-but-hindus-muslims/articleshow/62465588.cms)
     - Conditions and metrics related to each ex: Anaemia
     
             Year, District, Anemia metrics1, Anemia metrics2,
@@ -37,12 +37,18 @@ Ideas
 - OCR and CV based mobile app on BYOD for tabulating blood bank repositories 
     - Incentive for hospitals - free, easy access through apps, analytics
 
+Key Terms
+---------
+RDF, SPARQL,JSON-LD,Linked Data, Semantic web
+
 Reference Projects, Tools and Articles
 --------------------------------------
 - https://github.com/HHS/meshrdf
 - https://github.com/EBISPOT/lodestar
 - https://github.com/openlink/virtuoso-opensource
 - https://github.com/Keyang/node-csvtojson
+- http://aact.ctti-clinicaltrials.org/pipe_files_with_r
+- https://www.coursera.org/learn/clinical-research
 - https://docs.aws.amazon.com/athena/latest/ug/code-samples.html
 - https://docs.aws.amazon.com/athena/latest/ug/getting-started.html
 - https://aws.amazon.com/about-aws/whats-new/2017/05/amazon-athena-adds-api-cli-aws-sdk-support-and-audit-logging-with-aws-cloudtrail/

@@ -2,13 +2,12 @@
 set -ex
 
 # To Execute this script provide folder containing dataset, as zip files, as argument
-# ./data.gov.in/apis.sh datasets/datainsights-in/data.gov.in/ datasets/datainsights-results/data.gov.in/api/
+# ./data.gov.in/apis.sh datainsights-in/data.gov.in/ datainsights-results/data.gov.in/api/
 
 
 source $(pwd)/env.sh
 source $(pwd)/utility.sh
 
-input=$1
 OUT_DIR=${2:-'temp/data.gov.in/api/'}
 
 cleanup  ${OUT_DIR}
@@ -23,7 +22,7 @@ formats=( "json" "csv" "xml" )
 
 ## now loop through the above array
 for i in ${!formats[*]}; do
-    find ${input} | grep html | xargs -I {} cat {} | grep -oE "/[^/]*/api" | while read f
+    find ${DATA_HOME}/${1} | grep html | xargs -I {} cat {} | grep -oE "/[^/]*/api" | while read f
     do
         f=${f//\/api/}
         wget -q ${prefix_url}${f}"?format="${formats[${i}]}${suffix_url} \
