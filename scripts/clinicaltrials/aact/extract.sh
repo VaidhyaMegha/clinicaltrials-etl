@@ -2,7 +2,7 @@
 set -ex
 
 # To Execute this script provide folder containing dataset, as zip files, as argument
-# ./clinicaltrials/aact/extract.sh  "../datasets/datainsights-in/clinicaltrials/aact" "../temp/clinicaltrials/aact"
+# ./clinicaltrials/aact/extract.sh  "../data/datainsights-in/clinicaltrials/aact" "../data/datainsights-results/clinicaltrials/aact"
 
 
 source $(pwd)/env.sh
@@ -18,4 +18,5 @@ find ${OUT_DIR} -type f  | while read f
 do
 
     head -n 1 ${f} | sed  's/|/\n/g'  | xargs -I line echo "${f},"line >>  ${OUT_DIR}/file_headers.csv
+    gzip ${f}
 done
