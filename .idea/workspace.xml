@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/data.gov.in/catalog.sh" afterPath="$PROJECT_DIR$/scripts/data.gov.in/catalog.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,16 +42,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3582">
               <caret line="199" column="50" lean-forward="false" selection-start-line="199" selection-start-column="50" selection-end-line="199" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="extract.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/clinicaltrials/aact/extract.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="132" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="132" />
               <folding />
             </state>
           </provider>
@@ -113,8 +102,8 @@
       <file leaf-file-name="catalog.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/data.gov.in/catalog.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            <state relative-caret-position="216">
+              <caret line="12" column="58" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -183,13 +172,14 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/scripts/HMIS/convert2csv.sh" />
         <option value="$PROJECT_DIR$/scripts/Ontologies/mesh/rdf_extract.sh" />
-        <option value="$PROJECT_DIR$/scripts/data.gov.in/catalog.sh" />
         <option value="$PROJECT_DIR$/scripts/run.sh" />
         <option value="$PROJECT_DIR$/scripts/data.gov.in/apis.sh" />
         <option value="$PROJECT_DIR$/scripts/env.sh" />
         <option value="$PROJECT_DIR$/data/datainsights-results/clinicaltrials/aact/file_headers.csv" />
         <option value="$PROJECT_DIR$/scripts/clinicaltrials/aact/extract.sh" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/scripts/data.gov.in/catalog.sh" />
+        <option value="$PROJECT_DIR$/data/datainsights-results/catalog.csv" />
       </list>
     </option>
   </component>
@@ -243,6 +233,17 @@
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="datainsights-results" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="data.gov.in" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -440,12 +441,12 @@
       <workItem from="1517062172495" duration="7435000" />
       <workItem from="1517179235577" duration="704000" />
       <workItem from="1517539742932" duration="10000" />
-      <workItem from="1517544505217" duration="885000" />
+      <workItem from="1517544505217" duration="1077000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106165000" />
+    <option name="totallyTimeSpent" value="106357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -749,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/datainsights-results/catalog.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/clinicaltrials/aact/extract.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -776,14 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7092">
           <caret line="394" column="108" lean-forward="false" selection-start-line="394" selection-start-column="108" selection-end-line="394" selection-end-column="108" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/data.gov.in/apis.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -830,10 +816,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/data.gov.in/apis.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/datainsights-results/catalog.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="52" lean-forward="false" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/data.gov.in/catalog.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        <state relative-caret-position="216">
+          <caret line="12" column="58" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="58" />
           <folding />
         </state>
       </provider>
