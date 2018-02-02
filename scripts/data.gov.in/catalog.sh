@@ -10,7 +10,7 @@ rm -f catalog.csv
 
 ## now loop through the above array
 
-echo "S3FilePath|FileGUID|Source|Sector|Organization|Title" >> ${input}/catalog.csv
+echo "S3FilePath|FileGUID|Source|Sector|Organization|Title" > ${input}/catalog.csv
 
 find ${input} | grep json | while read f
 do
