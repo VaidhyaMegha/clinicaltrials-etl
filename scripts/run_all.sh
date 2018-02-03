@@ -7,6 +7,8 @@ cd ${DATA_HOME}
 # HMIS Processing
 ${SCRIPTS_HOME}HMIS/convert2csv.sh  "datainsights-in/HMIS"
 ${SCRIPTS_HOME}HMIS/convert2json.sh  "datainsights-results/HMIS"
+${SCRIPTS_HOME}HMIS/catalog.sh "datainsights-results/HMIS"
+
 
 # data.gov.in
 ${SCRIPTS_HOME}data.gov.in/apis.sh "datainsights-in/data.gov.in/" "datainsights-results/data.gov.in/api/"

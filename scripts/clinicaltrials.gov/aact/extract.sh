@@ -2,7 +2,7 @@
 set -ex
 
 # To Execute this script provide folder containing dataset, as zip files, as argument
-# ./clinicaltrials/aact/extract.sh  "../data/datainsights-in/clinicaltrials/aact" "../data/datainsights-results/clinicaltrials/aact"
+# ./scripts/clinicaltrials/aact/extract.sh  "datasets/datainsights-in/clinicaltrials/aact" "datasets/datainsights-results/clinicaltrials.gov/aact"
 
 
 source $(pwd)/env.sh

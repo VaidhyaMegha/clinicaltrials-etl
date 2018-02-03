@@ -5,7 +5,9 @@ Focus
         -  PUBLISHEDREPORTS - PERFORMANCE OF KEY HMIS INDICATORS(UPTO DISTRICT LEVEL)
     - data.gov.in (in-progress)
         - APIs
-    - clinicaltrials.gov
+    - https://github.com/opentrials/registers
+        - clinicaltrials.gov
+        - http://ctri.nic.in/Clinicaltrials/advancesearchmain.php
     - Mesh
     - opentrials.net
     - https://www.healthdata.gov/search/type/dataset
@@ -13,6 +15,7 @@ Focus
 Artifacts
 --------
 - Navigable data --> SPA 
+- CTRI scraper and postgres db dump along with a postgres RDS snapshot containing both clinicaltrials.gov, ctri and possibly other trial registries
 - Interesting insights --> Articles (Freakonomics) ex:     
     - Skew in Tubectomy vs Vasectomy and its social inferences
     - Crime statistics vs population esp. choice in birth, abortion
