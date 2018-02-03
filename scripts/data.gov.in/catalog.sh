@@ -2,11 +2,11 @@
 set -ex
 
 # To Execute this script provide folder containing dataset, as zip files, as argument
-# ./data.gov.in/catalog.sh datasets/datainsights-results/data.gov.in/api
+# ./iscripts/data.gov.in/catalog.sh datasets/datainsights-results/data.gov.in/api
 
 input=$1
 
-rm -f catalog.csv
+rm -f ${input}/catalog.csv
 
 ## now loop through the above array
 
