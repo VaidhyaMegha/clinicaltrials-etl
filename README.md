@@ -7,14 +7,15 @@ Focus
         - APIs
     - https://github.com/opentrials/registers
         - clinicaltrials.gov
-        - http://ctri.nic.in/Clinicaltrials/advancesearchmain.php
+        - http://ctri.nic.in/Clinicaltrials/advancesearchmain.php - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3667290/
+        - https://github.com/CrossRef/clinical-trials-importer/blob/develop/resources/clinical-trial-registries.edn
     - Mesh
     - opentrials.net
     - https://www.healthdata.gov/search/type/dataset
 
 Artifacts
 --------
-- Navigable data --> SPA 
+- Searcable Navigable data --> SPA 
 - CTRI scraper and postgres db dump along with a postgres RDS snapshot containing both clinicaltrials.gov, ctri and possibly other trial registries
 - Interesting insights --> Articles (Freakonomics) ex:     
     - Skew in Tubectomy vs Vasectomy and its social inferences
@@ -38,8 +39,10 @@ Artifacts
 Ideas
 -----
 - aact inspired project for data.gov.in to use RSS Feeds from data.gov.in and use it to generate jsons (and postgreSQL database?)
+- aact inspired project for ctri.nic.in and use it to generate jsons (and postgreSQL database?)
 - OCR and CV based mobile app on BYOD for tabulating blood bank repositories 
     - Incentive for hospitals - free, easy access through apps, analytics
+- Ontology for data.gov.in
 
 Key Terms
 ---------
@@ -53,6 +56,7 @@ Reference Projects, Tools and Articles
 - https://github.com/Keyang/node-csvtojson
 - http://aact.ctti-clinicaltrials.org/pipe_files_with_r
 - https://www.coursera.org/learn/clinical-research
+- http://tabula.technology/
 - https://docs.aws.amazon.com/athena/latest/ug/code-samples.html
 - https://docs.aws.amazon.com/athena/latest/ug/getting-started.html
 - https://aws.amazon.com/about-aws/whats-new/2017/05/amazon-athena-adds-api-cli-aws-sdk-support-and-audit-logging-with-aws-cloudtrail/

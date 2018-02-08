@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -ex
 
-# To Execute this script provide folder containing dataset, as zip files, as argument
-# ./data.gov.in/apis.sh datainsights-in/data.gov.in/ datainsights-results/data.gov.in/api/
+# To Execute this script provide folder containing dataset as argument
+# ./scripts/data.gov.in/apis.sh datainsights-in/data.gov.in/ datainsights-results/data.gov.in/api/
 
 
 source $(pwd)/env.sh
