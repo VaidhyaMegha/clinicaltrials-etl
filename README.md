@@ -12,6 +12,8 @@ Focus
     - Mesh
     - opentrials.net
     - https://www.healthdata.gov/search/type/dataset
+    
+    Autocomplete and autoselection for defaults and list sizes ex: 10 for trials and 5 for papers based on citation						
 
 Artifacts
 --------
