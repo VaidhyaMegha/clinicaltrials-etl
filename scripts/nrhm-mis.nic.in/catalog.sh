@@ -2,7 +2,7 @@
 set -ex
 
 # To Execute this script provide folder containing dataset, as zip files, as argument
-# ./scripts/HMIS/catalog.sh datasets/datainsights-results/HMIS/
+# ./scripts/HMIS/catalog.sh datasets/datainsights-results/nrhm-mis.nic.in/
 
 input=$1
 

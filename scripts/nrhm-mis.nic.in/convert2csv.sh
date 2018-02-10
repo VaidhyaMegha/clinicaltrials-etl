@@ -2,7 +2,7 @@
 set -ex
 
 # To Execute this script provide folder containing dataset, as zip files, as argument
-# ./HMIS/convert2csv.sh  datasets/datainsights-in/HMIS
+# ./HMIS/convert2csv.sh  datasets/datainsights-in/nrhm-mis.nic.in
 
 
 source $(pwd)/env.sh

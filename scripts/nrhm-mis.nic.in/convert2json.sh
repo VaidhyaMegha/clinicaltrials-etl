@@ -2,7 +2,7 @@
 set -ex
 
 # To Execute this script provide folder containing dataset, as zip files, as argument
-# ./HMIS/convert2json.sh  temp/HMIS
+# ./HMIS/convert2json.sh  temp/nrhm-mis.nic.in
 
 
 # Pick Header rows

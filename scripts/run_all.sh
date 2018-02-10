@@ -4,10 +4,10 @@ source $(pwd)/env.sh
 
 cd ${DATA_HOME}
 
-# HMIS Processing
-${SCRIPTS_HOME}HMIS/convert2csv.sh  "datainsights-in/HMIS"
-${SCRIPTS_HOME}HMIS/convert2json.sh  "datainsights-results/HMIS"
-${SCRIPTS_HOME}HMIS/catalog.sh "datainsights-results/HMIS"
+# nrhm-mis.nic.in Processing
+${SCRIPTS_HOME}nrhm-mis.nic.in/convert2csv.sh  "datainsights-in/nrhm-mis.nic.in"
+${SCRIPTS_HOME}nrhm-mis.nic.in/convert2json.sh  "datainsights-results/nrhm-mis.nic.in"
+${SCRIPTS_HOME}nrhm-mis.nic.in/catalog.sh "datainsights-results/nrhm-mis.nic.in"
 
 
 # data.gov.in
