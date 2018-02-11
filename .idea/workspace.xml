@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/ctri.nic.in/transform.sh" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/clinicaltrials.gov/aact/catalog.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/ctri.nic.in/trials.sh" afterPath="$PROJECT_DIR$/scripts/ctri.nic.in/trials.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/utility.sh" afterPath="$PROJECT_DIR$/scripts/utility.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="catalog.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="catalog.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="712">
-              <caret line="49" column="20" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+            <state relative-caret-position="721">
+              <caret line="59" column="75" lean-forward="false" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -35,16 +35,6 @@
           <provider selected="true" editor-type-id="LargeFileEditor">
             <state relative-caret-position="18">
               <caret line="1846" column="0" lean-forward="false" selection-start-line="1846" selection-start-column="0" selection-end-line="1847" selection-end-column="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="env.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/env.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="28" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -91,11 +81,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="studies.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/ctri.nic.in/analysis/studies.csv">
+      <file leaf-file-name="catalog.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/clinicaltrials.gov/aact/catalog.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="684">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="studies.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/clinicaltrials.gov/analysis/studies.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-40840">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -112,10 +122,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>find temp -iname &quot;*.csv&quot; | while read f</find>
-      <find>Number of Infants given BCG</find>
-      <find>lat</find>
-      <find>./</find>
       <find>/api</find>
       <find>mesh</find>
       <find>mia</find>
@@ -137,13 +143,21 @@
       <find>Primary Sponsor Name self Address DR.ASHWINI $'B\r' DEPARTMENT OF DERMATOLOGY, VENEREOLOGY AND $'LEPROSY,\r' FATHER MULLER MEDICAL COLLEGE ,HOSPITAL, KANKANADY , MANGALORE 575002 Type of SponsorTit</find>
       <find>Title</find>
       <find>Type of Study</find>
-      <find>&lt;/td&gt;</find>
+      <find>|</find>
+      <find>type</find>
+      <find>study</find>
+      <find>typ</find>
+      <find>design</find>
+      <find>title</find>
+      <find>\|</find>
       <find>&quot;</find>
+      <find>&lt;/td&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace>${SCRIPT}</replace>
       <replace>${SCRIPTS_HOME}</replace>
       <replace>ncrb.gov.in</replace>
+      <replace>\n</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -157,10 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/convert2csv.sh" />
-        <option value="$PROJECT_DIR$/adapters/webcrawler/login_scraper.py" />
-        <option value="$PROJECT_DIR$/adapters/data.gov.in/apis.sh" />
-        <option value="$PROJECT_DIR$/datasets/datainsights-results/data.gov.in/api/download/0a1e9a26-e069-4465-81b9-f6958379ca12.json" />
         <option value="$PROJECT_DIR$/scripts/catalog.sh" />
         <option value="$PROJECT_DIR$/catalog.csv" />
         <option value="$PROJECT_DIR$/headers.csv" />
@@ -203,10 +213,14 @@
         <option value="$PROJECT_DIR$/scripts/nrhm-mis.nic.in/catalog.sh" />
         <option value="$PROJECT_DIR$/scripts/nrhm-mis.nic.in/convert2csv.sh" />
         <option value="$PROJECT_DIR$/scripts/nrhm-mis.nic.in/convert2json.sh" />
-        <option value="$PROJECT_DIR$/scripts/utility.sh" />
         <option value="$PROJECT_DIR$/scripts/ctri.nic.in/trials.sh" />
         <option value="$PROJECT_DIR$/datasets/datainsights-results/ctri.nic.in/html/sdfd" />
         <option value="$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh" />
+        <option value="$PROJECT_DIR$/test" />
+        <option value="$PROJECT_DIR$/scripts/processed" />
+        <option value="$PROJECT_DIR$/scripts/utility.sh" />
+        <option value="$PROJECT_DIR$/scripts/clinicaltrials.gov/aact/catalog.sh" />
+        <option value="$PROJECT_DIR$/datasets/datainsights-results/clinicaltrials.gov/analysis/studies.csv" />
         <option value="$PROJECT_DIR$/datasets/datainsights-results/ctri.nic.in/analysis/studies.csv" />
       </list>
     </option>
@@ -280,6 +294,21 @@
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="datasets" type="462c0819:PsiDirectoryNode" />
               <item name="datainsights-results" type="462c0819:PsiDirectoryNode" />
+              <item name="clinicaltrials.gov" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
+              <item name="datainsights-results" type="462c0819:PsiDirectoryNode" />
+              <item name="clinicaltrials.gov" type="462c0819:PsiDirectoryNode" />
+              <item name="analysis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
+              <item name="datainsights-results" type="462c0819:PsiDirectoryNode" />
               <item name="ctri.nic.in" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -294,6 +323,19 @@
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="clinicaltrials.gov" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="clinicaltrials.gov" type="462c0819:PsiDirectoryNode" />
+              <item name="aact" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -336,11 +378,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts/clinicaltrials.gov/aact" />
       <recent name="$PROJECT_DIR$/scripts/ctri.nic.in" />
       <recent name="$PROJECT_DIR$/scripts/ncrb.gov.in" />
       <recent name="$PROJECT_DIR$/scripts/HMIS" />
       <recent name="$PROJECT_DIR$/scripts/Ontologies/mesh" />
-      <recent name="$PROJECT_DIR$/scripts/clincialtrials/aact" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/snippets" />
@@ -516,12 +558,12 @@
       <workItem from="1517671156692" duration="9897000" />
       <workItem from="1518016542952" duration="3771000" />
       <workItem from="1518061109530" duration="26278000" />
-      <workItem from="1518204560982" duration="45828000" />
+      <workItem from="1518204560982" duration="49953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193498000" />
+    <option name="totallyTimeSpent" value="197623000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -636,38 +678,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/crime/ncrb.gov.in/StatPublications/CII/CII1997/cii1997/cii-1997/FIGURES AT A GLANCE.pdf.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/crime/ncrb.gov.in/StatPublications/CII/CII2004/cii-2004/1953-2004.pdf.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/crime/ncrb.gov.in/StatPublications/CII/CII2004/cii-2004/Feedback Form.pdf.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/crime/ncrb.gov.in/StatPublications/CII/CII2004/cii-2004/Foreword.pdf.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/crime/ncrb.gov.in/StatPublications/CII/CII2004/cii-2004/IMPROVEMENTS.pdf.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -956,14 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/utility.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/ctri.nic.in/txt/2.pdf.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-406">
@@ -1029,18 +1031,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/ctri.nic.in/analysis/studies.csv">
+    <entry file="file://$PROJECT_DIR$/scripts/processed">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="-23764">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="49" column="20" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+        <state relative-caret-position="721">
+          <caret line="59" column="75" lean-forward="false" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/clinicaltrials.gov/analysis/studies.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40840">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/ctri.nic.in/analysis/studies.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112635">
+          <caret line="0" column="112" lean-forward="false" selection-start-line="0" selection-start-column="112" selection-end-line="0" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/utility.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/clinicaltrials.gov/aact/catalog.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
