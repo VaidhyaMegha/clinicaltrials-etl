@@ -12,7 +12,7 @@ OUT_DIR=${2:-'temp/ctri.nic.in'}
 
 cleanup  ${DATA_HOME}/${OUT_DIR}
 
-echo "S3FilePath|FileGUID|Source|Sector|Organization|ClinicalTrialID|TypeOfTrial|TypeOfStudy|StudyDesign|Sponsor|Title" \
+echo "S3FilePath~FileGUID~Source~Sector~Organization~ClinicalTrialID~TypeOfTrial~TypeOfStudy~StudyDesign~Sponsor~Title~SecondaryID" \
     > ${DATA_HOME}/${OUT_DIR}/studies.csv
 
 function analyse_file() {
@@ -44,7 +44,11 @@ function analyse_file() {
     title=${title//Scientific Title of Study /}
     title=${title// Secondary ID/}
 
-    entry="${3}|${index_name}|ctri.nic.in|Health|ICMR|${ctr_num}|${type}|${typeOfStudy}|${studyDesign}|${sponsor}|${title}"
+    secondaryID=$(grep -oE "Identifier (.)* Details of Principal Investigator" <<< ${content} || true)
+    secondaryID=${secondaryID//Identifier /}
+    secondaryID=${secondaryID// Details of Principal Investigator/}
+
+    entry="${3}~${index_name}~ctri.nic.in~Health~ICMR~${ctr_num}~${type}~${typeOfStudy}~${studyDesign}~${sponsor}~${title}~${secondaryID}"
     entry=$(echo "${entry}" | xargs -0)
     entry=${entry//$'\r'/}
     entry=${entry//\"/}
