@@ -13,7 +13,6 @@ OUT_DIR=${2:-'temp/data.gov.in/api/'}
 cleanup  ${OUT_DIR}
 
 
-api_key="579b464db66ec23bdd0000013909768f85ab43d265ee826acf566584"
 prefix_url="https://api.data.gov.in/resource"
 suffix_url="&api-key="${api_key}
 

@@ -3,3 +3,7 @@
 SCRIPTS_HOME=$(pwd)
 DATA_HOME=$(pwd)/../datasets
 LOG_HOME=$(pwd)/../temp
+
+source $(pwd)/credentials.sh
+
+

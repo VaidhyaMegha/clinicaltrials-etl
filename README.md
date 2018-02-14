@@ -12,6 +12,8 @@ Focus
     - Mesh
     - opentrials.net
     - https://www.healthdata.gov/search/type/dataset
+    - https://www.cms.gov/Medicare/Coding/ICD10/2018-ICD-10-CM-and-GEMs.html
+    - https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html
     
     Autocomplete and autoselection for defaults and list sizes ex: 10 for trials and 5 for papers based on citation						
 
