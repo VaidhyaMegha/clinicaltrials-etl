@@ -1,9 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -ex
+
 
 # To Execute this script provide folder containing dataset, as zip files, as argument
 # ./Ontologies/umls/curl-uts-download.sh  "https://download.nlm.nih.gov/umls/kss/rxnorm/RxNorm_full_current.zip" "datainsights-results/Ontologies/umls/"
 
 source $(pwd)/env.sh
+source $(pwd)/utility.sh
 
 export CAS_LOGIN_URL=https://utslogin.nlm.nih.gov/cas/login
 export CAS_LOGOUT_URL=https://utslogin.nlm.nih.gov:443/cas/logout
