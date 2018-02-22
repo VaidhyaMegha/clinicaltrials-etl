@@ -1,0 +1,26 @@
+@startuml
+
+abstract class Intervention
+abstract class Outcome
+abstract class Identifier
+abstract class Facility
+abstract class Contact
+abstract class Sponsor {
+    String name
+    String address
+}
+abstract class Query
+abstract class Title {
+    String title
+}
+
+abstract class Condition
+abstract class Intervention
+abstract class Registry
+abstract class StudyDesign
+
+Title<|-- PublicTitle
+Title<|-- ScientificTitle
+
+
+@enduml
