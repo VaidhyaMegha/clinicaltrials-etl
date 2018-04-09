@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -ex +H
 
 # To Execute this script provide folder containing dataset as argument
 # ./ctri.nic.in/catalog.sh datainsights-results/ctri.nic.in/html datainsights-results/ctri.nic.in/analysis
@@ -18,8 +18,8 @@ echo "S3FilePath~FileGUID~Source~Sector~Organization~ClinicalTrialID~TypeOfTrial
 function analyse_file() {
     index_name=`python -c "from sys import argv;print(hash(argv[1]))" ${3}`
 
-    content=$( grep -Pzo "<table align=center(\n|.)*</table>" ${1} | tr -s " \t\n\r" | tr -d "\t\n\r" )
-    content=$( echo ${content} | sed -e 's/<[^>]*>//g' | sed 's/&nbsp;//g'| tr -s " \t\n\r" | tr -d "\t\n\r")
+    content=$( grep -Pzo "<table align=\"center(\n|.)*</table>" ${1} | tr -d " \t\n\r" )
+    content=$( echo ${content} | sed -e 's/<!--[^-]*-->//g' | sed -e 's/<[^>]*>//g' | sed 's/&nbsp;//g'|  tr -d " \t\n\r" )
 
     ctr_num=$( grep -oE "CTRI/[^\[]*\[Registered" <<< ${content} || true)
     ctr_num=${ctr_num//[Registered/}
@@ -48,7 +48,9 @@ function analyse_file() {
     secondaryID=${secondaryID//Identifier /}
     secondaryID=${secondaryID// Details of Principal Investigator/}
 
-    entry="${3}~${index_name}~ctri.nic.in~Health~ICMR~${ctr_num}~${type}~${typeOfStudy}~${studyDesign}~${sponsor}~${title}~${secondaryID}"
+    entry_pre="${3}~${index_name}~ctri.nic.in~Health~ICMR~"
+    entry=`python ctri.nic.in/ctri.py "${content}"`
+    entry=$(echo "${entry_pre}""${entry}")
     entry=$(echo "${entry}" | xargs -0)
     entry=${entry//$'\r'/}
     entry=${entry//\"/}
