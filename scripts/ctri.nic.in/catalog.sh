@@ -18,8 +18,8 @@ echo "S3FilePath~FileGUID~Source~Sector~Organization~ClinicalTrialID~TypeOfTrial
 function analyse_file() {
     index_name=`python -c "from sys import argv;print(hash(argv[1]))" ${3}`
 
-    content=$( grep -Pzo "<table align=\"center(\n|.)*</table>" ${1} | tr -d " \t\n\r" )
-    content=$( echo ${content} | sed -e 's/<!--[^-]*-->//g' | sed -e 's/<[^>]*>//g' | sed 's/&nbsp;//g'|  tr -d " \t\n\r" )
+    content=$( grep -Pzo "<table align=\"center(\n|.)*</table>" ${1} | tr -s " " | tr -d "\t\n\r" )
+    content=$( echo ${content} | sed -e 's/<!--[^-]*-->//g' | sed -e 's/<[^>]*>//g' | sed 's/&nbsp;//g' )
 
     ctr_num=$( grep -oE "CTRI/[^\[]*\[Registered" <<< ${content} || true)
     ctr_num=${ctr_num//[Registered/}
@@ -50,7 +50,7 @@ function analyse_file() {
 
     entry_pre="${3}~${index_name}~ctri.nic.in~Health~ICMR~"
     entry=`python ctri.nic.in/ctri.py "${content}"`
-    entry=$(echo "${entry_pre}""${entry}")
+    entry=$(echo "${entry_pre}${entry}" | tr -s " " | sed 's/ ~/~/g' | sed 's/~ /~/g')
     entry=$(echo "${entry}" | xargs -0)
     entry=${entry//$'\r'/}
     entry=${entry//\"/}

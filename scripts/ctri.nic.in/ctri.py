@@ -2,16 +2,16 @@ import re
 from sys import argv
 
 rep = {
-       "Modification(s)":"",
-       "CTRINumber":"",
-       "[Registeredon:":"~",
-       "]LastModifiedOn:":"~",
-       "PostGraduateThesis":"~",
-       "TypeofStudy":"~",
-       "TypeofTrial":"~",
-       "StudyDesign":"~",
-       "PublicTitleofStudy":"~",
-       "ScientificTitleofStudy":"~",
+       "Modification(s) ": "",
+       "CTRI Number ": "",
+       "[Registered on: ": "~",
+       "] Last Modified On: ": "~",
+       "Post Graduate Thesis ": "~",
+       "Type of Study ": "~",
+       "Type of Trial ": "~",
+       "Study Design ": "~",
+       "Public Title of Study ":"~",
+       "Scientific Title of Study ":"~",
        } # define desired replacements here
 
 # use these three lines to do the replacement
