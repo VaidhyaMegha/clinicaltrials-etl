@@ -11,6 +11,7 @@ pattern = re.compile("|".join(rep.keys()))
 text = pattern.sub(lambda m: rep[re.escape(m.group(0))], argv[1])
 
 print("S3FilePath~FileGUID~Source~Sector~Organization~" + "~".join(kv.keys()))
+print('\n')
 print(text)
 
 # Example
