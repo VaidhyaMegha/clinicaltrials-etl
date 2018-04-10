@@ -19,34 +19,7 @@ function analyse_file() {
     index_name=`python -c "from sys import argv;print(hash(argv[1]))" ${3}`
 
     content=$( grep -Pzo "<table align=\"center(\n|.)*</table>" ${1} | tr -s " " | tr -d "\t\n\r" )
-    content=$( echo ${content} | sed -e 's/<!--[^-]*-->//g' | sed -e 's/<[^>]*>//g' | sed 's/&nbsp;//g' )
-
-    ctr_num=$( grep -oE "CTRI/[^\[]*\[Registered" <<< ${content} || true)
-    ctr_num=${ctr_num//[Registered/}
-
-    type=$( grep -oE "Type of Trial (.)* Type of Study" <<< ${content} || true)
-    type=${type//Type of Trial /}
-    type=${type// Type of Study/}
-
-    typeOfStudy=$( grep -oE "Type of Study (.)* Study Design"<<< ${content}  || true)
-    typeOfStudy=${typeOfStudy//Type of Study /}
-    typeOfStudy=${typeOfStudy// Study Design/}
-
-    studyDesign=$( grep -oE "Study Design (.)* Public Title of Study" <<< ${content} || true)
-    studyDesign=${studyDesign//Study Design /}
-    studyDesign=${studyDesign// Public Title of Study/}
-
-    sponsor=$( grep -oE "Primary Sponsor (.)* Type of Sponsor" <<< ${content} || true)
-    sponsor=${sponsor//Primary Sponsor /}
-    sponsor=${sponsor// Type of Sponsor/}
-
-    title=$(grep -oE "Scientific Title of Study (.)* Secondary ID" <<< ${content} || true)
-    title=${title//Scientific Title of Study /}
-    title=${title// Secondary ID/}
-
-    secondaryID=$(grep -oE "Identifier (.)* Details of Principal Investigator" <<< ${content} || true)
-    secondaryID=${secondaryID//Identifier /}
-    secondaryID=${secondaryID// Details of Principal Investigator/}
+    content=$( echo ${content} | sed -e 's/<!--[^-]*-->//g' | sed -e 's/<[^>]*>/ /g' | sed 's/&nbsp;//g' | tr  "\t\n\r" "   " |tr -s " " )
 
     entry_pre="${3}~${index_name}~ctri.nic.in~Health~ICMR~"
     entry=`python ctri.nic.in/ctri.py "${content}"`
