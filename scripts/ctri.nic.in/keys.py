@@ -1,15 +1,9 @@
-import re
 import json
-from sys import argv
+import collections
 
-kv = json.load(open('./ctri.nic.in/replace_keys.json')) # define desired replacements here
+kv = json.load(open('./ctri.nic.in/replace_keys.json'), object_pairs_hook=collections.OrderedDict) # define desired replacements here
 
-# use these three lines to do the replacement
-rep = dict((re.escape(k), v) for k, v in kv.iteritems())
-pattern = re.compile("|".join(rep.keys()))
-text = pattern.sub(lambda m: rep[re.escape(m.group(0))], argv[1])
-
-print(text)
+print("S3FilePath~FileGUID~Source~Sector~Organization~" + "~".join(kv.keys()))
 
 # Example
 # ---- OUTPUT -----
