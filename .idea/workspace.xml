@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/scripts/ctri.nic.in/keys.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh" afterPath="$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh" />
       <change beforePath="$PROJECT_DIR$/scripts/ctri.nic.in/ctri.py" afterPath="$PROJECT_DIR$/scripts/ctri.nic.in/ctri.py" />
-      <change beforePath="$PROJECT_DIR$/scripts/ctri.nic.in/replace_keys.json" afterPath="$PROJECT_DIR$/scripts/ctri.nic.in/replace_keys.json" />
+      <change beforePath="$PROJECT_DIR$/scripts/env.sh" afterPath="$PROJECT_DIR$/scripts/env.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +19,8 @@
       <file leaf-file-name="catalog.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="109" lean-forward="false" selection-start-line="21" selection-start-column="109" selection-end-line="21" selection-end-column="109" />
+            <state relative-caret-position="18">
+              <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -31,7 +29,7 @@
       <file leaf-file-name="keys.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/keys.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
+            <state relative-caret-position="36">
               <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -43,21 +41,20 @@
       <file leaf-file-name="ctri.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/ctri.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            <state relative-caret-position="36">
+              <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#362#371#0" expanded="false" />
+                <element signature="e#430#439#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="replace_keys.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="replace_keys.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/replace_keys.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            <state relative-caret-position="360">
+              <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -73,31 +70,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="env.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="env.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/env.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="studies.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datasets/analysis/studies.csv">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datasets/1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="72">
+              <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -106,8 +93,8 @@
       <file leaf-file-name="trials.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/trials.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+            <state relative-caret-position="630">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -222,7 +209,6 @@
         <option value="$PROJECT_DIR$/scripts/ctri.nic.in/test.txt" />
         <option value="$PROJECT_DIR$/scripts/data.gov.in/apis.sh" />
         <option value="$PROJECT_DIR$/scripts/config.sh" />
-        <option value="$PROJECT_DIR$/scripts/env.sh" />
         <option value="$PROJECT_DIR$/scripts/Ontologies/umls/curl-uts-download.sh" />
         <option value="$USER_HOME$/Downloads/curl-uts-download.sh" />
         <option value="$PROJECT_DIR$/scripts/credentials.sh" />
@@ -237,9 +223,10 @@
         <option value="$USER_HOME$/temp/1.html" />
         <option value="$PROJECT_DIR$/datasets/analysis/studies.csv" />
         <option value="$PROJECT_DIR$/scripts/ctri.nic.in/keys.py" />
+        <option value="$PROJECT_DIR$/scripts/ctri.nic.in/replace_keys.json" />
+        <option value="$PROJECT_DIR$/scripts/env.sh" />
         <option value="$PROJECT_DIR$/scripts/ctri.nic.in/ctri.py" />
         <option value="$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh" />
-        <option value="$PROJECT_DIR$/scripts/ctri.nic.in/replace_keys.json" />
       </list>
     </option>
   </component>
@@ -261,9 +248,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
-    <option name="y" value="28" />
-    <option name="width" value="1602" />
-    <option name="height" value="840" />
+    <option name="y" value="24" />
+    <option name="width" value="1855" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -291,17 +278,6 @@
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="analysis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -697,15 +673,15 @@
       <workItem from="1521377729759" duration="1833000" />
       <workItem from="1522984680077" duration="15656000" />
       <workItem from="1523356970955" duration="9464000" />
-      <workItem from="1523501582262" duration="921000" />
+      <workItem from="1523501582262" duration="8928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274473000" />
+    <option name="totallyTimeSpent" value="282480000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="28" width="1857" height="1092" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991913" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -875,13 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/analysis/clinicaltrials.txt" />
     <entry file="file://$PROJECT_DIR$/scripts/Ontologies/mesh/rdf_extract.sh">
       <provider selected="true" editor-type-id="text-editor">
@@ -1027,23 +996,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/trials.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/home/mahalaxmi/temp/analysus/studies.csv" />
-    <entry file="file://$PROJECT_DIR$/scripts/env.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1060,35 +1013,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/ctri.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#362#371#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/keys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="109" lean-forward="false" selection-start-line="21" selection-start-column="109" selection-end-line="21" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/analysis/studies.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1099,8 +1023,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/replace_keys.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        <state relative-caret-position="360">
+          <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/keys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/trials.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/ctri.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding>
+            <element signature="e#430#439#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/env.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -ex +H
+set  +H
 
 # To Execute this script provide folder containing dataset as argument
 # ./ctri.nic.in/catalog.sh datainsights-results/ctri.nic.in/html datainsights-results/ctri.nic.in/analysis
@@ -18,7 +18,7 @@ echo ${entry} >> ${DATA_HOME}/${OUT_DIR}/studies.csv
 function analyse_file() {
     index_name=`python -c "from sys import argv;print(hash(argv[1]))" ${3}`
 
-    content=$( grep -Pzo "<table align=\"center(\n|.)*</table>" ${1} | tr -s " " | tr -d "\t\n\r" )
+    content=$( grep -Pzo "<table align=\"?center(\n|.)*</table>" ${1} | tr -s " " | tr -d "\t\n\r" )
     content=$( echo ${content} | sed -e 's/<!--[^-]*-->//g' | sed -e 's/<[^>]*>/ /g' | sed 's/Modification(s)//g' |
     sed 's/Close//g' | sed 's/&nbsp;//g' | tr  "\t\n\r" "   " |tr -s " " )
 
