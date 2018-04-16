@@ -1,4 +1,4 @@
-CREATE EXTERNAL TABLE `studies`(
+CREATE EXTERNAL TABLE `ctri`.`studies`(
 `S3FilePath` string,
 `FileGUID` string,
 `Source` string,
@@ -51,11 +51,11 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
 'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION
-'s3://datainsights-results/temp/studies/partition1/'
+'s3://datainsights-results/ctri.nic.in/analysis/'
 TBLPROPERTIES (
 'classification'='csv',
 'columnsOrdered'='true',
-'compressionType'='none',
+'compressionType'='gzip',
 'delimiter'='~',
 'skip.header.line.count'='1',
 'typeOfData'='file')
