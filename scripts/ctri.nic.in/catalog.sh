@@ -16,26 +16,17 @@ entry=`python ctri.nic.in/keys.py`
 echo ${entry} >> ${DATA_HOME}/${OUT_DIR}/studies.csv
 
 function analyse_file() {
-    index_name=`python -c "from sys import argv;print(hash(argv[1]))" ${3}`
+    content=`python ctri.nic.in/parse.py  ${1} ${3}`
 
-    content=$( grep -Pzo "<table align=\"?center(\n|.)*</table>" ${1} )
-    content=$( echo ${content} | sed -e 's/<!--[^-]*-->//g' | sed 's/<br>/ /g' | sed 's/<br \/>/ /g' | sed 's/&nbsp;//g'|
-        sed 's/Modification(s)//g' | sed -e 's/Close\n//g'  | tr  "\t\n\r][" " " |tr -s " "  | sed -e 's/<[^>]*>/|/g' | sed -e 's/\n/|/g'  |
-        sed 's/ |/|/g' | sed 's/| /|/g')
+    content=$( echo ${content} | sed -e 's/<[^>]*>//g' | sed 's/Modification(s)//g' | sed 's/\[Registered on: /~/g' |
+    sed -e 's/Close\n//g'  | sed -e 's/&[^;]*;//g' | sed  's/\\n//g' | sed  's/\\r//g' |  sed  's/\\t//g' | sed  's/\]//g' | tr -s " "   )
 
-#    echo ${content}
-
-    entry_pre="${3}~${index_name}~ctri.nic.in~Health~ICMR~"
-    entry=`python ctri.nic.in/ctri.py "${content}"`
-    entry=$(echo "${entry_pre}${entry}" | sed 's/|//g'  | tr -s " " | sed 's/ ~/~/g' | sed 's/~ /~/g')
-    entry=$(echo "${entry}" | xargs -0)
-    entry=${entry//$'\r'/}
-    entry=${entry//\"/}
-    entry=${entry//\|/}
-
+    entry=$(echo "${content}" | sed 's/|//g'  | tr -s " " | sed 's/ ~/~/g' | sed 's/~ /~/g')
 
     echo ${entry} >> ${2}
 }
+
+
 
 
 ## now loop through the above array
