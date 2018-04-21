@@ -18,10 +18,8 @@ echo ${entry} >> ${DATA_HOME}/${OUT_DIR}/studies.csv
 function analyse_file() {
     content=`python ctri.nic.in/parse.py  ${1} ${3}`
 
-    content=$( echo ${content} | sed -e 's/<[^>]*>//g' | sed 's/Modification(s)//g' | sed 's/\[Registered on: /~/g' |
-    sed -e 's/Close\n//g'  | sed -e 's/&[^;]*;//g' | sed  's/\\n//g' | sed  's/\\r//g' |  sed  's/\\t//g' | sed  's/\]//g' | tr -s " "   )
-
-    entry=$(echo "${content}" | sed 's/|//g'  | tr -s " " | sed 's/ ~/~/g' | sed 's/~ /~/g')
+    content=$( echo ${content} | sed -e 's/<[^>]*>//g; s/Close\n//g; s/&[^\;]*\;//g' |
+     sed 's/Modification(s)//g; s/\[Registered on: /~/g; s/\\n//g; s/\\r//g; s/\\t//g; s/\]//g; s/ ~/~/g; s/~ /~/g' | tr -s " "   )
 
     echo ${entry} >> ${2}
 }
