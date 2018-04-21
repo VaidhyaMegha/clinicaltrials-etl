@@ -19,7 +19,7 @@ function analyse_file() {
     content=`python ctri.nic.in/parse.py  ${1} ${3}`
 
     content=$( echo ${content} | sed -e 's/<[^>]*>//g; s/Close\n//g; s/&[^\;]*\;//g' |
-     sed 's/Modification(s)//g; s/\[Registered on: /~/; s/\\n//g; s/\\r//g; s/\\t//g; s/\]//g; s/ ~/~/g; s/~ /~/g' | tr -s " "   )
+     sed 's/Modification(s)//g; s/\[Registered on: /~/; s/\\n//g; s/\\r//g; s/\\t//g; s/\]//g; s/"//g; s/ ~/~/g; s/~ /~/g' | tr -s " "   )
 
     echo ${content} >> ${2}
 }
