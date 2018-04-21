@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh" afterPath="$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh" />
-      <change beforePath="$PROJECT_DIR$/scripts/ctri.nic.in/parse.py" afterPath="$PROJECT_DIR$/scripts/ctri.nic.in/parse.py" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
-              <caret line="21" column="115" lean-forward="false" selection-start-line="21" selection-start-column="115" selection-end-line="21" selection-end-column="115" />
+              <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -210,8 +208,8 @@
         <option value="$PROJECT_DIR$/scripts/ctri.nic.in/ctri.py" />
         <option value="$PROJECT_DIR$/scripts/ctri.nic.in/replace_keys.json" />
         <option value="$PROJECT_DIR$/scripts/ctri.nic.in/keys.py" />
-        <option value="$PROJECT_DIR$/scripts/ctri.nic.in/test.csv" />
         <option value="$PROJECT_DIR$/scripts/ctri.nic.in/parse.py" />
+        <option value="$PROJECT_DIR$/scripts/ctri.nic.in/test.csv" />
         <option value="$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh" />
       </list>
     </option>
@@ -670,12 +668,12 @@
       <workItem from="1524066409942" duration="596000" />
       <workItem from="1524113927191" duration="2631000" />
       <workItem from="1524204852974" duration="644000" />
-      <workItem from="1524292635769" duration="36579000" />
+      <workItem from="1524292635769" duration="38689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345896000" />
+    <option name="totallyTimeSpent" value="348006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1069,14 +1067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="3" column="8271" lean-forward="true" selection-start-line="3" selection-start-column="8271" selection-end-line="3" selection-end-column="8271" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/parse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1087,10 +1077,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1277">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/catalog.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="21" column="115" lean-forward="false" selection-start-line="21" selection-start-column="115" selection-end-line="21" selection-end-column="115" />
+          <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
           <folding />
         </state>
       </provider>
