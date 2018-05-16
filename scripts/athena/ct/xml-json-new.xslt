@@ -3,26 +3,35 @@
     <xsl:output method="text"/>
 
     <xsl:template match="/">{
+        "required_header":{
+            "download_date":"<xsl:value-of select="/clinical_study/required_header/download_date"/>",
+            "link_text":"<xsl:value-of select="/clinical_study/required_header/link_text"/>",
+            "url":"<xsl:value-of select="/clinical_study/required_header/url"/>",
+        },
+        "id_info":{
+            "org_study_id":"<xsl:value-of select="/clinical_study/id_info/org_study_id"/>",
+            "secondary_id":[
+                <xsl:for-each select="/clinical_study/id_info/secondary_id">
+                    "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
+                </xsl:for-each>
+            ],
+            "nct_id":"<xsl:value-of select="/clinical_study/id_info/nct_id"/>",
+            "nct_alias":[
+                <xsl:for-each select="/clinical_study/id_info/nct_alias">
+                    "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
+                </xsl:for-each>
+            ]
+        },
+        "brief_title":"<xsl:value-of select="/clinical_study/brief_title"/>",
+        "acronym":"<xsl:value-of select="/clinical_study/acronym"/>",
         "keyword": [
         <xsl:for-each select="/clinical_study/keyword">
-            "<xsl:call-template name="string-replace-all">
-                <xsl:with-param name="text">
-                    <xsl:value-of select="."/>
-                </xsl:with-param>
-                <xsl:with-param name="replace" select="'&quot;'"/>
-                <xsl:with-param name="by" select="' '"/>
-            </xsl:call-template>",
+            "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
         ],
         "condition": [
         <xsl:for-each select="/clinical_study/condition">
-            "<xsl:call-template name="string-replace-all">
-                <xsl:with-param name="text">
-                    <xsl:value-of select="."/>
-                </xsl:with-param>
-                <xsl:with-param name="replace" select="'&quot;'"/>
-                <xsl:with-param name="by" select="' '"/>
-            </xsl:call-template>",
+            "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
         ],
         "primary_outcome": [
@@ -36,7 +45,7 @@
                 </xsl:with-param>
                 <xsl:with-param name="replace" select="'&quot;'"/>
                 <xsl:with-param name="by" select="' '"/>
-            </xsl:call-template>"},
+            </xsl:call-template>"}<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
         ],
         "secondary_outcome": [
@@ -50,7 +59,7 @@
                 </xsl:with-param>
                 <xsl:with-param name="replace" select="'&quot;'"/>
                 <xsl:with-param name="by" select="' '"/>
-            </xsl:call-template>"},
+            </xsl:call-template>"}<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
         ],
         "other_outcome": [
@@ -64,7 +73,7 @@
                 </xsl:with-param>
                 <xsl:with-param name="replace" select="'&quot;'"/>
                 <xsl:with-param name="by" select="' '"/>
-            </xsl:call-template>"},
+            </xsl:call-template>"}<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
         ],
         "reference": [
@@ -72,7 +81,7 @@
             {
             "citation":"<xsl:value-of select="citation"/>",
             "PMID":"<xsl:value-of select="PMID"/>"
-            },
+            }<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
         ],
         "results_reference": [
@@ -80,7 +89,7 @@
             {
             "citation":"<xsl:value-of select="citation"/>",
             "PMID":"<xsl:value-of select="PMID"/>"
-            },
+            }<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
         ],
         "link": [
@@ -88,7 +97,7 @@
             {
             "url":"<xsl:value-of select="url"/>",
             "description":"<xsl:value-of select="description"/>"
-            },
+            }<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
         ],
         "location": [
@@ -122,657 +131,23 @@
                             "last_name":"<xsl:value-of select="investigator/last_name"/>",
                             "degrees":"<xsl:value-of select="investigator/degrees"/>",
                             "role":"<xsl:value-of select="investigator/role"/>",
-                            "affiliation":"<xsl:value-of select="investigator/affiliation"/>"}, 
+                            "affiliation":"<xsl:value-of select="investigator/affiliation"/>"}<xsl:if test="position() != last()">,</xsl:if>
                  </xsl:for-each>]
-            },
+            }<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
         ],
 
-        <xsl:apply-templates select="*"/>
+        "location_countries": [
+        <xsl:for-each select="/clinical_study/location_countries/country">
+            "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
+        </xsl:for-each>
+        ],
+        "removed_countries": [
+        <xsl:for-each select="/clinical_study/removed_countries/country">
+            "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
+        </xsl:for-each>
+        ]
         }
-    </xsl:template>
-
-
-    <xsl:template match="/clinical_study/required_header">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/id_info">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/brief_title">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/acronym">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/official_title">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/sponsors">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/source">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/oversight_info">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/brief_summary">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/detailed_description">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/overall_status">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/last_known_status">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/why_stopped">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/start_date">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/completion_date">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/primary_completion_date">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/phase">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/study_type">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/has_expanded_access">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/expanded_access_info">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/study_design_info">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/target_duration">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/number_of_arms">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/number_of_groups">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/enrollment">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/arm_group">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/intervention">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/biospec_retention">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/biospec_descr">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/eligibility">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/overall_official">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/overall_contact">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/overall_contact_backup">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/location_countries">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/removed_countries">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/verification_date">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <!-- === Old Dates will be dropped in a few months (sometime in 2018) ========= -->
-    <xsl:template match="/clinical_study/lastchanged_date">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/firstreceived_date">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/firstreceived_results_date">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/firstreceived_results_disposition_date">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <!-- === New Dates ============================================================ -->
-    <xsl:template match="/clinical_study/study_first_submitted">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/study_first_submitted_qc">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/study_first_posted">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/results_first_submitted">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/results_first_submitted_qc">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/results_first_posted">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/disposition_first_submitted">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/disposition_first_submitted_qc">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/disposition_first_posted">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/last_update_submitted">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/last_update_submitted_qc">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/last_update_posted">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <!-- === End of Dates ========================================================= -->
-    <xsl:template match="/clinical_study/responsible_party">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/condition_browse">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/intervention_browse">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/patient_data">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/study_docs">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
-    </xsl:template>
-    <xsl:template match="/clinical_study/clinical_results">"<xsl:value-of select="name()"/>" :
-        "
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text">
-                <xsl:value-of select="."/>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'&quot;'"/>
-            <xsl:with-param name="by" select="' '"/>
-        </xsl:call-template>
-        ",
     </xsl:template>
 
     <xsl:template name="string-replace-all">
