@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/athena/ct/foo.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/athena/ct/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/athena/ct/test.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xslt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/athena/ct/xml-json.xslt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/tables.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,57 +34,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="catalog.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/clinicaltrials.gov/aact/catalog.sh">
+      <file leaf-file-name="xml_json.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/xml_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="324">
+              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="extract.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/clinicaltrials.gov/aact/extract.sh">
+      <file leaf-file-name="foo.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/ct/foo.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+            <state relative-caret-position="191">
+              <caret line="547" column="11" selection-start-line="547" selection-start-column="3" selection-end-line="547" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="actrn.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scripts/actrn/actrn.py">
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/ct/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="612">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/ct/test.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="954">
+              <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xml-json.xslt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml-json.xslt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102">
+              <caret line="44" column="56" lean-forward="true" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parser.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/ct/node_modules/xml4js/lib/parser.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1800">
+              <caret line="100" column="7" selection-start-line="100" selection-start-column="7" selection-end-line="100" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NCT03481725.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/ct/NCT03481725.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="48" column="12" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="12" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#2736#2742#0" expanded="true" />
+                <element signature="e#2877#2883#0" expanded="true" />
+                <element signature="e#3502#3508#0" expanded="true" />
+                <element signature="e#3643#3649#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="credentials.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/credentials.sh">
+      <file leaf-file-name="public.xsd" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/ct/public.xsd">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            <state relative-caret-position="317">
+              <caret line="455" column="35" selection-start-line="455" selection-start-column="24" selection-end-line="455" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="env.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/env.sh">
+      <file leaf-file-name="xml-json-new.xslt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xslt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="4" selection-end-line="1" />
+            <state relative-caret-position="-12496">
+              <caret line="69" column="18" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_all.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/run_all.sh">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="xslt-schema.xsd" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/xpath/lib/xpath.jar!/org/intellij/lang/xpath/xslt/resources/xslt-schema.xsd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="888">
+              <caret line="562" column="10" selection-start-line="562" selection-start-column="10" selection-end-line="562" selection-end-column="10" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -89,41 +137,42 @@
       <list>
         <option value="Python Script" />
         <option value="UML Class" />
+        <option value="XSLT Stylesheet" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>typ</find>
-      <find>design</find>
-      <find>title</find>
-      <find>\|</find>
-      <find>&quot;</find>
-      <find>Identifier</find>
-      <find>&lt;/td&gt;</find>
-      <find>2000</find>
-      <find />
-      <find>NCT</find>
-      <find>|</find>
-      <find />
-      <find>class</find>
-      <find>Second</find>
-      <find>index_name</find>
-      <find />
-      <find />
-      <find />
-      <find>`\n</find>
-      <find>:</find>
-      <find>:&quot;~&quot;</find>
-      <find />
-      <find />
-      <find>source</find>
-      <find>~</find>
-      <find>.*,\n</find>
-      <find>cast\(()</find>
-      <find>E'[\n\r]</find>
-      <find>\n</find>
-      <find>\),\n</find>
+      <find>keywo</find>
+      <find>[</find>
+      <find>clinical_stru</find>
+      <find>&lt;xs:element name=</find>
+      <find>type=&quot;required_header_struct&quot;/&gt;</find>
+      <find>match=&quot;</find>
+      <find>&lt;/xsl:template&gt;</find>
+      <find>&lt;xsl:value-of select=&quot;.&quot;/&gt;</find>
+      <find>&quot;&lt;xsl:value-of select=&quot;.&quot;/&gt;</find>
+      <find>outcom</find>
+      <find>Recommendations</find>
+      <find>&quot;&lt;/xsl:with-param</find>
+      <find>&quot;&lt;/xsl:with-param&gt;</find>
+      <find>primary_out</find>
+      <find>primary</find>
+      <find>Classificatui</find>
+      <find>secondary_outcome</find>
+      <find>secondar</find>
+      <find>keywork</find>
+      <find>keyword</find>
+      <find>condition</find>
+      <find>study_des</find>
+      <find>unboun</find>
+      <find>refe</find>
+      <find>reference_struct</find>
+      <find>link_struct</find>
+      <find>recruitment_status_enum</find>
+      <find>facility/</find>
+      <find>location</find>
+      <find>reference</find>
     </findStrings>
     <replaceStrings>
       <replace>${SCRIPT}</replace>
@@ -135,16 +184,23 @@
       <replace />
       <replace>class</replace>
       <replace>&quot;`</replace>
-      <replace />
-      <replace />
       <replace>&quot;:&quot;~&quot;\n&quot;</replace>
       <replace>:&quot;~&quot;,</replace>
-      <replace />
       <replace>,</replace>
       <replace>\n</replace>
-      <replace />
-      <replace />
       <replace>),</replace>
+      <replace>&gt;,</replace>
+      <replace>`</replace>
+      <replace>text_str</replace>
+      <replace>text</replace>
+      <replace>type</replace>
+      <replace>&lt;xsl:template match=&quot;</replace>
+      <replace>match=&quot;/clinical_study/</replace>
+      <replace>&quot;&lt;xsl:value-of select=&quot;name()&quot;/&gt;&quot; :&lt;xsl:value-of select=&quot;.&quot;/&gt;&lt;/xsl:template&gt;</replace>
+      <replace>&lt;xsl:value-of select=&quot;.&quot;/&gt;</replace>
+      <replace>&quot;</replace>
+      <replace>&quot;&lt;/xsl:with-param&gt;</replace>
+      <replace>&amp;quot;&lt;/xsl:with-param&gt;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -153,24 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/ctri.nic.in/transform.sh" />
-        <option value="$PROJECT_DIR$/scripts/run_all.sh" />
-        <option value="$PROJECT_DIR$/datasets/datainsights-results/crime/ncrb.gov.in/StatPublications/CII/CII2015/FILES/Statistics-2015_rev1_1.pdf.txt" />
-        <option value="$PROJECT_DIR$/datasets/datainsights-results/crime/ncrb.gov.in/StatPublications/CII/CII2013/Excerpts-1953-2013.pdf.txt" />
-        <option value="$PROJECT_DIR$/temp/crime.log" />
-        <option value="$PROJECT_DIR$/scripts/ncrb.gov.in/transform.sh" />
-        <option value="$PROJECT_DIR$/scripts/ncrb.gov.in/tables.sh" />
-        <option value="$PROJECT_DIR$/scripts/nrhm-mis.nic.in/catalog.sh" />
-        <option value="$PROJECT_DIR$/scripts/nrhm-mis.nic.in/convert2csv.sh" />
-        <option value="$PROJECT_DIR$/scripts/nrhm-mis.nic.in/convert2json.sh" />
-        <option value="$PROJECT_DIR$/datasets/datainsights-results/ctri.nic.in/html/sdfd" />
-        <option value="$PROJECT_DIR$/scripts/processed" />
-        <option value="$PROJECT_DIR$/scripts/utility.sh" />
-        <option value="$PROJECT_DIR$/scripts/clinicaltrials.gov/aact/catalog.sh" />
-        <option value="$PROJECT_DIR$/datasets/datainsights-results/clinicaltrials.gov/analysis/studies.csv" />
-        <option value="$PROJECT_DIR$/scripts/ctri.nic.in/test" />
-        <option value="$PROJECT_DIR$/test" />
-        <option value="$PROJECT_DIR$/datasets/datainsights-results/ctri.nic.in/analysis/studies.csv" />
         <option value="$PROJECT_DIR$/scripts/data.gov.in/apis.sh" />
         <option value="$PROJECT_DIR$/scripts/config.sh" />
         <option value="$PROJECT_DIR$/scripts/Ontologies/umls/curl-uts-download.sh" />
@@ -204,6 +242,24 @@
         <option value="$PROJECT_DIR$/scripts/db/ctri/ddl.sql" />
         <option value="$PROJECT_DIR$/scripts/db/ct/ddl.sql" />
         <option value="$PROJECT_DIR$/scripts/db/opentrials/ddl.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.sql" />
+        <option value="$PROJECT_DIR$/test" />
+        <option value="$PROJECT_DIR$/test.json" />
+        <option value="$PROJECT_DIR$/test.sql" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/test.json" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/NCT01724619.xml" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/test.sql" />
+        <option value="$USER_HOME$/temp/AllPublicXMLs/NCT0348xxxx/NCT03487536.xml" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/NCT01724619.json" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/foo.xml" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/test.js" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/xml-json.xslt" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/public.xsd" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xsl" />
+        <option value="$PROJECT_DIR$/scripts/xml_json.sh" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/NCT03481725.xml" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/foo.json" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xslt" />
       </list>
     </option>
   </component>
@@ -219,8 +275,13 @@
       <select />
     </treeState>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/scripts/athena/ct/node_modules" />
+  </component>
   <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/scripts/athena/ct/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="PhpServers">
     <servers />
@@ -238,7 +299,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -268,6 +328,13 @@
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="athena" type="462c0819:PsiDirectoryNode" />
+              <item name="ct" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="athena" type="462c0819:PsiDirectoryNode" />
               <item name="global" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -275,36 +342,38 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/datasets/datainsights-in/data.gov.in/web-crawler/data.gov.in.html" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQl" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="jdk.selected.PYTHON_MODULE" value="Python 2.7.12 (/usr/bin/python)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scripts/athena/ct/NCT01724619.json" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../aws_personal.csv" />
-    <property name="jdk.selected.PYTHON_MODULE" value="Python 2.7.12 (/usr/bin/python)" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/datasets/datainsights-in/data.gov.in/web-crawler/data.gov.in.html" />
-    <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQl" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scripts" />
-      <recent name="$PROJECT_DIR$/snippets" />
-      <recent name="$PROJECT_DIR$/scripts/HMIS" />
-      <recent name="$PROJECT_DIR$/scripts/data.gov.in" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scripts/ctri.nic.in" />
       <recent name="$PROJECT_DIR$/scripts/clinicaltrials.gov/aact" />
       <recent name="$PROJECT_DIR$/scripts/ncrb.gov.in" />
       <recent name="$PROJECT_DIR$/scripts/HMIS" />
       <recent name="$PROJECT_DIR$/scripts/Ontologies/mesh" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts/athena/ct" />
+      <recent name="$PROJECT_DIR$/scripts/athena" />
+      <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="$PROJECT_DIR$/snippets" />
+      <recent name="$PROJECT_DIR$/scripts/HMIS" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -638,15 +707,25 @@
       <workItem from="1525659424295" duration="599000" />
       <workItem from="1525709539660" duration="605000" />
       <workItem from="1525760585702" duration="1335000" />
-      <workItem from="1525772739525" duration="3845000" />
+      <workItem from="1525772739525" duration="4514000" />
+      <workItem from="1525797638743" duration="610000" />
+      <workItem from="1525838277358" duration="599000" />
+      <workItem from="1526020463372" duration="4755000" />
+      <workItem from="1526027848945" duration="9419000" />
+      <workItem from="1526111251378" duration="3540000" />
+      <workItem from="1526190974082" duration="12275000" />
+      <workItem from="1526222342058" duration="14164000" />
+      <workItem from="1526303597000" duration="4602000" />
+      <workItem from="1526379011972" duration="9244000" />
+      <workItem from="1526441858367" duration="9228000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404479000" />
+    <option name="totallyTimeSpent" value="473584000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="10" weight="0.32991913" />
@@ -658,7 +737,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Database" order="7" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.5010246" side_tool="true" weight="0.20485175" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -666,23 +745,23 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" x="0" y="0" width="413" height="884" id="Documentation" order="12" side_tool="true" weight="0.32991913" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32924336" />
+      <window_info anchor="right" x="0" y="0" width="414" height="892" id="Documentation" order="12" side_tool="true" weight="0.32991913" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32721713" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32924336" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20485175" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989754" visible="true" weight="0.20485175" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32786885" />
       <window_info anchor="right" id="SciView" order="8" />
       <window_info anchor="bottom" id="DBOutput" order="7" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32991803" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="right" id="Data View" order="11" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32822084" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Data View" order="11" />
@@ -768,101 +847,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/keys.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/tables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="53" column="48" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/trials.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/actrn/actrn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/clinicaltrials.gov/analysis/studies.csv" />
-    <entry file="file://$PROJECT_DIR$/scripts/config.sh" />
-    <entry file="file://$PROJECT_DIR$/scripts/login" />
-    <entry file="file://$PROJECT_DIR$/scripts/Ontologies/umls/curl-uts-download.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/curl-uts-download.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ref.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/Ontologies/umls/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="60" column="22" selection-start-line="60" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/analysis/clinicaltrials.txt" />
-    <entry file="file://$PROJECT_DIR$/scripts/Ontologies/mesh/rdf_extract.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RDF.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="54">
-            <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/datainsights-results/ctri.nic.in/analysis/studies.csv" />
-    <entry file="file://$PROJECT_DIR$/OOAD.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/data.gov.in/catalog.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/ftp.ncbi.nlm.nih.gov/pub_pmc_index.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -960,9 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -984,9 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="4" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1025,51 +1003,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/db/global/ddl.sql">
+    <entry file="file://$PROJECT_DIR$/scripts/db/global/ddl.sql" />
+    <entry file="file://$PROJECT_DIR$/scripts/db/ctri/ddl.sql" />
+    <entry file="file://$PROJECT_DIR$/scripts/db/ct/ddl.sql" />
+    <entry file="file://$PROJECT_DIR$/scripts/db/opentrials/ddl.sql" />
+    <entry file="file://$PROJECT_DIR$/scripts/tables.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        <state>
+          <caret column="8313" selection-end-column="8313" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/db/ctri/ddl.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/db/ct/ddl.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/db/opentrials/ddl.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/tables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2843">
-          <caret selection-end-line="80" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/run_all.sh">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/actrn/actrn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state>
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/test.json" />
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/NCT01724619.xml" />
+    <entry file="file://$USER_HOME$/temp/AllPublicXMLs/NCT0348xxxx/NCT03487536.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="137" column="99" selection-start-line="137" selection-start-column="52" selection-end-line="137" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/NCT01724619.json" />
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/node_modules/xml4js/lib/xsd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9486">
+          <caret line="527" column="2" selection-start-line="527" selection-start-column="2" selection-end-line="527" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/node_modules/xml4js/lib/parser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="100" column="7" selection-start-line="100" selection-start-column="7" selection-end-line="100" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/foo2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret column="11305" selection-start-column="11305" selection-end-column="11305" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/foo.xml" />
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/test.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/xpath/lib/xpath.jar!/org/intellij/lang/xpath/xslt/resources/xslt-schema.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="562" column="10" selection-start-line="562" selection-start-column="10" selection-end-line="562" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/xml_json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml-json.xslt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="44" column="56" lean-forward="true" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/NCT03481725.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="12" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#2736#2742#0" expanded="true" />
+            <element signature="e#2877#2883#0" expanded="true" />
+            <element signature="e#3502#3508#0" expanded="true" />
+            <element signature="e#3643#3649#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/public.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="455" column="35" selection-start-line="455" selection-start-column="24" selection-end-line="455" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/foo.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="547" column="11" selection-start-line="547" selection-start-column="3" selection-end-line="547" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xslt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12496">
+          <caret line="69" column="18" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="18" />
         </state>
       </provider>
     </entry>

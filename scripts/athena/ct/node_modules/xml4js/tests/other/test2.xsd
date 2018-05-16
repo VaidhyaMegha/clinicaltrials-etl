@@ -1,0 +1,69 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.example.org/Other2" targetNamespace="http://www.example.org/Other2">
+
+  <xsd:element name="root" type="rootType"/>
+
+  <xsd:element name="comment" type="xsd:string"/>
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="mixedParent" type="mixedParentType"/>
+      <xsd:element name="childrenParent" type="childrenParentType"/>
+      <xsd:element name="childrenWithAttrParent" type="childrenWithAttrParentType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="childrenParentType">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element name="children" type="childrenType"/>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:complexType name="mixedParentType">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element name="mixed" type="mixedType"/>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:complexType name="childrenWithAttrParentType">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element name="childrenWithAttr" type="childrenWithAttrType"/>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:complexType name="childrenType">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element name="childWithAttr" type="childWithAttrType"/>
+      <xsd:element name="child" type="childType"/>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:complexType name="mixedType" mixed="true">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element name="childWithAttr" type="childWithAttrType"/>
+      <xsd:element name="child" type="childType"/>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:complexType name="childrenWithAttrType">
+    <xsd:complexContent>
+      <xsd:extension base="childrenType">
+        <xsd:attribute name="attr" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="childType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="childWithAttrType">
+    <xsd:complexContent>
+      <xsd:extension base="childType">
+        <xsd:attribute name="attr" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+</xsd:schema>
