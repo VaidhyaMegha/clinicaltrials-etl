@@ -8,14 +8,11 @@
 
 
     <!-- name="oversight_info" type="oversight_info_struct" minOccurs="0"/>-->
-    <!-- name="brief_summary" type="textblock_struct" minOccurs="0"/>-->
-    <!-- name="detailed_description" type="textblock_struct" minOccurs="0"/>-->
     <!-- name="expanded_access_info" type="expanded_access_info_struct" minOccurs="0"/>-->
     <!-- name="study_design_info" type="study_design_info_struct" minOccurs="0"/>-->
     <!-- name="enrollment" type="enrollment_struct" minOccurs="0"/>-->
     <!-- name="arm_group" type="arm_group_struct" minOccurs="0" maxOccurs="unbounded"/>-->
     <!-- name="intervention" type="intervention_struct" minOccurs="0" maxOccurs="unbounded"/>-->
-    <!-- name="biospec_descr" type="textblock_struct" minOccurs="0"/>-->
     <!-- name="eligibility" type="eligibility_struct" minOccurs="0"/>-->
     <!-- name="overall_official" type="investigator_struct" minOccurs="0" maxOccurs="unbounded"/>-->
     <!-- name="overall_contact" type="contact_struct" minOccurs="0"/>-->
@@ -110,6 +107,33 @@
         "primary_completion_date":{
             "type":"<xsl:value-of select="/clinical_study/primary_completion_date/@type"/>",
             "value":"<xsl:value-of select="/clinical_study/primary_completion_date/text()"/>"
+        },
+        "brief_summary":{
+            "textblock":"<xsl:call-template name="string-replace-all">
+                            <xsl:with-param name="text">
+                                <xsl:value-of select="/clinical_study/brief_summary/textblock"/>
+                            </xsl:with-param>
+                            <xsl:with-param name="replace" select="'&quot;'"/>
+                            <xsl:with-param name="by" select="' '"/>
+                        </xsl:call-template>"
+        },
+        "detailed_description":{
+            "textblock":"<xsl:call-template name="string-replace-all">
+                <xsl:with-param name="text">
+                    <xsl:value-of select="/clinical_study/detailed_description/textblock"/>
+                </xsl:with-param>
+                <xsl:with-param name="replace" select="'&quot;'"/>
+                <xsl:with-param name="by" select="' '"/>
+            </xsl:call-template>"
+        },
+        "biospec_descr":{
+            "textblock":"<xsl:call-template name="string-replace-all">
+                <xsl:with-param name="text">
+                    <xsl:value-of select="/clinical_study/biospec_descr/textblock"/>
+                </xsl:with-param>
+                <xsl:with-param name="replace" select="'&quot;'"/>
+                <xsl:with-param name="by" select="' '"/>
+            </xsl:call-template>"
         },
         "keyword": [
         <xsl:for-each select="/clinical_study/keyword">
