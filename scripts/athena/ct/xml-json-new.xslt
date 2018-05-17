@@ -10,9 +10,6 @@
     <!-- name="oversight_info" type="oversight_info_struct" minOccurs="0"/>-->
     <!-- name="brief_summary" type="textblock_struct" minOccurs="0"/>-->
     <!-- name="detailed_description" type="textblock_struct" minOccurs="0"/>-->
-    <!-- name="start_date" type="variable_date_struct" minOccurs="0"/>-->
-    <!-- name="completion_date" type="variable_date_struct" minOccurs="0"/>-->
-    <!-- name="primary_completion_date" type="variable_date_struct" minOccurs="0"/>-->
     <!-- name="expanded_access_info" type="expanded_access_info_struct" minOccurs="0"/>-->
     <!-- name="study_design_info" type="study_design_info_struct" minOccurs="0"/>-->
     <!-- name="enrollment" type="enrollment_struct" minOccurs="0"/>-->
@@ -23,10 +20,6 @@
     <!-- name="overall_official" type="investigator_struct" minOccurs="0" maxOccurs="unbounded"/>-->
     <!-- name="overall_contact" type="contact_struct" minOccurs="0"/>-->
     <!-- name="overall_contact_backup" type="contact_struct" minOccurs="0"/>-->
-    <!-- name="study_first_posted" type="variable_date_struct" minOccurs="0"/>-->
-    <!-- name="results_first_posted" type="variable_date_struct" minOccurs="0"/>-->
-    <!-- name="disposition_first_posted" type="variable_date_struct" minOccurs="0"/>-->
-    <!-- name="last_update_posted" type="variable_date_struct" minOccurs="0"/>-->
     <!-- name="responsible_party" type="responsible_party_struct" minOccurs="0"/>-->
     <!-- name="condition_browse" type="browse_struct" minOccurs="0"/>-->
     <!-- name="intervention_browse" type="browse_struct" minOccurs="0"/>-->
@@ -90,6 +83,34 @@
         "disposition_first_submitted_qc":"<xsl:value-of select="/clinical_study/disposition_first_submitted_qc"/>",
         "last_update_submitted":"<xsl:value-of select="/clinical_study/last_update_submitted"/>",
         "last_update_submitted_qc":"<xsl:value-of select="/clinical_study/last_update_submitted_qc"/>",
+        "study_first_posted":{
+            "type":"<xsl:value-of select="/clinical_study/study_first_posted/@type"/>",
+            "value":"<xsl:value-of select="/clinical_study/study_first_posted/text()"/>"
+        },
+        "results_first_posted":{
+            "type":"<xsl:value-of select="/clinical_study/results_first_posted/@type"/>",
+            "value":"<xsl:value-of select="/clinical_study/results_first_posted/text()"/>"
+        },
+        "disposition_first_posted":{
+            "type":"<xsl:value-of select="/clinical_study/disposition_first_posted/@type"/>",
+            "value":"<xsl:value-of select="/clinical_study/disposition_first_posted/text()"/>"
+        },
+        "last_update_posted":{
+            "type":"<xsl:value-of select="/clinical_study/last_update_posted/@type"/>",
+            "value":"<xsl:value-of select="/clinical_study/last_update_posted/text()"/>"
+        },
+        "completion_date":{
+            "type":"<xsl:value-of select="/clinical_study/completion_date/@type"/>",
+            "value":"<xsl:value-of select="/clinical_study/completion_date/text()"/>"
+        },
+        "start_date":{
+            "type":"<xsl:value-of select="/clinical_study/start_date/@type"/>",
+            "value":"<xsl:value-of select="/clinical_study/start_date/text()"/>"
+        },
+        "primary_completion_date":{
+            "type":"<xsl:value-of select="/clinical_study/primary_completion_date/@type"/>",
+            "value":"<xsl:value-of select="/clinical_study/primary_completion_date/text()"/>"
+        },
         "keyword": [
         <xsl:for-each select="/clinical_study/keyword">
             "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
