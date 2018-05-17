@@ -23,18 +23,9 @@
     <!-- name="overall_official" type="investigator_struct" minOccurs="0" maxOccurs="unbounded"/>-->
     <!-- name="overall_contact" type="contact_struct" minOccurs="0"/>-->
     <!-- name="overall_contact_backup" type="contact_struct" minOccurs="0"/>-->
-    <!-- name="verification_date" type="variable_date_type" minOccurs="0"/>-->
-    <!-- name="study_first_submitted" type="variable_date_type" minOccurs="0"/>-->
-    <!-- name="study_first_submitted_qc" type="variable_date_type" minOccurs="0"/>-->
     <!-- name="study_first_posted" type="variable_date_struct" minOccurs="0"/>-->
-    <!-- name="results_first_submitted" type="variable_date_type" minOccurs="0"/>-->
-    <!-- name="results_first_submitted_qc" type="variable_date_type" minOccurs="0"/>-->
     <!-- name="results_first_posted" type="variable_date_struct" minOccurs="0"/>-->
-    <!-- name="disposition_first_submitted" type="variable_date_type" minOccurs="0"/>-->
-    <!-- name="disposition_first_submitted_qc" type="variable_date_type" minOccurs="0"/>-->
     <!-- name="disposition_first_posted" type="variable_date_struct" minOccurs="0"/>-->
-    <!-- name="last_update_submitted" type="variable_date_type" minOccurs="0"/>-->
-    <!-- name="last_update_submitted_qc" type="variable_date_type" minOccurs="0"/>-->
     <!-- name="last_update_posted" type="variable_date_struct" minOccurs="0"/>-->
     <!-- name="responsible_party" type="responsible_party_struct" minOccurs="0"/>-->
     <!-- name="condition_browse" type="browse_struct" minOccurs="0"/>-->
@@ -90,6 +81,15 @@
         "biospec_retention":"<xsl:value-of select="/clinical_study/biospec_retention"/>",
         "number_of_arms":"<xsl:value-of select="/clinical_study/number_of_arms"/>",
         "number_of_groups":"<xsl:value-of select="/clinical_study/number_of_groups"/>",
+        "verification_date":"<xsl:value-of select="/clinical_study/verification_date"/>",
+        "study_first_submitted":"<xsl:value-of select="/clinical_study/study_first_submitted"/>",
+        "study_first_submitted_qc":"<xsl:value-of select="/clinical_study/study_first_submitted_qc"/>",
+        "results_first_submitted":"<xsl:value-of select="/clinical_study/results_first_submitted"/>",
+        "results_first_submitted_qc":"<xsl:value-of select="/clinical_study/results_first_submitted_qc"/>",
+        "disposition_first_submitted":"<xsl:value-of select="/clinical_study/disposition_first_submitted"/>",
+        "disposition_first_submitted_qc":"<xsl:value-of select="/clinical_study/disposition_first_submitted_qc"/>",
+        "last_update_submitted":"<xsl:value-of select="/clinical_study/last_update_submitted"/>",
+        "last_update_submitted_qc":"<xsl:value-of select="/clinical_study/last_update_submitted_qc"/>",
         "keyword": [
         <xsl:for-each select="/clinical_study/keyword">
             "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
