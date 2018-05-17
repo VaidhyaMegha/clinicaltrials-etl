@@ -2,6 +2,75 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="text"/>
 
+
+
+    <!--what's remaining-->
+
+    
+    <!-- name="oversight_info" type="oversight_info_struct" minOccurs="0"/>-->
+    <!-- name="brief_summary" type="textblock_struct" minOccurs="0"/>-->
+    <!-- name="detailed_description" type="textblock_struct" minOccurs="0"/>-->
+    <!-- name="overall_status" type="overall_status_enum"/>-->
+    <!-- name="last_known_status" type="overall_status_enum" minOccurs="0"/>-->
+    <!-- name="why_stopped" type="xs:string" minOccurs="0"/>-->
+    <!-- name="start_date" type="variable_date_struct" minOccurs="0"/>-->
+    <!-- name="completion_date" type="variable_date_struct" minOccurs="0"/>-->
+    <!-- name="primary_completion_date" type="variable_date_struct" minOccurs="0"/>-->
+    <!-- name="phase" type="phase_enum" minOccurs="0"/>-->
+    <!-- name="study_type" type="study_type_enum"/>-->
+    <!-- name="has_expanded_access" type="yes_no_enum" minOccurs="0"/>-->
+    <!-- name="expanded_access_info" type="expanded_access_info_struct" minOccurs="0"/>-->
+    <!-- name="study_design_info" type="study_design_info_struct" minOccurs="0"/>-->
+    <!-- name="target_duration" type="xs:string" minOccurs="0"/>-->
+    <!-- name="primary_outcome" type="protocol_outcome_struct" minOccurs="0" maxOccurs="unbounded"/>-->
+    <!-- name="secondary_outcome" type="protocol_outcome_struct" minOccurs="0" maxOccurs="unbounded"/>-->
+    <!-- name="other_outcome" type="protocol_outcome_struct" minOccurs="0" maxOccurs="unbounded"/>-->
+    <!-- name="number_of_arms" type="xs:integer" minOccurs="0"/>-->
+    <!-- name="number_of_groups" type="xs:integer" minOccurs="0"/>-->
+    <!-- name="enrollment" type="enrollment_struct" minOccurs="0"/>-->
+    <!-- name="condition" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>-->
+    <!-- name="arm_group" type="arm_group_struct" minOccurs="0" maxOccurs="unbounded"/>-->
+    <!-- name="intervention" type="intervention_struct" minOccurs="0" maxOccurs="unbounded"/>-->
+    <!-- name="biospec_retention" type="biospec_retention_enum" minOccurs="0"/>-->
+    <!-- name="biospec_descr" type="textblock_struct" minOccurs="0"/>-->
+    <!-- name="eligibility" type="eligibility_struct" minOccurs="0"/>-->
+    <!-- name="overall_official" type="investigator_struct" minOccurs="0" maxOccurs="unbounded"/>-->
+    <!-- name="overall_contact" type="contact_struct" minOccurs="0"/>-->
+    <!-- name="overall_contact_backup" type="contact_struct" minOccurs="0"/>-->
+    <!-- name="location" type="location_struct" minOccurs="0" maxOccurs="unbounded"/>-->
+    <!-- name="location_countries" type="countries_struct" minOccurs="0"/>-->
+    <!-- name="removed_countries" type="countries_struct" minOccurs="0"/>-->
+    <!-- name="link" type="link_struct" minOccurs="0" maxOccurs="unbounded"/>-->
+    <!-- name="reference" type="reference_struct" minOccurs="0" maxOccurs="unbounded"/>-->
+    <!-- name="results_reference" type="reference_struct" minOccurs="0" maxOccurs="unbounded"/>-->
+    <!-- name="verification_date" type="variable_date_type" minOccurs="0"/>-->
+    <!--&lt;!&ndash; === Old Dates will be dropped in a few months (sometime in 2018) ========= &ndash;&gt;-->
+    <!-- name="lastchanged_date" type="variable_date_type" minOccurs="0"/>-->
+    <!-- name="firstreceived_date" type="variable_date_type" minOccurs="0"/>-->
+    <!-- name="firstreceived_results_date" type="variable_date_type" minOccurs="0"/>-->
+    <!-- name="firstreceived_results_disposition_date" type="variable_date_type" minOccurs="0"/>-->
+    <!--&lt;!&ndash; === New Dates ============================================================ &ndash;&gt;-->
+    <!-- name="study_first_submitted" type="variable_date_type" minOccurs="0"/>-->
+    <!-- name="study_first_submitted_qc" type="variable_date_type" minOccurs="0"/>-->
+    <!-- name="study_first_posted" type="variable_date_struct" minOccurs="0"/>-->
+    <!-- name="results_first_submitted" type="variable_date_type" minOccurs="0"/>-->
+    <!-- name="results_first_submitted_qc" type="variable_date_type" minOccurs="0"/>-->
+    <!-- name="results_first_posted" type="variable_date_struct" minOccurs="0"/>-->
+    <!-- name="disposition_first_submitted" type="variable_date_type" minOccurs="0"/>-->
+    <!-- name="disposition_first_submitted_qc" type="variable_date_type" minOccurs="0"/>-->
+    <!-- name="disposition_first_posted" type="variable_date_struct" minOccurs="0"/>-->
+    <!-- name="last_update_submitted" type="variable_date_type" minOccurs="0"/>-->
+    <!-- name="last_update_submitted_qc" type="variable_date_type" minOccurs="0"/>-->
+    <!-- name="last_update_posted" type="variable_date_struct" minOccurs="0"/>-->
+    <!--&lt;!&ndash; === End of Dates ========================================================= &ndash;&gt;-->
+    <!-- name="responsible_party" type="responsible_party_struct" minOccurs="0"/>-->
+    <!-- name="keyword" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>-->
+    <!-- name="condition_browse" type="browse_struct" minOccurs="0"/>-->
+    <!-- name="intervention_browse" type="browse_struct" minOccurs="0"/>-->
+    <!-- name="patient_data" type="patient_data_struct" minOccurs="0"/>-->
+    <!-- name="study_docs" type="study_docs_struct" minOccurs="0"/>-->
+    <!-- name="clinical_results" type="clinical_results_struct" minOccurs="0"/>-->
+
     <xsl:template match="/">{
         "required_header":{
             "download_date":"<xsl:value-of select="/clinical_study/required_header/download_date"/>",
@@ -24,6 +93,21 @@
         },
         "brief_title":"<xsl:value-of select="/clinical_study/brief_title"/>",
         "acronym":"<xsl:value-of select="/clinical_study/acronym"/>",
+        "official_title":"<xsl:value-of select="/clinical_study/official_title"/>",
+        "sponsors":{
+            "lead_sponsor":{
+                "agency":"<xsl:value-of select="/clinical_study/sponsors/lead_sponsor/agency"/>",
+                "agency_class":"<xsl:value-of select="/clinical_study/sponsors/lead_sponsor/agency_class"/>"
+            },
+            "collaborator":[
+                <xsl:for-each select="/clinical_study/sponsors/collaborator">{
+                        "agency":"<xsl:value-of select="agency"/>",
+                        "agency_class":"<xsl:value-of select="agency_class"/>"
+                    }<xsl:if test="position() != last()">,</xsl:if>
+                </xsl:for-each>
+            ]
+        },
+        "source":"<xsl:value-of select="/clinical_study/source"/>",
         "keyword": [
         <xsl:for-each select="/clinical_study/keyword">
             "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
@@ -126,12 +210,12 @@
                                 "email":"<xsl:value-of select="contact_backup/email"/>"},
             "investigator":[
                  <xsl:for-each select="investigator">
-                            {"first_name":"<xsl:value-of select="investigator/first_name"/>",
-                            "middle_name":"<xsl:value-of select="investigator/middle_name"/>",
-                            "last_name":"<xsl:value-of select="investigator/last_name"/>",
-                            "degrees":"<xsl:value-of select="investigator/degrees"/>",
-                            "role":"<xsl:value-of select="investigator/role"/>",
-                            "affiliation":"<xsl:value-of select="investigator/affiliation"/>"}<xsl:if test="position() != last()">,</xsl:if>
+                            {"first_name":"<xsl:value-of select="first_name"/>",
+                            "middle_name":"<xsl:value-of select="middle_name"/>",
+                            "last_name":"<xsl:value-of select="last_name"/>",
+                            "degrees":"<xsl:value-of select="degrees"/>",
+                            "role":"<xsl:value-of select="role"/>",
+                            "affiliation":"<xsl:value-of select="affiliation"/>"}<xsl:if test="position() != last()">,</xsl:if>
                  </xsl:for-each>]
             }<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
