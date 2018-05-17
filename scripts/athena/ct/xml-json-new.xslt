@@ -6,7 +6,7 @@
         "required_header":{
             "download_date":"<xsl:value-of select="/clinical_study/required_header/download_date"/>",
             "link_text":"<xsl:value-of select="/clinical_study/required_header/link_text"/>",
-            "url":"<xsl:value-of select="/clinical_study/required_header/url"/>",
+            "url":"<xsl:value-of select="/clinical_study/required_header/url"/>"
         },
         "id_info":{
             "org_study_id":"<xsl:value-of select="/clinical_study/id_info/org_study_id"/>",
