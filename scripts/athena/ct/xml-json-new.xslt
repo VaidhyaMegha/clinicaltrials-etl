@@ -257,6 +257,16 @@
         <xsl:for-each select="/clinical_study/removed_countries/country">
             "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
+        ],
+        "condition_browse": [
+        <xsl:for-each select="/clinical_study/condition_browse/mesh_term">
+            "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
+        </xsl:for-each>
+        ],
+        "intervention_browse": [
+        <xsl:for-each select="/clinical_study/intervention_browse/mesh_term">
+            "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
+        </xsl:for-each>
         ]
         }
     </xsl:template>

@@ -218,5 +218,12 @@
   "location_countries": [
     "United States"
   ],
-  "removed_countries": []
-}
+  "removed_countries": [],
+  "condition_browse": [
+    "Lymphoma",
+    "Lymphoma, Non-Hodgkin",
+    "Lymphoma, B-Cell",
+    "Lymphoma, Large B-Cell, Diffuse"
+  ],
+  "intervention_browse": []
+}     
