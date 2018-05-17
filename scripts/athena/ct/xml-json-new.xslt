@@ -18,8 +18,6 @@
     <!-- name="overall_contact" type="contact_struct" minOccurs="0"/>-->
     <!-- name="overall_contact_backup" type="contact_struct" minOccurs="0"/>-->
     <!-- name="responsible_party" type="responsible_party_struct" minOccurs="0"/>-->
-    <!-- name="condition_browse" type="browse_struct" minOccurs="0"/>-->
-    <!-- name="intervention_browse" type="browse_struct" minOccurs="0"/>-->
     <!-- name="patient_data" type="patient_data_struct" minOccurs="0"/>-->
     <!-- name="study_docs" type="study_docs_struct" minOccurs="0"/>-->
     <!-- name="clinical_results" type="clinical_results_struct" minOccurs="0"/>-->
