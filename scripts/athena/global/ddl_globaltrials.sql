@@ -1,16 +1,21 @@
- CREATE EXTERNAL TABLE `utdm_trials`(
-         `Trial_id` string,
-         `Secondary_trial_identifiers` string,
+REATE EXTERNAL TABLE `Global_registries`(
+         `ctri_number` string,
+         `nct_id` string,
+         `identifiers` string,   
+         `secondary_ids` string, 
+         `Date_Of_Registration` string
          `Study_type` string,
          `Public_title` string,
          `Scientific_title` string,
-         `summary` string,
+         `brief_summary` string,
          `phase` string,
          `exclusion_criteria string,
          `inclusion_criteria` string,
          `sample_size` string,
-         `recruitment_status_global` string,
-         `recruitment_status_india` string,
+         `ctris_recruitment_status_global` string,
+         `ctris_recruitment_status_india` string,
+         `cts_recruitment_status` string,
+         `trials_recruitment_status` string,
          `recruitment_status` string,
          `primary_outcome` string,
          `secondary_outcome` string,
@@ -21,9 +26,9 @@
          `secondary_sponsor` string,
          `public_query_contact` string,
          `scientific_query_contact` string,
-         `date_of_completion_global` DATE,
-         `date_of_completion_india` DATE,
-         `completion_date DATE` 
+         `ctris_date_of_completion_global` DATE,
+         `ctris_date_of_completion_india` DATE,
+         `completion_date` DATE` 
  ROW FORMAT DELIMITED
  FIELDS TERMINATED BY '\t'
  STORED AS INPUTFORMAT
