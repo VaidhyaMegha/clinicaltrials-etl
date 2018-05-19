@@ -154,12 +154,13 @@
             },
             "outcome_list": {
                 "outcome": [
-                    <xsl:for-each select="outcome_list/outcome">{
+                    <xsl:for-each select="/clinical_study/clinical_results/outcome_list/outcome">{
                         "type":"<xsl:value-of select="type"/>",
                         "title":"<xsl:value-of select="title"/>",
                         "description":"<xsl:value-of select="description"/>",
                         "time_frame":"<xsl:value-of select="time_frame"/>",
                         "safety_issue":"<xsl:value-of select="safety_issue"/>",
+                        "posting_date":"<xsl:value-of select="posting_date"/>",
                         "population":"<xsl:value-of select="population"/>",
                         "group_list": {
                             "group": [
@@ -171,11 +172,211 @@
                             </xsl:for-each>
                             ]
                         },
-                    }<xsl:if test="position() != last()">,</xsl:if>
+                        "measure": {
+                            "title":"<xsl:value-of select="measure/title"/>",
+                            "description":"<xsl:value-of select="measure/description"/>",
+                            "population":"<xsl:value-of select="measure/population"/>",
+                            "units":"<xsl:value-of select="measure/units"/>",
+                            "param":"<xsl:value-of select="measure/param"/>",
+                            "dispersion":"<xsl:value-of select="measure/dispersion"/>",
+                            "units_analyzed":"<xsl:value-of select="measure/units_analyzed"/>",
+                            "analyzed_list": {
+                                "analyzed": [
+                                    <xsl:for-each select="measure/analyzed_list/analyzed">{
+                                        "units":"<xsl:value-of select="units"/>",
+                                        "scope":"<xsl:value-of select="scope"/>",
+                                        "count_list": {
+                                        "count": [
+                                        <xsl:for-each select="measure/count_list/count">{
+                                            "group_id":"<xsl:value-of select="@group_id"/>",
+                                            "value":"<xsl:value-of select="@value"/>",
+                                            "text_node_value":"<xsl:value-of select="text()"/>"
+                                            }<xsl:if test="position() != last()">,</xsl:if>
+                                        </xsl:for-each>
+                                        }
+                                        }<xsl:if test="position() != last()">,</xsl:if>
+                                    </xsl:for-each>
+                                    ]
+                                },
+                            "class_list": {
+                                "class": [
+                                <xsl:for-each select="measure/class_list/class">{
+                                    "title":"<xsl:value-of select="title"/>",
+                                    "analyzed_list": {
+                                    "analyzed": [
+                                    <xsl:for-each select="analyzed_list/analyzed">{
+                                        "units":"<xsl:value-of select="units"/>",
+                                        "scope":"<xsl:value-of select="scope"/>",
+                                        "count_list": {
+                                        "count": [
+                                        <xsl:for-each select="count_list/count">{
+                                            "group_id":"<xsl:value-of select="@group_id"/>",
+                                            "value":"<xsl:value-of select="@value"/>",
+                                            "text_node_value":"<xsl:value-of select="text()"/>"
+                                            }<xsl:if test="position() != last()">,</xsl:if>
+                                        </xsl:for-each>
+                                        }
+                                        }<xsl:if test="position() != last()">,</xsl:if>
+                                    </xsl:for-each>
+                                    ]
+                                    },
+                                    "category_list": {
+                                    "category": [
+                                    <xsl:for-each select="category_list/category">{
+                                        "title":"<xsl:value-of select="title"/>",
+                                        "measurement_list": {
+                                        "measurement": [
+                                        <xsl:for-each select="measurement_list/measurement">{
+                                            "group_id":"<xsl:value-of select="@group_id"/>",
+                                            "value":"<xsl:value-of select="@value"/>",
+                                            "spread":"<xsl:value-of select="@spread"/>",
+                                            "lower_limit":"<xsl:value-of select="@lower_limit"/>",
+                                            "upper_limit":"<xsl:value-of select="@upper_limit"/>",
+                                            "text_node_value":"<xsl:value-of select="text()"/>"
+                                            }<xsl:if test="position() != last()">,</xsl:if>
+                                        </xsl:for-each>
+                                        }
+                                        }<xsl:if test="position() != last()">,</xsl:if>
+                                    </xsl:for-each>
+                                    ]
+                                    }
+                                    }<xsl:if test="position() != last()">,</xsl:if>
+                                </xsl:for-each>
+                                ]
+                            },
+                        },
+                        "analysis_list": {
+                            "analysis": [
+                                <xsl:for-each select="analysis_list/analysis">{
+                                    "group_id_list": {
+                                        "group_id": [
+                                            <xsl:for-each select="group_id_list/group_id">
+                                                "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
+                                            </xsl:for-each>
+                                            ]
+                                        }
+                                    "groups_desc":"<xsl:value-of select="groups_desc"/>",
+                                    "non_inferiority_type":"<xsl:value-of select="non_inferiority_type"/>",
+                                    "non_inferiority_desc":"<xsl:value-of select="non_inferiority_desc"/>",
+                                    "p_value":"<xsl:value-of select="p_value"/>",
+                                    "p_value_desc":"<xsl:value-of select="p_value_desc"/>",
+                                    "method":"<xsl:value-of select="method"/>",
+                                    "method_desc":"<xsl:value-of select="method_desc"/>",
+                                    "param_type":"<xsl:value-of select="param_type"/>",
+                                    "param_value":"<xsl:value-of select="param_value"/>",
+                                    "dispersion_type":"<xsl:value-of select="dispersion_type"/>",
+                                    "dispersion_value":"<xsl:value-of select="dispersion_value"/>",
+                                    "ci_percent":"<xsl:value-of select="ci_percent"/>",
+                                    "ci_n_sides":"<xsl:value-of select="ci_n_sides"/>",
+                                    "ci_lower_limit":"<xsl:value-of select="ci_lower_limit"/>",
+                                    "ci_upper_limit":"<xsl:value-of select="ci_upper_limit"/>",
+                                    "ci_upper_limit_na_comment":"<xsl:value-of select="ci_upper_limit_na_comment"/>",
+                                    "estimate_desc":"<xsl:value-of select="estimate_desc"/>",
+                                    "other_analysis_desc":"<xsl:value-of select="other_analysis_desc"/>"
+                                    }<xsl:if test="position() != last()">,</xsl:if>
+                                </xsl:for-each>
+                            ]
+                        }<xsl:if test="position() != last()">,</xsl:if>
                     </xsl:for-each>
                 ]
             },
-
+            "reported_events":{
+                "time_frame":"<xsl:value-of select="/clinical_study/clinical_results/reported_events/time_frame"/>",
+                "desc":"<xsl:value-of select="/clinical_study/clinical_results/reported_events/desc"/>",
+                "group_list": {
+                    "group": [
+                    <xsl:for-each select="/clinical_study/clinical_results/reported_events/group_list/group">{
+                        "title":"<xsl:value-of select="title"/>",
+                        "description":"<xsl:value-of select="description"/>",
+                        "group_id":"vocab"
+                        }<xsl:if test="position() != last()">,</xsl:if>
+                    </xsl:for-each>
+                    ]
+                },
+                "serious_events":{
+                    "frequency_threshold":"<xsl:value-of select="/clinical_study/clinical_results/reported_events/serious_events/frequency_threshold"/>",
+                    "default_vocab":"<xsl:value-of select="/clinical_study/clinical_results/reported_events/serious_events/default_vocab"/>",
+                    "default_assessment":"<xsl:value-of select="/clinical_study/clinical_results/reported_events/serious_events/default_assessment"/>",
+                    "category_list": {
+                        "category": [
+                        <xsl:for-each select="/clinical_study/clinical_results/reported_events/serious_events/category_list/category">{
+                            "title":"<xsl:value-of select="title"/>",
+                            "event_list": {
+                                "event": [
+                                <xsl:for-each select="event_list/event">{
+                                    "sub_title":{
+                                        "vocab":"<xsl:value-of select="@vocab"/>",
+                                        "text_node_value":"<xsl:value-of select="."/>"
+                                    },
+                                    "assessment":"<xsl:value-of select="assessment"/>",
+                                    "description":"<xsl:value-of select="description"/>",
+                                    "counts":[
+                                    <xsl:for-each select="counts">{
+                                        "group_id":"<xsl:value-of select="@group_id"/>",
+                                        "subjects_affected":"<xsl:value-of select="@subjects_affected"/>",
+                                        "subjects_at_risk":"<xsl:value-of select="@subjects_at_risk"/>",
+                                        "events":"<xsl:value-of select="@events"/>",
+                                        "text_node_value":"<xsl:value-of select="."/>"
+                                    }<xsl:if test="position() != last()">,</xsl:if>
+                                    </xsl:for-each>
+                                    ]
+                                }<xsl:if test="position() != last()">,</xsl:if>
+                                </xsl:for-each>
+                                ]
+                            },
+                            }<xsl:if test="position() != last()">,</xsl:if>
+                        </xsl:for-each>
+                        ]
+                    },
+                },
+                "other_events":{
+                    "frequency_threshold":"<xsl:value-of select="/clinical_study/clinical_results/reported_events/other_events/frequency_threshold"/>",
+                    "default_vocab":"<xsl:value-of select="/clinical_study/clinical_results/reported_events/other_events/default_vocab"/>",
+                    "default_assessment":"<xsl:value-of select="/clinical_study/clinical_results/reported_events/other_events/default_assessment"/>",
+                    "category_list": {
+                        "category": [
+                        <xsl:for-each select="/clinical_study/clinical_results/reported_events/other_events/category_list/category">{
+                            "title":"<xsl:value-of select="title"/>",
+                            "event_list": {
+                            "event": [
+                            <xsl:for-each select="event_list/event">{
+                                "sub_title":{
+                                "vocab":"<xsl:value-of select="@vocab"/>",
+                                "text_node_value":"<xsl:value-of select="."/>"
+                                },
+                                "assessment":"<xsl:value-of select="assessment"/>",
+                                "description":"<xsl:value-of select="description"/>",
+                                "counts":[
+                                <xsl:for-each select="counts">{
+                                    "group_id":"<xsl:value-of select="@group_id"/>",
+                                    "subjects_affected":"<xsl:value-of select="@subjects_affected"/>",
+                                    "subjects_at_risk":"<xsl:value-of select="@subjects_at_risk"/>",
+                                    "events":"<xsl:value-of select="@events"/>",
+                                    "text_node_value":"<xsl:value-of select="."/>"
+                                    }<xsl:if test="position() != last()">,</xsl:if>
+                                </xsl:for-each>
+                                ]
+                                }<xsl:if test="position() != last()">,</xsl:if>
+                            </xsl:for-each>
+                            ]
+                            },
+                            }<xsl:if test="position() != last()">,</xsl:if>
+                        </xsl:for-each>
+                        ]
+                    },
+                },
+            },
+            "certain_agreements":{
+                "pi_employee":"<xsl:value-of select="/clinical_study/clinical_results/certain_agreements/pi_employee"/>",
+                "restrictive_agreement":"<xsl:value-of select="/clinical_study/clinical_results/certain_agreements/restrictive_agreement"/>"
+            },
+            "limitations_and_caveats":"<xsl:value-of select="/clinical_study/clinical_results/limitations_and_caveats"/>",
+            "point_of_contact":{
+                "name_or_title":"<xsl:value-of select="/clinical_study/clinical_results/point_of_contact/name_or_title"/>",
+                "organization":"<xsl:value-of select="/clinical_study/clinical_results/point_of_contact/organization"/>",
+                "phone":"<xsl:value-of select="/clinical_study/clinical_results/point_of_contact/phone"/>",
+                "email":"<xsl:value-of select="/clinical_study/clinical_results/point_of_contact/email"/>"
+            }
         },
         "patient_data": {
             "sharing_ipd":"<xsl:value-of select="/clinical_study/patient_data/sharing_ipd"/>",
