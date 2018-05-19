@@ -1,4 +1,4 @@
-REATE EXTERNAL TABLE `Global_registries`(
+CREATE EXTERNAL TABLE `Global_registries`(
          `ctri_number` string,
          `nct_id` string,
          `identifiers` string,   

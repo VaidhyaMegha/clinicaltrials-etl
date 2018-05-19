@@ -7,8 +7,6 @@
     <!--what's remaining-->
 
 
-    <!-- name="overall_official" type="investigator_struct" minOccurs="0" maxOccurs="unbounded"/>-->
-    <!-- name="overall_contact" type="contact_struct" minOccurs="0"/>-->
     <!-- name="overall_contact_backup" type="contact_struct" minOccurs="0"/>-->
     <!-- name="responsible_party" type="responsible_party_struct" minOccurs="0"/>-->
     <!-- name="patient_data" type="patient_data_struct" minOccurs="0"/>-->

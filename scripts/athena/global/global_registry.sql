@@ -33,3 +33,25 @@ WHERE ctris.secondary_ids != 'Secondary ID Identifier NIL NIL'
         AND regexp_like(trials.identifiers, 'NCT')
         AND substr(secondary_ids, strpos(secondary_ids, 'NCT'), 11)=cts.nct_id
         AND substr(trials.identifiers, strpos(trials.identifiers, 'NCT'), 11)=cts.nct_id
+
+        UNION
+
+        left outer join --> a - (a n b)
+        full outer join --> a + b - (a n b)
+        join --> (a n b)
+
+        complement of
+        ctri left outer join ct on
+        ctris.secondary_ids != 'Secondary ID Identifier NIL NIL'
+        AND regexp_like(ctris.secondary_ids, 'NCT')
+
+        UNION
+
+        complement of
+                ct left outer join ctri on
+                regexp_like(ctris.identifiers, 'NCT')
+                AND substr(ctri.secondary_ids, strpos(secondary_ids, 'NCT'), 11) = ct.nct_id
+
+        UNION
+
+
