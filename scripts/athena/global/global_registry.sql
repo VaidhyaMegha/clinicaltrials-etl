@@ -37,7 +37,7 @@ WHERE ctris.secondary_ids != 'Secondary ID Identifier NIL NIL'
         UNION
 
         left outer join --> a - (a n b)
-        full outer join --> a + b - (a n b)
+        full outer join --> (a + b - (a n b)) + c - (c n (a + b - (a n b)))
         join --> (a n b)
 
         complement of
