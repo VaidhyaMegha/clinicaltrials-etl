@@ -44,6 +44,26 @@
                     <xsl:with-param name="by" select="' '"/>
                 </xsl:call-template>"
             },
+        "overall_official": [
+        <xsl:for-each select="/clinical_study/overall_official">{
+            "first_name":"<xsl:value-of select="first_name"/>",
+            "middle_name":"<xsl:value-of select="middle_name"/>",
+            "last_name":"<xsl:value-of select="last_name"/>",
+            "degrees":"<xsl:value-of select="degrees"/>",
+            "role":"<xsl:value-of select="role"/>",
+            "affiliation":"<xsl:value-of select="affiliation"/>"
+            }<xsl:if test="position() != last()">,</xsl:if>
+        </xsl:for-each>
+        ],
+        "overall_contact": {
+            "first_name":"<xsl:value-of select="/clinical_study/overall_contact/first_name"/>",
+            "middle_name":"<xsl:value-of select="/clinical_study/overall_contact/middle_name"/>",
+            "last_name":"<xsl:value-of select="/clinical_study/overall_contact/last_name"/>",
+            "degrees":"<xsl:value-of select="/clinical_study/overall_contact/degrees"/>",
+            "phone":"<xsl:value-of select="/clinical_study/overall_contact/phone"/>",
+            "phone_ext":"<xsl:value-of select="/clinical_study/overall_contact/phone_ext"/>"
+            "email":"<xsl:value-of select="/clinical_study/overall_contact/email"/>"
+        },
             "sampling_method":"<xsl:value-of select="/clinical_study/eligibility/sampling_method"/>",
             "criteria":{
                 "textblock":"<xsl:call-template name="string-replace-all">
