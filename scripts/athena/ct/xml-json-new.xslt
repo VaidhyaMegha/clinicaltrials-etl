@@ -7,12 +7,6 @@
     <!--what's remaining-->
 
 
-    <!-- name="oversight_info" type="oversight_info_struct" minOccurs="0"/>-->
-    <!-- name="expanded_access_info" type="expanded_access_info_struct" minOccurs="0"/>-->
-    <!-- name="study_design_info" type="study_design_info_struct" minOccurs="0"/>-->
-    <!-- name="enrollment" type="enrollment_struct" minOccurs="0"/>-->
-    <!-- name="arm_group" type="arm_group_struct" minOccurs="0" maxOccurs="unbounded"/>-->
-    <!-- name="intervention" type="intervention_struct" minOccurs="0" maxOccurs="unbounded"/>-->
     <!-- name="eligibility" type="eligibility_struct" minOccurs="0"/>-->
     <!-- name="overall_official" type="investigator_struct" minOccurs="0" maxOccurs="unbounded"/>-->
     <!-- name="overall_contact" type="contact_struct" minOccurs="0"/>-->
@@ -23,6 +17,52 @@
     <!-- name="clinical_results" type="clinical_results_struct" minOccurs="0"/>-->
 
     <xsl:template match="/">{
+        "intervention": [
+        <xsl:for-each select="/clinical_study/intervention">{
+            "intervention_type":"<xsl:value-of select="intervention_type"/>",
+            "intervention_name":"<xsl:value-of select="intervention_name"/>",
+            "description":"<xsl:value-of select="description"/>",
+            "arm_group_label": [
+                <xsl:for-each select="arm_group_label">
+                    "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
+                </xsl:for-each>
+            ],
+            "other_name": [
+            <xsl:for-each select="other_name">
+                "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
+            </xsl:for-each>
+            ]
+            }<xsl:if test="position() != last()">,</xsl:if>
+        </xsl:for-each>
+        ],
+        "oversight_info":{
+            "has_dmc":"<xsl:value-of select="/clinical_study/oversight_info/has_dmc"/>",
+            "is_fda_regulated_drug":"<xsl:value-of select="/clinical_study/oversight_info/is_fda_regulated_drug"/>",
+            "is_fda_regulated_device":"<xsl:value-of select="/clinical_study/oversight_info/is_fda_regulated_device"/>",
+            "is_unapproved_device":"<xsl:value-of select="/clinical_study/oversight_info/is_unapproved_device"/>",
+            "is_ppsd":"<xsl:value-of select="/clinical_study/oversight_info/is_ppsd"/>",
+            "is_us_export":"<xsl:value-of select="/clinical_study/oversight_info/is_us_export"/>"
+        },
+        "arm_group":{
+            "arm_group_label":"<xsl:value-of select="/clinical_study/arm_group/arm_group_label"/>",
+            "arm_group_type":"<xsl:value-of select="/clinical_study/arm_group/arm_group_type"/>",
+            "description":"<xsl:value-of select="/clinical_study/arm_group/description"/>"
+        },
+        "expanded_access_info":{
+            "expanded_access_type_individual":"<xsl:value-of select="/clinical_study/expanded_access_info/expanded_access_type_individual"/>",
+            "expanded_access_type_intermediate":"<xsl:value-of select="/clinical_study/expanded_access_info/expanded_access_type_intermediate"/>",
+            "expanded_access_type_treatment":"<xsl:value-of select="/clinical_study/expanded_access_info/expanded_access_type_treatment"/>"
+        },
+        "study_design_info":{
+            "allocation":"<xsl:value-of select="/clinical_study/study_design_info/allocation"/>",
+            "intervention_model":"<xsl:value-of select="/clinical_study/study_design_info/intervention_model"/>",
+            "intervention_model_description":"<xsl:value-of select="/clinical_study/study_design_info/intervention_model_description"/>",
+            "primary_purpose":"<xsl:value-of select="/clinical_study/study_design_info/primary_purpose"/>",
+            "observational_model":"<xsl:value-of select="/clinical_study/study_design_info/observational_model"/>",
+            "time_perspective":"<xsl:value-of select="/clinical_study/study_design_info/time_perspective"/>",
+            "masking":"<xsl:value-of select="/clinical_study/study_design_info/masking"/>",
+            "masking_description":"<xsl:value-of select="/clinical_study/study_design_info/masking_description"/>"
+        },
         "required_header":{
             "download_date":"<xsl:value-of select="/clinical_study/required_header/download_date"/>",
             "link_text":"<xsl:value-of select="/clinical_study/required_header/link_text"/>",
@@ -78,6 +118,10 @@
         "disposition_first_submitted_qc":"<xsl:value-of select="/clinical_study/disposition_first_submitted_qc"/>",
         "last_update_submitted":"<xsl:value-of select="/clinical_study/last_update_submitted"/>",
         "last_update_submitted_qc":"<xsl:value-of select="/clinical_study/last_update_submitted_qc"/>",
+        "enrollment":{
+            "type":"<xsl:value-of select="/clinical_study/enrollment/@type"/>",
+            "value":"<xsl:value-of select="/clinical_study/enrollment/text()"/>"
+        },
         "study_first_posted":{
             "type":"<xsl:value-of select="/clinical_study/study_first_posted/@type"/>",
             "value":"<xsl:value-of select="/clinical_study/study_first_posted/text()"/>"

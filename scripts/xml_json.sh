@@ -1,6 +1,6 @@
  #!/usr/bin/env bash
 
-pushd ~/projects/personal/HealthAnalytics/DI_ETL/scripts/athena/ct
+pushd ~/projects/DI_ETL/scripts/athena/ct
 
 function genJSON(){
     g=${1//.xml/}

@@ -1,53 +1,137 @@
 {
+  "intervention": [
+    {
+      "intervention_type": "Procedure",
+      "intervention_name": "Inferior mesenteric Vein dissection",
+      "description": "Dissection of the Inferior mesenteric Vein first, and go down to the Artery during the total mesorectal excision",
+      "arm_group_label": [
+        "Inferior mesenteric Vein dissection"
+      ],
+      "other_name": []
+    },
+    {
+      "intervention_type": "Procedure",
+      "intervention_name": "Inferior mesenteric Artery dissection",
+      "description": "Dissection of the Inferior mesenteric Artery directly in the total mesorectal excision",
+      "arm_group_label": [
+        "Inferior mesenteric Artery dissection"
+      ],
+      "other_name": []
+    }
+  ],
+  "oversight_info": {
+    "has_dmc": "No",
+    "is_fda_regulated_drug": "No",
+    "is_fda_regulated_device": "No",
+    "is_unapproved_device": "",
+    "is_ppsd": "",
+    "is_us_export": ""
+  },
+  "arm_group": {
+    "arm_group_label": "Inferior mesenteric Vein dissection",
+    "arm_group_type": "Experimental",
+    "description": "To improve and preserve the rectal nerve in the total mesorectal excision, its starts the dissection from the inferior mesenteric vein to the inferior mesenteric artery and through the pelvis"
+  },
+  "expanded_access_info": {
+    "expanded_access_type_individual": "",
+    "expanded_access_type_intermediate": "",
+    "expanded_access_type_treatment": ""
+  },
+  "study_design_info": {
+    "allocation": "Randomized",
+    "intervention_model": "Parallel Assignment",
+    "intervention_model_description": "",
+    "primary_purpose": "Prevention",
+    "observational_model": "",
+    "time_perspective": "",
+    "masking": "Single (Outcomes Assessor)",
+    "masking_description": "The analysis of the results will be blind for the investigator"
+  },
   "required_header": {
     "download_date": "ClinicalTrials.gov processed this data on May 09, 2018",
     "link_text": "Link to the current ClinicalTrials.gov record.",
-    "url": "https://clinicaltrials.gov/show/NCT03483103"
+    "url": "https://clinicaltrials.gov/show/NCT03520088"
   },
   "id_info": {
-    "org_study_id": "017006",
+    "org_study_id": "TAU-RECTALNERV-PRESERV-2018",
     "secondary_id": [],
-    "nct_id": "NCT03483103",
+    "nct_id": "NCT03520088",
     "nct_alias": []
   },
-  "brief_title": "Lisocabtagene Maraleucel (JCAR017) as Second-Line Therapy (TRANSCEND-NHL-006)",
+  "brief_title": "PROSPECTIVE CONTROLLED AND RANDOMIZED STUDY OF THE GENITOURINARY FUNCTION AFTER RECTAL CANCER SURGERY IN RELATION TO THE DISSECTION OF THE INFERIOR MESENTERIC VESSELS",
   "acronym": "",
-  "official_title": "A Phase 2 Study of Lisocabtagene Maraleucel (JCAR017) as Second-Line Therapy in Adult Patients With Aggressive B-cell NHL (017006)",
+  "official_title": "PROSPECTIVE CONTROLLED AND RANDOMIZED STUDY OF THE GENITOURINARY FUNCTION AFTER RECTAL CANCER SURGERY IN RELATION TO THE DISSECTION OF THE INFERIOR MESENTERIC VESSELS",
   "sponsors": {
     "lead_sponsor": {
-      "agency": "Juno Therapeutics, Inc.",
-      "agency_class": "Industry"
+      "agency": "Corporacion Parc Tauli",
+      "agency_class": "Other"
     },
     "collaborator": [
       {
-        "agency": "Celgene Corporation",
-        "agency_class": "Industry"
+        "agency": "Paula Planelles-Soler",
+        "agency_class": "Other"
+      },
+      {
+        "agency": "Laura Mora-Lopez",
+        "agency_class": "Other"
+      },
+      {
+        "agency": "Naim Hannaoui",
+        "agency_class": "Other"
+      },
+      {
+        "agency": "Sheila Serra-Pla",
+        "agency_class": "Other"
+      },
+      {
+        "agency": "Arturo Dominguez-Garcia",
+        "agency_class": "Other"
+      },
+      {
+        "agency": "Jesus Muñoz-Rodriguez",
+        "agency_class": "Other"
+      },
+      {
+        "agency": "Joan Prats-Lopez",
+        "agency_class": "Other"
+      },
+      {
+        "agency": "Salvador Navarro-Soto",
+        "agency_class": "Other"
+      },
+      {
+        "agency": "Xavier Serra-Aracil",
+        "agency_class": "Other"
       }
     ]
   },
-  "source": "Juno Therapeutics, Inc.",
+  "source": "Corporacion Parc Tauli",
   "why_stopped": "",
   "target_duration": "",
   "overall_status": "Not yet recruiting",
   "last_known_status": "",
-  "phase": "Phase 2",
+  "phase": "N/A",
   "study_type": "Interventional",
   "has_expanded_access": "No",
   "biospec_retention": "",
-  "number_of_arms": "1",
+  "number_of_arms": "2",
   "number_of_groups": "",
   "verification_date": "April 2018",
-  "study_first_submitted": "March 23, 2018",
-  "study_first_submitted_qc": "March 23, 2018",
+  "study_first_submitted": "April 3, 2018",
+  "study_first_submitted_qc": "April 26, 2018",
   "results_first_submitted": "",
   "results_first_submitted_qc": "",
   "disposition_first_submitted": "",
   "disposition_first_submitted_qc": "",
-  "last_update_submitted": "April 4, 2018",
-  "last_update_submitted_qc": "April 4, 2018",
+  "last_update_submitted": "April 26, 2018",
+  "last_update_submitted_qc": "April 26, 2018",
+  "enrollment": {
+    "type": "Anticipated",
+    "value": "90"
+  },
   "study_first_posted": {
-    "type": "Actual",
-    "value": "March 30, 2018"
+    "type": "Estimate",
+    "value": "May 9, 2018"
   },
   "results_first_posted": {
     "type": "",
@@ -58,12 +142,12 @@
     "value": ""
   },
   "last_update_posted": {
-    "type": "Actual",
-    "value": "April 6, 2018"
+    "type": "Estimate",
+    "value": "May 9, 2018"
   },
   "completion_date": {
     "type": "Anticipated",
-    "value": "May 2, 2021"
+    "value": "December 30, 2022"
   },
   "start_date": {
     "type": "Anticipated",
@@ -71,104 +155,35 @@
   },
   "primary_completion_date": {
     "type": "Anticipated",
-    "value": "May 2, 2021"
+    "value": "December 30, 2021"
   },
   "brief_summary": {
-    "textblock": "       This is a Phase 2, open-label, multicenter study to determine the efficacy and safety of       lisocabtagene maraleucel (JCAR017) in adult subjects who have relapsed from, or are       refractory to, a single line of immunochemotherapy for aggressive B-cell non-Hodgkin lymphoma       (NHL) and are ineligible for hematopoietic stem cell transplant (based on age, performance       status, and/or comorbidities). Subjects will receive treatment with lisocabtagene maraleucel       and will be followed for 2 years for safety, pharmacokinetics and biomarkers, disease status,       quality of life, and survival.     "
+    "textblock": "       Purpose: The  Total Mesorectal Excision  (TME) is the standard surgical technique for the       treatment of rectal cancer. Up to 50% of sexual dysfunction is described after TME and up to       30% of urinary dysfunction. The main objective of the study is to compare pre- and post-TME       sexual dysfunction according to the approach of the inferior mesenteric vessels, directly on       the IMA or from the inferior mesenteric vein (IMV) to the IMA.        Methods: Multicenter, prospective, controlled and randomized study of patients with rectal       adenocarcinoma with neoadjuvant chemoradiotherapy, who will be randomized into two groups       depending on the approach of the inferior mesenteric vessels. The main variable is pre and       postoperative sexual dysfunction. The sample to be included will be 90 patients, 45 per       group.     "
   },
   "detailed_description": {
-    "textblock": ""
+    "textblock": "       Purpose: The  Total Mesorectal Excision  (TME) is the standard surgical technique for the       treatment of rectal cancer. Up to 50% of sexual dysfunction is described after TME and up to       30% of urinary dysfunction. Although there are other factors, the main cause of postoperative       genitourinary dysfunction is intraoperative injury of the autonomic pelvic nerves. One of the       regions with more risk is the Inferior Mesenteric Artery (IMA). The main objective of the       study is to compare pre- and post-TME sexual dysfunction according to the approach of the       inferior mesenteric vessels, directly on the IMA or from the inferior mesenteric vein (IMV)       to the IMA.        Methods: Multicenter, prospective, controlled and randomized study of patients with rectal       adenocarcinoma with neoadjuvant chemoradiotherapy, who will be randomized into two groups       depending on the approach of the inferior mesenteric vessels. The main variable is pre and       postoperative sexual dysfunction. The secondary variables are visualization and preservation       of the pelvic autonomic nerves, pre- and postoperative urinary dysfunction, pre and       postoperative quality of life. The sample to be included will be 90 patients, 45 per group.     "
   },
   "biospec_descr": {
     "textblock": ""
   },
   "keyword": [
-    "JCAR017",
-    "lisocabtagene maraleucel",
-    "NHL",
-    "chimeric antigen receptor",
-    "CAR",
-    "CAR T cell",
-    "autologous T cell therapy",
-    "immunotherapy",
-    "cell therapy",
-    "liso-cel"
+    "Rectal cancer",
+    "Sexual dysfunction",
+    "Urinary dysfunction",
+    "Rectal nerves damage",
+    "Total Mesorectal Excision"
   ],
   "condition": [
-    "Lymphoma, Non-Hodgkin",
-    "Lymphoma, Nonhodgkin",
-    "Lymphoma, B-Cell",
-    "Lymphoma, Large B-Cell, Diffuse"
+    "Rectal Cancer"
   ],
   "primary_outcome": [
     {
-      "measure": "Antitumor activity",
-      "time_frame": "Through Month 24",
-      "description": "Overall response rate (complete response + partial response) based on  Recommendations for Initial Evaluation, Staging, and Response Assessment of Hodgkin and Non-Hodgkin Lymphoma: The Lugano Classification "
+      "measure": "Changes in sexual dysfunction pre- and post-Total Mesorectal Excision",
+      "time_frame": "1 week before surgery and 12 months post-surgery",
+      "description": "Sexual dysfunction pre- and post-Total Mesorectal Excision by sexual dysfunction scale IIEF-5"
     }
   ],
-  "secondary_outcome": [
-    {
-      "measure": "Adverse events",
-      "time_frame": "90 days",
-      "description": "Proportion of subjects experiencing adverse events"
-    },
-    {
-      "measure": "Laboratory abnormalities",
-      "time_frame": "90 days",
-      "description": "Proportion of subjects experiencing laboratory abnormalities"
-    },
-    {
-      "measure": "Antitumor activity",
-      "time_frame": "Through Month 24",
-      "description": "Complete response rate based on  Recommendations for Initial Evaluation, Staging, and Response Assessment of Hodgkin and Non-Hodgkin Lymphoma: The Lugano Classification "
-    },
-    {
-      "measure": "Antitumor activity",
-      "time_frame": "Through Month 24",
-      "description": "Duration of response"
-    },
-    {
-      "measure": "Maximum concentration (Cmax) of lisocabtagene maraleucel in blood",
-      "time_frame": "Through Month 24",
-      "description": "Maximum concentration of lisocabtagene maraleucel in blood"
-    },
-    {
-      "measure": "Time of the maximum concentration (Tmax) of lisocabtagene maraleucel in blood",
-      "time_frame": "Through Month 24",
-      "description": "Time of the maximum concentration of lisocabtagene maraleucel in blood"
-    },
-    {
-      "measure": "Area under the curve of (AUC) lisocabtagene maraleucel concentration in blood",
-      "time_frame": "Through Month 24",
-      "description": "Area under the curve of lisocabtagene maraleucel in blood"
-    },
-    {
-      "measure": "Progression-free survival",
-      "time_frame": "Through Month 24",
-      "description": "Progression-free survival"
-    },
-    {
-      "measure": "Overall survival",
-      "time_frame": "Through Month 24",
-      "description": "Overall survival"
-    },
-    {
-      "measure": "Health-related quality of life and health economics and outcomes research",
-      "time_frame": "Through Month 24",
-      "description": "The European Organization for Research and Treatment of Cancer (EORTC) QLQ-C30 is a validated quality of life measure applicable to subjects with any cancer diagnosis. It is composed of 30 items that address general physical symptoms, physical functioning, fatigue and malaise, and social and emotional functioning. Subscale scores are transformed to a 0 to 100 scale, with higher scores on functional scales indicating better function and higher scores on symptom scales indicating worse symptoms. A 10 point change in the scoring is considered to be a meaningful change in HRQoL."
-    },
-    {
-      "measure": "Health-related quality of life and health economics and outcomes research",
-      "time_frame": "Through Month 24",
-      "description": "The EuroQol-5D (EQ-5D) is a standardized measure of health status developed by the EuroQol Group in order to provide a simple, generic measure of health for clinical and economic appraisal. The EQ-5D-5L consists of the EQ-5D-5L descriptive system and the EQ Visual Analogue scale (EQ VAS). The descriptive system comprises dimensions (mobility, self-care, usual activities, pain/discomfort, anxiety/depression). Each dimension has 5 levels (no problems, slight problems, moderate problems, severe problems, extreme problems). The VAS rating scale is a vertical 20 cm visual analogue scale with the end points labeled best imaginable health state at the top and worst imaginable health state at the bottom having numeric values of 100 and 0 respectively. The participant is asked to indicate his/her health state by ticking (or placing a cross) in the box against the most appropriate statement in each of the 5 dimensions."
-    },
-    {
-      "measure": "Health-related quality of life and health economics and outcomes research",
-      "time_frame": "Through Month 24",
-      "description": "Numbers of intensive care unit inpatient days and non-ICU inpatient days and reasons for hospitalization"
-    }
-  ],
+  "secondary_outcome": [],
   "other_outcome": [],
   "reference": [],
   "results_reference": [],
@@ -176,54 +191,42 @@
   "location": [
     {
       "facility": {
-        "name": "University of Pittsburgh Medical Center, Hillman Cancer Center",
+        "name": "Parc Tauli University Hospital",
         "address": {
-          "city": "Pittsburgh",
-          "state": "Pennsylvania",
-          "zip": "15232",
-          "country": "United States"
+          "city": "Sabadell",
+          "state": "Barcelona",
+          "zip": "08208",
+          "country": "Spain"
         }
       },
       "status": "Not yet recruiting",
       "contact": {
         "first_name": "",
         "middle_name": "",
-        "last_name": "Linda Fukas, RN",
+        "last_name": "Anna Pallisera-Lloveras, MD,PhD",
         "degrees": "",
-        "phone": "412-623-6037",
-        "phone_ext": "",
-        "email": "fukaslj@upmc.edu"
+        "phone": "93-723-1010",
+        "phone_ext": "21490",
+        "email": "apallill@gmail.com"
       },
       "contact_backup": {
         "first_name": "",
         "middle_name": "",
-        "last_name": "Bridget Sweterlitsch",
+        "last_name": "Xavier Serra-Aracil, MD,PhD",
         "degrees": "",
-        "phone": "",
-        "phone_ext": "",
-        "email": "sweterlitschbm@ph.upmc.edu"
+        "phone": "93-723-1010",
+        "phone_ext": "21490",
+        "email": "xserraa@gmail.com"
       },
-      "investigator": [
-        {
-          "first_name": "",
-          "middle_name": "",
-          "last_name": "Alison Sehgal, MD",
-          "degrees": "",
-          "role": "Principal Investigator",
-          "affiliation": ""
-        }
-      ]
+      "investigator": []
     }
   ],
   "location_countries": [
-    "United States"
+    "Spain"
   ],
   "removed_countries": [],
   "condition_browse": [
-    "Lymphoma",
-    "Lymphoma, Non-Hodgkin",
-    "Lymphoma, B-Cell",
-    "Lymphoma, Large B-Cell, Diffuse"
+    "Rectal Neoplasms"
   ],
   "intervention_browse": []
 }

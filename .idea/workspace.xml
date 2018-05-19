@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/athena/ct/foo.json" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/ct/foo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/athena/ct/public.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/ct/public.xsd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xslt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/xml_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/xml_json.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="xml_json.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="xml_json.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/xml_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="54">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -41,8 +44,8 @@
       <file leaf-file-name="ddl.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/ct/ddl.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="90" column="13" lean-forward="true" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
+            <state relative-caret-position="1620">
+              <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -59,8 +62,8 @@
       <file leaf-file-name="NCT03481725.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/ct/NCT03481725.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="856">
-              <caret line="62" column="22" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+            <state relative-caret-position="36">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="62" />
               <folding>
                 <element signature="e#2736#2742#0" expanded="true" />
                 <element signature="e#2877#2883#0" expanded="true" />
@@ -74,8 +77,8 @@
       <file leaf-file-name="public.xsd" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/ct/public.xsd">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="544" column="2" selection-start-line="544" selection-start-column="2" selection-end-line="544" selection-end-column="2" />
+            <state relative-caret-position="388">
+              <caret line="373" column="92" selection-start-line="373" selection-start-column="83" selection-end-line="373" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -83,8 +86,8 @@
       <file leaf-file-name="foo.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/ct/foo.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="82" column="12" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="12" />
+            <state relative-caret-position="18">
+              <caret column="1244" selection-start-column="1244" selection-end-column="1244" />
             </state>
           </provider>
         </entry>
@@ -92,17 +95,17 @@
       <file leaf-file-name="xslt-schema.xsd" pinned="false" current-in-tab="false">
         <entry file="jar://$APPLICATION_HOME_DIR$/plugins/xpath/lib/xpath.jar!/org/intellij/lang/xpath/xslt/resources/xslt-schema.xsd">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10116">
+            <state relative-caret-position="18">
               <caret line="562" column="10" selection-start-line="562" selection-start-column="10" selection-end-line="562" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xml-json-new.xslt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="xml-json-new.xslt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xslt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="274" column="30" lean-forward="true" selection-start-line="274" selection-start-column="30" selection-end-line="274" selection-end-column="30" />
+            <state relative-caret-position="612">
+              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -120,14 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>location</find>
-      <find>reference</find>
-      <find>removed_countries</find>
-      <find>recruitment_status_enum</find>
-      <find>remov</find>
-      <find>b</find>
-      <find>url</find>
-      <find>,( )*}</find>
       <find>&lt;xs:element</find>
       <find>invest</find>
       <find>phase</find>
@@ -150,6 +145,14 @@
       <find>browse</find>
       <find>browse_st</find>
       <find>textblo</find>
+      <find>oversih</find>
+      <find>enro</find>
+      <find>protocol_outcome_struct</find>
+      <find>facility</find>
+      <find>location</find>
+      <find>Quot;</find>
+      <find>intervention_stru</find>
+      <find>intervention</find>
     </findStrings>
     <replaceStrings>
       <replace>${SCRIPT}</replace>
@@ -230,13 +233,13 @@
         <option value="$PROJECT_DIR$/scripts/athena/ct/test.js" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/xml-json.xslt" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xsl" />
-        <option value="$PROJECT_DIR$/scripts/xml_json.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/test.sql" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/ddl.sql" />
-        <option value="$PROJECT_DIR$/scripts/athena/ct/public.xsd" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/NCT03481725.xml" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/foo.json" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/public.xsd" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xslt" />
+        <option value="$PROJECT_DIR$/scripts/xml_json.sh" />
       </list>
     </option>
   </component>
@@ -261,9 +264,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
-    <option name="y" value="28" />
-    <option name="width" value="1602" />
-    <option name="height" value="840" />
+    <option name="y" value="116" />
+    <option name="width" value="1600" />
+    <option name="height" value="829" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -271,9 +274,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -316,6 +316,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -326,11 +329,11 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 2.7.12 (/usr/bin/python)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/scripts/athena/ct/NCT01724619.json" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -578,11 +581,6 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
   </component>
-  <component name="SbtLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -692,53 +690,59 @@
       <workItem from="1526441858367" duration="11960000" />
       <workItem from="1526518536445" duration="2384000" />
       <workItem from="1526534049513" duration="7944000" />
+      <workItem from="1526549575228" duration="2496000" />
+      <workItem from="1526585717863" duration="599000" />
+      <workItem from="1526715102836" duration="480000" />
+      <workItem from="1526715620532" duration="449000" />
+      <workItem from="1526718638053" duration="1794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="486644000" />
+    <option name="totallyTimeSpent" value="492462000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="10" weight="0.32991913" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="DBHelper" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.33894736" />
-      <window_info anchor="right" id="Maven Projects" order="6" weight="0.32991913" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info id="Structure" order="1" sideWeight="0.5010246" side_tool="true" weight="0.20485175" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" x="0" y="0" width="414" height="892" id="Documentation" order="12" side_tool="true" weight="0.32991913" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.33894736" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.32991913" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32721713" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32924336" />
       <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989754" weight="0.20485175" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info id="Learn" order="3" />
       <window_info anchor="right" id="SciView" order="8" />
-      <window_info anchor="bottom" id="DBOutput" order="7" />
+      <window_info id="Structure" order="1" sideWeight="0.5010246" side_tool="true" weight="0.20485175" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="DBOutput" order="7" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32991803" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" x="0" y="0" width="350" height="604" id="Documentation" order="12" side_tool="true" visible="true" weight="0.329375" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Data View" order="11" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
+      <window_info id="DBHelper" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Data View" order="11" />
+      <window_info id="Designer" order="3" />
       <window_info anchor="right" id="PlantUML" order="10" weight="0.32991913" />
       <window_info anchor="bottom" id="Messages" order="8" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -746,18 +750,17 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32924336" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.33894736" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info id="Designer" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.33894736" />
       <window_info anchor="bottom" id="DBOutput" order="11" />
       <window_info anchor="right" x="0" y="0" width="413" height="884" id="Documentation" order="12" weight="0.32991913" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32721713" />
+      <window_info anchor="right" id="Data View" order="11" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32991913" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20485175" />
       <window_info anchor="right" id="SciView" order="8" />
@@ -767,6 +770,7 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32721713" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32822084" />
       <window_info id="DBHelper" order="7" />
@@ -820,7 +824,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="xslt">
           <url>file://$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xslt</url>
-          <line>101</line>
+          <line>146</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -828,6 +832,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xslt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4932">
+          <caret line="274" column="30" lean-forward="true" selection-start-line="274" selection-start-column="30" selection-end-line="274" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -852,20 +863,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/temp/1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="136" column="16" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/temp/CTRI.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="46" column="10" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/temp/1.html" />
+    <entry file="file://$USER_HOME$/temp/CTRI.html" />
     <entry file="file://$PROJECT_DIR$/scripts/utility.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -886,13 +885,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/ctri.py" />
     <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/replace_keys.json" />
     <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/test.csv" />
-    <entry file="file://$PROJECT_DIR$/../../aws_personal.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/aws_personal.csv" />
     <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/keys.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -975,13 +968,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/db/ct/ddl.sql" />
     <entry file="file://$PROJECT_DIR$/scripts/db/opentrials/ddl.sql" />
     <entry file="file://$PROJECT_DIR$/scripts/tables.sql" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8313" selection-end-column="8313" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.sql" />
     <entry file="file://$PROJECT_DIR$/scripts/actrn/actrn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -991,45 +978,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/ct/test.json" />
     <entry file="file://$PROJECT_DIR$/scripts/athena/ct/NCT01724619.xml" />
-    <entry file="file://$USER_HOME$/temp/AllPublicXMLs/NCT0348xxxx/NCT03487536.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="137" column="99" selection-start-line="137" selection-start-column="52" selection-end-line="137" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/temp/AllPublicXMLs/NCT0348xxxx/NCT03487536.xml" />
     <entry file="file://$PROJECT_DIR$/scripts/athena/ct/NCT01724619.json" />
     <entry file="file://$PROJECT_DIR$/scripts/athena/ct/node_modules/xml4js/lib/xsd.js" />
     <entry file="file://$PROJECT_DIR$/scripts/athena/ct/node_modules/xml4js/lib/parser.js" />
-    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/foo2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret column="11305" selection-start-column="11305" selection-end-column="11305" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/foo2.json" />
     <entry file="file://$PROJECT_DIR$/scripts/athena/ct/foo.xml" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/xpath/lib/xpath.jar!/org/intellij/lang/xpath/xslt/resources/xslt-schema.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10116">
-          <caret line="562" column="10" selection-start-line="562" selection-start-column="10" selection-end-line="562" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/package.json" />
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/test.js" />
     <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml-json.xslt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1037,27 +993,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/test.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/ct/ddl.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="90" column="13" lean-forward="true" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
+        <state relative-caret-position="1620">
+          <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/xml_json.sh">
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/foo.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="18">
+          <caret column="1244" selection-start-column="1244" selection-end-column="1244" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/xpath/lib/xpath.jar!/org/intellij/lang/xpath/xslt/resources/xslt-schema.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="562" column="10" selection-start-line="562" selection-start-column="10" selection-end-line="562" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/public.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="373" column="92" selection-start-line="373" selection-start-column="83" selection-end-line="373" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xslt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/ct/NCT03481725.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="856">
-          <caret line="62" column="22" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+        <state relative-caret-position="36">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="62" />
           <folding>
             <element signature="e#2736#2742#0" expanded="true" />
             <element signature="e#2877#2883#0" expanded="true" />
@@ -1067,24 +1041,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/public.xsd">
+    <entry file="file://$PROJECT_DIR$/scripts/xml_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="544" column="2" selection-start-line="544" selection-start-column="2" selection-end-line="544" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/foo.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="82" column="12" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xslt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="274" column="30" lean-forward="true" selection-start-line="274" selection-start-column="30" selection-end-line="274" selection-end-column="30" />
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
