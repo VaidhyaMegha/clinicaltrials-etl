@@ -7,7 +7,6 @@
     <!--what's remaining-->
 
 
-    <!-- name="eligibility" type="eligibility_struct" minOccurs="0"/>-->
     <!-- name="overall_official" type="investigator_struct" minOccurs="0" maxOccurs="unbounded"/>-->
     <!-- name="overall_contact" type="contact_struct" minOccurs="0"/>-->
     <!-- name="overall_contact_backup" type="contact_struct" minOccurs="0"/>-->
@@ -35,6 +34,32 @@
             }<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
         ],
+        "eligibility": {
+            "study_pop": {
+                "textblock":"<xsl:call-template name="string-replace-all">
+                    <xsl:with-param name="text">
+                        <xsl:value-of select="/clinical_study/eligibility/textblock"/>
+                    </xsl:with-param>
+                    <xsl:with-param name="replace" select="'&quot;'"/>
+                    <xsl:with-param name="by" select="' '"/>
+                </xsl:call-template>"
+            },
+            "sampling_method":"<xsl:value-of select="/clinical_study/eligibility/sampling_method"/>",
+            "criteria":{
+                "textblock":"<xsl:call-template name="string-replace-all">
+                    <xsl:with-param name="text">
+                        <xsl:value-of select="/clinical_study/criteria/textblock"/>
+                    </xsl:with-param>
+                    <xsl:with-param name="replace" select="'&quot;'"/>
+                    <xsl:with-param name="by" select="' '"/>
+                </xsl:call-template>"
+            },
+            "gender":"<xsl:value-of select="/clinical_study/eligibility/gender"/>",
+            "gender_based":"<xsl:value-of select="/clinical_study/eligibility/gender_based"/>",
+            "minimum_age":"<xsl:value-of select="/clinical_study/eligibility/minimum_age"/>",
+            "maximum_age":"<xsl:value-of select="/clinical_study/eligibility/maximum_age"/>",
+            "healthy_volunteers":"<xsl:value-of select="/clinical_study/eligibility/healthy_volunteers"/>"
+        },
         "oversight_info":{
             "has_dmc":"<xsl:value-of select="/clinical_study/oversight_info/has_dmc"/>",
             "is_fda_regulated_drug":"<xsl:value-of select="/clinical_study/oversight_info/is_fda_regulated_drug"/>",
