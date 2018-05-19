@@ -42,7 +42,7 @@
                         }<xsl:if test="position() != last()">,</xsl:if>
                         </xsl:for-each>
                     ]
-                },
+                }
             },
             "baseline" : {
                 "population":"<xsl:value-of select="/clinical_study/clinical_results/baseline/population"/>",
@@ -150,7 +150,7 @@
                         }
                     </xsl:for-each>
                     ]
-                },
+                }
             },
             "outcome_list": {
                 "outcome": [
@@ -243,7 +243,7 @@
                                     }<xsl:if test="position() != last()">,</xsl:if>
                                 </xsl:for-each>
                                 ]
-                            },
+                            }
                         },
                         "analysis_list": {
                             "analysis": [
@@ -323,11 +323,11 @@
                                 }<xsl:if test="position() != last()">,</xsl:if>
                                 </xsl:for-each>
                                 ]
-                            },
+                            }
                             }<xsl:if test="position() != last()">,</xsl:if>
                         </xsl:for-each>
                         ]
-                    },
+                    }
                 },
                 "other_events":{
                     "frequency_threshold":"<xsl:value-of select="/clinical_study/clinical_results/reported_events/other_events/frequency_threshold"/>",
@@ -363,8 +363,8 @@
                             }<xsl:if test="position() != last()">,</xsl:if>
                         </xsl:for-each>
                         ]
-                    },
-                },
+                    }
+                }
             },
             "certain_agreements":{
                 "pi_employee":"<xsl:value-of select="/clinical_study/clinical_results/certain_agreements/pi_employee"/>",
