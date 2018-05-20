@@ -24,6 +24,17 @@ Query 2e78eb55-44f8-4ba4-8021-0ca882656e9c, SUCCEEDED
 https://us-east-1.console.aws.amazon.com/athena/home?force&region=us-east-1#query/history/2e78eb55-44f8-4ba4-8021-0ca882656e9c
 Time: 0:00:00, CPU Time: 90ms total, Data Scanned: 0.00B, Cost: $0.00
 
+athena:global> select to_base64url(md5(to_utf8('Amazon'))) || '-' || to_base64url(md5(to_utf8('Prime')));
+ _col0
+---------------------------------------------------
+ s7OmrHTsvVa82--keZ-53w==-vnk46ah2GKmKe2tH4SqkSw==
+(1 rows)
+
+Query cade9205-f5a5-4536-a10d-c8f1428f35e3, SUCCEEDED
+https://us-east-1.console.aws.amazon.com/athena/home?force&region=us-east-1#query/history/cade9205-f5a5-4536-a10d-c8f1428f35e3
+Time: 0:00:00, CPU Time: 71ms total, Data Scanned: 0.00B, Cost: $0.00
+
+
 
 
 athena:global> select count(1) from ctri_studies where ctri_number != '';
