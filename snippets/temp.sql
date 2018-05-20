@@ -5,6 +5,9 @@ C --> CT - (Ctri n CT)
 E --> (Ct n OT) - (CTRI n CT n OT)
 
 
+athena --execute "select * from global.global_registries limit 4" --output-format TSV_HEADER --schema global > ~/temp/output.tsv
+
+
 select  count(1) from ctri_studies ctris  full outer join ct_studies cts   on  substr(secondary_ids, strpos(secondary_ids, 'NCT'), 11) = cts.nct_id where ctri_number != '' or nct_id != ''
 
 

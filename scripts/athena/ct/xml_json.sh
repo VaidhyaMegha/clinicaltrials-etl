@@ -1,7 +1,7 @@
  #!/usr/bin/env bash
 
-pushd ~/projects/DI_ETL/scripts/athena/ct
-
+find ${1} -type f -name "*.json" -delete
+find ${1} -type f -name "*.log" -delete
 
 function genJSON(){
     g=${1//.xml/}
@@ -11,13 +11,11 @@ function genJSON(){
     tr '\n' ' ' < ${g}.json.tmp > ${g}.json
 
     rm ${g}.json.tmp
-}
 
-find ${1} -type f -name "*.json" | xargs -I {} rm -f {}
+    jq ".id_info.nct_id" ${g}.json  >> ${g}.log 2>&1
+}
 
 find ${1} -type f -name "*.xml" | while read f
 do
     genJSON ${f} &
 done
-
-popd
