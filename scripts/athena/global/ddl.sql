@@ -4,6 +4,49 @@
 
 --  createtab_stmt
 -- ---------------------------------------------------------------
+
+CREATE EXTERNAL TABLE `global_registries`(
+ `ctd_id` string,
+ `ctri_number` string,
+ `nct_id` string,
+ `secondary_ids` string,
+ `identifiers` string,
+ `date_of_registration` string,
+ `study_type` string,
+ `public_title` string,
+ `scientific_title` string,
+ `brief_summary` string,
+ `phase` string,
+ `exclusion_criteria` string,
+ `inclusion_criteria` string,
+ `sample_size` string,
+ `recruitment_status` string,
+ `primary_outcome` string,
+ `secondary_outcome` string,
+ `intervention` string,
+ `enrollment_type` string,
+ `ethics_review` string,
+ `primary_sponsor` string,
+ `secondary_sponsor` string,
+ `public_query_contact` string,
+ `scientific_query_contact` string,
+ `completiondate` string)
+ ROW FORMAT DELIMITED
+ FIELDS TERMINATED BY '|'
+ STORED AS INPUTFORMAT
+ 'org.apache.hadoop.mapred.TextInputFormat'
+ OUTPUTFORMAT
+ 'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+ LOCATION
+ 's3://datainsights-results/temp/global/athena/ctd_utdm'
+ TBLPROPERTIES (
+ 'classification'='csv',
+ 'columnsOrdered'='true',
+ 'delimiter'='|',
+ 'escapeChar'='\\',
+ 'quoteChar'='\"')
+
+
  CREATE EXTERNAL TABLE `ct_studies`(
  `nct_id` string,
  `nlm_download_date_description` string,

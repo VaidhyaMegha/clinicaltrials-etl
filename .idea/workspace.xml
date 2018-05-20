@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/scripts/athena/ct/foo.json" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/ct/foo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/ct/xml_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/ct/xml_json.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/ct/xml_json.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/ct/xml_json.xslt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/athena/ct/foo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/athena/global/ddl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/global/ddl.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="xml_json.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="xml_json.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml_json.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -65,6 +65,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
               <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ddl.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/global/ddl.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -117,17 +126,8 @@
       <file leaf-file-name="ddl.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/ct/ddl.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2304">
-              <caret line="128" column="10" lean-forward="true" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="foo.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/ct/foo.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret column="9535" selection-start-column="9535" selection-end-column="9535" />
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -161,7 +161,6 @@
       <find>measurement_list</find>
       <find>measurement</find>
       <find>&lt;/xsl:for-each&gt;</find>
-      <find>\n</find>
       <find>measure_list</find>
       <find>{</find>
       <find>outcome</find>
@@ -175,6 +174,7 @@
       <find>&lt;([^&gt;])*&gt;</find>
       <find>subjects_at_risk</find>
       <find>},</find>
+      <find>\n</find>
     </findStrings>
     <replaceStrings>
       <replace>${SCRIPT}</replace>
@@ -214,7 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/ctri.nic.in/trials.sh" />
         <option value="$PROJECT_DIR$/OOAD.puml" />
         <option value="$PROJECT_DIR$/scripts/ftp.ncbi.nlm.nih.gov/pub_pmc_index.sh" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -251,7 +250,6 @@
         <option value="$PROJECT_DIR$/scripts/athena/ct/xml-json.xslt" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xsl" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/test.sql" />
-        <option value="$PROJECT_DIR$/scripts/athena/ct/ddl.sql" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/NCT03481725.xml" />
         <option value="$PROJECT_DIR$/scripts/xml_json.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/global/ddl_globaltrials.sql" />
@@ -265,6 +263,8 @@
         <option value="$PROJECT_DIR$/scripts/athena/ct/xml_json.xslt" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/foo.json" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/xml_json.sh" />
+        <option value="$PROJECT_DIR$/scripts/athena/ct/ddl.sql" />
+        <option value="$PROJECT_DIR$/scripts/athena/global/ddl.sql" />
       </list>
     </option>
   </component>
@@ -733,12 +733,12 @@
       <workItem from="1526715102836" duration="480000" />
       <workItem from="1526715620532" duration="449000" />
       <workItem from="1526718638053" duration="27462000" />
-      <workItem from="1526793264873" duration="24596000" />
+      <workItem from="1526793264873" duration="26638000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="542726000" />
+    <option name="totallyTimeSpent" value="544768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -876,13 +876,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/ctri.py" />
     <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/replace_keys.json" />
     <entry file="file://$PROJECT_DIR$/scripts/ctri.nic.in/test.csv" />
@@ -1042,13 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/global/global_registry.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/snippets/temp.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -1061,13 +1047,6 @@
         <state relative-caret-position="-60" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/ddl.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2304">
-          <caret line="128" column="10" lean-forward="true" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/ct/public.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -1077,13 +1056,6 @@
             <element signature="e#40013#40267#0" />
             <element signature="e#46045#46590#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/foo.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret column="9535" selection-start-column="9535" selection-end-column="9535" />
         </state>
       </provider>
     </entry>
@@ -1109,10 +1081,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/foo.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret column="9535" selection-start-column="9535" selection-end-column="9535" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml_json.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/ddl.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/global/global_registry.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/global/ddl.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
         </state>
       </provider>
     </entry>
