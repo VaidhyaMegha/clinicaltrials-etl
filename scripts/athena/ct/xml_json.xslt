@@ -69,8 +69,9 @@
                                     "text_node_value":"<xsl:value-of select="text()"/>"
                                     }<xsl:if test="position() != last()">,</xsl:if>
                                 </xsl:for-each>
+                                ]
                             }
-                            }<xsl:if test="position() != last()">,</xsl:if>
+                        }<xsl:if test="position() != last()">,</xsl:if>
                         </xsl:for-each>
                     ]
                 },
@@ -97,8 +98,9 @@
                                         "text_node_value":"<xsl:value-of select="text()"/>"
                                         }<xsl:if test="position() != last()">,</xsl:if>
                                     </xsl:for-each>
+                                    ]
                                 }
-                                }<xsl:if test="position() != last()">,</xsl:if>
+                            }<xsl:if test="position() != last()">,</xsl:if>
                             </xsl:for-each>
                             ]
                         },
@@ -112,15 +114,16 @@
                                         "units":"<xsl:value-of select="units"/>",
                                         "scope":"<xsl:value-of select="scope"/>",
                                         "count_list": {
-                                        "count": [
-                                        <xsl:for-each select="count_list/count">{
-                                            "group_id":"<xsl:value-of select="@group_id"/>",
-                                            "value":"<xsl:value-of select="@value"/>",
-                                            "text_node_value":"<xsl:value-of select="text()"/>"
-                                            }<xsl:if test="position() != last()">,</xsl:if>
-                                        </xsl:for-each>
+                                            "count": [
+                                            <xsl:for-each select="count_list/count">{
+                                                "group_id":"<xsl:value-of select="@group_id"/>",
+                                                "value":"<xsl:value-of select="@value"/>",
+                                                "text_node_value":"<xsl:value-of select="text()"/>"
+                                                }<xsl:if test="position() != last()">,</xsl:if>
+                                            </xsl:for-each>
+                                            ]
                                         }
-                                        }<xsl:if test="position() != last()">,</xsl:if>
+                                    }<xsl:if test="position() != last()">,</xsl:if>
                                     </xsl:for-each>
                                     ]
                                 },
@@ -186,15 +189,16 @@
                                         "units":"<xsl:value-of select="units"/>",
                                         "scope":"<xsl:value-of select="scope"/>",
                                         "count_list": {
-                                        "count": [
-                                        <xsl:for-each select="measure/count_list/count">{
-                                            "group_id":"<xsl:value-of select="@group_id"/>",
-                                            "value":"<xsl:value-of select="@value"/>",
-                                            "text_node_value":"<xsl:value-of select="text()"/>"
-                                            }<xsl:if test="position() != last()">,</xsl:if>
-                                        </xsl:for-each>
+                                            "count": [
+                                            <xsl:for-each select="measure/count_list/count">{
+                                                "group_id":"<xsl:value-of select="@group_id"/>",
+                                                "value":"<xsl:value-of select="@value"/>",
+                                                "text_node_value":"<xsl:value-of select="text()"/>"
+                                                }<xsl:if test="position() != last()">,</xsl:if>
+                                            </xsl:for-each>
+                                            ]
                                         }
-                                        }<xsl:if test="position() != last()">,</xsl:if>
+                                    }<xsl:if test="position() != last()">,</xsl:if>
                                     </xsl:for-each>
                                     ]
                                 },
@@ -208,15 +212,16 @@
                                         "units":"<xsl:value-of select="units"/>",
                                         "scope":"<xsl:value-of select="scope"/>",
                                         "count_list": {
-                                        "count": [
-                                        <xsl:for-each select="count_list/count">{
-                                            "group_id":"<xsl:value-of select="@group_id"/>",
-                                            "value":"<xsl:value-of select="@value"/>",
-                                            "text_node_value":"<xsl:value-of select="text()"/>"
-                                            }<xsl:if test="position() != last()">,</xsl:if>
-                                        </xsl:for-each>
+                                            "count": [
+                                            <xsl:for-each select="count_list/count">{
+                                                "group_id":"<xsl:value-of select="@group_id"/>",
+                                                "value":"<xsl:value-of select="@value"/>",
+                                                "text_node_value":"<xsl:value-of select="text()"/>"
+                                                }<xsl:if test="position() != last()">,</xsl:if>
+                                            </xsl:for-each>
+                                            ]
                                         }
-                                        }<xsl:if test="position() != last()">,</xsl:if>
+                                    }<xsl:if test="position() != last()">,</xsl:if>
                                     </xsl:for-each>
                                     ]
                                     },
@@ -402,7 +407,13 @@
         "intervention": [
         <xsl:for-each select="/clinical_study/intervention">{
             "intervention_type":"<xsl:value-of select="intervention_type"/>",
-            "intervention_name":"<xsl:value-of select="intervention_name"/>",
+            "intervention_name":"<xsl:call-template name="string-replace-all">
+                                    <xsl:with-param name="text">
+                                        <xsl:value-of select="intervention_name"/>
+                                    </xsl:with-param>
+                                    <xsl:with-param name="replace" select="'&quot;'"/>
+                                    <xsl:with-param name="by" select="' '"/>
+                                 </xsl:call-template>",
             "description":"<xsl:value-of select="description"/>",
             "arm_group_label": [
                 <xsl:for-each select="arm_group_label">
@@ -527,7 +538,13 @@
         },
         "brief_title":"<xsl:value-of select="/clinical_study/brief_title"/>",
         "acronym":"<xsl:value-of select="/clinical_study/acronym"/>",
-        "official_title":"<xsl:value-of select="/clinical_study/official_title"/>",
+        "official_title":"<xsl:call-template name="string-replace-all">
+                            <xsl:with-param name="text">
+                                <xsl:value-of select="/clinical_study/official_title"/>
+                            </xsl:with-param>
+                            <xsl:with-param name="replace" select="'&quot;'"/>
+                            <xsl:with-param name="by" select="' '"/>
+                          </xsl:call-template>",
         "sponsors":{
             "lead_sponsor":{
                 "agency":"<xsl:value-of select="/clinical_study/sponsors/lead_sponsor/agency"/>",
