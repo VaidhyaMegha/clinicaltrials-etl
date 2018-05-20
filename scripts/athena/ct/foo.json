@@ -1,0 +1,646 @@
+{
+  "clinical_results": {
+    "participant_flow": {
+      "recruitment_details": "",
+      "pre_assignment_details": "",
+      "group_list": {
+        "group": [
+          {
+            "title": "",
+            "description": "",
+            "group_id": ""
+          }
+        ]
+      },
+      "period_list": {
+        "period": [
+          {
+            "title": "",
+            "milestone_list": {
+              "milestone": [
+                {
+                  "title": "",
+                  "participants": [
+                    {
+                      "group_id": "",
+                      "count": "",
+                      "text_node_value": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "group_id": ""
+          }
+        ]
+      }
+    },
+    "baseline": {
+      "population": "",
+      "group_list": {
+        "group": [
+          {
+            "title": "",
+            "description": "",
+            "group_id": ""
+          }
+        ]
+      },
+      "analyzed_list": {
+        "analyzed": [
+          {
+            "units": "",
+            "scope": "",
+            "count_list": {
+              "count": [
+                {
+                  "group_id": "",
+                  "value": "",
+                  "text_node_value": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "measure_list": {
+        "measure": [
+          {
+            "title": "",
+            "description": "",
+            "population": "",
+            "units": "",
+            "param": "",
+            "dispersion": "",
+            "units_analyzed": "",
+            "analyzed_list": {
+              "analyzed": [
+                {
+                  "units": "",
+                  "scope": "",
+                  "count_list": {
+                    "count": [
+                      {
+                        "group_id": "",
+                        "value": "",
+                        "text_node_value": ""
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "class_list": {
+              "class": [
+                {
+                  "title": "",
+                  "analyzed_list": {
+                    "analyzed": [
+                      {
+                        "units": "",
+                        "scope": "",
+                        "count_list": {
+                          "count": [
+                            {
+                              "group_id": "",
+                              "value": "",
+                              "text_node_value": ""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "category_list": {
+                    "category": [
+                      {
+                        "title": "",
+                        "measurement_list": {
+                          "measurement": [
+                            {
+                              "group_id": "",
+                              "value": "",
+                              "spread": "",
+                              "lower_limit": "",
+                              "upper_limit": "",
+                              "text_node_value": ""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "outcome_list": {
+      "outcome": [
+        {
+          "type": "",
+          "title": "",
+          "description": "",
+          "time_frame": "",
+          "safety_issue": "",
+          "posting_date": "",
+          "population": "",
+          "group_list": {
+            "group": [
+              {
+                "title": "",
+                "description": "",
+                "group_id": ""
+              }
+            ]
+          },
+          "measure": {
+            "title": "",
+            "description": "",
+            "population": "",
+            "units": "",
+            "param": "",
+            "dispersion": "",
+            "units_analyzed": "",
+            "analyzed_list": {
+              "analyzed": [
+                {
+                  "units": "",
+                  "scope": "",
+                  "count_list": {
+                    "count": [
+                      {
+                        "group_id": "",
+                        "value": "",
+                        "text_node_value": ""
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "class_list": {
+              "class": [
+                {
+                  "title": "",
+                  "analyzed_list": {
+                    "analyzed": [
+                      {
+                        "units": "",
+                        "scope": "",
+                        "count_list": {
+                          "count": [
+                            {
+                              "group_id": "",
+                              "value": "",
+                              "text_node_value": ""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "category_list": {
+                    "category": [
+                      {
+                        "title": "",
+                        "measurement_list": {
+                          "measurement": [
+                            {
+                              "group_id": "",
+                              "value": "",
+                              "spread": "",
+                              "lower_limit": "",
+                              "upper_limit": "",
+                              "text_node_value": ""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "analysis_list": {
+            "analysis": [
+              {
+                "group_id_list": {
+                  "group_id": [
+                    ""
+                  ]
+                },
+                "groups_desc": "",
+                "non_inferiority_type": "",
+                "non_inferiority_desc": "",
+                "p_value": "",
+                "p_value_desc": "",
+                "method": "",
+                "method_desc": "",
+                "param_type": "",
+                "param_value": "",
+                "dispersion_type": "",
+                "dispersion_value": "",
+                "ci_percent": "",
+                "ci_n_sides": "",
+                "ci_lower_limit": "",
+                "ci_upper_limit": "",
+                "ci_upper_limit_na_comment": "",
+                "estimate_desc": "",
+                "other_analysis_desc": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "reported_events": {
+      "time_frame": "",
+      "desc": "",
+      "group_list": {
+        "group": [
+          {
+            "title": "",
+            "description": "",
+            "group_id": "vocab"
+          }
+        ]
+      },
+      "serious_events": {
+        "frequency_threshold": "",
+        "default_vocab": "",
+        "default_assessment": "",
+        "category_list": {
+          "category": [
+            {
+              "title": "",
+              "event_list": {
+                "event": [
+                  {
+                    "sub_title": {
+                      "vocab": "",
+                      "text_node_value": ""
+                    },
+                    "assessment": "",
+                    "description": "",
+                    "counts": [
+                      {
+                        "group_id": "",
+                        "subjects_affected": "",
+                        "subjects_at_risk": "",
+                        "events": "",
+                        "text_node_value": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "other_events": {
+        "frequency_threshold": "",
+        "default_vocab": "",
+        "default_assessment": "",
+        "category_list": {
+          "category": [
+            {
+              "title": "",
+              "event_list": {
+                "event": [
+                  {
+                    "sub_title": {
+                      "vocab": "",
+                      "text_node_value": ""
+                    },
+                    "assessment": "",
+                    "description": "",
+                    "counts": [
+                      {
+                        "group_id": "",
+                        "subjects_affected": "",
+                        "subjects_at_risk": "",
+                        "events": "",
+                        "text_node_value": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "certain_agreements": {
+      "pi_employee": "",
+      "restrictive_agreement": ""
+    },
+    "limitations_and_caveats": "",
+    "point_of_contact": {
+      "name_or_title": "",
+      "organization": "",
+      "phone": "",
+      "email": ""
+    }
+  },
+  "patient_data": {
+    "sharing_ipd": "",
+    "ipd_description": ""
+  },
+  "study_docs": {
+    "study_doc": [
+      {
+        "doc_id": "",
+        "doc_type": "",
+        "doc_url": "",
+        "doc_comment": ""
+      }
+    ]
+  },
+  "responsible_party": {
+    "responsible_party_type": "",
+    "investigator_affiliation": "",
+    "investigator_full_name": "",
+    "invewastigator_title": ""
+  },
+  "intervention": [
+    {
+      "intervention_type": "",
+      "intervention_name": "",
+      "description": "",
+      "arm_group_label": [
+        ""
+      ],
+      "other_name": [
+        ""
+      ]
+    }
+  ],
+  "eligibility": {
+    "study_pop": {
+      "textblock": ""
+    },
+    "sampling_method": "",
+    "criteria": {
+      "textblock": ""
+    },
+    "gender": "",
+    "gender_based": "",
+    "minimum_age": "",
+    "maximum_age": "",
+    "healthy_volunteers": ""
+  },
+  "overall_official": [
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "degrees": "",
+      "role": "",
+      "affiliation": ""
+    }
+  ],
+  "overall_contact": {
+    "first_name": "",
+    "middle_name": "",
+    "last_name": "",
+    "degrees": "",
+    "phone": "",
+    "phone_ext": "",
+    "email": ""
+  },
+  "overall_contact_backup": {
+    "first_name": "",
+    "middle_name": "",
+    "last_name": "",
+    "degrees": "",
+    "phone": "",
+    "phone_ext": "",
+    "email": ""
+  },
+  "oversight_info": {
+    "has_dmc": "",
+    "is_fda_regulated_drug": "",
+    "is_fda_regulated_device": "",
+    "is_unapproved_device": "",
+    "is_ppsd": "",
+    "is_us_export": ""
+  },
+  "arm_group": {
+    "arm_group_label": "",
+    "arm_group_type": "",
+    "description": ""
+  },
+  "expanded_access_info": {
+    "expanded_access_type_individual": "",
+    "expanded_access_type_intermediate": "",
+    "expanded_access_type_treatment": ""
+  },
+  "study_design_info": {
+    "allocation": "",
+    "intervention_model": "",
+    "intervention_model_description": "",
+    "primary_purpose": "",
+    "observational_model": "",
+    "time_perspective": "",
+    "masking": "",
+    "masking_description": ""
+  },
+  "required_header": {
+    "download_date": "",
+    "link_text": "",
+    "url": ""
+  },
+  "id_info": {
+    "org_study_id": "",
+    "secondary_id": [
+      ""
+    ],
+    "nct_id": "",
+    "nct_alias": [
+      ""
+    ]
+  },
+  "brief_title": "",
+  "acronym": "",
+  "official_title": "",
+  "sponsors": {
+    "lead_sponsor": {
+      "agency": "",
+      "agency_class": ""
+    },
+    "collaborator": [
+      {
+        "agency": "",
+        "agency_class": ""
+      }
+    ]
+  },
+  "source": "",
+  "why_stopped": "",
+  "target_duration": "",
+  "overall_status": "",
+  "last_known_status": "",
+  "phase": "",
+  "study_type": "",
+  "has_expanded_access": "",
+  "biospec_retention": "",
+  "number_of_arms": "",
+  "number_of_groups": "",
+  "verification_date": "",
+  "study_first_submitted": "",
+  "study_first_submitted_qc": "",
+  "results_first_submitted": "",
+  "results_first_submitted_qc": "",
+  "disposition_first_submitted": "",
+  "disposition_first_submitted_qc": "",
+  "last_update_submitted": "",
+  "last_update_submitted_qc": "",
+  "enrollment": {
+    "type": "",
+    "text_node_value": ""
+  },
+  "study_first_posted": {
+    "type": "",
+    "text_node_value": ""
+  },
+  "results_first_posted": {
+    "type": "",
+    "text_node_value": ""
+  },
+  "disposition_first_posted": {
+    "type": "",
+    "text_node_value": ""
+  },
+  "last_update_posted": {
+    "type": "",
+    "text_node_value": ""
+  },
+  "completion_date": {
+    "type": "",
+    "text_node_value": ""
+  },
+  "start_date": {
+    "type": "",
+    "text_node_value": ""
+  },
+  "primary_completion_date": {
+    "type": "",
+    "text_node_value": ""
+  },
+  "brief_summary": {
+    "textblock": ""
+  },
+  "detailed_description": {
+    "textblock": ""
+  },
+  "biospec_descr": {
+    "textblock": ""
+  },
+  "keyword": [
+    ""
+  ],
+  "condition": [
+    ""
+  ],
+  "primary_outcome": [
+    {
+      "measure": "",
+      "time_frame": "",
+      "description": ""
+    }
+  ],
+  "secondary_outcome": [
+    {
+      "measure": "",
+      "time_frame": "",
+      "description": ""
+    }
+  ],
+  "other_outcome": [
+    {
+      "measure": "",
+      "time_frame": "",
+      "description": ""
+    }
+  ],
+  "reference": [
+    {
+      "citation": "",
+      "PMID": ""
+    }
+  ],
+  "results_reference": [
+    {
+      "citation": "",
+      "PMID": ""
+    }
+  ],
+  "link": [
+    {
+      "url": "",
+      "description": ""
+    }
+  ],
+  "location": [
+    {
+      "facility": {
+        "name": "",
+        "address": {
+          "city": "",
+          "state": "",
+          "zip": "",
+          "country": ""
+        }
+      },
+      "status": "",
+      "contact": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": ""
+      },
+      "contact_backup": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": ""
+      },
+      "investigator": [
+        {
+          "first_name": "",
+          "middle_name": "",
+          "last_name": "",
+          "degrees": "",
+          "role": "",
+          "affiliation": ""
+        }
+      ]
+    }
+  ],
+  "location_countries": [
+    ""
+  ],
+  "removed_countries": [
+    ""
+  ],
+  "condition_browse": [
+    ""
+  ],
+  "intervention_browse": [
+    ""
+  ]
+}
+
+
