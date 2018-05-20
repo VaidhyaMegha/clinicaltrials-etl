@@ -1,1 +1,556 @@
-{         "clinical_results": {             "participant_flow": {                 "recruitment_details":"",                 "pre_assignment_details":"",                 "group_list": {                     "group": [                                              ]                 },                 "period_list":{                     "period": [                                              ]                 },             },             "baseline" : {                 "population":"",                 "group_list": {                     "group": [                                              ]                 },                 "analyzed_list": {                     "analyzed": [                                              ]                 },                 "measure_list": {                     "measure": [                                          ]                 },             },             "outcome_list": {                 "outcome": [                                      ]             },             "reported_events":{                 "time_frame":"",                 "desc":"",                 "group_list": {                     "group": [                                          ]                 },                 "serious_events":{                     "frequency_threshold":"",                     "default_vocab":"",                     "default_assessment":"",                     "category_list": {                         "category": [                                                  ]                     },                 },                 "other_events":{                     "frequency_threshold":"",                     "default_vocab":"",                     "default_assessment":"",                     "category_list": {                         "category": [                                                  ]                     },                 },             },             "certain_agreements":{                 "pi_employee":"",                 "restrictive_agreement":""             },             "limitations_and_caveats":"",             "point_of_contact":{                 "name_or_title":"",                 "organization":"",                 "phone":"",                 "email":""             }         },         "patient_data": {             "sharing_ipd":"",             "ipd_description":""         },         "study_docs": {             "study_doc": [                              ]         },         "responsible_party": {             "responsible_party_type":"Principal Investigator",             "investigator_affiliation":"Corporacion Parc Tauli",             "investigator_full_name":"Anna Pallisera-Lloveras",             "invewastigator_title":"md, PhD"         },         "intervention": [         {             "intervention_type":"Procedure",             "intervention_name":"Inferior mesenteric Vein dissection",             "description":"Dissection of the Inferior mesenteric Vein first, and go down to the Artery during the total mesorectal excision",             "arm_group_label": [                                      "Inferior mesenteric Vein dissection"             ],             "other_name": [                          ]             },{             "intervention_type":"Procedure",             "intervention_name":"Inferior mesenteric Artery dissection",             "description":"Dissection of the Inferior mesenteric Artery directly in the total mesorectal excision",             "arm_group_label": [                                      "Inferior mesenteric Artery dissection"             ],             "other_name": [                          ]             }         ],         "eligibility": {             "study_pop": {                 "textblock":""             },             "sampling_method":"",             "criteria":{                 "textblock":""             },             "gender":"Male",             "gender_based":"Yes",             "minimum_age":"18 Years",             "maximum_age":"100 Years",             "healthy_volunteers":"No"         },         "overall_official": [             {                 "first_name":"",                 "middle_name":"",                 "last_name":"Anna Pallisera-Lloveras, MD, PhD",                 "degrees":"",                 "role":"Principal Investigator",                 "affiliation":"Corporacio Parc Tauli. Parc Tauli University Hospital"                 }         ],         "overall_contact": {             "first_name":"",             "middle_name":"",             "last_name":"Anna Pallisera-Lloveras, MD, PhD",             "degrees":"",             "phone":"34-93-723-1010",             "phone_ext":"21490",             "email":"apallill@gmail.com"         },         "overall_contact_backup": {             "first_name":"",             "middle_name":"",             "last_name":"",             "degrees":"",             "phone":"",             "phone_ext":"",             "email":""         },         "oversight_info":{             "has_dmc":"No",             "is_fda_regulated_drug":"No",             "is_fda_regulated_device":"No",             "is_unapproved_device":"",             "is_ppsd":"",             "is_us_export":""         },         "arm_group":{             "arm_group_label":"Inferior mesenteric Vein dissection",             "arm_group_type":"Experimental",             "description":"To improve and preserve the rectal nerve in the total mesorectal excision, its starts the dissection from the inferior mesenteric vein to the inferior mesenteric artery and through the pelvis"         },         "expanded_access_info":{             "expanded_access_type_individual":"",             "expanded_access_type_intermediate":"",             "expanded_access_type_treatment":""         },         "study_design_info":{             "allocation":"Randomized",             "intervention_model":"Parallel Assignment",             "intervention_model_description":"",             "primary_purpose":"Prevention",             "observational_model":"",             "time_perspective":"",             "masking":"Single (Outcomes Assessor)",             "masking_description":"The analysis of the results will be blind for the investigator"         },         "required_header":{             "download_date":"ClinicalTrials.gov processed this data on May 09, 2018",             "link_text":"Link to the current ClinicalTrials.gov record.",             "url":"https://clinicaltrials.gov/show/NCT03520088"         },         "id_info":{             "org_study_id":"TAU-RECTALNERV-PRESERV-2018",             "secondary_id":[                              ],             "nct_id":"NCT03520088",             "nct_alias":[                              ]         },         "brief_title":"PROSPECTIVE CONTROLLED AND RANDOMIZED STUDY OF THE GENITOURINARY FUNCTION AFTER RECTAL CANCER SURGERY IN RELATION TO THE DISSECTION OF THE INFERIOR MESENTERIC VESSELS",         "acronym":"",         "official_title":"PROSPECTIVE CONTROLLED AND RANDOMIZED STUDY OF THE GENITOURINARY FUNCTION AFTER RECTAL CANCER SURGERY IN RELATION TO THE DISSECTION OF THE INFERIOR MESENTERIC VESSELS",         "sponsors":{             "lead_sponsor":{                 "agency":"Corporacion Parc Tauli",                 "agency_class":"Other"             },             "collaborator":[                 {                         "agency":"Paula Planelles-Soler",                         "agency_class":"Other"                     },{                         "agency":"Laura Mora-Lopez",                         "agency_class":"Other"                     },{                         "agency":"Naim Hannaoui",                         "agency_class":"Other"                     },{                         "agency":"Sheila Serra-Pla",                         "agency_class":"Other"                     },{                         "agency":"Arturo Dominguez-Garcia",                         "agency_class":"Other"                     },{                         "agency":"Jesus Muñoz-Rodriguez",                         "agency_class":"Other"                     },{                         "agency":"Joan Prats-Lopez",                         "agency_class":"Other"                     },{                         "agency":"Salvador Navarro-Soto",                         "agency_class":"Other"                     },{                         "agency":"Xavier Serra-Aracil",                         "agency_class":"Other"                     }             ]         },         "source":"Corporacion Parc Tauli",         "why_stopped":"",         "target_duration":"",         "overall_status":"Not yet recruiting",         "last_known_status":"",         "phase":"N/A",         "study_type":"Interventional",         "has_expanded_access":"No",         "biospec_retention":"",         "number_of_arms":"2",         "number_of_groups":"",         "verification_date":"April 2018",         "study_first_submitted":"April 3, 2018",         "study_first_submitted_qc":"April 26, 2018",         "results_first_submitted":"",         "results_first_submitted_qc":"",         "disposition_first_submitted":"",         "disposition_first_submitted_qc":"",         "last_update_submitted":"April 26, 2018",         "last_update_submitted_qc":"April 26, 2018",         "enrollment":{             "type":"Anticipated",             "text_node_value":"90"         },         "study_first_posted":{             "type":"Estimate",             "text_node_value":"May 9, 2018"         },         "results_first_posted":{             "type":"",             "text_node_value":""         },         "disposition_first_posted":{             "type":"",             "text_node_value":""         },         "last_update_posted":{             "type":"Estimate",             "text_node_value":"May 9, 2018"         },         "completion_date":{             "type":"Anticipated",             "text_node_value":"December 30, 2022"         },         "start_date":{             "type":"Anticipated",             "text_node_value":"May 2, 2018"         },         "primary_completion_date":{             "type":"Anticipated",             "text_node_value":"December 30, 2021"         },         "brief_summary":{             "textblock":"       Purpose: The  Total Mesorectal Excision  (TME) is the standard surgical technique for the       treatment of rectal cancer. Up to 50% of sexual dysfunction is described after TME and up to       30% of urinary dysfunction. The main objective of the study is to compare pre- and post-TME       sexual dysfunction according to the approach of the inferior mesenteric vessels, directly on       the IMA or from the inferior mesenteric vein (IMV) to the IMA.        Methods: Multicenter, prospective, controlled and randomized study of patients with rectal       adenocarcinoma with neoadjuvant chemoradiotherapy, who will be randomized into two groups       depending on the approach of the inferior mesenteric vessels. The main variable is pre and       postoperative sexual dysfunction. The sample to be included will be 90 patients, 45 per       group.     "         },         "detailed_description":{             "textblock":"       Purpose: The  Total Mesorectal Excision  (TME) is the standard surgical technique for the       treatment of rectal cancer. Up to 50% of sexual dysfunction is described after TME and up to       30% of urinary dysfunction. Although there are other factors, the main cause of postoperative       genitourinary dysfunction is intraoperative injury of the autonomic pelvic nerves. One of the       regions with more risk is the Inferior Mesenteric Artery (IMA). The main objective of the       study is to compare pre- and post-TME sexual dysfunction according to the approach of the       inferior mesenteric vessels, directly on the IMA or from the inferior mesenteric vein (IMV)       to the IMA.        Methods: Multicenter, prospective, controlled and randomized study of patients with rectal       adenocarcinoma with neoadjuvant chemoradiotherapy, who will be randomized into two groups       depending on the approach of the inferior mesenteric vessels. The main variable is pre and       postoperative sexual dysfunction. The secondary variables are visualization and preservation       of the pelvic autonomic nerves, pre- and postoperative urinary dysfunction, pre and       postoperative quality of life. The sample to be included will be 90 patients, 45 per group.     "         },         "biospec_descr":{             "textblock":""         },         "keyword": [                      "Rectal cancer",             "Sexual dysfunction",             "Urinary dysfunction",             "Rectal nerves damage",             "Total Mesorectal Excision"         ],         "condition": [                      "Rectal Cancer"         ],         "primary_outcome": [                      {             "measure":"Changes in sexual dysfunction pre- and post-Total Mesorectal Excision",             "time_frame":"1 week before surgery and 12 months post-surgery",             "description":"Sexual dysfunction pre- and post-Total Mesorectal Excision by sexual dysfunction scale IIEF-5"}         ],         "secondary_outcome": [                  ],         "other_outcome": [                  ],         "reference": [                  ],         "results_reference": [                  ],         "link": [                  ],         "location": [                      {             "facility": {"name":"Parc Tauli University Hospital",                          "address":{                             "city":"Sabadell",                              "state":"Barcelona",                             "zip":"08208",                             "country":"Spain"}},             "status":"Not yet recruiting",             "contact": {"first_name":"",                         "middle_name":"",                         "last_name":"Anna Pallisera-Lloveras, MD,PhD",                         "degrees":"",                         "phone":"93-723-1010",                         "phone_ext":"21490",                         "email":"apallill@gmail.com"},             "contact_backup":{"first_name":"",                                 "middle_name":"",                                 "last_name":"Xavier Serra-Aracil, MD,PhD",                                 "degrees":"",                                 "phone":"93-723-1010",                                 "phone_ext":"21490",                                 "email":"xserraa@gmail.com"},             "investigator":[                  ]             }         ],          "location_countries": [                      "Spain"         ],         "removed_countries": [                  ],         "condition_browse": [                      "Rectal Neoplasms"         ],         "intervention_browse": [                  ]         }     
+{
+  "clinical_results": {
+    "participant_flow": {
+      "recruitment_details": "",
+      "pre_assignment_details": "",
+      "group_list": {
+        "group": []
+      },
+      "period_list": {
+        "period": []
+      }
+    },
+    "baseline": {
+      "population": "",
+      "group_list": {
+        "group": []
+      },
+      "analyzed_list": {
+        "analyzed": []
+      },
+      "measure_list": {
+        "measure": []
+      }
+    },
+    "outcome_list": {
+      "outcome": []
+    },
+    "reported_events": {
+      "time_frame": "",
+      "desc": "",
+      "group_list": {
+        "group": []
+      },
+      "serious_events": {
+        "frequency_threshold": "",
+        "default_vocab": "",
+        "default_assessment": "",
+        "category_list": {
+          "category": []
+        }
+      },
+      "other_events": {
+        "frequency_threshold": "",
+        "default_vocab": "",
+        "default_assessment": "",
+        "category_list": {
+          "category": []
+        }
+      }
+    },
+    "certain_agreements": {
+      "pi_employee": "",
+      "restrictive_agreement": ""
+    },
+    "limitations_and_caveats": "",
+    "point_of_contact": {
+      "name_or_title": "",
+      "organization": "",
+      "phone": "",
+      "email": ""
+    }
+  },
+  "patient_data": {
+    "sharing_ipd": "Undecided",
+    "ipd_description": ""
+  },
+  "study_docs": {
+    "study_doc": []
+  },
+  "responsible_party": {
+    "responsible_party_type": "Sponsor",
+    "investigator_affiliation": "",
+    "investigator_full_name": "",
+    "invewastigator_title": ""
+  },
+  "intervention": [
+    {
+      "intervention_type": "Device",
+      "intervention_name": "Intact Breast Lesion Excision System (BLES)",
+      "description": "Intact BLES is an automated, percutaneous biopsy device capable of delivering a surgical quality specimen for histological review of breast abnormalities. It is uniquely suited to maintain lesion architecture within the biopsy sample, providing an opportunity for pathological assessment and the potential avoidance of an open surgical procedure.",
+      "arm_group_label": [
+        "Females, 18 years of age or older"
+      ],
+      "other_name": []
+    }
+  ],
+  "eligibility": {
+    "study_pop": {
+      "textblock": ""
+    },
+    "sampling_method": "Non-Probability Sample",
+    "criteria": {
+      "textblock": ""
+    },
+    "gender": "Female",
+    "gender_based": "",
+    "minimum_age": "18 Years",
+    "maximum_age": "N/A",
+    "healthy_volunteers": "No"
+  },
+  "overall_official": [
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "Joshua Vose, MD",
+      "degrees": "",
+      "role": "Study Director",
+      "affiliation": "Medtronic Surgical Technologies"
+    }
+  ],
+  "overall_contact": {
+    "first_name": "",
+    "middle_name": "",
+    "last_name": "Kristine DaCosta",
+    "degrees": "",
+    "phone": "508-345-8193",
+    "phone_ext": "",
+    "email": "kristine.a.dacosta@medtronic.com"
+  },
+  "overall_contact_backup": {
+    "first_name": "",
+    "middle_name": "",
+    "last_name": "",
+    "degrees": "",
+    "phone": "",
+    "phone_ext": "",
+    "email": ""
+  },
+  "oversight_info": {
+    "has_dmc": "No",
+    "is_fda_regulated_drug": "No",
+    "is_fda_regulated_device": "No",
+    "is_unapproved_device": "",
+    "is_ppsd": "",
+    "is_us_export": ""
+  },
+  "arm_group": {
+    "arm_group_label": "Females, 18 years of age or older",
+    "arm_group_type": "",
+    "description": "Females, 18 years of age or older, who will undergo the Intact procedure"
+  },
+  "expanded_access_info": {
+    "expanded_access_type_individual": "",
+    "expanded_access_type_intermediate": "",
+    "expanded_access_type_treatment": ""
+  },
+  "study_design_info": {
+    "allocation": "",
+    "intervention_model": "",
+    "intervention_model_description": "",
+    "primary_purpose": "",
+    "observational_model": "Cohort",
+    "time_perspective": "Prospective",
+    "masking": "",
+    "masking_description": ""
+  },
+  "required_header": {
+    "download_date": "ClinicalTrials.gov processed this data on May 09, 2018",
+    "link_text": "Link to the current ClinicalTrials.gov record.",
+    "url": "https://clinicaltrials.gov/show/NCT03520127"
+  },
+  "id_info": {
+    "org_study_id": "63-10-2356",
+    "secondary_id": [],
+    "nct_id": "NCT03520127",
+    "nct_alias": []
+  },
+  "brief_title": "A Registry Study Evaluating Outcomes in Breast Biopsy With the Intact™ Breast Lesion Excision System (BLES)",
+  "acronym": "",
+  "official_title": "A Multi-center Registry Study Evaluating Outcomes in Breast Biopsy With the Intact™ Breast Lesion Excision System (BLES)",
+  "sponsors": {
+    "lead_sponsor": {
+      "agency": "Medtronic Surgical Technologies",
+      "agency_class": "Industry"
+    },
+    "collaborator": []
+  },
+  "source": "Medtronic Surgical Technologies",
+  "why_stopped": "",
+  "target_duration": "1 Month",
+  "overall_status": "Recruiting",
+  "last_known_status": "",
+  "phase": "",
+  "study_type": "Observational [Patient Registry]",
+  "has_expanded_access": "No",
+  "biospec_retention": "",
+  "number_of_arms": "",
+  "number_of_groups": "1",
+  "verification_date": "May 2018",
+  "study_first_submitted": "April 5, 2018",
+  "study_first_submitted_qc": "May 8, 2018",
+  "results_first_submitted": "",
+  "results_first_submitted_qc": "",
+  "disposition_first_submitted": "",
+  "disposition_first_submitted_qc": "",
+  "last_update_submitted": "May 8, 2018",
+  "last_update_submitted_qc": "May 8, 2018",
+  "enrollment": {
+    "type": "Anticipated",
+    "text_node_value": "1000"
+  },
+  "study_first_posted": {
+    "type": "Estimate",
+    "text_node_value": "May 9, 2018"
+  },
+  "results_first_posted": {
+    "type": "",
+    "text_node_value": ""
+  },
+  "disposition_first_posted": {
+    "type": "",
+    "text_node_value": ""
+  },
+  "last_update_posted": {
+    "type": "Estimate",
+    "text_node_value": "May 9, 2018"
+  },
+  "completion_date": {
+    "type": "Anticipated",
+    "text_node_value": "April 30, 2020"
+  },
+  "start_date": {
+    "type": "Actual",
+    "text_node_value": "September 27, 2017"
+  },
+  "primary_completion_date": {
+    "type": "Anticipated",
+    "text_node_value": "December 31, 2019"
+  },
+  "brief_summary": {
+    "textblock": "       The purpose of this registry study is to collect use and clinical outcomes data following       breast lesion excision or sampling with the Intact BLES.     "
+  },
+  "detailed_description": {
+    "textblock": ""
+  },
+  "biospec_descr": {
+    "textblock": ""
+  },
+  "keyword": [],
+  "condition": [
+    "Breast Lesions"
+  ],
+  "primary_outcome": [
+    {
+      "measure": "Lesion BIRADS score",
+      "time_frame": "Weeks prior to the Intact procedure",
+      "description": "Diagnostic imaging result"
+    },
+    {
+      "measure": "Imaging lesion size",
+      "time_frame": "Weeks prior to the Intact procedure",
+      "description": "Measured in mm"
+    },
+    {
+      "measure": "Lesion histology",
+      "time_frame": "Weeks prior to the Intact procedure",
+      "description": "Lesion biopsy results"
+    },
+    {
+      "measure": "Clear margin "
+      success
+      " rate",
+      "time_frame": "Weeks after the Intact procedure, up to approximately 12 weeks",
+      "description": "Procedure margin vs. margin size, measured in mm"
+    },
+    {
+      "measure": "Underestimation rate",
+      "time_frame": "Weeks after the Intact procedure, up to approximately 12 weeks",
+      "description": "Compared to maximum lesion size, measured in mm"
+    }
+  ],
+  "secondary_outcome": [],
+  "other_outcome": [],
+  "reference": [],
+  "results_reference": [],
+  "link": [],
+  "location": [
+    {
+      "facility": {
+        "name": "Birmingham Breast Care",
+        "address": {
+          "city": "Birmingham",
+          "state": "Alabama",
+          "zip": "35205",
+          "country": "United States"
+        }
+      },
+      "status": "Recruiting",
+      "contact": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "Donna Newton",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": "donnan@bellsouth.net"
+      },
+      "contact_backup": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": ""
+      },
+      "investigator": [
+        {
+          "first_name": "",
+          "middle_name": "",
+          "last_name": "Susan B. Winchester, MD",
+          "degrees": "",
+          "role": "Principal Investigator",
+          "affiliation": ""
+        }
+      ]
+    },
+    {
+      "facility": {
+        "name": "Winship Cancer Institute-Emory St. Joseph's",
+        "address": {
+          "city": "Atlanta",
+          "state": "Georgia",
+          "zip": "30342",
+          "country": "United States"
+        }
+      },
+      "status": "Recruiting",
+      "contact": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "Alicia Escobar",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": "alicia.m.escobar@emory.edu"
+      },
+      "contact_backup": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": ""
+      },
+      "investigator": [
+        {
+          "first_name": "",
+          "middle_name": "",
+          "last_name": "Cathy Graham, MD",
+          "degrees": "",
+          "role": "Principal Investigator",
+          "affiliation": ""
+        }
+      ]
+    },
+    {
+      "facility": {
+        "name": "Dalton Surgical Group",
+        "address": {
+          "city": "Dalton",
+          "state": "Georgia",
+          "zip": "30720",
+          "country": "United States"
+        }
+      },
+      "status": "Recruiting",
+      "contact": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "Angela Black",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": "angela@sebreast.com"
+      },
+      "contact_backup": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": ""
+      },
+      "investigator": [
+        {
+          "first_name": "",
+          "middle_name": "",
+          "last_name": "Eric Manahan, MD",
+          "degrees": "",
+          "role": "Principal Investigator",
+          "affiliation": ""
+        }
+      ]
+    },
+    {
+      "facility": {
+        "name": "Metro Surgical Associates Inc.",
+        "address": {
+          "city": "Lithonia",
+          "state": "Georgia",
+          "zip": "30058",
+          "country": "United States"
+        }
+      },
+      "status": "Recruiting",
+      "contact": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "Rogsbert F. Phillips, MD",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": "dr_rogsbertp@bellsouth.net"
+      },
+      "contact_backup": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": ""
+      },
+      "investigator": [
+        {
+          "first_name": "",
+          "middle_name": "",
+          "last_name": "Rogsbert F. Phillips, MD",
+          "degrees": "",
+          "role": "Principal Investigator",
+          "affiliation": ""
+        }
+      ]
+    },
+    {
+      "facility": {
+        "name": "Holyoke Medical Center",
+        "address": {
+          "city": "Holyoke",
+          "state": "Massachusetts",
+          "zip": "01040",
+          "country": "United States"
+        }
+      },
+      "status": "Completed",
+      "contact": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": ""
+      },
+      "contact_backup": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": ""
+      },
+      "investigator": []
+    },
+    {
+      "facility": {
+        "name": "Nashville Breast Center",
+        "address": {
+          "city": "Nashville",
+          "state": "Tennessee",
+          "zip": "37203",
+          "country": "United States"
+        }
+      },
+      "status": "Recruiting",
+      "contact": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "Kristie Appleton",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": "kristie@nashvillebreastcenter.com"
+      },
+      "contact_backup": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": ""
+      },
+      "investigator": [
+        {
+          "first_name": "",
+          "middle_name": "",
+          "last_name": "Pat W. Whitworth, MD",
+          "degrees": "",
+          "role": "Principal Investigator",
+          "affiliation": ""
+        }
+      ]
+    },
+    {
+      "facility": {
+        "name": "The Breast Center at Chesapeake Regional Healthcare",
+        "address": {
+          "city": "Chesapeake",
+          "state": "Virginia",
+          "zip": "23320",
+          "country": "United States"
+        }
+      },
+      "status": "Recruiting",
+      "contact": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "Meg Shrader",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": "marguerite.shrader@chesapeakeregional.com"
+      },
+      "contact_backup": {
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "",
+        "degrees": "",
+        "phone": "",
+        "phone_ext": "",
+        "email": ""
+      },
+      "investigator": [
+        {
+          "first_name": "",
+          "middle_name": "",
+          "last_name": "Antonio J. Ruiz, MD",
+          "degrees": "",
+          "role": "Principal Investigator",
+          "affiliation": ""
+        }
+      ]
+    }
+  ],
+  "location_countries": [
+    "United States"
+  ],
+  "removed_countries": [],
+  "condition_browse": [],
+  "intervention_browse": []
+}

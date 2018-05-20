@@ -493,7 +493,13 @@
         "study_design_info":{
             "allocation":"<xsl:value-of select="/clinical_study/study_design_info/allocation"/>",
             "intervention_model":"<xsl:value-of select="/clinical_study/study_design_info/intervention_model"/>",
-            "intervention_model_description":"<xsl:value-of select="/clinical_study/study_design_info/intervention_model_description"/>",
+            "intervention_model_description":"<xsl:call-template name="string-replace-all">
+                                                <xsl:with-param name="text">
+                                                    <xsl:value-of select="/clinical_study/study_design_info/intervention_model_description"/>
+                                                </xsl:with-param>
+                                                <xsl:with-param name="replace" select="'&quot;'"/>
+                                                <xsl:with-param name="by" select="' '"/>
+                                             </xsl:call-template>",
             "primary_purpose":"<xsl:value-of select="/clinical_study/study_design_info/primary_purpose"/>",
             "observational_model":"<xsl:value-of select="/clinical_study/study_design_info/observational_model"/>",
             "time_perspective":"<xsl:value-of select="/clinical_study/study_design_info/time_perspective"/>",
@@ -627,7 +633,13 @@
         "primary_outcome": [
         <xsl:for-each select="/clinical_study/primary_outcome">
             {
-            "measure":"<xsl:value-of select="measure"/>",
+            "measure":"<xsl:call-template name="string-replace-all">
+                            <xsl:with-param name="text">
+                                <xsl:value-of select="measure"/>
+                            </xsl:with-param>
+                            <xsl:with-param name="replace" select="'&quot;'"/>
+                            <xsl:with-param name="by" select="' '"/>
+                       </xsl:call-template>",
             "time_frame":"<xsl:value-of select="time_frame"/>",
             "description":"<xsl:call-template name="string-replace-all">
                 <xsl:with-param name="text">
@@ -641,7 +653,13 @@
         "secondary_outcome": [
         <xsl:for-each select="/clinical_study/secondary_outcome">
             {
-            "measure":"<xsl:value-of select="measure"/>",
+            "measure":"<xsl:call-template name="string-replace-all">
+                            <xsl:with-param name="text">
+                                <xsl:value-of select="measure"/>
+                            </xsl:with-param>
+                            <xsl:with-param name="replace" select="'&quot;'"/>
+                            <xsl:with-param name="by" select="' '"/>
+                       </xsl:call-template>",
             "time_frame":"<xsl:value-of select="time_frame"/>",
             "description":"<xsl:call-template name="string-replace-all">
                 <xsl:with-param name="text">
@@ -655,7 +673,13 @@
         "other_outcome": [
         <xsl:for-each select="/clinical_study/other_outcome">
             {
-            "measure":"<xsl:value-of select="measure"/>",
+            "measure":"<xsl:call-template name="string-replace-all">
+                        <xsl:with-param name="text">
+                            <xsl:value-of select="measure"/>
+                        </xsl:with-param>
+                        <xsl:with-param name="replace" select="'&quot;'"/>
+                        <xsl:with-param name="by" select="' '"/>
+                       </xsl:call-template>",
             "time_frame":"<xsl:value-of select="time_frame"/>",
             "description":"<xsl:call-template name="string-replace-all">
                 <xsl:with-param name="text">
@@ -669,7 +693,13 @@
         "reference": [
         <xsl:for-each select="/clinical_study/reference">
             {
-            "citation":"<xsl:value-of select="citation"/>",
+            "citation":"<xsl:call-template name="string-replace-all">
+                            <xsl:with-param name="text">
+                                <xsl:value-of select="citation"/>
+                            </xsl:with-param>
+                            <xsl:with-param name="replace" select="'&quot;'"/>
+                            <xsl:with-param name="by" select="' '"/>
+                        </xsl:call-template>",
             "PMID":"<xsl:value-of select="PMID"/>"
             }<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
@@ -677,7 +707,13 @@
         "results_reference": [
         <xsl:for-each select="/clinical_study/results_reference">
             {
-            "citation":"<xsl:value-of select="citation"/>",
+            "citation":"<xsl:call-template name="string-replace-all">
+                            <xsl:with-param name="text">
+                                <xsl:value-of select="citation"/>
+                            </xsl:with-param>
+                            <xsl:with-param name="replace" select="'&quot;'"/>
+                            <xsl:with-param name="by" select="' '"/>
+                        </xsl:call-template>",
             "PMID":"<xsl:value-of select="PMID"/>"
             }<xsl:if test="position() != last()">,</xsl:if>
         </xsl:for-each>
