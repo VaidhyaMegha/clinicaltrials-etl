@@ -333,7 +333,7 @@
                                 </xsl:for-each>
                                 ]
                             }
-                            }<xsl:if test="position() != last()">,</xsl:if>
+                        }<xsl:if test="position() != last()">,</xsl:if>
                         </xsl:for-each>
                         ]
                     }
@@ -347,29 +347,29 @@
                         <xsl:for-each select="/clinical_study/clinical_results/reported_events/other_events/category_list/category">{
                             "title":"<xsl:value-of select="title"/>",
                             "event_list": {
-                            "event": [
-                            <xsl:for-each select="event_list/event">{
-                                "sub_title":{
-                                "vocab":"<xsl:value-of select="@vocab"/>",
-                                "text_node_value":"<xsl:value-of select="."/>"
-                                },
-                                "assessment":"<xsl:value-of select="assessment"/>",
-                                "description":"<xsl:value-of select="description"/>",
-                                "counts":[
-                                <xsl:for-each select="counts">{
-                                    "group_id":"<xsl:value-of select="@group_id"/>",
-                                    "subjects_affected":"<xsl:value-of select="@subjects_affected"/>",
-                                    "subjects_at_risk":"<xsl:value-of select="@subjects_at_risk"/>",
-                                    "events":"<xsl:value-of select="@events"/>",
+                                "event": [
+                                <xsl:for-each select="event_list/event">{
+                                    "sub_title":{
+                                    "vocab":"<xsl:value-of select="@vocab"/>",
                                     "text_node_value":"<xsl:value-of select="."/>"
-                                    }<xsl:if test="position() != last()">,</xsl:if>
+                                    },
+                                    "assessment":"<xsl:value-of select="assessment"/>",
+                                    "description":"<xsl:value-of select="description"/>",
+                                    "counts":[
+                                    <xsl:for-each select="counts">{
+                                        "group_id":"<xsl:value-of select="@group_id"/>",
+                                        "subjects_affected":"<xsl:value-of select="@subjects_affected"/>",
+                                        "subjects_at_risk":"<xsl:value-of select="@subjects_at_risk"/>",
+                                        "events":"<xsl:value-of select="@events"/>",
+                                        "text_node_value":"<xsl:value-of select="."/>"
+                                        }<xsl:if test="position() != last()">,</xsl:if>
+                                    </xsl:for-each>
+                                    ]
+                                }<xsl:if test="position() != last()">,</xsl:if>
                                 </xsl:for-each>
                                 ]
-                                }<xsl:if test="position() != last()">,</xsl:if>
-                            </xsl:for-each>
-                            ]
-                            },
-                            }<xsl:if test="position() != last()">,</xsl:if>
+                            }
+                        }<xsl:if test="position() != last()">,</xsl:if>
                         </xsl:for-each>
                         ]
                     }

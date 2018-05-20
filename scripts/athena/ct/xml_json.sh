@@ -6,7 +6,7 @@ find ${1} -type f -name "*.log" -delete
 function genJSON(){
     g=${1//.xml/}
 
-    sed "s/&quot;/ /g" ${1} > ${1}.tmp
+    sed "s/&quot;/ /g; s/\\\/ /g;" ${1} > ${1}.tmp
     xmlstarlet tr xml_json.xslt ${1}.tmp > ${g}.json.tmp
 
     tr '\n' ' ' < ${g}.json.tmp > ${g}.json
