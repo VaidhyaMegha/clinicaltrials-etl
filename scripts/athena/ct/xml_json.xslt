@@ -132,18 +132,19 @@
                                     <xsl:for-each select="category_list/category">{
                                         "title":"<xsl:value-of select="title"/>",
                                         "measurement_list": {
-                                        "measurement": [
-                                        <xsl:for-each select="measurement_list/measurement">{
-                                            "group_id":"<xsl:value-of select="@group_id"/>",
-                                            "value":"<xsl:value-of select="@value"/>",
-                                            "spread":"<xsl:value-of select="@spread"/>",
-                                            "lower_limit":"<xsl:value-of select="@lower_limit"/>",
-                                            "upper_limit":"<xsl:value-of select="@upper_limit"/>",
-                                            "text_node_value":"<xsl:value-of select="text()"/>"
-                                            }<xsl:if test="position() != last()">,</xsl:if>
-                                        </xsl:for-each>
+                                            "measurement": [
+                                            <xsl:for-each select="measurement_list/measurement">{
+                                                "group_id":"<xsl:value-of select="@group_id"/>",
+                                                "value":"<xsl:value-of select="@value"/>",
+                                                "spread":"<xsl:value-of select="@spread"/>",
+                                                "lower_limit":"<xsl:value-of select="@lower_limit"/>",
+                                                "upper_limit":"<xsl:value-of select="@upper_limit"/>",
+                                                "text_node_value":"<xsl:value-of select="text()"/>"
+                                                }<xsl:if test="position() != last()">,</xsl:if>
+                                            </xsl:for-each>
+                                            ]
                                         }
-                                        }<xsl:if test="position() != last()">,</xsl:if>
+                                    }<xsl:if test="position() != last()">,</xsl:if>
                                     </xsl:for-each>
                                     ]
                                 }
@@ -230,18 +231,19 @@
                                     <xsl:for-each select="category_list/category">{
                                         "title":"<xsl:value-of select="title"/>",
                                         "measurement_list": {
-                                        "measurement": [
-                                        <xsl:for-each select="measurement_list/measurement">{
-                                            "group_id":"<xsl:value-of select="@group_id"/>",
-                                            "value":"<xsl:value-of select="@value"/>",
-                                            "spread":"<xsl:value-of select="@spread"/>",
-                                            "lower_limit":"<xsl:value-of select="@lower_limit"/>",
-                                            "upper_limit":"<xsl:value-of select="@upper_limit"/>",
-                                            "text_node_value":"<xsl:value-of select="text()"/>"
-                                            }<xsl:if test="position() != last()">,</xsl:if>
-                                        </xsl:for-each>
+                                            "measurement": [
+                                            <xsl:for-each select="measurement_list/measurement">{
+                                                "group_id":"<xsl:value-of select="@group_id"/>",
+                                                "value":"<xsl:value-of select="@value"/>",
+                                                "spread":"<xsl:value-of select="@spread"/>",
+                                                "lower_limit":"<xsl:value-of select="@lower_limit"/>",
+                                                "upper_limit":"<xsl:value-of select="@upper_limit"/>",
+                                                "text_node_value":"<xsl:value-of select="text()"/>"
+                                                }<xsl:if test="position() != last()">,</xsl:if>
+                                            </xsl:for-each>
+                                            ]
                                         }
-                                        }<xsl:if test="position() != last()">,</xsl:if>
+                                    }<xsl:if test="position() != last()">,</xsl:if>
                                     </xsl:for-each>
                                     ]
                                     }
@@ -385,7 +387,13 @@
         },
         "patient_data": {
             "sharing_ipd":"<xsl:value-of select="/clinical_study/patient_data/sharing_ipd"/>",
-            "ipd_description":"<xsl:value-of select="/clinical_study/patient_data/ipd_description"/>"
+            "ipd_description":"<xsl:call-template name="string-replace-all">
+                                <xsl:with-param name="text">
+                                    <xsl:value-of select="/clinical_study/patient_data/ipd_description"/>
+                                </xsl:with-param>
+                                <xsl:with-param name="replace" select="'&quot;'"/>
+                                <xsl:with-param name="by" select="' '"/>
+                               </xsl:call-template>"
         },
         "study_docs": {
             "study_doc": [
@@ -414,7 +422,13 @@
                                     <xsl:with-param name="replace" select="'&quot;'"/>
                                     <xsl:with-param name="by" select="' '"/>
                                  </xsl:call-template>",
-            "description":"<xsl:value-of select="description"/>",
+            "description":"<xsl:call-template name="string-replace-all">
+                            <xsl:with-param name="text">
+                                <xsl:value-of select="description"/>
+                            </xsl:with-param>
+                            <xsl:with-param name="replace" select="'&quot;'"/>
+                            <xsl:with-param name="by" select="' '"/>
+                          </xsl:call-template>",
             "arm_group_label": [
                 <xsl:for-each select="arm_group_label">
                     "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
@@ -441,12 +455,12 @@
             "sampling_method":"<xsl:value-of select="/clinical_study/eligibility/sampling_method"/>",
             "criteria":{
                 "textblock":"<xsl:call-template name="string-replace-all">
-                    <xsl:with-param name="text">
-                        <xsl:value-of select="/clinical_study/criteria/textblock"/>
-                    </xsl:with-param>
-                    <xsl:with-param name="replace" select="'&quot;'"/>
-                    <xsl:with-param name="by" select="' '"/>
-                </xsl:call-template>"
+                                <xsl:with-param name="text">
+                                    <xsl:value-of select="/clinical_study/criteria/textblock"/>
+                                </xsl:with-param>
+                                <xsl:with-param name="replace" select="'&quot;'"/>
+                                <xsl:with-param name="by" select="' '"/>
+                             </xsl:call-template>"
             },
             "gender":"<xsl:value-of select="/clinical_study/eligibility/gender"/>",
             "gender_based":"<xsl:value-of select="/clinical_study/eligibility/gender_based"/>",
@@ -461,7 +475,13 @@
                 "last_name":"<xsl:value-of select="last_name"/>",
                 "degrees":"<xsl:value-of select="degrees"/>",
                 "role":"<xsl:value-of select="role"/>",
-                "affiliation":"<xsl:value-of select="affiliation"/>"
+                "affiliation":"<xsl:call-template name="string-replace-all">
+                                <xsl:with-param name="text">
+                                    <xsl:value-of select="affiliation"/>
+                                </xsl:with-param>
+                                <xsl:with-param name="replace" select="'&quot;'"/>
+                                <xsl:with-param name="by" select="' '"/>
+                               </xsl:call-template>"
                 }<xsl:if test="position() != last()">,</xsl:if>
             </xsl:for-each>
         ],
@@ -494,7 +514,13 @@
         "arm_group":{
             "arm_group_label":"<xsl:value-of select="/clinical_study/arm_group/arm_group_label"/>",
             "arm_group_type":"<xsl:value-of select="/clinical_study/arm_group/arm_group_type"/>",
-            "description":"<xsl:value-of select="/clinical_study/arm_group/description"/>"
+            "description":"<xsl:call-template name="string-replace-all">
+                            <xsl:with-param name="text">
+                                <xsl:value-of select="/clinical_study/arm_group/description"/>
+                            </xsl:with-param>
+                            <xsl:with-param name="replace" select="'&quot;'"/>
+                            <xsl:with-param name="by" select="' '"/>
+                           </xsl:call-template>"
         },
         "expanded_access_info":{
             "expanded_access_type_individual":"<xsl:value-of select="/clinical_study/expanded_access_info/expanded_access_type_individual"/>",
@@ -515,7 +541,13 @@
             "observational_model":"<xsl:value-of select="/clinical_study/study_design_info/observational_model"/>",
             "time_perspective":"<xsl:value-of select="/clinical_study/study_design_info/time_perspective"/>",
             "masking":"<xsl:value-of select="/clinical_study/study_design_info/masking"/>",
-            "masking_description":"<xsl:value-of select="/clinical_study/study_design_info/masking_description"/>"
+            "masking_description":"<xsl:call-template name="string-replace-all">
+                                    <xsl:with-param name="text">
+                                        <xsl:value-of select="/clinical_study/study_design_info/masking_description"/>
+                                    </xsl:with-param>
+                                    <xsl:with-param name="replace" select="'&quot;'"/>
+                                    <xsl:with-param name="by" select="' '"/>
+                                   </xsl:call-template>"
         },
         "required_header":{
             "download_date":"<xsl:value-of select="/clinical_study/required_header/download_date"/>",
@@ -537,7 +569,13 @@
             ]
         },
         "brief_title":"<xsl:value-of select="/clinical_study/brief_title"/>",
-        "acronym":"<xsl:value-of select="/clinical_study/acronym"/>",
+        "acronym":"<xsl:call-template name="string-replace-all">
+                    <xsl:with-param name="text">
+                        <xsl:value-of select="/clinical_study/acronym"/>
+                    </xsl:with-param>
+                    <xsl:with-param name="replace" select="'&quot;'"/>
+                    <xsl:with-param name="by" select="' '"/>
+                   </xsl:call-template>",
         "official_title":"<xsl:call-template name="string-replace-all">
                             <xsl:with-param name="text">
                                 <xsl:value-of select="/clinical_study/official_title"/>
