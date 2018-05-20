@@ -1,5 +1,5 @@
-SELECT   COALESCE(cast(to_base64url(md5(to_utf8(trials.id))) as varchar(8)),'') || '-' || COALESCE(cast(to_base64url(md5(to_utf8(ctri_number))) as varchar(8)),'')
-         ||'-'||COALESCE(cast(to_base64url(md5(to_utf8(nct_id))) as varchar(8)),'') ctd_id,
+SELECT   RTRIM(LTRIM(COALESCE(cast(to_base64url(md5(to_utf8(trials.id))) as varchar(8)),'') || '-'||  COALESCE(cast(to_base64url(md5(to_utf8(ctri_number))) as varchar(8)),'')|| '-'
+         ||COALESCE(cast(to_base64url(md5(to_utf8(nct_id))) as varchar(8)),''),'-'),'-')  ctd_id,
          ctri_number,
          nct_id,
          secondary_ids,
