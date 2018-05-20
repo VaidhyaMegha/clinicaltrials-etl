@@ -14,6 +14,15 @@ select count(*) from trials , ct_studies cts   where   substr(identifiers, strpo
  select count(1) from (select  * from ctri_studies ctris  full outer join ct_studies cts   on  substr(secondary_ids, strpos(secondary_ids, 'NCT'), 11) = cts.nct_id where ctri_number != '' or nct_id != '') b  full outer join  trials on  substr(identifiers, strpos(identifiers, 'NCT'), 11) = b.nct_id
 
 
+athena:global> select md5(to_utf8('Amazon'));
+ _col0
+-------------------------------------------------
+ b3 b3 a6 ac 74 ec bd 56 bc db ef a4 79 9f b9 df
+(1 rows)
+
+Query 2e78eb55-44f8-4ba4-8021-0ca882656e9c, SUCCEEDED
+https://us-east-1.console.aws.amazon.com/athena/home?force&region=us-east-1#query/history/2e78eb55-44f8-4ba4-8021-0ca882656e9c
+Time: 0:00:00, CPU Time: 90ms total, Data Scanned: 0.00B, Cost: $0.00
 
 
 
