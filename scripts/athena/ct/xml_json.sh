@@ -3,6 +3,14 @@
 find ${1} -type f -name "*.json" -delete
 find ${1} -type f -name "*.log" -delete
 
+download=${2:-'no'}
+
+if [[ ${download} == 'yes' ]]; then
+    wget https://clinicaltrials.gov/AllPublicXML.zip .
+
+    unzip AllPublicXML.zip ${1} -d ${1}
+fi
+
 function genJSON(){
     g=${1//.xml/}
 
