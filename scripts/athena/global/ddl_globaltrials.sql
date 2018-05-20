@@ -1,29 +1,29 @@
 CREATE EXTERNAL TABLE `Global_registries`(
-           `ctd_id`,
-           `ctri_number`,
-           `nct_id`,
-           `secondary_ids`,
-           `identifiers`,
-           `Date_Of_Registration`,
-           `study_type`,
-           `Public_title`,
-           `Scientific_title`,
-           `brief_summary`,
-           `phase`,
-           `exclusion_criteria`,
-           `inclusion_criteria`,
-           `sample_size`,
-           `recruitment_status`,
-           `primary_outcome`,
-           `secondary_outcome`,
-           `intervention`,
-           `enrollment_type`,
-           `ethics_review`,
-           `primary_sponsor`,
-           `secondary_sponsor`,
-           `public_query_contact` ,
-           `scientific_query_contact`,
-           `CompletionDate`
+           `ctd_id` string,
+           `ctri_number` string,
+           `nct_id` string,
+           `secondary_ids` string,
+           `identifiers` string,
+           `Date_Of_Registration` string,
+           `study_type` string,
+           `Public_title` string,
+           `Scientific_title` string,
+           `brief_summary` string,
+           `phase` string,
+           `exclusion_criteria` string,
+           `inclusion_criteria` string,
+           `sample_size` string,
+           `recruitment_status` string,
+           `primary_outcome` string,
+           `secondary_outcome` string,
+           `intervention` string,
+           `enrollment_type` string,
+           `ethics_review` string,
+           `primary_sponsor` string,
+           `secondary_sponsor` string,
+           `public_query_contact` string,
+           `scientific_query_contact` string,
+           `CompletionDate` string)
  ROW FORMAT DELIMITED
  FIELDS TERMINATED BY '\t'
  STORED AS INPUTFORMAT
@@ -31,7 +31,7 @@ CREATE EXTERNAL TABLE `Global_registries`(
  OUTPUTFORMAT
  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
  LOCATION
- ''
+ 's3://datainsights-results/temp/global/athena/ctd_utdm'
  TBLPROPERTIES (
  'classification'='csv',
  'columnsOrdered'='true',
