@@ -2,6 +2,7 @@
 
 pushd ~/projects/DI_ETL/scripts/athena/ct
 
+
 function genJSON(){
     g=${1//.xml/}
 
@@ -11,6 +12,8 @@ function genJSON(){
 
     rm ${g}.json.tmp
 }
+
+find ${1} -type f -name "*.json" | xargs -I {} rm -f {}
 
 find ${1} -type f -name "*.xml" | while read f
 do
