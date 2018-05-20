@@ -1,4 +1,5 @@
 CREATE EXTERNAL TABLE `Global_registries`(
+           `ctd_id`,
            `ctri_number`,
            `nct_id`,
            `secondary_ids`,

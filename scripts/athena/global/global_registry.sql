@@ -1,4 +1,6 @@
-SELECT   ctri_number,
+SELECT   COALESCE(cast(to_base64url(md5(to_utf8(trials.id))) as varchar(8)),'') || '-' || COALESCE(cast(to_base64url(md5(to_utf8(ctri_number))) as varchar(8)),'')
+         ||'-'||COALESCE(cast(to_base64url(md5(to_utf8(nct_id))) as varchar(8)),'') ctd_id,
+         ctri_number,
          nct_id,
          secondary_ids,
          identifiers,
@@ -23,8 +25,7 @@ SELECT   ctri_number,
          ctri_cts.scientific_query_contact scientific_query_contact,
          CAST(MAP(ARRAY['ctris.date_of_completion_global','ctri.date_of_completion_india','cts.completion_date',
          'trials.completion_date'],ARRAY[ctri_cts.date_of_completion_global,ctri_cts.date_of_completion_india,ctri_cts.completion_date, trials.completion_date]) AS JSON) CompletionDate
-
-   FROM (
+ FROM (
             SELECT ctri_number,
                 nct_id,
                 secondary_ids,
