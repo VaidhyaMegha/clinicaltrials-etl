@@ -1,16 +1,5 @@
  #!/usr/bin/env bash
 
-find ${1} -type f -name "*.json" -delete
-find ${1} -type f -name "*.log" -delete
-
-download=${2:-'no'}
-
-if [[ ${download} == 'yes' ]]; then
-    wget https://clinicaltrials.gov/AllPublicXML.zip .
-
-    unzip AllPublicXML.zip ${1} -d ${1}
-fi
-
 function genJSON(){
     g=${1//.xml/}
 
@@ -25,7 +14,24 @@ function genJSON(){
     jq ".id_info.nct_id" ${g}.json  >> ${g}.log 2>&1
 }
 
-find ${1} -type f -name "*.xml" | while read f
+xml_dir=${1}
+download=${2:-'no'}
+s3_bucket=${3:-'s3://datainsights-results/ct-adapter/'}
+
+find ${xml_dir} -type f -name "*.json" -delete
+find ${xml_dir} -type f -name "*.log" -delete
+
+if [[ ${download} == 'yes' ]]; then
+    wget https://clinicaltrials.gov/AllPublicXML.zip .
+
+    unzip AllPublicXML.zip -d ${xml_dir}
+fi
+
+find ${xml_dir} -type f -name "*.xml" | while read f
 do
     genJSON ${f} &
 done
+
+if [[ ${download} == 'yes' ]]; then
+    aws s3 sync  ${xml_dir} ${s3_bucket}
+fi

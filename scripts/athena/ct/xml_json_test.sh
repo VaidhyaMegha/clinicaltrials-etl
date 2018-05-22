@@ -1,6 +1,6 @@
  #!/usr/bin/env bash
 
-rm ${1}/processed.log
+rm -f ${1}/processed.log
 
 find ${1} -type f -name "*.json" | while read f
 do
