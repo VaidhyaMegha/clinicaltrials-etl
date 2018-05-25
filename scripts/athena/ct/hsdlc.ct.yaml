@@ -1,0 +1,157 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: Sets up your AWS Batch Environment for running your hsdlc workflows
+
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: IAM Roles
+        Parameters:
+        - BatchServiceRole
+        - SpotIamFleetRole
+        - InstanceRole
+        - JobRole
+      - Label:
+          default: Compute Environment Config
+        Parameters:
+        - SubnetIds
+        - SecurityGroupIds
+        - BidPercentage
+        - ImageId
+        - KeyPair
+        - MinvCpus
+        - MaxvCpus
+        - DesiredvCpus
+      - Label:
+        - default: HSDLC
+        Parameters:
+        - HSDLCDockerImage
+        - HSDLCVcpus
+        - HSDLCMemory
+
+Parameters:
+  BatchServiceRole:
+    Type: String
+    Description: ARN for the AWS Batch Service Role
+  SpotIamFleetRole:
+    Type: String
+    Description: ARN for the Spot Fleet Role
+  InstanceRole:
+    Type: String
+    Description: ARN for the ECS InstanceRole
+  JobRoleArn:
+    Type: String
+    Description: ARN for the AWS Batch Job Role
+
+  SubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: Subnets you want your batch compute environment to launch in. Recommend private subnets
+  SecurityGroupIds:
+    Type: List<AWS::EC2::SecurityGroup::Id>
+    Description: Security groups your instances in your batch compute environment should use
+  BidPercentage:
+    Type: String
+    Description: Maximum spot percentage of on-demand. Should be an integer - default is 50
+    MaxLength: 3
+    Default: 50
+    AllowedPattern: "[0-9]+"
+  ImageId:
+    Type: AWS::EC2::Image::Id
+    Description: AMI you want your AWS Batch Compute Environment to use
+    Default: ami-553d5b43
+  KeyPair:
+    Type: AWS::EC2::KeyPair::KeyName
+    Description: EC2 Key Pair for EC2 instances launched in your compute environment
+  MinvCpus:
+    Type: String
+    Description: Minimum number of CPUs in the compute environment. Default 0.
+    Default: 0
+    AllowedPattern: "[0-9]+"
+  DesiredvCpus:
+    Type: String
+    Description: Desired number of CPUs in the compute environment to launch with. Default 0.
+    Default: 0
+    AllowedPattern: "[0-9]+"
+  MaxvCpus:
+    Type: String
+    Description: Maximum number of CPUs in the compute environment. Should be >= than MinCpus
+    AllowedPattern: "[0-9]+"
+  Env:
+    Type: String
+    Description: Environment you are running in (e.g. Dev or Prod)
+  RetryNumber:
+    Type: String
+    Default: "1"
+    Description: Number of retries for each AWS Batch job. Integer required.
+    MaxLength: 1
+    AllowedPattern: "[1-9]"
+    ConstraintDescription: Value between 1 and 9
+
+  HSDLCDockerImage:
+    Type: String
+    Description: Docker image used to run your HSDLC jobs
+  HSDLCVcpus:
+    Type: Number
+    Description: vCPUs available to HSDLC Jobs. Default is usually fine
+    Default: 32
+  HSDLCMemory:
+    Type: Number
+    Description: Memory (in MB) available to HSDLC Jobs. Default is usually fine
+    Default: 80000
+
+Resources:
+  HSDLCComputeEnvironment:
+    Type: AWS::Batch::ComputeEnvironment
+    Properties:
+      ComputeEnvironmentName: !Join ["-", [hsdlcEnv, !Ref Env]]
+      ServiceRole: !Ref BatchServiceRole
+      Type: MANAGED
+      State: ENABLED
+      ComputeResources:
+        BidPercentage: !Ref BidPercentage
+        Ec2KeyPair: !Ref KeyPair
+        ImageId: !Ref ImageId
+        InstanceRole: !Ref InstanceRole
+        InstanceTypes:
+          - optimal
+        MinvCpus: !Ref MinvCpus
+        DesiredvCpus: !Ref DesiredvCpus
+        MaxvCpus: !Ref MaxvCpus
+        SecurityGroupIds: !Ref SecurityGroupIds
+        SpotIamFleetRole: !Ref SpotIamFleetRole
+        Subnets: !Ref SubnetIds
+        Type: SPOT
+
+  HighPriorityQueue:
+    Type: AWS::Batch::JobQueue
+    Properties:
+      JobQueueName: !Join ["-", [highPriority, !Ref Env]]
+      Priority: 1000
+      State: ENABLED
+      ComputeEnvironmentOrder:
+        - Order: 1
+          ComputeEnvironment: !Ref HSDLCComputeEnvironment
+
+  LowPriorityQueue:
+    Type: AWS::Batch::JobQueue
+    Properties:
+      JobQueueName: !Join ["-", [lowPriority, !Ref Env]]
+      Priority: 1
+      State: ENABLED
+      ComputeEnvironmentOrder:
+        - Order: 1
+          ComputeEnvironment: !Ref HSDLCComputeEnvironment
+
+  HSDLCJobDefinition:
+    Type: AWS::Batch::JobDefinition
+    Properties:
+      JobDefinitionName: !Join ["-", ["hsdlc", !Ref Env]]
+      Type: container
+      RetryStrategy:
+        Attempts: !Ref RetryNumber
+      ContainerProperties:
+        Image: !Ref HSDLCDockerImage
+        Vcpus: !Ref HSDLCVcpus
+        Memory: !Ref HSDLCMemory
+        JobRoleArn: !Ref JobRoleArn
