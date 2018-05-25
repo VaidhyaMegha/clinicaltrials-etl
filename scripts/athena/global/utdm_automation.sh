@@ -1,4 +1,5 @@
 #!/bin/bash
+export AWS_DEFAULT_REGION=us-east-1
 s3path="s3://datainsights-results/temp/utdm/"
 s3fileextention=".csv"
 while IFS='' read -r line || [[ -n "$line" ]]; do
