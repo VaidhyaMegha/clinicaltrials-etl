@@ -1,4 +1,50 @@
 CREATE EXTERNAL TABLE `ct_studies_new` (
+`overall_contact` struct<
+  `first_name` :string,
+  `middle_name` :string,
+  `last_name` :string,
+  `degrees` :string,
+  `phone` :string,
+  `phone_ext` :string,
+  `email` :string
+  >,
+`overall_contact_backup` struct<
+  `first_name`:srting,
+  `middle_name`:srting,
+  `last_name`:srting,
+  `degrees`:srting,
+  `phone`:srting,
+  `phone_ext`:srting,
+  `email`:srting
+  >,
+`oversight_info` struct<
+  `has_dmc`:string,
+  `is_fda_regulated_drug`:string,
+  `is_fda_regulated_device`:string,
+  `is_unapproved_device`:string,
+  `is_ppsd`:string,
+  `is_us_export`:string
+  >,
+`arm_group` struct<
+  `arm_group_label` :string,
+  `arm_group_type` :string,
+  `description` :string
+  >,
+`expanded_access_info struct<
+  `expanded_access_type_individual`:string,
+  `expanded_access_type_intermediate`:string,
+  `expanded_access_type_treatment`:string
+  >,
+`study_design_info` struct<
+ `allocation`:string,
+ `intervention_model`:string,
+ `intervention_model_description`:string,
+ `primary_purpose`:string,
+ `observational_model`:string,
+ `time_perspective`:string,
+ `masking`:string,
+ `masking_description`:string
+>,
 `required_header` struct<
 `download_date`:string,
 `link_text`:string,
