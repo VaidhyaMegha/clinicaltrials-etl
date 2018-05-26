@@ -12,27 +12,39 @@ function genJSON(){
     rm ${1}.tmp
     rm ${g}.json.tmp
 
-    jq ".id_info.nct_id" ${g}.json  >> ${g}.log 2>&1
+#    jq ".id_info.nct_id" ${g}.json  >> ${g}.log 2>&1
 }
 
 xml_dir=${1}
 download=${2:-'no'}
 s3_bucket=${3:-'s3://datainsights-results/ct-adapter/'}
+context_dir=${4:-'/usr/local/dataintegration'}
+
+pushd ${context_dir}
 
 if [[ ${download} == 'yes' ]]; then
-    wget https://clinicaltrials.gov/AllPublicXML.zip .
+    wget https://clinicaltrials.gov/AllPublicXML.zip
 
-    unzip AllPublicXML.zip -d ${xml_dir}
+    unzip -q AllPublicXML.zip -d ${xml_dir}
+
+    rm -f AllPublicXML.zip
+
+    find ${xml_dir} -type f -name "*.xml" | while read f
+    do
+        genJSON ${f} &
+    done
+
+    aws s3 sync  ${xml_dir} ${s3_bucket}
 else
     find ${xml_dir} -type f -name "*.json" -delete
     find ${xml_dir} -type f -name "*.log" -delete
+
+    find ${xml_dir} -type f -name "*.xml" | while read f
+    do
+        genJSON ${f} &
+    done
 fi
 
-find ${xml_dir} -type f -name "*.xml" | while read f
-do
-    genJSON ${f} &
-done
+#xml_json_test.sh ${xml_dir}
 
-if [[ ${download} == 'yes' ]]; then
-    aws s3 sync  ${xml_dir} ${s3_bucket}
-fi
+popd

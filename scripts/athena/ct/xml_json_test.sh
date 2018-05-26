@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -ex
+set -x
 
 rm -f ${1}/processed.log
 
@@ -8,3 +8,5 @@ do
     echo ${f} >> ${1}/processed.log
     jq ".id_info.nct_id" ${f}  >> ${1}/processed.log 2>&1
 done
+
+grep 'error'  ${1}/processed.log | wc -l
