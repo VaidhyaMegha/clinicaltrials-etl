@@ -1,4 +1,14 @@
 CREATE EXTERNAL TABLE `ct_studies_new` (
+  `overall_official`:array<struct
+    <
+      `first_name` :string,
+      `middle_name` :string,
+      `last_name` :string,
+      `degrees` :string,
+      `role` :string,
+      `affiliation` :string
+    >
+  >,
 `overall_contact` struct<
   `first_name` :string,
   `middle_name` :string,
