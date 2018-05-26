@@ -1,4 +1,5 @@
- #!/usr/bin/env bash
+#!/usr/bin/env bash
+set -ex
 
 rm -f ${1}/processed.log
 
@@ -7,5 +8,3 @@ do
     echo ${f} >> ${1}/processed.log
     jq ".id_info.nct_id" ${f}  >> ${1}/processed.log 2>&1
 done
-
-# find /home/sandeep/temp/AllPublicXMLs/ | grep "json$" | tee /dev/tty |  xargs -I {} cat {} | jq ".id_info.nct_id" > ~/temp/processed.log
