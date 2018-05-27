@@ -121,8 +121,4 @@ CREATE EXTERNAL TABLE `ct_studies_new` (
      `condition_browse` string,
      `intervention_browse` string)
      ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
-     LOCATION 's3://datainsights-results/temp/ct_adapter/NCT0350xxxx'
-     TBLPROPERTIES
-     (
-     'exclusions'='[\"s3://datainsights-in/clinicaltrials/aact/*.zip\"]'
-     );
+     LOCATION 's3://datainsights-results/ct_adapter/json';

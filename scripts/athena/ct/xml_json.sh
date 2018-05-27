@@ -2,12 +2,13 @@
 set -ex
 
 function genJSON(){
-    g=${1//.xml/}
+    g=$( basename ${1} )
+    g=${g//.xml/}
 
     sed "s/&quot;/ /g; s/\\\/ /g;" ${1} > ${1}.tmp
     xmlstarlet tr xml_json.xslt ${1}.tmp > ${g}.json.tmp
 
-    tr '\n' ' ' < ${g}.json.tmp > ${g}.json
+    tr '\n' ' ' < ${g}.json.tmp > ${2}/json/${g}.json
 
     rm ${1}.tmp
     rm ${g}.json.tmp
@@ -27,9 +28,11 @@ if [[ ${download} == 'yes' ]]; then
 
     rm -f AllPublicXML.zip
 
+    mkdir ${xml_dir}/json
+
     find ${xml_dir} -type f -name "*.xml" | while read f
     do
-        genJSON ${f} &
+        genJSON ${f} ${xml_dir} &
     done
 
     aws s3 sync  ${xml_dir} ${s3_bucket}
@@ -37,9 +40,11 @@ else
     find ${xml_dir} -type f -name "*.json" -delete
     find ${xml_dir} -type f -name "*.log" -delete
 
+    mkdir ${xml_dir}/json
+
     find ${xml_dir} -type f -name "*.xml" | while read f
     do
-        genJSON ${f} &
+        genJSON ${f} ${xml_dir} &
     done
 fi
 
