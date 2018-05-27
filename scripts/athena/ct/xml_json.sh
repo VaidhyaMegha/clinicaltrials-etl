@@ -11,8 +11,6 @@ function genJSON(){
 
     rm ${1}.tmp
     rm ${g}.json.tmp
-
-#    jq ".id_info.nct_id" ${g}.json  >> ${g}.log 2>&1
 }
 
 xml_dir=${1}
@@ -44,7 +42,5 @@ else
         genJSON ${f} &
     done
 fi
-
-#xml_json_test.sh ${xml_dir}
 
 popd
