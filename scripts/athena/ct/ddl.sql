@@ -121,4 +121,4 @@ CREATE EXTERNAL TABLE `ct_studies_new` (
      `condition_browse` string,
      `intervention_browse` string)
      ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
-     LOCATION 's3://datainsights-results/ct_adapter/json';
+     LOCATION 's3://datainsights-results/ct-adapter/json';

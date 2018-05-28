@@ -10,6 +10,8 @@ function genJSON(){
 
     tr '\n' ' ' < ${g}.json.tmp > ${2}/json/${g}.json
 
+    gzip ${2}/json/${g}.json
+
     rm ${1}.tmp
     rm ${g}.json.tmp
 }
@@ -40,6 +42,7 @@ else
     find ${xml_dir} -type f -name "*.json" -delete
     find ${xml_dir} -type f -name "*.log" -delete
 
+    rm -rf ${xml_dir}/json
     mkdir ${xml_dir}/json
 
     find ${xml_dir} -type f -name "*.xml" | while read f
