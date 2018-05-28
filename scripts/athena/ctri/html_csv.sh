@@ -22,7 +22,7 @@ function download_trial(){
 }
 
 function analyse_file() {
-    content=`python ctri.nic.in/parse.py  ${1} ${3}`
+    content=`python parse.py  ${1} ${3}`
 
     content=$( echo ${content} | sed -e 's/<[^>]*>//g; s/Close\n//g; s/&[^\;]*\;//g' |
      sed 's/Modification(s)//g; s/\[Registered on: /~/; s/\\n//g; s/\\r//g; s/\\t//g; s/\]//g; s/"//g; s/ ~/~/g; s/~ /~/g' | tr -s " "   )
@@ -38,7 +38,7 @@ if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}/logs
     mkdir ${html_dir}/csv
 
-    find ${html_dir} | grep html | xargs -I {} cat {} | grep -oE "trialid=[^&]*&" | while read f
+    find ${html_dir} -maxdepth 1 | grep ".html$" | xargs -I {} cat {} | grep -oE "trialid=[^&]*&" | while read f
     do
         download_trial ${f}
     done
@@ -48,7 +48,7 @@ if [[ ${download} == 'yes' ]]; then
 
     ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
     do
-        analyse_file ${html_dir}/studies/${f} ${html_dir}/csv/studies.csv  ${html_dir}/${f}
+        analyse_file ${html_dir}/studies/${f} ${html_dir}/csv/studies.csv  ${html_dir}/${f} &
     done
 
     aws s3 sync  ${html_dir} ${s3_bucket}
@@ -61,7 +61,7 @@ else
     mkdir ${html_dir}/logs
     mkdir ${html_dir}/csv
 
-    find ${html_dir} | grep html | xargs -I {} cat {} | grep -oE "trialid=[^&]*&" | while read f
+    find ${html_dir} -maxdepth 1 | grep ".html$" | xargs -I {} cat {} | grep -oE "trialid=[^&]*&" | while read f
     do
         download_trial ${f}
     done
@@ -71,7 +71,7 @@ else
 
     ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
     do
-        analyse_file ${html_dir}/studies/${f} ${html_dir}/csv/studies.csv  ${html_dir}/${f}
+        analyse_file ${html_dir}/studies/${f} ${html_dir}/csv/studies.csv  ${html_dir}/${f} &
     done
 
 fi
