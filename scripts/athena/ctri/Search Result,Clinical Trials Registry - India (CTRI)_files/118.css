@@ -1,0 +1,970 @@
+HTML > BODY {
+	FONT-SIZE: small;
+    font-family: verdana;
+}
+
+div
+{
+    font-family: verdana;
+    font-size: 10px;
+}
+
+DIV P
+{
+    font-family: verdana;
+    font-size: 11px;
+    color: #000000;
+}
+
+UNKNOWN {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/700_281a.jpg); TEXT-ALIGN: left; PADDING-BOTTOM: 0px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: repeat-y; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-POSITION: center top; HEIGHT: auto; COLOR: #000000; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+.header_border_top {
+	BORDER-BOTTOM: #6ba2cc 1px solid; BACKGROUND-COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #6ba2cc; FONT-SIZE: 12px
+}
+.td1_800 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/800.jpg); TEXT-ALIGN: center; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; VERTICAL-ALIGN: top; BORDER-TOP: #6ba2cc 1px solid; PADDING-TOP: 0px
+}
+.blue_border {
+	BORDER-BOTTOM: #4477aa 0px solid; BORDER-LEFT: #4477aa 0px solid; BACKGROUND-COLOR: #6ba2cc; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 12px; BORDER-TOP: #4477aa 0px solid; BORDER-RIGHT: #4477aa 0px solid
+}
+div A.a3
+{
+    COLOR: #ffffff; 
+    FONT-WEIGHT: bold; 
+    TEXT-DECORATION: none;
+    font-family: Verdana;
+    font-size: 12px;
+}
+.a3:link {
+	
+}
+.a3:visited {
+	COLOR: #ffffff; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.a3:hover:visited {
+	COLOR: #ffffff; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.a3:hover {
+	COLOR: #134a81; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+.a3:active {
+	COLOR: #134a81; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+.a5:link {
+	COLOR: #000000; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.a5:visited {
+	COLOR: #000000; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.a5:hover:visited {
+	COLOR: #000000; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.a5:hover {
+	COLOR: #134a81; FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+.a5:active {
+	COLOR: #134a81; FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+.a31:link {
+	COLOR: #c10505; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.a31:visited {
+	COLOR: #ff0000; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.a31:hover:visited {
+	COLOR: #ff0000; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.a31:hover {
+	COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.a31:active {
+	COLOR: #0000ff; TEXT-DECORATION: underline
+}
+#container {
+	BORDER-BOTTOM: #003263 1px hidden; POSITION: relative; BORDER-LEFT: #003263 1px hidden; PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 800px; PADDING-RIGHT: 0px; BORDER-TOP: #003263 1px hidden; BORDER-RIGHT: #003263 1px hidden; PADDING-TOP: 0px
+}
+#preambleX {
+	BORDER-BOTTOM: #6ba2cc 1px solid; BORDER-LEFT: #6ba2cc 1px solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 730px; PADDING-RIGHT: 10px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #6ba2cc 1px solid; BORDER-RIGHT: #6ba2cc 1px solid; PADDING-TOP: 10px
+}
+#preamble1 {
+	BORDER-BOTTOM: #6ba2cc 1px solid; BORDER-LEFT: #6ba2cc 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 710px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #6ba2cc 1px solid; BORDER-RIGHT: #6ba2cc 1px solid; PADDING-TOP: 0px
+}
+#preamble {
+	BORDER-BOTTOM: #6ba2cc 1px solid; 
+    POSITION: absolute; 
+    BORDER-LEFT: #6ba2cc 1px solid; 
+    PADDING-BOTTOM: 10px; 
+    BACKGROUND-COLOR: #ffffff; 
+    MARGIN: 0px; 
+    PADDING-LEFT: 0px; 
+    WIDTH: 400px; 
+    PADDING-RIGHT: 10px; 
+    BACKGROUND-REPEAT: no-repeat; 
+    BACKGROUND-POSITION: center bottom; 
+    HEIGHT: absolute; 
+    BORDER-TOP: #6ba2cc 1px solid; 
+    BORDER-RIGHT: #6ba2cc 1px solid; 
+    PADDING-TOP: 10px; 
+}
+#preamble_username {
+	BORDER-BOTTOM: #6ba2cc 0px solid; POSITION: absolute; BORDER-LEFT: #6ba2cc 0px solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 430px; PADDING-RIGHT: 10px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; HEIGHT: 100px; BORDER-TOP: #6ba2cc 0px solid; BORDER-RIGHT: #6ba2cc 0px solid; PADDING-TOP: 10px; LEFT: 300px
+}
+#preamble_admin {
+	BORDER-BOTTOM: #335566 1px solid; POSITION: absolute; BORDER-LEFT: #335566 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 430px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; HEIGHT: 100px; BORDER-TOP: #335566 1px solid; BORDER-RIGHT: #335566 1px solid; PADDING-TOP: 0px; LEFT: 300px
+}
+#linkList {
+	BORDER-BOTTOM: #6ba2cc 1px solid; POSITION: absolute; BORDER-LEFT: #6ba2cc 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #6ba2cc 1px solid; TOP: 20px; BORDER-RIGHT: #6ba2cc 1px solid; PADDING-TOP: 0px; LEFT: 0px
+}
+#linkList UL {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; LIST-STYLE-TYPE: square; MARGIN: 5px 5px 0px 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #ccc 0px dotted; LIST-STYLE-IMAGE: url(/Clinicaltrials/images/listbullet.gif); PADDING-TOP: 0px
+}
+#linkList LI {
+	BORDER-BOTTOM: #e2e2e2 1px dashed; TEXT-ALIGN: left; PADDING-BOTTOM: 3px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #f1f1f1; LIST-STYLE-TYPE: square; FONT-STYLE: normal; MARGIN: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: normal; LIST-STYLE-IMAGE: url(/Clinicaltrials/images/listbullet.gif); PADDING-TOP: 3px
+}
+.li_faq {
+	BORDER-BOTTOM: #e2e2e2 0px dashed; TEXT-ALIGN: left; PADDING-BOTTOM: 3px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #ffffff; LIST-STYLE-TYPE: square; FONT-STYLE: normal; MARGIN: 0px 0px 0px 40px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: normal; LIST-STYLE-IMAGE: url(/Clinicaltrials/images/listbulletoo.gif); PADDING-TOP: 3px
+}
+#linkList LI A:link {
+	FONT-STYLE: normal; PADDING-RIGHT: 5px
+}
+#linkList LI A:visited {
+	FONT-STYLE: normal; PADDING-RIGHT: 5px
+}
+#linkList LI A:hover:visited {
+	FONT-STYLE: normal; PADDING-RIGHT: 5px
+}
+#linkList LI A:hover {
+	FONT-STYLE: normal; PADDING-RIGHT: 5px
+}
+#linkList LI A:active {
+	FONT-STYLE: normal; PADDING-RIGHT: 5px
+}
+#linkList H3 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_24x.gif); BORDER-BOTTOM: #aaa 1px solid; TEXT-ALIGN: left; PADDING-BOTTOM: 3px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #ffffff; MARGIN: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-POSITION: right center; COLOR: #134a81; FONT-SIZE: 12px; FONT-WEIGHT: bold; PADDING-TOP: 3px
+}
+#lselect {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09bx.gif); BORDER-BOTTOM: #aaa 0px solid; BORDER-LEFT: #aaa 0px solid; PADDING-BOTTOM: 30px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px 0px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #aaa 0px solid; BORDER-RIGHT: #aaa 0px solid; PADDING-TOP: 0px
+}
+#lfavorites {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09bx.gif); BORDER-BOTTOM: #aaa 0px solid; BORDER-LEFT: #aaa 0px solid; PADDING-BOTTOM: 30px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px 0px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #aaa 0px solid; BORDER-RIGHT: #aaa 0px solid; PADDING-TOP: 0px
+}
+#larchives {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09bx.gif); BORDER-BOTTOM: #aaa 0px solid; BORDER-LEFT: #aaa 0px solid; PADDING-BOTTOM: 30px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px 0px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #aaa 0px solid; BORDER-RIGHT: #aaa 0px solid; PADDING-TOP: 0px
+}
+#lresources {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09bx.gif); BORDER-BOTTOM: #aaa 0px solid; BORDER-LEFT: #aaa 0px solid; PADDING-BOTTOM: 30px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px 0px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #aaa 0px solid; BORDER-RIGHT: #aaa 0px solid; PADDING-TOP: 0px
+}
+TABLE {
+	BORDER-BOTTOM: #ff0000 0px solid; BORDER-LEFT: #ff0000 0px solid; MARGIN: 0px; BORDER-TOP: #ff0000 0px solid; BORDER-RIGHT: #ff0000 0px solid
+}
+.tablemessage {
+	BORDER-BOTTOM: #ff0000 0px solid; BORDER-LEFT: #ff0000 0px solid; MARGIN: 0px 0px 0px 2px; BORDER-TOP: #ff0000 0px solid; BORDER-RIGHT: #ff0000 0px solid
+}
+TH {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 2px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; VERTICAL-ALIGN: top; PADDING-TOP: 2px
+}
+TD {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 2px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; VERTICAL-ALIGN: top; PADDING-TOP: 2px
+}
+THEAD TR {
+	BACKGROUND-COLOR: #dddddd
+}
+TABLE.simple1 THEAD TR {
+	BACKGROUND-COLOR: #eee
+}
+TABLE.simple1 TR.even {
+	BACKGROUND-COLOR: #eeeeee
+}
+TABLE.simple1 TR.odd {
+	BACKGROUND-COLOR: #e2e2e2
+}
+TABLE.simple1 {
+	BORDER-BOTTOM: #ccc 0px solid; BORDER-LEFT: #ccc 0px solid; TEXT-TRANSFORM: capitalize; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; BORDER-TOP: #ccc 0px solid; BORDER-RIGHT: #ccc 0px solid
+}
+TABLE.simple1 TD {
+	BORDER-BOTTOM: #ccc 0px solid; BORDER-LEFT: #ccc 0px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #ccc 0px solid; BORDER-RIGHT: #ccc 0px solid; PADDING-TOP: 7px
+}
+TABLE.simple1 TH {
+	BORDER-BOTTOM: #ccc 0px solid; BORDER-LEFT: #ccc 0px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #ccc 0px solid; BORDER-RIGHT: #ccc 0px solid; PADDING-TOP: 7px
+}
+#preamblepop {
+	BORDER-BOTTOM: #6ba2cc 1px solid; POSITION: absolute; BORDER-LEFT: #6ba2cc 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 430px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; HEIGHT: 100px; BORDER-TOP: #6ba2cc 1px solid; BORDER-RIGHT: #6ba2cc 1px solid; PADDING-TOP: 0px; LEFT: 300px
+}
+#preamblepop H3 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #6ba2cc; MARGIN: -10px -10px 4px; PADDING-LEFT: 14px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #134a81; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+#preamblepop H2 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #cccccc; MARGIN: -10px -10px 4px; PADDING-LEFT: 14px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #ffffff; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+TABLE.simplepop THEAD TH {
+	BACKGROUND-COLOR: #bbd6ef; FONT-FAMILY: Helvetica, Verdana,  Arial,sans-serif; COLOR: #134a81; FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+TABLE.simplepop TR.even {
+	BACKGROUND-COLOR: #f1f1f1
+}
+TABLE.simplepop TR.odd {
+	BACKGROUND-COLOR: #ffffff
+}
+TABLE.simplepop {
+	BORDER-BOTTOM: #ccc 0px solid; BORDER-LEFT: #ccc 0px solid; TEXT-TRANSFORM: capitalize; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; BORDER-TOP: #ccc 0px solid; BORDER-RIGHT: #ccc 0px solid
+}
+TABLE.simplepop TD {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Helvetica, Verdana,  Arial,sans-serif; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: 5px
+}
+#preamblepopprnt {
+	BORDER-BOTTOM: #6ba2cc 1px solid; POSITION: absolute; BORDER-LEFT: #6ba2cc 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 430px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; HEIGHT: 100px; BORDER-TOP: #6ba2cc 1px solid; BORDER-RIGHT: #6ba2cc 1px solid; PADDING-TOP: 0px; LEFT: 300px
+}
+#preamblepopprnt H3 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #ff8a00; MARGIN: -10px -10px 4px; PADDING-LEFT: 14px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #ffffff; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+#preamblepop H2 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #cccccc; MARGIN: -10px -10px 4px; PADDING-LEFT: 14px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #ffffff; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+TABLE.simplepopprnt THEAD TH {
+	BACKGROUND-COLOR: #cccccc; FONT-FAMILY: Helvetica, Verdana,  Arial,sans-serif; COLOR: #000000; FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+TABLE.simplepopprnt TR.even {
+	BACKGROUND-COLOR: #f1f1f1
+}
+TABLE.simplepopprnt TR.odd {
+	BACKGROUND-COLOR: #ffffff
+}
+TABLE.simplepopprnt {
+	BORDER-BOTTOM: #ccc 0px solid; BORDER-LEFT: #ccc 0px solid; TEXT-TRANSFORM: capitalize; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #ccc 0px solid; BORDER-RIGHT: #ccc 0px solid
+}
+TABLE.simplepopprnt TD {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Helvetica, Verdana,  Arial,sans-serif; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: 5px
+}
+TABLE.simple11 THEAD TR {
+	BACKGROUND-COLOR: #eee
+}
+TABLE.simple11 TR.even {
+	BACKGROUND-COLOR: #eeeeee
+}
+TABLE.simple11 TR.odd {
+	BACKGROUND-COLOR: #e2e2e2
+}
+TABLE.simple11 {
+	BORDER-BOTTOM: #6ba2cc 1px solid; BORDER-LEFT: #6ba2cc 1px solid; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; BORDER-TOP: #6ba2cc 1px solid; BORDER-RIGHT: #6ba2cc 1px solid
+}
+TABLE.simple11 H3 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #bbd6ef; MARGIN: -10px -10px 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #134a81; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+TABLE.simple11 H5 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 12px; BACKGROUND-COLOR: #ffffff; MARGIN: -10px -10px -10px -20px; PADDING-LEFT: 0px; PADDING-RIGHT: 1px; COLOR: #000000; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+TABLE.simple11 H6 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 12px; BACKGROUND-COLOR: #ffffff; MARGIN: -10px -10px -10px -20px; PADDING-LEFT: 0px; PADDING-RIGHT: 1px; COLOR: #c10505; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+TABLE.simple11 TD {
+	BORDER-BOTTOM: #f1f1f1 1px solid; BORDER-LEFT: #f1f1f1 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #f1f1f1 1px solid; BORDER-RIGHT: #f1f1f1 1px solid; PADDING-TOP: 7px
+}
+TABLE.simple1 TH {
+	BORDER-BOTTOM: #f1f1f1 1px solid; BORDER-LEFT: #f1f1f1 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #f1f1f1 1px solid; BORDER-RIGHT: #f1f1f1 1px solid; PADDING-TOP: 7px
+}
+TABLE.simpleindex THEAD TR {
+	BACKGROUND-COLOR: #eee
+}
+TABLE.simpleindex TR.even {
+	BACKGROUND-COLOR: #eeeeee
+}
+TABLE.simpleindex TR.odd {
+	BACKGROUND-COLOR: #e2e2e2
+}
+TABLE.simpleindex {
+	BORDER-BOTTOM: #6ba2cc 0px solid; BORDER-LEFT: #6ba2cc 0px solid; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; BORDER-TOP: #6ba2cc 0px solid; BORDER-RIGHT: #6ba2cc 0px solid
+}
+TABLE.simpleindex H3 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #ff8a00; MARGIN: -10px -10px 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #ffffff; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+TABLE.simpleindex H5 {
+	PADDING-BOTTOM: 3px; LINE-HEIGHT: 12px; BACKGROUND-COLOR: #bbd6ef; MARGIN: 0px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; COLOR: #134a81; FONT-SIZE: 12px; PADDING-TOP: 3px
+}
+TABLE.simpleindex H6 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 12px; BACKGROUND-COLOR: #ffffff; MARGIN: -10px -10px -10px -20px; PADDING-LEFT: 0px; PADDING-RIGHT: 1px; COLOR: #c10505; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+TABLE.simpleindex TD {
+	BORDER-BOTTOM: #f1f1f1 0px solid; TEXT-ALIGN: justify; BORDER-LEFT: #f1f1f1 0px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #f1f1f1 0px solid; BORDER-RIGHT: #f1f1f1 0px solid; PADDING-TOP: 7px
+}
+TABLE.simple1 TH {
+	BORDER-BOTTOM: #f1f1f1 0px solid; TEXT-ALIGN: justify; BORDER-LEFT: #f1f1f1 0px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #f1f1f1 0px solid; BORDER-RIGHT: #f1f1f1 0px solid; PADDING-TOP: 7px
+}
+TABLE.simplesearch THEAD TR {
+	BACKGROUND-COLOR: #eee
+}
+TABLE.simplesearch TR.even {
+	BACKGROUND-COLOR: #fbfbfb
+}
+TABLE.simplesearch TR.odd {
+	BACKGROUND-COLOR: #eeeeee
+}
+TABLE.simplesearch {
+	BORDER-BOTTOM: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; BORDER-TOP: #ffffff 1px solid; BORDER-RIGHT: #ffffff 1px solid
+}
+TABLE.simplesearch H3 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); LINE-HEIGHT: 14px; BACKGROUND-COLOR: #ff8a00; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #ffffff; FONT-SIZE: 12px
+}
+TABLE.simplesearch H5 {
+	LINE-HEIGHT: 12px; BACKGROUND-COLOR: #ffffff; COLOR: #000000; FONT-SIZE: 12px
+}
+TABLE.simplesearch H6 {
+	LINE-HEIGHT: 12px; BACKGROUND-COLOR: #ffffff; COLOR: #c10505; FONT-SIZE: 12px
+}
+TABLE.simplesearch TD {
+	BORDER-BOTTOM: #f2f2f2 1px solid; BORDER-LEFT: #f2f2f2 1px solid; BORDER-TOP: #f2f2f2 1px solid; BORDER-RIGHT: #f2f2f2 1px solid
+}
+TABLE.simple1 TH {
+	BORDER-BOTTOM: #f2f2f2 1px solid; BORDER-LEFT: #f2f2f2 1px solid; BORDER-TOP: #f2f2f2 1px solid; BORDER-RIGHT: #f2f2f2 1px solid
+}
+TABLE.simple101 THEAD TR {
+	BACKGROUND-COLOR: #eee
+}
+TABLE.simple101 TR.even {
+	BACKGROUND-COLOR: #eeeeee
+}
+TABLE.simple101 TR.odd {
+	BACKGROUND-COLOR: #e2e2e2
+}
+TABLE.simple101 {
+	BORDER-BOTTOM: #6ba2cc 0px solid; BORDER-LEFT: #6ba2cc 0px solid; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; BORDER-TOP: #6ba2cc 0px solid; BORDER-RIGHT: #6ba2cc 0px solid
+}
+TABLE.simple101 H3 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #bbd6ef; MARGIN: -10px -10px 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #134a81; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+TABLE.simple101 H5 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 12px; BACKGROUND-COLOR: #ffffff; MARGIN: -10px -10px -10px -20px; PADDING-LEFT: 0px; PADDING-RIGHT: 1px; COLOR: #000000; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+TABLE.simple101 H6 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 12px; BACKGROUND-COLOR: #ffffff; MARGIN: -10px -10px -10px -20px; PADDING-LEFT: 0px; PADDING-RIGHT: 1px; COLOR: #c10505; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+TABLE.simple101 TD {
+	BORDER-BOTTOM: #f1f1f1 1px solid; BORDER-LEFT: #f1f1f1 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #f1f1f1 1px solid; BORDER-RIGHT: #f1f1f1 1px solid; PADDING-TOP: 7px
+}
+TABLE.simple1 TH {
+	BORDER-BOTTOM: #f1f1f1 1px solid; BORDER-LEFT: #f1f1f1 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #f1f1f1 1px solid; BORDER-RIGHT: #f1f1f1 1px solid; PADDING-TOP: 7px
+}
+TABLE.simpleprinttop THEAD TR {
+	BACKGROUND-COLOR: #eee
+}
+TABLE.simpleprinttop TR.even {
+	BACKGROUND-COLOR: #eeeeee
+}
+TABLE.simpleprinttop TR.odd {
+	BACKGROUND-COLOR: #e2e2e2
+}
+TABLE.simpleprinttop {
+	BORDER-BOTTOM: #000000 0px solid; BORDER-LEFT: #000000 0px solid; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #000000 0px solid; BORDER-RIGHT: #000000 0px solid
+}
+TABLE.simpleprinttop H3 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #cccccc; MARGIN: -10px -10px 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #000000 1px solid; PADDING-TOP: 4px
+}
+TABLE.simpleprinttop TD {
+	BORDER-BOTTOM: #000000 0px solid; BORDER-LEFT: #000000 0px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #000000 0px solid; BORDER-RIGHT: #000000 0px solid; PADDING-TOP: 7px
+}
+TABLE.simple1 TH {
+	BORDER-BOTTOM: #000000 0px solid; BORDER-LEFT: #000000 0px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #000000 0px solid; BORDER-RIGHT: #000000 0px solid; PADDING-TOP: 7px
+}
+TABLE.simpleprint THEAD TR {
+	BACKGROUND-COLOR: #eee
+}
+TABLE.simpleprint TR.even {
+	BACKGROUND-COLOR: #eeeeee
+}
+TABLE.simpleprint TR.odd {
+	BACKGROUND-COLOR: #e2e2e2
+}
+TABLE.simpleprint {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid
+}
+TABLE.simpleprint TD {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; PADDING-TOP: 7px
+}
+TABLE.simple1 TH {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; PADDING-TOP: 7px
+}
+TABLE.simpleprint H3 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #cccccc; MARGIN: -10px -10px 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #000000 1px solid; PADDING-TOP: 4px
+}
+TABLE.simple111 {
+	BORDER-BOTTOM: #6ba2cc 1px dashed; BORDER-LEFT: #6ba2cc 1px dashed; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #6ba2cc 1px dashed; BORDER-RIGHT: #6ba2cc 1px dashed
+}
+TABLE.simple111 H5 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 12px; BACKGROUND-COLOR: #ffffff; MARGIN: -10px -10px -10px -20px; PADDING-LEFT: 0px; PADDING-RIGHT: 1px; COLOR: #000000; FONT-SIZE: 11px; PADDING-TOP: 10px
+}
+TABLE.simple114 {
+	BORDER-BOTTOM: #6ba2cc 0px dashed; BORDER-LEFT: #6ba2cc 0px dashed; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #6ba2cc 0px dashed; BORDER-RIGHT: #6ba2cc 0px dashed
+}
+TABLE.simple114 H5 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 12px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px; PADDING-LEFT: 9px; PADDING-RIGHT: 0px; COLOR: #767676; FONT-SIZE: 10px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+TABLE.simple12 THEAD TR {
+	BACKGROUND-COLOR: #eee
+}
+TABLE.simple12 TR.even {
+	BACKGROUND-COLOR: #eeeeee
+}
+TABLE.simple12 TR.odd {
+	BACKGROUND-COLOR: #e2e2e2
+}
+TABLE.simple12 {
+	BORDER-BOTTOM: #6ba2cc 1px solid; BORDER-LEFT: #6ba2cc 1px solid; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 11px; BORDER-TOP: #6ba2cc 1px solid; BORDER-RIGHT: #6ba2cc 1px solid
+}
+TABLE.simple12 H3 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #6ba2cc; MARGIN: -10px -10px 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #ffffff; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+TABLE.simple12 H5 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 12px; BACKGROUND-COLOR: #ffffff; MARGIN: -10px -10px -10px -20px; PADDING-LEFT: 0px; PADDING-RIGHT: 1px; COLOR: #4f8cc1; FONT-SIZE: 11px; PADDING-TOP: 10px
+}
+TABLE.simple12 TD {
+	BORDER-BOTTOM: #f1f1f1 1px solid; BORDER-LEFT: #f1f1f1 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #f1f1f1 1px solid; BORDER-RIGHT: #f1f1f1 1px solid; PADDING-TOP: 7px
+}
+TABLE.simple1 TH {
+	BORDER-BOTTOM: #f1f1f1 1px solid; BORDER-LEFT: #f1f1f1 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #f1f1f1 1px solid; BORDER-RIGHT: #f1f1f1 1px solid; PADDING-TOP: 7px
+}
+TABLE.simple12x {
+	BORDER-BOTTOM: #6ba2cc 0px solid; BORDER-LEFT: #6ba2cc 0px solid; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #c10505; FONT-SIZE: 11px; BORDER-TOP: #6ba2cc 0px solid; BORDER-RIGHT: #6ba2cc 0px solid
+}
+TABLE.simple12x TD {
+	BORDER-BOTTOM: #f1f1f1 0px solid; BORDER-LEFT: #f1f1f1 0px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 4px; BORDER-TOP: #f1f1f1 0px solid; BORDER-RIGHT: #f1f1f1 0px solid; PADDING-TOP: 1px
+}
+TABLE.simple1 TH {
+	BORDER-BOTTOM: #f1f1f1 0px solid; BORDER-LEFT: #f1f1f1 0px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 4px; BORDER-TOP: #f1f1f1 0px solid; BORDER-RIGHT: #f1f1f1 0px solid; PADDING-TOP: 1px
+}
+TABLE.simpledisclaimer THEAD TR {
+	BACKGROUND-COLOR: #eee
+}
+TABLE.simpledisclaimer TR.even {
+	BACKGROUND-COLOR: #eeeeee
+}
+TABLE.simpledisclaimer TR.odd {
+	BACKGROUND-COLOR: #e2e2e2
+}
+TABLE.simpledisclaimer {
+	BORDER-BOTTOM: #6ba2cc 0px solid; BORDER-LEFT: #6ba2cc 0px solid; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #767676; FONT-SIZE: 10px; BORDER-TOP: #6ba2cc 0px solid; BORDER-RIGHT: #6ba2cc 0px solid
+}
+TABLE.simpledisclaimer H3 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #6ba2cc; MARGIN: -10px -10px 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #ffffff; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+TABLE.simpledisclaimer H5 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 12px; BACKGROUND-COLOR: #ffffff; MARGIN: -10px -10px -10px -20px; PADDING-LEFT: 0px; PADDING-RIGHT: 1px; COLOR: #000000; FONT-SIZE: 11px; PADDING-TOP: 10px
+}
+TABLE.simpledisclaimer TD {
+	BORDER-BOTTOM: #f1f1f1 0px solid; BORDER-LEFT: #f1f1f1 0px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #f1f1f1 0px solid; BORDER-RIGHT: #f1f1f1 0px solid; PADDING-TOP: 7px
+}
+TABLE.simple1 TH {
+	BORDER-BOTTOM: #f1f1f1 0px solid; BORDER-LEFT: #f1f1f1 0px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #f1f1f1 0px solid; BORDER-RIGHT: #f1f1f1 0px solid; PADDING-TOP: 7px
+}
+TABLE.simpleevent {
+	BORDER-BOTTOM: #eeeeee 1px solid; BORDER-LEFT: #eeeeee 1px solid; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #eeeeee 1px solid; BORDER-RIGHT: #eeeeee 1px solid
+}
+TABLE.simpleevent TD {
+	BORDER-BOTTOM: #000000 1px solid; TEXT-ALIGN: left; BORDER-LEFT: #000000 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; PADDING-TOP: 0px
+}
+.button {
+	BORDER-BOTTOM: #4f8cc1 1px solid; BORDER-LEFT: #4f8cc1 1px solid; TEXT-TRANSFORM: capitalize; BACKGROUND-COLOR: #6ba2cc; FONT-FAMILY: Helvetica, Verdana,  Arial,sans-serif; COLOR: #ffffff; FONT-SIZE: 12px; BORDER-TOP: #4f8cc1 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #4f8cc1 1px solid
+}
+.buttontables {
+	BORDER-BOTTOM: #4f8cc1 2px solid; 
+    TEXT-ALIGN: left; 
+    BORDER-LEFT: #4f8cc1 2px solid; 
+    LINE-HEIGHT: 14px; 
+    BACKGROUND-COLOR: #6ba2cc; 
+    FONT-FAMILY: Helvetica, Verdana,  Arial,sans-serif; 
+    COLOR: #ffffff; 
+    FONT-SIZE: 12px; 
+    BORDER-TOP: #4f8cc1 2px solid; 
+    FONT-WEIGHT: bold; 
+    BORDER-RIGHT: #4f8cc1 2px solid
+}
+.buttontables11 {
+	TEXT-ALIGN: left; BORDER-LEFT: #6ba2cc 1px solid; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #6ba2cc; FONT-FAMILY: Helvetica, Verdana,  Arial,sans-serif; COLOR: #ffffff; FONT-SIZE: 12px; BORDER-TOP: #6ba2cc 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #6ba2cc 1px solid
+}
+.searchtable {
+	BORDER-BOTTOM: #6ba2cc 1px solid; BORDER-LEFT: #6ba2cc 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; BORDER-TOP: #6ba2cc 1px solid; BORDER-RIGHT: #6ba2cc 1px solid
+}
+.blackBorder {
+	BORDER-BOTTOM: #6ba2cc 0px solid; BORDER-LEFT: #6ba2cc 0px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; BORDER-TOP: #6ba2cc 0px solid; BORDER-RIGHT: #6ba2cc 0px solid
+}
+.searchBorder {
+	BORDER-BOTTOM: #6ba2cc 0px solid; BORDER-LEFT: #6ba2cc 0px solid; BACKGROUND-COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; BORDER-TOP: #6ba2cc 0px solid; BORDER-RIGHT: #6ba2cc 0px solid
+}
+.header_border {
+	BORDER-BOTTOM: #cccccc 0px solid; BORDER-LEFT: #cccccc 0px solid; BACKGROUND-COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; BORDER-TOP: #cccccc 0px solid; BORDER-RIGHT: #cccccc 0px solid
+}
+P {
+	TEXT-ALIGN: justify; PADDING-BOTTOM: 0px; LINE-HEIGHT: 14px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+.p_contact {
+	TEXT-ALIGN: justify; PADDING-BOTTOM: 0px; LINE-HEIGHT: 14px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; PADDING-TOP: 0px
+}
+H1 {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 5px; LINE-HEIGHT: 14px; MARGIN: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold; PADDING-TOP: 5px
+}
+H3 {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 5px; LINE-HEIGHT: 14px; MARGIN: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold; PADDING-TOP: 5px
+}
+H2 {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 4px; LINE-HEIGHT: 14px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #134a81; FONT-SIZE: 12px; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+H4 {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 6px; LINE-HEIGHT: 14px; MARGIN: 0px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #4f8cc1; FONT-SIZE: 12px; FONT-WEIGHT: bold; PADDING-TOP: 6px
+}
+A:link {
+	COLOR: #000000; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+A:hover:visited {
+	COLOR: #000000; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #134a81; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #134a81; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+.aNews:link {
+	COLOR: #000000; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.aNews:visited {
+	COLOR: #000000; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.aNews:hover:visited {
+	COLOR: #000000; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.aNews:hover {
+	COLOR: #0000ff; FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+.aNews:active {
+	COLOR: #0000ff; FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+.a1:link {
+	COLOR: #134a81; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.a1:visited {
+	COLOR: #134a81; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.a1:hover:visited {
+	COLOR: #134a81; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.a1:hover {
+	COLOR: #134a81; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+.a1:active {
+	COLOR: #134a81; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+.a2:link {
+	COLOR: #134a81; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.a2:visited {
+	COLOR: #134a81; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.a2:hover:visited {
+	COLOR: #134a81; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.a2:hover {
+	COLOR: #134a81; TEXT-DECORATION: underline
+}
+.a2:active {
+	COLOR: #134a81; TEXT-DECORATION: underline
+}
+.text {
+	BORDER-BOTTOM: #7f9db9 1px solid; BORDER-LEFT: #7f9db9 1px solid; FONT-FAMILY: Verdana; FONT-SIZE: 12px; BORDER-TOP: #7f9db9 1px solid; BORDER-RIGHT: #7f9db9 1px solid
+}
+.textarea {
+	BORDER-BOTTOM: #7f9db9 1px solid; BORDER-LEFT: #7f9db9 1px solid; WIDTH: 140px; FONT-FAMILY: Verdana; HEIGHT: 100px; FONT-SIZE: 12px; BORDER-TOP: #7f9db9 1px solid; BORDER-RIGHT: #7f9db9 1px solid
+}
+.select {
+	BORDER-BOTTOM: #7f9db9 1px solid; BORDER-LEFT: #7f9db9 1px solid; FONT-FAMILY: Verdana; FONT-SIZE: 10px; BORDER-TOP: #7f9db9 1px solid; BORDER-RIGHT: #7f9db9 1px solid
+}
+.radio {
+	BORDER-BOTTOM: #7f9db9 0px solid; BORDER-LEFT: #7f9db9 0px solid; WIDTH: 2em; FONT-FAMILY: Verdana; HEIGHT: 2em; FONT-SIZE: 12px; BORDER-TOP: #7f9db9 0px solid; BORDER-RIGHT: #7f9db9 0px solid
+}
+.checkbox {
+	BORDER-BOTTOM: #7f9db9 0px solid; BORDER-LEFT: #7f9db9 0px solid; WIDTH: 2em; FONT-FAMILY: Verdana; HEIGHT: 2em; FONT-SIZE: 12px; BORDER-TOP: #7f9db9 0px solid; BORDER-RIGHT: #7f9db9 0px solid
+}
+.FormField {
+	BORDER-BOTTOM: #003366 1px solid; BORDER-LEFT: #003366 1px solid; BACKGROUND-COLOR: #f5eee0; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; BORDER-TOP: #003366 1px solid; BORDER-RIGHT: #003366 1px solid
+}
+.FormFieldtable {
+	BORDER-BOTTOM: #4477aa 1px solid; BORDER-LEFT: #4477aa 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; BORDER-TOP: #4477aa 1px solid; BORDER-RIGHT: #4477aa 1px solid
+}
+HR {
+	BORDER-BOTTOM: #c5c5c5 0px solid; BORDER-LEFT: #c5c5c5 0px solid; HEIGHT: 0px; BORDER-TOP: #c5c5c5 1px solid; BORDER-RIGHT: #c5c5c5 0px solid
+}
+.hrprint {
+	BORDER-BOTTOM: #000000 0px solid; BORDER-LEFT: #000000 0px solid; HEIGHT: 0px; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 0px solid
+}
+.selectinstitute {
+	BORDER-BOTTOM: #7f9db9 1px solid; BORDER-LEFT: #7f9db9 1px solid; WIDTH: 275px; FONT-FAMILY: Verdana; FONT-SIZE: 12px; BORDER-TOP: #7f9db9 1px solid; BORDER-RIGHT: #7f9db9 1px solid
+}
+UNKNOWN {
+	BORDER-BOTTOM: #003366 1px solid; BORDER-LEFT: #003366 1px solid; PADDING-BOTTOM: 3px; TEXT-TRANSFORM: capitalize; BACKGROUND-COLOR: #4477aa; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; FONT-FAMILY: Helvetica, Verdana,  Arial,sans-serif; COLOR: #ffffff; FONT-SIZE: 12px; BORDER-TOP: #003366 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #003366 1px solid; PADDING-TOP: 3px
+}
+.RegText {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px
+}
+.PageTitle {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.tableTitle {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 5px; MARGIN: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold; PADDING-TOP: 5px
+}
+.c {
+	PADDING-BOTTOM: 0px; FONT-STYLE: italic !important; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 14px; COLOR: #0000ff !important; FONT-WEIGHT: normal !important; PADDING-TOP: 0px
+}
+ACRONYM {
+	BORDER-BOTTOM: 0px; TEXT-ALIGN: left; BORDER-LEFT: 0px; PADDING-BOTTOM: 5px; FONT-STYLE: normal; MARGIN: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BORDER-TOP: 0px; FONT-WEIGHT: normal; BORDER-RIGHT: 0px; PADDING-TOP: 5px
+}
+#intro {
+	BORDER-BOTTOM: #003263 1px hidden; POSITION: relative; BORDER-LEFT: #003263 1px hidden; PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 800px; PADDING-RIGHT: 0px; BORDER-TOP: #003263 1px hidden; BORDER-RIGHT: #003263 1px hidden; PADDING-TOP: 0px
+}
+#supportingText {
+	BORDER-BOTTOM: #003263 1px dashed; BORDER-LEFT: #003263 1px dashed; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 10px; WIDTH: 450px; PADDING-RIGHT: 10px; BORDER-TOP: #003263 1px dashed; BORDER-RIGHT: #003263 1px dashed; PADDING-TOP: 0px
+}
+.li_ctri {
+	BORDER-BOTTOM: #e2e2e2 0px solid; TEXT-ALIGN: left; PADDING-BOTTOM: 3px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #ffffff; FONT-STYLE: normal; MARGIN: 0px 0px 15px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: normal; PADDING-TOP: 3px
+}
+.ul_search {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; LIST-STYLE-TYPE: square; MARGIN: 5px 5px 0px 30px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #ccc 0px dotted; LIST-STYLE-IMAGE: url(/Clinicaltrials/images/listbullet5.gif); PADDING-TOP: 0px
+}
+.li_search {
+	BORDER-BOTTOM: #e2e2e2 0px solid; TEXT-ALIGN: left; PADDING-BOTTOM: 3px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #ffffff; FONT-STYLE: normal; MARGIN: 0px 0px 10px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: normal; PADDING-TOP: 3px
+}
+OL {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; LIST-STYLE-IMAGE: url(/Clinicaltrials/images/listbulletdd.gif)
+}
+UL {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; LIST-STYLE-TYPE: square; MARGIN: 5px 5px 0px 30px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #ccc 0px dotted; LIST-STYLE-IMAGE: url(/Clinicaltrials/images/listbullet.gif); PADDING-TOP: 0px
+}
+LI {
+	BORDER-BOTTOM: #e2e2e2 1px dashed; TEXT-ALIGN: left; PADDING-BOTTOM: 3px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #ffffff; FONT-STYLE: normal; MARGIN: 0px 0px 15px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: normal; PADDING-TOP: 3px
+}
+#lselect1 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09b.gif); BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #fff; MARGIN: 0px 0px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 0px
+}
+#lfavorites1 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09b.gif); BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #fff; MARGIN: 0px 0px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 0px
+}
+#larchives1 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09b.gif); BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #fff; MARGIN: 0px 0px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 0px
+}
+#lresources1 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09b.gif); BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #fff; MARGIN: 0px 0px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 0px
+}
+.ul_alerts {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #eeeeee; LIST-STYLE-TYPE: square; MARGIN: 5px 5px 0px 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #ccc 0px dotted; LIST-STYLE-IMAGE: url(/Clinicaltrials/images/listbullet.gif); PADDING-TOP: 0px
+}
+.li_alerts {
+	BORDER-BOTTOM: #e2e2e2 1px dashed; TEXT-ALIGN: left; PADDING-BOTTOM: 3px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #eeeeee; FONT-STYLE: normal; MARGIN: 0px 0px 12px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: normal; PADDING-TOP: 3px
+}
+#pageHeader {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/blatt02aa.jpg); BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 400px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center top; HEIGHT: 20px; BORDER-TOP: 0px; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 224px
+}
+#pageHeader H1 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-TRANSFORM: uppercase; MARGIN: -30px 0px 0px 10px; PADDING-LEFT: 0px; WIDTH: 600px; PADDING-RIGHT: 0px; COLOR: #fff; FONT-SIZE: 24px; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+#pageHeader H2 {
+	PADDING-BOTTOM: 10px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 0px 0px 10px; PADDING-LEFT: 4px; WIDTH: 600px; PADDING-RIGHT: 0px; COLOR: #fff; FONT-SIZE: 12px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+#quickSummary {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/mofbandx.gif); BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #284c00; MARGIN: 10px 0px; PADDING-LEFT: 10px; WIDTH: 680px; PADDING-RIGHT: 10px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center top; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 10px
+}
+#quickSummary .p1 {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 10px; LINE-HEIGHT: 14px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 50px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #fff !important; FONT-SIZE: 12px !important; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+#quickSummary .p2 {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 14px; TEXT-TRANSFORM: uppercase; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #fff !important; FONT-SIZE: 12px !important; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+#preamble H3 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #bbd6ef; MARGIN: -10px -10px 4px; PADDING-LEFT: 14px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #134a81; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+#supportingText H3 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #bbd6ef; MARGIN: -10px -10px 4px; PADDING-LEFT: 14px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #134a81; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+#preamble H6 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #bbd6ef; MARGIN: -10px -10px 4px; PADDING-LEFT: 10px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #134a81; FONT-SIZE: 11px; PADDING-TOP: 4px
+}
+#preamble11 {
+	BORDER-BOTTOM: #6ba2cc 0px solid; BORDER-LEFT: #6ba2cc 0px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 750px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #6ba2cc 0px solid; BORDER-RIGHT: #6ba2cc 0px solid; PADDING-TOP: 0px
+}
+#preamble11 H4 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21x.gif); TEXT-ALIGN: center; PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #f2f2f2; MARGIN: -10px -10px 0px; PADDING-LEFT: 27px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #335566; FONT-SIZE: 14px; PADDING-TOP: 4px
+}
+#supportingText H4 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21x.gif); TEXT-ALIGN: center; PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #f2f2f2; MARGIN: -10px -10px 0px; PADDING-LEFT: 27px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #335566; FONT-SIZE: 14px; PADDING-TOP: 4px
+}
+#preamble1 H4 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21x.gif); TEXT-ALIGN: center; PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #f2f2f2; MARGIN: -10px -10px 0px; PADDING-LEFT: 27px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #335566; FONT-SIZE: 14px; PADDING-TOP: 4px
+}
+#supportingText H4 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21x.gif); TEXT-ALIGN: center; PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #f2f2f2; MARGIN: -10px -10px 0px; PADDING-LEFT: 27px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #335566; FONT-SIZE: 14px; PADDING-TOP: 4px
+}
+#preamble2 {
+	BORDER-BOTTOM: #5599bb 1px solid; BORDER-LEFT: #5599bb 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #fff; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 650px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #5599bb 1px solid; BORDER-RIGHT: #5599bb 1px solid; PADDING-TOP: 0px
+}
+#preamble2 H4 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/headrtablex.jpg); PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #4477aa; MARGIN: -10px -10px 0px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #ffffff; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+#supportingText H4 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/headrtablex.jpg); PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #4477aa; MARGIN: -10px -10px 0px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #ffffff; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+#preamble3 {
+	BORDER-BOTTOM: #fff 1px hidden; BORDER-LEFT: #fff 1px hidden; PADDING-BOTTOM: 22px; BACKGROUND-COLOR: #f1f1f1; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 320px; PADDING-RIGHT: 10px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #fff 1px hidden; BORDER-RIGHT: #fff 1px hidden; PADDING-TOP: 10px
+}
+#preamble3 H5 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #ddd; MARGIN: -10px -10px 0px; PADDING-LEFT: 11px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #284c00; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+#supportingText H5 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #ddd; MARGIN: -10px -10px 0px; PADDING-LEFT: 11px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #284c00; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+#preamble4 {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #fff 1px solid; PADDING-BOTTOM: 22px; BACKGROUND-COLOR: #fff; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 690px; PADDING-RIGHT: 10px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #fff 1px solid; PADDING-TOP: 10px
+}
+#preamble4 H6 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #ddd; MARGIN: -10px -10px 0px; PADDING-LEFT: 11px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #284c00; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+#supportingText H6 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/stone_21.gif); PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #ddd; MARGIN: -10px -10px 0px; PADDING-LEFT: 11px; PADDING-RIGHT: 4px; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center bottom; COLOR: #284c00; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+#pvl {
+	BORDER-BOTTOM: #ccc 1px dotted; TEXT-ALIGN: left; PADDING-BOTTOM: 3px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #ff0000; LIST-STYLE-TYPE: none; FONT-STYLE: italic; MARGIN: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: block; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #6c9e2d; FONT-SIZE: 12px; FONT-WEIGHT: normal; PADDING-TOP: 3px
+}
+#explanation {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09d.gif); BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 20px; BACKGROUND-COLOR: #fff; MARGIN: 10px -10px 0px; PADDING-LEFT: 10px; WIDTH: 450px; PADDING-RIGHT: 10px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 10px
+}
+#participation {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09d.gif); BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 20px; BACKGROUND-COLOR: #fff; MARGIN: 10px -10px 0px; PADDING-LEFT: 10px; WIDTH: 450px; PADDING-RIGHT: 10px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 10px
+}
+#benefits {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09d.gif); BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 20px; BACKGROUND-COLOR: #fff; MARGIN: 10px -10px 0px; PADDING-LEFT: 10px; WIDTH: 450px; PADDING-RIGHT: 10px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 10px
+}
+#requirements {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09d.gif); BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 20px; BACKGROUND-COLOR: #fff; MARGIN: 10px -10px 0px; PADDING-LEFT: 10px; WIDTH: 450px; PADDING-RIGHT: 10px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center bottom; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 10px
+}
+#explanation P {
+	TEXT-ALIGN: justify; PADDING-BOTTOM: 8px
+}
+#participation P {
+	TEXT-ALIGN: justify; PADDING-BOTTOM: 8px
+}
+#benefits P {
+	TEXT-ALIGN: justify; PADDING-BOTTOM: 8px
+}
+#requirements P {
+	TEXT-ALIGN: justify; PADDING-BOTTOM: 8px
+}
+#preamble P {
+	TEXT-ALIGN: justify; PADDING-BOTTOM: 8px
+}
+#preamble_list {
+	SCROLLBAR-ARROW-COLOR: #000000; BORDER-BOTTOM: #335566 1px ridge; POSITION: relative; BORDER-LEFT: #335566 1px ridge; SCROLLBAR-FACE-COLOR: silver; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 440px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; SCROLLBAR-DARKSHADOW-COLOR: #cccccc; BACKGROUND-POSITION: center bottom; HEIGHT: 165px; SCROLLBAR-HIGHLIGHT-COLOR: #eeeeee; SCROLLBAR-SHADOW-COLOR: #eeeeee; OVERFLOW: auto; BORDER-TOP: #335566 1px ridge; SCROLLBAR-TRACK-COLOR: #eeeeee; BORDER-RIGHT: #335566 1px ridge; SCROLLBAR-3DLIGHT-COLOR: #eeeeee; PADDING-TOP: 0px; LEFT: 118px
+}
+#footer {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/800.jpg); BORDER-BOTTOM: #ff0000 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #ff0000 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #284c00; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 750px; PADDING-RIGHT: 0px; CLEAR: both; BORDER-TOP: #ff0000 1px solid; BORDER-RIGHT: #ff0000 1px solid; PADDING-TOP: 0px
+}
+#preamble:hover {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09f.gif)
+}
+#linkList LI:hover {
+	BACKGROUND-COLOR: #fefefe
+}
+#lresources:hover {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/leaf_09b.gif)
+}
+UL#showsource {
+	BORDER-BOTTOM: #999 1px dotted; BORDER-LEFT: #999 1px dotted; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #eee; LIST-STYLE-TYPE: none; MARGIN: 5px; PADDING-LEFT: 4px; WIDTH: 100px; PADDING-RIGHT: 4px; FLOAT: right; BORDER-TOP: #999 1px dotted; BORDER-RIGHT: #999 1px dotted; PADDING-TOP: 2px
+}
+.td1 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/600s.jpg); BORDER-BOTTOM: #003263 1px solid; TEXT-ALIGN: center; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; VERTICAL-ALIGN: top; PADDING-TOP: 0px
+}
+.td1_message {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/600s.jpg); BORDER-BOTTOM: #003263 0px solid; TEXT-ALIGN: center; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #003263; FONT-SIZE: 14px; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.td1_600 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/600.jpg); BORDER-BOTTOM: #003263 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #003263 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; VERTICAL-ALIGN: middle; BORDER-TOP: #003263 1px solid; BORDER-RIGHT: #003263 1px solid; PADDING-TOP: 0px
+}
+.td1_200 {
+	BACKGROUND-IMAGE: url(/Clinicaltrials/images/200.jpg); BORDER-BOTTOM: #003263 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #003263 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; VERTICAL-ALIGN: top; BORDER-TOP: #003263 1px solid; BORDER-RIGHT: #003263 1px solid; PADDING-TOP: 0px
+}
+TH.sorted {
+	BACKGROUND-COLOR: orange
+}
+TH A {
+	COLOR: black
+}
+TH A:visited {
+	COLOR: black
+}
+TH A:hover {
+	COLOR: black; TEXT-DECORATION: underline
+}
+TH.sorted A {
+	DISPLAY: block; BACKGROUND-POSITION: right 50%
+}
+TH.sortable A {
+	DISPLAY: block; BACKGROUND-POSITION: right 50%
+}
+TH.sortable A {
+	BACKGROUND-IMAGE: url(../img/arrow_up.png)
+}
+TH.order1 A {
+	BACKGROUND-IMAGE: url(../img/arrow_up.png)
+}
+TH.order2 A {
+	BACKGROUND-IMAGE: url(../img/arrow_up.png)
+}
+TR.odd {
+	BACKGROUND-COLOR: #fff
+}
+TR.tableRowEven {
+	BACKGROUND-COLOR: #faa
+}
+TR.even {
+	BACKGROUND-COLOR: #faa
+}
+TABLE.its THEAD TR {
+	BACKGROUND-COLOR: #69c
+}
+TABLE.its TR.even {
+	BACKGROUND-COLOR: #def
+}
+TABLE.mars THEAD TR {
+	BACKGROUND-COLOR: #9c9
+}
+TABLE.mars TR.even {
+	BACKGROUND-COLOR: #ccb
+}
+TABLE.mars TR.odd {
+	BACKGROUND-COLOR: #eec
+}
+TABLE.simple THEAD TR {
+	BACKGROUND-COLOR: #eee
+}
+TABLE.simple TR.even {
+	BACKGROUND-COLOR: #fff
+}
+TABLE.simple {
+	BORDER-BOTTOM: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-COLLAPSE: collapse; BORDER-TOP: #ffffff 1px solid; BORDER-RIGHT: #ffffff 1px solid
+}
+TABLE.simple TD {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid
+}
+TABLE.simple TH {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid
+}
+TABLE.simple2 {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; TEXT-TRANSFORM: capitalize; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND: buttonface; FONT-SIZE: 12px; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid
+}
+TABLE.simple2 TD {
+	BORDER-BOTTOM: #ccc 0px solid; BORDER-LEFT: #ccc 0px solid; BORDER-TOP: #ccc 0px solid; BORDER-RIGHT: #ccc 0px solid
+}
+TABLE.simple1 TH {
+	BORDER-BOTTOM: #ccc 0px solid; BORDER-LEFT: #ccc 0px solid; BORDER-TOP: #ccc 0px solid; BORDER-RIGHT: #ccc 0px solid
+}
+TABLE.simplex THEAD TR {
+	BACKGROUND-COLOR: #eee
+}
+TABLE.simplex TR.even {
+	BACKGROUND-COLOR: #eeeeee
+}
+TABLE.simplex TR.odd {
+	BACKGROUND-COLOR: #e2e2e2
+}
+TABLE.simplex {
+	BORDER-BOTTOM: #bbd6ef 1px solid; BORDER-LEFT: #bbd6ef 1px solid; TEXT-TRANSFORM: capitalize; BORDER-COLLAPSE: collapse; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; BORDER-TOP: #bbd6ef 1px solid; BORDER-RIGHT: #bbd6ef 1px solid
+}
+TABLE.simplex TD {
+	BORDER-BOTTOM: #eee 1px solid; BORDER-LEFT: #eee 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 15px; PADDING-RIGHT: 4px; BORDER-TOP: #eee 1px solid; BORDER-RIGHT: #eee 1px solid; PADDING-TOP: 4px
+}
+TABLE.simplex TH {
+	BORDER-BOTTOM: #ccc 0px solid; BORDER-LEFT: #ccc 0px solid; PADDING-BOTTOM: 4px; BACKGROUND-COLOR: #bbd6ef; PADDING-LEFT: 15px; PADDING-RIGHT: 4px; COLOR: #134a81; FONT-SIZE: 12px; BORDER-TOP: #ccc 0px solid; BORDER-RIGHT: #ccc 0px solid; PADDING-TOP: 4px
+}
+TABLE.nocol TBODY TD {
+	BORDER-LEFT: medium none; BORDER-RIGHT: medium none
+}
+TABLE.nocol TBODY TH {
+	BORDER-LEFT: medium none; BORDER-RIGHT: medium none
+}
+TABLE.report TD {
+	FONT: menu
+}
+TABLE.report TH {
+	FONT: menu
+}
+TABLE.report TH {
+	BORDER-BOTTOM: buttonshadow 1px solid; BORDER-LEFT: buttonhighlight 1px solid; BACKGROUND: buttonface; BORDER-TOP: buttonhighlight 1px solid; CURSOR: hand; BORDER-RIGHT: buttonshadow 1px solid
+}
+TABLE.report idcol {
+	BACKGROUND: buttonface
+}
+TABLE.report TR.even {
+	BACKGROUND-COLOR: #399
+}
+TABLE.report TBODY {
+	HEIGHT: 100px; OVERFLOW: auto
+}
+TABLE.report {
+	HEIGHT: 120px; OVERFLOW: auto
+}
+TABLE.report TBODY TR {
+	HEIGHT: 10px
+}
+TABLE.sublist {
+	MARGIN: 0px; WIDTH: 100%
+}
+TABLE.sublist TD {
+	WIDTH: 50%
+}
+TABLE.sublist TH {
+	WIDTH: 50%
+}
+OL {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; LIST-STYLE-IMAGE: url(/Clinicaltrials/images/listbulletdd.gif)
+}
+UL {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; LIST-STYLE-TYPE: square; MARGIN: 5px 5px 0px 30px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #ccc 0px dotted; LIST-STYLE-IMAGE: url(/Clinicaltrials/images/listbullet.gif); PADDING-TOP: 0px
+}
+LI {
+	BORDER-BOTTOM: #e2e2e2 1px dashed; TEXT-ALIGN: left; PADDING-BOTTOM: 3px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #ffffff; FONT-STYLE: normal; MARGIN: 0px 0px 15px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: normal; PADDING-TOP: 3px
+}
+.shadetabs {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 3px; LIST-STYLE-TYPE: none; MARGIN-TOP: 1px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: bold 12px Verdana; MARGIN-BOTTOM: 0px; MARGIN-LEFT: 0px; PADDING-TOP: 3px
+}
+.shadetabs LI {
+	BORDER-BOTTOM: #e2e2e2 0px dashed; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-TOP: 0px
+}
+.shadetabs LI A {
+	BORDER-BOTTOM: #c10505 1px solid; BORDER-LEFT: #c10505 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: url(shades.gif) #ff8a00 repeat-x left top; COLOR: #ffffff; BORDER-TOP: #c10505 1px solid; MARGIN-RIGHT: 5px; BORDER-RIGHT: #c10505 1px solid; PADDING-TOP: 3px
+}
+.shadetabs LI A:visited {
+	COLOR: #ffffff
+}
+.shadetabs LI A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.shadetabs LI.selected {
+	TOP: 0px
+}
+.shadetabs LI.selected A {
+	BACKGROUND: url(shadeactives.gif) #c10505 repeat-x left top
+}
+.shadetabs LI.selected A:hover {
+	TEXT-DECORATION: none
+}
+.tabcontentstyle {
+	BORDER-BOTTOM: #c10505 1px solid; BORDER-LEFT: #c10505 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; WIDTH: 510px; PADDING-RIGHT: 10px; MARGIN-BOTTOM: 1em; BORDER-TOP: #c10505 1px solid; BORDER-RIGHT: #c10505 1px solid; PADDING-TOP: 10px
+}
+.tabcontent {
+	DISPLAY: none
+}
+
+@media Print    
+{
+.tabcontent {
+	DISPLAY: block !important
+}
+
+}

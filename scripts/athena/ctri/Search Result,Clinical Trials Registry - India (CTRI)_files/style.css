@@ -1,0 +1,128 @@
+.button1
+{
+    BORDER-RIGHT: black 1px groove;
+    BORDER-TOP: black 1px groove;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    BORDER-LEFT: black 1px groove;
+    COLOR: black;
+    BORDER-BOTTOM: black 1px groove;
+    FONT-FAMILY: Verdana;
+    BACKGROUND-COLOR:GhostWhite;
+    TEXT-DECORATION: none
+}
+.button
+{
+    BORDER-RIGHT: black 1px groove;
+    BORDER-TOP: black 1px groove;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    BORDER-LEFT: black 1px groove;
+    COLOR: black;
+    BORDER-BOTTOM: black 1px groove;
+    FONT-FAMILY: Verdana;
+    BACKGROUND-COLOR:Silver;
+    TEXT-DECORATION: none
+}
+
+BODY
+{
+    FONT-SIZE: 10pt;
+    COLOR: black;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+BODY TD
+{
+
+  FONT-SIZE: 10pt;
+    COLOR: black;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none 
+}
+.him
+{
+
+ COLOR: #805310;
+ TEXT-DECORATION: none;
+FONT: bold 11px verdana;
+}
+BODY A
+{
+    FONT-SIZE: 10pt;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+BODY A:hover
+{
+    FONT-SIZE: 10pt;
+    COLOR: goldenrod;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+BODY A.right
+{
+    FONT-SIZE: 10pt;
+    COLOR: goldenrod;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+BODY A.right:hover
+{
+    FONT-SIZE: 10pt;
+    COLOR: red;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+BODY TD.top
+{
+    	
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+a.level1 {
+    FONT: bold 11px verdana;
+    COLOR: #805310;
+    TEXT-DECORATION: none;
+}
+a.level1:hover{
+    FONT: bold 11px verdana;
+    TEXT-DECORATION: none;
+    color:#FB9702;
+}
+
+a.new2 {
+    FONT: bold 11px verdana;
+    COLOR: #805310;
+    TEXT-DECORATION: none;
+}
+a.new3 {
+    FONT: bold 11px verdana;
+    COLOR: #805310;
+    TEXT-DECORATION: none;
+
+}
+a.new2:hover{
+    FONT: bold 11px verdana;
+    TEXT-DECORATION: none;
+    color:#FB9702;
+}
+.tt {
+position:absolute;
+border:1px solid gray;
+width:250px;
+padding:1px;
+background:#fff;
+}
+HTML
+{
+    SCROLLBAR-FACE-COLOR: #f8f8ff;
+    SCROLLBAR-HIGHLIGHT-COLOR: #cccccc;
+    SCROLLBAR-SHADOW-COLOR: #330099;
+    SCROLLBAR-3DLIGHT-COLOR: #cccccc;
+    SCROLLBAR-ARROW-COLOR: #330099;
+    SCROLLBAR-TRACK-COLOR: #cccccc;
+    SCROLLBAR-DARKSHADOW-COLOR: #cccccc;
+    SCROLLBAR-BASE-COLOR: #cccccc
+}

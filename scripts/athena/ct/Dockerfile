@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-# Install python pip and pandas
+# Install python pip
 RUN  apt-get update &&  apt-get install -y python  && \
      apt-get install -y python-pip && \
      apt-get install -y xmlstarlet && \

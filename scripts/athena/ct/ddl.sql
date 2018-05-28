@@ -1,4 +1,4 @@
-CREATE EXTERNAL TABLE `ct_studies_new` (
+CREATE EXTERNAL TABLE `studies` (
     `participant_flow`
      struct<`recruitment_details`:string,
             `pre_assignment_details`:string,
