@@ -51,7 +51,7 @@ if [[ ${download} == 'yes' ]]; then
         analyse_file ${html_dir}/studies/${f} ${html_dir}/csv/studies.csv  ${html_dir}/${f} &
     done
 
-    aws s3 sync  ${html_dir} ${s3_bucket}
+    aws s3 sync  ${html_dir} ${s3_bucket} --delete
 else
     rm -rf ${html_dir}/studies
     rm -rf ${html_dir}/logs

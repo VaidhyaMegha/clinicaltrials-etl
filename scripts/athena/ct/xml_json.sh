@@ -37,7 +37,7 @@ if [[ ${download} == 'yes' ]]; then
         genJSON ${f} ${xml_dir} &
     done
 
-    aws s3 sync  ${xml_dir} ${s3_bucket}
+    aws s3 sync  ${xml_dir} ${s3_bucket} --delete
 else
     find ${xml_dir} -type f -name "*.json" -delete
     find ${xml_dir} -type f -name "*.log" -delete
