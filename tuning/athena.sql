@@ -1,13 +1,14 @@
 ---compressed JSON table
-athena:global> select count(1) from ct_studies_new;
+athena:global> select count(1) from ct_studies;;
    _col0
 ---------
-  368884
+  274049
 (1 rows)
 
-Query 1c39cd38-be95-45ca-8110-b0bf15b33631, SUCCEEDED
-https://us-east-1.console.aws.amazon.com/athena/home?force&region=us-east-1#query/history/1c39cd38-be95-45ca-8110-b0bf15b33631
-Time: 0:08:21, CPU Time: 501490ms total, Data Scanned: 3.12GB, Cost: $0.02
+Query 3f4e4869-7a95-41db-bdd9-97d1ea7a1e81, SUCCEEDED
+https://us-east-1.console.aws.amazon.com/athena/home?force&region=us-east-1#query/history/3f4e4869-7a95-41db-bdd9-97d1ea7a1e81
+Time: 0:06:12, CPU Time: 371795ms total, Data Scanned: 1.15GB, Cost: $0.01
+
 
 
 ---uncompressed JSON table
