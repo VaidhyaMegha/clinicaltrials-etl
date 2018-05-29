@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/athena/global/ctri_studies_ddl.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/ctri/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/ctri/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/ctri/html_csv.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/ctri/html_csv.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/ctri/keys.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/ctri/keys.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/athena/ctri/ddl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/ctri/ddl.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,6 +42,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ctri_studies_ddl.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/global/ctri_studies_ddl.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="523">
+              <caret line="44" column="30" lean-forward="true" selection-end-line="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ddl.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/ct/ddl.sql">
           <provider selected="true" editor-type-id="text-editor">
@@ -70,20 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Search Result,Clinical Trials Registry - India (CTRI).html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/ctri/Search Result,Clinical Trials Registry - India (CTRI).html">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="2934">
-              <caret line="163" column="183" selection-start-line="163" selection-start-column="183" selection-end-line="163" selection-end-column="192" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="html_csv.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="html_csv.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/ctri/html_csv.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-473">
-              <caret line="7" column="55" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="55" />
+            <state relative-caret-position="355">
+              <caret line="53" column="41" lean-forward="true" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -91,7 +90,7 @@
       <file leaf-file-name="keys.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/ctri/keys.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
+            <state relative-caret-position="54">
               <caret line="3" column="75" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="75" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -100,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ddl.sql" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ddl.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/athena/ctri/ddl.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+            <state>
+              <caret column="24" selection-start-column="24" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -121,7 +120,7 @@
       <file leaf-file-name="parse.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/ctri/parse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="324">
               <caret line="18" column="81" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="81" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -217,8 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/opentrials.net/pg_db_export_to_csv.sql" />
-        <option value="$PROJECT_DIR$/scripts/actrn/actrn.py" />
         <option value="$PROJECT_DIR$/scripts/tables.sql" />
         <option value="$PROJECT_DIR$/scripts/db/global/ddl.sql" />
         <option value="$PROJECT_DIR$/scripts/db/ctri/ddl.sql" />
@@ -268,6 +265,8 @@
         <option value="$PROJECT_DIR$/scripts/athena/ctri/keys.py" />
         <option value="$PROJECT_DIR$/scripts/athena/ctri/Dockerfile" />
         <option value="$PROJECT_DIR$/scripts/athena/ctri/html_csv.sh" />
+        <option value="$PROJECT_DIR$/scripts/athena/global/ctri_studies_ddl.sql" />
+        <option value="$PROJECT_DIR$/scripts/athena/ctri/ddl.sql" />
       </list>
     </option>
   </component>
@@ -302,6 +301,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -352,7 +352,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -740,12 +739,13 @@
       <workItem from="1527508588944" duration="766000" />
       <workItem from="1527510959492" duration="41000" />
       <workItem from="1527511042609" duration="12220000" />
-      <workItem from="1527532744231" duration="1791000" />
+      <workItem from="1527532744231" duration="1925000" />
+      <workItem from="1527568006969" duration="1306000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="640584000" />
+    <option name="totallyTimeSpent" value="642024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -768,28 +768,28 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32684427" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32924336" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32684427" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989754" visible="true" weight="0.20485175" />
       <window_info id="Learn" order="3" />
       <window_info anchor="right" id="SciView" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="DBOutput" order="7" />
+      <window_info id="DBHelper" order="3" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32991803" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" x="0" y="0" width="350" height="604" id="Documentation" order="12" side_tool="true" visible="true" weight="0.329375" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Data View" order="11" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
-      <window_info id="DBHelper" order="3" />
+      <window_info anchor="bottom" id="DBOutput" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info id="Designer" order="3" />
+      <window_info anchor="right" id="Data View" order="11" />
       <window_info anchor="right" id="PlantUML" order="10" weight="0.32991913" />
       <window_info anchor="bottom" id="Messages" order="8" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -797,17 +797,18 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32924336" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.33894736" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.33894736" />
+      <window_info id="Designer" order="3" />
       <window_info anchor="bottom" id="DBOutput" order="11" />
       <window_info anchor="right" x="0" y="0" width="413" height="884" id="Documentation" order="12" weight="0.32991913" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="right" id="Data View" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32721713" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32991913" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20485175" />
       <window_info anchor="right" id="SciView" order="8" />
@@ -817,7 +818,6 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32721713" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32822084" />
       <window_info id="DBHelper" order="7" />
@@ -884,16 +884,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/athena/ctri/parse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="81" lean-forward="true" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/ctri/html_csv.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -1047,13 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/ctri/Search Result,Clinical Trials Registry - India (CTRI).html">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="2934">
@@ -1070,7 +1053,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/ctri/keys.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
+        <state relative-caret-position="54">
           <caret line="3" column="75" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="75" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -1080,18 +1063,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/ctri/parse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="324">
           <caret line="18" column="81" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="81" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/ctri/ddl.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1118,8 +1094,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/ctri/html_csv.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-473">
-          <caret line="7" column="55" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="55" />
+        <state relative-caret-position="355">
+          <caret line="53" column="41" lean-forward="true" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml_json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/global/ctri_studies_ddl.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="44" column="30" lean-forward="true" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/ctri/ddl.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
         </state>
       </provider>
     </entry>

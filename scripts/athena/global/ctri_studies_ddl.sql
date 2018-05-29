@@ -1,4 +1,4 @@
- CREATE EXTERNAL TABLE `studies`(
+ CREATE EXTERNAL TABLE `ctri_studies`(
  `s3_file_path` string,
  `file_guid` string,
  `source` string,
