@@ -37,7 +37,7 @@ if [[ ${download} == 'yes' ]]; then
         genJSON ${f} ${xml_dir} &
     done
 
-    cat ${xml_dir}/json_per_study/*.json >> ${xml_dir}/json/studies.json
+    find ${xml_dir}/json_per_study -type f -name "*.json" -exec cat {} \; > ${xml_dir}/json/studies.json
 
     gzip ${xml_dir}/json/studies.json
 
@@ -57,7 +57,7 @@ else
         genJSON ${f} ${xml_dir} &
     done
 
-    cat ${xml_dir}/json_per_study/*.json >> ${xml_dir}/json/studies.json
+    find ${xml_dir}/json_per_study -type f -name "*.json" -exec cat {} \; > ${xml_dir}/json/studies.json
 
     gzip ${xml_dir}/json/studies.json
 fi

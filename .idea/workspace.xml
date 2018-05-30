@@ -4,10 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/ct/xml_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/ct/xml_json.sh" afterDir="false" />
-    </list>
+    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,7 +32,7 @@
       <file leaf-file-name="xml_json.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="913">
+            <state relative-caret-position="1152">
               <caret line="64" column="4" lean-forward="true" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
             </state>
           </provider>
@@ -733,12 +730,12 @@
       <workItem from="1527568006969" duration="7849000" />
       <workItem from="1527612059361" duration="4916000" />
       <workItem from="1527666519700" duration="558000" />
-      <workItem from="1527674065578" duration="7048000" />
+      <workItem from="1527674065578" duration="7739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="661089000" />
+    <option name="totallyTimeSpent" value="661780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1105,7 +1102,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/ct/xml_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="913">
+        <state relative-caret-position="1152">
           <caret line="64" column="4" lean-forward="true" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
         </state>
       </provider>
