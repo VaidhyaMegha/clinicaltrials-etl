@@ -9,7 +9,6 @@ function genJSON(){
     xmlstarlet tr xml_json.xslt ${1}.tmp > ${g}.json.tmp
 
     tr '\n' ' ' < ${g}.json.tmp >> ${2}/json/studies.json
-    echo "\n" >> ${2}/json/studies.json
 
     rm ${1}.tmp
     rm ${g}.json.tmp
@@ -36,7 +35,7 @@ if [[ ${download} == 'yes' ]]; then
         genJSON ${f} ${xml_dir} &
     done
 
-    gzip ${2}/json/studies.json
+    gzip ${xml_dir}/json/studies.json
 
     aws s3 sync  ${xml_dir} ${s3_bucket} --delete
 else
@@ -51,7 +50,7 @@ else
         genJSON ${f} ${xml_dir} &
     done
 
-    gzip ${2}/json/studies.json
+    gzip ${xml_dir}/json/studies.json
 fi
 
 popd
