@@ -8,7 +8,8 @@ function genJSON(){
     sed "s/&quot;/ /g; s/\\\/ /g;" ${1} > ${1}.tmp
     xmlstarlet tr xml_json.xslt ${1}.tmp > ${g}.json.tmp
 
-    tr '\n' ' ' < ${g}.json.tmp >> ${2}/json/studies.json
+    tr '\n' ' ' < ${g}.json.tmp >> ${2}/json_per_study/${g}.json
+    echo "" >> ${2}/json_per_study/${g}.json
 
     rm ${1}.tmp
     rm ${g}.json.tmp
@@ -28,6 +29,7 @@ if [[ ${download} == 'yes' ]]; then
 
     rm -f AllPublicXML.zip
 
+    mkdir ${xml_dir}/json_per_study
     mkdir ${xml_dir}/json
 
     find ${xml_dir} -type f -name "*.xml" | while read f
@@ -35,20 +37,27 @@ if [[ ${download} == 'yes' ]]; then
         genJSON ${f} ${xml_dir} &
     done
 
+    cat ${xml_dir}/json_per_study/*.json >> ${xml_dir}/json/studies.json
+
     gzip ${xml_dir}/json/studies.json
+
 
     aws s3 sync  ${xml_dir} ${s3_bucket} --delete
 else
     find ${xml_dir} -type f -name "*.json" -delete
     find ${xml_dir} -type f -name "*.log" -delete
 
+    rm -rf ${xml_dir}/json_per_study
     rm -rf ${xml_dir}/json
+    mkdir ${xml_dir}/json_per_study
     mkdir ${xml_dir}/json
 
     find ${xml_dir} -type f -name "*.xml" | while read f
     do
         genJSON ${f} ${xml_dir} &
     done
+
+    cat ${xml_dir}/json_per_study/*.json >> ${xml_dir}/json/studies.json
 
     gzip ${xml_dir}/json/studies.json
 fi
