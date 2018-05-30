@@ -8,9 +8,8 @@ function genJSON(){
     sed "s/&quot;/ /g; s/\\\/ /g;" ${1} > ${1}.tmp
     xmlstarlet tr xml_json.xslt ${1}.tmp > ${g}.json.tmp
 
-    tr '\n' ' ' < ${g}.json.tmp > ${2}/json/${g}.json
-
-    gzip ${2}/json/${g}.json
+    tr '\n' ' ' < ${g}.json.tmp >> ${2}/json/studies.json
+    echo "\n" >> ${2}/json/studies.json
 
     rm ${1}.tmp
     rm ${g}.json.tmp
@@ -37,6 +36,8 @@ if [[ ${download} == 'yes' ]]; then
         genJSON ${f} ${xml_dir} &
     done
 
+    gzip ${2}/json/studies.json
+
     aws s3 sync  ${xml_dir} ${s3_bucket} --delete
 else
     find ${xml_dir} -type f -name "*.json" -delete
@@ -49,6 +50,8 @@ else
     do
         genJSON ${f} ${xml_dir} &
     done
+
+    gzip ${2}/json/studies.json
 fi
 
 popd
