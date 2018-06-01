@@ -11,8 +11,11 @@ function genJSON(){
     tr '\n' ' ' < ${g}.json.tmp >> ${2}/json_per_study/${g}.json
     echo "" >> ${2}/json_per_study/${g}.json
 
+    cat ${2}/json_per_study/${g}.json >> ${xml_dir}/json/studies.json
+
     rm ${1}.tmp
     rm ${g}.json.tmp
+    rm ${2}/json_per_study/${g}.json
 }
 
 xml_dir=${1}
@@ -37,10 +40,8 @@ if [[ ${download} == 'yes' ]]; then
         genJSON ${f} ${xml_dir} &
     done
 
-    find ${xml_dir}/json_per_study -type f -name "*.json" -exec cat {} \; > ${xml_dir}/json/studies.json
-
+    sleep 30s
     gzip ${xml_dir}/json/studies.json
-
 
     aws s3 sync  ${xml_dir} ${s3_bucket} --delete
 else
@@ -57,8 +58,7 @@ else
         genJSON ${f} ${xml_dir} &
     done
 
-    find ${xml_dir}/json_per_study -type f -name "*.json" -exec cat {} \; > ${xml_dir}/json/studies.json
-
+    sleep 30s
     gzip ${xml_dir}/json/studies.json
 fi
 
