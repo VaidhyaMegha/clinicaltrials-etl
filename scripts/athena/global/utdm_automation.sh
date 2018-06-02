@@ -17,7 +17,7 @@ done < temp.txt
 queryresultfile="$queryresultid$s3fileextention"
 s3fullpath="$s3path$queryresultfile"
 
-sleep 60
+sleep 300
 
 aws s3 cp $s3fullpath $(pwd)
 
