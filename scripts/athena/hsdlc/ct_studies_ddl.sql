@@ -121,7 +121,7 @@ CREATE EXTERNAL TABLE `ct_studies` (
      `condition_browse` string,
      `intervention_browse` string)
      ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
-     LOCATION 's3://datainsights-results/ct-adapter/json'
+     LOCATION 's3://hsdlc-results/ct-adapter/json'
      TBLPROPERTIES (
      'ignore.malformed.json'= 'true'
      );
