@@ -8,19 +8,16 @@ function genJSON(){
     sed "s/&quot;/ /g; s/\\\/ /g;" ${1} > ${1}.tmp
     xmlstarlet tr xml_json.xslt ${1}.tmp > ${g}.json.tmp
 
-    tr '\n' ' ' < ${g}.json.tmp >> ${2}/json_per_study/${g}.json
+    tr '\n' ' ' < ${g}.json.tmp > ${2}/json_per_study/${g}.json
     echo "" >> ${2}/json_per_study/${g}.json
-
-    cat ${2}/json_per_study/${g}.json >> ${xml_dir}/json/studies.json
 
     rm ${1}.tmp
     rm ${g}.json.tmp
-    rm ${2}/json_per_study/${g}.json
 }
 
 xml_dir=${1}
 download=${2:-'no'}
-s3_bucket=${3:-'s3://datainsights-results/ct-adapter/'}
+s3_bucket=${3:-'s3://hsdlc-results/ct-adapter/'}
 context_dir=${4:-'/usr/local/dataintegration'}
 
 pushd ${context_dir}
@@ -41,6 +38,9 @@ if [[ ${download} == 'yes' ]]; then
     done
 
     sleep 30s
+
+    find ${xml_dir}/json_per_study -type f -name "*.json" -exec cat {} \; > ${xml_dir}/json/studies.json
+
     gzip ${xml_dir}/json/studies.json
 
     aws s3 sync  ${xml_dir} ${s3_bucket} --delete
@@ -59,6 +59,9 @@ else
     done
 
     sleep 30s
+
+    find ${xml_dir}/json_per_study -type f -name "*.json" -exec cat {} \; > ${xml_dir}/json/studies.json
+
     gzip ${xml_dir}/json/studies.json
 fi
 
