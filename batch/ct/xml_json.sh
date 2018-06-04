@@ -11,8 +11,11 @@ function genJSON(){
     tr '\n' ' ' < ${g}.json.tmp > ${2}/json_per_study/${g}.json
     echo "" >> ${2}/json_per_study/${g}.json
 
+    cat ${2}/json_per_study/${g}.json >> ${xml_dir}/json/studies.json
+
     rm ${1}.tmp
     rm ${g}.json.tmp
+    rm ${2}/json_per_study/${g}.json
 }
 
 xml_dir=${1}
@@ -34,16 +37,7 @@ if [[ ${download} == 'yes' ]]; then
 
     find ${xml_dir} -type f -name "*.xml" | while read f
     do
-        genJSON ${f} ${xml_dir} &
-    done
-
-    sleep 30s
-
-    find ${xml_dir}/json_per_study -type f -name "*.json" | while read f
-    do
-        cat ${f} >> ${xml_dir}/json/studies.json
-        rm ${f}
-        sleep 0.001
+        genJSON ${f} ${xml_dir}
     done
 
     gzip ${xml_dir}/json/studies.json
@@ -60,16 +54,7 @@ else
 
     find ${xml_dir} -type f -name "*.xml" | while read f
     do
-        genJSON ${f} ${xml_dir} &
-    done
-
-    sleep 30s
-
-    find ${xml_dir}/json_per_study -type f -name "*.json" | while read f
-    do
-        cat ${f} >> ${xml_dir}/json/studies.json
-        rm ${f}
-        sleep 0.001
+        genJSON ${f} ${xml_dir}
     done
 
     gzip ${xml_dir}/json/studies.json

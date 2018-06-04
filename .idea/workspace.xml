@@ -34,8 +34,8 @@
       <file leaf-file-name="xml_json.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="787">
-              <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+            <state relative-caret-position="234">
+              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -308,6 +308,13 @@
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="batch" type="462c0819:PsiDirectoryNode" />
               <item name="ct" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="batch" type="462c0819:PsiDirectoryNode" />
+              <item name="ct" type="462c0819:PsiDirectoryNode" />
+              <item name="AllPublicXMLs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
@@ -758,12 +765,12 @@
       <workItem from="1528014897433" duration="2456000" />
       <workItem from="1528021759709" duration="12366000" />
       <workItem from="1528044357617" duration="6677000" />
-      <workItem from="1528089017563" duration="3731000" />
+      <workItem from="1528089017563" duration="6417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="692851000" />
+    <option name="totallyTimeSpent" value="695537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1153,8 +1160,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="787">
-          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+        <state relative-caret-position="234">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
         </state>
       </provider>
     </entry>
