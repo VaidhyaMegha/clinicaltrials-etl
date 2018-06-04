@@ -1,17 +1,18 @@
 from lxml import html
-import pysqlite
+from urllib2 import urlopen
+from pysqlite2 import dbapi2 as sqlite
 
 def get_trials():
     return xrange(1, 330000)
 
 def get_trial(ref):
-    base = "http://www.anzctr.org.au/trial_view.aspx?id="
-    return html.parse(base + str(ref)).getroot()
+    base = "https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id="
+    return html.parse(urlopen(base + str(ref))).getroot()
 
 def do_trial(ref):
     trial = get_trial(ref)
     try:
-        rows = trial.cssselect('div.padme tr')
+        rows = trial.cssselect('div.review-form-block')
     except TypeError:
         # occasionally, get_trial returns None
         rows = []
@@ -34,8 +35,12 @@ def do_trial(ref):
             print e
             pass
 
-done = set([res['trial_id'] for res in pysqlite.select('trial_id FROM _raw')])
+con = sqlite.connect(":memory:", detect_types=sqlite.PARSE_COLNAMES)
+cur = con.cursor()
+
+# done = set([res['trial_id'] for res in cur.execute('select trial_id FROM _raw')])
 for trial in get_trials():
-    if trial not in done:
-        data = [row for row in do_trial(trial)]
-        pysqlite.save(['trial_id'], dict(trial_id=trial, data=data), table_name='_raw')
+    # if trial not in done:
+    data = [row for row in do_trial(trial)]
+    print data
+        # pysqlite2.save(['trial_id'], dict(trial_id=trial, data=data), table_name='_raw')
