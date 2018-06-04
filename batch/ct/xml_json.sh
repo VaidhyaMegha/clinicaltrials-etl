@@ -39,7 +39,10 @@ if [[ ${download} == 'yes' ]]; then
 
     sleep 30s
 
-    find ${xml_dir}/json_per_study -type f -name "*.json" -exec cat {} \; > ${xml_dir}/json/studies.json
+    find ${xml_dir}/json_per_study -type f -name "*.json" | while read f
+    do
+        cat ${f} >> ${xml_dir}/json/studies.json
+    done
 
     gzip ${xml_dir}/json/studies.json
 
@@ -60,7 +63,10 @@ else
 
     sleep 30s
 
-    find ${xml_dir}/json_per_study -type f -name "*.json" -exec cat {} \; > ${xml_dir}/json/studies.json
+    find ${xml_dir}/json_per_study -type f -name "*.json" | while read f
+    do
+        cat ${f} >> ${xml_dir}/json/studies.json
+    done
 
     gzip ${xml_dir}/json/studies.json
 fi
