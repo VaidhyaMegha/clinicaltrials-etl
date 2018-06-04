@@ -38,7 +38,7 @@ CREATE EXTERNAL TABLE `Global_registries`(
  OUTPUTFORMAT
  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
  LOCATION
- 's3://datainsights-results/temp/global/athena/ctd_utdm'
+ 's3://hsdlc-results/hsdlc'
  TBLPROPERTIES (
  'classification'='csv',
  'columnsOrdered'='true',

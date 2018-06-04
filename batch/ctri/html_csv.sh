@@ -5,7 +5,7 @@ set +H
 
 html_dir=${1}
 download=${2:-'no'}
-s3_bucket=${3:-'s3://datainsights-results/ctri-adapter/'}
+s3_bucket=${3:-'s3://hsdlc-results/ctri-adapter/'}
 context_dir=${4:-'/usr/local/dataintegration'}
 
 prefix_url="http://ctri.nic.in/Clinicaltrials/pmaindet2.php?"

@@ -51,7 +51,7 @@
  OUTPUTFORMAT
  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
  LOCATION
- 's3://datainsights-results/ctri-adapter/csv'
+ 's3://hsdlc-results/ctri-adapter/csv'
  TBLPROPERTIES (
  'classification'='csv',
  'columnsOrdered'='true',

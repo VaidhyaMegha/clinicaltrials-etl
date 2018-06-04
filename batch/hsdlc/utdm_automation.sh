@@ -1,6 +1,6 @@
 #!/bin/bash
 export AWS_DEFAULT_REGION=us-east-1
-s3path="s3://datainsights-results/temp/utdm/"
+s3path="s3://hsdlc-results/temp/utdm/"
 s3fileextention=".csv"
 while IFS='' read -r line || [[ -n "$line" ]]; do
   aws athena start-query-execution \
@@ -26,4 +26,4 @@ sed -i 's/","/"|"/g' $(pwd)/$queryresultfile
 sed -i 's/,,/||/g' $(pwd)/$queryresultfile
 sed -i 's/""|""/"",""/g' $(pwd)/$queryresultfile
 
-aws s3 cp $(pwd)/$queryresultfile s3://datainsights-results/temp/global/athena/ctd_utdm/global_registries.csv
+aws s3 cp $(pwd)/$queryresultfile s3://hsdlc-results/hsdlc/utdm.csv
