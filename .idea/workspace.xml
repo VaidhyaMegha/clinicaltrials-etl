@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/actrn/actrn.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/actrn/actrn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/ct/xml_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/ct/xml_json.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,6 +31,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="xml_json.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="787">
+              <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="html_csv.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/ctri/html_csv.sh">
           <provider selected="true" editor-type-id="text-editor">
@@ -45,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/batch/ctri/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -54,16 +62,7 @@
         <entry file="file://$PROJECT_DIR$/batch/hsdlc/utdm_automation.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="504">
-              <caret line="28" column="67" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ot_trials.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ot_trials.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <caret line="28" column="67" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -86,12 +85,12 @@
         <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ddl.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="697">
-              <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="actrn.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="actrn.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/actrn/actrn.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
@@ -112,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="685">
-              <caret line="120" column="31" lean-forward="true" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
+              <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -248,13 +247,13 @@
         <option value="$PROJECT_DIR$/../references/last_few_lines.json" />
         <option value="$PROJECT_DIR$/batch/ct/xml_json.xslt" />
         <option value="$PROJECT_DIR$/../references/last_few_lines_1.json" />
-        <option value="$PROJECT_DIR$/batch/ct/xml_json.sh" />
         <option value="$PROJECT_DIR$/batch/hsdlc/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/hsdlc/utdm_automation.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/ddl.sql" />
         <option value="$PROJECT_DIR$/batch/ctri/html_csv.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/ctri_studies_ddl.sql" />
         <option value="$PROJECT_DIR$/scripts/actrn/actrn.py" />
+        <option value="$PROJECT_DIR$/batch/ct/xml_json.sh" />
       </list>
     </option>
   </component>
@@ -373,7 +372,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 2.7.12 (/usr/bin/python)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../references/NCT02392260.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../references/opentrials/collectors" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -759,12 +758,12 @@
       <workItem from="1528014897433" duration="2456000" />
       <workItem from="1528021759709" duration="12366000" />
       <workItem from="1528044357617" duration="6677000" />
-      <workItem from="1528089017563" duration="2461000" />
+      <workItem from="1528089017563" duration="3731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="691581000" />
+    <option name="totallyTimeSpent" value="692851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1073,13 +1072,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/ct/AllPublicXMLs/json_per_study/NCT03500003.json" />
-    <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/hsdlc/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1107,7 +1099,7 @@
     <entry file="file://$PROJECT_DIR$/batch/hsdlc/utdm_automation.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
-          <caret line="28" column="67" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="67" />
+          <caret line="28" column="67" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -1117,7 +1109,7 @@
     <entry file="file://$PROJECT_DIR$/batch/ctri/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -1131,7 +1123,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="685">
-          <caret line="120" column="31" lean-forward="true" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
+          <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1145,7 +1137,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ddl.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
-          <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1156,6 +1148,13 @@
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="787">
+          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
         </state>
       </provider>
     </entry>
