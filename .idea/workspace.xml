@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/batch/ctri/html_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/ctri/html_json.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,8 +55,12 @@
       <file leaf-file-name="CTRI.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/ctri/htmls/CTRI.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="334" column="11" lean-forward="true" selection-start-line="334" selection-start-column="11" selection-end-line="334" selection-end-column="11" />
+            <state relative-caret-position="-461">
+              <caret line="798" selection-start-line="798" selection-end-line="798" />
+              <folding>
+                <element signature="e#14204#14493#0" />
+                <element signature="e#14504#14796#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,8 +77,8 @@
       <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/ctri/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="1" column="2486" selection-start-line="1" selection-start-column="2486" selection-end-line="1" selection-end-column="2486" />
+            <state relative-caret-position="324">
+              <caret line="1" column="3365" lean-forward="true" selection-start-line="1" selection-start-column="3365" selection-end-line="1" selection-end-column="3365" />
             </state>
           </provider>
         </entry>
@@ -134,9 +137,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Isaac</find>
-      <find>isaac</find>
-      <find>Image</find>
       <find>Env</find>
       <find>&lt;([^&gt;])*&gt;</find>
       <find>overall</find>
@@ -145,7 +145,7 @@
       <find>other_out</find>
       <find>partition</find>
       <find>partiti</find>
-      <find />
+      <find>COMMENT 'from deserializer'</find>
       <find>parti</find>
       <find>OUT_DIR</find>
       <find>ctri</find>
@@ -160,10 +160,13 @@
       <find>events</find>
       <find>nct_id</find>
       <find>subjects</find>
-      <find />
+      <find>&quot;text_node_value&quot;:&quot;&quot;                                 {</find>
       <find>other_</find>
       <find>https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id=</find>
       <find>metho</find>
+      <find>rec</find>
+      <find>sites</find>
+      <find>site</find>
     </findStrings>
     <replaceStrings>
       <replace>${SCRIPTS_HOME}</replace>
@@ -184,10 +187,10 @@
       <replace>text_str</replace>
       <replace>text</replace>
       <replace>type</replace>
-      <replace />
+      <replace>&lt;xsl:template match=&quot;</replace>
       <replace>match=&quot;/clinical_study/</replace>
-      <replace />
-      <replace />
+      <replace>&quot;&lt;xsl:value-of select=&quot;name()&quot;/&gt;&quot; :&lt;xsl:value-of select=&quot;.&quot;/&gt;&lt;/xsl:template&gt;</replace>
+      <replace>&lt;xsl:value-of select=&quot;.&quot;/&gt;</replace>
       <replace>&quot;</replace>
       <replace>&quot;&lt;/xsl:with-param&gt;</replace>
       <replace>&amp;quot;&lt;/xsl:with-param&gt;</replace>
@@ -208,7 +211,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/athena/global/ddl_globaltrials.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.sql" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/public.xsd" />
         <option value="$PROJECT_DIR$/scripts/athena/ct/xml-json-new.xslt" />
@@ -258,6 +260,7 @@
         <option value="$PROJECT_DIR$/batch/ctri/ctri_html_json.sh" />
         <option value="$PROJECT_DIR$/batch/ctri/keys.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/batch/ctri/htmls/CTRI.json" />
         <option value="$PROJECT_DIR$/batch/ctri/html_json.sh" />
       </list>
     </option>
@@ -324,6 +327,13 @@
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="batch" type="462c0819:PsiDirectoryNode" />
               <item name="ctri" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="batch" type="462c0819:PsiDirectoryNode" />
+              <item name="ctri" type="462c0819:PsiDirectoryNode" />
+              <item name="htmls" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
@@ -733,12 +743,12 @@
       <workItem from="1528021759709" duration="12366000" />
       <workItem from="1528044357617" duration="6677000" />
       <workItem from="1528089017563" duration="10709000" />
-      <workItem from="1528279452649" duration="3964000" />
+      <workItem from="1528279452649" duration="6861000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="703793000" />
+    <option name="totallyTimeSpent" value="706690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -764,7 +774,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32684427" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32924336" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989754" visible="true" weight="0.20862533" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989754" weight="0.20862533" />
       <window_info id="Learn" order="3" />
       <window_info anchor="right" id="SciView" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -1119,15 +1129,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/ctri/htmls/CTRI.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="334" column="11" lean-forward="true" selection-start-line="334" selection-start-column="11" selection-end-line="334" selection-end-column="11" />
+        <state relative-caret-position="-461">
+          <caret line="798" selection-start-line="798" selection-end-line="798" />
+          <folding>
+            <element signature="e#14204#14493#0" />
+            <element signature="e#14504#14796#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/ctri/html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="1" column="2486" selection-start-line="1" selection-start-column="2486" selection-end-line="1" selection-end-column="2486" />
+        <state relative-caret-position="324">
+          <caret line="1" column="3365" lean-forward="true" selection-start-line="1" selection-start-column="3365" selection-end-line="1" selection-end-column="3365" />
         </state>
       </provider>
     </entry>
