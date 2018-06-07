@@ -4,3 +4,4 @@ temp_*
 .idea/inspectionProfiles/
 scripts/credentials.sh
 AllPublicXMLs/
+htmls/
