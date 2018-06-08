@@ -5,29 +5,23 @@ set +H
 
 html_dir=${1}
 download=${2:-'no'}
-s3_bucket=${3:-'s3://hsdlc-results/ctri-adapter/'}
+s3_bucket=${3:-'s3://hsdlc-results/actrn-adapter/'}
 context_dir=${4:-'/usr/local/dataintegration'}
+max_id=${5:-100}
 
-prefix_url="http://ctri.nic.in/Clinicaltrials/pmaindet2.php?"
+prefix_url="https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id="
 suffix_url=""
 
 function download_trial(){
-    f=${1}
-    f=${f//&/}
-    g=${f//trialid=/}
+    g=${1}
 
-    wget -q ${prefix_url}${f}${suffix_url} \
+    wget -q ${prefix_url}${g}${suffix_url} \
          -O ${html_dir}/studies/${g}.html -o ${html_dir}/logs/${g}.log || true
-    sleep 1s
+    sleep 0.001s
 }
 
 function analyse_file() {
-    content=`python parse.py  ${1} ${3}`
-
-    content=$( echo ${content} | sed -e 's/<[^>]*>//g; s/Close\n//g; s/&[^\;]*\;//g' |
-     sed 's/Modification(s)//g; s/\[Registered on: /~/; s/\\n//g; s/\\r//g; s/\\t//g; s/\]//g; s/"//g; s/ ~/~/g; s/~ /~/g' | tr -s " "   )
-
-    echo ${content} >> ${2}
+ echo ${1} ${2} ${3}
 }
 
 
@@ -38,13 +32,11 @@ if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}/logs
     mkdir ${html_dir}/csv
 
-    find ${html_dir} -maxdepth 1 | grep ".html$" | xargs -I {} cat {} | grep -oE "trialid=[^&]*&" | while read f
+    for ((f=1;f<=${max_id};f+=1))
     do
         download_trial ${f}
     done
 
-    entry=`python keys.py`
-    echo ${entry} >> ${html_dir}/csv/studies.csv
 
     ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
     do
@@ -61,13 +53,10 @@ else
     mkdir ${html_dir}/logs
     mkdir ${html_dir}/csv
 
-    find ${html_dir} -maxdepth 1 | grep ".html$" | xargs -I {} cat {} | grep -oE "trialid=[^&]*&" | while read f
+    for ((f=1;f<=${max_id};f+=1))
     do
         download_trial ${f}
     done
-
-    entry=`python keys.py`
-    echo ${entry} >> ${html_dir}/csv/studies.csv
 
     ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
     do
