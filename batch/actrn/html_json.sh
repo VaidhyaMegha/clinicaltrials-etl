@@ -15,8 +15,8 @@ suffix_url=""
 function download_trial(){
     g=${1}
 
-    wget -q ${prefix_url}${g}${suffix_url} \
-         -O ${html_dir}/studies/${g}.html -o ${html_dir}/logs/${g}.log || true
+    wget --no-check-certificate -q ${prefix_url}${g}${suffix_url} \
+         -O ${html_dir}/studies/${g}.html  || true
     sleep 0.001s
 }
 
@@ -29,8 +29,7 @@ pushd ${context_dir}
 
 if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}/studies
-    mkdir ${html_dir}/logs
-    mkdir ${html_dir}/csv
+    mkdir ${html_dir}/json
 
     for ((f=1;f<=${max_id};f+=1))
     do
@@ -46,12 +45,10 @@ if [[ ${download} == 'yes' ]]; then
     aws s3 sync  ${html_dir} ${s3_bucket} --delete
 else
     rm -rf ${html_dir}/studies
-    rm -rf ${html_dir}/logs
-    rm -rf ${html_dir}/csv
+    rm -rf ${html_dir}/json
 
     mkdir ${html_dir}/studies
-    mkdir ${html_dir}/logs
-    mkdir ${html_dir}/csv
+    mkdir ${html_dir}/json
 
     for ((f=1;f<=${max_id};f+=1))
     do
