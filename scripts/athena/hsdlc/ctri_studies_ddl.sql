@@ -1,15 +1,10 @@
  CREATE EXTERNAL TABLE `ctri_studies`(
- `s3_file_path` string,
- `file_guid` string,
- `source` string,
- `sector` string,
- `organization` string,
- `ctri_number` string,
+`ctri_number` string,
  `registered_on` string,
  `last_modified_on` string,
  `pg_thesis` string,
- `type_of_study` string,
  `type_of_trial` string,
+ `type_of_study` string,
  `study_design` string,
  `public_title` string,
  `scientific_title` string,
@@ -44,17 +39,8 @@
  `recruitment_status_india` string,
  `publication_details` string,
  `brief_summary` string)
- ROW FORMAT DELIMITED
- FIELDS TERMINATED BY '~'
- STORED AS INPUTFORMAT
- 'org.apache.hadoop.mapred.TextInputFormat'
- OUTPUTFORMAT
- 'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
- LOCATION
- 's3://hsdlc-results/ctri-adapter/csv'
- TBLPROPERTIES (
- 'classification'='csv',
- 'columnsOrdered'='true',
- 'delimiter'='~',
- 'skip.header.line.count'='1',
- 'typeOfData'='file')
+  ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
+      LOCATION 's3://hsdlc-results/ctri-adapter/json'
+      TBLPROPERTIES (
+      'ignore.malformed.json'= 'true'
+      );
