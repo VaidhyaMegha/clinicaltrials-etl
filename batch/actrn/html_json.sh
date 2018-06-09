@@ -21,7 +21,42 @@ function download_trial(){
 }
 
 function analyse_file() {
- echo ${1} ${2} ${3}
+ cat ${1} | pup 'div.review-element-block json{}' | jq -c '{
+  "trial_id":.[0].children[1].children[0].text,
+  "ethics_application_status":"",
+  "date_submitted":"",
+  "date_registered":"",
+  "date_last_updated":"",
+  "type_of_registration":"",
+  "health_conditions_or_problems_studied":"",
+  "condition_category":"",
+  "condition_code":"",
+  "procedure_for_enrolling_a_subject_and_allocating_the_treatment_allocation_concealment_procedures":"",
+  "methods_used_to_generate_the_sequence_in_which_subjects_will_be_randomised_sequence_generation":"",
+  "who_is__are_masked__blinded":"",
+  "intervention_assignment":"",
+  "date_of_first_participant_enrolment":"",
+  "anticipated":"",
+  "actual":"",
+  "date_of_last_participant_enrolment":"",
+  "anticipated":"",
+  "actual":"",
+  "date_of_last_data_collection":"",
+  "anticipated":"",
+  "actual":"",
+  "sample_size":"",
+  "target":"",
+  "accrual_to_date":"",
+  "final":"",
+  "recruitment_in_australia":"",
+  "primary_sponsor_type":"",
+  "name":"",
+  "address":"",
+  "country":"",
+  "principal_investigator":"",
+  "contact_person_for_public_queries":"",
+  "contact_person_for_scientific_queries":""
+  }' >> ${2}
 }
 
 
@@ -39,7 +74,7 @@ if [[ ${download} == 'yes' ]]; then
 
     ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
     do
-        analyse_file ${html_dir}/studies/${f} ${html_dir}/csv/studies.csv  ${html_dir}/${f} &
+        analyse_file ${html_dir}/studies/${f} ${html_dir}/json/studies.json &
     done
 
     aws s3 sync  ${html_dir} ${s3_bucket} --delete
@@ -57,7 +92,7 @@ else
 
     ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
     do
-        analyse_file ${html_dir}/studies/${f} ${html_dir}/csv/studies.csv  ${html_dir}/${f} &
+        analyse_file ${html_dir}/studies/${f} ${html_dir}/json/studies.json &
     done
 
 fi
