@@ -7,11 +7,6 @@
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/batch/actrn/html_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/actrn/html_json.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/ctri/ctri_html_json.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/ctri/html_csv.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/ctri/html_parse_json.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/ctri/keys.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/ctri/parse.py" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,11 +32,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/actrn/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="51" column="14" lean-forward="true" selection-start-line="36" selection-start-column="2" selection-end-line="51" selection-end-column="14" />
+            <state relative-caret-position="494">
+              <caret line="82" column="38" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch/actrn/htmls/json/1.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="283" column="23" selection-start-line="283" selection-start-column="23" selection-end-line="283" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ct_studies_ddl.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="725">
+              <caret line="123" column="49" selection-start-line="123" selection-start-column="15" selection-end-line="123" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -54,8 +67,8 @@
       <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/actrn/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+            <state relative-caret-position="702">
+              <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -63,28 +76,24 @@
       <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/ctri/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-865">
-              <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+            <state relative-caret-position="-199">
+              <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="keys.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch/actrn/keys.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="34" column="41" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/ctri/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+            <state relative-caret-position="558">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch/actrn/htmls/studies/1.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
@@ -114,7 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>parti</find>
       <find>OUT_DIR</find>
       <find>ctri</find>
       <find>&quot;</find>
@@ -144,6 +152,7 @@
       <find>\n</find>
       <find>&quot;([^ :]*) ([^ :])</find>
       <find>&quot;([^ ]*) ([^ ]*)&quot;</find>
+      <find>Titles</find>
     </findStrings>
     <replaceStrings>
       <replace>100000</replace>
@@ -236,9 +245,9 @@
         <option value="$PROJECT_DIR$/batch/actrn/html_csv.sh" />
         <option value="$PROJECT_DIR$/batch/actrn/keys.json" />
         <option value="$PROJECT_DIR$/batch/ctri/ctri_html_json.sh" />
+        <option value="$PROJECT_DIR$/batch/ctri/html_json.sh" />
         <option value="$PROJECT_DIR$/batch/actrn/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/actrn/html_json.sh" />
-        <option value="$PROJECT_DIR$/batch/ctri/html_json.sh" />
       </list>
     </option>
   </component>
@@ -318,7 +327,31 @@
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="batch" type="462c0819:PsiDirectoryNode" />
+              <item name="ct" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="batch" type="462c0819:PsiDirectoryNode" />
               <item name="ctri" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="athena" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="athena" type="462c0819:PsiDirectoryNode" />
+              <item name="hsdlc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -714,12 +747,12 @@
       <workItem from="1528089017563" duration="10709000" />
       <workItem from="1528279452649" duration="9011000" />
       <workItem from="1528421217395" duration="15672000" />
-      <workItem from="1528526986071" duration="9910000" />
+      <workItem from="1528526986071" duration="16492000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="734422000" />
+    <option name="totallyTimeSpent" value="741004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -858,7 +891,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../references/NCT02392260.xml" />
     <entry file="file://$PROJECT_DIR$/../references/NCT02395016.xml" />
     <entry file="file://$PROJECT_DIR$/../references/last_few_lines_1.json" />
     <entry file="file://$PROJECT_DIR$/batch/ct/AllPublicXMLs/json_per_study/NCT03500003.json" />
@@ -887,13 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="28" column="67" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -943,9 +968,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/actrn/htmls/1.html" />
-    <entry file="file://$PROJECT_DIR$/batch/actrn/htmls/studies/1.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/actrn/htmls/studies/2.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1047,13 +1069,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/actrn/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/ctri/ctri_html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -1071,27 +1086,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/actrn/html_json.sh">
+    <entry file="file://$PROJECT_DIR$/batch/ctri/Makefile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/actrn/htmls/studies/1.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/actrn/htmls/json/1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="51" column="14" lean-forward="true" selection-start-line="36" selection-start-column="2" selection-end-line="51" selection-end-column="14" />
+        <state relative-caret-position="300">
+          <caret line="283" column="23" selection-start-line="283" selection-start-column="23" selection-end-line="283" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="123" column="49" selection-start-line="123" selection-start-column="15" selection-end-line="123" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/ctri/html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-865">
-          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        <state relative-caret-position="-199">
+          <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/ctri/Makefile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/ctri/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        <state relative-caret-position="558">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/actrn/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/actrn/html_json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="82" column="38" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
         </state>
       </provider>
     </entry>

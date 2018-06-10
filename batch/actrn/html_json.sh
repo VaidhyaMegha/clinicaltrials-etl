@@ -74,6 +74,14 @@ function analyse_file() {
 
 pushd ${context_dir}
 
+source "/root/.gvm/scripts/gvm"
+
+gvm install go1.4 --binary
+
+gvm use "go1.4"
+
+go get -u -f github.com/ericchiang/pup
+
 if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}/studies
     mkdir ${html_dir}/json
