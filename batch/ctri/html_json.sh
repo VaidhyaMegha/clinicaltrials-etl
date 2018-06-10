@@ -15,8 +15,7 @@ function download_trial(){
     g=${1}
 
     wget  -q ${prefix_url}${g}${suffix_url} \
-         -O ${html_dir}/studies/${g}.html  || true
-   # sleep 0.001s
+         -O ${html_dir}/studies/${g}.html  || true 
 }
 
 function Delete_Invalid_files() {
