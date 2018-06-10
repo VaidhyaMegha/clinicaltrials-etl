@@ -6,7 +6,7 @@ html_dir=${1}
 download=${2:-'no'}
 s3_bucket=${3:-'s3://hsdlc-results/ctri-adapter/studies'}
 context_dir=${4:-'/usr/local/dataintegration'}
-max_id=${5:-20000}
+max_id=${5:-20}
 
 prefix_url="http://ctri.nic.in/Clinicaltrials/pmaindet2.php?trialid="
 suffix_url=""
@@ -14,7 +14,7 @@ suffix_url=""
 function download_trial(){
     g=${1}
 
-    wget --no-check-certificate -q ${prefix_url}${g}${suffix_url} \
+    wget  -q ${prefix_url}${g}${suffix_url} \
          -O ${html_dir}/studies/${g}.html  || true
     sleep 0.001s
 }
