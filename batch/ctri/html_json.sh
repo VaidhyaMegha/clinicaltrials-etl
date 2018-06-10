@@ -6,7 +6,7 @@ html_dir=${1}
 download=${2:-'no'}
 s3_bucket=${3:-'s3://hsdlc-results/ctri-adapter/studies'}
 context_dir=${4:-'/usr/local/dataintegration'}
-max_id=${5:-20000}
+max_id=${5:-200}
 
 prefix_url="http://ctri.nic.in/Clinicaltrials/pmaindet2.php?trialid="
 suffix_url=""
@@ -15,8 +15,8 @@ function download_trial(){
     g=${1}
 
     wget  -q ${prefix_url}${g}${suffix_url} \
-         -O ${html_dir}/studies/${g}.html  || true
-    sleep 0.001s
+         -O ${html_dir}/studies/${g}.html  || true &
+   # sleep 0.001s
 }
 
 function Delete_Invalid_files() {
@@ -107,8 +107,10 @@ if [[ ${download} == 'yes' ]]; then
         download_trial ${f}
     done
 
-
-    Delete_Invalid_files ${html_dir}/studies/
+ls ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
+   do
+        Delete_Invalid_files ${html_dir}/studies/$f
+   done
 
 
     ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
