@@ -15,12 +15,12 @@ function download_trial(){
     g=${1}
 
     wget  -q ${prefix_url}${g}${suffix_url} \
-         -O ${html_dir}/studies/${g}.html  || true &
+         -O ${html_dir}/studies/${g}.html  || true
    # sleep 0.001s
 }
 
 function Delete_Invalid_files() {
-  grep -lrIZ 'Invalid Request' ${html_dir}/studies/ | xargs -0 rm -f --
+  grep -lrIZ 'Invalid Request' ${1} | xargs -0 rm -f --
 }
 
 function analyse_file() {
