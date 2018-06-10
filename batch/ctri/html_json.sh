@@ -4,7 +4,7 @@ set +H
 
 html_dir=${1}
 download=${2:-'no'}
-s3_bucket=${3:-'s3://hsdlc-results/ctri-adapter/json'}
+s3_bucket=${3:-'s3://hsdlc-results/ctri-adapter/studies'}
 context_dir=${4:-'/usr/local/dataintegration'}
 max_id=${5:-20}
 
@@ -71,7 +71,7 @@ function gen_json() {
     "recruitment_status_global":.[35].text,
     "recruitment_status_india":.[36].text,
     "publication_details":.[37].text,
-    "brief_summary":.[38].text}' >> ${html_dir}/json/html_json.json
+    "brief_summary":.[38].text}' >> ${html_dir}/studies/json/html_json.json
 
 }
 
@@ -90,7 +90,7 @@ if [[ ${download} == 'yes' ]]; then
 
 
     mkdir ${html_dir}/studies
-    mkdir ${html_dir}/json
+    mkdir ${html_dir}/studies/json
     mkdir ${html_dir}/analysis
 
     for ((f=2;f<=${max_id};f+=1))
@@ -110,10 +110,10 @@ if [[ ${download} == 'yes' ]]; then
 
     ls ${html_dir}/analysis | grep -oE "[^ ]*\.html" | while read f
     do
-       gen_json  ${html_dir}/analysis/${f} ${html_dir}/json/
+       gen_json  ${html_dir}/analysis/${f} ${html_dir}/studies/json/
     done
 
-aws s3 sync  ${html_dir} ${s3_bucket} --delete
+aws s3 sync  ${html_dir}/studies ${s3_bucket} --delete
 fi
 popd
 
