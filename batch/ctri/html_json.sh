@@ -7,6 +7,7 @@ download=${2:-'no'}
 s3_bucket=${3:-'s3://hsdlc-results/ctri-adapter/studies'}
 context_dir=${4:-'/usr/local/dataintegration'}
 max_id=${5:-20000}
+start_id=${6:-1}
 
 prefix_url="http://ctri.nic.in/Clinicaltrials/pmaindet2.php?trialid="
 suffix_url=""
@@ -29,7 +30,7 @@ function analyse_file() {
 
 function gen_json() {
 
-    cat ${1} | pup 'table tr td table:nth-of-type(2) tr td:nth-of-type(2) json{}' | jq -c '{
+    cat ${1} | pup 'table tr td table:nth-of-type(2) tr td:nth-of-type(2) json{}' | jq -c  '{
     "ctri_number":.[0].children[0].text,
     "registered_on": .[0].text,
     "last_modified_on":.[1].text,
@@ -48,7 +49,7 @@ function gen_json() {
     "secondary_sponsor":{"name":.[14].children[0].children[0].children[1].children[0].text,"address":.[14].children[0].children[0].children[1].children[1].text},
     "countries_of_recruitment":.[15].text,
     "sites":.[16].children[0].children[0].children[2:] | [[{"name_of_principal_investigator":.[].children[0].text}], [{"name_of_site": .[].children[1].text}],[{"site_address":.[].children[2].text}],[{"phone_fax_email ":.[].children[3].text}]] |  transpose|map(add),
-    "ethics_committee":.[17].children[0].children[0].children[2:] | [[{"name_of_committee":.[].children[0].text}], [{"approval_status ": .[].children[1].text}],[{"site_address":.[].children[2].text}],[{"phone_fax_email ":.[].children[3].text}]] |  transpose|map(add),
+    "ethics_committee":.[17].children[0].children[0].children[2:] |select(. != null) | [[{"name_of_committee":.[].children[0].text}], [{"approval_status ": .[].children[1].text}],[{"site_address":.[].children[2].text}],[{"phone_fax_email ":.[].children[3].text}]] |  transpose|map(add),
     "regulatory_clearance_status":{"status":.[18].children[0].children[0].children[1].children[0].text},
     "condition_or_problems":{"health_type":.[19].children[0].children[0].children[1].children[0].text,"condition":.[19].children[0].children[0].children[1].children[1].text},
     "intervention_or_comparator_agent":.[20].children[0].children[0].children[1:]|[[{"type":.[].children[0].text}], [{"name": .[].children[1].text}], [{"details":.[].children[2].text}]]|  transpose|map(add),
@@ -70,7 +71,7 @@ function gen_json() {
     "recruitment_status_global":.[35].text,
     "recruitment_status_india":.[36].text,
     "publication_details":.[37].text,
-    "brief_summary":.[38].text}' >> ${html_dir}/studies/json/html_json.json
+    "brief_summary":.[38].text}' >> ${2}/studies.json
 
 }
 
@@ -101,14 +102,15 @@ if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}/studies/json
     mkdir ${html_dir}/analysis
 
-    for ((f=2;f<=${max_id};f+=1))
+    for ((f=${start_id};f<=${max_id};f+=1))
     do
         download_trial ${f}
     done
 
-ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
+   ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
+
    do
-        Delete_Invalid_files ${html_dir}/studies/$f
+        Delete_Invalid_files ${html_dir}/studies/${f}
    done
 
 
