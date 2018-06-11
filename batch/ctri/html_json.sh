@@ -6,7 +6,7 @@ html_dir=${1}
 download=${2:-'no'}
 s3_bucket=${3:-'s3://hsdlc-results/ctri-adapter/studies'}
 context_dir=${4:-'/usr/local/dataintegration'}
-max_id=${5:-20000}
+max_id=${5:-200}
 start_id=${6:-1}
 
 prefix_url="http://ctri.nic.in/Clinicaltrials/pmaindet2.php?trialid="
