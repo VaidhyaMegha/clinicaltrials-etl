@@ -106,7 +106,7 @@ if [[ ${download} == 'yes' ]]; then
         download_trial ${f}
     done
 
-ls ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
+ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
    do
         Delete_Invalid_files ${html_dir}/studies/$f
    done
