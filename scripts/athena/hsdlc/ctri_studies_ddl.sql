@@ -1,4 +1,4 @@
- CREATE EXTERNAL TABLE `ctri_studies_temp`(
+ CREATE EXTERNAL TABLE `ctri_studies`(
  `ctri_number` string,
  `registered_on` string,
  `last_modified_on` string,
