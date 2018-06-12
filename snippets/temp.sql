@@ -1,3 +1,17 @@
+"select count(1) as num_of_trials, cast(map_keys(cast(json_parse(ltrim(rtrim(replace(identifiers, '\\\', ''),'\\\"'), '\\\"' ) )" +
+        "                                                         as map(varchar, varchar))) as JSON) as registries" +
+        "                   from opentrials.trials" +
+        "                   group by cast(map_keys(cast(json_parse(ltrim(rtrim(replace(identifiers, '\\\', ''),'\\\"'), '\\\"' ))" +
+        "                                          as map(varchar, varchar))) as JSON)" +
+        " union" +
+        " select count(distinct(ctri_number))  as num_of_trials, cast ('[ctri]' as JSON) as registries  from hsdlc.ctri_studies" +
+        " union" +
+        " select count(1) as num_of_trials, cast('[ctri, nct]' as JSON) as registries from hsdlc.ctri_studies ctris, hsdlc.ct_studies cts where " +
+        "  ctris.secondary_ids.secondary_id != null and regexp_like(ctris.secondary_ids.secondary_id, 'NCT') " +
+        "  and substr(secondary_ids.secondary_id, strpos(secondary_ids.secondary_id, 'NCT'), 11)=cts.id_info.nct_id" +
+        " order by num_of_trials desc"
+
+
 CREATE EXTERNAL TABLE `ct_studies_new` (
   `overall_official`:array<struct
     <
