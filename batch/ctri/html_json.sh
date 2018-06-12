@@ -79,7 +79,7 @@ if [[ ${download} == 'yes' ]]; then
         analyse_file ${html_dir}/studies/${f} ${html_dir}/studies/analysis/${f}
     done
 
-    ls ${html_dir}/analysis | grep -oE "[^ ]*\.html" | while read f
+    ls ${html_dir}/studies/analysis | grep -oE "[^ ]*\.html" | while read f
     do
        gen_json  ${html_dir}/studies/analysis/${f} ${html_dir}/studies/json/
     done
