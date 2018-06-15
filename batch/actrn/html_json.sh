@@ -40,6 +40,14 @@ function analyse_file() {
   "gender":.[49].children[1].children[0].text,
   "can_health_volunteers_participate":.[50].children[1].children[0].text,
   "key_exclusion_criteria":.[51].children[1].children[0].text,
+  "outcomes" : {
+
+        "primary_outcomes" : [[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Primary outcome") end)] | index(true) : [.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Secondary outcome") end)] | index(true)] | .[] | (if .children[0].children[0].children[0].text | startswith("Primary outcome") then .children[0].children[1].children[0].text else null end) | select(. != null)], [.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Primary outcome") end)] | index(true) : [.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Secondary outcome") end)] | index(true)] | .[] | (if .children[0].children[0].children[0].text | startswith("Timepoint") then .children[0].children[1].children[0].text else null end) | select(. != null) ]] |  transpose | map( {"primary_outcome": .[0], "timepoint": .[1]}),
+
+
+        "secondary_outcomes" : [[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Secondary outcome") end)] | index(true) : [.[] |  .children[0].text == "Eligibility"] | index(true)] | .[] | (if .children[0].children[0].children[0].text | startswith("Secondary outcome") then .children[0].children[1].children[0].text else null end) | select(. != null)], [.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Secondary outcome") end)] | index(true) : [.[] |  .children[0].text == "Eligibility"] | index(true)] | .[] | (if .children[0].children[0].children[0].text | startswith("Timepoint") then .children[0].children[1].children[0].text else null end) | select(. != null) ]] |  transpose | map( {"secondary_outcome": .[0], "timepoint": .[1]})
+
+   },
   "health_conditions_or_problems_studied":"",
   "condition_category":"",
   "condition_code":"",

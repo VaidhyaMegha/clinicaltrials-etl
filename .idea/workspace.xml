@@ -9,8 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/ctri/html_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/ctri/html_json.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/temp.sql" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/temp.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/actrn/html_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/actrn/html_json.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/actrn/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="296">
+              <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="974" />
             </state>
           </provider>
         </entry>
@@ -48,8 +47,8 @@
       <file leaf-file-name="xml_json.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="890">
-              <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-end-line="53" />
+            <state relative-caret-position="936">
+              <caret line="52" column="20" selection-start-line="52" selection-end-line="53" />
             </state>
           </provider>
         </entry>
@@ -57,17 +56,17 @@
       <file leaf-file-name="ct_studies_ddl.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
+            <state relative-caret-position="2034">
               <caret line="113" column="12" selection-start-line="113" selection-end-line="114" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/ctri/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+            <state relative-caret-position="120">
+              <caret line="64" column="38" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -93,8 +92,8 @@
       <file leaf-file-name="keys.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/ct/keys.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+            <state relative-caret-position="432">
+              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -102,8 +101,8 @@
       <file leaf-file-name="ctri_studies_ddl.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ctri_studies_ddl.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+            <state relative-caret-position="612">
+              <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -139,12 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Other_</find>
-      <find>events</find>
-      <find>nct_id</find>
-      <find>subjects</find>
-      <find>&quot;text_node_value&quot;:&quot;&quot;                                 {</find>
-      <find>other_</find>
       <find>https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id=</find>
       <find>metho</find>
       <find>rec</find>
@@ -169,6 +162,12 @@
       <find>second</find>
       <find>sites</find>
       <find>(\&quot;.+\&quot;\:)</find>
+      <find>if</find>
+      <find>[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith(&quot;Secondary outcome&quot;) end)] | index(true) : [.[] |  .children[0].text == &quot;Eligibility&quot;]</find>
+      <find>[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith(&quot;Secondary outcome&quot;) end)] | index(true) : [.[] |  .children[0].text == &quot;Eligibility&quot;] | index(true)]</find>
+      <find>[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith(&quot;Secondary outcome&quot;) end)] | index(true) : [.[] |  .children[0].text == &quot;Eligibility&quot;] | index(true)] | .[] |</find>
+      <find>.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith(&quot;Secondary outcome&quot;) end)] | index(true) : [.[] |  .children[0].text == &quot;Eligibility&quot;] | index(true)] | .[] |</find>
+      <find>Eligibility</find>
     </findStrings>
     <replaceStrings>
       <replace>100000</replace>
@@ -259,11 +258,11 @@
         <option value="$PROJECT_DIR$/batch/actrn/keys.json" />
         <option value="$PROJECT_DIR$/batch/ctri/ctri_html_json.sh" />
         <option value="$PROJECT_DIR$/batch/actrn/Dockerfile" />
-        <option value="$PROJECT_DIR$/batch/actrn/html_json.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql" />
         <option value="$PROJECT_DIR$/batch/ct/keys.json" />
         <option value="$PROJECT_DIR$/snippets/temp.sql" />
         <option value="$PROJECT_DIR$/batch/ctri/html_json.sh" />
+        <option value="$PROJECT_DIR$/batch/actrn/html_json.sh" />
       </list>
     </option>
   </component>
@@ -319,35 +318,6 @@
             <path>
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-              <item name="actrn" type="462c0819:PsiDirectoryNode" />
-              <item name="htmls" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-              <item name="actrn" type="462c0819:PsiDirectoryNode" />
-              <item name="htmls" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-              <item name="actrn" type="462c0819:PsiDirectoryNode" />
-              <item name="htmls" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-              <item name="ctri" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -372,9 +342,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -763,12 +733,13 @@
       <workItem from="1528279452649" duration="9011000" />
       <workItem from="1528421217395" duration="15672000" />
       <workItem from="1528526986071" duration="16492000" />
-      <workItem from="1528680185617" duration="21174000" />
+      <workItem from="1528680185617" duration="22803000" />
+      <workItem from="1528943649123" duration="7712000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="762178000" />
+    <option name="totallyTimeSpent" value="771519000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -812,7 +783,7 @@
       <window_info id="DBHelper" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info id="Designer" order="3" />
+      <window_info anchor="right" id="Data View" order="11" />
       <window_info anchor="right" id="PlantUML" order="10" weight="0.32991913" />
       <window_info anchor="bottom" id="Messages" order="8" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -820,17 +791,18 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32924336" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.33894736" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.33894736" />
+      <window_info id="Designer" order="3" />
       <window_info anchor="bottom" id="DBOutput" order="11" />
       <window_info anchor="right" x="0" y="0" width="413" height="884" id="Documentation" order="12" weight="0.32991913" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="right" id="Data View" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32721713" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32991913" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20485175" />
       <window_info anchor="right" id="SciView" order="8" />
@@ -840,7 +812,6 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32721713" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32822084" />
       <window_info id="DBHelper" order="7" />
@@ -1062,8 +1033,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="890">
-          <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-end-line="53" />
+        <state relative-caret-position="936">
+          <caret line="52" column="20" selection-start-line="52" selection-end-line="53" />
         </state>
       </provider>
     </entry>
@@ -1083,22 +1054,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/ct/keys.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/actrn/html_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+        <state relative-caret-position="432">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ctri_studies_ddl.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        <state relative-caret-position="612">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1118,15 +1082,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
+        <state relative-caret-position="2034">
           <caret line="113" column="12" selection-start-line="113" selection-end-line="114" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/ctri/html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+        <state relative-caret-position="120">
+          <caret line="64" column="38" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/actrn/html_json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="974" />
         </state>
       </provider>
     </entry>
