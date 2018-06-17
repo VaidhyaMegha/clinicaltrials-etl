@@ -21,36 +21,25 @@ function download_trial(){
 }
 
 function analyse_file() {
- cat ${1} | pup 'div.review-element-block json{}' | jq -c '{
-  "trial_id":.[0].children[1].children[0].text,
-  "ethics_application_status":.[1].children[1].children[0].text,
-  "date_submitted":.[2].children[1].children[0].text,
-  "date_registered":.[3].children[1].children[0].text,
-  "date_last_updated":.[4].children[1].children[0].text,
-  "type_of_registration":.[5].children[1].children[0].text,
-  "public_title":.[6].children[1].children[0].text,
-  "scientific_title":.[7].children[1].children[0].text,
-  "secondary_id":[.[8].children[1:] | .[].children[0].text],
-  "UTN":.[9].children[1].children[0].text,
-  "trial_acronym":.[10].children[1].children[0].text,
-  "linked_study_record":.[11].children[1].children[0].text,
-  "key_inclusion_criteria":.[46].children[1].children[0].text,
-  "minimum_age":.[47].children[1].children[0].text,
-  "maximum_age":.[48].children[1].children[0].text,
-  "gender":.[49].children[1].children[0].text,
-  "can_health_volunteers_participate":.[50].children[1].children[0].text,
-  "key_exclusion_criteria":.[51].children[1].children[0].text,
-  "outcomes" : {
+ cat ${1} | pup 'div.review-form-block json{}' | jq  '{
+  "trial_id":.[0].children[0].children[1].children[0].text,
+  "ethics_application_status":.[1].children[0].children[1].children[0].text,
+  "date_submitted":.[2].children[0].children[1].children[0].text,
+  "date_registered":.[3].children[0].children[1].children[0].text,
+  "date_last_updated":.[4].children[0].children[1].children[0].text,
+  "type_of_registration":.[5].children[0].children[1].children[0].text,
+  "public_title":.[7].children[0].children[1].children[0].text,
+  "scientific_title":.[8].children[0].children[1].children[0].text,
+  "secondary_id":.[9].children[0].children[1].children[0:]| select(.!=null)|[.[].text|select(.!=null)],
+  "UTN":.[10].children[0].children[1].children[0].text,
+  "trial_acronym":.[11].children[0].children[1].children[0].text,
+  "linked_study_record":.[12].children[0].children[1].children[0].text,
+  "health_conditions_or_problems_studied":[.[[.[] | .children[0].children[0].text | ( if . == null then false else startswith("Health condition(s) or problem(s) studied") end)]| index(true):[.[] |.children[0].children[0].text | ( if . == null then false else startswith("Condition category") end)]| index(true)] | .[]|.children[0].children[0].children[0].text | select(.!=null)],
+  "Condition category":[.[[.[] | .children[0].children[0].text | ( if . == null then false else startswith("Condition category") end)]| index(true):[.[] |.children[0].text | ( if . == null then false else startswith("Intervention/exposure") end)]| index(true)] | .[]| {"condition_category":.children[].children[0].children[0].text| select(.!=null),"Condition_code":.children[].children[1].children[0].text}| select(.!=null)],
+  "Study_Type":.[] | (if .children[0].children[0].children[0].text == "Study type" then .children[]  else false end) | select (.!= false) | .children[1].children[0].text,
+  "Patient registry":.[] | (if .children[0].children[0].children[0].text == "Patient registry" then .children[]  else false end) | select (.!= false) | .children[1].children[0].text,
+  "Outcome":{"PrimaryOutcome":[[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Primary outcome") end)] | index(true) : [.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Secondary outcome") end)] | index(true)] | .[] | (if .children[0].children[0].children[0].text | startswith("Primary outcome") then .children[0].children[1].children[0].text else null end) | select(. != null)], [.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Primary outcome") end)] | index(true) : [.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Secondary outcome") end)] | index(true)] | .[] | (if .children[0].children[0].children[0].text | startswith("Timepoint") then .children[0].children[1].children[0].text else null end) | select(. != null) ]] |  transpose | map( {"primary_outcome": .[0], "timepoint": .[1]}),"SecondaryOutcome":[[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Secondary outcome") end)] | index(true) : [.[] |  .children[0].text == "Eligibility"] | index(true)] | .[] | (if .children[0].children[0].children[0].text | startswith("Secondary outcome") then .children[0].children[1].children[0].text else null end) | select(. != null)], [.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Secondary outcome") end)] | index(true) : [.[] |  .children[0].text == "Eligibility"] | index(true)] | .[] | (if .children[0].children[0].children[0].text | startswith("Timepoint") then .children[0].children[1].children[0].text else null end) | select(. != null) ]] |  transpose | map( {"secondary_outcome": .[0], "timepoint": .[1]})},
 
-        "primary_outcomes" : [[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Primary outcome") end)] | index(true) : [.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Secondary outcome") end)] | index(true)] | .[] | (if .children[0].children[0].children[0].text | startswith("Primary outcome") then .children[0].children[1].children[0].text else null end) | select(. != null)], [.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Primary outcome") end)] | index(true) : [.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Secondary outcome") end)] | index(true)] | .[] | (if .children[0].children[0].children[0].text | startswith("Timepoint") then .children[0].children[1].children[0].text else null end) | select(. != null) ]] |  transpose | map( {"primary_outcome": .[0], "timepoint": .[1]}),
-
-
-        "secondary_outcomes" : [[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Secondary outcome") end)] | index(true) : [.[] |  .children[0].text == "Eligibility"] | index(true)] | .[] | (if .children[0].children[0].children[0].text | startswith("Secondary outcome") then .children[0].children[1].children[0].text else null end) | select(. != null)], [.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith("Secondary outcome") end)] | index(true) : [.[] |  .children[0].text == "Eligibility"] | index(true)] | .[] | (if .children[0].children[0].children[0].text | startswith("Timepoint") then .children[0].children[1].children[0].text else null end) | select(. != null) ]] |  transpose | map( {"secondary_outcome": .[0], "timepoint": .[1]})
-
-   },
-  "health_conditions_or_problems_studied":"",
-  "condition_category":"",
-  "condition_code":"",
   "procedure_for_enrolling_a_subject_and_allocating_the_treatment_allocation_concealment_procedures":"",
   "methods_used_to_generate_the_sequence_in_which_subjects_will_be_randomised_sequence_generation":"",
   "who_is__are_masked__blinded":"",
