@@ -49,7 +49,7 @@ function analyse_file() {
   "Maximum age":.[] | (if .children[0].children[0].children[0].text == "Maximum age" then .children[] else false end)  | select (.!= false) | .children[1].children[0].text,
   "Gender":.[] | (if .children[0].children[0].children[0].text == "Gender" then .children[] else false end)  | select (.!= false) | .children[1].children[0].text,
   "Can healthy volunteers participate?":.[] | (if .children[0].children[0].children[0].text == "Can healthy volunteers participate?" then .children[] else false end)  | select (.!= false) | .children[1].children[0].text,
-  "Key exclusion criteria":.[] | (if .children[0].children[0].children[0].text == "Key exclusion criteria" then .children[] else false end)  | select (.!= false) | .children[1].children[0].text}'
+  "Key exclusion criteria":.[] | (if .children[0].children[0].children[0].text == "Key exclusion criteria" then .children[] else false end)  | select (.!= false) | .children[1].children[0].text,
 
   "procedure_for_enrolling_a_subject_and_allocating_the_treatment_allocation_concealment_procedures":"",
   "methods_used_to_generate_the_sequence_in_which_subjects_will_be_randomised_sequence_generation":"",
