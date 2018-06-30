@@ -8,7 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/batch/jprn/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/batch/jprn/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/batch/jprn/html_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/jprn/html_json.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,8 +55,8 @@
       <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/jprn/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="853">
-              <caret line="176" lean-forward="true" selection-start-line="176" selection-end-line="176" />
+            <state relative-caret-position="763">
+              <caret line="176" column="4" lean-forward="true" selection-start-line="176" selection-start-column="4" selection-end-line="176" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -746,12 +745,12 @@
       <workItem from="1528943649123" duration="12845000" />
       <workItem from="1529149467222" duration="5609000" />
       <workItem from="1529758745069" duration="8131000" />
-      <workItem from="1530275358010" duration="17983000" />
+      <workItem from="1530275358010" duration="18237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="808375000" />
+    <option name="totallyTimeSpent" value="808629000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1147,8 +1146,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/jprn/html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="853">
-          <caret line="176" lean-forward="true" selection-start-line="176" selection-end-line="176" />
+        <state relative-caret-position="763">
+          <caret line="176" column="4" lean-forward="true" selection-start-line="176" selection-start-column="4" selection-end-line="176" selection-end-column="4" />
         </state>
       </provider>
     </entry>

@@ -20,6 +20,7 @@ function download_and_analyse_trial(){
     g=${1//ctr_view.cgi?recptno=/}
     wget -q "https://upload.umin.ac.jp/cgi-open-bin/ctr_e/"${1} -O ${html_dir}/studies/${g}.html  || true
     cat ${html_dir}/studies/${g}.html  | pup 'table tr td[colspan="1"]  json{}' | jq -c  ' [.[].text] | {
+      "Receipt_No.": "'${g}'",
       "Basic_information": {
         "Official_scientific_title_of_the_study": .[0],
         "Title_of_the_study_(Brief_title)": .[1],
@@ -168,6 +169,12 @@ if [[ ${download} == 'yes' ]]; then
             download_index_page ${g}
     done
 
+    cat ${html_dir}/*.html | grep -oE "ctr_view.cgi\?recptno=[^\"]*" | while read f
+    do
+
+        download_and_analyse_trial ${f} ${html_dir}/studies/json
+    done
+else
     cat ${html_dir}/*.html | grep -oE "ctr_view.cgi\?recptno=[^\"]*" | while read f
     do
 
