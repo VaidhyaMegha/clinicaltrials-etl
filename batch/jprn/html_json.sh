@@ -101,52 +101,52 @@ function download_and_analyse_trial(){
       },
       "Sponsor": {
         "Institute": .[58],
-        "Department": .[59]
+        "Department": .[58]
       },
       "Funding_Source": {
-        "Organization": .[60],
-        "Division": .[61],
-        "Category_of_Funding_Organization": .[62],
-        "Nationality_of_Funding_Organization": .[63]
+        "Organization": .[59],
+        "Division": .[59],
+        "Category_of_Funding_Organization": .[60],
+        "Nationality_of_Funding_Organization": .[61]
       },
       "Other_related_Organizations": {
-        "Co-sponsor": .[64],
-        "Name_of_secondary_funｄer(s)": .[65]
+        "Co-sponsor": .[62],
+        "Name_of_secondary_funｄer(s)": .[63]
       },
       "Secondary_IDs": {
-        "Secondary_IDs": .[66],
-        "Study_ID_1": .[67],
-        "Org._issuing_International_ID_1": .[68],
-        "Study_ID_2": .[69],
-        "Org._issuing_International_ID_2": .[70],
-        "IND_to_MHLW": .[71]
+        "Secondary_IDs": .[64],
+        "Study_ID_1": .[65],
+        "Org._issuing_International_ID_1": .[66],
+        "Study_ID_2": .[67],
+        "Org._issuing_International_ID_2": .[68],
+        "IND_to_MHLW": .[69]
       },
       "Institutions": {
-        "Institutions": .[72]
+        "Institutions": .[70]
       },
       "Progress": {
-        "Date_of_disclosure_of_the_study_information": .[73],
-        "Recruitment_status": .[74],
-        "Date_of_protocol_fixation": .[75],
-        "Anticipated_trial_start_date": .[76],
-        "Last_follow-up_date": .[77],
-        "Date_of_closure_to_data_entry": .[78],
-        "Date_trial_data_considered_complete": .[79],
-        "Date_analysis_concluded": .[80]
+        "Date_of_disclosure_of_the_study_information": .[71],
+        "Recruitment_status": .[72],
+        "Date_of_protocol_fixation": .[73],
+        "Anticipated_trial_start_date": .[74],
+        "Last_follow-up_date": .[75],
+        "Date_of_closure_to_data_entry": .[76],
+        "Date_trial_data_considered_complete": .[77],
+        "Date_analysis_concluded": .[78]
       },
       "Related_information": {
-        "URL_releasing_protocol": .[81],
-        "Publication_of_results": .[82],
-        "URL_releasing_results": .[83],
-        "Results": .[84],
-        "Other_related_information": .[85]
+        "URL_releasing_protocol": .[79],
+        "Publication_of_results": .[80],
+        "URL_releasing_results": .[81],
+        "Results": .[82],
+        "Other_related_information": .[83]
       },
       "Management_information": {
-        "Registered_date": .[86],
-        "Last_modified_on": .[87]
+        "Registered_date": .[84],
+        "Last_modified_on": .[85]
       },
       "Link_to_view_the_page": {
-        "URL(English)": .[88]
+        "URL(English)": .[86]
       }
     }' >> ${2}/studies.json
 }
