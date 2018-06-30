@@ -8,8 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/batch/jprn/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/jprn/all_keys.json" beforeDir="false" afterPath="$PROJECT_DIR$/batch/jprn/all_keys.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/jprn/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/batch/jprn/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/batch/jprn/html_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/jprn/html_json.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,21 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/jprn/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="913">
-              <caret line="67" column="33" lean-forward="true" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+            <state relative-caret-position="853">
+              <caret line="176" lean-forward="true" selection-start-line="176" selection-end-line="176" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/jprn/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor>
-                <caret lean-forward="true" />
+              <first_editor relative-caret-position="36">
+                <caret line="2" column="102" lean-forward="true" selection-start-line="2" selection-start-column="92" selection-end-line="2" selection-end-column="102" />
               </first_editor>
               <second_editor />
             </state>
@@ -87,7 +86,7 @@
       <file leaf-file-name="all_keys.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/jprn/all_keys.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-912">
+            <state relative-caret-position="594">
               <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
             </state>
           </provider>
@@ -123,8 +122,8 @@
       <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/ctri/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="32" column="90" lean-forward="true" selection-start-line="32" selection-end-line="32" selection-end-column="90" />
+            <state relative-caret-position="174">
+              <caret line="126" column="49" lean-forward="true" selection-start-line="126" selection-start-column="49" selection-end-line="126" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -146,11 +145,11 @@
       <find>,</find>
       <find>review-element-content</find>
       <find>/|\?|:|\(|\)</find>
-      <find />
+      <find>target sample</find>
       <find>&quot;,?\n</find>
       <find>\t</find>
-      <find />
-      <find />
+      <find>&quot;([^ :]*) ([^ :])</find>
+      <find>&quot;([^ ]*) ([^ ]*)&quot;</find>
       <find>Titles</find>
       <find>array&lt;struct&lt;&quot;url&quot;:,&quot;description&quot;:&gt;&gt;</find>
       <find>results</find>
@@ -164,14 +163,14 @@
       <find>sites</find>
       <find>(\&quot;.+\&quot;\:)</find>
       <find>if</find>
-      <find />
-      <find />
-      <find />
-      <find />
+      <find>[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith(&quot;Secondary outcome&quot;) end)] | index(true) : [.[] |  .children[0].text == &quot;Eligibility&quot;]</find>
+      <find>[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith(&quot;Secondary outcome&quot;) end)] | index(true) : [.[] |  .children[0].text == &quot;Eligibility&quot;] | index(true)]</find>
+      <find>[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith(&quot;Secondary outcome&quot;) end)] | index(true) : [.[] |  .children[0].text == &quot;Eligibility&quot;] | index(true)] | .[] |</find>
+      <find>.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith(&quot;Secondary outcome&quot;) end)] | index(true) : [.[] |  .children[0].text == &quot;Eligibility&quot;] | index(true)] | .[] |</find>
       <find>Eligibility</find>
-      <find />
+      <find>[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith(&quot;Secondary outcome&quot;) end)] | index(true) : [.[] |  .children[0].text == &quot;Eligibility&quot;] | index(true)] | .[]</find>
       <find>&quot;,</find>
-      <find />
+      <find>([^&quot; ])</find>
     </findStrings>
     <replaceStrings>
       <replace>class</replace>
@@ -186,10 +185,10 @@
       <replace>text_str</replace>
       <replace>text</replace>
       <replace>type</replace>
-      <replace />
+      <replace>&lt;xsl:template match=&quot;</replace>
       <replace>match=&quot;/clinical_study/</replace>
-      <replace />
-      <replace />
+      <replace>&quot;&lt;xsl:value-of select=&quot;name()&quot;/&gt;&quot; :&lt;xsl:value-of select=&quot;.&quot;/&gt;&lt;/xsl:template&gt;</replace>
+      <replace>&lt;xsl:value-of select=&quot;.&quot;/&gt;</replace>
       <replace>&quot;</replace>
       <replace>&quot;&lt;/xsl:with-param&gt;</replace>
       <replace>&amp;quot;&lt;/xsl:with-param&gt;</replace>
@@ -265,8 +264,8 @@
         <option value="$PROJECT_DIR$/batch/ctri/html_json.sh" />
         <option value="$PROJECT_DIR$/batch/jprn/Makefile" />
         <option value="$PROJECT_DIR$/batch/jprn/all_keys.json" />
-        <option value="$PROJECT_DIR$/batch/jprn/html_json.sh" />
         <option value="$PROJECT_DIR$/batch/jprn/README.md" />
+        <option value="$PROJECT_DIR$/batch/jprn/html_json.sh" />
       </list>
     </option>
   </component>
@@ -747,12 +746,12 @@
       <workItem from="1528943649123" duration="12845000" />
       <workItem from="1529149467222" duration="5609000" />
       <workItem from="1529758745069" duration="8131000" />
-      <workItem from="1530275358010" duration="16803000" />
+      <workItem from="1530275358010" duration="17983000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="807195000" />
+    <option name="totallyTimeSpent" value="808375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1094,38 +1093,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/jprn/keys.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="661">
           <caret line="52" column="20" selection-start-line="52" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/ctri/html_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="32" column="90" lean-forward="true" selection-start-line="32" selection-end-line="32" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/jprn/all_keys.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-912">
-          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/jprn/values.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
         </state>
       </provider>
     </entry>
@@ -1136,20 +1107,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/jprn/html_json.sh">
+    <entry file="file://$PROJECT_DIR$/batch/ctri/html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="913">
-          <caret line="67" column="33" lean-forward="true" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+        <state relative-caret-position="174">
+          <caret line="126" column="49" lean-forward="true" selection-start-line="126" selection-start-column="49" selection-end-line="126" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/jprn/values.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1584">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/jprn/all_keys.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/jprn/keys.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/jprn/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor>
-            <caret lean-forward="true" />
+          <first_editor relative-caret-position="36">
+            <caret line="2" column="102" lean-forward="true" selection-start-line="2" selection-start-column="92" selection-end-line="2" selection-end-column="102" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/jprn/html_json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="853">
+          <caret line="176" lean-forward="true" selection-start-line="176" selection-end-line="176" />
         </state>
       </provider>
     </entry>

@@ -19,133 +19,133 @@ function download_index_page(){
 function download_and_analyse_trial(){
     g=${1//ctr_view.cgi?recptno=/}
     wget -q "https://upload.umin.ac.jp/cgi-open-bin/ctr_e/"${1} -O ${html_dir}/studies/${g}.html  || true
-    cat ${html_dir}/studies/${g}.html  | pup 'table tr td table:nth-of-type(2) tr td:nth-of-type(2) json{}' | jq -c  '{
+    cat ${html_dir}/studies/${g}.html  | pup 'table tr td[colspan="1"]  json{}' | jq -c  ' [.[].text] | {
       "Basic_information": {
-        "Official_scientific_title_of_the_study": "",
-        "Title_of_the_study_(Brief_title)": "",
-        "Region": ""
+        "Official_scientific_title_of_the_study": .[0],
+        "Title_of_the_study_(Brief_title)": .[1],
+        "Region": .[2]
       },
       "Condition": {
-        "Condition": "",
-        "Classification_by_specialty": "",
-        "Classification_by_malignancy": "",
-        "Genomic_information": ""
+        "Condition": .[3],
+        "Classification_by_specialty": .[4],
+        "Classification_by_malignancy": .[5],
+        "Genomic_information": .[6]
       },
       "Objectives": {
-        "Narrative_objectives1": "",
-        "Basic_objectives2": "",
-        "Basic_objectives_-Others": "",
-        "Trial_characteristics_1": "",
-        "Trial_characteristics_2": "",
-        "Developmental_phase": ""
+        "Narrative_objectives1": .[7],
+        "Basic_objectives2": .[8],
+        "Basic_objectives_-Others": .[9],
+        "Trial_characteristics_1": .[10],
+        "Trial_characteristics_2": .[11],
+        "Developmental_phase": .[12]
       },
       "Assessment": {
-        "Primary_outcomes": "",
-        "Key_secondary_outcomes": ""
+        "Primary_outcomes": .[13],
+        "Key_secondary_outcomes": .[14]
       },
       "Base": {
-        "Study_type": ""
+        "Study_type": .[15]
       },
       "Study_design": {
-        "Basic_design": "",
-        "Randomization": "",
-        "Randomization_unit": "",
-        "Blinding": "",
-        "Control": "",
-        "Stratification": "",
-        "Dynamic_allocation": "",
-        "Institution_consideration": "",
-        "Blocking": "",
-        "Concealment": ""
+        "Basic_design": .[16],
+        "Randomization": .[17],
+        "Randomization_unit": .[18],
+        "Blinding": .[19],
+        "Control": .[20],
+        "Stratification": .[21],
+        "Dynamic_allocation": .[22],
+        "Institution_consideration": .[23],
+        "Blocking": .[24],
+        "Concealment": .[25]
       },
       "Intervention": {
-        "No._of_arms": "",
-        "Purpose_of_intervention": "",
-        "Type_of_intervention": "",
-        "Interventions/Control_1": "",
-        "Interventions/Control_2": "",
-        "Interventions/Control_3": "",
-        "Interventions/Control_4": "",
-        "Interventions/Control_5": "",
-        "Interventions/Control_6": "",
-        "Interventions/Control_7": "",
-        "Interventions/Control_8": "",
-        "Interventions/Control_9": "",
-        "Interventions/Control_10": ""
+        "No._of_arms": .[26],
+        "Purpose_of_intervention": .[27],
+        "Type_of_intervention": .[28],
+        "Interventions/Control_1": .[29],
+        "Interventions/Control_2": .[30],
+        "Interventions/Control_3": .[31],
+        "Interventions/Control_4": .[32],
+        "Interventions/Control_5": .[33],
+        "Interventions/Control_6": .[34],
+        "Interventions/Control_7": .[35],
+        "Interventions/Control_8": .[36],
+        "Interventions/Control_9": .[37],
+        "Interventions/Control_10": .[38]
       },
       "Eligibility": {
-        "Age-lower_limit": "",
-        "Age-upper_limit": "",
-        "Gender": "",
-        "Key_inclusion_criteria": "",
-        "Key_exclusion_criteria": "",
-        "Target_sample_size": ""
+        "Age-lower_limit": .[39],
+        "Age-upper_limit": .[40],
+        "Gender": .[41],
+        "Key_inclusion_criteria": .[42],
+        "Key_exclusion_criteria": .[43],
+        "Target_sample_size": .[44]
       },
       "Research_Contact_Person": {
-        "Name_of_lead_principal_investigator": "",
-        "Organization": "",
-        "Division_name": "",
-        "Address": "",
-        "TEL": "",
-        "Email": ""
+        "Name_of_lead_principal_investigator": .[45],
+        "Organization": .[46],
+        "Division_name": .[47],
+        "Address": .[48],
+        "TEL": .[49],
+        "Email": .[50]
       },
       "Public_Contact_Person": {
-        "Name_of_contact_person": "",
-        "Organization": "",
-        "Division_name": "",
-        "Address": "",
-        "TEL": "",
-        "Homepage_URL": "",
-        "Email": ""
+        "Name_of_contact_person": .[51],
+        "Organization": .[52],
+        "Division_name": .[53],
+        "Address": .[54],
+        "TEL": .[55],
+        "Homepage_URL": .[56],
+        "Email": .[57]
       },
       "Sponsor": {
-        "Institute": "",
-        "Department": ""
+        "Institute": .[58],
+        "Department": .[59]
       },
       "Funding_Source": {
-        "Organization": "",
-        "Division": "",
-        "Category_of_Funding_Organization": "",
-        "Nationality_of_Funding_Organization": ""
+        "Organization": .[60],
+        "Division": .[61],
+        "Category_of_Funding_Organization": .[62],
+        "Nationality_of_Funding_Organization": .[63]
       },
       "Other_related_Organizations": {
-        "Co-sponsor": "",
-        "Name_of_secondary_funｄer(s)": ""
+        "Co-sponsor": .[64],
+        "Name_of_secondary_funｄer(s)": .[65]
       },
       "Secondary_IDs": {
-        "Secondary_IDs": "",
-        "Study_ID_1": "",
-        "Org._issuing_International_ID_1": "",
-        "Study_ID_2": "",
-        "Org._issuing_International_ID_2": "",
-        "IND_to_MHLW": ""
+        "Secondary_IDs": .[66],
+        "Study_ID_1": .[67],
+        "Org._issuing_International_ID_1": .[68],
+        "Study_ID_2": .[69],
+        "Org._issuing_International_ID_2": .[70],
+        "IND_to_MHLW": .[71]
       },
       "Institutions": {
-        "Institutions": ""
+        "Institutions": .[72]
       },
       "Progress": {
-        "Date_of_disclosure_of_the_study_information": "",
-        "Recruitment_status": "",
-        "Date_of_protocol_fixation": "",
-        "Anticipated_trial_start_date": "",
-        "Last_follow-up_date": "",
-        "Date_of_closure_to_data_entry": "",
-        "Date_trial_data_considered_complete": "",
-        "Date_analysis_concluded": ""
+        "Date_of_disclosure_of_the_study_information": .[73],
+        "Recruitment_status": .[74],
+        "Date_of_protocol_fixation": .[75],
+        "Anticipated_trial_start_date": .[76],
+        "Last_follow-up_date": .[77],
+        "Date_of_closure_to_data_entry": .[78],
+        "Date_trial_data_considered_complete": .[79],
+        "Date_analysis_concluded": .[80]
       },
       "Related_information": {
-        "URL_releasing_protocol": "",
-        "Publication_of_results": "",
-        "URL_releasing_results": "",
-        "Results": "",
-        "Other_related_information": ""
+        "URL_releasing_protocol": .[81],
+        "Publication_of_results": .[82],
+        "URL_releasing_results": .[83],
+        "Results": .[84],
+        "Other_related_information": .[85]
       },
       "Management_information": {
-        "Registered_date": "",
-        "Last_modified_on": ""
+        "Registered_date": .[86],
+        "Last_modified_on": .[87]
       },
       "Link_to_view_the_page": {
-        "URL(English)": ""
+        "URL(English)": .[88]
       }
     }' >> ${2}/studies.json
 }
