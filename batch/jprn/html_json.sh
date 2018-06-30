@@ -20,8 +20,13 @@ function download_and_analyse_trial(){
     g=${1//ctr_view.cgi?recptno=/}
     wget -q "https://upload.umin.ac.jp/cgi-open-bin/ctr_e/"${1} -O ${html_dir}/studies/${g}.html  || true
 
-    cat ${html_dir}/studies/${g}.html  | pup 'table tr td[colspan="1"]  json{}' | jq -c  '{
-        "Receipt_No.": "'${g}'",
+    cat ${html_dir}/studies/${g}.html  | pup 'table tr td[bgcolor="#FFFFDD"]  json{}' | jq -c  ' [.[].text] | {
+        "Recruitment_status": .[2],
+        "Unique_ID_issued_by_UMIN": .[3],
+        "Receipt_No.":  .[4],
+        "Official_scientific_title_of_the_study": .[5],
+        "Date_of_disclosure_of_the_study_information": .[6],
+        "Last_modified_on":  .[7]
     }' >> ${2}/${g}_1.json
 
     cat ${html_dir}/studies/${g}.html  | pup 'table tr td[colspan="1"]  json{}' | jq -c  ' [.[].text] | {
@@ -129,8 +134,6 @@ function download_and_analyse_trial(){
         "Institutions": .[70]
       },
       "Progress": {
-        "Date_of_disclosure_of_the_study_information": .[71],
-        "Recruitment_status": .[72],
         "Date_of_protocol_fixation": .[73],
         "Anticipated_trial_start_date": .[74],
         "Last_follow-up_date": .[75],
