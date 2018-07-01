@@ -29,6 +29,8 @@ function download_and_analyse_trial(){
         "Last_modified_on":  .[7]
     }' >> ${2}/${g}_1.json
 
+    # instead of .text just use [.[]] and then use .text against each key . For dates use special parsing.
+
     cat ${html_dir}/studies/${g}.html  | pup 'table tr td[colspan="1"]  json{}' | jq -c  ' [.[].text] | {
       "Basic_information": {
         "Official_scientific_title_of_the_study": .[0],
