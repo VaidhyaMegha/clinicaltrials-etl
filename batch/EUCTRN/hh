@@ -1,0 +1,22 @@
+cat /home/anil/Downloads/trials-full_8.txt | ./json_encode -sc -s ":" -p | jq '{"EudraCT Number":.[3][1]},
+{"Sponsors Protocol Code Number":.[4][1]},{"National Competent Authority":.[5][1]},{"Clinical Trial Type":.[6][1]},
+{"TrialStatus":.[7][1]},{"Date on which this record was first entered in the EudraCT database":.[8][1]},
+{"Protocol_Information":{"Member State Concerned":"bef",
+            "EudraCT number":"ff",
+            "Full title of the trial":
+            "Full title of the trial (es):
+            "Title of the trial for lay people, in easily understood, i.e. non-technical, language":
+            "Title of the trial for lay people, in easily understood, i.e. non-technical, language (es)":
+            "Name or abbreviated title of the trial where available":
+            "Name or abbreviated title of the trial where available (es)":
+            "Sponsor's protocol code number":
+            "Trial is part of a Paediatric Investigation Plan":
+            "EMA Decision number of Paediatric Investigation Plan":
+
+
+
+            }
+
+
+            }'
+
