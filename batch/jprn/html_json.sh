@@ -183,9 +183,7 @@ if [[ ${download} == 'yes' ]]; then
         rm -rf ${html_dir}
     fi
 
-    mkdir -p ${html_dir}/studies
-    mkdir ${html_dir}/studies/json
-    mkdir ${html_dir}/studies/analysis
+    mkdir -p ${html_dir}/studies/json
 
     download_main_index
 
@@ -200,10 +198,13 @@ if [[ ${download} == 'yes' ]]; then
 
         download_and_analyse_trial ${f} ${html_dir}/studies/json
     done
+
+   aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
+
 else
     cat ${html_dir}/*.html | grep -oE "ctr_view.cgi\?recptno=[^\"]*" | while read f
     do
-
+actrn
         download_and_analyse_trial ${f} ${html_dir}/studies/json
     done
 fi
