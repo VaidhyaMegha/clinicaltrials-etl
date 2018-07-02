@@ -7,8 +7,8 @@ html_dir=${1}
 download=${2:-'no'}
 s3_bucket=${3:-'s3://hsdlc-results/actrn-adapter/'}
 context_dir=${4:-'/usr/local/dataintegration'}
-max_id=${5:-10}
-min_id=${6:-10}
+min_id=${5:-1}
+max_id=${6:-375400}
 #375400
 prefix_url="https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id="
 suffix_url=""
