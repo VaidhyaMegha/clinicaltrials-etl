@@ -3,6 +3,8 @@ set -ex
 
 html_dir=${1}
 download=${2:-'no'}
+s3_bucket=${3:-'s3://hsdlc-results/jprn-adapter/'}
+context_dir=${4:-'/usr/local/dataintegration'}
 prefix_url="https://upload.umin.ac.jp/cgi-open-bin/ctr_e/index.cgi"
 suffix_url="?sort=03&isicdr=1&page="
 
@@ -165,6 +167,16 @@ function download_and_analyse_trial(){
     rm ${2}/${g}_2.json
 }
 
+pushd ${context_dir}
+
+source "/root/.gvm/scripts/gvm"
+
+gvm install go1.4 --binary
+
+gvm use "go1.4"
+
+go get -u -f github.com/ericchiang/pup
+
 if [[ ${download} == 'yes' ]]; then
 
     if [ -d ${html_dir} ]; then
@@ -195,3 +207,5 @@ else
         download_and_analyse_trial ${f} ${html_dir}/studies/json
     done
 fi
+
+popd
