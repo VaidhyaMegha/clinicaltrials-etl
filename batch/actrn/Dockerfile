@@ -42,9 +42,11 @@ RUN go get -u -f github.com/ericchiang/pup
 # Copy python,json and shell scripts
 COPY keys.json /usr/local/dataintegration/
 COPY html_json.sh /usr/local/dataintegration/
+COPY Download_html.sh /usr/local/dataintegration/
 #
 #
 RUN chmod +x /usr/local/dataintegration/html_json.sh
+RUN chmod +x /usr/local/dataintegration/Download_html.sh
 
 
 
