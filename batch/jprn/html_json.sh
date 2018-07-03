@@ -36,7 +36,7 @@ function download_and_analyse_trial(){
     cat ${html_dir}/studies/${g}.html  | pup 'table tr td[colspan="1"]  json{}' | jq -c  ' [.[].text] | {
       "Basic_information": {
         "Official_scientific_title_of_the_study": .[0],
-        "Title_of_the_study_(Brief_title)": .[1],
+        "Title_of_the_study_Brief_title": .[1],
         "Region": .[2]
       },
       "Condition": {
@@ -48,7 +48,7 @@ function download_and_analyse_trial(){
       "Objectives": {
         "Narrative_objectives1": .[7],
         "Basic_objectives2": .[8],
-        "Basic_objectives_-Others": .[9],
+        "Basic_objectives_Others": .[9],
         "Trial_characteristics_1": .[10],
         "Trial_characteristics_2": .[11],
         "Developmental_phase": .[12]
@@ -73,23 +73,23 @@ function download_and_analyse_trial(){
         "Concealment": .[25]
       },
       "Intervention": {
-        "No._of_arms": .[26],
+        "No_of_arms": .[26],
         "Purpose_of_intervention": .[27],
         "Type_of_intervention": .[28],
-        "Interventions/Control_1": .[29],
-        "Interventions/Control_2": .[30],
-        "Interventions/Control_3": .[31],
-        "Interventions/Control_4": .[32],
-        "Interventions/Control_5": .[33],
-        "Interventions/Control_6": .[34],
-        "Interventions/Control_7": .[35],
-        "Interventions/Control_8": .[36],
-        "Interventions/Control_9": .[37],
-        "Interventions/Control_10": .[38]
+        "Interventions_Control_1": .[29],
+        "Interventions_Control_2": .[30],
+        "Interventions_Control_3": .[31],
+        "Interventions_Control_4": .[32],
+        "Interventions_Control_5": .[33],
+        "Interventions_Control_6": .[34],
+        "Interventions_Control_7": .[35],
+        "Interventions_Control_8": .[36],
+        "Interventions_Control_9": .[37],
+        "Interventions_Control_10": .[38]
       },
       "Eligibility": {
-        "Age-lower_limit": .[39],
-        "Age-upper_limit": .[40],
+        "Age_lower_limit": .[39],
+        "Age_upper_limit": .[40],
         "Gender": .[41],
         "Key_inclusion_criteria": .[42],
         "Key_exclusion_criteria": .[43],
@@ -123,15 +123,15 @@ function download_and_analyse_trial(){
         "Nationality_of_Funding_Organization": .[61]
       },
       "Other_related_Organizations": {
-        "Co-sponsor": .[62],
-        "Name_of_secondary_funｄer(s)": .[63]
+        "Co_sponsor": .[62],
+        "Name_of_secondary_funder_s": .[63]
       },
       "Secondary_IDs": {
         "Secondary_IDs": .[64],
         "Study_ID_1": .[65],
-        "Org._issuing_International_ID_1": .[66],
+        "Org_issuing_International_ID_1": .[66],
         "Study_ID_2": .[67],
-        "Org._issuing_International_ID_2": .[68],
+        "Org_issuing_International_ID_2": .[68],
         "IND_to_MHLW": .[69]
       },
       "Institutions": {
@@ -140,7 +140,7 @@ function download_and_analyse_trial(){
       "Progress": {
         "Date_of_protocol_fixation": .[73],
         "Anticipated_trial_start_date": .[74],
-        "Last_follow-up_date": .[75],
+        "Last_follow_up_date": .[75],
         "Date_of_closure_to_data_entry": .[76],
         "Date_trial_data_considered_complete": .[77],
         "Date_analysis_concluded": .[78]
@@ -157,7 +157,7 @@ function download_and_analyse_trial(){
         "Last_modified_on": .[85]
       },
       "Link_to_view_the_page": {
-        "URL(English)": .[86]
+        "URL_English": .[86]
       }
     }' >> ${2}/${g}_2.json
 
