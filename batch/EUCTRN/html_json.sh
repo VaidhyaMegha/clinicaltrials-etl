@@ -64,5 +64,4 @@ else
     do
         download_and_analyse_trial ${f} ${html_dir}/studies/json
     done
-
 fi
