@@ -20,4 +20,3 @@ process.stdin.on('end', function () {
         json = JSON.parse(study);
         process.stdout.write(JSON.stringify(json[0]) + '\n')
 });
-
