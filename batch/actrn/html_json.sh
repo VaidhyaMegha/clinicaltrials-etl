@@ -5,24 +5,9 @@ set +H
 
 html_dir=${1}
 download=${2:-'no'}
-s3_bucket=${3:-'s3://hsdlc-results/actrn-adapter/'}
+s3_bucket=${3:-'s3://hsdlc-results/actrn-adapter'}
 context_dir=${4:-'/usr/local/dataintegration'}
-max_id=${5:-375400}
 
-prefix_url="https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id="
-suffix_url=""
-
-function download_trial(){
-    g=${1}
-
-    wget  -q ${prefix_url}${g}${suffix_url} \
-         -O ${html_dir}/actrn/studies/${g}.html  || true
-    sleep 0.001s
-}
-
-function Delete_Invalid_files() {
-  grep -lrIZ 'Invalid Request' ${1} | xargs -0 rm -f --
-}
 
 function analyse_file() {
     sed "s/&quot;/ /g" ${1} > ${1}.tmp
@@ -55,16 +40,8 @@ if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}/actrn/studies/analysis
     mkdir ${html_dir}/actrn/json
 
-    for ((f=1;f<=${max_id};f+=1))
-    do
-        download_trial ${f}
-    done
+    aws s3 sync ${s3_bucket}/studies ${html_dir}/actrn/studies  --delete
 
-
-   ls ${html_dir}/actrn/studies | grep -oE "[^ ]*\.html" | while read f
-   do
-        Delete_Invalid_files ${html_dir}/actrn/studies/${f}
-   done
 
     ls ${html_dir}/actrn/studies | grep -oE "[^ ]*\.html" | while read f
 
@@ -73,12 +50,12 @@ if [[ ${download} == 'yes' ]]; then
     done
 
     ls ${html_dir}/actrn/studies/analysis | grep -oE "[^ ]*\.html" | while read f
-     do
+    do
        gen_json  ${html_dir}/actrn/studies/analysis/${f} ${html_dir}/actrn/json/
     done
 
+    aws s3 sync ${html_dir}/actrn/json ${s3_bucket}/json  --delete
 
-    aws s3 sync  ${html_dir}/actrn/ ${s3_bucket} --delete
 else
     rm -rf ${html_dir}/actrn
 
@@ -87,15 +64,7 @@ else
     mkdir ${html_dir}/actrn/studies/analysis
     mkdir ${html_dir}/actrn/json
 
-    for ((f=1;f<=${max_id};f+=1))
-    do
-        download_trial ${f}
-    done
-
-   ls ${html_dir}/actrn/studies | grep -oE "[^ ]*\.html" | while read f
-   do
-        Delete_Invalid_files ${html_dir}/actrn/studies/${f}
-   done
+    aws s3 sync ${s3_bucket} ${html_dir}/actrn/  --delete
 
     ls ${html_dir}/actrn/studies | grep -oE "[^ ]*\.html" | while read f
 
@@ -108,6 +77,7 @@ else
        gen_json  ${html_dir}/actrn/studies/analysis/${f} ${html_dir}/actrn/studies/json/
     done
 
+     aws s3 sync ${html_dir}/actrn/json ${s3_bucket}/json  --delete
 fi
 
 popd
