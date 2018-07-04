@@ -9,7 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/chictr/html_json" beforeDir="false" afterPath="$PROJECT_DIR$/batch/chictr/html_json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/chictr/html_json" beforeDir="false" afterPath="$PROJECT_DIR$/batch/chictr/html_json.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="html_json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/batch/chictr/html_json">
+      <file leaf-file-name="html_json.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+            <state relative-caret-position="558">
+              <caret line="31" column="89" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -214,7 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/athena/ctri/download_trials.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/ctri/parse_html_gen_csv_record.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/ctri/keys.py" />
         <option value="$PROJECT_DIR$/scripts/athena/ctri/Dockerfile" />
@@ -265,6 +264,7 @@
         <option value="$PROJECT_DIR$/batch/chictr/xmls/ChiCtr201807040634312496.xml.json" />
         <option value="$PROJECT_DIR$/batch/chictr/README.md" />
         <option value="$PROJECT_DIR$/batch/chictr/html_json" />
+        <option value="$PROJECT_DIR$/batch/chictr/html_json.js" />
       </list>
     </option>
   </component>
@@ -764,10 +764,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="851155000" />
+    <option name="totallyTimeSpent" value="856262000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="10" weight="0.32991913" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -1182,10 +1183,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/chictr/html_json">
+    <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+        <state relative-caret-position="558">
+          <caret line="31" column="89" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
         </state>
       </provider>
     </entry>
