@@ -21,19 +21,29 @@ process.stdin.on('end', function () {
     var resp = {};
 
     for (var i = 0; i < json.length ; i++) {
+        if(json[i].children && json[i].children.length > 1){
             if(json[i].class && json[i].class === 'en') {
-                if (json[i].children && json[i].children.length > 1 && json[i].children[1].children){
+                if (json[i].children[1].children){
                     resp[json[i].children[0].children[0].text] = json[i].children[1].children[0].text;
+                    // console.log(" 1");
                 }
             } else if (!json[i].class) {
-                if (json[i].children && json[i].children.length > 1 && json[i].children[0].children[1]){
-                   resp[json[i].children[0].children[1].text] = json[i].children[1].text
+                if (json[i].children[0].children[1]) {
+                    resp[json[i].children[0].children[1].text] = json[i].children[1].text;
+                    // console.log(" 2");
                 }
 
-                if (json[i].children && json[i].children.length > 2 && json[i].children[2].children[1]){
-                    resp[json[i].children[2].children[1].text] = json[i].children[3].text
+                if (json[i].children.length > 2 && json[i].children[2].children[1]) {
+                    resp[json[i].children[2].children[1].text] = json[i].children[3].text;
+                    // console.log(" 3");
+                }
+
+                if (json[i].children.length === 2 && json[i].children[0].children[1].class === 'en' && json[i].children[1].children && json[i].children[1].children[1]) {
+                    resp[json[i].children[0].children[1].text] = json[i].children[1].children[1].text;
+                    // console.log(" 4");
                 }
             }
+        }
     }
         process.stdout.write(JSON.stringify(resp) + '\n')
 });

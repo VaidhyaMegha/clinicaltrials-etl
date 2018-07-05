@@ -9,7 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/chictr/html_json" beforeDir="false" afterPath="$PROJECT_DIR$/batch/chictr/html_json.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/actrn/html_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/actrn/html_json.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/chictr/html_json.js" beforeDir="false" afterPath="$PROJECT_DIR$/batch/chictr/html_json.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,6 +36,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch/actrn/html_json.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2954">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/EUCTRN/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,8 +84,8 @@
       <file leaf-file-name="html_json.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="31" column="89" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
+            <state relative-caret-position="396">
+              <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -97,15 +107,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
               <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch/EUCTRN/Makefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -139,7 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>\t</find>
       <find>&quot;([^ :]*) ([^ :])</find>
       <find>&quot;([^ ]*) ([^ ]*)&quot;</find>
       <find>Titles</find>
@@ -169,6 +169,7 @@
       <find>python</find>
       <find>EudraCT Number</find>
       <find>non-r</find>
+      <find>json[i].children &amp;&amp; json[i].children.length &gt; 1 &amp;&amp;</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;:&quot;~&quot;\n&quot;</replace>
@@ -251,7 +252,6 @@
         <option value="$PROJECT_DIR$/batch/jprn/Makefile" />
         <option value="$PROJECT_DIR$/batch/jprn/all_keys.json" />
         <option value="$PROJECT_DIR$/batch/jprn/README.md" />
-        <option value="$PROJECT_DIR$/batch/actrn/html_json.sh" />
         <option value="$PROJECT_DIR$/batch/jprn/html_json.sh" />
         <option value="$PROJECT_DIR$/batch/actrn/analyse.sh" />
         <option value="$PROJECT_DIR$/batch/EUCTRN/analyse.py" />
@@ -265,6 +265,7 @@
         <option value="$PROJECT_DIR$/batch/chictr/README.md" />
         <option value="$PROJECT_DIR$/batch/chictr/html_json" />
         <option value="$PROJECT_DIR$/batch/chictr/html_json.js" />
+        <option value="$PROJECT_DIR$/batch/actrn/html_json.sh" />
       </list>
     </option>
   </component>
@@ -764,7 +765,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="856262000" />
+    <option name="totallyTimeSpent" value="861531000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1050,13 +1051,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/actrn/html_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/EUCTRN/trial2.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1183,10 +1177,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/batch/actrn/html_json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2954">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="89" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
+        <state relative-caret-position="396">
+          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
         </state>
       </provider>
     </entry>

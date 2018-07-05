@@ -12,6 +12,7 @@ context_dir=${4:-'/usr/local/dataintegration'}
 function analyse_file() {
     sed "s/&quot;/ /g" ${1} > ${1}.tmp
     tr '\n' ' ' < ${1}.tmp > ${2}
+    rm ${1}.tmp
 }
 
 function gen_json() {
