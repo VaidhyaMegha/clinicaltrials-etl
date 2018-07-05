@@ -5,7 +5,7 @@ set +H
 
 html_dir=${1}
 download=${2:-'no'}
-s3_bucket=${3:-'s3://hsdlc-results/actrn-adapter'}
+s3_bucket=${3:-'s3://hsdlc-results/irct-adapter'}
 context_dir=${4:-'/usr/local/dataintegration'}
 
 
@@ -31,53 +31,53 @@ go get -u -f github.com/ericchiang/pup
 
 if [[ ${download} == 'yes' ]]; then
 
-    if [ -d ${html_dir}/actrn ]; then
-        rm -rf ${html_dir}/actrn
+    if [ -d ${html_dir}/irct ]; then
+        rm -rf ${html_dir}/irct
     fi
 
-    mkdir ${html_dir}/actrn
-    mkdir ${html_dir}/actrn/studies
-    mkdir ${html_dir}/actrn/studies/analysis
-    mkdir ${html_dir}/actrn/json
+    mkdir ${html_dir}/irct
+    mkdir ${html_dir}/irct/studies
+    mkdir ${html_dir}/irct/studies/analysis
+    mkdir ${html_dir}/irct/json
 
-    aws s3 sync ${s3_bucket}/studies ${html_dir}/actrn/studies  --delete
+    aws s3 sync ${s3_bucket}/studies ${html_dir}/irct/studies  --delete
 
 
-    ls ${html_dir}/actrn/studies | grep -oE "[^ ]*\.html" | while read f
+    ls ${html_dir}/irct/studies | grep -oE "[^ ]*\.html" | while read f
 
     do
-        analyse_file ${html_dir}/actrn/studies/${f} ${html_dir}/actrn/studies/analysis/${f}
+        analyse_file ${html_dir}/irct/studies/${f} ${html_dir}/irct/studies/analysis/${f}
     done
 
-    ls ${html_dir}/actrn/studies/analysis | grep -oE "[^ ]*\.html" | while read f
+    ls ${html_dir}/irct/studies/analysis | grep -oE "[^ ]*\.html" | while read f
     do
-       gen_json  ${html_dir}/actrn/studies/analysis/${f} ${html_dir}/actrn/json/
+       gen_json  ${html_dir}/irct/studies/analysis/${f} ${html_dir}/irct/json/
     done
 
-    aws s3 sync ${html_dir}/actrn/json ${s3_bucket}/json  --delete
+    aws s3 sync ${html_dir}/irct/json ${s3_bucket}/json  --delete
 
 else
-    rm -rf ${html_dir}/actrn
+    rm -rf ${html_dir}/irct
 
-    mkdir ${html_dir}/actrn
-    mkdir ${html_dir}/actrn/studies
-    mkdir ${html_dir}/actrn/studies/analysis
-    mkdir ${html_dir}/actrn/json
+    mkdir ${html_dir}/irct
+    mkdir ${html_dir}/irct/studies
+    mkdir ${html_dir}/irct/studies/analysis
+    mkdir ${html_dir}/irct/json
 
-    aws s3 sync ${s3_bucket} ${html_dir}/actrn/  --delete
+    aws s3 sync ${s3_bucket} ${html_dir}/irct/  --delete
 
-    ls ${html_dir}/actrn/studies | grep -oE "[^ ]*\.html" | while read f
+    ls ${html_dir}/irct/studies | grep -oE "[^ ]*\.html" | while read f
 
     do
-        analyse_file ${html_dir}/actrn/studies/${f} ${html_dir}/actrn/studies/analysis/${f}
+        analyse_file ${html_dir}/irct/studies/${f} ${html_dir}/irct/studies/analysis/${f}
     done
 
-    ls ${html_dir}/actrn/studies/analysis | grep -oE "[^ ]*\.html" | while read f
+    ls ${html_dir}/irct/studies/analysis | grep -oE "[^ ]*\.html" | while read f
      do
-       gen_json  ${html_dir}/actrn/studies/analysis/${f} ${html_dir}/actrn/studies/json/
+       gen_json  ${html_dir}/irct/studies/analysis/${f} ${html_dir}/irct/studies/json/
     done
 
-     aws s3 sync ${html_dir}/actrn/json ${s3_bucket}/json  --delete
+     aws s3 sync ${html_dir}/irct/json ${s3_bucket}/json  --delete
 fi
 
 popd
