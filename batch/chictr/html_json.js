@@ -1,49 +1,29 @@
 #!/usr/bin/env node
 
-var study = '';
-
-var args = process.argv.slice(2)
-var arg = args[0]
-
-if (arg === '--version') {
-        console.log(pkg.version)
-        process.exit(0)
-}
-
-process.stdin.on('data', function (data) {
-        study += data;
+let readline = require('readline');
+let rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+    terminal: false
 });
 
-process.stdin.resume();
+let study = [];
 
-process.stdin.on('end', function () {
-    var json = JSON.parse(study);
-    var resp = {};
 
-    for (var i = 0; i < json.length ; i++) {
-        if(json[i].children && json[i].children.length > 1){
-            if(json[i].class && json[i].class === 'en') {
-                if (json[i].children[1].children){
-                    resp[json[i].children[0].children[0].text] = json[i].children[1].children[0].text;
-                    // console.log(" 1");
-                }
-            } else if (!json[i].class) {
-                if (json[i].children[0].children[1]) {
-                    resp[json[i].children[0].children[1].text] = json[i].children[1].text;
-                    // console.log(" 2");
-                }
+rl.on('line', function(line){
+    let v = line.replace(/"/g, '');
+    v = v.replace(/text: /g, '');
 
-                if (json[i].children.length > 2 && json[i].children[2].children[1]) {
-                    resp[json[i].children[2].children[1].text] = json[i].children[3].text;
-                    // console.log(" 3");
-                }
+    study.push(v);
+});
 
-                if (json[i].children.length === 2 && json[i].children[0].children[1].class === 'en' && json[i].children[1].children && json[i].children[1].children[1]) {
-                    resp[json[i].children[0].children[1].text] = json[i].children[1].children[1].text;
-                    // console.log(" 4");
-                }
-            }
-        }
+rl.on('close', function () {
+    let resp = {};
+    let key = '';
+    for (let i = 0; i < study.length ; i++) {
+        if(study[i].indexOf('：') !== -1 ) key = study[i];
+        else resp[key.replace('：','')] = study[i].trim();
     }
-        process.stdout.write(JSON.stringify(resp) + '\n')
+
+    process.stdout.write(JSON.stringify(resp) + '\n');
 });
