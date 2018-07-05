@@ -20,9 +20,27 @@ rl.on('line', function(line){
 rl.on('close', function () {
     let resp = {};
     let key = '';
+    let prevValue = '';
     for (let i = 0; i < study.length ; i++) {
-        if(study[i].indexOf('：') !== -1 ) key = study[i];
-        else resp[key.replace('：','')] = study[i].trim();
+        if(study[i].indexOf('：') !== -1 ) {
+            key = study[i].replace('：','');
+            if(prevValue.indexOf('：') !== -1 )
+                resp[prevValue.replace('：','')] = ''
+        } else {
+            if(resp[key]){
+                if(typeof(resp[key]) === 'string'){
+                    let v = resp[key];
+                    resp[key] = [];
+                    resp[key].push(v);
+                }
+
+                resp[key].push(study[i].trim());
+            } else {
+                resp[key] = study[i].trim();
+            }
+        }
+
+        prevValue = study[i];
     }
 
     process.stdout.write(JSON.stringify(resp) + '\n');
