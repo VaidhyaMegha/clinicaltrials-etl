@@ -41,19 +41,19 @@ if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}/actrn/studies/analysis
     mkdir ${html_dir}/actrn/json
 
-    #aws s3 sync ${s3_bucket}/studies ${html_dir}/actrn/studies  --delete
+#    aws s3 sync ${s3_bucket}/studies ${html_dir}/actrn/studies  --delete
 
 
-    ls ${html_dir}/actrn/studies | grep -oE "[^ ]*\.html" | while read f
+#    ls ${html_dir}/actrn/studies | grep -oE "[^ ]*\.html" | while read f
+#
+#    do
+       analyse_file ${html_dir}/actrn/studies/${f} ${html_dir}/actrn/studies/analysis/${f}
+#    done
 
-    do
-        analyse_file ${html_dir}/actrn/studies/${f} ${html_dir}/actrn/studies/analysis/${f}
-    done
-
-    ls ${html_dir}/actrn/studies/analysis | grep -oE "[^ ]*\.html" | while read f
-    do
+#    ls ${html_dir}/actrn/studies/analysis | grep -oE "[^ ]*\.html" | while read f
+#    do
        gen_json  ${html_dir}/actrn/studies/analysis/${f} ${html_dir}/actrn/json/ || true
-    done
+#    done
 
     aws s3 sync ${html_dir}/actrn/json ${s3_bucket}/json  --delete
 
@@ -67,16 +67,16 @@ else
 
     aws s3 sync ${s3_bucket} ${html_dir}/actrn/  --delete
 
- #   ls ${html_dir}/actrn/studies | grep -oE "[^ ]*\.html" | while read f
+    ls ${html_dir}/actrn/studies | grep -oE "[^ ]*\.html" | while read f
 
- #   do
+    do
         analyse_file ${html_dir}/actrn/studies/${f} ${html_dir}/actrn/studies/analysis/${f}
- #   done
+    done
 
-  #  ls ${html_dir}/actrn/studies/analysis | grep -oE "[^ ]*\.html" | while read f
-  #   do
+    ls ${html_dir}/actrn/studies/analysis | grep -oE "[^ ]*\.html" | while read f
+     do
        gen_json  ${html_dir}/actrn/studies/analysis/${f} ${html_dir}/actrn/studies/json/ || true
-  #  done
+    done
 
      aws s3 sync ${html_dir}/actrn/json ${s3_bucket}/json  --delete
 fi
