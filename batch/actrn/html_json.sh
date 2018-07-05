@@ -41,7 +41,7 @@ if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}/actrn/studies/analysis
     mkdir ${html_dir}/actrn/json
 
-    aws s3 sync ${s3_bucket}/studies ${html_dir}/actrn/studies  --delete
+    #aws s3 sync ${s3_bucket}/studies ${html_dir}/actrn/studies  --delete
 
 
     ls ${html_dir}/actrn/studies | grep -oE "[^ ]*\.html" | while read f
