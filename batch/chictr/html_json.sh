@@ -39,21 +39,21 @@ if [[ ${download} == 'yes' ]]; then
 
     download_main_index
 
-    NUM_OF_PAGES=`cat ${html_dir}/*.html | grep -oE '<a [^P]*Page[^"]" [^L]*Last' | grep -oE '[0-9]*'`
+    NUM_OF_PAGES=`cat ${html_dir}/1.html | grep -oE '<a [^P]*Page[^"]" [^L]*Last' | grep -oE '[0-9]*'`
 
     for (( i=2; i<=${NUM_OF_PAGES}; i++ ))
     do
         download_index_page ${i}
     done
 
-    cat ${html_dir}/1.html | grep -oE "showprojen.aspx\?proj=[0-9]*"  | while read f
+    cat ${html_dir}/*.html | grep -oE "showprojen.aspx\?proj=[0-9]*"  | while read f
     do
         download_and_analyse_trial ${f} ${html_dir}/studies/json
     done
 
     aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
 else
-    cat ${html_dir}/1.html | grep -oE "showprojen.aspx\?proj=[0-9]*"  | while read f
+    cat ${html_dir}/*.html | grep -oE "showprojen.aspx\?proj=[0-9]*"  | while read f
     do
         download_and_analyse_trial ${f} ${html_dir}/studies/json
     done
