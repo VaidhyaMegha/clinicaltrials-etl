@@ -37,7 +37,7 @@ RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | b
     && source $NVM_DIR/nvm.sh \
     && nvm install $NODE_VERSION \
     && nvm alias default $NODE_VERSION \
-    && nvm use default 
+    && nvm use default
 
 ENV NODE_PATH $NVM_DIR/versions/node/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
@@ -55,7 +55,6 @@ RUN go get -u -f github.com/ericchiang/pup
 # Copy python,json and shell scripts
 COPY html_json.js /usr/local/dataintegration/
 COPY html_json.sh /usr/local/dataintegration/
-COPY Download_html.sh /usr/local/dataintegration/
 
 RUN chmod +x /usr/local/dataintegration/html_json.js
 RUN chmod +x /usr/local/dataintegration/html_json.sh
