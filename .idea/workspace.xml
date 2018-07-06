@@ -7,7 +7,9 @@
     <bookmark url="file://$PROJECT_DIR$/../ctd-spa/src/app/ct/query/query.component.html" description="      &quot;" line="29" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="" />
+    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/batch/chictr/html_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/chictr/html_json.sh" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,8 +78,8 @@
       <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="389">
+              <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -94,8 +96,8 @@
       <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/jprn/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2508">
-              <caret line="21" column="18" selection-start-line="21" selection-end-line="22" />
+            <state relative-caret-position="192">
+              <caret line="171" selection-start-line="171" selection-end-line="177" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -258,8 +260,8 @@
         <option value="$PROJECT_DIR$/batch/chictr/README.md" />
         <option value="$PROJECT_DIR$/batch/chictr/html_json.js" />
         <option value="$PROJECT_DIR$/batch/chictr/Makefile" />
-        <option value="$PROJECT_DIR$/batch/chictr/html_json.sh" />
         <option value="$PROJECT_DIR$/batch/chictr/Dockerfile" />
+        <option value="$PROJECT_DIR$/batch/chictr/html_json.sh" />
       </list>
     </option>
   </component>
@@ -764,7 +766,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="900563000" />
+    <option name="totallyTimeSpent" value="901190000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1181,13 +1183,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/jprn/html_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2508">
-          <caret line="21" column="18" selection-start-line="21" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/EUCTRN/Dockerfile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1205,10 +1200,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/batch/jprn/html_json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="171" selection-start-line="171" selection-end-line="177" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="389">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
         </state>
       </provider>
     </entry>

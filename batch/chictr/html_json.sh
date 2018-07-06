@@ -20,12 +20,19 @@ function download_index_page(){
 function download_and_analyse_trial(){
     g=${1//showprojen.aspx?proj=/}
 
-http://www.chictr.org.cn/28630
     wget -q ${prefix_url}${1} -O ${html_dir}/studies/${g}.html  || true
 
     cat ${html_dir}/studies/${g}.html  | pup 'div.ProjetInfo_ms tr json{}' |  grep 'text' | \
         grep -P '^[[:ascii:]]+：?"?$' | ./html_json.js  | jq -s -c add >> ${2}/studies.json
 }
+
+source "/root/.gvm/scripts/gvm"
+
+gvm install go1.4 --binary
+
+gvm use "go1.4"
+
+go get -u -f github.com/ericchiang/pup
 
 if [[ ${download} == 'yes' ]]; then
 
@@ -39,7 +46,7 @@ if [[ ${download} == 'yes' ]]; then
 
     download_main_index
 
-    NUM_OF_PAGES=`cat ${html_dir}/1.html | grep -oE '<a [^P]*Page[^"]" [^L]*Last' | grep -oE '[0-9]*'`
+    NUM_OF_PAGES=`cat ${html_dir}/1.html | grep -oE 'onclick=[^L]*Last' | grep -oE '[0-9]*'`
 
     for (( i=2; i<=${NUM_OF_PAGES}; i++ ))
     do
