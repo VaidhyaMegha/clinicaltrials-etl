@@ -53,7 +53,7 @@ if [[ ${download} == 'yes' ]]; then
 
     NUM_OF_PAGES=`cat ${html_dir}/1.html | grep -Eo '<a href="/search/*[^>]*>' |grep -oE '[0-9]*' | sort -g | tail -n 1`
 
-    for (( i=2; i<=2; i++ ))
+    for (( i=2; i<=${NUM_OF_PAGES}; i++ ))
     do
         download_index_page ${i}
     done
