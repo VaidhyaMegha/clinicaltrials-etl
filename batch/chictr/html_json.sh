@@ -23,7 +23,7 @@ function download_and_analyse_trial(){
     wget -q ${prefix_url}${1} -O ${html_dir}/studies/${g}.html  || true
 
     cat ${html_dir}/studies/${g}.html  | pup 'div.ProjetInfo_ms tr json{}' |  grep 'text' | \
-        grep -P '^[[:ascii:]]+：?"?$' | ./html_json.js  | jq -s -c add >> ${2}/studies.json
+        grep -P '^[[:ascii:]]+.?"?$' | ./html_json.js  | jq -s -c add >> ${2}/studies.json
 }
 
 source "/root/.gvm/scripts/gvm"
