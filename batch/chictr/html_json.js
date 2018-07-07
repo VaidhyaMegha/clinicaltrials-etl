@@ -93,7 +93,7 @@ rl.on('close', function () {
 });
 
 function isKey(str){
-    return str.indexOf('：') !== -1
+    return str.indexOf('@') !== -1
 }
 
 function cleanKeyLine(line){
@@ -101,7 +101,7 @@ function cleanKeyLine(line){
 
     key = key.replace(/\)/g, '');
     key = key.replace(/'/g, '');
-    key = key.replace(/：/g, '');
+    key = key.replace(/@/g, '');
     key = key.replace(/^ */g, '');
     key = key.replace(/ +/g, '_');
     key = key.replace(/\\n/g, '');
