@@ -22,17 +22,13 @@ function download_and_analyse_trial(){
 
     wget -q ${prefix_url}${1} -O ${html_dir}/studies/${g}.html  || true
 
-    cat ${html_dir}/studies/${g}.html  | pup 'div.ProjetInfo_ms tr json{}' |  grep 'text' | \
-        grep -P '^[[:ascii:]]+.?"?$' | ./html_json.js  | jq -s -c add >> ${2}/studies.json
+    sed 's/：/@/g' ${html_dir}/studies/${g}.html > ${html_dir}/studies/${g}_1.html
+
+    cat ${html_dir}/studies/${g}_1.html  | pup 'div.ProjetInfo_ms tr json{}' |  grep 'text' | \
+        grep -P '^[[:ascii:]]+@?"?$' | ./html_json.js  | jq -s -c add >> ${2}/studies.json
 }
 
-source "/root/.gvm/scripts/gvm"
-
-gvm install go1.4 --binary
-
 gvm use "go1.4"
-
-go get -u -f github.com/ericchiang/pup
 
 if [[ ${download} == 'yes' ]]; then
 
