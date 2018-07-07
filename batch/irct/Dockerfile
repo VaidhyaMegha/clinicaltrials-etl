@@ -39,7 +39,7 @@ ENV GOPATH $PATH:/$HOME/go
 
 RUN go get -u -f github.com/ericchiang/pup
 
-# Copy python,json and shell scripts 
+# Copy python,json and shell scripts
 COPY html_json.sh /usr/local/dataintegration/
 #
 #
