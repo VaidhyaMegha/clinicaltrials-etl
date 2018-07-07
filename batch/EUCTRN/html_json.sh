@@ -34,6 +34,9 @@ function download_and_analyse_trial(){
     rm ${2}/${g}_2.json
 }
 
+source ~/.gvm/scripts/gvm
+gvm use "go1.4"
+
 if [[ ${download} == 'yes' ]]; then
 
     if [ -d ${html_dir} ]; then

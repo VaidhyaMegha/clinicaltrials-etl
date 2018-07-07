@@ -1,5 +1,8 @@
 FROM ubuntu:16.04
 
+# Replace shell with bash so we can source files
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
 # Install python pip
 RUN  apt-get update &&  apt-get install -y python  && \
      apt-get install -y python-pip && \
@@ -30,14 +33,11 @@ RUN apt-get install -y  curl \
 
 ENV PATH $PATH:/root/.gvm/bin/
 
-SHELL ["/bin/bash", "-c", "source /root/.gvm/scripts/gvm"]
-RUN gvm install go1.4 --binary
-RUN gvm use go1.4
+
+SHELL ["/bin/bash", "-c", "source /root/.gvm/scripts/gvm &&  gvm install go1.4 --binary &&  gvm use go1.4 &&  go get -u -f github.com/ericchiang/pup"]
 
 ENV PATH $PATH:/usr/local/go/bin
 ENV GOPATH $PATH:/$HOME/go
-
-RUN go get -u -f github.com/ericchiang/pup
 
 COPY html_json.sh /usr/local/dataintegration/
 #

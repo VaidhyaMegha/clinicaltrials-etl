@@ -28,6 +28,7 @@ function download_and_analyse_trial(){
         grep -P '^[[:ascii:]]+@?"?$' | ./html_json.js  | jq -s -c add >> ${2}/studies.json
 }
 
+source ~/.gvm/scripts/gvm
 gvm use "go1.4"
 
 if [[ ${download} == 'yes' ]]; then
