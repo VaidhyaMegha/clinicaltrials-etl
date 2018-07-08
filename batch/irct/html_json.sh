@@ -31,13 +31,9 @@ function download_and_analyse_trial() {
 
 pushd ${context_dir}
 
-source "/root/.gvm/scripts/gvm"
 
-gvm install go1.4 --binary
-
+source ~/.gvm/scripts/gvm
 gvm use "go1.4"
-
-go get -u -f github.com/ericchiang/pup
 
 if [[ ${download} == 'yes' ]]; then
 
@@ -58,33 +54,17 @@ if [[ ${download} == 'yes' ]]; then
         download_index_page ${i}
     done
 
-    cat ${html_dir}/*.html | grep -Eo '<a href="\/trial\/[0-9]*' | grep -oE "[0-9]*" | while read f
+    cat ${html_dir}/*.html | grep -Eo 'result-title"><a href="\/trial\/[0-9]*' | grep -oE "[0-9]*" | while read f
     do
         download_and_analyse_trial ${f} ${html_dir}/studies/json ${html_dir}/studies/analysis/${f}
     done
 
     aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
 
-#else
-#    if [ -d ${html_dir}/studies ]; then
-#        rm -rf ${html_dir}/studies
-#    fi
-#
-#    mkdir -p ${html_dir}/studies
-#    mkdir ${html_dir}/studies/json
-#    mkdir ${html_dir}/studies/analysis
-#
-#    ls ${html_dir}/irct/studies | grep -oE "[^ ]*\.html" | while read f
-#
-#    do
-#        analyse_file ${html_dir}/irct/studies/${f} ${html_dir}/irct/studies/analysis/${f}
-#    done
-#
-#    ls ${html_dir}/irct/studies/analysis | grep -oE "[^ ]*\.html" | while read f
-#     do
-#       gen_json  ${html_dir}/irct/studies/analysis/${f} ${html_dir}/irct/studies/json/
-#    done
-
-#     aws s3 sync ${html_dir}/irct/json ${s3_bucket}/json  --delete
+else
+    cat ${html_dir}/*.html | grep -Eo 'result-title"><a href="\/trial\/[0-9]*' | grep -oE "[0-9]*" | while read f
+    do
+        download_and_analyse_trial ${f} ${html_dir}/studies/json ${html_dir}/studies/analysis/${f}
+    done
 fi
 popd
