@@ -27,7 +27,8 @@ function genJSON(){
     keyword=${keyword//[\/]/}
 
     path_str=`echo "${xml_dir}/json/${study_type}/${phase}/${keyword}/${condition}"`
-    path_str=${path_str//[\"|\[|\]| ]/}
+    path_str=${path_str//[\"|\[|\]]/}
+    path_str=${path_str// /_}
     path_str=${path_str:0:254}
 
     mkdir -p ${path_str}
