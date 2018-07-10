@@ -1,27 +1,42 @@
 #!/usr/bin/env bash
 set -ex
 
+xml_dir=${1}
+download=${2:-'no'}
+s3_bucket=${3:-'s3://hsdlc-results/ct-adapter/'}
+context_dir=${4:-'/usr/local/dataintegration'}
+
 function genJSON(){
     g=$( basename ${1} )
     g=${g//.xml/}
 
     sed "s/&quot;/ /g; s/\\\/ /g;" ${1} > ${1}.tmp
-    xmlstarlet tr xml_json.xslt ${1}.tmp > ${g}.json.tmp
+    xmlstarlet tr xml_json.xslt ${1}.tmp > ${g}_1.json
 
-    tr '\n' ' ' < ${g}.json.tmp > ${2}/json_per_study/${g}.json
-    echo "" >> ${2}/json_per_study/${g}.json
+    tr '\n' ' ' < ${g}_1.json > ${g}.json
+    echo "" >> ${g}.json
 
-    cat ${2}/json_per_study/${g}.json >> ${xml_dir}/json/studies.json
+    study_type=`cat ${g}.json | jq -c '.study_type | (if . == null then "empty" else (if . == "" then "empty" else . end) end)'`
+    phase=`cat ${g}.json | jq -c '.phase | (if . == null then "empty" else (if . == "" then "empty" else . end) end)  '`
+    keyword=`cat ${g}.json | jq -c '.keyword | (if . == null then "empty" else (if length == 0 then "empty" else . end) end)'`
+    condition=`cat ${g}.json | jq -c '.condition | (if . == null then "empty" else (if length == 0 then "empty" else . end) end)'`
+
+    study_type=${study_type//[\/]/}
+    condition=${condition//[\/]/}
+    phase=${phase//[\/]/}
+    keyword=${keyword//[\/]/}
+
+    path_str=`echo "${xml_dir}/json/${condition}/${keyword}/${study_type}/${phase}"`
+    path_str=${path_str//[\"|\[|\]| ]/}
+    path_str=${path_str:0:254}
+
+    mkdir -p ${path_str}
+    jq -c '.' ${g}.json >> ${path_str}/studies.json
 
     rm ${1}.tmp
-    rm ${g}.json.tmp
-    rm ${2}/json_per_study/${g}.json
+    rm ${g}_1.json
+    rm ${g}.json
 }
-
-xml_dir=${1}
-download=${2:-'no'}
-s3_bucket=${3:-'s3://hsdlc-results/ct-adapter/'}
-context_dir=${4:-'/usr/local/dataintegration'}
 
 pushd ${context_dir}
 
@@ -32,29 +47,20 @@ if [[ ${download} == 'yes' ]]; then
 
     rm -f AllPublicXML.zip
 
-    mkdir ${xml_dir}/json_per_study
     mkdir ${xml_dir}/json
 
     find ${xml_dir} -type f -name "*.xml" | while read f
     do
-        genJSON ${f} ${xml_dir}
+        genJSON ${f}
     done
 
     gzip ${xml_dir}/json/studies.json
 
     aws s3 sync  ${xml_dir} ${s3_bucket} --delete
 else
-    find ${xml_dir} -type f -name "*.json" -delete
-    find ${xml_dir} -type f -name "*.log" -delete
-
-    rm -rf ${xml_dir}/json_per_study
-    rm -rf ${xml_dir}/json
-    mkdir ${xml_dir}/json_per_study
-    mkdir ${xml_dir}/json
-
     find ${xml_dir} -type f -name "*.xml" | while read f
     do
-        genJSON ${f} ${xml_dir}
+        genJSON ${f}
     done
 
     gzip ${xml_dir}/json/studies.json
