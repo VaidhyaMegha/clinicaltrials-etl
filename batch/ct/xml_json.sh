@@ -17,6 +17,8 @@ function genJSON(){
     echo "" >> ${g}.json
 
     nct_id=`cat ${g}.json | jq -c '.id_info.nct_id | (if . == null then "empty" else (if . == "" then "empty" else . end) end)'`
+    nct_id=${nct_id//[\"]/}
+    nct_id=${nct_id:0:7}
 
     path_str=`echo "${xml_dir}/json/p_id=${nct_id}/"`
 

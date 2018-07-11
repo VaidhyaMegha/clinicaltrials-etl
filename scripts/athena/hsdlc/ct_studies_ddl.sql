@@ -121,9 +121,7 @@ CREATE EXTERNAL TABLE `ct_studies` (
      `condition_browse` string,
      `intervention_browse` string)
      PARTITIONED BY (
-      p_s string,
-      p_p string,
-      p_k string
+      p_id string
       )
      ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
      LOCATION 's3://hsdlc-results/ct-adapter/json'
