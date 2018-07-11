@@ -24,7 +24,7 @@ function genJSON(){
     phase=${phase//[\/]/}
     keyword=${keyword//[\/]/}
 
-    path_str=`echo "${xml_dir}/json/${study_type}/${phase}/${keyword}/"`
+    path_str=`echo "${xml_dir}/json/p_s=${study_type}/p_p=${phase}/p_k=${keyword}/"`
     path_str=${path_str//[\"|\[|\]]/}
     path_str=${path_str// /_}
     path_str=${path_str:0:254}

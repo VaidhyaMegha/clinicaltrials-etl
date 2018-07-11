@@ -120,8 +120,16 @@ CREATE EXTERNAL TABLE `ct_studies` (
      `removed_countries` string,
      `condition_browse` string,
      `intervention_browse` string)
+     PARTITIONED BY (
+      p_s string,
+      p_p string,
+      p_k string
+      )
      ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
      LOCATION 's3://hsdlc-results/ct-adapter/json'
      TBLPROPERTIES (
      'ignore.malformed.json'= 'true'
      );
+
+
+MSCK REPAIR TABLE ct_studies;
