@@ -19,14 +19,12 @@ function genJSON(){
     study_type=`cat ${g}.json | jq -c '.study_type | (if . == null then "empty" else (if . == "" then "empty" else . end) end)'`
     phase=`cat ${g}.json | jq -c '.phase | (if . == null then "empty" else (if . == "" then "empty" else . end) end)  '`
     keyword=`cat ${g}.json | jq -c '.keyword | (if . == null then "empty" else (if length == 0 then "empty" else . end) end)'`
-    condition=`cat ${g}.json | jq -c '.condition | (if . == null then "empty" else (if length == 0 then "empty" else . end) end)'`
 
     study_type=${study_type//[\/]/}
-    condition=${condition//[\/]/}
     phase=${phase//[\/]/}
     keyword=${keyword//[\/]/}
 
-    path_str=`echo "${xml_dir}/json/${study_type}/${phase}/${keyword}/${condition}"`
+    path_str=`echo "${xml_dir}/json/${study_type}/${phase}/${keyword}/"`
     path_str=${path_str//[\"|\[|\]]/}
     path_str=${path_str// /_}
     path_str=${path_str:0:254}

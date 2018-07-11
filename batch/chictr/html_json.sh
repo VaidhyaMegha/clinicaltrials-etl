@@ -26,6 +26,8 @@ function download_and_analyse_trial(){
 
     cat ${html_dir}/studies/${g}_1.html  | pup 'div.ProjetInfo_ms tr json{}' |  grep 'text' | \
         grep -P '^[[:ascii:]]+@?"?$' | ./html_json.js  | jq -s -c add >> ${2}/studies.json
+
+    rm ${html_dir}/studies/${g}_1.html
 }
 
 source ~/.gvm/scripts/gvm
@@ -55,7 +57,7 @@ if [[ ${download} == 'yes' ]]; then
         download_and_analyse_trial ${f} ${html_dir}/studies/json
     done
 
-    aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
+    aws s3 sync  ${html_dir}/ ${s3_bucket} --delete
 else
     cat ${html_dir}/*.html | grep -oE "showprojen.aspx\?proj=[0-9]*"  | while read f
     do
