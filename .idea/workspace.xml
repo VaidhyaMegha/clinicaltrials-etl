@@ -7,7 +7,9 @@
     <bookmark url="file://$PROJECT_DIR$/../ctd-spa/src/app/ct/query/query.component.html" description="      &quot;" line="29" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="" />
+    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/batch/chictr/html_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/chictr/html_json.sh" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/EUCTRN/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+            <state relative-caret-position="294">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -62,8 +64,8 @@
       <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+            <state relative-caret-position="895">
+              <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -95,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xml_json.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="xml_json.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="841">
+              <caret line="55" selection-start-line="55" selection-end-line="55" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -260,10 +262,10 @@
         <option value="$PROJECT_DIR$/batch/EUCTRN/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/irct/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/irct/html_json.sh" />
-        <option value="$PROJECT_DIR$/batch/ct/xml_json.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql" />
-        <option value="$PROJECT_DIR$/batch/EUCTRN/html_json.sh" />
+        <option value="$PROJECT_DIR$/batch/ct/xml_json.sh" />
         <option value="$PROJECT_DIR$/batch/chictr/html_json.sh" />
+        <option value="$PROJECT_DIR$/batch/EUCTRN/html_json.sh" />
       </list>
     </option>
   </component>
@@ -766,12 +768,12 @@
       <workItem from="1529758745069" duration="8131000" />
       <workItem from="1530275358010" duration="31141000" />
       <workItem from="1531048709741" duration="2015000" />
-      <workItem from="1531092050778" duration="33751000" />
+      <workItem from="1531092050778" duration="34136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="950677000" />
+    <option name="totallyTimeSpent" value="951062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1151,13 +1153,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/ctri/html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1440">
@@ -1165,17 +1160,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/EUCTRN/html_json.sh">
+    <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        <state relative-caret-position="841">
+          <caret line="55" selection-start-line="55" selection-end-line="55" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
+    <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="895">
+          <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/EUCTRN/html_json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>

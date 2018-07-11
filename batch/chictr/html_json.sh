@@ -33,6 +33,8 @@ function download_and_analyse_trial(){
 source ~/.gvm/scripts/gvm
 gvm use "go1.4"
 
+pushd ${context_dir}
+
 if [[ ${download} == 'yes' ]]; then
 
     if [ -d ${html_dir} ]; then
@@ -64,3 +66,5 @@ else
         download_and_analyse_trial ${f} ${html_dir}/studies/json
     done
 fi
+
+popd
