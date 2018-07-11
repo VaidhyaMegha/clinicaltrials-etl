@@ -55,8 +55,6 @@ if [[ ${download} == 'yes' ]]; then
         genJSON ${f}
     done
 
-    gzip ${xml_dir}/json/studies.json
-
     aws s3 sync  ${xml_dir} ${s3_bucket} --delete
 else
     find ${xml_dir} -type f -name "*.xml" | while read f
