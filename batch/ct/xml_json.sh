@@ -16,18 +16,9 @@ function genJSON(){
     tr '\n' ' ' < ${g}_1.json > ${g}.json
     echo "" >> ${g}.json
 
-    study_type=`cat ${g}.json | jq -c '.study_type | (if . == null then "empty" else (if . == "" then "empty" else . end) end)'`
-    phase=`cat ${g}.json | jq -c '.phase | (if . == null then "empty" else (if . == "" then "empty" else . end) end)  '`
-    keyword=`cat ${g}.json | jq -c '.keyword | (if . == null then "empty" else (if length == 0 then "empty" else . end) end)'`
+    nct_id=`cat ${g}.json | jq -c '.id_info.nct_id | (if . == null then "empty" else (if . == "" then "empty" else . end) end)'`
 
-    study_type=${study_type//[\/]/}
-    phase=${phase//[\/]/}
-    keyword=${keyword//[\/]/}
-
-    path_str=`echo "${xml_dir}/json/p_s=${study_type}/p_p=${phase}/p_k=${keyword}/"`
-    path_str=${path_str//[\"|\[|\]]/}
-    path_str=${path_str// /_}
-    path_str=${path_str:0:254}
+    path_str=`echo "${xml_dir}/json/p_id=${nct_id}/"`
 
     mkdir -p ${path_str}
     jq -c '.' ${g}.json >> ${path_str}/studies.json
