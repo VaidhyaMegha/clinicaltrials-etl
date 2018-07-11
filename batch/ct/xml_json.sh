@@ -62,7 +62,6 @@ else
         genJSON ${f}
     done
 
-    gzip ${xml_dir}/json/studies.json
 fi
 
 popd

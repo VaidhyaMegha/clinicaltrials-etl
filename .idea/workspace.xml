@@ -7,9 +7,7 @@
     <bookmark url="file://$PROJECT_DIR$/../ctd-spa/src/app/ct/query/query.component.html" description="      &quot;" line="29" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/batch/ct/xml_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/ct/xml_json.sh" afterDir="false" />
-    </list>
+    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -750,12 +748,12 @@
       <workItem from="1529758745069" duration="8131000" />
       <workItem from="1530275358010" duration="31141000" />
       <workItem from="1531048709741" duration="2015000" />
-      <workItem from="1531092050778" duration="23656000" />
+      <workItem from="1531092050778" duration="24092000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="940582000" />
+    <option name="totallyTimeSpent" value="941018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
