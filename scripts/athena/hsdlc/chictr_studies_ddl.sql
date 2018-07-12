@@ -74,7 +74,7 @@ CREATE EXTERNAL TABLE `chictr_studies`(
         
   )
   ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
-  LOCATION 's3://hsdlc-results/chictr-adapter/json'
+  LOCATION 's3://hsdlc-results/chictr-adapter/studies/json'
   TBLPROPERTIES (
   'ignore.malformed.json'= 'true'
   );
