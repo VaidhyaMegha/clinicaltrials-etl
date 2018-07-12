@@ -32,7 +32,7 @@ CREATE EXTERNAL TABLE `chictr_studies`(
   `Contact_email_of_the_ethic_committee` string,
   `Primary_sponsor` string,
   `Primary_sponsors_address` string,
-  `Secondary_sponsor` Array<Map<string,string>>,
+  `Secondary_sponsor` string,
   `Sources_of_funding` string,
   `Target_disease` string,
   `Target_disease_code` string,
