@@ -9,18 +9,18 @@ prefix_url="http://www.chictr.org.cn/"
 suffix_url="searchprojen.aspx?page="
 
  function download_main_index(){
-    wget  -q ${prefix_url}${suffix_url}"1" \
+    wget  -q -T 30 ${prefix_url}${suffix_url}"1" \
          -O ${html_dir}/1.html  || true
 }
 
 function download_index_page(){
-    wget -q ${prefix_url}${suffix_url}${1} -O ${html_dir}/${1}.html  || true
+    wget -q -T 30 ${prefix_url}${suffix_url}${1} -O ${html_dir}/${1}.html  || true
 }
 
 function download_and_analyse_trial(){
     g=${1//showprojen.aspx?proj=/}
 
-    wget -q ${prefix_url}${1} -O ${html_dir}/studies/${g}.html  || true
+    wget -q -T 30 ${prefix_url}${1} -O ${html_dir}/studies/${g}.html  || true
 
     sed 's/：/@/g' ${html_dir}/studies/${g}.html > ${html_dir}/studies/${g}_1.html
 
