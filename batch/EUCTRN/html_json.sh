@@ -18,7 +18,8 @@ function download_index_page(){
 }
 
 function download_and_analyse_trial(){
-    g=$( echo ${1//ctr-search/} | grep -oE "[0-9\-]*")
+    g=${1//ctr-search\/trial\//}
+    g=${g//\//_}
 
     wget -q ${prefix_url}${1} -O ${html_dir}/studies/${g}.html  || true
 
