@@ -29,7 +29,9 @@ function download_and_analyse_trial(){
     cat ${html_dir}/studies/${g}.html  | pup 'div.detail tr.tricell json{}' | \
       jq  '.[] | {(.children[1].text): .children[2].text}' | jq -s add >> ${2}/${g}_2.json
 
-    jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json >> ${2}/studies.json
+    mkdir -p ${2}/${g:0:4}/
+
+    jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json >> ${2}/${g:0:4}/studies.json
 
     rm ${2}/${g}_1.json
     rm ${2}/${g}_2.json
@@ -37,6 +39,8 @@ function download_and_analyse_trial(){
 
 source ~/.gvm/scripts/gvm
 gvm use "go1.4"
+
+pushd ${context_dir}
 
 if [[ ${download} == 'yes' ]]; then
 
@@ -59,13 +63,15 @@ if [[ ${download} == 'yes' ]]; then
 
     cat ${html_dir}/*.html | grep -oE "ctr-search\/trial\/[0-9\-]*/[A-Z][A-Z]" | while read f
     do
-        download_and_analyse_trial ${f} ${html_dir}/studies/json
+        download_and_analyse_trial ${f} ${html_dir}/studies/json &
     done
 
     aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
 else
     cat ${html_dir}/*.html | grep -oE "ctr-search\/trial\/[0-9\-]*/[A-Z][A-Z]" | while read f
     do
-        download_and_analyse_trial ${f} ${html_dir}/studies/json
+        download_and_analyse_trial ${f} ${html_dir}/studies/json &
     done
 fi
+
+popd
