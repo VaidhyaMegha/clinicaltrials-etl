@@ -27,9 +27,8 @@ function download_trial(){
 }
 
 function analyse_trial(){
-    g=${1//ctr-search\/trial\//}
-    g=${g//\//_}
-
+    g=${1}
+    
     tr '[:upper:]' '[:lower:]' < ${html_dir}/studies/${g}.html > ${html_dir}/studies/${g}_1.html
 
     cat ${html_dir}/studies/${g}_1.html  | pup 'div.detail :parent-of(td.cellGrey)  json{}' | \
@@ -81,7 +80,7 @@ else
     aws s3 sync  ${s3_bucket} ${html_dir}/studies/  --delete
 fi
 
-cat ${html_dir}/*.html | grep -oE "ctr-search\/trial\/[0-9\-]*/[A-Z][A-Z]" | while read f
+find ${html_dir}/studies -type f -name "*.html" -printf "%f\n" | while read f
 do
     analyse_trial ${f} ${html_dir}/studies/json
 done
