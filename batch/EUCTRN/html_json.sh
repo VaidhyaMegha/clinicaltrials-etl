@@ -29,24 +29,25 @@ function download_trial(){
 function analyse_trial(){
     g=${1//.html/}
 
-    tr '[:upper:]' '[:lower:]' < ${html_dir}/studies/${g}.html > ${html_dir}/studies/${g}_1.html
-
-    cat ${html_dir}/studies/${g}_1.html  | pup 'div.detail :parent-of(td.cellGrey)  json{}' | \
-      sed 's/ /_/g; s/(//g; s/)//g; s/\\n//g; s/&gt\;//g; s/&lt\;//g; s/&#39\;//g; s/__*/_/g' | \
+    cat ${html_dir}/studies/${g}.html  | pup 'div.detail :parent-of(td.cellGrey)  json{}' | \
        jq '.[] | {(.children[0].text): .children[1].text}' | jq -s add > ${2}/${g}_1.json
 
-    cat ${html_dir}/studies/${g}_1.html  | pup 'div.detail tr.tricell json{}' | \
-      sed 's/ /_/g; s/(//g; s/)//g; s/\\n//g; s/&gt\;//g; s/&lt\;//g; s/&#39\;//g; s/__*/_/g' | \
+    cat ${html_dir}/studies/${g}.html | pup 'div.detail tr.tricell json{}' | \
        jq  '.[] | {(.children[1].text): .children[2].text}' | jq -s add > ${2}/${g}_2.json
 
     dir_path="${2}/p_y=${g:0:4}/"
     mkdir -p "${dir_path}"
 
-    jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json >> ${dir_path}/studies.json
+    jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json > ${2}/${g}_3.json
 
-    rm ${html_dir}/studies/${g}_1.html
+    tr '[:upper:]' '[:lower:]' < ${2}/${g}_3.json > ${2}/${g}.json
+    sed -i 's/ /_/g; s/(//g; s/)//g; s/\\n//g; s/&gt\;//g; s/&lt\;//g; s/&#39\;//g; s/__*/_/g' ${2}/${g}.json
+
+    cat ${2}/${g}.json >> ${dir_path}/studies.json
+
     rm ${2}/${g}_1.json
     rm ${2}/${g}_2.json
+    rm ${2}/${g}_3.json
 }
 
 source ~/.gvm/scripts/gvm
