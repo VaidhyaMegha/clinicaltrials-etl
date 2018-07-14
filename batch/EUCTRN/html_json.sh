@@ -27,17 +27,17 @@ function download_trial(){
 }
 
 function analyse_trial(){
-    g=${1}
-    
+    g=${1//.html/}
+
     tr '[:upper:]' '[:lower:]' < ${html_dir}/studies/${g}.html > ${html_dir}/studies/${g}_1.html
 
     cat ${html_dir}/studies/${g}_1.html  | pup 'div.detail :parent-of(td.cellGrey)  json{}' | \
       sed 's/ /_/g; s/(//g; s/)//g; s/\\n//g; s/&gt\;//g; s/&lt\;//g; s/&#39\;//g; s/__*/_/g' | \
-       jq '.[] | {(.children[0].text): .children[1].text}' | jq -s add >> ${2}/${g}_1.json
+       jq '.[] | {(.children[0].text): .children[1].text}' | jq -s add > ${2}/${g}_1.json
 
     cat ${html_dir}/studies/${g}_1.html  | pup 'div.detail tr.tricell json{}' | \
       sed 's/ /_/g; s/(//g; s/)//g; s/\\n//g; s/&gt\;//g; s/&lt\;//g; s/&#39\;//g; s/__*/_/g' | \
-       jq  '.[] | {(.children[1].text): .children[2].text}' | jq -s add >> ${2}/${g}_2.json
+       jq  '.[] | {(.children[1].text): .children[2].text}' | jq -s add > ${2}/${g}_2.json
 
     dir_path="${2}/p_y=${g:0:4}/"
     mkdir -p "${dir_path}"
@@ -59,8 +59,6 @@ if [ -d ${html_dir} ]; then
 fi
 
 mkdir -p ${html_dir}/studies
-mkdir ${html_dir}/studies/json
-mkdir ${html_dir}/studies/analysis
 
 if [[ ${download} == 'yes' ]]; then
     download_main_index
@@ -79,6 +77,12 @@ if [[ ${download} == 'yes' ]]; then
 else
     aws s3 sync  ${s3_bucket} ${html_dir}/studies/  --delete
 fi
+
+if [ -d ${html_dir}/studies/json ]; then
+    rm -rf ${html_dir}/studies/json
+fi
+
+mkdir ${html_dir}/studies/json
 
 find ${html_dir}/studies -type f -name "*.html" -printf "%f\n" | while read f
 do
