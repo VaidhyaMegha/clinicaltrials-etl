@@ -67,7 +67,7 @@ CREATE EXTERNAL TABLE `ct_studies` (
       `study_design_info`struct<`allocation`:string,`intervention_model`:string,`intervention_model_description`:string,`primary_purpose`:string,`observational_model`:string,
                 `time_perspective`:string,`masking`:string,`masking_description`:string>,
      `required_header`struct<`download_date`:string,`link_text`:string,`url`:string>,
-     `id_info`struct<`org_study_id`:string,`secondary_id`:string,`nct_id`:string,`nct_alias`:string>,
+     `id_info`struct<`org_study_id`:string,`secondary_id`:array<string>,`nct_id`:string,`nct_alias`:array<string>>,
      `brief_title` string,
      `acronym` string,
      `official_title` string,

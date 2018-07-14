@@ -7,7 +7,11 @@
     <bookmark url="file://$PROJECT_DIR$/../ctd-spa/src/app/ct/query/query.component.html" description="      &quot;" line="29" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="" />
+    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tuning/athena.sql" beforeDir="false" afterPath="$PROJECT_DIR$/tuning/athena.sql" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,11 +68,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/isrctn/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="30" column="65" lean-forward="true" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
+            <state relative-caret-position="360">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch/isrctn/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="euctrn_studies_ddl.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/euctrn_studies_ddl.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="631">
+              <caret line="128" column="44" selection-start-line="1" selection-end-line="128" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ct_studies_ddl.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="883">
+              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="athena.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tuning/athena.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="6" selection-end-column="121" />
             </state>
           </provider>
         </entry>
@@ -78,38 +119,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
               <caret line="24" column="81" selection-start-line="24" selection-start-column="81" selection-end-line="24" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chictr_studies_ddl.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/chictr_studies_ddl.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="irct_studies_ddl.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/irct_studies_ddl.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="actrn_studies_ddl.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/actrn_studies_ddl.sql">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="ddl.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ddl.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -127,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith(&quot;Secondary outcome&quot;) end)] | index(true) : [.[] |  .children[0].text == &quot;Eligibility&quot;] | index(true)]</find>
       <find>[.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith(&quot;Secondary outcome&quot;) end)] | index(true) : [.[] |  .children[0].text == &quot;Eligibility&quot;] | index(true)] | .[] |</find>
       <find>.[[.[] | .children[0].children[0].children[0].text | ( if . == null then false else startswith(&quot;Secondary outcome&quot;) end)] | index(true) : [.[] |  .children[0].text == &quot;Eligibility&quot;] | index(true)] | .[] |</find>
       <find>Eligibility</find>
@@ -157,6 +165,7 @@
       <find>analysis</find>
       <find>G</find>
       <find>euctrn</find>
+      <find>id_in</find>
     </findStrings>
     <replaceStrings>
       <replace>type</replace>
@@ -202,7 +211,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/athena/ct/xml_json.sh" />
         <option value="$PROJECT_DIR$/../references/last_few_lines.json" />
         <option value="$PROJECT_DIR$/batch/ct/xml_json.xslt" />
         <option value="$PROJECT_DIR$/../references/last_few_lines_1.json" />
@@ -245,7 +253,6 @@
         <option value="$PROJECT_DIR$/batch/EUCTRN/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/irct/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/irct/html_json.sh" />
-        <option value="$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql" />
         <option value="$PROJECT_DIR$/batch/ct/xml_json.sh" />
         <option value="$PROJECT_DIR$/batch/chictr/html_json.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/chictr_studies_ddl.sql" />
@@ -253,6 +260,8 @@
         <option value="$PROJECT_DIR$/batch/EUCTRN/html_json.sh" />
         <option value="$PROJECT_DIR$/batch/isrctn/Makefile" />
         <option value="$PROJECT_DIR$/batch/isrctn/html_json.sh" />
+        <option value="$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql" />
+        <option value="$PROJECT_DIR$/tuning/athena.sql" />
       </list>
     </option>
   </component>
@@ -346,6 +355,52 @@
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="batch" type="462c0819:PsiDirectoryNode" />
               <item name="jprn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="athena" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="athena" type="462c0819:PsiDirectoryNode" />
+              <item name="hsdlc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="snippets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="snippets" type="462c0819:PsiDirectoryNode" />
+              <item name="adapters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="snippets" type="462c0819:PsiDirectoryNode" />
+              <item name="analysis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="snippets" type="462c0819:PsiDirectoryNode" />
+              <item name="datasources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="tuning" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -749,12 +804,12 @@
       <workItem from="1529758745069" duration="8131000" />
       <workItem from="1530275358010" duration="31141000" />
       <workItem from="1531048709741" duration="2015000" />
-      <workItem from="1531092050778" duration="71653000" />
+      <workItem from="1531092050778" duration="76038000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="988579000" />
+    <option name="totallyTimeSpent" value="992964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -893,11 +948,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/data.gov.in/apis.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/jprn/htmls/json/html_json.json" />
-    <entry file="file://$PROJECT_DIR$/batch/jprn/values.json" />
     <entry file="file://$PROJECT_DIR$/batch/jprn/all_keys.json" />
     <entry file="file://$PROJECT_DIR$/batch/jprn/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -1068,13 +1118,6 @@
     <entry file="file://$PROJECT_DIR$/batch/ct/public.xsd">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="131" selection-start-line="131" selection-end-line="132" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -1151,10 +1194,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/batch/isrctn/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/batch/isrctn/html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="65" lean-forward="true" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
+        <state relative-caret-position="360">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/euctrn_studies_ddl.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="128" column="44" selection-start-line="1" selection-end-line="128" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="883">
+          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuning/athena.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="121" />
         </state>
       </provider>
     </entry>

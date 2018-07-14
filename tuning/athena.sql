@@ -1,3 +1,15 @@
+select id_info.nct_id as id1, id_info.org_study_id as id2 from ct_studies
+  where id_info.nct_id='NCT00004024' and p_id='NCT0000'
+union all
+select id_info.nct_id as id1, i.item as id2 from ct_studies
+  cross join unnest(id_info.secondary_id) as i (item) where id_info.nct_id='NCT00004024' and p_id='NCT0000' and i.item != ''
+union all
+select id_info.nct_id as id1, i.item as id2 from ct_studies
+  cross join unnest(id_info.nct_alias) as i (item) where id_info.nct_id='NCT00004024' and p_id='NCT0000' and i.item != ''
+
+
+
+
 ---compressed JSON table
 athena:global> select count(1) from ct_studies;;
    _col0
