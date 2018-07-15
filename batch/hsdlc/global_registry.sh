@@ -11,6 +11,7 @@ s3_euctrn_bucket=${7:-'s3://hsdlc-results/euctrn-adapter/'}
 s3_irctn_bucket=${8:-'s3://hsdlc-results/irctn-adapter/'}
 s3_jprn_bucket=${9:-'s3://hsdlc-results/jprn-adapter/'}
 context_dir=${10:-'/usr/local/dataintegration'}
+
 if [[ ${download} == 'yes' ]]; then
   if [ -d ${html_dir}ct ]; then
         rm -rf ${html_dir}ct
@@ -100,11 +101,13 @@ done
 find ${html_dir}jprn/studies/json/ -type f -name "*.json"  | while read f
 do
 jq -c '{"trialid":.Unique_ID_issued_by_UMIN,"secondary_id":.Secondary_IDs,"Date_of_Registration":.Management_information.Registered_date,"primary_sponsors":.Sponsor,"secondary_sponsors":.Other_related_Organizations.Co_sponsor,"Contact_For_Public_Queries":.Public_Contact_Person,"Contact_For_Scientific_Queries":.Research_Contact_Person,"Public_Title":.Basic_information.Title_of_the_study_Brief_title,"Scientific_Title":.Official_scientific_title_of_the_study,"Intervention":.Intervention,"inclusion_criteria":.Eligibility.Key_inclusion_criteria,"exclusion_criteria":.Eligibility.key_exclusion_criteria,"study_type":.Base.Study_type,"date_of_first_enrollment":"","enrollment":.Eligibility.target_sample_size,"RecruitmentStatus":.Recruitment_status,"primary_outcome":.Assessment.Primary_outcomes,"secondary_outcome":.Assessment.Key_secondary_outcomes,"completionDate":.Progress.Date_analysis_concluded}' ${f} >> ${html_dir}output/json/utdm_json.jsonn
+done
 
 #########################   IRCTN    #####################################
 find ${html_dir}irctn/studies/json/ -type f -name "*.json"  | while read f
 do
 jq -c '{"trialid":.IRCT_RegistrationNumber,"secondary_id":.Secondary_Ids,"Date_of_Registration":.Registration_date,"primary_sponsors":.Sponsors__or_FundingSources,"secondary_sponsors":"","Contact_For_Public_Queries":.PersonResponsibleForGeneralQueries,"Contact_For_Scientific_Queries":.PersonResponsibleForScientificQueries,"Public_Title":.Public_title,"Scientific_Title":.Scientific_title,"Intervention":.Intervention_groups,"inclusion_criteria":.InclusionCriteria,"exclusion_criteria":.ExclusionCriteria,"study_type":"","date_of_first_enrollment":.Expected_Recruitment_start_Date,"enrollment":.Target_sample_size,"RecruitmentStatus":.Recruitment_status,"primary_outcome":.Primary_outcomes,"secondary_outcome":.Secondary_outcomes,"completionDate":""}' ${f} >> ${html_dir}output/json/utdm_json.json
+done
 
 #########################   CHICTRN    #####################################
 
