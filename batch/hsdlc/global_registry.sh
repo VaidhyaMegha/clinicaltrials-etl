@@ -4,8 +4,8 @@ set -ex
 html_dir=${1}
 download=${2:-'no'}
 s3_ct_bucket=${3:-'s3://hsdlc-results/ct-adapter/'}
-s3_ctri_bucket=${4:-'s3://hsdlc-results/ctri-adapter/'}
-s3_chictr_bucket=${5:-'s3://hsdlc-results/chictr-adapter/'}
+s3_ctri_bucket=${4:-'s3://hsdlc-results/ctri-adapter/studies/'}
+s3_chictr_bucket=${5:-'s3://hsdlc-results/chictr-adapter/studies/'}
 s3_actrn_bucket=${6:-'s3://hsdlc-results/actrn-adapter/'}
 s3_euctrn_bucket=${7:-'s3://hsdlc-results/euctrn-adapter/'}
 s3_irctn_bucket=${8:-'s3://hsdlc-results/irctn-adapter/'}
