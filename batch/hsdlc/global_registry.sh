@@ -69,15 +69,15 @@ context_dir=${10:-'/usr/local/dataintegration'}
     mkdir ${html_dir}/jprn/studies
     mkdir ${html_dir}/jprn/studies/json
 
+if [[ ${download} == 'yes' ]]; then
     aws s3 cp ${s3_ct_bucket}json ${html_dir}ct/studies/json --recursive
     aws s3 cp ${s3_ctri_bucket}json ${html_dir}ctri/studies/json
     aws s3 cp ${s3_chictr_bucket}json ${html_dir}chictr/studies/json
     aws s3 cp ${s3_actrn_bucket}json ${html_dir}studies/actrn/json
     aws s3 cp ${s3_euctrn_bucket}json ${html_dir}studies/euctrn/json --recursive
     aws s3 cp ${s3_irctn_bucket}json ${html_dir}studies/irctn/json
-    aws s3 cp ${s3_jprn_bucket}json ${html_dir}studies/jprn/json
-
-
+    aws s3 cp ${s3_jprn_bucket}json ${html_dir}studies/jprn/json 
+fi
 #########################    CT    ######################################
 
 find ${html_dir}ct/studies/json/ -type f -name "*.json"  | while read f
