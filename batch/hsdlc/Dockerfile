@@ -2,11 +2,14 @@ FROM ubuntu:16.04
 
 RUN  apt-get update &&  apt-get install -y python  && \
      apt-get install -y python-pip
+     apt-get install -y jq
 
-RUN  pip install awscli
+# Install boto( will also install botocore) and awscli
+RUN python --version && \
+     pip install boto3 && \
+     pip install awscli 
 
-COPY global_registry.sql /usr/local/global/
-COPY utdm_automation.sh /usr/local/global/
+COPY global_registry.sh /usr/local/global/
 
-RUN chmod +x /usr/local/global/utdm_automation.sh
+RUN chmod +x /usr/local/global/global_registry.sh
 
