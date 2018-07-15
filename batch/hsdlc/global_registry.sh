@@ -12,9 +12,34 @@ s3_irctn_bucket=${8:-'s3://hsdlc-results/irctn-adapter/'}
 s3_jprn_bucket=${9:-'s3://hsdlc-results/jprn-adapter/'}
 context_dir=${10:-'/usr/local/dataintegration'}
 
-  if [ -d ${html_dir}/utdm ]; then
-        rm -rf ${html_dir}/utdm
-    fi
+  if [ -d ${html_dir}ct ]; then
+        rm -rf ${html_dir}ct
+  fi
+
+  if [ -d ${html_dir}ctri ]; then
+        rm -rf ${html_dir}ctri
+  fi
+
+  if [ -d ${html_dir}chictr ]; then
+        rm -rf ${html_dir}chictr
+  fi
+
+  if [ -d ${html_dir}actrn ]; then
+        rm -rf ${html_dir}actrn
+  fi
+
+  if [ -d ${html_dir}euctrn ]; then
+        rm -rf ${html_dir}euctrn
+  fi
+
+  if [ -d ${html_dir}/irctn ]; then
+        rm -rf ${html_dir}irctn
+  fi
+
+  if [ -d ${html_dir}/jprn ]; then
+        rm -rf ${html_dir}jprn
+  fi
+
 
     mkdir ${html_dir}ct
     mkdir ${html_dir}ct/studies
