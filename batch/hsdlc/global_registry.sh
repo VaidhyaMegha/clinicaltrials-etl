@@ -138,4 +138,4 @@ done
 #
 #done
 
-aws s3 sync ${html_dir}output/json s3_utdm_bucket  --delete
+aws s3 sync ${html_dir}output/json ${s3_utdm_bucket}  --delete
