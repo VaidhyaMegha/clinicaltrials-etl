@@ -104,4 +104,29 @@ do
 jq -c '{"trialid":.IRCT_RegistrationNumber,"secondary_id":.Secondary_Ids,"Date_of_Registration":.Registration_date,"primary_sponsors":.Sponsors__or_FundingSources,"secondary_sponsors":"","Contact_For_Public_Queries":.PersonResponsibleForGeneralQueries,"Contact_For_Scientific_Queries":.PersonResponsibleForScientificQueries,"Public_Title":.Public_title,"Scientific_Title":.Scientific_title,"Intervention":.Intervention_groups,"inclusion_criteria":.InclusionCriteria,"exclusion_criteria":.ExclusionCriteria,"study_type":"","date_of_first_enrollment":.Expected_Recruitment_start_Date,"enrollment":.Target_sample_size,"RecruitmentStatus":.Recruitment_status,"primary_outcome":.Primary_outcomes,"secondary_outcome":.Secondary_outcomes,"completionDate":""}' ${f} >> ${html_dir}output/json/utdm_json.json
 
 #########################   CHICTRN    #####################################
+
+find ${html_dir}irctn/studies/json/ -type f -name "*.json"  | while read f
+do
+
 jq -c   '{"trialid":.Registration_number,"secondary_id":.The_registration_number_of_the_Partner_Registry_or_other_register,"Date_of_Registration":.Date_of_Registration,"primary_sponsors":.Primary_sponsor,"secondary_sponsors":.Secondary_sponsor,"Contact_For_Public_Queries":"","Contact_For_Scientific_Queries":"","Public_Title":.Public_title,"Scientific_Title":.Scientific_title,"Intervention":.Interventions,"inclusion_criteria":"","exclusion_criteria":.Exclusion_criteria,"study_type":"","date_of_first_enrollment":"","enrollment":.Interventions.Sample_size,"RecruitmentStatus":.Recruiting_status,"primary_outcome":.Outcomes,"secondary_outcome":.Outcomes,"completionDate":"" }' ${f} >> ${html_dir}output/json/utdm_json.json
+
+done
+
+#########################   ACTRN    #####################################
+
+find ${html_dir}irctn/studies/json/ -type f -name "*.json"  | while read f
+do
+
+jq -c   '{"trialid":.trial_id,"secondary_id":.secondary_id,"Date_of_Registration":.date_registered
+,"primary_sponsors":"","secondary_sponsors":"","Contact_For_Public_Queries":.Contact_person_for_public_queries,"Contact_For_Scientific_Queries":.Contact_person_for_scientific_queries,"Public_Title":.public_title,"Scientific_Title":.scientific_title,"Intervention":"","inclusion_criteria":.Key_inclusion_criteria,"exclusion_criteria":.Key_exclusion_criteria,"study_type":.Study_Type,"date_of_first_enrollment":.Date_of_first_participant_enrolment,"enrollment":.Sample_Size,"RecruitmentStatus":.Recruitment_status,"primary_outcome":.Outcome.PrimaryOutcome,"secondary_outcome":.Outcome.SecondaryOutcome,"completionDate":"" }' ${f} >> ${html_dir}output/json/utdm_json.json
+
+done
+
+#########################   EUCTRN    #####################################
+find ${html_dir}irctn/studies/json/ -type f -name "*.json"  | while read f
+do
+
+jq -c   '{"trialid":.eudract_number,"secondary_id":.secondary_id,"Date_of_Registration":.date_registered
+,"primary_sponsors":.name_of_sponsor,"secondary_sponsors":"","Contact_For_Public_Queries":"","Contact_For_Scientific_Queries":"","Public_Title":"","Scientific_Title":"","Intervention":"","inclusion_criteria":.principal_inclusion_criteria,"exclusion_criteria":.principal_exclusion_criteria,"study_type":.clinical_trial_type,"date_of_first_enrollment":"","enrollment":.Sample_Size,"RecruitmentStatus":.trial_status,"primary_outcome":"","secondary_outcome":"","completionDate":"" }' ${f} >> ${html_dir}output/json/utdm_json.json
+
+done
