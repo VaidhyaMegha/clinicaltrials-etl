@@ -32,14 +32,17 @@ if [[ ${download} == 'yes' ]]; then
         rm -rf ${html_dir}euctrn
   fi
 
-  if [ -d ${html_dir}/irctn ]; then
+  if [ -d ${html_dir}irctn ]; then
         rm -rf ${html_dir}irctn
   fi
 
-  if [ -d ${html_dir}/jprn ]; then
+  if [ -d ${html_dir}jprn ]; then
         rm -rf ${html_dir}jprn
   fi
 
+  if [ -d ${html_dir}output ]; then
+        rm -rf ${html_dir}output
+  fi
 
     mkdir ${html_dir}ct
     mkdir ${html_dir}ct/studies
