@@ -7,9 +7,9 @@ RUN  apt-get update &&  apt-get install -y python  && \
 # Install boto( will also install botocore) and awscli
 RUN python --version && \
      pip install boto3 && \
-     pip install awscli 
+     pip install awscli
 
-COPY global_registry.sh /usr/local/global/
+COPY global_registry.sh /usr/local/dataintegration/
 
-RUN chmod +x /usr/local/global/global_registry.sh
+RUN chmod +x /usr/local/dataintegration/global_registry.sh
 
