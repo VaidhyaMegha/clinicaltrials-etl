@@ -77,20 +77,20 @@ if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}output
     mkdir ${html_dir}output/json
 
-#    aws s3 cp ${s3_ct_bucket}json ${html_dir}ct/studies/json --recursive
+    aws s3 cp ${s3_ct_bucket}json ${html_dir}ct/studies/json --recursive
     aws s3 cp ${s3_ctri_bucket}json ${html_dir}ctri/studies/json --recursive
     aws s3 cp ${s3_chictr_bucket}json ${html_dir}chictr/studies/json --recursive
-    aws s3 cp ${s3_actrn_bucket}json ${html_dir}studies/actrn/json --recursive
-#    aws s3 cp ${s3_euctrn_bucket}json ${html_dir}studies/euctrn/json --recursive
-    aws s3 cp ${s3_irctn_bucket}json ${html_dir}studies/irctn/json --recursive
-    aws s3 cp ${s3_jprn_bucket}json ${html_dir}studies/jprn/json --recursive
+    aws s3 cp ${s3_actrn_bucket}json ${html_dir}actrn/studies/json --recursive
+    aws s3 cp ${s3_euctrn_bucket}json ${html_dir}euctrn/studies/json --recursive
+    aws s3 cp ${s3_irctn_bucket}json ${html_dir}irctn/studies/json --recursive
+    aws s3 cp ${s3_jprn_bucket}json ${html_dir}jprn/studies/json --recursive
 fi
 #########################    CT    ######################################
 
-#find ${html_dir}ct/studies/json/ -type f -name "*.json"  | while read f
-#do
-#jq -c '{"trialid":.id_info.nct_id,"secondary_id":.id_info.secondary_id,"Date_of_Registration":.study_first_submitted,"primary_sponsors":.sponsors,"secondary_sponsors":.sponsors,"Contact_For_Public_Queries":.location[].contact,"Contact_For_Scientific_Queries":.overall_contact,"Public_Title":.brief_title,"Scientific_Title":.Official_Title,"Intervention":.Intervention,"inclusion_criteria":.eligibility.criteria,"exclusion_criteria":"","study_type":.study_type,"date_of_first_enrollment":"","enrollment":.enrollment,"RecruitmentStatus":.overall_status,"primary_outcome":.primary_outcome,"secondary_outcome":.secondary_outcome,"CompletionDate":.completion_date.text_node_value}' ${f} >> ${html_dir}output/json/utdm_json.json
-#done
+find ${html_dir}ct/studies/json/ -type f -name "*.json"  | while read f
+do
+jq -c '{"trialid":.id_info.nct_id,"secondary_id":.id_info.secondary_id,"Date_of_Registration":.study_first_submitted,"primary_sponsors":.sponsors,"secondary_sponsors":.sponsors,"Contact_For_Public_Queries":.location[].contact,"Contact_For_Scientific_Queries":.overall_contact,"Public_Title":.brief_title,"Scientific_Title":.Official_Title,"Intervention":.Intervention,"inclusion_criteria":.eligibility.criteria,"exclusion_criteria":"","study_type":.study_type,"date_of_first_enrollment":"","enrollment":.enrollment,"RecruitmentStatus":.overall_status,"primary_outcome":.primary_outcome,"secondary_outcome":.secondary_outcome,"CompletionDate":.completion_date.text_node_value}' ${f} >> ${html_dir}output/json/utdm_json.json
+done
 
 #########################   CTRI   ##############################
 find ${html_dir}ctri/studies/json/ -type f -name "*.json"  | while read f
@@ -112,7 +112,7 @@ done
 
 #########################   CHICTRN    #####################################
 
-find ${html_dir}irctn/studies/json/ -type f -name "*.json"  | while read f
+find ${html_dir}chictrn/studies/json/ -type f -name "*.json"  | while read f
 do
 
 jq -c   '{"trialid":.Registration_number,"secondary_id":.The_registration_number_of_the_Partner_Registry_or_other_register,"Date_of_Registration":.Date_of_Registration,"primary_sponsors":.Primary_sponsor,"secondary_sponsors":.Secondary_sponsor,"Contact_For_Public_Queries":"","Contact_For_Scientific_Queries":"","Public_Title":.Public_title,"Scientific_Title":.Scientific_title,"Intervention":.Interventions,"inclusion_criteria":"","exclusion_criteria":.Exclusion_criteria,"study_type":"","date_of_first_enrollment":"","enrollment":.Interventions.Sample_size,"RecruitmentStatus":.Recruiting_status,"primary_outcome":.Outcomes,"secondary_outcome":.Outcomes,"completionDate":"" }' ${f} >> ${html_dir}output/json/utdm_json.json
@@ -121,7 +121,7 @@ done
 
 #########################   ACTRN    #####################################
 
-find ${html_dir}irctn/studies/json/ -type f -name "*.json"  | while read f
+find ${html_dir}actrn/studies/json/ -type f -name "*.json"  | while read f
 do
 
 jq -c   '{"trialid":.trial_id,"secondary_id":.secondary_id,"Date_of_Registration":.date_registered
@@ -130,12 +130,12 @@ jq -c   '{"trialid":.trial_id,"secondary_id":.secondary_id,"Date_of_Registration
 done
 
 #########################   EUCTRN    #####################################
-#find ${html_dir}irctn/studies/json/ -type f -name "*.json"  | while read f
-#do
-#
-#jq -c   '{"trialid":.eudract_number,"secondary_id":.secondary_id,"Date_of_Registration":.date_registered
-#,"primary_sponsors":.name_of_sponsor,"secondary_sponsors":"","Contact_For_Public_Queries":"","Contact_For_Scientific_Queries":"","Public_Title":"","Scientific_Title":"","Intervention":"","inclusion_criteria":.principal_inclusion_criteria,"exclusion_criteria":.principal_exclusion_criteria,"study_type":.clinical_trial_type,"date_of_first_enrollment":"","enrollment":.Sample_Size,"RecruitmentStatus":.trial_status,"primary_outcome":"","secondary_outcome":"","completionDate":"" }' ${f} >> ${html_dir}output/json/utdm_json.json
-#
-#done
+find ${html_dir}euctrn/studies/json/ -type f -name "*.json"  | while read f
+do
 
-aws s3 sync ${html_dir}output/json ${s3_utdm_bucket}  --delete
+jq -c '{"trialid":.eudract_number,"secondary_id":.secondary_id,"Date_of_Registration":.date_registered
+,"primary_sponsors":.name_of_sponsor,"secondary_sponsors":"","Contact_For_Public_Queries":"","Contact_For_Scientific_Queries":"","Public_Title":"","Scientific_Title":"","Intervention":"","inclusion_criteria":.principal_inclusion_criteria,"exclusion_criteria":.principal_exclusion_criteria,"study_type":.clinical_trial_type,"date_of_first_enrollment":"","enrollment":.Sample_Size,"RecruitmentStatus":.trial_status,"primary_outcome":"","secondary_outcome":"","completionDate":"" }' ${f} >> ${html_dir}output/json/utdm_json.json
+
+done
+
+aws s3 sync ${html_dir}/output/ ${s3_utdm_bucket}  --delete
