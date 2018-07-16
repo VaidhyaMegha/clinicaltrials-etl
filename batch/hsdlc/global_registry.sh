@@ -128,7 +128,7 @@ done
 
 #########################   CHICTRN    #####################################
 
-find ${html_dir}chictrn/studies/json/ -type f -name "*.json"  | while read f
+find ${html_dir}chictr/studies/json/ -type f -name "*.json"  | while read f
 do
 
 jq -c   '{"trialid":.Registration_number,"secondary_id":.The_registration_number_of_the_Partner_Registry_or_other_register,"Date_of_Registration":.Date_of_Registration,"primary_sponsors":.Primary_sponsor,"secondary_sponsors":.Secondary_sponsor,"Contact_For_Public_Queries":"","Contact_For_Scientific_Queries":"","Public_Title":.Public_title,"Scientific_Title":.Scientific_title,"Intervention":.Interventions,"inclusion_criteria":"","exclusion_criteria":.Exclusion_criteria,"study_type":"","date_of_first_enrollment":"","enrollment":.Interventions.Sample_size,"RecruitmentStatus":.Recruiting_status,"primary_outcome":.Outcomes,"secondary_outcome":.Outcomes,"completionDate":"" }' ${f} >> ${html_dir}output/json/utdm_json.json
