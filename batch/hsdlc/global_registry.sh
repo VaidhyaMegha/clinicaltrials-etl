@@ -89,7 +89,7 @@ fi
 
 find ${html_dir}ct/studies/json/ -type f -name "*.json"  | while read f
 do
-jq -c '{"trialid":.id_info.nct_id,"secondary_id":.id_info.secondary_id,"Date_of_Registration":.study_first_submitted,"primary_sponsors":.sponsors,"secondary_sponsors":.sponsors,"Contact_For_Public_Queries":.location[].contact,"Contact_For_Scientific_Queries":.overall_contact,"Public_Title":.brief_title,"Scientific_Title":.Official_Title,"Intervention":.Intervention,"inclusion_criteria":.eligibility.criteria,"exclusion_criteria":"","study_type":.study_type,"date_of_first_enrollment":"","enrollment":.enrollment,"RecruitmentStatus":.overall_status,"primary_outcome":.primary_outcome,"secondary_outcome":.secondary_outcome,"CompletionDate":.completion_date.text_node_value, "registry": "CT", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+jq -c '{"trialid":.id_info.nct_id,"secondary_id":.id_info.secondary_id,"Date_of_Registration":.study_first_submitted,"Public_Title":.brief_title,"Scientific_Title":.Official_Title,"study_type":.study_type,"date_of_first_enrollment":"","enrollment":.enrollment,"RecruitmentStatus":.overall_status,"CompletionDate":.completion_date.text_node_value, "registry": "CT", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
 done
 
 if [ -d ${html_dir}ct ]; then

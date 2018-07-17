@@ -9,8 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/ctri/html_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/ctri/html_json.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/hsdlc/global_registry.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/hsdlc/global_registry.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,8 +87,8 @@
       <file leaf-file-name="global_registry.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/hsdlc/global_registry.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="159" selection-start-line="159" selection-end-line="159" />
+            <state relative-caret-position="198">
+              <caret line="91" column="55" selection-start-line="91" selection-start-column="55" selection-end-line="91" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -255,8 +253,8 @@
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql" />
         <option value="$PROJECT_DIR$/tuning/athena.sql" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/irct_studies_ddl.sql" />
-        <option value="$PROJECT_DIR$/batch/hsdlc/global_registry.sh" />
         <option value="$PROJECT_DIR$/batch/ctri/html_json.sh" />
+        <option value="$PROJECT_DIR$/batch/hsdlc/global_registry.sh" />
       </list>
     </option>
   </component>
@@ -786,12 +784,12 @@
       <workItem from="1531732351715" duration="452000" />
       <workItem from="1531733194633" duration="5752000" />
       <workItem from="1531773298947" duration="2027000" />
-      <workItem from="1531790377929" duration="5975000" />
+      <workItem from="1531790377929" duration="7354000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1012208000" />
+    <option name="totallyTimeSpent" value="1013587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1205,8 +1203,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/hsdlc/global_registry.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="159" selection-start-line="159" selection-end-line="159" />
+        <state relative-caret-position="198">
+          <caret line="91" column="55" selection-start-line="91" selection-start-column="55" selection-end-line="91" selection-end-column="55" />
         </state>
       </provider>
     </entry>
