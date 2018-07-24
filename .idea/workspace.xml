@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/athena/hsdlc/ntr_studies_ddl.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/nl_reg/html_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/nl_reg/html_json.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ntr_studies_ddl.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ntr_studies_ddl.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ntr_studies_ddl.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="630">
-              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+              <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -68,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="html_json.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/nl_reg/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-630">
-              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="105">
+              <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -259,8 +258,8 @@
         <option value="$PROJECT_DIR$/batch/nl_reg/Makefile" />
         <option value="$PROJECT_DIR$/batch/EUCTRN/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/nl_reg/Dockerfile" />
-        <option value="$PROJECT_DIR$/batch/nl_reg/html_json.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/ntr_studies_ddl.sql" />
+        <option value="$PROJECT_DIR$/batch/nl_reg/html_json.sh" />
       </list>
     </option>
   </component>
@@ -312,12 +311,6 @@
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="batch" type="462c0819:PsiDirectoryNode" />
-              <item name="EUCTRN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
               <item name="nl_reg" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -337,12 +330,6 @@
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="athena" type="462c0819:PsiDirectoryNode" />
               <item name="hsdlc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="opentrials.net" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1128,17 +1115,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/nl_reg/html_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ntr_studies_ddl.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+          <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/nl_reg/html_json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
         </state>
       </provider>
     </entry>
