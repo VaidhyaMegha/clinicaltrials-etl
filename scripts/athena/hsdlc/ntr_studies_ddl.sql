@@ -1,0 +1,43 @@
+ CREATE EXTERNAL TABLE `ntr_studies`(
+`candidate_number` string,
+`NTR_Number` string,
+`ISRCTN` string,
+`Date_ISRCTN_created` string,
+`date_ISRCTN_requested` string,
+`Date_Registered_NTR` string,
+`Secondary_IDs` string,
+`Public_Title` string,
+`Scientific_Title` string,
+`ACRONYM` string,
+`hypothesis` string,
+`Healt_Conditions_or_Problems_studied` string,
+`Inclusion_criteria` string,
+`Exclusion_criteria` string,
+`mec_approval_received` string,
+`multicenter_trial` string,
+`randomised` string,
+`group` string,
+`Type` string,
+`Studytype` string,
+`planned_startdate` string,
+`planned_closingdate` string,
+`Target_number_of_participants` string,
+`Interventions` string,
+`Primary_outcome` string,
+`Secondary_outcome` string,
+`Timepoints` string,
+`Trial_web_site` string,
+`status` string,
+`CONTACT_FOR_PUBLIC_QUERIES` string,
+`CONTACT_for_SCIENTIFIC_QUERIES` string,
+`Sponsor/Initiator` string,
+`Funding_Sources_of_Monetary_or_Material_Support` string,
+`Publications` string,
+`Brief_summary` string,
+`Main_changes_audit_trail` string,
+`RECORD` string)
+ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
+      LOCATION 's3://hsdlc-results/ntr-adapter/studies/json'
+      TBLPROPERTIES (
+      'ignore.malformed.json'= 'true'
+      );
