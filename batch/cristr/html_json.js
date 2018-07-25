@@ -62,8 +62,7 @@ rl.on('close', function () {
             temp[curKey] = cleanLine(study[i]);
             curKey = null; // reset the curKey
         } else { // catchall
-            if ( curKe
-                y !== null && study[i].indexOf("text") !== -1){
+            if ( curKey !== null && study[i].indexOf("text") !== -1){
                 finalRecord[curKey] = cleanLine(study[i]);
                 curKey = null;
             }
