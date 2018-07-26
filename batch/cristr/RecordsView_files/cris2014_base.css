@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/* reset style [start] */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, big, cite, code,
+del, dfn, em, font, img, ins, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td 
+{margin: 0;padding: 0;  border:0;} /* vertical-align: baseline; outline: 0; ie 외 브라우저 포커싱 사라지는 문제로 제거 */
+
+legend, caption {visibility:hidden;height:0;line-height:0;font-size:0;}
+
+html {overflow-y:auto}
+
+html, body, textarea, select {margin:0;padding:0; font-size:12px;font-family:"돋움",Dotum,"굴림",Gulim,"Lucida Grande",Tahoma,Verdana,AppleGothic,sans-serif; color:#666;}
+body {height:100%;overflow:hidden;}
+
+ol, ul, li {list-style: none;}
+blockquote, q {quotes: none;}
+/* remember to define focus styles! :focus {outline: 0;} */
+/* remember to highlight inserts somehow! */
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+/* tables still need 'cellspacing="0"' in the markup */
+table {border-spacing:0;} /* border-collapse: collapse; ff에서 border="0" 인 경우 문제 발생 */
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;} /* font-weight:normal */
+/* reset style [end] */
+input.textBox { border-top:1px solid #969696; border-left:1px solid #969696; border-right:1px solid #b9b9b9; border-bottom:1px solid #b9b9b9; height:17px; margin-bottom:1px; padding:0 2px; }
+.radio { margin-bottom:-2px;}
+textarea {border:1px solid #969696;}
+hr {display: none;}
+/*legend { visibility:hidden; height:0; width:0; font-size:0;}*/
+/*  button */
+button {cursor: pointer; border-color: #FAFAFA #848484 #848484 #FAFAFA; border-width: 2px; border-style: solid; color: #333; font-family: monospace; font-size: 85%; background-color: #F0F0F0;}
+button:active { border-color: #848484 #FAFAFA #FAFAFA #848484;}
+a {cursor: pointer;}
+
+.hidden{display:none;}
+.floatl {float:left}
+.floatr {float:right}
+.textl {text-align:left;}
+.textr {text-align:right;}
+.textc {text-align:center;}
+.clearb {clear:both}
+.font-point{font-weight:bold;}
+.f_point{font-weight:bold;}
+.dp_no {position:absolute;left:-9999em;}
+.ft_blue {color:#406ca3;}
+.ft_red {color:#9d2b11;}
+.f_line{text-decoration:underline;}
