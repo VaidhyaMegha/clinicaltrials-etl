@@ -17,19 +17,12 @@ rl.on('line', function (line) {
 rl.on('close', function () {
     let finalRecord = {};
     let sites = [];
-    let primaryOutcomes = [];
-    let secondaryOutcomes = [];
-    let contactPerson = [];
-    let sourceMonetary = [];
-    let Sponsor = [];
-    let Arm = [];
     let temp = null;
-    let curObject = null;
-    let curKey = null;
 
     let i = 0;
     {
 
+        // check for the current line and move to next line. Check if next line is a 'key' if not it must be a value.
         if (is(study[i], '"CRIS Registration Number"') && !is(study[++i], '"Unique Protocol ID"'))
             finalRecord['cris_registration_number'] = cleanLine(study[i++]);
 
@@ -66,9 +59,11 @@ rl.on('close', function () {
         if (is(study[i], '"Approval Date"') && !is(study[++i], '"Institutional Review Board"'))
             finalRecord['approval_date'] = cleanLine(study[i++]);
 
+        // check for the current line and move to next line. If its the start of an object get inside
         if (is(study[i++], '"Institutional Review Board"')){
             temp = {};
 
+            // check for the current line and move to next line. Check if next line is a 'key' if not it must be a value.
             if (is(study[i], '"- Name"') && !is(study[++i], '"- Address"'))
                 temp['name'] = cleanLine(study[i++]);
 
@@ -167,6 +162,8 @@ rl.on('close', function () {
             finalRecord['study_completion_date'] = cleanLine(study[i++]);
 
 
+        // check for the current line and move to next line. If its the start of an array of objects get inside
+
         if (is(study[i++], "Recruitment Status by Participating Study Site 1")) {
             sites = [];
 
@@ -179,9 +176,13 @@ rl.on('close', function () {
                 if (is(study[i], '"- Recruitment Status"') && !is(study[++i], '"- Date of First Enrollment"'))
                     temp['recruitment_status'] = cleanLine(study[i++]);
 
+                // check for the current line and move to next line. If its not the end of the current object or end of the array of objects it must be value
+
                 if (is(study[i], '"- Date of First Enrollment"') && !(is(study[++i], '"Source of Monetary/Material Support1"')
                                                                     || is(study[i], '"Recruitment Status by Participating Study Site')) ) {
                     temp['date_of_first_enrollment'] = cleanLine(study[i++]);
+
+                    // If its not the end of the array of objects move one more line to allow for object header.
 
                     if(!(is(study[i], '"Source of Monetary/Material Support1"')))
                         i++;
