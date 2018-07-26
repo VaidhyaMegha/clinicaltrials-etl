@@ -188,9 +188,6 @@ rl.on('close', function () {
                 }
 
                 sites.push(temp);
-
-                console.log(study[i]);
-                console.log(temp);
             }
 
             finalRecord['sites'] = sites;
