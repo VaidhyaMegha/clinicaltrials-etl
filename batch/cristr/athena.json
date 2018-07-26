@@ -1,0 +1,91 @@
+`cris_registration_number` string,
+  `unique_protocol id` string,
+  `public_or_brief_title` string,
+  `scientific_title` string,
+  `mfds_regulated_study` string,
+  `registered_at_other_registry` string,
+  `board_approval_status` string,
+  `board_approval_number` string,
+  `approval_date` string,
+  `sites`:struct<`name` : string,`title` : string,`telephone` : string,`affiliation` : string,`address` : string,`study_site` : string,`overall_recruitment_status` : string,`date_of_first_enrollment` : string,`target_number_of_participant`: string,`primary_completion_date` : string>,array<struct<`name_of_study_site`: string, `recruitment_status` : string ,`date_of_first_enrollment` :string>>,
+   `subject Eligibility and study design` : struct < `sponsor_organization_name` :string,`sponsor_organization_type` : string,`lay_summary` : string,`study_type` : string,
+      `study_purpose` `Treatment,`,
+      `phase` `Phase4,`,
+      `intervention_model` `Parallel,`,
+      `blinding_or_masking` `Open,`,
+      `allocation` `RCT,`,
+      `intervention_type` `Drug,`,
+      `intervention_description` `Fed group entecavir (Entecavir®; Bukwang Pharmaceutical Co.) 0.5mg qd within 30 min after meals, for 48 weeks Fasted group entecavir (Entecavir®; Bukwang Pharmaceutical Co.) 0.5mg qd without meals (\\u0026gt;2 hour before or after meals),`,
+      `number_of_arms` `2,`,
+      `arm_label` `Fasted group,`,
+      `target_number_of_participant` `44,`,
+      `arm_type` `Active comparator,`,
+      `arm_description` `Fasted group entecavir (Entecavir®; Bukwang Pharmaceutical Co.) 0.5mg qd without meals (\\u0026gt;2 hour before or after meals),`,
+      `conditions_problems` `* Diseases of the digestive system`,
+      `rare_disease` `No`,
+      `gender` `Both`,
+      `age` `19 Year \\n\\t\\t\\t\\t\\t\\t~ 75 Year`,
+      `description` `1. Subjects with chronic hepatitis B who are currently taking entecavir for ≥48 weeks 2. Subjects aged 19–75 years 3. Subjects with HBV DNA \\u0026lt;20 IU/mL at screening 4. Subjects with HBeAg-Positive or HBeAg-negative diagnosed at the screening visit`,
+      `exclusion_criteria` `1. Subjects with decompensated liver disease (total bilirubin of greater than 2 times the ULN, albumin less than 3 g/dL, prothrombin time longer than 3 seconds of normal value, ascites or jaundice, history of variceal bleeding, hepatic encephalopathy) or hepatocellular carcinoma 2. Treatment-experienced subjects (those who previously received treatment with any oral antiviral agent except entecavir) or subjects with lamivudine resistance. 3. Currently receiving therapy with immunomodulators, cytotoxic chemotehrapy or corticosteroids 4. Subjects co-infected with hepatitis C, hepatitis D, or HIV. 5. Received solid organ or bone marrow transplant 6. Women who are pregnant or breastfeeding 7. Less than 60ml/min of creatinine clearance diagnosed at the screening visit 8. Subjects with hemoglobin less than 8 g/dL 9. Subjects with neutrophil counts less than 1,000/uL 10. Subjects with ALT greater than ten times the ULN 11. Subjects who participated in other clinical trials within three months before enrollment in this trial`,
+      `healthy_volunteers` `No`,
+      `type_of_primary_outcome` `/Safety/Efficacy`
+    }
+  ],
+  `primary_outcomes` [
+    {
+      `outcome` `Proportion of participants with serum HBV DNA \\u0026lt; 20 IU/mL`,
+      `timepoint` `at week 48`
+    },
+    {
+      `outcome` `Proportion of participants with serum HBV DNA \\u0026lt; 20 IU/mL`,
+      `timepoint` `at week 24`
+    },
+    {
+      `outcome` `Proportion of participants with serological response seroconversion to anti-HBe in HBeAg-positive participants`,
+      `timepoint` `at weeks 24, 48`
+    },
+    {
+      `outcome` `Proportion of participants with normal ALT`,
+      `timepoint` `at weeks 24, 48`
+    },
+    {
+      `outcome` `Change from baseline in HBV DNA levels`,
+      `timepoint` `at weeks 24, 48`
+    },
+    {
+      `outcome` `Proportion of participants with virological breakthrough`,
+      `timepoint` `at week 48`
+    }
+  ],
+  `Contact Person` [
+    {
+      `name` `Jung-Hwan\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\tYoon`,
+      `title` `PI`,
+      `telephone` `+82-2-2072-2228`,
+      `affiliation` `Seoul National University Hospital`,
+      `address` `101 Daehak-no, Jongno-gu, Seoul 03080, Korea`
+    },
+    {
+      `name` `Eun Ju\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\tCho`,
+      `title` `Subinvestigator`,
+      `telephone` `+82-2-2072-2228`,
+      `affiliation` `Seoul National University Hospital`,
+      `address` `101 Daehak-no, Jongno-gu, Seoul 03080, Korea`
+    }
+  ],
+  `site` [
+    {
+      `name_of_study_site` `Seoul National University Hospital`,
+      `recruitment_status` `Active, not recruiting`,
+      `date_of_first_enrollment` `2015-08-26 \\n\\t\\t\\t\\t\\t\\t,  \\n\\t\\t\\t\\t\\t\\tActual`
+    },
+    {}
+  ],
+  `source_of_monetary_or_material_support` [
+    {
+      `organization_name` `Seoul National University Hospital`,
+      `organization_type` `Medical Institute`
+    },
+    {}
+  ]
+}
