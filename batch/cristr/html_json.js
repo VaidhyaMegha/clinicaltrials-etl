@@ -398,7 +398,7 @@ if (is(study[i], '"Time of Sharing"') && !is(study[++i], '"Way of Sharing"'))
 }});
 
 function is(line, compareTo) {
-    return (line.indexOf(compareTo) !== -1);
+    return (line && line.indexOf(compareTo) !== -1);
 }
 
 function cleanLine(l) {
