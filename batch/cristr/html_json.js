@@ -132,10 +132,10 @@ if(study[i].indexOf('"CRIS Registration Number"') !== -1) {
                     temp = {};
                     curKey = null;
  } else if (curObject === "Sponsor" && study[i].indexOf("- Organization Name") !== -1){
-                                             curKey = "organization_name";
+                                             curKey = "sponsor_organization_name";
 
                               } else if (curObject === "Sponsor" && study[i].indexOf("- Organization Type") !== -1){
-                                             curKey = "organization_type";
+                                             curKey = "sponsor_organization_type";
 
                                       } else if (curObject === "Sponsor" && curKey !== null && study[i].indexOf("text") !== -1){
                                               temp[curKey] = cleanLine(study[i]);
@@ -169,25 +169,17 @@ if(study[i].indexOf('"CRIS Registration Number"') !== -1) {
 
         }   else if(study[i].indexOf('"Number of Arms"') !== -1) {
                                 curKey = "number_of_arms";
- } else if(study[i].indexOf("Arm") !== -1) {
-                             curObject = "Arm";
-                             if(temp != null) Arm.push(temp);
-                             temp = {};
-                             curKey = null;
-} else if (curObject === "Arm" && study[i].indexOf("Arm Label") !== -1){
+} else if (study[i].indexOf("Arm Label") !== -1){
                        curKey = "arm_label";
 
-                } else if (curObject === "Arm" && study[i].indexOf("Target Number of Participant") !== -1){
+                } else if (study[i].indexOf("Target Number of Participant") !== -1){
                        curKey = "target_number_of_participant";
-         } else if (curObject === "Arm" && study[i].indexOf("Arm Type") !== -1){
+         } else if (study[i].indexOf("Arm Type") !== -1){
                        curKey = "arm_type";
 
-                } else if (curObject === "Arm" && study[i].indexOf("Arm Description") !== -1){
+                } else if (study[i].indexOf("Arm Description") !== -1){
                        curKey = "arm_description";
-                } else if (curObject === "Arm" && curKey !== null && study[i].indexOf("text") !== -1){
-                        temp[curKey] = cleanLine(study[i]);
-                        curKey = null; // reset the curKey
- }   else if(study[i].indexOf('"Condition(s)/Problem(s)"') !== -1) {
+  }   else if(study[i].indexOf('"Condition(s)/Problem(s)"') !== -1) {
                                 curKey = "conditions_problems";
 
         }   else if(study[i].indexOf('"Rare Disease"') !== -1) {
@@ -251,14 +243,13 @@ if(study[i].indexOf('"CRIS Registration Number"') !== -1) {
     }
 
 
-finalRecord['Contact Person'] = contactPerson;
-finalRecord['sites'] = sites;
-finalRecord['source_of_monetary_or_material_support'] = sourceMonetary;
-finalRecord['Sponsor'] = Sponsor;
-finalRecord['Arm'] = Arm;
-finalRecord['primary_outcomes'] = primaryOutcomes;
-finalRecord['secondary_outcomes'] = secondaryOutcomes;
-    process.stdout.write(JSON.stringify(finalRecord) + '\n');
+    finalRecord['sites'] = sites;
+    finalRecord['subject Eligibility and study design'] = primaryOutcomes;
+    finalRecord['primary_outcomes'] = secondaryOutcomes;
+    finalRecord['Contact Person'] = contactPerson;
+    finalRecord['site'] = sourceMonetary;
+    finalRecord['source_of_monetary_or_material_support'] = Sponsor;
+        process.stdout.write(JSON.stringify(finalRecord) + '\n');
 });
 
 function cleanLine(l){
