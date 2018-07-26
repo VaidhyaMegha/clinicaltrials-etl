@@ -193,194 +193,209 @@ rl.on('close', function () {
 
             finalRecord['sites'] = sites;
         }
+         if (is(study[i++], "Source of Monetary/Material Support1")) {
+                            source = [];
 
-        //     if (is(line, '"Study Site"')) {
-        //         curKey = "study_site";
-        //     }
-        //     if (is(line, '"Overall Recruitment Status"')) {
-        //         curKey = "overall_recruitment_status";
-        //     }
-        //     if (is(line, '"Date of First Enrollment"')) {
-        //         curKey = "date_of_first_enrollment";
-        //     }
-        //     if (is(line, '"Target Number of Participant"')) {
-        //         curKey = "target_number_of_participant";
-        //     }
-        //     if (is(line, '"Primary Completion Date"')) {
-        //         curKey = "primary_completion_date";
-        //     }
-        //     if (is(line, '"Study Completion Date"')) {
-        //         curKey = "study_completion_date";
-        //     }
-        //     if (is(line, "Recruitment Status by Participating Study Site")) {
-        //         curObject = "Site";
-        //         if (temp != null) sites.push(temp);
-        //         temp = {};
-        //         curKey = null;
-        //     }
-        //     if (curObject === "Site" && is(line, "Name of Study Site")) {
-        //         curKey = "name_of_study_site";
-        //     }
-        //     if (curObject === "Site" && is(line, "Recruitment Status")) {
-        //         curKey = "recruitment_status";
-        //     }
-        //     if (curObject === "Site" && is(line, "Date of First Enrollment")) {
-        //         curKey = "date_of_first_enrollment";
-        //     }
-        //     if (curObject === "Site" && curKey !== null && is(line, "text")) {
-        //         temp[curKey] = cleanLine(line);
-        //         curKey = null; // reset the curKey
-        //     }
-        //     if (is(line, "Source of Monetary/Material Support")) {
-        //         curObject = "source_of_monetary_or_material_support";
-        //         if (temp != null) sourceMonetary.push(temp);
-        //         temp = {};
-        //         curKey = null;
-        //     }
-        //     if (curObject === "source_of_monetary_or_material_support" && is(line, "- Organization Name")) {
-        //         curKey = "organization_name";
-        //     }
-        //     if (curObject === "source_of_monetary_or_material_support" && is(line, "- Organization Type")) {
-        //         curKey = "organization_type";
-        //     }
-        //     if (curObject === "source_of_monetary_or_material_support" && is(line, "- Project ID")) {
-        //         curKey = "project_id";
-        //     }
-        //     if (curObject === "source_of_monetary_or_material_support" && curKey !== null && is(line, "text")) {
-        //         temp[curKey] = cleanLine(line);
-        //         curKey = null; // reset the curKey
-        //     }
-        //     if (is(line, "Sponsor Organization")) {
-        //         curObject = "Sponsor";
-        //         if (temp != null) Sponsor.push(temp);
-        //         temp = {};
-        //         curKey = null;
-        //     }
-        //     if (curObject === "Sponsor" && is(line, "- Organization Name")) {
-        //         curKey = "sponsor_organization_name";
-        //     }
-        //     if (curObject === "Sponsor" && is(line, "- Organization Type")) {
-        //         curKey = "sponsor_organization_type";
-        //     }
-        //     if (curObject === "Sponsor" && curKey !== null && is(line, "text")) {
-        //         temp[curKey] = cleanLine(line);
-        //         curKey = null; // reset the curKey
-        //     }
-        //     if (is(line, '"Lay Summary"')) {
-        //         curKey = "lay_summary";
-        //     }
-        //     if (is(line, '"Study Type"')) {
-        //         curKey = "study_type";
-        //     }
-        //     if (is(line, '"Study Purpose"')) {
-        //         curKey = "study_purpose";
-        //     }
-        //     if (is(line, '"Phase"')) {
-        //         curKey = "phase";
-        //     }
-        //     if (is(line, '"Intervention Model"')) {
-        //         curKey = "intervention_model";
-        //     }
-        //     if (is(line, '"Blinding/Masking"')) {
-        //         curKey = "blinding_or_masking";
-        //     }
-        //     if (is(line, '"Allocation"')) {
-        //         curKey = "allocation";
-        //     }
-        //     if (is(line, '"Intervention Type"')) {
-        //         curKey = "intervention_type";
-        //     }
-        //     if (is(line, '"Intervention Description"')) {
-        //         curKey = "intervention_description";
-        //     }
-        //     if (is(line, '"Number of Arms"')) {
-        //         curKey = "number_of_arms";
-        //     }
-        //     if (is(line, "Arm Label")) {
-        //         curKey = "arm_label";
-        //     }
-        //     if (is(line, "Target Number of Participant")) {
-        //         curKey = "target_number_of_participant";
-        //     }
-        //     if (is(line, "Arm Type")) {
-        //         curKey = "arm_type";
-        //     }
-        //     if (is(line, "Arm Description")) {
-        //         curKey = "arm_description";
-        //     }
-        //     if (is(line, '"Condition(s)/Problem(s)"')) {
-        //         curKey = "conditions_problems";
-        //     }
-        //     if (is(line, '"Rare Disease"')) {
-        //         curKey = "rare_disease";
-        //     }
-        //     if (is(line, '"Gender"')) {
-        //         curKey = "gender";
-        //     }
-        //     if (is(line, '"Age"')) {
-        //         curKey = "age";
-        //     }
-        //     if (is(line, '"Description"')) {
-        //         curKey = "description";
-        //     }
-        //     if (is(line, '"Exclusion Criteria"')) {
-        //         curKey = "exclusion_criteria";
-        //     }
-        //     if (is(line, '"Healthy Volunteers"')) {
-        //         curKey = "healthy_volunteers";
-        //     }
-        //     if (is(line, '"Type of Primary Outcome"')) {
-        //         curKey = "type_of_primary_outcome";
-        //     }
-        //     if (is(line, "Primary Outcome(s)")) {
-        //         curObject = "Primary Outcome";
-        //         if (temp != null) primaryOutcomes.push(temp);
-        //         temp = {};
-        //         curKey = null;
-        //     }
-        //     if (curObject === "Primary Outcome" && is(line, "- Outcome")) {
-        //         curKey = "outcome";
-        //     }
-        //     if (curObject === "Primary Outcome" && is(line, "- Timepoint")) {
-        //         curKey = "timepoint";
-        //     }
-        //     if (curObject === "Primary Outcome" && curKey !== null && is(line, "text")) {
-        //         temp[curKey] = cleanLine(line);
-        //         curKey = null; // reset the curKey
-        //     }
-        //     if (is(line, "Secondary Outcome(s) ")) {
-        //         curObject = "Secondary Outcome";
-        //         if (temp != null) secondaryOutcomes.push(temp);
-        //         temp = {};
-        //         curKey = null;
-        //     }
-        //     if (curObject === "Secondary Outcome" && is(line, "- Outcome")) {
-        //         curKey = "outcome";
-        //     }
-        //     if (curObject === "Secondary Outcome" && is(line, "- Timepoint")) {
-        //         curKey = "timepoint";
-        //     }
-        //     if (curObject === "Secondary Outcome" && curKey !== null && is(line, "text")) {
-        //         temp[curKey] = cleanLine(line);
-        //         curKey = null; // reset the curKey
-        //     }
-        //     if (is(line, '"Result Registerd"')) {
-        //         curKey = "result_registerd";
-        //     }
-        //     if (is(line, '"Sharing Statement"')) {
-        //         curKey = "sharing_statement";
-        //     }
-        // }
-        //
-        // finalRecord['sites'] = sites;
-        // finalRecord['subject Eligibility and study design'] = primaryOutcomes;
-        // finalRecord['primary_outcomes'] = secondaryOutcomes;
-        // finalRecord['Contact Person'] = contactPerson;
-        // finalRecord['site'] = sourceMonetary;
-        // finalRecord['source_of_monetary_or_material_support'] = Sponsor;
-    }
-    process.stdout.write(JSON.stringify(finalRecord) + '\n');
-});
+                            while (!is(study[i], '"Sponsor Organization 1"')) {
+                                temp = {};
+
+                                if (is(study[i], '"- Organization Name"') && !is(study[++i], '"- Organization Type"'))
+                                    temp['name_of_study_site'] = cleanLine(study[i++]);
+
+                                if (is(study[i], '"- Organization Type"') && !is(study[++i], '"- Project ID"'))
+                                    temp['recruitment_status'] = cleanLine(study[i++]);
+
+                                // check for the current line and move to next line. If its not the end of the current object or end of the array of objects it must be value
+
+                                if (is(study[i], '"- Project ID"') && !(is(study[++i], '"Sponsor Organization 1"')
+                                                                                    || is(study[i], '"Source of Monetary/Material Support')) ) {
+                                    temp['date_of_first_enrollment'] = cleanLine(study[i++]);
+
+                                    // If its not the end of the array of objects move one more line to allow for object header.
+
+                                    if(!(is(study[i], '"Sponsor Organization 1"')))
+                                        i++;
+                                }
+
+                                source.push(temp);
+                            }
+
+                            finalRecord['source_of_monetary_or_material_support'] = source;
+                        }
+
+         if (is(study[i++], "Sponsor Organization 1")) {
+                    sponsor = [];
+
+                    while (!is(study[i], '"Lay Summary"')) {
+                        temp = {};
+
+                        if (is(study[i], '"- Organization Name"') && !is(study[++i], '"- Organization Type"'))
+                            temp['organization_name'] = cleanLine(study[i++]);
+
+
+                        // check for the current line and move to next line. If its not the end of the current object or end of the array of objects it must be value
+
+                        if (is(study[i], '"- Organization Type"') && !(is(study[++i], '"Lay Summary"')
+                                                                            || is(study[i], '"Sponsor Organization')) ) {
+                            temp['organization_type'] = cleanLine(study[i++]);
+
+                            // If its not the end of the array of objects move one more line to allow for object header.
+
+                            if(!(is(study[i], '"Lay Summary"')))
+                                i++;
+                        }
+
+                        sponsor.push(temp);
+                    }
+
+                    finalRecord['sponsor_organisation'] = sponsor;
+                }
+
+          if (is(study[i], '"Lay Summary"') && !is(study[++i], '"Study Type"'))
+                     finalRecord['lay_summary'] = cleanLine(study[i++]);
+
+          if (is(study[i], '"Study Type"') && !is(study[++i], '"Study Purpose"'))
+                                 finalRecord['study_type'] = cleanLine(study[i++]);
+          if (is(study[i], '"Study Purpose"') && !is(study[++i], '"Phase"'))
+                                 finalRecord['study_purpose'] = cleanLine(study[i++]);
+          if (is(study[i], '"Phase"') && !is(study[++i], '"Intervention Model"'))
+                                 finalRecord['Phase'] = cleanLine(study[i++]);
+          if (is(study[i], '"Intervention Model"') && !is(study[++i], '"Blinding/Masking"'))
+                                 finalRecord['intervention_model'] = cleanLine(study[i++]);
+          if (is(study[i], '"Blinding/Masking"') && !is(study[++i], '"Allocation"'))
+                                 finalRecord['blinding_or_masking'] = cleanLine(study[i++]);
+          if (is(study[i], '"Allocation"') && !is(study[++i], '"Intervention Type"'))
+                                 finalRecord['allocation'] = cleanLine(study[i++]);
+          if (is(study[i], '"Intervention Type"') && !is(study[++i], '"Intervention Description"'))
+                                  finalRecord['intervention_type'] = cleanLine(study[i++]);
+          if (is(study[i], '"Intervention Description"') && !is(study[++i], '"Number of Arms"'))
+                                  finalRecord['intervention_description'] = cleanLine(study[i++]);
+          if (is(study[i], '"Number of Arms"') && !is(study[++i], '"Arm 1"'))
+                                  finalRecord['number_of_arms'] = cleanLine(study[i++]);
+
+       if (is(study[i++], "Arm 1")) {
+                    arm = [];
+
+                    while (!is(study[i], '"Condition(s)/Problem(s)"')) {
+                        temp = {};
+
+                        if (is(study[i], '"Arm Label"') && !is(study[++i], '"Target Number of Participant"'))
+                            temp['arm_label'] = cleanLine(study[i++]);
+
+                        if (is(study[i], '"Target Number of Participant"') && !is(study[++i], '"Arm Type"'))
+                            temp['target_number_of_participant'] = cleanLine(study[i++]);
+
+
+                        if (is(study[i], '"Arm Type"') && !is(study[++i], '"Arm Description"'))
+                            temp['arm_type'] = cleanLine(study[i++]);
+
+
+                         if (is(study[i], '"Arm Description"') && !(is(study[++i], '"Condition(s)/Problem(s)"')
+                                                                                                    || is(study[i], '"Arm')) ) {
+                                                    temp['arm_description'] = cleanLine(study[i++]);
+
+                            // If its not the end of the array of objects move one more line to allow for object header.
+
+                            if(!(is(study[i], '"Condition(s)/Problem(s)"')))
+                                i++;
+                        }
+
+                        arm.push(temp);
+                    }
+
+                    finalRecord['arm'] = arm;
+                }
+        if (is(study[i], '"Condition(s)/Problem(s)"') && !is(study[++i], '"Rare Disease"'))
+                             finalRecord['conditions_problems'] = cleanLine(study[i++]);
+
+                  if (is(study[i], '"Rare Disease"') && !is(study[++i], '"Inclusion Criteria"'))
+                                         finalRecord['rare_disease'] = cleanLine(study[i++]);
+         if (is(study[i++], '"Inclusion Criteria"')){
+                    temp = {};
+
+                    if (is(study[i], '"Gender"') && !is(study[++i], '"Age"'))
+                        temp['gender'] = cleanLine(study[i++]);
+
+                    if (is(study[i], '"Age"') && !is(study[++i], '"Description"'))
+                        temp['age'] = cleanLine(study[i++]);
+
+                    if (is(study[i], '"Description"') && !is(study[++i], '"Exclusion Criteria"'))
+                        temp['description'] = cleanLine(study[i++]);
+
+
+                    finalRecord['inclusion_criteria'] = temp;
+                }
+
+if (is(study[i], '"Exclusion Criteria"') && !is(study[++i], '"Healthy Volunteers"'))
+                                  finalRecord['exclusion_criteria'] = cleanLine(study[i++]);
+
+ if (is(study[i], '"Healthy Volunteers"') && !is(study[++i], '"Type of Primary Outcome"'))
+                                  finalRecord['healthy_volunteers'] = cleanLine(study[i++]);
+
+ if (is(study[i], '"Type of Primary Outcome"') && !is(study[++i], '"Primary Outcome(s) 1"'))
+                                  finalRecord['type_of_primary_outcome'] = cleanLine(study[i++]);
+
+ if (is(study[i++], "Primary Outcome(s) 1")) {
+                    primaryOutcome = [];
+
+                    while (!is(study[i], '"Secondary Outcome(s) 1"')) {
+                        temp = {};
+
+                        if (is(study[i], '"- Outcome"') && !is(study[++i], '"- Timepoint"'))
+                            temp['outcome'] = cleanLine(study[i++]);
+
+
+                         if (is(study[i], '"- Timepoint"') && !(is(study[++i], '"Secondary Outcome(s) 1"')
+                                                                                                    || is(study[i], '"Primary Outcome')) ) {
+                                                    temp['timepoint'] = cleanLine(study[i++]);
+
+                            // If its not the end of the array of objects move one more line to allow for object header.
+
+                            if(!(is(study[i], '"Secondary Outcome(s) 1"')))
+                                i++;
+                        }
+
+                        primaryOutcome.push(temp);
+                    }
+
+                    finalRecord['primary_Outcome'] = primaryOutcome;
+                }
+ if (is(study[i++], "Secondary Outcome(s) 1")) {
+                   secondaryOutcome = [];
+
+                    while (!is(study[i], '"Result Registerd"')) {
+                        temp = {};
+
+                        if (is(study[i], '"- Outcome"') && !is(study[++i], '"- Timepoint"'))
+                            temp['outcome'] = cleanLine(study[i++]);
+
+
+                         if (is(study[i], '"- Timepoint"') && !(is(study[++i], '"Result Registerd"')
+                                                                                                    || is(study[i], '"Secondary Outcome')) ) {
+                                                    temp['timepoint'] = cleanLine(study[i++]);
+
+                            // If its not the end of the array of objects move one more line to allow for object header.
+
+                            if(!(is(study[i], '"Result Registerd"')))
+                                i++;
+                        }
+
+                        secondaryOutcome.push(temp);
+                    }
+
+                    finalRecord['secondary_Outcome'] = secondaryOutcome;
+                }
+if (is(study[i], '"Result Registerd"') && !is(study[++i], '"Sharing Statement"'))
+                                  finalRecord['result_registerd'] = cleanLine(study[i++]);
+ if (is(study[i], '"Sharing Statement"') && !is(study[++i], '"Time of Sharing"'))
+                                  finalRecord['sharing_statement'] = cleanLine(study[i++]);
+if (is(study[i], '"Time of Sharing"') && !is(study[++i], '"Way of Sharing"'))
+                                  finalRecord['time_of_sharing'] = cleanLine(study[i++]);
+ if (is(study[i], '"Way of Sharing"'))
+                 finalRecord['way_of_sharing'] = cleanLine(study[i++]);
+
+      process.stdout.write(JSON.stringify(finalRecord) + '\n');
+}});
 
 function is(line, compareTo) {
     return (line.indexOf(compareTo) !== -1);
