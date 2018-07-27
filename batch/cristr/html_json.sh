@@ -4,10 +4,10 @@ set +H
 
 html_dir=${1}
 download=${2:-'no'}
-s3_bucket=${3:-'s3://hsdlc-results/ntr-adapter/studies'}
+s3_bucket=${3:-'s3://hsdlc-results/cristr-adapter/studies'}
 context_dir=${4:-'/usr/local/dataintegration'}
-max_id=${5:-2000}
-start_id=${6:-22}
+max_id=${5:-12076}
+start_id=${6:-911}
 
 prefix_url="http://cris.nih.go.kr/cris/en/search/search_result_st01.jsp?seq="
 suffix_url=""
@@ -30,7 +30,7 @@ function analyse_file() {
 
 function gen_json() {
 
-cat ${1} | pup 'tbody json{}' | ./html_json.js | jq >> ${2}/studies.json
+cat ${1} | pup 'tbody json{}' | grep '"text"' | ./html_json.js | jq -c '.' >> ${2}/studies.json
 
 }
 

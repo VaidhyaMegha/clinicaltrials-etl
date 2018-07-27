@@ -15,7 +15,7 @@ CREATE EXTERNAL TABLE `cris_studies`(
  `overall_recruitment_status`  string,
  `date_of_first_enrollment`  string,
  `target_number_of_participant` string,
- `primary_completion_date`  string
+ `primary_completion_date`  string,
  `study_completion_date` string,
  `recruitment_status_by_participating_study_site` array<map<string,string>>,
  `source_of_monetary_material_support` array<map<string,string>>,
@@ -33,7 +33,7 @@ CREATE EXTERNAL TABLE `cris_studies`(
  `arms` array<map<string,string>>,
  `conditions_or_problems` string,
  `rare_disease` string,
- `inclusion_criteria`:struct<gender:string,age:string,description:string>
+ `inclusion_criteria`:struct<gender:string,age:string,description:string>,
  `exclusion_criteria` string,
  `healthy_volunteers` string,
  `type_of_primary_income` string,
@@ -43,7 +43,7 @@ CREATE EXTERNAL TABLE `cris_studies`(
  `sharing_statement` string
  )
   ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
-      LOCATION 's3://hsdlc-results/actrn-adapter/json'
+      LOCATION 's3://hsdlc-results/cristr-adapter/studies/json'
       TBLPROPERTIES (
       'ignore.malformed.json'= 'true'
       );
