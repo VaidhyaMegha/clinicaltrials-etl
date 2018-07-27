@@ -30,7 +30,7 @@ function analyse_file() {
 
 function gen_json() {
 
-cat ${1} | pup 'tbody json{}' | grep '"text"' | ./html_json.js | jq -c '.' >> ${2}/studies.json
+cat ${1} | pup 'tbody json{}' | grep '"text"' | node --max-old-space-size=8192 ./html_json.js | jq -c '.' >> ${2}/studies.json
 
 }
 
