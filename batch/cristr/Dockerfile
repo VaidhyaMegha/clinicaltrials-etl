@@ -9,10 +9,10 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Install python pip
 RUN  apt-get update &&  apt-get install -y python  && \
-     apt-get install -y python-pip && \
-     apt-get install -y git && \
-     apt-get install -y wget && \
-     apt-get install -y jq
+      python-pip  \
+      git  \
+      wget  \
+      jq --no-install-recommends
 
 # Install boto( will also install botocore) and awscli
 RUN python --version && \
@@ -30,7 +30,7 @@ RUN apt-get install -y  curl \
                         binutils \
                         bison \
                         gcc \
-                        build-essential && \
+                        build-essential --no-install-recommends && \
     bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/${GVM_VERSION}/binscripts/gvm-installer) && \
     apt-get clean all && \
     rm -rf /var/lib/apt/lists/*
