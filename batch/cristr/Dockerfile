@@ -8,11 +8,11 @@ ENV GVM_VERSION=1.0.22
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Install python pip
-RUN  apt-get update &&  apt-get install -y python  && \
-      python-pip  \
+RUN  apt-get update &&  apt-get install -y --no-install-recommends python \
+      python-setuptools python-dev build-essential python-pip   \
       git  \
       wget  \
-      jq --no-install-recommends
+      jq
 
 # Install boto( will also install botocore) and awscli
 RUN python --version && \
