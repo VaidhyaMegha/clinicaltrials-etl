@@ -398,7 +398,7 @@ if (is(study, i, '"Time of Sharing"') && !is(study, ++i, '"Way of Sharing"'))
 }});
 
 function is(study, i, compareTo) {
-    if (i>=study.length()) return false;
+    if (i>=study.length) return false;
 
     let line = study[i];
 
@@ -406,7 +406,7 @@ function is(study, i, compareTo) {
 }
 
 function cleanLine(study, i) {
-    if (i>=study.length()) return '';
+    if (i>=study.length) return '';
 
     let line = study[i];
     line = line.replace(/"/g, '');
