@@ -16,9 +16,41 @@ download_trial_url=""
 
 function analyse_trial_xml() { 
   sed  -i "s///g" ${html_dir}/studies/RBR-ictrp.xml
-  sed  -i "s///g" ${html_dir}/studies/RBR-ictrp.xml
   xml2json < ${1} > ${2}
- }
+
+jq  -c '.trials.trial[]' ${2} > ${3}
+
+sed -i 's/"contacts":{"contact":{/"contacts":{"contact":\[{/g' ${3}
+sed -i 's/}}\,"countries"/}\]},"countries"/g' ${3}
+sed -i 's/"health_condition_keyword":{"hc_keyword":/"health_condition_keyword":{"hc_keyword":\[/g' ${3}
+sed -i 's/"health_condition_keyword":{"hc_keyword":\[\[/"health_condition_keyword":{"hc_keyword":\[/g' ${3}
+sed -i 's/},"intervention_code"/\]},"intervention_code"/g' ${3}
+sed -i 's/\]\]},"intervention_code"/\]},"intervention_code"/g' ${3}
+sed -i 's/"countries":{"country2":/"countries":{"country2":\[/g' ${3}
+sed -i 's/"countries":{"country2":\[\[/"countries":{"country2":\[/g' ${3}
+sed -i 's/},"criteria"/\]},"criteria"/g' ${3}
+sed -i 's/\]\]},"criteria"/\]},"criteria"/g' ${3}
+sed -i 's/"health_condition_code":{"hc_code":/"health_condition_code":{"hc_code":\[/g' ${3}
+sed -i 's/"health_condition_code":{"hc_code":\[\[/"health_condition_code":{"hc_code":\[/g' ${3}
+sed -i 's/},"health_condition_keyword"/\]},"health_condition_keyword"/g' ${3}
+sed -i 's/\]\]},"health_condition_keyword"/\]},"health_condition_keyword"/g' ${3}
+sed -i 's/"secondary_outcome":{"sec_outcome":/"secondary_outcome":{"sec_outcome":\[/g' ${3}
+sed -i 's/"secondary_outcome":{"sec_outcome":\[\[/"secondary_outcome":{"sec_outcome":\[/g' ${3}
+sed -i 's/},"secondary_sponsor"/\]},"secondary_sponsor"/g' ${3}
+sed -i 's/\]\]},"secondary_sponsor"/\]},"secondary_sponsor"/g' ${3}
+sed -i 's/"secondary_sponsor":{"sponsor_name":/"secondary_sponsor":{"sponsor_name":\[/g' ${3}
+sed -i 's/"secondary_sponsor":{"sponsor_name":\[\[/"secondary_sponsor":{"sponsor_name":\[/g' ${3}
+sed -i 's/},"secondary_ids"/\]},"secondary_ids"/g' ${3}
+sed -i 's/\]\]},"secondary_ids"/\]},"secondary_ids"/g' ${3}
+sed -i 's/"secondary_ids":{"secondary_id":/"secondary_ids":{"secondary_id":\[/g' ${3}
+sed -i 's/"secondary_ids":{"secondary_id":\[\[/"secondary_ids":{"secondary_id":\[/g' ${3}
+sed -i 's/},"source_support"/\]},"source_support"/g' ${3}
+sed -i 's/\]\]},"source_support"/\]},"source_support"/g' ${3}
+sed -i 's/"source_support":{"source_name":/"source_support":{"source_name":\[/g' ${3}
+sed -i 's/"source_support":{"source_name":\[\[/"source_support":{"source_name":\[/g' ${3}
+sed -i 's/},"source_support"/\]},"source_support"/g' ${3}
+sed -i 's/\]\]},"source_support"/\]},"source_support"/g' ${3}
+}
 
 pushd ${context_dir}
 
@@ -34,13 +66,18 @@ if [[ ${download} == 'yes' ]]; then
 
    download_xml_page
 
-   analyse_trial_xml ${html_dir}/studies/RBR-ictrp.xml ${html_dir}/studies/json/studies.json
+   analyse_trial_xml ${html_dir}/studies/RBR-ictrp.xml ${html_dir}/studies/json/studies.json ${html_dir}/studies/RBR-ictrp.athena.json
 
- #  aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
+aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
+   
 
-else
-   analyse_trial_xml ${html_dir}/studies/RBR-ictrp.xml ${html_dir}/studies/json
 
    aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
+   
+   
+   
+else
+   analyse_trial_xml ${html_dir}/studies/RBR-ictrp.xml ${html_dir}/studies/json
+   
 fi
 popd
