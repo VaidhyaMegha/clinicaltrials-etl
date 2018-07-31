@@ -26,6 +26,13 @@ sed -i 's/"health_condition_keyword":{"hc_keyword":/"health_condition_keyword":{
 sed -i 's/"health_condition_keyword":{"hc_keyword":\[\[/"health_condition_keyword":{"hc_keyword":\[/g' ${3}
 sed -i 's/},"intervention_code"/\]},"intervention_code"/g' ${3}
 sed -i 's/\]\]},"intervention_code"/\]},"intervention_code"/g' ${3}
+
+sed -i 's/"intervention_keyword":{"i_keyword":/"intervention_keyword":{"i_keyword":\[/g' ${3}
+sed -i 's/"intervention_keyword":{"i_keyword":\[\[/"intervention_keyword":{"i_keyword":\[/g' ${3}
+sed -i 's/},"primary_outcome"/\]},"primary_outcome"/g' ${3}
+sed -i 's/\]\]},"primary_outcome"/\]},"primary_outcome"/g' ${3}
+
+
 sed -i 's/"countries":{"country2":/"countries":{"country2":\[/g' ${3}
 sed -i 's/"countries":{"country2":\[\[/"countries":{"country2":\[/g' ${3}
 sed -i 's/},"criteria"/\]},"criteria"/g' ${3}
@@ -48,8 +55,10 @@ sed -i 's/},"source_support"/\]},"source_support"/g' ${3}
 sed -i 's/\]\]},"source_support"/\]},"source_support"/g' ${3}
 sed -i 's/"source_support":{"source_name":/"source_support":{"source_name":\[/g' ${3}
 sed -i 's/"source_support":{"source_name":\[\[/"source_support":{"source_name":\[/g' ${3}
-sed -i 's/},"source_support"/\]},"source_support"/g' ${3}
-sed -i 's/\]\]},"source_support"/\]},"source_support"/g' ${3}
+sed -i 's/}}$/@/g' ${3}
+sed -i 's/\]}$/\]}}/g' ${3}
+sed -i 's/\]@$/\]}}/g' ${3}
+sed -i 's/@$/\]}}/g' ${3}
 }
 
 pushd ${context_dir}
@@ -66,15 +75,11 @@ if [[ ${download} == 'yes' ]]; then
 
    download_xml_page
 
-   analyse_trial_xml ${html_dir}/studies/RBR-ictrp.xml ${html_dir}/studies/json/studies.json ${html_dir}/studies/RBR-ictrp.athena.json
+   analyse_trial_xml ${html_dir}/studies/RBR-ictrp.xml ${html_dir}/studies/json/studies.tmp.json ${html_dir}/studies/json/studies.json
 
-aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
-   
-
+   rm -rf ${html_dir}/studies/json/studies.tmp.json
 
    aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
-   
-   
    
 else
    analyse_trial_xml ${html_dir}/studies/RBR-ictrp.xml ${html_dir}/studies/json
