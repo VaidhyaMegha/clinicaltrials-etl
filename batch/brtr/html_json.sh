@@ -22,6 +22,7 @@ jq  -c '.trials.trial[]' ${2} > ${3}
 
 sed -i 's/"contacts":{"contact":{/"contacts":{"contact":\[{/g' ${3}
 sed -i 's/}}\,"countries"/}\]},"countries"/g' ${3}
+sed -i 's/"contacts":""/"contacts":{}/g' ${3} # contacts has got ""
 sed -i 's/"health_condition_keyword":{"hc_keyword":/"health_condition_keyword":{"hc_keyword":\[/g' ${3}
 sed -i 's/"health_condition_keyword":{"hc_keyword":\[\[/"health_condition_keyword":{"hc_keyword":\[/g' ${3}
 sed -i 's/},"intervention_code"/\]},"intervention_code"/g' ${3}
