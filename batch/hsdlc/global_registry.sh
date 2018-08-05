@@ -153,7 +153,7 @@ done
 find ${html_dir}chictr/studies/json/ -type f -name "*.json"  | while read f
 do
 
-jq -c   '{"trialid":.Registration_number,"secondary_id":[.The_registration_number_of_the_Partner_Registry_or_other_register],"Date_of_Registration":.Date_of_Registration,"Public_Title":.Public_title,"Scientific_Title":.Scientific_title,"study_type":"","date_of_first_enrollment":"","RecruitmentStatus":.Recruiting_status,"completionDate":"","PrimarySponsors":{"name": [.Sources_of_funding],   "person": [],"address":[]}, "SecondarySponsors":{"name": [.Secondary_sponsor.Institution_hospital],   "person": [],"address":[.Secondary_sponsor.Address]},"registry": "ChiCTR", "source_json": tojson }' ${f} >> ${html_dir}output/json/utdm_json.json
+jq -c   '{"trialid":.Registration_number,"secondary_id":[.The_registration_number_of_the_Partner_Registry_or_other_register],"Date_of_Registration":.Date_of_Registration,"Public_Title":.Public_title,"Scientific_Title":.Scientific_title,"study_type":"","date_of_first_enrollment":"","RecruitmentStatus":.Recruiting_status,"completionDate":"","PrimarySponsors":{"name": [.Sources_of_funding],   "person": [],"address":[]}, "SecondarySponsors":{"name": [],   "person": [],"address":[]},"registry": "ChiCTR", "source_json": tojson }' ${f} >> ${html_dir}output/json/utdm_json.json
 
 done
 
