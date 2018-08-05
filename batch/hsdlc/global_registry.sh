@@ -109,7 +109,7 @@ fi
 
 find ${html_dir}ct/studies/json/ -type f -name "*.json"  | while read f
 do
-jq -c '{"trialid":.id_info.nct_id,"secondary_id":.id_info.secondary_id,"Date_of_Registration":.study_first_submitted,"Public_Title":.brief_title,"Scientific_Title":.Official_Title,"study_type":.study_type,"date_of_first_enrollment":"","RecruitmentStatus":.overall_status,"CompletionDate":"","PrimarySponsors":{"name": [.sponsors.lead_sponsor.agency],   "person": [],"address":[]},"SecondarySponsors":{"name": [],   "person": [],"address":[]},"Contact":.[.overall_contact],"registry": "CT", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+jq -c '{"trialid":.id_info.nct_id,"secondary_id":.id_info.secondary_id,"Date_of_Registration":.study_first_submitted,"Public_Title":.brief_title,"Scientific_Title":.Official_Title,"study_type":.study_type,"date_of_first_enrollment":"","RecruitmentStatus":.overall_status,"CompletionDate":"","PrimarySponsors":{"name": [.sponsors.lead_sponsor.agency],   "person": [],"address":[]},"SecondarySponsors":{"name": [],   "person": [],"address":[]},"Contact":[.overall_contact],"registry": "CT", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
 done
 
 
