@@ -10,6 +10,8 @@ s3_actrn_bucket=${6:-'s3://hsdlc-results/actrn-adapter/'}
 s3_euctrn_bucket=${7:-'s3://hsdlc-results/euctrn-adapter/'}
 s3_irctn_bucket=${8:-'s3://hsdlc-results/irctn-adapter/'}
 s3_jprn_bucket=${9:-'s3://hsdlc-results/jprn-adapter/'}
+s3_brtr_bucket=${9:-'s3://hsdlc-results/brtr-adapter/'}
+s3_ntr_bucket=${9:-'s3://hsdlc-results/ntr-adapter/studies/'}
 s3_utdm_bucket=${10:-'s3://hsdlc-results/utdm-adapter/'}
 context_dir=${11:-'/usr/local/dataintegration'}
 
@@ -40,6 +42,14 @@ if [[ ${download} == 'yes' ]]; then
 
   if [ -d ${html_dir}jprn ]; then
         rm -rf ${html_dir}jprn
+  fi
+
+  if [ -d ${html_dir}brtr ]; then
+        rm -rf ${html_dir}brtr
+  fi
+
+  if [ -d ${html_dir}ntr ]; then
+        rm -rf ${html_dir}ntr
   fi
 
   if [ -d ${html_dir}output ]; then
@@ -74,6 +84,14 @@ if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}jprn/studies
     mkdir ${html_dir}jprn/studies/json
 
+    mkdir ${html_dir}brtr
+    mkdir ${html_dir}brtr/studies
+    mkdir ${html_dir}brtr/studies/json
+
+    mkdir ${html_dir}ntr
+    mkdir ${html_dir}ntr/studies
+    mkdir ${html_dir}ntr/studies/json
+
     mkdir ${html_dir}output
     mkdir ${html_dir}output/json
 
@@ -84,12 +102,14 @@ if [[ ${download} == 'yes' ]]; then
     aws s3 cp ${s3_euctrn_bucket}json ${html_dir}euctrn/studies/json --recursive
     aws s3 cp ${s3_irctn_bucket}json ${html_dir}irctn/studies/json --recursive
     aws s3 cp ${s3_jprn_bucket}json ${html_dir}jprn/studies/json --recursive
+    aws s3 cp ${s3_brtr_bucket}json ${html_dir}brtr/studies/json --recursive
+    aws s3 cp ${s3_ntr_bucket}json ${html_dir}ntr/studies/json --recursive
 fi
 #########################    CT    ######################################
 
 find ${html_dir}ct/studies/json/ -type f -name "*.json"  | while read f
 do
-jq -c '{"trialid":.id_info.nct_id,"secondary_id":.id_info.secondary_id,"Date_of_Registration":.study_first_submitted,"Public_Title":.brief_title,"Scientific_Title":.Official_Title,"study_type":.study_type,"date_of_first_enrollment":"","RecruitmentStatus":.overall_status,"CompletionDate":"","PrimarySponsors":{"name": [.sponsors.lead_sponsor.agency],   "person": [],"address":[]},"SecondarySponsors":{"name": [],   "person": [],"address":[]},"registry": "CT", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+jq -c '{"trialid":.id_info.nct_id,"secondary_id":.id_info.secondary_id,"Date_of_Registration":.study_first_submitted,"Public_Title":.brief_title,"Scientific_Title":.Official_Title,"study_type":.study_type,"date_of_first_enrollment":"","RecruitmentStatus":.overall_status,"CompletionDate":"","PrimarySponsors":{"name": [.sponsors.lead_sponsor.agency],   "person": [],"address":[]},"SecondarySponsors":{"name": [],   "person": [],"address":[]},"Contact":.[.overall_contact],"registry": "CT", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
 done
 
 
@@ -100,7 +120,7 @@ fi
 #########################   CTRI   ##############################
 find ${html_dir}ctri/studies/json/ -type f -name "*.json"  | while read f
 do
-jq -c '{"trialid":.ctri_number,"secondary_id":[.secondary_ids.secondary_id],"Date_of_Registration":.registered_on,"Public_Title":.public_title,"Scientific_Title":.scientific_title,"study_type":.type_of_study,"date_of_first_enrollment":.date_of_first_enrollment_india,"RecruitmentStatus":.recruitment_status_india,"completionDate":.date_of_completion_india, "PrimarySponsors":{"name": [.primary_sponsor.name],   "person": [],"address":[.primary_sponsor.address]},"SecondarySponsors":{"name": [.secondary_sponsor.name],   "person": [],"address":[secondary_sponsor.address]},"registry": "CTRI", "source_json": tojson}'  ${f} >> ${html_dir}output/json/utdm_json.json
+jq -c '{"trialid":.ctri_number,"secondary_id":[.secondary_ids.secondary_id],"Date_of_Registration":.registered_on,"Public_Title":.public_title,"Scientific_Title":.scientific_title,"study_type":.type_of_study,"date_of_first_enrollment":.date_of_first_enrollment_india,"RecruitmentStatus":.recruitment_status_india,"completionDate":.date_of_completion_india, "PrimarySponsors":{"name": [.primary_sponsor.name],   "person": [],"address":[.primary_sponsor.address]},"SecondarySponsors":{"name": [.secondary_sponsor.name],   "person": [],"address":[secondary_sponsor.address]},"Contact":[.public_query_contact],"registry": "CTRI", "source_json": tojson}'  ${f} >> ${html_dir}output/json/utdm_json.json
 done
 
  if [ -d ${html_dir}ctri ]; then
@@ -110,7 +130,7 @@ done
 #########################   JPRN    #####################################
 find ${html_dir}jprn/studies/json/ -type f -name "*.json"  | while read f
 do
-jq -c '{"trialid":.Unique_ID_issued_by_UMIN,"secondary_id":[.Secondary_IDs.Study_ID_1, .Secondary_IDs.Study_ID_2 ],"Date_of_Registration":.Management_information.Registered_date,"Public_Title":.Basic_information.Title_of_the_study_Brief_title,"Scientific_Title":.Official_scientific_title_of_the_study,"study_type":.Base.Study_type,"date_of_first_enrollment":"","RecruitmentStatus":.Recruitment_status,"completionDate":.Progress.Date_analysis_concluded, "PrimarySponsors":{"name": [.Sponsor.Institute],   "person": [],"address":[]},"SecondarySponsors":{"name": [],   "person": [],"address":[]},"registry": "JPRN", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+jq -c '{"trialid":.Unique_ID_issued_by_UMIN,"secondary_id":[.Secondary_IDs.Study_ID_1, .Secondary_IDs.Study_ID_2 ],"Date_of_Registration":.Management_information.Registered_date,"Public_Title":.Basic_information.Title_of_the_study_Brief_title,"Scientific_Title":.Official_scientific_title_of_the_study,"study_type":.Base.Study_type,"date_of_first_enrollment":"","RecruitmentStatus":.Recruitment_status,"completionDate":.Progress.Date_analysis_concluded, "PrimarySponsors":{"name": [.Sponsor.Institute],   "person": [],"address":[]},"SecondarySponsors":{"name": [],   "person": [],"address":[]},"Contact":[.Public_Contact_Person],"registry": "JPRN", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
 
 done
 
@@ -121,7 +141,7 @@ done
 #########################   IRCTN    #####################################
 find ${html_dir}irctn/studies/json/ -type f -name "*.json"  | while read f
 do
-jq -c '{"trialid":.IRCT_RegistrationNumber,"secondary_id":.Secondary_Ids,"Date_of_Registration":.Registration_timing,"Public_Title":.Public_title,"Scientific_Title":.Scientific_title,"study_type":"","date_of_first_enrollment":.Expected_Recruitment_start_Date,"RecruitmentStatus":.Recruitment_status,"completionDate":"","PrimarySponsors":{"name": [.Sponsors__or_FundingSources | .[].Name_of_organization_or_entity ],"person": [.Sponsors__or_FundingSources | .[].Full_name_of_responsible_person ]} ,"SecondarySponsors":{"name": [],   "person": [],"address":[]}, "registry": "IRCT", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+jq -c '{"trialid":.IRCT_RegistrationNumber,"secondary_id":.Secondary_Ids,"Date_of_Registration":.Registration_timing,"Public_Title":.Public_title,"Scientific_Title":.Scientific_title,"study_type":"","date_of_first_enrollment":.Expected_Recruitment_start_Date,"RecruitmentStatus":.Recruitment_status,"completionDate":"","PrimarySponsors":{"name": [.Sponsors__or_FundingSources | .[].Name_of_organization_or_entity ],"person": [.Sponsors__or_FundingSources | .[].Full_name_of_responsible_person ]} ,"SecondarySponsors":{"name": [],   "person": [],"address":[]},"Contact":.PersonResponsibleForGeneralQueries, "registry": "IRCT", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
 done
 
   if [ -d ${html_dir}irctn ]; then
@@ -146,7 +166,7 @@ done
 find ${html_dir}actrn/studies/json/ -type f -name "*.json"  | while read f
 do
 
-jq -c   '{"trialid":.trial_id,"secondary_id":.secondary_id,"Date_of_Registration":.date_registered,"Public_Title":.public_title,"Scientific_Title":.scientific_title,"study_type":.Study_Type,"date_of_first_enrollment":"","RecruitmentStatus":.Recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [],   "person": [],"address":[]}, "registry": "ACTRN", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+jq -c   '{"trialid":.trial_id,"secondary_id":.secondary_id,"Date_of_Registration":.date_registered,"Public_Title":.public_title,"Scientific_Title":.scientific_title,"study_type":.Study_Type,"date_of_first_enrollment":"","RecruitmentStatus":.Recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [],   "person": [],"address":[]},"Contact":[.Study_leaders_address,.Study_leader,.Study_leaders_postcode,.Study_leaders_telephone] "registry": "ACTRN", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
 
 done
 
@@ -158,12 +178,30 @@ done
 find ${html_dir}euctrn/studies/json/p_y* -type f -name "*.json"  | while read f
 do
 
-jq -c '{"trialid":.eudract_number,"secondary_id":[""],"Date_of_Registration":.date_on_which_this_record_was_first_entered_in_the_eudract_database,"Public_Title":.full_title_of_the_trial,"Scientific_Title":.name_or_abbreviated_title_of_the_trial_where_available,"study_type":.clinical_trial_type,"date_of_first_enrollment":"","RecruitmentStatus":.trial_status,"completionDate":"" ,"PrimarySponsors":{"name": [],   "person": [],"address":[]}, "registry": "EUCTRN", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+jq -c '{"trialid":.eudract_number,"secondary_id":[""],"Date_of_Registration":.date_on_which_this_record_was_first_entered_in_the_eudract_database,"Public_Title":.full_title_of_the_trial,"Scientific_Title":.name_or_abbreviated_title_of_the_trial_where_available,"study_type":.clinical_trial_type,"date_of_first_enrollment":"","RecruitmentStatus":.trial_status,"completionDate":"" ,"PrimarySponsors":{"name": [],   "person": [],"address":[]}, "Contact":[], "registry": "EUCTRN", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+
+#########################   BRTR    #####################################
+find ${html_dir}brtr/studies/json/ -type f -name "*.json"  | while read f
+do
+
+jq -c '{"trialid":.main.trial_id,"secondary_id":.secondary_ids,"Date_of_Registration":.main.date_registration,"Public_Title":.main.public_title,"Scientific_Title":.main.scientific_title,"study_type":.main.study_type,"date_of_first_enrollment":.main.date_enrolment,"RecruitmentStatus":.main.recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [.main.primary_sponsor],   "person": [],"address":[]}, "Contact":.contacts, "registry": "BRTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
 
 done
 
-#  if [ -d ${html_dir}euctrn ]; then
-#        rm -rf ${html_dir}euctrn
-#  fi
+  if [ -d ${html_dir}brtr ]; then
+        rm -rf ${html_dir}brtr
+  fi
+
+#########################   NTR   #####################################
+find ${html_dir}ntr/studies/json/ -type f -name "*.json"  | while read f
+do
+
+jq -c '{"trialid":.NTR_Number,"secondary_id":[.secondary_ids],"Date_of_Registration":.Date_Registered_NTR,"Public_Title":.Public_Title,"Scientific_Title":.scientific_title,"study_type":.study_type,"date_of_first_enrollment":.date_enrolment,"RecruitmentStatus":.status,"completionDate":"" ,"PrimarySponsors":{"name": [],   "person": [],"address":[]}, "Contact":[.CONTACT_FOR_PUBLIC_QUERIES], "registry": "NTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+
+done
+
+  if [ -d ${html_dir}ntr ]; then
+        rm -rf ${html_dir}ntr
+  fi
 
 aws s3 sync ${html_dir}/output/ ${s3_utdm_bucket}  --delete
