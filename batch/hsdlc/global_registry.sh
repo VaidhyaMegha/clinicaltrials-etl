@@ -187,7 +187,7 @@ done
 find ${html_dir}brtr/studies/json/ -type f -name "*.json"  | while read f
 do
 
-jq -c '{"trialid":.main.trial_id,"secondary_id":.secondary_ids,"Date_of_Registration":.main.date_registration,"Public_Title":.main.public_title,"Scientific_Title":.main.scientific_title,"study_type":.main.study_type,"date_of_first_enrollment":.main.date_enrolment,"RecruitmentStatus":.main.recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [.main.primary_sponsor],   "person": [],"address":[]},"SecondarySponsors":{"name": [.secondary_sponsor.sponsor_name],   "person": [],"address":[]}, "Contact":.contacts, "registry": "BRTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+jq -c '{"trialid":.main.trial_id,"secondary_id":[.secondary_ids.secondary_id[].sec_id],"Date_of_Registration":.main.date_registration,"Public_Title":.main.public_title,"Scientific_Title":.main.scientific_title,"study_type":.main.study_type,"date_of_first_enrollment":.main.date_enrolment,"RecruitmentStatus":.main.recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [.main.primary_sponsor],   "person": [],"address":[]},"SecondarySponsors":{"name": [.secondary_sponsor.sponsor_name],   "person": [],"address":[]}, "Contact":.contacts, "registry": "BRTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
 
 done
 
