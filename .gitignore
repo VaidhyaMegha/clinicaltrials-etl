@@ -6,3 +6,4 @@ scripts/credentials.sh
 AllPublicXMLs/
 htmls/
 xmls/
+*.csv
