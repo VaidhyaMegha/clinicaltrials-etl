@@ -118,9 +118,9 @@ public class WQUPC {
         Map<String, Integer> idsMap = new HashMap<>();
         Map<Integer, String> mapIds = new HashMap<>();
 
-        WQUPC uf = new WQUPC(250000);
+        WQUPC uf = new WQUPC(500000);
 
-        int i = 1;
+        int i = 0;
 
         while (!uf.isEmpty()) {
             String line = WQUPC.readLine();
@@ -129,8 +129,6 @@ public class WQUPC {
 
 //            System.out.println(ids.length + Arrays.toString(ids));
 
-            ids[0] = ids[0].replaceAll("\"", "");
-            ids[1] = ids[1].replaceAll("\"", "");
 
             int id1, id2;
 
@@ -159,10 +157,8 @@ public class WQUPC {
 
         Map<String, ArrayList<String>> result = new HashMap<>();
         for (i = 0; i < uf.parent.length ; i++) {
-            if(uf.size[uf.parent[i]] > 1) {
-                if(result.get(uf.parent[i]) == null) result.put(mapIds.get(uf.parent[i]), new ArrayList<String>());
-                result.get(mapIds.get(uf.parent[i])).add(mapIds.get(i));
-            }
+            if(result.get(mapIds.get(uf.parent[i])) == null) result.put(mapIds.get(uf.parent[i]), new ArrayList<String>());
+            result.get(mapIds.get(uf.parent[i])).add(mapIds.get(i));
         }
 
         Set<String> keys = result.keySet();
