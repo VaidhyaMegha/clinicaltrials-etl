@@ -4,6 +4,8 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Arrays;
+import java.util.regex.Pattern;
 import java.util.InputMismatchException;
 
 public class WQUPC {
@@ -87,28 +89,78 @@ public class WQUPC {
 
     }
 
+    public static String readString() {
+        try {
+            return scanner.next();
+        }
+        catch (NoSuchElementException e) {
+            throw new NoSuchElementException("attempts to read a 'String' value from standard input, "
+                    + "but no more tokens are available");
+        }
+    }
+
+    public static String readLine() {
+        try {
+            return scanner.nextLine();
+        }
+        catch (NoSuchElementException e) {
+            throw new NoSuchElementException("attempts to read a 'String' value from standard input, "
+                    + "but no more tokens are available");
+        }
+    }
+
     public boolean isEmpty() {
         return !scanner.hasNext();
     }
 
     public static void main(String[] args) {
+        Map<String, Integer> idsMap = new HashMap<>();
+        Map<Integer, String> mapIds = new HashMap<>();
 
-        int n = WQUPC.readInt();
-        WQUPC uf = new WQUPC(n);
+        WQUPC uf = new WQUPC(250000);
+
+        int i = 1;
+
         while (!uf.isEmpty()) {
-            int p = uf.readInt();
-            int q = uf.readInt();
-            if (uf.connected(p, q)) continue;
-            uf.union(p, q);
-//            System.out.println(p + " " + q);
+            String line = WQUPC.readLine();
+//            System.out.println(line);
+            String[] ids = line.split(Pattern.quote("|"));
+
+//            System.out.println(ids.length + Arrays.toString(ids));
+
+            ids[0] = ids[0].replaceAll("\"", "");
+            ids[1] = ids[1].replaceAll("\"", "");
+
+            int id1, id2;
+
+            if(idsMap.get(ids[0]) == null){
+                idsMap.put(ids[0], i);
+                mapIds.put(i, ids[0]);
+                i++;
+            }
+
+            id1 = idsMap.get(ids[0]);
+
+            if(idsMap.get(ids[1]) == null){
+                idsMap.put(ids[1], i);
+                mapIds.put(i, ids[1]);
+                i++;
+            }
+
+            id2 = idsMap.get(ids[1]);
+
+            if (uf.connected(id1, id2)) continue;
+            uf.union(id1, id2);
         }
+
+
         System.out.println(uf.count() + " components");
 
-        Map<Integer, ArrayList<Integer>> result = new HashMap<>();
-        for (int i = 0; i < uf.parent.length ; i++) {
+        Map<String, ArrayList<String>> result = new HashMap<>();
+        for (i = 0; i < uf.parent.length ; i++) {
             if(uf.size[uf.parent[i]] > 1) {
-                if(result.get(uf.parent[i]) == null) result.put(uf.parent[i], new ArrayList<Integer>());
-                result.get(uf.parent[i]).add(i);
+                if(result.get(uf.parent[i]) == null) result.put(mapIds.get(uf.parent[i]), new ArrayList<String>());
+                result.get(mapIds.get(uf.parent[i])).add(mapIds.get(i));
             }
         }
 
