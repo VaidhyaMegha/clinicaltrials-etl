@@ -3,6 +3,7 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Set;
 import java.util.HashMap;
 import java.util.Arrays;
 import java.util.regex.Pattern;
@@ -164,8 +165,10 @@ public class WQUPC {
             }
         }
 
-        System.out.println(result.toString());
-
+        Set<String> keys = result.keySet();
+        for (String key : keys) {
+            System.out.println(key + "|" + result.get(key));
+        }
     }
 
 }
