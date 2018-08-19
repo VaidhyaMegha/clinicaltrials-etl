@@ -166,7 +166,7 @@ public class WQUPC {
 
         Set<String> keys = result.keySet();
         for (String key : keys) {
-            System.out.println(key + "|" + result.get(key));
+            System.out.println(result.get(key));
         }
     }
 
