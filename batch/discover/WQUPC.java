@@ -157,8 +157,16 @@ public class WQUPC {
 
         Map<String, ArrayList<String>> result = new HashMap<>();
         for (i = 0; i < uf.parent.length ; i++) {
-            if(result.get(mapIds.get(uf.parent[i])) == null) result.put(mapIds.get(uf.parent[i]), new ArrayList<String>());
-            result.get(mapIds.get(uf.parent[i])).add(mapIds.get(i));
+            if(mapIds.get(i) == null) continue;
+
+            String parent = mapIds.get(uf.parent[i]);
+            String child = mapIds.get(i);
+
+            if(result.get(parent) == null) result.put(parent, new ArrayList<String>());
+
+            result.get(parent).add(mapIds.get(i));
+
+            if(result.get(child) == null) result.put(child, result.get(parent));
         }
 
         Set<String> keys = result.keySet();
