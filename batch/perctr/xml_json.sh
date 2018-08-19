@@ -12,7 +12,7 @@ suffix_url="xmlall"
 
 function download_xml_page(){
     wget  -q ${prefix_url}${suffix_url}${1}.xml \
-         -O ${xml_dir}/${1}.xml  || true
+         -O ${xml_dir}/studies/xml/${1}.xml  || true
 }
 
 pushd ${context_dir}
@@ -25,13 +25,14 @@ if [[ ${download} == 'yes' ]]; then
 
    mkdir -p ${xml_dir}/studies
    mkdir ${xml_dir}/studies/json
+   mkdir ${xml_dir}/studies/xml
 
     for (( i=${start_year}; i<=${end_year}; i++ ))
     do
         download_xml_page ${i}
     done
 
-    find ${xml_dir} -type f -name "*.xml" | while read f
+    find ${xml_dir}/studies/xml -type f -maxdepth 1 -name "*.xml" | while read f
     do
      cat ${f} | node ${xml_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${xml_dir}/studies/json/studies.json
     done
