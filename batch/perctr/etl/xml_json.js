@@ -21,7 +21,7 @@ rl.on('close', function () {
         object: false,
         reversible: false,
         coerce: false,
-        sanitize: true,
+        sanitize: false,
         trim: true,
         arrayNotation: ['contacts','countries','health_condition_code','health_condition_keyword','intervention_keyword','primary_outcome','secondary_outcome', 'primary_sponsor','secondary_sponsor', 'secondary_ids','source_support','trial'],
         alternateTextNode: false
