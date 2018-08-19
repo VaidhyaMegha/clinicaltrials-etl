@@ -152,9 +152,6 @@ public class WQUPC {
             uf.union(id1, id2);
         }
 
-
-        System.out.println(uf.count() + " components");
-
         Map<String, ArrayList<String>> result = new HashMap<>();
         for (i = 0; i < uf.parent.length ; i++) {
             if(mapIds.get(i) == null) continue;
@@ -164,14 +161,12 @@ public class WQUPC {
 
             if(result.get(parent) == null) result.put(parent, new ArrayList<String>());
 
-            result.get(parent).add(mapIds.get(i));
-
-            if(result.get(child) == null) result.put(child, result.get(parent));
+            result.get(parent).add(child);
         }
 
         Set<String> keys = result.keySet();
         for (String key : keys) {
-            System.out.println(key + "|" + result.get(key));
+            System.out.println(result.get(key));
         }
     }
 
