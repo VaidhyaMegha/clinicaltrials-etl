@@ -43,7 +43,7 @@ ENV NODE_PATH $NVM_DIR/versions/node/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
 # Copy python,json and shell scripts
-ADD  etl /usr/local/dataintegration/etls
+ADD  etl /usr/local/dataintegration/etl
 WORKDIR /usr/local/dataintegration/etl
 RUN npm install
 
