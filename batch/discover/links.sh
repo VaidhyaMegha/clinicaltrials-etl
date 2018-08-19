@@ -8,7 +8,7 @@ mode=${3:-'cloud'}
 pushd ${context_dir}
 
 athena --db hsdlc --execute " select trialid as id1,  i.item as id2 from hsdlc.global_registries  cross join unnest(secondary_id) as i (item) where i.item != ''" \
-        --output-format TSV > links.csv
+        --output-format TSV --region 'us-east-1' > links.csv
 
 sed -i 's/\t/|/g' links.csv
 
