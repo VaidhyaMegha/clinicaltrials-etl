@@ -45,8 +45,7 @@ ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 # Copy python,json and shell scripts
 ADD  etl /usr/local/dataintegration/
 WORKDIR /usr/local/dataintegration/etl
-RUN npm install
-COPY .bash_profile /
+RUN npm install 
 
 COPY html_json.sh /usr/local/dataintegration/
 COPY html_json.js /usr/local/dataintegration/
