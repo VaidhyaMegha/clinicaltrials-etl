@@ -43,14 +43,14 @@ ENV NODE_PATH $NVM_DIR/versions/node/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
 # Copy python,json and shell scripts
-ADD  etl /usr/local/dataintegration/
+ADD  etl /usr/local/dataintegration/etls
 WORKDIR /usr/local/dataintegration/etl
 RUN npm install
 
 COPY xml_json.sh /usr/local/dataintegration/
 
 RUN chmod +x /usr/local/dataintegration/etl/xml_json.js
-RUN chmod +x /usr/local/dataintegration/html_json.sh
+RUN chmod +x /usr/local/dataintegration/xml_json.sh
 
 
 
