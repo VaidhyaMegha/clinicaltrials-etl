@@ -42,7 +42,7 @@
  `PersonResponsibleForUpdatingData` Array<Map<string,string>>
 )
   ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
-      LOCATION 's3://hsdlc-results/irct-adapter/json'
+      LOCATION 's3://hsdlc-results/irctn-adapter/json'
       TBLPROPERTIES (
       'ignore.malformed.json'= 'true'
       );
