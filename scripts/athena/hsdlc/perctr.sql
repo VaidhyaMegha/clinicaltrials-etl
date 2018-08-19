@@ -1,4 +1,4 @@
- CREATE EXTERNAL TABLE `perct_studies`(
+ CREATE EXTERNAL TABLE `perctr_studies`(
  `main` Struct<trial_id:string,utrn:string,reg_name:string,date_registration:string,primary_sponsor:string,public_title:string,acronym:string,scientific_title:string,scientific_acronym:string,date_enrolment:string,type_enrolment:string,target_size:string,recruitment_status:string,url:string,study_type:string>,
  `contacts` Array<Map<string,string>>,
  `countries` Array<Map<string,string>>,
