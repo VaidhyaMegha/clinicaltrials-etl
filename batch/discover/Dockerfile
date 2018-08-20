@@ -1,5 +1,6 @@
 FROM phusion/baseimage:0.11
 
+
 # This is in accordance to : https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04
 RUN apt-get update && \
 	apt-get install -y openjdk-8-jdk && \
@@ -28,9 +29,12 @@ RUN python --version && \
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 
+
 CMD ["/sbin/my_init", "/bin/bash"]
 
 COPY WQUPC.class /usr/local/dataintegration/
 COPY links.sh /usr/local/dataintegration/
+COPY athena.sh.txt /usr/local/bin/athena
 
+RUN chmod +x /usr/local/bin/athena
 RUN chmod +x /usr/local/dataintegration/links.sh

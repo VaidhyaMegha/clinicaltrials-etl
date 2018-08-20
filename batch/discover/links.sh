@@ -16,7 +16,7 @@ cat links.csv | java WQUPC > discover.json
 
 
 if [[ ${mode} == 'cloud' ]]; then
-    aws s3 sync  discover.json ${s3_bucket} --delete
+    aws s3 cp  discover.json ${s3_bucket}discover.json
 fi
 
 popd

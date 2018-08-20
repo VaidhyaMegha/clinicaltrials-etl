@@ -114,6 +114,24 @@ public class WQUPC {
         return !scanner.hasNext();
     }
 
+    public static String csvLine(ArrayList<String> line){
+        String SEPARATOR = ",";
+        StringBuilder csvBuilder = new StringBuilder();
+        for(String s : line){
+            csvBuilder.append("\"" + s + "\"");
+            csvBuilder.append(SEPARATOR);
+        }
+
+        String csv = csvBuilder.toString();
+
+        //Remove last separator
+        if(csv.endsWith(SEPARATOR)){
+            csv = csv.substring(0, csv.length() - SEPARATOR.length());
+        }
+
+        return csv;
+    }
+
     public static void main(String[] args) {
         Map<String, Integer> idsMap = new HashMap<>();
         Map<Integer, String> mapIds = new HashMap<>();
@@ -166,7 +184,7 @@ public class WQUPC {
 
         Set<String> keys = result.keySet();
         for (String key : keys) {
-            System.out.println(result.get(key));
+            System.out.println(csvLine(result.get(key)));
         }
     }
 
