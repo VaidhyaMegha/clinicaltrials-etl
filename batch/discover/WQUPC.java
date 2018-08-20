@@ -118,7 +118,7 @@ public class WQUPC {
         String SEPARATOR = ",";
         StringBuilder csvBuilder = new StringBuilder();
         for(String s : line){
-            csvBuilder.append("\"" + s + "\"");
+            csvBuilder.append("\"" + s.trim().replaceAll("\"", "") + "\"");
             csvBuilder.append(SEPARATOR);
         }
 
@@ -129,7 +129,7 @@ public class WQUPC {
             csv = csv.substring(0, csv.length() - SEPARATOR.length());
         }
 
-        return csv;
+        return "[" + csv + "]";
     }
 
     public static void main(String[] args) {
