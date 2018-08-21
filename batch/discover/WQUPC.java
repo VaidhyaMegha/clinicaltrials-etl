@@ -129,7 +129,7 @@ public class WQUPC {
             csv = csv.substring(0, csv.length() - SEPARATOR.length());
         }
 
-        return "[" + csv + "]";
+        return "{component:[" + csv + "]}";
     }
 
     public static void main(String[] args) {
