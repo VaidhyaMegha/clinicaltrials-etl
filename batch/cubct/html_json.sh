@@ -32,8 +32,14 @@ pushd ${context_dir}
 
 if [[ ${download} == 'yes' ]]; then
 
-    if [ -d ${html_dir} ]; then
-        rm -rf ${html_dir}
+    if [ -d ${html_dir}/studies ]; then
+        rm -rf ${html_dir}/studies
+    fi
+    if [ -d ${html_dir}/studies/json ]; then
+        rm -rf ${html_dir}/studies/json
+    fi
+    if [ -d ${html_dir}/studies/analysis ]; then
+        rm -rf ${html_dir}/studies/analysis
     fi
 
     mkdir -p ${html_dir}/studies
