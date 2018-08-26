@@ -1,0 +1,45 @@
+CREATE EXTERNAL TABLE `slctr_studies`(
+ `slctr_registration_number` string,
+  `DateOfRegistration` string,
+  `date_of_last_modification` string,
+  `TrialStatus` string,
+  `ScientificTitleOftrial` string,
+  `PublicTitleOftrial` string,
+  `DiseaseOfHealthConditionStudied` string,
+  `ScientificAcronym` string,
+  `PublicAcronym`  string,
+  `BriefTitle` string,
+  `UniversalTrialNumber` string,
+  `SecondaryId`  string,
+  `ResearchQuestion` Array<string>,
+  `TypeOfStudy` string,
+  `StudyDesign` string,
+  `Allocation`  string,
+   `Masking` string,
+ `Control` string,
+ `Assignment` string,
+ `Purpose` string,
+ `InterventionsPlanned` string,
+ `InclusionCriteria` string,
+ `ExclusionCriteria` string,
+ `PrimaryOutcome` string,
+ `PrimaryOutcomeTime` string,
+  `SecondaryOutcome` string,
+ `SecondaryOutcomeTime` string,
+ `TargetNumber` string,
+ `CountriesOfRecruitment` string,
+ `AnticipatedStartDate` string,
+  `AnticipatedEndDate` string,
+  `RecruitmentStatus` string,
+  `StateOfEthicsApproval` string,
+  `FundingSource` string,
+  `ContactForScientificQueries` Array<string>,
+  `ContactForPublicQueries` Array<string>,
+  `PrimarySponsors` Array<string>,
+  `SecondarySponsors` Array<string>
+ )
+  ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
+      LOCATION 's3://hsdlc-results/slctr-adapter/studies/json'
+      TBLPROPERTIES (
+      'ignore.malformed.json'= 'true'
+      );
