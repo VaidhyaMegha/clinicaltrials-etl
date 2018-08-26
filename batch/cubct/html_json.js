@@ -36,9 +36,7 @@ if (is(study, i++, "Secondary indentifying numbers:")) {
 SecondaryIds = [];
 
 while (!is(study, i, '"Issuing authority of the secondary identifying numbers:"')) {
-        temp = {};
-        temp['Code'] = cleanLine(study, i++);
-        SecondaryIds.push(temp);
+        SecondaryIds.push(cleanLine(study, i++););
         if (is(study, i, "Primary sponsor:")) break;
     }
     finalRecord['SecondaryIDs'] = SecondaryIds;
@@ -131,10 +129,10 @@ source1 = [];
          if (is(study, i, '"Countries of recruitment:"') && !is(study, ++i, '"Clinical sites:"'))
             temp['CountriesOfRecruitment'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Clinical sites:"') && !is(study, ++i, '"Research ethics committees:"'))
+         if (is(study, i, '"Clinical sites:"') && !is(study, ++i, '"Research ethics committees:"'))
              temp['Clinical_Sites'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Research ethics committees:"') && !is(study, ++i, '"Recruitment status"'))
+         if (is(study, i, '"Research ethics committees:"') && !is(study, ++i, '"Recruitment status"'))
              temp['Researchethicscommittees'] = cleanLine(study, i++);
 
     source1.push(temp);
@@ -269,9 +267,6 @@ if (is(study, i++, "Selection criterias")) {
 }
 
 i = i+1
-
-if (is(study, i, '"Type study:"') && !is(study, ++i, '"Purpose:"'))
-finalRecord['TypeStudy'] = cleanLine(study, i++);
 
 if (is(study, i, '"Type study:"') && !is(study, ++i, '"Purpose:"'))
 finalRecord['TypeStudy'] = cleanLine(study, i++);
