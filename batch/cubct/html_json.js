@@ -27,7 +27,7 @@ if (is(study, i, '"Acronym of Public Title:"') && !is(study, ++i, '"Scientific t
 finalRecord['Acronym_of_Public_Title'] = cleanLine(study, i++);
 
 if (is(study, i, '"Scientific title:"') && !is(study, ++i, '"Acronym of Scientific Title:"'))
-finalRecord['Scientifictitle'] = cleanLine(study, i++);
+finalRecord['Scientific_Title'] = cleanLine(study, i++);
 
 if (is(study, i, '"Acronym of Scientific Title:"') && !is(study, ++i, '"Secondary indentifying numbers:"'))
 finalRecord['Acronym_Of_Scientific_Title'] = cleanLine(study, i++);
@@ -146,7 +146,7 @@ if (is(study, i, '"Recruitment status"'))
     i = i+2
 
 if (is(study, i, '"Recruitment status:"') && !is(study, ++i, '"Date of first enrollment:"'))
-finalRecord['Recruitmentstatus'] = cleanLine(study, i++);
+finalRecord['RecruitmentStatus'] = cleanLine(study, i++);
 
 if (is(study, i, '"Date of first enrollment:"') && !is(study, ++i, '"Health condition and Intervention"'))
 finalRecord['DateoffirstEnrollment'] = cleanLine(study, i++);
@@ -221,7 +221,7 @@ if (is(study, i++, "Outcomes and Timepoint")) {
         temp["SEcondaryOutcome"] =  tempSO;
         source1.push(temp);
     }
-    finalRecord['OutcomesANdTImepoints'] = source1;
+    finalRecord['OutcomesAndTimepoints'] = source1;
     i--
 }
 
@@ -383,15 +383,15 @@ if (is(study, i, "Contact for scientific queries")) {
         ScitempEmail.push(cleanLine(study, i++));
         }
         }
-    temp["Pub_EmailAddresses"] =  ScitempEmail;
+    temp["Sci_EmailAddresses"] =  ScitempEmail;
     source.push(temp);
     }
-    finalRecord['ContactForScientificQUeries'] = source;
+    finalRecord['ContactForScientificQueries'] = source;
 }
 
 i = i+1
 if (is(study, i, '"Primary registry:"') && !is(study, ++i, '"Unique ID number:"'))
-    finalRecord['Primaryregistry'] = cleanLine(study, i++);
+    finalRecord['PrimaryRegistry'] = cleanLine(study, i++);
 
 if (is(study, i, '"Unique ID number:"') && !is(study, ++i, '"Date of Registration in Primary Registry:"'))
     finalRecord['UniqueIDNumber'] = cleanLine(study, i++);
