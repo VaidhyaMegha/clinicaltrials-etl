@@ -36,7 +36,7 @@ if (is(study, i++, "Secondary indentifying numbers:")) {
 SecondaryIds = [];
 
 while (!is(study, i, '"Issuing authority of the secondary identifying numbers:"')) {
-        SecondaryIds.push(cleanLine(study, i++););
+        SecondaryIds.push(cleanLine(study, i++));
         if (is(study, i, "Primary sponsor:")) break;
     }
     finalRecord['SecondaryIDs'] = SecondaryIds;
