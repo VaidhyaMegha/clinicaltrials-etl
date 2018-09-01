@@ -50,7 +50,7 @@ if (is(study, i++, "Primary sponsor:")) {
 
     while (!is(study, i, '"Secondary sponsor:"')) {
         PrimarySponsors.push(cleanLine(study, i++));
-         if (is(study, i, "Source(s) of monetary or material support:")) break;
+         if (is(study, i, "Source(s) of moOutcomesAndTimepointsnetary or material support:")) break;
     }
     finalRecord['PrimarySponsors'] = PrimarySponsors;
 }
@@ -152,14 +152,20 @@ finalRecord['DateoffirstEnrollment'] = cleanLine(study, i++);
 
 if (is(study, i++, "Health condition and Intervention")) {
     source1 = [];
+
+
     while (!is(study, i++, '"Outcomes and Timepoint"')) {
-        temp = {}; tempInt = [];tempIntCode = [];tempIntKw=[];
+            temp = {}; tempInt = [];tempIntCode = [];tempIntKw=[];tempHealthCondCode=[];
         if (is(study, i, '"Health condition(s) or Problem(s) studied:"') && !is(study, ++i, '"Health condition(s) code:"'))
             temp['HealthCondition'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Health condition(s) code:"') && !is(study, ++i, '"Intervention(s):"'))
-            temp['HealthConditionCode'] = cleanLine(study, i++);
-
+        if (is(study, i, '"Health condition(s) code:"') && !is(study, ++i, '"Intervention(s):"')){
+                      while (!is(study, i, '"Intervention(s):"')) {
+                            tempHealthCondCode.push(cleanLine(study, i++));
+                            if (is(study, i, "Outcomes and Timepoint")) break;
+                        }
+            temp['HealthConditionCode'] = tempHealthCondCode
+        }
         if (is(study, i, 'Intervention(s):"')  && !is(study, ++i, '"Intervention code:"')){
             while (!is(study, i, '"Intervention code:"')) {
                 tempInt.push(cleanLine(study, i++));
@@ -167,24 +173,14 @@ if (is(study, i++, "Health condition and Intervention")) {
             }
         }
         temp["Interventions"] =  tempInt;
-         source1.push(temp);
 
-         if (is(study, i, 'Intervention code:"')  && !is(study, ++i, '"Intervention keyword:"')){
-        if (is(study, ++i, '"Intervention keyword:"')){
+        if (is(study, i, 'Intervention code:"')  && !is(study, ++i, '"Intervention keyword:"')){
             while (!is(study, i, '"Intervention keyword:"')) {
             tempIntCode.push(cleanLine(study, i++));
+           // if (is(study, i, "Outcomes and Timepoint")) break;
         }
         }
-        else
-        {
-         while (!is(study, i, '"Outcomes and Timepoint"')) {
-                    tempIntCode.push(cleanLine(study, i++));
-        }
-        }
-        }
-        temp["InterventionCode"] =  tempIntCode;
-
-         source1.push(temp);
+          temp["InterventionCode"] =  tempIntCode;
 
         if (is(study, i, 'Intervention keyword:"')  && !is(study, ++i, '"Outcomes and Timepoint"')){
         tempIntKw = [];
@@ -196,6 +192,7 @@ if (is(study, i++, "Health condition and Intervention")) {
         source1.push(temp);
     }
       finalRecord['HealthconditionIntervention'] = source1;
+
       i--
 }
 
@@ -209,7 +206,6 @@ if (is(study, i++, "Outcomes and Timepoint")) {
         }
         }
         temp["PrimaryOutcome"] =  tempPO;
-        source1.push(temp);
         if (is(study, i, 'Key secondary outcomes:"')  && !is(study, ++i, '"Selection criterias"')){
 
         while (!is(study, i, '"Selection criterias"')) {
@@ -235,7 +231,6 @@ if (is(study, i++, "Selection criterias")) {
 
         if (is(study, i, '"Maximum age:"') && !is(study, ++i, '"Inclusion criteria:"'))
         temp['MaximumAge'] = cleanLine(study, i++);
-        source1.push(temp);
 
         if (is(study, i, '"Inclusion criteria:"')  && !is(study, ++i, '"Exclusion criteria:"')){
 
@@ -244,7 +239,6 @@ if (is(study, i++, "Selection criterias")) {
         }
         }
         temp["InclusionCriteria"] =  tempIn;
-        source1.push(temp);
 
         if (is(study, i, '"Exclusion criteria:"')  && !is(study, ++i, '"Type of population:"')){
 
@@ -253,7 +247,6 @@ if (is(study, i++, "Selection criterias")) {
         }
         }
         temp["ExclusionCriteria"] =  tempEx;
-        source1.push(temp);
 
         if (is(study, i, '"Type of population:"') && !is(study, ++i, '"Type of participant:"'))
         temp['"TypeOfPopulation"'] = cleanLine(study, i++);
@@ -335,8 +328,9 @@ if (is(study, i, "Contact for public queries")) {
         }
         }
         temp["Pub_EmailAddresses"] =  PubtempEmail;
-        source.push(temp);
     }
+
+        source.push(temp);
     finalRecord['ContactForPublicQUeries'] = source;
     i--;
 }
@@ -379,8 +373,9 @@ if (is(study, i, "Contact for scientific queries")) {
         }
         }
     temp["Sci_EmailAddresses"] =  ScitempEmail;
-    source.push(temp);
     }
+
+    source.push(temp);
     finalRecord['ContactForScientificQueries'] = source;
 }
 
