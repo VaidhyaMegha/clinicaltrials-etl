@@ -64,8 +64,6 @@ SecondarySponsors = [];
     finalRecord['SecondarySponsors'] = SecondarySponsors;
 }
 
- console.log(study[i]);
-
 if (is(study, i, '"Source(s) of monetary or material support:"') && !is(study, ++i, '"Authorization for beginning:"'))
     finalRecord['Source_Of_Monetary_Material_support'] = cleanLine(study, i++);
 i = i+2
