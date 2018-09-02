@@ -177,7 +177,7 @@ if (is(study, i++, "Health condition and Intervention")) {
         if (is(study, i, 'Intervention code:"')  && !is(study, ++i, '"Intervention keyword:"')){
             while (!is(study, i, '"Intervention keyword:"')) {
             tempIntCode.push(cleanLine(study, i++));
-           // if (is(study, i, "Outcomes and Timepoint")) break;
+           if (is(study, i, "Outcomes and Timepoint")) break;
         }
         }
           temp["InterventionCode"] =  tempIntCode;
