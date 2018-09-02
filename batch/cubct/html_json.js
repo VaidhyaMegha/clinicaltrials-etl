@@ -50,18 +50,18 @@ if (is(study, i++, "Primary sponsor:")) {
 
     while (!is(study, i, '"Secondary sponsor:"')) {
         PrimarySponsors.push(cleanLine(study, i++));
-         if (is(study, i, "Source(s) of monetary or material support:")) break;
+        if (is(study, i, "Source(s) of monetary or material support:")) break;
     }
-    finalRecord['PrimarySponsors'] = PrimarySponsors;
+        finalRecord['PrimarySponsors'] = PrimarySponsors;
 }
 
 if (is(study, i, "Secondary sponsor:")) {
-SecondarySponsors = [];
+    SecondarySponsors = [];
 
     while (!is(study, i, '"Source(s) of monetary or material support:"')) {
-        SecondarySponsors.push(cleanLine(study, i++));
+         SecondarySponsors.push(cleanLine(study, i++));
     }
-    finalRecord['SecondarySponsors'] = SecondarySponsors;
+        finalRecord['SecondarySponsors'] = SecondarySponsors;
 }
 
 if (is(study, i, '"Source(s) of monetary or material support:"') && !is(study, ++i, '"Authorization for beginning:"'))
@@ -78,36 +78,36 @@ if (is(study, i, '"Reference number:"') && !is(study, ++i, '"Principal investiga
     finalRecord['ReferenceNumber'] = cleanLine(study, i++);
 
 if (is(study, i++, "Principal investigator")) {
-    source = [];
-    temp = {};
-    tempEmail = [];
+source = [];
+temp = {};
+tempEmail = [];
     while (!is(study, i++, '"Clinical sites to participate"')) {
         if (is(study, i, '"First name:"') && !is(study, ++i, '"Last name:"'))
-        temp['First_Name'] = cleanLine(study, i++);
+             temp['First_Name'] = cleanLine(study, i++);
 
         if (is(study, i, '"Last name:"') && !is(study, ++i, '"Medical Specialty :"'))
-        temp['Last_Name'] = cleanLine(study, i++);
+             temp['Last_Name'] = cleanLine(study, i++);
 
         if (is(study, i, '"Medical Specialty :"') && !is(study, ++i, '"Affiliation:"'))
-        temp['Medical_Specialty'] = cleanLine(study, i++);
+             temp['Medical_Specialty'] = cleanLine(study, i++);
 
         if (is(study, i, '"Affiliation:"') && !is(study, ++i, '"Postal address:"'))
-        temp['Affiliation'] = cleanLine(study, i++);
+             temp['Affiliation'] = cleanLine(study, i++);
 
         if (is(study, i, '"Postal address:"') && !is(study, ++i, '"City:"'))
-        temp['PostalAddress'] = cleanLine(study, i++);
+             temp['PostalAddress'] = cleanLine(study, i++);
 
         if (is(study, i, '"City:"') && !is(study, ++i, '"Country:"'))
-        temp['City'] = cleanLine(study, i++);
+             temp['City'] = cleanLine(study, i++);
 
         if (is(study, i, '"Country:"') && !is(study, ++i, '"Zip Code:"'))
-        temp['Country'] = cleanLine(study, i++);
+            temp['Country'] = cleanLine(study, i++);
 
         if (is(study, i, '"Zip Code:"') && !is(study, ++i, '"Telephone:"'))
-        temp['Zipcode'] = cleanLine(study, i++);
+            temp['Zipcode'] = cleanLine(study, i++);
 
         if (is(study, i, '"Telephone:"') && !is(study, ++i, '"Email Address:"'))
-        temp['Telephone'] = cleanLine(study, i++);
+           temp['Telephone'] = cleanLine(study, i++);
 
         if (is(study, i, '"Email address:"')  && !is(study, ++i, '"Clinical sites to participate"')){
             while (!is(study, i, '"Clinical sites to participate"')) {
@@ -116,10 +116,10 @@ if (is(study, i++, "Principal investigator")) {
         }
     temp["EmailAddresses"] =  tempEmail;
     source.push(temp);
-        }
-    finalRecord['Principalinvestigator'] = source;
-    i--;
     }
+finalRecord['Principalinvestigator'] = source;
+    i--;
+}
 
 if (is(study, i++, "Clinical sites to participate")) {
 source1 = [];
@@ -188,8 +188,9 @@ if (is(study, i++, "Health condition and Intervention")) {
          }
       }
         temp["InterventionKeyWord"] =  tempIntKw;
-        source1.push(temp);
+
     }
+      source1.push(temp);
       finalRecord['HealthconditionIntervention'] = source1;
 
       i--
@@ -212,8 +213,9 @@ if (is(study, i++, "Outcomes and Timepoint")) {
         }
         }
         temp["SEcondaryOutcome"] =  tempSO;
-        source1.push(temp);
+
     }
+            source1.push(temp);
     finalRecord['OutcomesAndTimepoints'] = source1;
     i--
 }
@@ -249,12 +251,12 @@ if (is(study, i++, "Selection criterias")) {
 
         if (is(study, i, '"Type of population:"') && !is(study, ++i, '"Type of participant:"'))
         temp['"TypeOfPopulation"'] = cleanLine(study, i++);
-        source1.push(temp);
 
         if (is(study, i, '"Type of participant:"') && !is(study, ++i, '"Study design"'))
         temp['"Typeofparticipant:"'] = cleanLine(study, i++);
-        source1.push(temp);
+
     }
+source1.push(temp);
     finalRecord['SelectionCriterias'] = source1;
 }
 
@@ -372,9 +374,10 @@ if (is(study, i, "Contact for scientific queries")) {
         }
         }
     temp["Sci_EmailAddresses"] =  ScitempEmail;
-    }
 
-    source.push(temp);
+
+    }
+ source.push(temp);
     finalRecord['ContactForScientificQueries'] = source;
 }
 
