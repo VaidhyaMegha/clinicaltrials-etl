@@ -32,7 +32,7 @@ finalRecord['Scientific_Title'] = cleanLine(study, i++);
 if (is(study, i, '"Acronym of Scientific Title:"') && !is(study, ++i, '"Secondary indentifying numbers:"'))
 finalRecord['Acronym_Of_Scientific_Title'] = cleanLine(study, i++);
 
-if (is(study, i++, "Secondary indentifying numbers:")) {
+if (is(study, i, "Secondary indentifying numbers:")) {
 SecondaryIds = [];
 
 while (!is(study, i, '"Issuing authority of the secondary identifying numbers:"')) {
@@ -148,6 +148,8 @@ source1 = [];tempCountries=[];tempClinicalSites=[];tempEthicsCommitee=[];
     if (is(study, i, '"Countries of recruitment:"')  && !is(study, ++i, '"Clinical sites:"')){
         while (!is(study, i, '"Clinical sites:"')) {
         tempCountries.push(cleanLine(study, i++));
+         if (is(study, i, "Research ethics committees:")) break;
+         if (is(study, i, "Recruitment status")) break;
     }
         temp["CountriesOfRecruitment"] = tempCountries;
     }
@@ -155,6 +157,7 @@ source1 = [];tempCountries=[];tempClinicalSites=[];tempEthicsCommitee=[];
     if (is(study, i, '"Clinical sites:"')  && !is(study, ++i, '"Research ethics committees:"')){
         while (!is(study, i, '"Research ethics committees:"')) {
         tempClinicalSites.push(cleanLine(study, i++));
+         if (is(study, i, "Recruitment status")) break;
     }
         temp["Clinical_Sites"] = tempClinicalSites;
     }
@@ -165,13 +168,6 @@ source1 = [];tempCountries=[];tempClinicalSites=[];tempEthicsCommitee=[];
     }
         temp["Researchethicscommittees"] = tempEthicsCommitee;
     }
-
-
-//         if (is(study, i, '"Clinical sites:"') && !is(study, ++i, '"Research ethics committees:"'))
-//             temp['Clinical_Sites'] = cleanLine(study, i++);
-
-//         if (is(study, i, '"Research ethics committees:"') && !is(study, ++i, '"Recruitment status"'))
-//             temp['Researchethicscommittees'] = cleanLine(study, i++);
 
     }
     source1.push(temp);
