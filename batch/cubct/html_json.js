@@ -42,8 +42,19 @@ while (!is(study, i, '"Issuing authority of the secondary identifying numbers:"'
     finalRecord['SecondaryIDs'] = SecondaryIds;
 }
 
-if (is(study, i, '"Issuing authority of the secondary identifying numbers:"') && !is(study, ++i, '"Primary sponsor:"'))
-    finalRecord['IssuingAuthotiryOfSecondaryIds'] = cleanLine(study, i++);
+if (is(study, i++, "Issuing authority of the secondary identifying numbers:")) {
+SecondaryIds = [];
+
+while (!is(study, i, '"Primary sponsor:"')) {
+        SecondaryIds.push(cleanLine(study, i++));
+        if (is(study, i, "Source(s) of monetary or material support:")) break;
+    }
+    finalRecord['IssuingAuthotiryOfSecondaryIds'] = SecondaryIds;
+}
+
+
+//if (is(study, i, '"Issuing authority of the secondary identifying numbers:"') && !is(study, ++i, '"Primary sponsor:"'))
+//    finalRecord['IssuingAuthotiryOfSecondaryIds'] = cleanLine(study, i++);
 
 if (is(study, i++, "Primary sponsor:")) {
     PrimarySponsors = [];
@@ -68,11 +79,18 @@ if (is(study, i, '"Source(s) of monetary or material support:"') && !is(study, +
     finalRecord['Source_Of_Monetary_Material_support'] = cleanLine(study, i++);
 i = i+2
 
-if (is(study, i, '"Regulatory instance to authorize the initiation of the study:"') && !is(study, ++i, '"Authorization date :"'))
+if (is(study, i, '"Regulatory instance to authorize the initiation of the study:"') && !is(study, ++i, '"Regulatory instance:"'))
     finalRecord['Regulatory_instance_to_authorize_the_initiation_of_the_study'] = cleanLine(study, i++);
 
-if (is(study, i, '"Authorization date :"') && !is(study, ++i, '"Reference number:"'))
+if (is(study, i, '"Regulatory instance:"') && !is(study, ++i, '"Authorization date :"'))
+    finalRecord['Regulatory instance'] = cleanLine(study, i++);
+
+
+if (is(study, i, '"Authorization date :"') && !is(study, ++i, '"Notification date:"'))
     finalRecord['AuthorizationDate'] = cleanLine(study, i++);
+
+if (is(study, i, '"Notification date :"') && !is(study, ++i, '"Reference number:"'))
+    finalRecord['NotificationDate'] = cleanLine(study, i++);
 
 if (is(study, i, '"Reference number:"') && !is(study, ++i, '"Principal investigator"'))
     finalRecord['ReferenceNumber'] = cleanLine(study, i++);
@@ -115,30 +133,51 @@ tempEmail = [];
             }
         }
     temp["EmailAddresses"] =  tempEmail;
-    source.push(temp);
     }
+
+    source.push(temp);
 finalRecord['Principalinvestigator'] = source;
     i--;
 }
 
 if (is(study, i++, "Clinical sites to participate")) {
-source1 = [];
+source1 = [];tempCountries=[];tempClinicalSites=[];tempEthicsCommitee=[];
     while (!is(study, i++, '"Recruitment status"')) {
         temp = {};
-         if (is(study, i, '"Countries of recruitment:"') && !is(study, ++i, '"Clinical sites:"'))
-            temp['CountriesOfRecruitment'] = cleanLine(study, i++);
 
-         if (is(study, i, '"Clinical sites:"') && !is(study, ++i, '"Research ethics committees:"'))
-             temp['Clinical_Sites'] = cleanLine(study, i++);
-
-         if (is(study, i, '"Research ethics committees:"') && !is(study, ++i, '"Recruitment status"'))
-             temp['Researchethicscommittees'] = cleanLine(study, i++);
-
-    source1.push(temp);
+    if (is(study, i, '"Countries of recruitment:"')  && !is(study, ++i, '"Clinical sites:"')){
+        while (!is(study, i, '"Clinical sites:"')) {
+        tempCountries.push(cleanLine(study, i++));
     }
+        temp["CountriesOfRecruitment"] = tempCountries;
+    }
+
+    if (is(study, i, '"Clinical sites:"')  && !is(study, ++i, '"Research ethics committees:"')){
+        while (!is(study, i, '"Research ethics committees:"')) {
+        tempClinicalSites.push(cleanLine(study, i++));
+    }
+        temp["Clinical_Sites"] = tempClinicalSites;
+    }
+
+    if (is(study, i, '"Research ethics committees:"')  && !is(study, ++i, '"Recruitment status"')){
+        while (!is(study, i, '"Recruitment status"')) {
+        tempEthicsCommitee.push(cleanLine(study, i++));
+    }
+        temp["Researchethicscommittees"] = tempEthicsCommitee;
+    }
+
+
+//         if (is(study, i, '"Clinical sites:"') && !is(study, ++i, '"Research ethics committees:"'))
+//             temp['Clinical_Sites'] = cleanLine(study, i++);
+
+//         if (is(study, i, '"Research ethics committees:"') && !is(study, ++i, '"Recruitment status"'))
+//             temp['Researchethicscommittees'] = cleanLine(study, i++);
+
+    }
+    source1.push(temp);
     finalRecord['Clinicalsitestoparticipate'] = source1;
     i--
-    }
+ }
 if (is(study, i, '"Recruitment status"'))
     i = i+2
 
@@ -280,8 +319,11 @@ finalRecord['Masking'] = cleanLine(study, i++);
 if (is(study, i, '"Control group:"') && !is(study, ++i, '"Study design:"'))
 finalRecord['ControlGroup'] = cleanLine(study, i++);
 
-if (is(study, i, '"Study design:"') && !is(study, ++i, '"Phase:"'))
+if (is(study, i, '"Study design:"') && !is(study, ++i, '"Other design:"'))
 finalRecord['StudyDesign'] = cleanLine(study, i++);
+
+if (is(study, i, '"Other design:"') && !is(study, ++i, '"Phase:"'))
+finalRecord['Other design'] = cleanLine(study, i++);
 
 if (is(study, i, '"Phase:"') && !is(study, ++i, '"Target sample size:"'))
 finalRecord['Phase'] = cleanLine(study, i++);
