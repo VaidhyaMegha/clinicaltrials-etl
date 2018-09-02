@@ -97,7 +97,7 @@ if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}ntr/studies
     mkdir ${html_dir}ntr/studies/json
 
-    kdir ${html_dir}cubct
+    mkdir ${html_dir}cubct
     mkdir ${html_dir}cubct/studies
     mkdir ${html_dir}cubct/studies/json
 
