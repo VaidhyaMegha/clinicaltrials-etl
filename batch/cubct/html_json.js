@@ -50,12 +50,12 @@ if (is(study, i++, "Primary sponsor:")) {
 
     while (!is(study, i, '"Secondary sponsor:"')) {
         PrimarySponsors.push(cleanLine(study, i++));
-         if (is(study, i, "Source(s) of moOutcomesAndTimepointsnetary or material support:")) break;
+         if (is(study, i, "Source(s) of monetary or material support:")) break;
     }
     finalRecord['PrimarySponsors'] = PrimarySponsors;
 }
 
-if (is(study, i++, "Secondary sponsor:")) {
+if (is(study, i, "Secondary sponsor:")) {
 SecondarySponsors = [];
 
     while (!is(study, i, '"Source(s) of monetary or material support:"')) {
@@ -64,6 +64,7 @@ SecondarySponsors = [];
     finalRecord['SecondarySponsors'] = SecondarySponsors;
 }
 
+ console.log(study[i]);
 
 if (is(study, i, '"Source(s) of monetary or material support:"') && !is(study, ++i, '"Authorization for beginning:"'))
     finalRecord['Source_Of_Monetary_Material_support'] = cleanLine(study, i++);
