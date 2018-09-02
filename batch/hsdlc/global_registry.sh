@@ -12,6 +12,7 @@ s3_irctn_bucket=${8:-'s3://hsdlc-results/irctn-adapter/'}
 s3_jprn_bucket=${9:-'s3://hsdlc-results/jprn-adapter/'}
 s3_brtr_bucket=${9:-'s3://hsdlc-results/brtr-adapter/'}
 s3_ntr_bucket=${9:-'s3://hsdlc-results/ntr-adapter/studies/'}
+s3_cubct_bucket=${9:-'s3://hsdlc-results/cubct-adapter/studies/'}
 s3_utdm_bucket=${10:-'s3://hsdlc-results/utdm-adapter/'}
 context_dir=${11:-'/usr/local/dataintegration'}
 
@@ -49,6 +50,10 @@ if [[ ${download} == 'yes' ]]; then
   fi
 
   if [ -d ${html_dir}ntr ]; then
+        rm -rf ${html_dir}ntr
+  fi
+
+  if [ -d ${html_dir}cubct ]; then
         rm -rf ${html_dir}ntr
   fi
 
@@ -92,6 +97,10 @@ if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}ntr/studies
     mkdir ${html_dir}ntr/studies/json
 
+    kdir ${html_dir}cubct
+    mkdir ${html_dir}cubct/studies
+    mkdir ${html_dir}cubct/studies/json
+
     mkdir ${html_dir}output
     mkdir ${html_dir}output/json
 
@@ -104,6 +113,7 @@ if [[ ${download} == 'yes' ]]; then
     aws s3 cp ${s3_jprn_bucket}json ${html_dir}jprn/studies/json --recursive
     aws s3 cp ${s3_brtr_bucket}json ${html_dir}brtr/studies/json --recursive
     aws s3 cp ${s3_ntr_bucket}json ${html_dir}ntr/studies/json --recursive
+    aws s3 cp ${s3_cubct_bucket}json ${html_dir}cubct/studies/json --recursive
 fi
 #########################    CT    ######################################
 
@@ -207,4 +217,19 @@ done
         rm -rf ${html_dir}ntr
   fi
 
+  if [ -d ${html_dir}ntr ]; then
+        rm -rf ${html_dir}ntr
+  fi
+
+#########################   CUBA   #####################################
+find ${html_dir}cubct/studies/json/ -type f -name "*.json"  | while read f
+do
+
+jq -c '{"trialid":.UniqueIDNumber,"secondary_id":.SecondaryIDs,"Date_of_Registration":.DateOfRegistrationinPrimaryRegisrty,"Public_Title":.Acronym_of_Public_Title,"Scientific_Title":.Acronym_Of_Scientific_Title,"TypeStudy":.study_type,"date_of_first_enrollment":.DateoffirstEnrollment,"RecruitmentStatus":.RecruitmentStatus,"completionDate":"" ,"PrimarySponsors":{"name": .PrimarySponsors,   "person": [],"address":[]}, "SecondarySponsors":{"name": .SecondarySponsors,   "person": [],"address":[]},"Contact":.ContactForPublicQUeries, "registry": "CUBA", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+
+done
+
+  if [ -d ${html_dir}ntr ]; then
+        rm -rf ${html_dir}ntr
+  fi
 aws s3 sync ${html_dir}/output/ ${s3_utdm_bucket}  --delete
