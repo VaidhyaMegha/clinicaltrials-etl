@@ -13,6 +13,8 @@ s3_jprn_bucket=${9:-'s3://hsdlc-results/jprn-adapter/'}
 s3_brtr_bucket=${9:-'s3://hsdlc-results/brtr-adapter/'}
 s3_ntr_bucket=${9:-'s3://hsdlc-results/ntr-adapter/studies/'}
 s3_cubct_bucket=${9:-'s3://hsdlc-results/cubct-adapter/studies/'}
+s3_perct_bucket=${9:-'s3://hsdlc-results/perct-adapter/studies/'}
+s3_slctr_bucket=${9:-'s3://hsdlc-results/slctr-adapter/studies/'}
 s3_utdm_bucket=${10:-'s3://hsdlc-results/utdm-adapter/'}
 context_dir=${11:-'/usr/local/dataintegration'}
 
@@ -54,7 +56,15 @@ if [[ ${download} == 'yes' ]]; then
   fi
 
   if [ -d ${html_dir}cubct ]; then
-        rm -rf ${html_dir}ntr
+        rm -rf ${html_dir}cubct
+  fi
+
+  if [ -d ${html_dir}perct ]; then
+        rm -rf ${html_dir}perct
+  fi
+
+  if [ -d ${html_dir}slctr ]; then
+        rm -rf ${html_dir}slctr
   fi
 
   if [ -d ${html_dir}output ]; then
@@ -101,6 +111,14 @@ if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}cubct/studies
     mkdir ${html_dir}cubct/studies/json
 
+    mkdir ${html_dir}perct
+    mkdir ${html_dir}perct/studies
+    mkdir ${html_dir}perct/studies/json
+
+    mkdir ${html_dir}slctr
+    mkdir ${html_dir}slctr/studies
+    mkdir ${html_dir}slctr/studies/json
+
     mkdir ${html_dir}output
     mkdir ${html_dir}output/json
 
@@ -114,6 +132,8 @@ if [[ ${download} == 'yes' ]]; then
     aws s3 cp ${s3_brtr_bucket}json ${html_dir}brtr/studies/json --recursive
     aws s3 cp ${s3_ntr_bucket}json ${html_dir}ntr/studies/json --recursive
     aws s3 cp ${s3_cubct_bucket}json ${html_dir}cubct/studies/json --recursive
+    aws s3 cp ${s3_perct_bucket}json ${html_dir}perct/studies/json --recursive
+    aws s3 cp ${s3_slctr_bucket}json ${html_dir}slctr/studies/json --recursive
 fi
 #########################    CT    ######################################
 
@@ -217,9 +237,6 @@ done
         rm -rf ${html_dir}ntr
   fi
 
-  if [ -d ${html_dir}ntr ]; then
-        rm -rf ${html_dir}ntr
-  fi
 
 #########################   CUBA   #####################################
 find ${html_dir}cubct/studies/json/ -type f -name "*.json"  | while read f
@@ -229,7 +246,33 @@ jq -c '{"trialid":.UniqueIDNumber,"secondary_id":.SecondaryIDs,"Date_of_Registra
 
 done
 
-  if [ -d ${html_dir}ntr ]; then
-        rm -rf ${html_dir}ntr
+  if [ -d ${html_dir}cubct ]; then
+        rm -rf ${html_dir}cubct
   fi
+
+#########################   PERCTR   #####################################
+find ${html_dir}perct/studies/json/ -type f -name "*.json"  | while read f
+do
+
+jq -c '{"trialid":.trial_id,"secondary_id":[.secondary_ids[].secondary_id[].sec_id],"Date_of_Registration":.date_registration,"Public_Title":.public_title,"Scientific_Title":.scientific_title,"TypeStudy":.study_type,"date_of_first_enrollment":.date_enrolment,"RecruitmentStatus":.recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [],   "person": [],"address":[]}, "SecondarySponsors":{"name": [],   "person": [],"address":[]},"Contact":[], "registry": "PERCTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+
+done
+
+  if [ -d ${html_dir}perct ]; then
+        rm -rf ${html_dir}perct
+  fi
+
+#########################   SLCTR   #####################################
+find ${html_dir}slctr/studies/json/ -type f -name "*.json"  | while read f
+do
+
+jq -c '{"trialid":.slctr_registration_number,"secondary_id":[.SecondaryId],"Date_of_Registration":.DateOfRegistration,"Public_Title":.PublicTitleOftrial,"Scientific_Title":.ScientificTitleOftrial,"TypeStudy":.TypeOfStudy,"date_of_first_enrollment":"","RecruitmentStatus":.RecruitmentStatus,"completionDate":"" ,"PrimarySponsors":{"name": [],   "person": [],"address":[]}, "SecondarySponsors":{"name": [],   "person": [],"address":[]},"Contact":[], "registry": "SLCTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+
+done
+
+  if [ -d ${html_dir}slctr ]; then
+        rm -rf ${html_dir}slctr
+  fi
+
+
 aws s3 sync ${html_dir}/output/ ${s3_utdm_bucket}  --delete
