@@ -27,26 +27,28 @@ function download_trial(){
 
 function analyse_trial(){
     g=${1//.html/}
+    cat ${html_dir}/studies/${g}.html  | pup 'div.Info_aside :parent-of(dt.Meta_name)  json{}' |  grep '"text":' | ./html_json.js |jq -s add > ${2}/${g}_1.json
 
-    cat ${html_dir}/studies/${g}.html  | pup 'div.Info_aside :parent-of(dt.Meta_name)  json{}' | \
-       jq '.[] | {(.children[0].text): .children[1].text}' | jq -s add > ${2}/${g}_1.json
+cat ${html_dir}/studies/${g}.html | pup ':contains("'${g}'") json{}' | jq -c '{"IRCTN_NUMBER" :.[1].text}' | jq -s add > ${2}/${g}_2.json
 
     cat ${html_dir}/studies/${g}.html | pup 'div.Info_main :parent-of(.Info_section_title) json{}' | \
-       jq  '.[] | {(.children[1].text): .children[2].text}' | jq -s add > ${2}/${g}_2.json
-
+        grep '"text":' | ./html_json.js | jq -s add > ${2}/${g}_3.json
+#
     dir_path="${2}/p_y=${g:0:4}/"
     mkdir -p "${dir_path}"
-
-    jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json > ${2}/${g}_3.json
-
-    tr '[:upper:]' '[:lower:]' < ${2}/${g}_3.json > ${2}/${g}.json
-    sed -i 's/ /_/g; s/(//g; s/)//g; s/\\n//g; s/&gt\;//g; s/&lt\;//g; s/&#39\;//g; s/__*/_/g' ${2}/${g}.json
-
-    cat ${2}/${g}.json >> ${dir_path}/studies.json
-
+#
+     jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json  > ${2}/studies1.json
+     jq -c -s '.[0] * .[1]' ${2}/studies1.json ${2}/${g}_3.json >> ${2}/studies.json
+#
+#    tr '[:upper:]' '[:lower:]' < ${2}/${g}_3.json > ${2}/${g}.json
+#    sed -i 's/ /_/g; s/(//g; s/)//g; s/\\n//g; s/&gt\;//g; s/&lt\;//g; s/&#39\;//g; s/__*/_/g' ${2}/${g}.json
+#
+#    cat ${2}/${g}.json >> ${dir_path}/studies.json
+#
     rm ${2}/${g}_1.json
     rm ${2}/${g}_2.json
     rm ${2}/${g}_3.json
+    rm ${2}/$studies1.json
 }
 
 source ~/.gvm/scripts/gvm

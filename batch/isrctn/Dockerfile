@@ -40,9 +40,11 @@ ENV PATH $PATH:/usr/local/go/bin
 ENV GOPATH $PATH:/$HOME/go
 
 COPY html_json.sh /usr/local/dataintegration/
+COPY html_json.js /usr/local/dataintegration/
 #
 #
 RUN chmod +x /usr/local/dataintegration/html_json.sh
+RUN chmod +x /usr/local/dataintegration/html_json.js
 
 
 
