@@ -48,7 +48,7 @@ cat ${html_dir}/studies/${g}.html | pup ':contains("'${g}'") json{}' | jq -c '{"
     rm ${2}/${g}_1.json
     rm ${2}/${g}_2.json
     rm ${2}/${g}_3.json
-    rm ${2}/$studies1.json
+    rm ${2}/studies1.json
 }
 
 source ~/.gvm/scripts/gvm
