@@ -115,6 +115,7 @@ rl.on('close', function () {
         if (is(study, i, '"Patient information sheet"'))
             while (!is(study, ++i, '"Condition"')) {
               finalRecord['PatientInformationSheet'] = cleanLine(study, i++);
+              if (is(study, i, '"Condition"')) break;
               }
 
         if (is(study, i, '"Condition"') && !is(study, ++i, '"Intervention"'))
