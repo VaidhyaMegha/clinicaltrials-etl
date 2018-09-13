@@ -43,7 +43,7 @@ cat ${html_dir}/studies/${g}.html | pup ':contains("'${g}'") json{}' | jq -c '{"
 #    tr '[:upper:]' '[:lower:]' < ${2}/${g}_3.json > ${2}/${g}.json
 #    sed -i 's/ /_/g; s/(//g; s/)//g; s/\\n//g; s/&gt\;//g; s/&lt\;//g; s/&#39\;//g; s/__*/_/g' ${2}/${g}.json
 #
-#    cat ${2}/${g}.json >> ${dir_path}/studies.json
+#    cat ${2}/${g}.json >> ${dir_patFunderNameh}/studies.json
 #
     rm ${2}/${g}_1.json
     rm ${2}/${g}_2.json
@@ -65,12 +65,12 @@ mkdir -p ${html_dir}/studies
 if [[ ${download} == 'yes' ]]; then
     download_main_index
 
-    NUM_OF_PAGES=`cat ${html_dir}/1.html | grep -oE 'of [0-9]*</span>' | grep -oE '[0-9]*' | sort -u | head -n 1`
-
-    for (( i=2; i<=${NUM_OF_PAGES}; i++ ))
-    do
-        download_index_page ${i}
-    done
+#    NUM_OF_PAGES=`cat ${html_dir}/1.html | grep -oE 'of [0-9]*</span>' | grep -oE '[0-9]*' | sort -u | head -n 1`
+#
+#    for (( i=2; i<=${NUM_OF_PAGES}; i++ ))
+#    do
+#        download_index_page ${i}
+#    done
 
     cat ${html_dir}/*.html | grep -oE "ISRCTN[0-9]*\?q=" | while read f
     do

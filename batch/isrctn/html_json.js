@@ -112,8 +112,10 @@ rl.on('close', function () {
         if (is(study, i, '"Trial type"') && !is(study, ++i, '"Patient information sheet"'))
              finalRecord['TrialType'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Patient information sheet"') && !is(study, ++i, '"Condition"'))
-             finalRecord['PatientInformationSheet'] = cleanLine(study, i++);
+        if (is(study, i, '"Patient information sheet"'))
+            while (!is(study, ++i, '"Condition"')) {
+              finalRecord['PatientInformationSheet'] = cleanLine(study, i++);
+              }
 
         if (is(study, i, '"Condition"') && !is(study, ++i, '"Intervention"'))
              finalRecord['Intervention'] = cleanLine(study, i++);
