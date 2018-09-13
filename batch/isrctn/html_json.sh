@@ -33,10 +33,10 @@ cat ${html_dir}/studies/${g}.html | pup ':contains("'${g}'") json{}' | jq -c '{"
 
     cat ${html_dir}/studies/${g}.html | pup 'div.Info_main :parent-of(.Info_section_title) json{}' | \
         grep '"text":' | ./html_json.js | jq -s add > ${2}/${g}_3.json
-#
-#    dir_path="${2}/p_y=${g:0:4}/"
-#    mkdir -p "${dir_path}"
-#
+
+    dir_path="${2}/p_y=${g:0:4}/"
+    mkdir -p "${dir_path}"
+
      jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json  > ${2}/studies1.json
      jq -c -s '.[0] * .[1]' ${2}/studies1.json ${2}/${g}_3.json >> ${2}/studies.json
 #
