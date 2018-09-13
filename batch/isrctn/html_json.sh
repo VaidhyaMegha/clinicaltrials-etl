@@ -45,10 +45,10 @@ cat ${html_dir}/studies/${g}.html | pup ':contains("'${g}'") json{}' | jq -c '{"
 #
 #    cat ${2}/${g}.json >> ${dir_patFunderNameh}/studies.json
 #
-#    rm ${2}/${g}_1.json
-#    rm ${2}/${g}_2.json
-#    rm ${2}/${g}_3.json
-#    rm ${2}/studies1.json
+    rm ${2}/${g}_1.json
+    rm ${2}/${g}_2.json
+    rm ${2}/${g}_3.json
+    rm ${2}/studies1.json
 }
 
 source ~/.gvm/scripts/gvm
@@ -56,10 +56,10 @@ gvm use "go1.4"
 
 pushd ${context_dir}
 
-#if [ -d ${html_dir} ]; then
-#    rm -rf ${html_dir}
-#fi
-#
+if [ -d ${html_dir}/studies ]; then
+    rm -rf ${html_dir}/studies
+fi
+
 mkdir -p ${html_dir}/studies
 
 if [[ ${download} == 'yes' ]]; then
