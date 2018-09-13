@@ -34,8 +34,8 @@ cat ${html_dir}/studies/${g}.html | pup ':contains("'${g}'") json{}' | jq -c '{"
     cat ${html_dir}/studies/${g}.html | pup 'div.Info_main :parent-of(.Info_section_title) json{}' | \
         grep '"text":' | ./html_json.js | jq -s add > ${2}/${g}_3.json
 #
-    dir_path="${2}/p_y=${g:0:4}/"
-    mkdir -p "${dir_path}"
+#    dir_path="${2}/p_y=${g:0:4}/"
+#    mkdir -p "${dir_path}"
 #
      jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json  > ${2}/studies1.json
      jq -c -s '.[0] * .[1]' ${2}/studies1.json ${2}/${g}_3.json >> ${2}/studies.json
@@ -45,10 +45,10 @@ cat ${html_dir}/studies/${g}.html | pup ':contains("'${g}'") json{}' | jq -c '{"
 #
 #    cat ${2}/${g}.json >> ${dir_patFunderNameh}/studies.json
 #
-    rm ${2}/${g}_1.json
-    rm ${2}/${g}_2.json
-    rm ${2}/${g}_3.json
-    rm ${2}/studies1.json
+#    rm ${2}/${g}_1.json
+#    rm ${2}/${g}_2.json
+#    rm ${2}/${g}_3.json
+#    rm ${2}/studies1.json
 }
 
 source ~/.gvm/scripts/gvm
@@ -56,10 +56,10 @@ gvm use "go1.4"
 
 pushd ${context_dir}
 
-if [ -d ${html_dir} ]; then
-    rm -rf ${html_dir}
-fi
-
+#if [ -d ${html_dir} ]; then
+#    rm -rf ${html_dir}
+#fi
+#
 mkdir -p ${html_dir}/studies
 
 if [[ ${download} == 'yes' ]]; then
