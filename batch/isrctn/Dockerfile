@@ -1,5 +1,8 @@
 FROM ubuntu:16.04
 
+ENV NVM_DIR /usr/local/nvm
+ENV NODE_VERSION 9.2.0
+ENV GVM_VERSION=1.0.22
 # Replace shell with bash so we can source files
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
