@@ -65,12 +65,12 @@ mkdir -p ${html_dir}/studies
 if [[ ${download} == 'yes' ]]; then
     download_main_index
 
-#    NUM_OF_PAGES=`cat ${html_dir}/1.html | grep -oE 'of [0-9]*</span>' | grep -oE '[0-9]*' | sort -u | head -n 1`
-#
-#    for (( i=2; i<=${NUM_OF_PAGES}; i++ ))
-#    do
-#        download_index_page ${i}
-#    done
+    NUM_OF_PAGES=`cat ${html_dir}/1.html | grep -oE 'of [0-9]*</span>' | grep -oE '[0-9]*' | sort -u | head -n 1`
+
+    for (( i=2; i<=${NUM_OF_PAGES}; i++ ))
+    do
+        download_index_page ${i}
+    done
 
     cat ${html_dir}/*.html | grep -oE "ISRCTN[0-9]*\?q=" | while read f
     do
