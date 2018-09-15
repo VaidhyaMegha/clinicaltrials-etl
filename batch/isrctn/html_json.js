@@ -43,8 +43,12 @@ rl.on('close', function () {
         if (is(study, i++, '"Recruitment status"'))
             finalRecord['RecruitmentStatus'] = cleanLine(study, i++);
         i =0;
-        if (is(study, i, '"Plain English Summary"') && !is(study, ++i, '"Trial website"'))
-            finalRecord['PlainEnglishWebsite'] = cleanLine(study, i++);
+        if (is(study, i, '"Plain English Summary"') {
+            while(!is(study, ++i, '"Trial website"')){
+                finalRecord['PlainEnglishWebsite'] = cleanLine(study, i++);
+                if (is(study, i, '"Trial website"')) break;
+            }
+        }
 
         if (is(study, i, '"Trial website"') && !is(study, ++i, '"Type"'))
             finalRecord['TrialWebsite'] = cleanLine(study, i++);
@@ -57,7 +61,6 @@ rl.on('close', function () {
 
         if (is(study, i, '"ORCID ID"') && !is(study, ++i, '"Contact details"'))
             finalRecord['ORCID_ID'] = cleanLine(study, i++);
-
 
         if (is(study, i, "Contact details")) {
         source = [];
@@ -91,12 +94,18 @@ rl.on('close', function () {
         if (is(study, i, '"Acronym"') && !is(study, ++i, '"Study hypothesis"'))
             finalRecord['Acronym'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Study hypothesis"') && !is(study, ++i, '"Ethics approval"'))
-            finalRecord['StudyHypothesis'] = cleanLine(study, i++);
-
-        if (is(study, i, '"Ethics approval"') && !is(study, ++i, '"Study design"'))
-            finalRecord['EthicsApproval'] = cleanLine(study, i++);
-
+        if (is(study, i, '"Study hypothesis"')){
+            while (is(study, ++i, '"Ethics approval"')){
+                finalRecord['StudyHypothesis'] = cleanLine(study, i++);
+                if (is(study, i, '"Ethics approval"')) break;
+            }
+        }
+        if (is(study, i, '"Ethics approval"') {
+            while (is(study, ++i, '"Study design"')){
+                finalRecord['EthicsApproval'] = cleanLine(study, i++);
+                if (is(study, i, '"Study design"')) break;
+            }
+        }
         if (is(study, i, '"Study design"') && !is(study, ++i, '"Primary study design"'))
            finalRecord['StudyDesign'] = cleanLine(study, i++);
 
@@ -112,11 +121,12 @@ rl.on('close', function () {
         if (is(study, i, '"Trial type"') && !is(study, ++i, '"Patient information sheet"'))
              finalRecord['TrialType'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Patient information sheet"'))
+        if (is(study, i, '"Patient information sheet"')){
             while (!is(study, ++i, '"Condition"')) {
               finalRecord['PatientInformationSheet'] = cleanLine(study, i++);
               if (is(study, i, '"Condition"')) break;
               }
+        }
 
         if (is(study, i, '"Condition"') && !is(study, ++i, '"Intervention"'))
              finalRecord['Intervention'] = cleanLine(study, i++);
