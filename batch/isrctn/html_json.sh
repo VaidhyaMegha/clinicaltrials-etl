@@ -55,33 +55,33 @@ gvm use "go1.4"
 
 pushd ${context_dir}
 
-#if [ -d ${html_dir}/studies ]; then
-#    rm -rf ${html_dir}/studies
-#fi
-#
+if [ -d ${html_dir}/studies ]; then
+    rm -rf ${html_dir}/studies
+fi
+
 mkdir -p ${html_dir}/studies
 
-#if [[ ${download} == 'yes' ]]; then
+if [[ ${download} == 'yes' ]]; then
     download_main_index
-#
-#    NUM_OF_PAGES=`cat ${html_dir}/1.html | grep -oE 'of [0-9]*</span>' | grep -oE '[0-9]*' | sort -u | head -n 1`
-#
-#    for (( i=2; i<=${NUM_OF_PAGES}; i++ ))
-#    do
-#        download_index_page ${i}
-#    done
+
+    NUM_OF_PAGES=`cat ${html_dir}/1.html | grep -oE 'of [0-9]*</span>' | grep -oE '[0-9]*' | sort -u | head -n 1`
+
+    for (( i=2; i<=${NUM_OF_PAGES}; i++ ))
+    do
+        download_index_page ${i}
+    done
 
     cat ${html_dir}/*.html | grep -oE "ISRCTN[0-9]*\?q=" | while read f
     do
         download_trial ${f}
     done
-#else
-#    aws s3 sync  ${s3_bucket} ${html_dir}/studies/  --delete
-#fi
-#
-#if [ -d ${html_dir}/studies/json ]; then
-#    rm -rf ${html_dir}/studies/json
-#fi
+else
+    aws s3 sync  ${s3_bucket} ${html_dir}/studies/  --delete
+fi
+
+if [ -d ${html_dir}/studies/json ]; then
+    rm -rf ${html_dir}/studies/json
+fi
 
 mkdir ${html_dir}/studies/json
 

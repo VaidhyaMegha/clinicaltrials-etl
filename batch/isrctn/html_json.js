@@ -43,7 +43,7 @@ rl.on('close', function () {
         if (is(study, i++, '"Recruitment status"'))
             finalRecord['RecruitmentStatus'] = cleanLine(study, i++);
         i =0;
-        if (is(study, i, '"Plain English Summary"') {
+        if (is(study, i, '"Plain English Summary"')) {
             while(!is(study, ++i, '"Trial website"')){
                 finalRecord['PlainEnglishWebsite'] = cleanLine(study, i++);
                 if (is(study, i, '"Trial website"')) break;
