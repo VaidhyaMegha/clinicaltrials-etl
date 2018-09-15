@@ -71,10 +71,10 @@ mkdir -p ${html_dir}/studies
 #        download_index_page ${i}
 #    done
 
-#    cat ${html_dir}/*.html | grep -oE "ISRCTN[0-9]*\?q=" | while read f
-#    do
-#        download_trial ${f}
-#    done
+    cat ${html_dir}/*.html | grep -oE "ISRCTN[0-9]*\?q=" | while read f
+    do
+        download_trial ${f}
+    done
 #else
 #    aws s3 sync  ${s3_bucket} ${html_dir}/studies/  --delete
 #fi
