@@ -100,7 +100,7 @@ rl.on('close', function () {
                 if (is(study, i, '"Ethics approval"')) break;
             }
         }
-        if (is(study, i, '"Ethics approval"') {
+        if (is(study, i, '"Ethics approval"')) {
             while (is(study, ++i, '"Study design"')){
                 finalRecord['EthicsApproval'] = cleanLine(study, i++);
                 if (is(study, i, '"Study design"')) break;
