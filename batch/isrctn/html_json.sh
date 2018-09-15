@@ -59,7 +59,7 @@ pushd ${context_dir}
 #    rm -rf ${html_dir}/studies
 #fi
 #
-#mkdir -p ${html_dir}/studies
+mkdir -p ${html_dir}/studies
 
 #if [[ ${download} == 'yes' ]]; then
     download_main_index
