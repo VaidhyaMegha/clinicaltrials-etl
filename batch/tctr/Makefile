@@ -8,7 +8,7 @@ all: run
 # or to publish the :latest version to the specified registry as :1.0.0, run:
 # $ make publish version=1.0.0
 
-name = perctr-etl-container
+name = tctr-etl-container
 registry = 519510601754.dkr.ecr.us-east-1.amazonaws.com
 version ?= latest
 
