@@ -91,29 +91,48 @@ rl.on('close', function () {
         if (is(study, i, '"Scientific title"') && !is(study, ++i, '"Acronym"'))
             finalRecord['ScientificTitle'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Acronym"') && !is(study, ++i, '"Study hypothesis"'))
-            finalRecord['Acronym'] = cleanLine(study, i++);
+        if (is(study, i, '"Acronym"')){
+            while (!is(study, ++i, '"Study hypothesis"')){
+                finalRecord['Acronym'] = cleanLine(study, i++);
+                 if (is(study, i, '"Study hypothesis"')) break;
+            }
+        }
 
         if (is(study, i, '"Study hypothesis"')){
-            while (is(study, ++i, '"Ethics approval"')){
+            while (!is(study, ++i, '"Ethics approval"')){
                 finalRecord['StudyHypothesis'] = cleanLine(study, i++);
                 if (is(study, i, '"Ethics approval"')) break;
             }
         }
         if (is(study, i, '"Ethics approval"')) {
-            while (is(study, ++i, '"Study design"')){
+            while (!is(study, ++i, '"Study design"')){
                 finalRecord['EthicsApproval'] = cleanLine(study, i++);
                 if (is(study, i, '"Study design"')) break;
             }
         }
-        if (is(study, i, '"Study design"') && !is(study, ++i, '"Primary study design"'))
-           finalRecord['StudyDesign'] = cleanLine(study, i++);
+        if (is(study, i, '"Study design"')){
+          while (!is(study, ++i, '"Primary study design"')){
+             finalRecord['StudyDesign'] = cleanLine(study, i++);
+             if (is(study, i, '"Primary study design"')) break;
+          }
+        }
 
-         if (is(study, i, '"Primary study design"') && !is(study, ++i, '"Secondary study design"'))
-                    finalRecord['PrimaryStudyDesign'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Secondary study design"') && !is(study, ++i, '"Trial setting"'))
-                   finalRecord['SecondaryStudyDesign'] = cleanLine(study, i++);
+         if (is(study, i, '"Primary study design"')){
+            while (!is(study, ++i, '"Secondary study design"')){
+              finalRecord['PrimaryStudyDesign'] = cleanLine(study, i++);
+              if (is(study, i, '"Secondary study design"')) break;
+            }
+         }
+
+
+        if (is(study, i, '"Secondary study design"') ){
+            while (!is(study, ++i, '"Trial setting"')) {
+              finalRecord['SecondaryStudyDesign'] = cleanLine(study, i++);
+              if (is(study, i, '"Trial setting"')) break;
+            }
+        }
+
 
         if (is(study, i, '"Trial setting"') && !is(study, ++i, '"Trial type"'))
              finalRecord['TrialSetting'] = cleanLine(study, i++);
@@ -174,8 +193,12 @@ rl.on('close', function () {
         if (is(study, i, '"Reason abandoned (if study stopped)"') && !is(study, ++i, '"Participant inclusion criteria"'))
               finalRecord['ReasonAbandoned '] = cleanLine(study, i++);
 
-        if (is(study, i, '"Participant inclusion criteria"') && !is(study, ++i, '"Participant type"'))
-              finalRecord['ParticipantInclusionCriteria '] = cleanLine(study, i++);
+        if (is(study, i, '"Participant inclusion criteria"')) {
+            while (!is(study, ++i, '"Participant type"'))  {
+                finalRecord['ParticipantInclusionCriteria '] = cleanLine(study, i++);
+                if (is(study, i, '"Participant type"')) break;
+            }
+        }
 
         if (is(study, i, '"Participant type"') && !is(study, ++i, '"Age group"'))
               finalRecord['ParticipantType '] = cleanLine(study, i++);
@@ -230,14 +253,27 @@ rl.on('close', function () {
         finalRecord['SponsorDetails'] = source;
         }
 
-        if (is(study, i, '"Sponsor type"') && !is(study, ++i, '"Website"'))
-              finalRecord['SponsorType '] = cleanLine(study, i++);
+        if (is(study, i, '"Sponsor type"') ){
+         while (!is(study, ++i, '"Website"')){
+            finalRecord['SponsorType '] = cleanLine(study, i++);
+            if (is(study, i, '"Website"') )break;
+         }
+         }
 
-        if (is(study, i, '"Website"') && !is(study, ++i, '"Funder type"'))
+        if (is(study, i, '"Website"')){
+           while(!is(study, ++i, '"Funder type"')){
               finalRecord['Website'] = cleanLine(study, i++);
+                if (is(study, i, '"Funder type"')) break;
+            }
+        }
 
-        if (is(study, i, '"Funder type"') && !is(study, ++i, '"Funder name"'))
-              finalRecord['FunderType '] = cleanLine(study, i++);
+        if (is(study, i, '"Funder type"') ){
+          while (!is(study, ++i, '"Funder name"')){
+            finalRecord['FunderType '] = cleanLine(study, i++);
+             if (is(study, i, '"Funder name"')) break;
+          }
+        }
+
 
         if (is(study, i, '"Funder name"') && !is(study, ++i, '"Alternative name(s)"'))
               finalRecord['FunderName'] = cleanLine(study, i++);
