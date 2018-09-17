@@ -26,7 +26,7 @@ if [[ ${download} == 'yes' ]]; then
    mkdir ${xml_dir}/studies/json
    mkdir ${xml_dir}/studies/xml
 
-#    download_xml_page
+    download_xml_page
     find ${xml_dir} -type f -maxdepth 1 -name "*.zip" | while read f
     do
     unzip -o ${f} -d ${xml_dir}/studies/xml/
