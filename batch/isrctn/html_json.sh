@@ -29,7 +29,7 @@ function analyse_trial(){
     g=${1//.html/}
     cat ${html_dir}/studies/${g}.html  | pup 'div.Info_aside :parent-of(dt.Meta_name)  json{}' |  grep '"text":' | ./html_json.js |jq -s add > ${2}/${g}_1.json
 
-cat ${html_dir}/studies/${g}.html | pup ':contains("'${g}'") json{}' | jq -c '{"IRCTN_NUMBER" :.[1].text}' | jq -s add > ${2}/${g}_2.json
+    cat ${html_dir}/studies/${g}.html | pup ':contains("'${g}'") json{}' | jq -c '{"IRCTN_NUMBER" :.[1].text}' | jq -s add > ${2}/${g}_2.json
 
     cat ${html_dir}/studies/${g}.html | pup 'div.Info_main :parent-of(.Info_section_title) json{}' | grep '"text":' | ./html_json.js | jq -s add > ${2}/${g}_3.json
 
@@ -38,7 +38,7 @@ cat ${html_dir}/studies/${g}.html | pup ':contains("'${g}'") json{}' | jq -c '{"
 
      jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json  > ${2}/studies1.json
      jq -c -s '.[0] * .[1]' ${2}/studies1.json ${2}/${g}_3.json >> ${2}/studies.json
-#
+
 #    tr '[:upper:]' '[:lower:]' < ${2}/${g}_3.json > ${2}/${g}.json
 #    sed -i 's/ /_/g; s/(//g; s/)//g; s/\\n//g; s/&gt\;//g; s/&lt\;//g; s/&#39\;//g; s/__*/_/g' ${2}/${g}.json
 #
@@ -50,18 +50,18 @@ cat ${html_dir}/studies/${g}.html | pup ':contains("'${g}'") json{}' | jq -c '{"
     rm ${2}/studies1.json
 }
 
-source ~/.gvm/scripts/gvm
-gvm use "go1.4"
+#source ~/.gvm/scripts/gvm
+#gvm use "go1.4"
 
 pushd ${context_dir}
 
-if [ -d ${html_dir}/studies ]; then
-    rm -rf ${html_dir}/studies
-fi
-
-mkdir -p ${html_dir}/studies
-
 if [[ ${download} == 'yes' ]]; then
+
+    if [ -d ${html_dir}/studies ]; then
+        rm -rf ${html_dir}/studies
+    fi
+
+    mkdir -p ${html_dir}/studies
     download_main_index
 
     NUM_OF_PAGES=`cat ${html_dir}/1.html | grep -oE 'of [0-9]*</span>' | grep -oE '[0-9]*' | sort -u | head -n 1`
@@ -76,23 +76,21 @@ if [[ ${download} == 'yes' ]]; then
         download_trial ${f}
     done
 else
-    aws s3 sync  ${s3_bucket} ${html_dir}/studies/  --delete
+
+    if [ -d ${html_dir}/studies/json ]; then
+        rm -rf ${html_dir}/studies/json
+    fi
+
+    mkdir ${html_dir}/studies/json
+
+    find ${html_dir}/studies -type f -name "*.html" -printf "%f\n" | while read f
+    do
+        analyse_trial ${f} ${html_dir}/studies/json
+    done
+
+    if [[ ${mode} == 'cloud' ]]; then
+        aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
+    fi
 fi
-
-if [ -d ${html_dir}/studies/json ]; then
-    rm -rf ${html_dir}/studies/json
-fi
-
-mkdir ${html_dir}/studies/json
-
-find ${html_dir}/studies -type f -name "*.html" -printf "%f\n" | while read f
-do
-    analyse_trial ${f} ${html_dir}/studies/json
-done
-
-if [[ ${mode} == 'cloud' ]]; then
-    aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
-fi
-
 popd
 
