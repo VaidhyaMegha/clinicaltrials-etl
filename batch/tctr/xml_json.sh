@@ -8,11 +8,11 @@ month=${4:-`date +'%m'`}
 day=${4:-`date +'%d'`}
 s3_bucket=${5:-'s3://hsdlc-results/tctr-adapter/'}
 context_dir=${6:-'/usr/local/dataintegration'}
-prefix_url="www.clinicaltrials.in.th/export/xmlv02/TCTR"
-suffix_url="sh8.zip"
+prefix_url="www.clinicaltrials.in.th/export/xmlv02/"
+suffix_url=${3}
 
 function download_xml_page(){
-    wget  -q ${prefix_url}${year}${month}${day}${suffix_url} || true
+    wget  -q ${prefix_url}${suffix_url} || true
 }
 
 pushd ${context_dir}
