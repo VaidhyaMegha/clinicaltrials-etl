@@ -13,6 +13,7 @@ RUN  apt-get update &&  apt-get install -y python  && \
      apt-get install -y git && \
      apt-get install -y wget && \
      apt-get install -y jq
+     apt-get install -y unzip
 
 # Install boto( will also install botocore) and awscli
 RUN python --version && \
