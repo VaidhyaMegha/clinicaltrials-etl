@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Athena" uuid="875e4e59-ba8a-49fc-9c8e-12e2f17c55df">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="UNKNOWN" exact-version="0.0" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+    </data-source>
+  </component>
+</project>

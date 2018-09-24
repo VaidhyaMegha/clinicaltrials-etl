@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/batch/discover/WQUPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/discover/WQUPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/discover/links.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/discover/links.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/hsdlc/links_ddl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/hsdlc/links_ddl.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analytics/summary_statistics.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/athena/hsdlc/countries_ddl.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippets/registry_counts_by_year.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,154 +36,148 @@
     <session id="1301575953">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.14" value="2" />
-          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.3" value="3" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.6" value="2" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="3" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="64" />
           <entry key="Makefile" value="8" />
-          <entry key="csv" value="17" />
+          <entry key="csv" value="145" />
           <entry key="gitignore" value="10" />
           <entry key="java" value="1388" />
           <entry key="js" value="277" />
           <entry key="sh" value="457" />
-          <entry key="sql" value="44" />
+          <entry key="sql" value="678" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Dockerfile" value="3" />
+          <entry key="Dockerfile" value="5" />
           <entry key="Makefile" value="1" />
           <entry key="class" value="2" />
-          <entry key="csv" value="10" />
+          <entry key="csv" value="13" />
           <entry key="gitignore" value="1" />
           <entry key="java" value="3" />
-          <entry key="js" value="6" />
-          <entry key="json" value="12" />
+          <entry key="js" value="8" />
+          <entry key="json" value="14" />
           <entry key="md" value="2" />
-          <entry key="sh" value="14" />
-          <entry key="sql" value="4" />
+          <entry key="sh" value="18" />
+          <entry key="sql" value="6" />
           <entry key="ts" value="1" />
           <entry key="txt" value="1" />
           <entry key="xml" value="2" />
-          <entry key="xslt" value="1" />
+          <entry key="xslt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="14" />
+          <entry key="Bash" value="18" />
           <entry key="CLASS" value="2" />
-          <entry key="CSV" value="6" />
-          <entry key="Dockerfile" value="3" />
+          <entry key="CSV" value="9" />
+          <entry key="Dockerfile" value="5" />
           <entry key="JAVA" value="3" />
-          <entry key="JSON" value="12" />
-          <entry key="JavaScript" value="6" />
+          <entry key="JSON" value="14" />
+          <entry key="JavaScript" value="8" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="SQL" value="4" />
+          <entry key="SQL" value="6" />
           <entry key="TypeScript" value="1" />
-          <entry key="XML" value="3" />
+          <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="457" />
-          <entry key="CSV" value="6" />
+          <entry key="CSV" value="134" />
           <entry key="Dockerfile" value="64" />
           <entry key="JAVA" value="1388" />
           <entry key="JavaScript" value="277" />
           <entry key="PLAIN_TEXT" value="30" />
-          <entry key="SQL" value="44" />
+          <entry key="SQL" value="678" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
       <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch/discover/links.sh">
+        <entry file="file://$PROJECT_DIR$/analytics/summary_statistics.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="803">
+              <caret line="51" selection-start-line="51" selection-end-line="52" selection-end-column="78" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/links_ddl.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="7" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1617" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/batch/discover/WQUPC.java">
+        <entry file="file://$PROJECT_DIR$/snippets/registry_counts_by_year.tsv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="131" column="29" lean-forward="true" selection-start-line="131" selection-start-column="29" selection-end-line="131" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state>
+              <caret column="39" selection-start-column="39" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch/discover/output.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="38728" column="31" selection-start-line="38728" selection-start-column="31" selection-end-line="38728" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch/discover/athena.sh.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch/discover/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/ncrb.gov.in/tables.sh">
+        <entry file="file://$PROJECT_DIR$/batch/cubct/Dockerfile">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/ncrb.gov.in/transform.sh">
+        <entry file="file://$PROJECT_DIR$/batch/cubct/html_json.sh">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch/discover/links.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/snippets/datasources/data_gov_in_api_endpoints.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/snippets/country_lat_long.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="113" column="29" lean-forward="true" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/snippets/country_lat_long.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/countries_ddl.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="12" selection-end-column="3" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -202,10 +198,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>is\(([^\)]*)\) !== -1</find>
-      <find>ntr</find>
-      <find>else</find>
-      <find>line</find>
       <find>Board Approval Status</find>
       <find>Healthcare Benefit Approval</find>
       <find>temp</find>
@@ -232,6 +224,10 @@
       <find>arra</find>
       <find>array</find>
       <find>secondary_outcome</find>
+      <find>[0-9\\.]*</find>
+      <find>[0-9]*\.</find>
+      <find>[0-9]+\.[0-9]</find>
+      <find>Japa</find>
     </findStrings>
     <replaceStrings>
       <replace>html_dir</replace>
@@ -278,10 +274,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/batch/jprn/html_json.sh" />
-        <option value="$PROJECT_DIR$/batch/actrn/analyse.sh" />
-        <option value="$PROJECT_DIR$/batch/EUCTRN/analyse.py" />
-        <option value="$PROJECT_DIR$/batch/EUCTRN/trial.yaml" />
         <option value="$PROJECT_DIR$/batch/EUCTRN/test.yaml" />
         <option value="$PROJECT_DIR$/batch/EUCTRN/analyse.sh" />
         <option value="$PROJECT_DIR$/batch/EUCTRN/Makefile" />
@@ -329,6 +321,10 @@
         <option value="$PROJECT_DIR$/batch/discover/links.csv" />
         <option value="$PROJECT_DIR$/batch/discover/WQUPC.java" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/links_ddl.sql" />
+        <option value="$PROJECT_DIR$/scripts/athena/hsdlc/countries_ddl.sql" />
+        <option value="$PROJECT_DIR$/snippets/country_lat_long.csv" />
+        <option value="$PROJECT_DIR$/analytics/summary_statistics.sql" />
+        <option value="$PROJECT_DIR$/snippets/registry_counts_by_year.csv" />
       </list>
     </option>
   </component>
@@ -349,8 +345,7 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/batch/perctr/etl/package.json" />
-      <path value="$PROJECT_DIR$/snippets/etl/package.json" />
+      <path value="$PROJECT_DIR$/batch/tctr/etl/package.json" />
     </packageJsonPaths>
   </component>
   <component name="PhpServers">
@@ -359,9 +354,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
-    <option name="y" value="28" />
-    <option name="width" value="1602" />
-    <option name="height" value="840" />
+    <option name="y" value="24" />
+    <option name="width" value="1855" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -369,14 +364,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="analytics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
@@ -410,43 +408,21 @@
             <path>
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="data.gov.in" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="ftp.ncbi.nlm.nih.gov" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="ncrb.gov.in" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="nrhm-mis.nic.in" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="snippets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="snippets" type="462c0819:PsiDirectoryNode" />
-              <item name="etl" type="462c0819:PsiDirectoryNode" />
+              <item name="datasources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -454,7 +430,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/datasets/datainsights-in/data.gov.in/web-crawler/data.gov.in.html" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534738126220" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537787736706" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQl" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
     <property name="full.screen.before.presentation.mode" value="false" />
@@ -898,7 +874,12 @@
       <workItem from="1534483973330" duration="685000" />
       <workItem from="1534587832667" duration="4896000" />
       <workItem from="1534605856961" duration="20601000" />
-      <workItem from="1534781533293" duration="1170000" />
+      <workItem from="1534781533293" duration="5313000" />
+      <workItem from="1536195815796" duration="1255000" />
+      <workItem from="1536826176932" duration="4817000" />
+      <workItem from="1536912589680" duration="595000" />
+      <workItem from="1537253150166" duration="639000" />
+      <workItem from="1537778700781" duration="4395000" />
     </task>
     <servers />
   </component>
@@ -908,13 +889,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1096730000" />
+    <option name="totallyTimeSpent" value="1112574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989754" visible="true" weight="0.23383084" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989754" visible="true" weight="0.24765064" />
       <window_info id="Structure" order="1" sideWeight="0.5010246" side_tool="true" weight="0.20485175" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -927,7 +908,7 @@
       <window_info id="Learn" order="10" />
       <window_info id="DBHelper" order="11" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32740587" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32845187" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -940,7 +921,7 @@
       <window_info anchor="bottom" id="DBOutput" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32617587" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5002764" side_tool="true" weight="0.3294979" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" weight="0.32991803" />
       <window_info anchor="right" id="Connector for AWS Lambda" order="0" side_tool="true" weight="0.32946378" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
@@ -953,7 +934,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="PlantUML" order="9" weight="0.32991913" />
       <window_info anchor="right" id="Data View" order="10" />
-      <window_info anchor="right" x="0" y="0" width="350" height="604" id="Documentation" order="11" side_tool="true" visible="true" weight="0.329375" />
+      <window_info anchor="right" x="0" y="0" width="350" height="604" id="Documentation" order="11" side_tool="true" weight="0.328911" />
       <window_info anchor="right" id="Database" order="12" weight="0.32946378" />
       <window_info anchor="right" id="Maven Projects" order="13" side_tool="true" weight="0.32946378" />
     </layout>
@@ -1055,91 +1036,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/batch/hsdlc/global_registry.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/hsdlc/utdm_automation.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/hsdlc/global_registry.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2790">
-          <caret line="155" column="385" selection-start-line="155" selection-start-column="385" selection-end-line="155" selection-end-column="385" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/nl_reg/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/cristr/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/chictr/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/brtr_ddl.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/ctri/html_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/irct/html_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="99" column="8" selection-start-line="96" selection-start-column="4" selection-end-line="99" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/cristr/html_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/brtr/html_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111906">
-          <caret line="6230" column="4" selection-start-line="6230" selection-start-column="4" selection-end-line="6230" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/discover/normalized_links.csv" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1147,14 +1043,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/pactr/html_json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/chictr/README.md">
+      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor>
@@ -1163,7 +1053,6 @@
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
@@ -1237,9 +1126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.xslt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/discover/WQUPC.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1304,40 +1190,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/discover/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/ncrb.gov.in/tables.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/ncrb.gov.in/transform.sh">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/nrhm-mis.nic.in/catalog.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/discover/links.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1617" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/discover/output.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="38728" column="31" selection-start-line="38728" selection-start-column="31" selection-end-line="38728" selection-end-column="31" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/links_ddl.sql">
       <provider selected="true" editor-type-id="text-editor">
@@ -1346,13 +1203,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/batch/discover/WQUPC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="131" column="29" lean-forward="true" selection-start-line="131" selection-start-column="29" selection-end-line="131" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="2088">
+          <caret line="131" column="29" selection-start-line="131" selection-start-column="29" selection-end-line="131" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/discover/output.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="706860">
+          <caret line="38728" column="31" selection-start-line="38728" selection-start-column="31" selection-end-line="38728" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/discover/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/pactr/html_json.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/perctr/keys.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/ct/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="41" selection-start-line="35" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.xslt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/ctri/html_json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/perctr/etl/xml_json.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/nrhm-mis.nic.in/catalog.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/datasources/data_gov_in_api_endpoints.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/country_lat_long.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/countries_ddl.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/country_lat_long.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="113" column="29" lean-forward="true" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/cubct/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/cubct/html_json.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/discover/links.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/summary_statistics.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="803">
+          <caret line="51" selection-start-line="51" selection-end-line="52" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/registry_counts_by_year.tsv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
         </state>
       </provider>
     </entry>
