@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics/summary_statistics.sql" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/summary_statistics.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/batch/discover/links.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/discover/links.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,11 +49,11 @@
         <counts>
           <entry key="Dockerfile" value="64" />
           <entry key="Makefile" value="8" />
-          <entry key="csv" value="145" />
+          <entry key="csv" value="147" />
           <entry key="gitignore" value="10" />
           <entry key="java" value="1388" />
           <entry key="js" value="277" />
-          <entry key="sh" value="554" />
+          <entry key="sh" value="603" />
           <entry key="sql" value="718" />
           <entry key="txt" value="1" />
         </counts>
@@ -100,8 +98,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="554" />
-          <entry key="CSV" value="134" />
+          <entry key="Bash" value="603" />
+          <entry key="CSV" value="136" />
           <entry key="Dockerfile" value="64" />
           <entry key="JAVA" value="1388" />
           <entry key="JavaScript" value="277" />
@@ -137,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/discover/links.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23022">
-              <caret line="1279" column="35" selection-start-line="1279" selection-start-column="35" selection-end-line="1279" selection-end-column="35" />
+            <state relative-caret-position="479">
+              <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -146,8 +144,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/discover/links.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+            <state relative-caret-position="162">
+              <caret line="9" column="510" selection-start-line="9" selection-start-column="470" selection-end-line="9" selection-end-column="510" />
             </state>
           </provider>
         </entry>
@@ -211,8 +209,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Healthcare Benefit Approval</find>
-      <find>temp</find>
       <find>group</find>
       <find>compareTo</find>
       <find>ctd</find>
@@ -241,6 +237,8 @@
       <find>[0-9]+\.[0-9]</find>
       <find>Japa</find>
       <find>RPCEC</find>
+      <find>CTRI/2009/091/000860</find>
+      <find>20</find>
     </findStrings>
     <replaceStrings>
       <replace>html_dir</replace>
@@ -330,7 +328,6 @@
         <option value="$PROJECT_DIR$/scripts/ftp.ncbi.nlm.nih.gov/pub_pmc_index.sh" />
         <option value="$PROJECT_DIR$/batch/discover/athena.sh.txt" />
         <option value="$PROJECT_DIR$/batch/discover/Dockerfile" />
-        <option value="$PROJECT_DIR$/batch/discover/links.csv" />
         <option value="$PROJECT_DIR$/batch/discover/WQUPC.java" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/links_ddl.sql" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/countries_ddl.sql" />
@@ -338,6 +335,7 @@
         <option value="$PROJECT_DIR$/snippets/registry_counts_by_year.csv" />
         <option value="$PROJECT_DIR$/analytics/summary_statistics.sql" />
         <option value="$PROJECT_DIR$/batch/discover/links.sh" />
+        <option value="$PROJECT_DIR$/batch/discover/links.csv" />
       </list>
     </option>
   </component>
@@ -873,7 +871,7 @@
       <workItem from="1537778700781" duration="4596000" />
       <workItem from="1537799215552" duration="1302000" />
       <workItem from="1537831797425" duration="1160000" />
-      <workItem from="1537852291361" duration="4691000" />
+      <workItem from="1537852291361" duration="7207000" />
     </task>
     <servers />
   </component>
@@ -883,7 +881,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1119928000" />
+    <option name="totallyTimeSpent" value="1122444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1276,13 +1274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/discover/links.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23022">
-          <caret line="1279" column="35" selection-start-line="1279" selection-start-column="35" selection-end-line="1279" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/discover/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1297,10 +1288,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/batch/discover/links.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/batch/discover/links.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        <state relative-caret-position="162">
+          <caret line="9" column="510" selection-start-line="9" selection-start-column="470" selection-end-line="9" selection-end-column="510" />
         </state>
       </provider>
     </entry>
