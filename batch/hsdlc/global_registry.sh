@@ -15,6 +15,8 @@ s3_ntr_bucket=${9:-'s3://hsdlc-results/ntr-adapter/studies/'}
 s3_cubct_bucket=${9:-'s3://hsdlc-results/cubct-adapter/studies/'}
 s3_perct_bucket=${9:-'s3://hsdlc-results/perct-adapter/studies/'}
 s3_slctr_bucket=${9:-'s3://hsdlc-results/slctr-adapter/studies/'}
+s3_tctr_bucket=${9:-'s3://hsdlc-results/tctr-adapter/studies/'}
+s3_isrctn_bucket=${9:-'s3://hsdlc-results/isrctn-adapter/'}
 s3_utdm_bucket=${10:-'s3://hsdlc-results/utdm-adapter/'}
 context_dir=${11:-'/usr/local/dataintegration'}
 
@@ -65,6 +67,14 @@ if [[ ${download} == 'yes' ]]; then
 
   if [ -d ${html_dir}slctr ]; then
         rm -rf ${html_dir}slctr
+  fi
+
+  if [ -d ${html_dir}isrctn ]; then
+        rm -rf ${html_dir}isrctn
+  fi
+
+  if [ -d ${html_dir}tctr ]; then
+        rm -rf ${html_dir}tctr
   fi
 
   if [ -d ${html_dir}output ]; then
@@ -119,6 +129,14 @@ if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}slctr/studies
     mkdir ${html_dir}slctr/studies/json
 
+    mkdir ${html_dir}isrctn
+    mkdir ${html_dir}isrctn/studies
+    mkdir ${html_dir}isrctn/studies/json
+
+    mkdir ${html_dir}tctr
+    mkdir ${html_dir}tctr/studies
+    mkdir ${html_dir}tctr/studies/json
+
     mkdir ${html_dir}output
     mkdir ${html_dir}output/json
 
@@ -134,6 +152,8 @@ if [[ ${download} == 'yes' ]]; then
     aws s3 cp ${s3_cubct_bucket}json ${html_dir}cubct/studies/json --recursive
     aws s3 cp ${s3_perct_bucket}json ${html_dir}perct/studies/json --recursive
     aws s3 cp ${s3_slctr_bucket}json ${html_dir}slctr/studies/json --recursive
+    aws s3 cp ${s3_isrctn_bucket}json ${html_dir}isrctn/studies/json --recursive
+    aws s3 cp ${s3_tctr_bucket}json ${html_dir}tctr/studies/json --recursive
 fi
 #########################    CT    ######################################
 
@@ -217,7 +237,7 @@ done
 find ${html_dir}brtr/studies/json/ -type f -name "*.json"  | while read f
 do
 
-jq -c '{"trialid":.main.trial_id,"secondary_id":[.secondary_ids.secondary_id[].sec_id],"Date_of_Registration":.main.date_registration,"Public_Title":.main.public_title,"Scientific_Title":.main.scientific_title,"study_type":.main.study_type,"date_of_first_enrollment":.main.date_enrolment,"RecruitmentStatus":.main.recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [.main.primary_sponsor],   "person": [],"address":[]},"SecondarySponsors":{"name": [.secondary_sponsor.sponsor_name],   "person": [],"address":[]}, "Contact":[], "registry": "BRTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+jq -c '{"trialid":.main.trial_id,"secondary_id":[.secondary_ids.secondary_id],"Date_of_Registration":.main.date_registration,"Public_Title":.main.public_title,"Scientific_Title":.main.scientific_title,"study_type":.main.study_type,"date_of_first_enrollment":.main.date_enrolment,"RecruitmentStatus":.main.recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [.main.primary_sponsor],   "person": [],"address":[]},"SecondarySponsors":{"name": [.secondary_sponsor.sponsor_name],   "person": [],"address":[]}, "Contact":[], "registry": "BRTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
 
 done
 
@@ -250,11 +270,11 @@ done
         rm -rf ${html_dir}cubct
   fi
 
-#########################   PERCTR   #####################################
+##########################   PERCTR   #####################################
 find ${html_dir}perct/studies/json/ -type f -name "*.json"  | while read f
 do
 
-jq -c '{"trialid":.trial_id,"secondary_id":[.secondary_ids[].secondary_id[].sec_id],"Date_of_Registration":.date_registration,"Public_Title":.public_title,"Scientific_Title":.scientific_title,"TypeStudy":.study_type,"date_of_first_enrollment":.date_enrolment,"RecruitmentStatus":.recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [],   "person": [],"address":[]}, "SecondarySponsors":{"name": [],   "person": [],"address":[]},"Contact":[], "registry": "PERCTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+jq -c '{"trialid":.main.trial_id,"secondary_id":[.secondary_ids[].secondary_id],"Date_of_Registration":.main.date_registration,"Public_Title":.main.public_title,"Scientific_Title":.main.scientific_title,"study_type":.main.study_type,"date_of_first_enrollment":.main.date_enrolment,"RecruitmentStatus":.main.recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [.main.primary_sponsor],   "person": [],"address":[]},"SecondarySponsors":{"name": [.secondary_sponsor[].sponsor_name],   "person": [],"address":[]}, "Contact":[], "registry": "PERCTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
 
 done
 
@@ -274,5 +294,31 @@ done
         rm -rf ${html_dir}slctr
   fi
 
+
+#########################   TCTR   #####################################
+find ${html_dir}perct/studies/json/ -type f -name "*.json"  | while read f
+do
+
+jq -c '{"trialid":.main.trial_id,"secondary_id":[.secondary_ids[].secondary_id],"Date_of_Registration":.main.date_registration,"Public_Title":.main.public_title,"Scientific_Title":.main.scientific_title,"study_type":.main.study_type,"date_of_first_enrollment":.main.date_enrolment,"RecruitmentStatus":.main.recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [.main.primary_sponsor],   "person": [],"address":[]},"SecondarySponsors":{"name": [.secondary_sponsor[].sponsor_name],   "person": [],"address":[]}, "Contact":[], "registry": "TCTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+
+done
+
+
+  if [ -d ${html_dir}tctr ]; then
+        rm -rf ${html_dir}tctr
+  fi
+
+#########################   ISRCTN   #####################################
+find ${html_dir}perct/studies/json/ -type f -name "*.json"  | while read f
+do
+
+jq -c '{"trialid":.IRCTN_NUMBER,"secondary_id":[.SecondaryIds],"Date_of_Registration":.dateApplied,"Public_Title":.Acronym,"Scientific_Title":.ScientificTitle,"study_type":.Type,"date_of_first_enrollment":"","RecruitmentStatus":.RecruitmentStatus,"completionDate":"" ,"PrimarySponsors":{"name": [.SponsorDetails],   "person": [],"address":[]},"SecondarySponsors":{"name": [],   "person": [],"address":[]}, "Contact":[], "registry": "ISRCTN", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+
+done
+
+
+  if [ -d ${html_dir}isrctn ]; then
+        rm -rf ${html_dir}isrctn
+  fi
 
 aws s3 sync ${html_dir}/output/ ${s3_utdm_bucket}  --delete
