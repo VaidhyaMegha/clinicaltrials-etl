@@ -296,7 +296,7 @@ done
 
 
 #########################   TCTR   #####################################
-find ${html_dir}perct/studies/json/ -type f -name "*.json"  | while read f
+find ${html_dir}tctr/studies/json/ -type f -name "*.json"  | while read f
 do
 
 jq -c '{"trialid":.main.trial_id,"secondary_id":[.secondary_ids[].secondary_id],"Date_of_Registration":.main.date_registration,"Public_Title":.main.public_title,"Scientific_Title":.main.scientific_title,"study_type":.main.study_type,"date_of_first_enrollment":.main.date_enrolment,"RecruitmentStatus":.main.recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [.main.primary_sponsor],   "person": [],"address":[]},"SecondarySponsors":{"name": [.secondary_sponsor[].sponsor_name],   "person": [],"address":[]}, "Contact":[], "registry": "TCTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
@@ -309,7 +309,7 @@ done
   fi
 
 #########################   ISRCTN   #####################################
-find ${html_dir}perct/studies/json/ -type f -name "*.json"  | while read f
+find ${html_dir}isrctn/studies/json/ -type f -name "*.json"  | while read f
 do
 
 jq -c '{"trialid":.IRCTN_NUMBER,"secondary_id":[.SecondaryIds],"Date_of_Registration":.dateApplied,"Public_Title":.Acronym,"Scientific_Title":.ScientificTitle,"study_type":.Type,"date_of_first_enrollment":"","RecruitmentStatus":.RecruitmentStatus,"completionDate":"" ,"PrimarySponsors":{"name": [.SponsorDetails],   "person": [],"address":[]},"SecondarySponsors":{"name": [],   "person": [],"address":[]}, "Contact":[], "registry": "ISRCTN", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
