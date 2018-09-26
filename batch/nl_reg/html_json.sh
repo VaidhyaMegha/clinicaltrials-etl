@@ -20,7 +20,7 @@ function download_trial(){
 }
 
 function Delete_Invalid_files() {
-  grep -lrIZ 'Invalid Request' ${1} | xargs -0 rm -f --
+  grep -lrIZ 'Registratie-nummer' ${1} | xargs -0 rm -f --
 }
 
 function analyse_file() {
@@ -119,7 +119,7 @@ if [[ ${download} == 'yes' ]]; then
        gen_json  ${html_dir}/studies/analysis/${f} ${html_dir}/studies/json/
     done
 
-aws s3 sync  ${html_dir}/studies ${s3_bucket} --delete
+#aws s3 sync  ${html_dir}/studies ${s3_bucket} --delete
 fi
 popd
 
