@@ -228,7 +228,7 @@ done
 find ${html_dir}euctrn/studies/json/p_y* -type f -name "*.json"  | while read f
 do
 
-jq -c '{"trialid":.eudract_number,"secondary_id":[.trial_contains_a_sub-study],"Date_of_Registration":.date_on_which_this_record_was_first_entered_in_the_eudract_database,"Public_Title":.full_title_of_the_trial,"Scientific_Title":.name_or_abbreviated_title_of_the_trial_where_available,"study_type":.clinical_trial_type,"date_of_first_enrollment":"","RecruitmentStatus":.trial_status,"completionDate":"" ,"PrimarySponsors":{"name": [],   "person": [],"address":[]},"SecondarySponsors":{"name": [],   "person": [],"address":[]}, "Contact":[], "registry": "EUCTRN", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+jq -c '{"trialid":.eudract_number,"secondary_id":[.sponsors_protocol_code_number],"Date_of_Registration":.date_on_which_this_record_was_first_entered_in_the_eudract_database,"Public_Title":.full_title_of_the_trial,"Scientific_Title":.name_or_abbreviated_title_of_the_trial_where_available,"study_type":.clinical_trial_type,"date_of_first_enrollment":"","RecruitmentStatus":.trial_status,"completionDate":"" ,"PrimarySponsors":{"name": [],   "person": [],"address":[]},"SecondarySponsors":{"name": [],   "person": [],"address":[]}, "Contact":[], "registry": "EUCTRN", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
 
 done
 
