@@ -119,7 +119,7 @@ if [[ ${download} == 'yes' ]]; then
        gen_json  ${html_dir}/studies/analysis/${f} ${html_dir}/studies/json/
     done
 
-#aws s3 sync  ${html_dir}/studies ${s3_bucket} --delete
+aws s3 sync  ${html_dir}/studies ${s3_bucket} --delete
 fi
 popd
 
