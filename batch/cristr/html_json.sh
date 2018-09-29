@@ -6,10 +6,8 @@ html_dir=${1}
 download=${2:-'no'}
 s3_bucket=${3:-'s3://hsdlc-results/cristr-adapter/studies'}
 context_dir=${4:-'/usr/local/dataintegration'}
-#max_id=${5:-12076}
-max_id=${5:-4000}
+max_id=${5:-12076}
 start_id=${6:-911}
-#start_id=${6:-911}
 
 
 prefix_url="http://cris.nih.go.kr/cris/en/search/search_result_st01.jsp?seq="
@@ -44,45 +42,45 @@ pushd ${context_dir}
 
 if [[ ${download} == 'yes' ]]; then
 
-#    if [ -d ${html_dir}/studies ]; then
-#        rm -rf ${html_dir}/studies
-#    fi
-#    if [ -d ${html_dir}/studies/json ]; then
-#        rm -rf ${html_dir}/studies/json
-#    fi
-#    if [ -d ${html_dir}/studies/analysis ]; then
-#        rm -rf ${html_dir}/studies/analysis
-#    fi
-#
-#
-#    mkdir ${html_dir}/studies
-#    mkdir ${html_dir}/studies/json
-#    mkdir ${html_dir}/studies/analysis
+    if [ -d ${html_dir}/studies ]; then
+        rm -rf ${html_dir}/studies
+    fi
+    if [ -d ${html_dir}/studies/json ]; then
+        rm -rf ${html_dir}/studies/json
+    fi
+    if [ -d ${html_dir}/studies/analysis ]; then
+        rm -rf ${html_dir}/studies/analysis
+    fi
 
-#    for ((f=${start_id};f<=${max_id};f+=1))
-#    do
-#        download_trial ${f}
-#    done
-#
-#   ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
-#
-#   do
-#        Delete_Invalid_files ${html_dir}/studies/${f}
-#   done
-#
-#
-#    ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
-#
-#    do
-#        analyse_file ${html_dir}/studies/${f} ${html_dir}/studies/analysis/${f}
-#    done
+
+    mkdir ${html_dir}/studies
+    mkdir ${html_dir}/studies/json
+    mkdir ${html_dir}/studies/analysis
+
+    for ((f=${start_id};f<=${max_id};f+=1))
+    do
+        download_trial ${f}
+    done
+
+   ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
+
+   do
+        Delete_Invalid_files ${html_dir}/studies/${f}
+   done
+
+
+    ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
+
+    do
+        analyse_file ${html_dir}/studies/${f} ${html_dir}/studies/analysis/${f}
+    done
 
     ls ${html_dir}/studies/analysis | grep -oE "[^ ]*\.html" | while read f
     do
        gen_json  ${html_dir}/studies/analysis/${f} ${html_dir}/studies/json/
     done
 
-#aws s3 sync  ${html_dir}/studies ${s3_bucket} --delete
+aws s3 sync  ${html_dir}/studies ${s3_bucket} --delete
 fi
 popd
 
