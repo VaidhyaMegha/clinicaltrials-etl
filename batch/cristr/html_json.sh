@@ -76,11 +76,11 @@ if [[ ${download} == 'yes' ]]; then
         analyse_file ${html_dir}/studies/${f} ${html_dir}/studies/analysis/${f}
     done
 
-    ls ${html_dir}/studies/analysis | grep -oE "[^ ]*\.tmp" | while read f
-
-    do
-        Delete_Temp_files ${html_dir}/studies/analysis/${f}
-    done
+#    ls ${html_dir}/studies/analysis | grep -oE "[^ ]*\.tmp" | while read f
+#
+#    do
+#        Delete_Temp_files ${html_dir}/studies/analysis/${f}
+#    done
 
     ls ${html_dir}/studies/analysis | grep -oE "[^ ]*\.html" | while read f
     do
