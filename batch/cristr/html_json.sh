@@ -7,7 +7,7 @@ download=${2:-'no'}
 s3_bucket=${3:-'s3://hsdlc-results/cristr-adapter/studies'}
 context_dir=${4:-'/usr/local/dataintegration'}
 #max_id=${5:-12076}
-max_id=${5:-100}
+max_id=${5:-1000}
 start_id=${6:-911}
 
 
