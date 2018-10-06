@@ -6,7 +6,7 @@ html_dir=${1}
 download=${2:-'no'}
 s3_bucket=${3:-'s3://hsdlc-results/cristr-adapter/studies'}
 context_dir=${4:-'/usr/local/dataintegration'}
-max_id=${5:-4000}
+max_id=${5:-930}
 start_id=${6:-911}
 
 
@@ -30,8 +30,10 @@ function analyse_file() {
 }
 
 function gen_json() {
-
-cat ${1} | pup 'tbody json{}' | grep '"text"' | node --max-old-space-size=8192 ./html_json.js | jq -c '.' >> ${2}/studies.json
+g=${1//.html/}
+cat ${1} | pup 'tbody json{}' | grep '"text"' | node --max-old-space-size=8192 ./html_json.js | jq -c '.' > ${2}/${g}_1.json
+echo '{"SEQ_NUMBER" :{g}}' | jq -s add > ${2}/${g}_2.json
+jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json  > ${2}/studies1.json
 
 }
 
@@ -78,6 +80,7 @@ if [[ ${download} == 'yes' ]]; then
 
     ls ${html_dir}/studies/analysis | grep -oE "[^ ]*\.html" | while read f
     do
+
        gen_json  ${html_dir}/studies/analysis/${f} ${html_dir}/studies/json/
     done
 

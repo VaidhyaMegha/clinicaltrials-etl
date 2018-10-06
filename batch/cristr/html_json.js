@@ -23,7 +23,7 @@ let i = 0;
 {
 // check for the current line and move to next line. Check if next line is a 'key' if not it must be a value.
 if (is(study, i, '"CRIS Registration Number"') && !is(study, ++i, '"Unique Protocol ID"'))
-finalRecord['cris_registration_number'] = cleanLine(study, i++);
+    finalRecord['cris_registration_number'] = cleanLine(study, i++);
 
 if (is(study, i, '"Unique Protocol ID"') && !is(study, ++i, '"Public/Brief Title"'))
 finalRecord['unique_protocol_id'] = cleanLine(study, i++);
