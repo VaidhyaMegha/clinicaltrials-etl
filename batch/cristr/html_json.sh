@@ -6,8 +6,7 @@ html_dir=${1}
 download=${2:-'no'}
 s3_bucket=${3:-'s3://hsdlc-results/cristr-adapter/studies'}
 context_dir=${4:-'/usr/local/dataintegration'}
-#max_id=${5:-12076}
-max_id=${5:-1000}
+max_id=${5:-4000}
 start_id=${6:-911}
 
 
@@ -18,7 +17,7 @@ function download_trial(){
     g=${1}
 
     wget  -q ${prefix_url}${g}${suffix_url} \
-         -O ${html_dir}/studies/${g}.html  || true 
+         -O ${html_dir}/studies/${g}.html  || true
 }
 
 function Delete_Invalid_files() {
@@ -76,11 +75,6 @@ if [[ ${download} == 'yes' ]]; then
         analyse_file ${html_dir}/studies/${f} ${html_dir}/studies/analysis/${f}
     done
 
-#    ls ${html_dir}/studies/analysis | grep -oE "[^ ]*\.tmp" | while read f
-#
-#    do
-#        Delete_Temp_files ${html_dir}/studies/analysis/${f}
-#    done
 
     ls ${html_dir}/studies/analysis | grep -oE "[^ ]*\.html" | while read f
     do
