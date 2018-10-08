@@ -34,7 +34,7 @@ finalRecord['public_or_brief_title'] = cleanLine(study, i++);
 if (is(study, i, '"Scientific Title"') && !is(study, ++i, '"Acronym"'))
 finalRecord['scientific_title'] = cleanLine(study, i++);
 
-if (is(study, i, '"Acronym"') && !is(study, ++i, '"MFDS Regulated Study"'))title:string
+if (is(study, i, '"Acronym"') && !is(study, ++i, '"MFDS Regulated Study"'))
 finalRecord['acronym'] = cleanLine(study, i++);
 
 if (is(study, i, '"MFDS Regulated Study"') && !is(study, ++i, '"IND/IDE Protocol"'))
