@@ -35,7 +35,8 @@ cat ${html_dir}/studies/analysis/${g}.html | pup 'tbody json{}' | grep '"text"' 
 echo '{"SEQ_NUMBER" :'${g}'}' | jq -s add > ${2}/${g}_2.json
 jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json  >> ${2}/studies.json
 
-
+  rm ${2}/${g}_1.json
+  rm ${2}/${g}_2.json
 }
 
 source ~/.gvm/scripts/gvm
