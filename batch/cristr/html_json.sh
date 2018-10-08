@@ -45,38 +45,38 @@ pushd ${context_dir}
 
 if [[ ${download} == 'yes' ]]; then
 
-    if [ -d ${html_dir}/studies ]; then
-        rm -rf ${html_dir}/studies
-    fi
-    if [ -d ${html_dir}/studies/json ]; then
-        rm -rf ${html_dir}/studies/json
-    fi
-    if [ -d ${html_dir}/studies/analysis ]; then
-        rm -rf ${html_dir}/studies/analysis
-    fi
+#    if [ -d ${html_dir}/studies ]; then
+#        rm -rf ${html_dir}/studies
+#    fi
+#    if [ -d ${html_dir}/studies/json ]; then
+#        rm -rf ${html_dir}/studies/json
+#    fi
+#    if [ -d ${html_dir}/studies/analysis ]; then
+#        rm -rf ${html_dir}/studies/analysis
+#    fi
+#
+#
+#    mkdir ${html_dir}/studies
+#    mkdir ${html_dir}/studies/json
+#    mkdir ${html_dir}/studies/analysis
+
+#    for ((f=${start_id};f<=${max_id};f+=1))
+#    do
+#        download_trial ${f}
+#    done
+
+#   ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
+#
+#   do
+#        Delete_Invalid_files ${html_dir}/studies/${f}
+#   done
 
 
-    mkdir ${html_dir}/studies
-    mkdir ${html_dir}/studies/json
-    mkdir ${html_dir}/studies/analysis
-
-    for ((f=${start_id};f<=${max_id};f+=1))
-    do
-        download_trial ${f}
-    done
-
-   ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
-
-   do
-        Delete_Invalid_files ${html_dir}/studies/${f}
-   done
-
-
-    ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
-
-    do
-        analyse_file ${html_dir}/studies/${f} ${html_dir}/studies/analysis/${f}
-    done
+#    ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
+#
+#    do
+#        analyse_file ${html_dir}/studies/${f} ${html_dir}/studies/analysis/${f}
+#    done
 
 
     ls ${html_dir}/studies/analysis | grep -oE "[^ ]*\.html" | while read f

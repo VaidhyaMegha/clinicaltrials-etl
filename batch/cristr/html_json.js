@@ -34,7 +34,7 @@ finalRecord['public_or_brief_title'] = cleanLine(study, i++);
 if (is(study, i, '"Scientific Title"') && !is(study, ++i, '"Acronym"'))
 finalRecord['scientific_title'] = cleanLine(study, i++);
 
-if (is(study, i, '"Acronym"') && !is(study, ++i, '"MFDS Regulated Study"'))
+if (is(study, i, '"Acronym"') && !is(study, ++i, '"MFDS Regulated Study"'))title:string
 finalRecord['acronym'] = cleanLine(study, i++);
 
 if (is(study, i, '"MFDS Regulated Study"') && !is(study, ++i, '"IND/IDE Protocol"'))
@@ -335,7 +335,7 @@ if (is(study, i, '"Cohort/Group Number"') && !is(study, ++i, '"Cohort/ Group 1"'
 finalRecord['Cohort_GroupNumber'] = cleanLine(study, i++);
 
 if (is(study, i++, "Cohort/ Group 1")) {
-group = [];
+Cohortgroup = [];
 while (!is(study, i, '"Biospecimen Collection')) {
 temp = {};
 if (is(study, i, '"Cohort/ Group Label"') && !is(study, ++i, '"Group Description"'))
@@ -345,13 +345,13 @@ if (is(study, i, '"Group Description"') && !(is(study, ++i, '"Biospecimen Collec
 temp['Group_description'] = cleanLine(study, i++);
 // If its not the end of the array of objects move one more line to allow for object header.
 }
-group.push(temp);
+Cohortgroup.push(temp);
 if(!(is(study, i, '"Biospecimen Collection'))) {
 i++;
 }
 
 }
-finalRecord['group'] = group;
+finalRecord['Cohortgroup'] = Cohortgroup;
 }
 }
 
