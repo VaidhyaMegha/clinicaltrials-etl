@@ -39,8 +39,8 @@ jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json  >> ${2}/studies.json
   rm ${2}/${g}_2.json
 }
 
-source ~/.gvm/scripts/gvm
-gvm use "go1.4"
+#source ~/.gvm/scripts/gvm
+#gvm use "go1.4"
 
 pushd ${context_dir}
 
