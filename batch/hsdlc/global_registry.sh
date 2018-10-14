@@ -10,15 +10,16 @@ s3_actrn_bucket=${6:-'s3://hsdlc-results/actrn-adapter/'}
 s3_euctrn_bucket=${7:-'s3://hsdlc-results/euctrn-adapter/'}
 s3_irctn_bucket=${8:-'s3://hsdlc-results/irctn-adapter/'}
 s3_jprn_bucket=${9:-'s3://hsdlc-results/jprn-adapter/'}
-s3_brtr_bucket=${9:-'s3://hsdlc-results/brtr-adapter/'}
-s3_ntr_bucket=${9:-'s3://hsdlc-results/ntr-adapter/studies/'}
-s3_cubct_bucket=${9:-'s3://hsdlc-results/cubct-adapter/studies/'}
-s3_perct_bucket=${9:-'s3://hsdlc-results/perct-adapter/studies/'}
-s3_slctr_bucket=${9:-'s3://hsdlc-results/slctr-adapter/studies/'}
-s3_tctr_bucket=${9:-'s3://hsdlc-results/tctr-adapter/studies/'}
-s3_isrctn_bucket=${9:-'s3://hsdlc-results/isrctn-adapter/'}
-s3_utdm_bucket=${10:-'s3://hsdlc-results/utdm-adapter/'}
-context_dir=${11:-'/usr/local/dataintegration'}
+s3_brtr_bucket=${10:-'s3://hsdlc-results/brtr-adapter/'}
+s3_ntr_bucket=${11:-'s3://hsdlc-results/ntr-adapter/studies/'}
+s3_cubct_bucket=${12:-'s3://hsdlc-results/cubct-adapter/studies/'}
+s3_perct_bucket=${13:-'s3://hsdlc-results/perct-adapter/studies/'}
+s3_slctr_bucket=${14:-'s3://hsdlc-results/slctr-adapter/studies/'}
+s3_tctr_bucket=${15:-'s3://hsdlc-results/tctr-adapter/studies/'}
+s3_isrctn_bucket=${16:-'s3://hsdlc-results/isrctn-adapter/'}
+s3_cristr_bucket=${17:-'s3://hsdlc-results/cristr-adapter/studies/'}
+s3_utdm_bucket=${18:-'s3://hsdlc-results/utdm-adapter/'}
+context_dir=${19:-'/usr/local/dataintegration'}
 
 if [[ ${download} == 'yes' ]]; then
   if [ -d ${html_dir}ct ]; then
@@ -75,6 +76,10 @@ if [[ ${download} == 'yes' ]]; then
 
   if [ -d ${html_dir}tctr ]; then
         rm -rf ${html_dir}tctr
+  fi
+
+  if [ -d ${html_dir}cristr ]; then
+        rm -rf ${html_dir}cristr
   fi
 
   if [ -d ${html_dir}output ]; then
@@ -137,6 +142,10 @@ if [[ ${download} == 'yes' ]]; then
     mkdir ${html_dir}tctr/studies
     mkdir ${html_dir}tctr/studies/json
 
+    mkdir ${html_dir}cristr
+    mkdir ${html_dir}cristr/studies
+    mkdir ${html_dir}cristr/studies/json
+
     mkdir ${html_dir}output
     mkdir ${html_dir}output/json
 
@@ -154,6 +163,7 @@ if [[ ${download} == 'yes' ]]; then
     aws s3 cp ${s3_slctr_bucket}json ${html_dir}slctr/studies/json --recursive
     aws s3 cp ${s3_isrctn_bucket}json ${html_dir}isrctn/studies/json --recursive
     aws s3 cp ${s3_tctr_bucket}json ${html_dir}tctr/studies/json --recursive
+    aws s3 cp ${s3_cristr_bucket}json ${html_dir}cristr/studies/json --recursive
 fi
 #########################    CT    ######################################
 
@@ -320,5 +330,19 @@ done
   if [ -d ${html_dir}isrctn ]; then
         rm -rf ${html_dir}isrctn
   fi
+
+#########################   CRISTR   #####################################
+find ${html_dir}cristr/studies/json/ -type f -name "*.json"  | while read f
+do
+
+jq -c '{"trialid":.cris_registration_number,"secondary_id":[.Secondary_Id],"Date_of_Registration":"","Public_Title":.public_or_brief_title,"Scientific_Title":.scientific_title,"study_type":.study_type,"date_of_first_enrollment":"","RecruitmentStatus":.sites[].recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [.sponsor_organisation[].organization_name],   "person": [],"address":[]},"SecondarySponsors":{"name": [],   "person": [],"address":[]}, "Contact":[], "registry": "CRISTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+
+done
+
+
+  if [ -d ${html_dir}isrctn ]; then
+        rm -rf ${html_dir}isrctn
+  fi
+
 
 aws s3 sync ${html_dir}/output/ ${s3_utdm_bucket}  --delete
