@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/contacts.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/deviceSizes.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/devices.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/gmdnTerms.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/identifiers.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/premarketSubmissions.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/productCodes.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/sterilizationMethodTypes.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/adapters/bulk_dcm_to_json.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/summary_statistics.sql" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/summary_statistics.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -122,67 +116,49 @@
     <session id="-1705654160">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="SQL" value="204" />
+          <entry key="Bash" value="4" />
+          <entry key="SQL" value="229" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="sql" value="9" />
+          <entry key="adapters" value="1" />
+          <entry key="js" value="1" />
+          <entry key="sh" value="1" />
+          <entry key="sql" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="SQL" value="9" />
+          <entry key="Bash" value="1" />
+          <entry key="JavaScript" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="SQL" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="sql" value="204" />
+          <entry key="sh" value="4" />
+          <entry key="sql" value="229" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch/nl_reg/html_json.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="32" column="109" selection-start-line="32" selection-start-column="109" selection-end-line="32" selection-end-column="109" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/brtr_ddl.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="8" lean-forward="true" selection-end-line="19" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/contacts.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="1" selection-end-line="12" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/devices.sql">
           <provider selected="true" editor-type-id="text-editor">
@@ -196,7 +172,7 @@
         <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/deviceSizes.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -214,7 +190,7 @@
         <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/sterilizationMethodTypes.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="10" column="1" lean-forward="true" selection-end-line="10" selection-end-column="1" />
+              <caret line="10" column="1" selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -228,7 +204,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/gmdnTerms.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
@@ -238,10 +214,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch/adapters/bulk_dcm_to_json.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/analytics/summary_statistics.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="784">
+              <caret line="55" selection-start-line="55" selection-end-line="56" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch/tctr/etl/xml_json.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/premarketSubmissions.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="5" column="20" lean-forward="true" selection-end-line="11" selection-end-column="1" />
+              <caret line="5" column="20" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -259,7 +262,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ctd</find>
       <find>i++]</find>
       <find>&amp;&amp;</find>
       <find>,&quot;</find>
@@ -289,6 +291,7 @@
       <find>20</find>
       <find>|</find>
       <find>\|</find>
+      <find>xml2</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;:&quot;&quot;,\n</replace>
@@ -325,8 +328,8 @@
     <dirStrings>
       <dir>$PROJECT_DIR$/scripts/athena</dir>
       <dir>$PROJECT_DIR$/snippets</dir>
-      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/snippets/etl/node_modules/xml2json/test/fixtures</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -335,7 +338,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/batch/chictr/.bashrc" />
         <option value="$PROJECT_DIR$/batch/chictr/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/irct/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/ct/xml_json.sh" />
@@ -373,7 +375,6 @@
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/countries_ddl.sql" />
         <option value="$PROJECT_DIR$/snippets/country_lat_long.csv" />
         <option value="$PROJECT_DIR$/snippets/registry_counts_by_year.csv" />
-        <option value="$PROJECT_DIR$/analytics/summary_statistics.sql" />
         <option value="$PROJECT_DIR$/batch/discover/links.sh" />
         <option value="$PROJECT_DIR$/batch/discover/links.csv" />
         <option value="$PROJECT_DIR$/batch/nl_reg/html_json.sh" />
@@ -386,6 +387,8 @@
         <option value="$PROJECT_DIR$/scripts/athena/vm_devices/sterilizationMethodTypes.sql" />
         <option value="$PROJECT_DIR$/scripts/athena/vm_devices/productCodes.sql" />
         <option value="$PROJECT_DIR$/scripts/athena/vm_devices/gmdnTerms.sql" />
+        <option value="$PROJECT_DIR$/batch/adapters/bulk_dcm_to_json.sh" />
+        <option value="$PROJECT_DIR$/analytics/summary_statistics.sql" />
       </list>
     </option>
   </component>
@@ -404,22 +407,14 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/snippets/etl/node_modules" />
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/batch/perctr/etl/package.json" />
-      <path value="$PROJECT_DIR$/batch/tctr/etl/package.json" />
-      <path value="$PROJECT_DIR$/snippets/etl/package.json" />
-    </packageJsonPaths>
-  </component>
   <component name="PhpServers">
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="width" value="1600" />
+    <option name="height" value="832" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -427,6 +422,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -447,6 +443,17 @@
             <path>
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="batch" type="462c0819:PsiDirectoryNode" />
+              <item name="adapters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="ctd-spa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -460,14 +467,13 @@
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="athena" type="462c0819:PsiDirectoryNode" />
-              <item name="vm_devices" type="462c0819:PsiDirectoryNode" />
+              <item name="hsdlc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -475,12 +481,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/datasets/datainsights-in/data.gov.in/web-crawler/data.gov.in.html" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539445539736" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539942215254" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQl" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 2.7.12 (/usr/bin/python)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/media/mahalaxmi/My Passport/DigitalLife/OM_Gayatri/Sandeep_Mahalaxmi/MyWork/Life6/projects/DA_Serverless" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -489,19 +495,19 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/batch/EUCTRN/Dockerfile" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scripts/athena/vm_devices" />
-      <recent name="$PROJECT_DIR$/scripts/athena/hsdlc" />
-      <recent name="$PROJECT_DIR$/batch/discover" />
-      <recent name="$PROJECT_DIR$/batch/cristr" />
-      <recent name="$PROJECT_DIR$/batch" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scripts/athena" />
       <recent name="$PROJECT_DIR$/snippets/etl" />
       <recent name="$PROJECT_DIR$/batch/EUCTRN" />
       <recent name="$PROJECT_DIR$/batch/actrn/htmls" />
       <recent name="$PROJECT_DIR$/batch/ctri/htmls" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts/athena/vm_devices" />
+      <recent name="$PROJECT_DIR$/scripts/athena/hsdlc" />
+      <recent name="$PROJECT_DIR$/batch/discover" />
+      <recent name="$PROJECT_DIR$/batch/cristr" />
+      <recent name="$PROJECT_DIR$/batch" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -929,7 +935,10 @@
       <workItem from="1537831797425" duration="1160000" />
       <workItem from="1537852291361" duration="9754000" />
       <workItem from="1538210913251" duration="1204000" />
-      <workItem from="1539443637208" duration="1941000" />
+      <workItem from="1539443637208" duration="2022000" />
+      <workItem from="1539879968172" duration="2052000" />
+      <workItem from="1539942267426" duration="357000" />
+      <workItem from="1540574037155" duration="4044000" />
     </task>
     <servers />
   </component>
@@ -939,12 +948,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1128136000" />
+    <option name="totallyTimeSpent" value="1134670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989754" visible="true" weight="0.26147044" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989754" visible="true" weight="0.2714207" />
       <window_info id="Structure" order="1" sideWeight="0.5010246" side_tool="true" weight="0.20485175" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -972,6 +981,7 @@
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5002764" side_tool="true" weight="0.3294979" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" weight="0.32991803" />
+      <window_info anchor="bottom" id="AWS Tail" order="16" />
       <window_info anchor="right" id="Connector for AWS Lambda" order="0" side_tool="true" weight="0.32946378" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -1085,24 +1095,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/snippets/etl/2006.json" />
-    <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/etl/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret selection-end-column="83" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/snippets/etl/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1236,13 +1228,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/snippets/country_lat_long.csv" />
-    <entry file="file://$PROJECT_DIR$/analytics/summary_statistics.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/snippets/registry_counts_by_year.tsv">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1293,7 +1278,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/nl_reg/html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
+        <state relative-caret-position="576">
           <caret line="32" column="109" selection-start-line="32" selection-start-column="109" selection-end-line="32" selection-end-column="109" />
         </state>
       </provider>
@@ -1301,10 +1286,11 @@
     <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/brtr_ddl.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="19" column="8" lean-forward="true" selection-end-line="19" selection-end-column="8" />
+          <caret line="19" column="8" selection-end-line="19" selection-end-column="8" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/adapters" />
     <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/contacts.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1319,17 +1305,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/premarketSubmissions.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="20" lean-forward="true" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/deviceSizes.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1343,7 +1322,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/sterilizationMethodTypes.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="10" column="1" lean-forward="true" selection-end-line="10" selection-end-column="1" />
+          <caret line="10" column="1" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1358,6 +1337,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="26" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/tctr/etl/xml_json.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/premarketSubmissions.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="20" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/adapters/bulk_dcm_to_json.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/summary_statistics.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="55" selection-start-line="55" selection-end-line="56" selection-end-column="78" />
         </state>
       </provider>
     </entry>
