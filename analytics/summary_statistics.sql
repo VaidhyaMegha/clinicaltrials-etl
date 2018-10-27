@@ -53,5 +53,5 @@ athena --db hsdlc --execute " select p.*, latitude, longitude from ( select coun
         --output-format TSV --region 'us-east-1' > registry_counts_by_year.tsv
 
 
-athena --db hsdlc --execute " select count(1), registry from global_registries group by registry;" \
+athena --db hsdlc --execute " select count(1) as cnt, registry from global_registries group by registry order by cnt desc;" \
         --output-format TSV --region 'us-east-1' > trial_count_by_registry.tsv
