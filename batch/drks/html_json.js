@@ -80,21 +80,32 @@ while (!is(study, i, '"Health Condition or Problem studied"')) {
       }
     finalRecord['SecondaryIds'] = temp;
 }
-
 if (is(study, i++, "Health Condition or Problem studied")) {
 HealthConditionProblemStudied = [];temp={};
-
+if (cleanLine(study, i) == "[---]*" )
+       {
+        finalRecord['HealthConditionProblemStudied'] = temp;
+        i++;
+       }
+else
+{
 while (!is(study, i, '"Interventions/Observational Groups"')) {
        temp[cleanLine(study, i)] = cleanLine(study, ++i);
               i++;
        }
     finalRecord['HealthConditionProblemStudied'] = temp;
 }
-
+}
 if (is(study, i++, "Interventions/Observational Groups")) {
 Interventions_Observational = [];temp={};
+if (cleanLine(study, i) == "[---]*" )
+       {
+        finalRecord['Interventions_Observational'] = temp;
+        i++;
+       }
+else
+{
 while (!is(study, i, '"Characteristics"')) {
-        if (cleanLine(study, i++) == '[---]*') break;
         temp[cleanLine(study, i)] = cleanLine(study, ++i);
              if (is(study, i, '"Characteristics"'))  {
              break;
@@ -102,7 +113,7 @@ while (!is(study, i, '"Characteristics"')) {
          }
     finalRecord['Interventions_Observational'] = temp;
 }
-
+}
 if (is(study, i++, "Characteristics")) {
 Interventions_Observational = [];temp={};
 while (!is(study, i, '"Primary Outcome"')) {
@@ -130,11 +141,19 @@ while (!is(study, i, '"Countries of Recruitment"')) {
 
 if (is(study, i++, "Countries of Recruitment")) {
 CountriesOfRecruitment = [];temp={};
+if (cleanLine(study, i) == "[---]*" )
+       {
+        finalRecord['Interventions_Observational'] = temp;
+        i++;
+       }
+else
+{
 while (!is(study, i, '"Locations of Recruitment"')) {
         temp[cleanLine(study, i)] = cleanLine(study, ++i);
                      i++;
          }
     finalRecord['CountriesOfRecruitment'] = temp;
+}
 }
 
 if (is(study, i++, "Locations of Recruitment")) {
@@ -241,10 +260,12 @@ while (!is(study, i, '"Telephone:"')) {
 
 if (is(study, i++, "Sources of Monetary or Material Support")) {
 SourceOfMonetaryMaterialSupp = [];temp ={};ScientficQueryAddressAdd=[];PublicQueryAddressAdd=[];
-while (!is(study, i, '"Status"')){
+
+while (is(study, i, '"Status"')){
+ if ((is(study, i, '"[---]*"')) && (cleanLine(study, ++i) === 'Status') ) break;
  tempsc ={};tempsec=[];
 while (!is(study, i, '"Telephone:"')) {
-         tempsec.push(cleanLine(study, ++i));
+         tempsec.push(cleanLine(study, i++));
          }
         tempsc["Address"] = tempsec;
         if (is(study, i, '"Telephone:"') && !is(study, ++i, 'Fax:"'))
@@ -253,14 +274,17 @@ while (!is(study, i, '"Telephone:"')) {
                         tempsc['Fax'] = cleanLine(study, i++);
         if (is(study, i, '"E-mail:"') && !is(study, ++i, 'URL:"'))
                         tempsc['Email'] = cleanLine(study, i++);
-        if (is(study, i, '"URL:"') && !is(study, ++i, 'Contact for Scientific Queries"'))
+        if (is(study, i, '"URL:"') && !is(study, ++i, '"Status"'))
                         tempsc['Url'] = cleanLine(study, i++);
+
         SourceOfMonetaryMaterialSupp.push(tempsc);
+
 }
      finalRecord['SourceOfMonetaryMaterialSupp'] = SourceOfMonetaryMaterialSupp;
+
 }
 
-while (!is(study, i++, '"Trial Publications, Results and other Documents"'))
+if (is(study, i++, "Status"))
 {
 temp={};
 if (is(study, i, '"Recruitment Status:"') && !is(study, ++i, 'Study Closing (LPLV):"'))
