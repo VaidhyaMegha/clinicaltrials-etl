@@ -4,21 +4,23 @@ set +H
 
 html_dir=${1}
 download=${2:-'no'}
-max_id=${3:-00016000}
+max_id=${3:-16000}
 s3_bucket=${4:-'s3://hsdlc-results/drk-adapter/studies'}
 context_dir=${5:-'/usr/local/dataintegration'}
+start_id=${6:-1}
 
 prefix_url="https://www.drks.de/drks_web/navigate.do?navigationId=trial.HTML&TRIAL_ID=DRKS"
 suffix_url=""
 
 function download_all_htmls(){
-    for num in {00000001..00016000}
-    do
-#    id=DRKS${i}
-#        i=$(printf "%0*d\n" ${#max_id} $i)
-        wget -q ${prefix_url}$num \
-             -O ${html_dir}/studies/$num.html  || true
-    done
+ for ((num=${start_id};num<=${max_id};num+=1))
+ do
+        num=$( echo '0000000'${num})
+        numlen=${#num}
+        num=${num:${numlen}-8:8}
+        wget -q ${prefix_url}${num} \
+             -O ${html_dir}/studies/${num}.html  || true
+ done
 }
 
 function download_trial(){
