@@ -41,7 +41,7 @@ function Delete_Incomplete_files() {
 
 function gen_json() {
 g=${1//.html/}
-cat ${html_dir}/${g}.html | pup 'div div div div  json{}' | grep  '"text":' | grep -v 'start of 1:' | grep -v 'end of 1:' | node --max-old-space-size=8192 ./html_json.js | jq -c '.' >> ${2}/studies.json
+cat ${html_dir}/studies/${g}.html | pup 'div div div div  json{}' | grep  '"text":' | grep -v 'start of 1:' | grep -v 'end of 1:' | node --max-old-space-size=8192 ./html_json.js | jq -c '.' >> ${2}/studies.json
 }
 
 source ~/.gvm/scripts/gvm
