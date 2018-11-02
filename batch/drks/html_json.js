@@ -261,7 +261,7 @@ while (!is(study, i, '"Telephone:"')) {
 if (is(study, i++, "Sources of Monetary or Material Support")) {
 SourceOfMonetaryMaterialSupp = [];temp ={};ScientficQueryAddressAdd=[];PublicQueryAddressAdd=[];
 
-while (is(study, i, '"Status"')){
+while (!is(study, i, '"Status"')){
  if ((is(study, i, '"[---]*"')) && (cleanLine(study, ++i) === 'Status') ) break;
  tempsc ={};tempsec=[];
 while (!is(study, i, '"Telephone:"')) {
