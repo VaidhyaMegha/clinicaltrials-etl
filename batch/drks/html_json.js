@@ -202,7 +202,7 @@ while (!is(study, i, '"Addresses"')) {
 }
 
 if (is(study, i++, "Addresses")) {
-PrimarySponsorAdd = [];temp ={};ScientficQueryAddressAdd=[];PublicQueryAddressAdd=[];CollaboratorAddressAdd=[];
+PrimarySponsorAdd = [];temp ={};ScientficQueryAddressAdd=[];PublicQueryAddressAdd=[];CollaboratorAddressAdd=[];SecondarySponsorAdd=[];
 while (is(study, i, '"Primary Sponsor"')){
  tempsc ={};tempsec=[];
 while (!is(study, i, '"Telephone:"')) {
@@ -220,6 +220,24 @@ while (!is(study, i, '"Telephone:"')) {
         PrimarySponsorAdd.push(tempsc);
 }
      finalRecord['PrimarySponsorAdd'] = PrimarySponsorAdd;
+
+while (is(study, i, '"Secondary Sponsor"')){
+ tempsc ={};tempsec=[];
+while (!is(study, i, '"Telephone:"')) {
+         tempsec.push(cleanLine(study, ++i));
+         }
+        tempsc["Address"] = tempsec;
+        if (is(study, i, '"Telephone:"') && !is(study, ++i, 'Fax:"'))
+                tempsc['Telephone'] = cleanLine(study, i++);
+        if (is(study, i, '"Fax:"') && !is(study, ++i, 'E-mail:"'))
+                        tempsc['Fax'] = cleanLine(study, i++);
+        if (is(study, i, '"E-mail:"') && !is(study, ++i, 'URL:"'))
+                        tempsc['Email'] = cleanLine(study, i++);
+        if (is(study, i, '"URL:"') && !is(study, ++i, 'Contact for Scientific Queries"'))
+                        tempsc['Url'] = cleanLine(study, i++);
+        SecondarySponsorAdd.push(tempsc);
+}
+     finalRecord['SecondarySponsorAdd'] = SecondarySponsorAdd;
 
 
 while (is(study, i, '"Collaborator, Other Address"')){
