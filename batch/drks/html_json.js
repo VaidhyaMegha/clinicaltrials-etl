@@ -239,6 +239,24 @@ while (!is(study, i, '"Telephone:"')) {
 }
 finalRecord['ScientficQueryAddressAdd'] = ScientficQueryAddressAdd;
 
+while (is(study, i, '"Collaborator, Other Address"')){
+ tempcoll ={};tempcolla=[];
+while (!is(study, i, '"Telephone:"')) {
+         tempcolla.push(cleanLine(study, ++i));
+         }
+        tempcoll["Address"] = tempcolla;
+        if (is(study, i, '"Telephone:"') && !is(study, ++i, 'Fax:"'))
+                tempcoll['Telephone'] = cleanLine(study, i++);
+        if (is(study, i, '"Fax:"') && !is(study, ++i, 'E-mail:"'))
+                        tempcoll['Fax'] = cleanLine(study, i++);
+        if (is(study, i, '"E-mail:"') && !is(study, ++i, 'URL:"'))
+                        tempcoll['Email'] = cleanLine(study, i++);
+        if (is(study, i, '"URL:"') && !is(study, ++i, 'Contact for Public Queries"'))
+                        tempcoll['Url'] = cleanLine(study, i++);
+        CollaboratorAddressAdd.push(tempcoll);
+}
+finalRecord['CollaboratorAddressAdd'] = CollaboratorAddressAdd;
+
 while (is(study, i, '"Contact for Public Queries"')){
  temppb ={};temppub=[];
 while (!is(study, i, '"Telephone:"')) {
