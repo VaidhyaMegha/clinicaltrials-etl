@@ -4,7 +4,7 @@ set +H
 
 html_dir=${1}
 download=${2:-'no'}
-max_id=${3:-16000}
+max_id=${3:-300}
 s3_bucket=${4:-'s3://hsdlc-results/drk-adapter/studies'}
 context_dir=${5:-'/usr/local/dataintegration'}
 start_id=${6:-1}
