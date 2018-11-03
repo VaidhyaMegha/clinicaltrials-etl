@@ -32,9 +32,6 @@ function download_trial(){
 
 function Delete_Invalid_files() {
   grep -lrIZ 'could not have been found' ${1} | xargs -0 rm -f --
-}
-
-function Delete_Incomplete_files() {
   grep -lrIZ 'inadvertently' ${1} | xargs -0 rm -f --
 }
 
@@ -61,14 +58,13 @@ if [[ ${download} == 'yes' ]]; then
         rm -rf ${html_dir}/studies/analysis
     fi
 
-
     mkdir ${html_dir}/studies
     mkdir ${html_dir}/studies/json
     mkdir ${html_dir}/studies/analysis
 
-
-
     download_all_htmls
+
+fi
 
     ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
     do
@@ -77,23 +73,10 @@ if [[ ${download} == 'yes' ]]; then
 
     ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
     do
-        Delete_Incomplete_files ${html_dir}/${f}
-    done
-
-
-#    ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
-#
-#    do
-#        analyse_file ${html_dir}/studies/${f} ${html_dir}/studies/analysis/${f}
-#    done
-
-
-    ls ${html_dir}/studies | grep -oE "[^ ]*\.html" | while read f
-    do
        gen_json  ${f} ${html_dir}/studies/json
     done
-#
+
 aws s3 sync  ${html_dir}/studies ${s3_bucket} --delete
-fi
+
 popd
 
