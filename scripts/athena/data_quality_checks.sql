@@ -1,0 +1,14 @@
+select count(distinct id_info.nct_id) from ct_studies;
+select count(distinct ctri_number) from ctri_studies;
+select count(distinct slctr_registration_number) from slctr_studies;
+select count(distinct main.trial_id) from brtr_studies;
+select count(distinct main.trial_id) from tctr_studies;
+select count(distinct Registration_number) from chictr_studies;
+select count(distinct cris_registration_number) from cris_studies;
+select count(distinct UniqueIDNumber) from cubct_studies;
+select count(distinct DRKS_ID) from drks_studies;
+select count(distinct eudract_number) from euctrn_studies;
+select count(distinct IRCT_RegistrationNumber) from irct_studies;
+select count(distinct IRCTN_NUMBER) from isrctn_studies;
+select count(distinct Unique_ID_issued_by_UMIN) from jprn_studies;
+select count(distinct NTR_Number) from ntr_studies;
