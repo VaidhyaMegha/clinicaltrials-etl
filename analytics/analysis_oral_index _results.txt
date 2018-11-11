@@ -1,0 +1,33 @@
+cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("PMI")) | .trialid[0]' >> ../analytics/PMI_Trials.txt
+cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("RMNPI")) | .trialid[0]' >> ../analytics/RMNPI_Trials.txt
+cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("TMQHI")) | .trialid[0]' >> ../analytics/TMQHI_Trials.txt
+cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("MGI")) | .trialid[0]' >> ../analytics/MGI_Trials.txt
+cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("L-SGI")) | .trialid[0]' >> ../analytics/L-SGI_Trials.txt
+cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("GSI")) | .trialid[0]' >> ../analytics/GSI_Trials.txt
+
+
+
+$ cat oral_index_trials_full.txt | jq -c '.response.docs | length'
+9882
+$ cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("PMI"))' | wc -l
+1811
+$ cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("RMNPI"))' | wc -l
+4
+$ cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("TMQHI"))' | wc -l
+0
+$ cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("MGI"))' | wc -l
+43
+$ cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("L-SGI"))' | wc -l
+0
+$ cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("GSI"))' | wc -l
+11
+$ cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("plaque"))' | wc -l
+929
+$ cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("plaque index"))' | wc -l
+401
+$ cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("proximal plaque index"))' | wc -l
+4
+$ cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("marginal plaque index"))' | wc -l
+0
+$ cat oral_index_trials_full.txt | jq -c '.response.docs[] | select(.source_json[0] | contains("quigley"))' | wc -l
+1
