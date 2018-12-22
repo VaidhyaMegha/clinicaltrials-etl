@@ -1,0 +1,1129 @@
+select *,primarydi as device_id from "vm_devices"."fda_devices" where primarydi = 'B167T740043410'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT01063244%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT01063244') or upper(array_join(r.secondary_id, ',')) like  '%NCT01063244%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT01205568%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT01205568') or upper(array_join(r.secondary_id, ',')) like  '%NCT01205568%'))
+select * from "hsdlc"."jprn_studies" where  unique_id_issued_by_umin = 'UMIN000015353'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00005199' and p_id='NCT0000'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%UMIN000020613%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'UMIN000020613') or upper(array_join(r.secondary_id, ',')) like  '%UMIN000020613%'))
+select * from "hsdlc"."jprn_studies" where  unique_id_issued_by_umin = 'UMIN000020613'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00690040' and p_id='NCT0069'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT03585387') or upper(array_join(r.secondary_id, ',')) like  '%NCT03585387%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT03585387%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03585387' and p_id='NCT0358'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03446755' and p_id='NCT0344'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%UMIN000010328%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'UMIN000010328') or upper(array_join(r.secondary_id, ',')) like  '%UMIN000010328%'))
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'ACTRN12609000917235') or upper(array_join(r.secondary_id, ',')) like  '%ACTRN12609000917235%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%ACTRN12609000917235%'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02237066%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02237066') or upper(array_join(r.secondary_id, ',')) like  '%NCT02237066%'))
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'ACTRN12616000789460') or upper(array_join(r.secondary_id, ',')) like  '%ACTRN12616000789460%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%ACTRN12616000789460%'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02706444%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02706444') or upper(array_join(r.secondary_id, ',')) like  '%NCT02706444%'))
+select * from "hsdlc"."actrn_studies" where  trial_id = 'ACTRN12616000789460'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02237066' and p_id='NCT0223'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02706444' and p_id='NCT0270'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT03036241') or upper(array_join(r.secondary_id, ',')) like  '%NCT03036241%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT03036241%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03036241' and p_id='NCT0303'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT00504036') or upper(array_join(r.secondary_id, ',')) like  '%NCT00504036%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00504036%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01205568' and p_id='NCT0120'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03538236' and p_id='NCT0353'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02117232') or upper(array_join(r.secondary_id, ',')) like  '%NCT02117232%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02117232%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02117232' and p_id='NCT0211'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT01412541') or upper(array_join(r.secondary_id, ',')) like  '%NCT01412541%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT01412541%'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02996318%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02996318') or upper(array_join(r.secondary_id, ',')) like  '%NCT02996318%'))
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02996318' and p_id='NCT0299'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02300454' and p_id='NCT0230'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00445211' and p_id='NCT0044'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01858363' and p_id='NCT0185'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT00451308') or upper(array_join(r.secondary_id, ',')) like  '%NCT00451308%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00451308%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00451308' and p_id='NCT0045'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02694341' and p_id='NCT0269'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT03233048%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT03233048') or upper(array_join(r.secondary_id, ',')) like  '%NCT03233048%'))
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02891018') or upper(array_join(r.secondary_id, ',')) like  '%NCT02891018%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02891018%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03233048' and p_id='NCT0323'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02891018' and p_id='NCT0289'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT01763476') or upper(array_join(r.secondary_id, ',')) like  '%NCT01763476%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT01763476%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02556138') or upper(array_join(r.secondary_id, ',')) like  '%NCT02556138%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02556138%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02556138' and p_id='NCT0255'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%ACTRN12618000510246p%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'ACTRN12618000510246P') or upper(array_join(r.secondary_id, ',')) like  '%ACTRN12618000510246P%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00918229%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT00918229') or upper(array_join(r.secondary_id, ',')) like  '%NCT00918229%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02408822%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02408822') or upper(array_join(r.secondary_id, ',')) like  '%NCT02408822%'))
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02966197') or upper(array_join(r.secondary_id, ',')) like  '%NCT02966197%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02966197%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02966197' and p_id='NCT0296'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT03276871') or upper(array_join(r.secondary_id, ',')) like  '%NCT03276871%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT03276871%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03276871' and p_id='NCT0327'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02958618') or upper(array_join(r.secondary_id, ',')) like  '%NCT02958618%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02958618%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02958618' and p_id='NCT0295'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01175850' and p_id='NCT0117'
+select distinct primarydi as id from "vm_devices"."fda_devices"
+select gmdnptname, count(1) as cnt  from fda_devices d, fda_gmdn_terms g where d.primarydi = g.primarydi group by gmdnptname order by cnt desc
+select gmdn_term, count(1) as cnt  from fda_devices d, fda_gmdn_terms g where d.primarydi = g.primarydi group by gmdn_term order by cnt desc
+select * from ( select *,row_number() over ()  as RN from hsdlc.global_registries gr where  ( array_join(gr.secondary_id, ',') like  '%UMIN%' and gr.trialid like  '%undefined%') or  ( array_join(gr.secondary_id, ',') like  '%undefined%' and gr.trialid like  '%UMIN%')   ) pr where  RN>=1 and RN <=2 order by trialid
+select * from ( select *,row_number() over ()  as RN from hsdlc.global_registries gr where  ( array_join(gr.secondary_id, ',') like  '%20%' and gr.trialid like  '%undefined%') or  ( array_join(gr.secondary_id, ',') like  '%undefined%' and gr.trialid like  '%20%')   ) pr where  RN>=1 and RN <=2 order by trialid
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02395367') or upper(array_join(r.secondary_id, ',')) like  '%NCT02395367%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02395367%'
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT02395367%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT023953%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT0239536%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT02395%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT0239%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT023%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT02%' limit 10
+select * from (select *,row_number() over ()  as RN from "opentrials"."trials" where  identifiers like '%chictr%' ) pr where  RN>=1 and RN <=22 order by id
+select * from (select *,row_number() over ()  as RN from "opentrials"."trials" where  identifiers like '%chictr%' ) pr where  RN>=1 and RN <=22 order by id
+select * from (select *,row_number() over ()  as RN from "opentrials"."trials" where  identifiers like '%euctr%' ) pr where  RN>=1 and RN <=20 order by id
+select * from (select *,row_number() over ()  as RN from "opentrials"."trials" where  identifiers like '%ctri%' ) pr where  RN>=1 and RN <=20 order by id
+select *, UniqueIDNumber as trial_id from "hsdlc"."cubct_studies" where UniqueIDNumber  = 'RPCEC00000001'
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE00000001%' limit 10
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE0000%' limit 10
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE0000%' limit 10
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE000000%' limit 10
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE00000%' limit 10
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE0000000%' limit 10
+select *, UniqueIDNumber as trial_id from "hsdlc"."cubct_studies" where UniqueIDNumber  = 'RPCE00000001'
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE000000%' limit 10
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE0000000%' limit 10
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE000%' limit 10
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE00000%' limit 10
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE0000%' limit 10
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE00000001%' limit 10
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE00%' limit 10
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE0%' limit 10
+select distinct UniqueIDNumber as id from "hsdlc"."cubct_studies" where UniqueIDNumber like '%RPCE%' limit 10
+select *, main.trial_id as trial_id,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."perctr_studies" where main.trial_id  = 'PER-001-95'
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."perctr_studies" where main.trial_id like '%PER_01%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."perctr_studies" where main.trial_id like '%PER_0%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."perctr_studies" where main.trial_id like '%PER_%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."perctr_studies" where main.trial_id like '%RBR-88%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."perctr_studies" where main.trial_id like '%RBR-%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."perctr_studies" where main.trial_id like '%RBR-8%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."perctr_studies" where main.trial_id like '%RBR-88b%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."perctr_studies" where main.trial_id like '%RBR-88bt%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."perctr_studies" where main.trial_id like '%RBR-88btz%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ISRC%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ISRCT%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ISRCTN%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ISRCTN336829%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ISRCTN33%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ISRCTN3%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ISRCTN336%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ISRCTN3368%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ISRCTN3368293%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ISRCTN33682%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%IISCT%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%IISCTR%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%IISC%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ISCT%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ISCTR%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ISCTRN%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ISCTR%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ISCT%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTR%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN12608%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN1%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN126080003963%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN1260800%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN12608000396%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN12%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN126%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN1260%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN126080%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN12608000%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN1260800039%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN126080003%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ACTRN1260800039632%' limit 10
+select * from "hsdlc"."actrn_studies" where  trial_id = 'ACTRN12608000396325'
+select * from "hsdlc"."actrn_studies" where  trial_id = 'ACTRN12608000396325'
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%ACTR%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%RBR-88b%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%RBR-88%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%RBR-%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%RBR-8%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%RBR-88bt%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%RBR-88btz%' limit 10
+select *, main.trial_id as trial_id from "hsdlc"."brtr_studies" where main.trial_id  = 'RBR-88btzp'
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%RBR_88%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%RBR_8%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%RBR_%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN12608000%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN12608000396%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN126080%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTR%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN1%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN126%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN1260%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN1260800%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN12608%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN126080003%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN1260800039632%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN12%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN1260800039%' limit 10
+select distinct main.trial_id as id from "hsdlc"."brtr_studies" where main.trial_id like '%ACTRN126080003963%' limit 10
+select * from "hsdlc"."actrn_studies" where  trial_id = 'ACTRN12608000396325'
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%ACTRN%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%ACTR%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%ISRC%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%ISRCTN3%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%ISRCTN336829%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%ISRCTN33682%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%ISRCTN%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%ISRCT%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%ISRCTN33%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%ISRCTN336%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%ISRCTN3368%' limit 10
+select distinct trial_id as id from "hsdlc"."actrn_studies" where trial_id like '%ISRCTN3368293%' limit 10
+select *, IRCTN_NUMBER as trial_id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER  = 'ISRCTN33682933'
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ISRCTN%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%DRKS0000%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%DRKS%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%DRKS0000000%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%DRKS000000%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%DRKS00000%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%DRKS00%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%DRKS000%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%DRKS0%' limit 10
+select *, drks_id as trial_id from "hsdlc"."drks_studies" where drks_id  = 'DRKS00000001'
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%2004-000007-%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%2004-000%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%2004-%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%2004%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%2004-0%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%2004-00%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%2004-0000%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%2004-00000%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%2004-000007%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%2004-000007-1%' limit 10
+select * from "hsdlc"."euctrn_studies" where eudract_number = '2004-000007-18'
+select distinct eudract_number as id from "hsdlc"."euctrn_studies"  where eudract_number like '%2004_1383%' limit 10
+select distinct eudract_number as id from "hsdlc"."euctrn_studies"  where eudract_number like '%2004_138%' limit 10
+select distinct eudract_number as id from "hsdlc"."euctrn_studies"  where eudract_number like '%2004_13%' limit 10
+select distinct eudract_number as id from "hsdlc"."euctrn_studies"  where eudract_number like '%2004_1%' limit 10
+select distinct eudract_number as id from "hsdlc"."euctrn_studies"  where eudract_number like '%2004_%' limit 10
+select distinct eudract_number as id from "hsdlc"."euctrn_studies"  where eudract_number like '%2004%' limit 10
+select distinct eudract_number as id from "hsdlc"."euctrn_studies"  where eudract_number like '%NTR200%' limit 10
+select distinct eudract_number as id from "hsdlc"."euctrn_studies"  where eudract_number like '%NTR20%' limit 10
+select distinct eudract_number as id from "hsdlc"."euctrn_studies"  where eudract_number like '%NTR2%' limit 10
+select * from "hsdlc"."ntr_studies" where ntr_number = 'NTR2003'
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%NTR2003%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%NTR20%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%NTR200%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%NTR2%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%TCTR20180%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%TCTR2018%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%TCTR201%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%TCTR2018092100%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%TCTR20%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%TCTR2018092%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%TCTR%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%TCTR2%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%TCTR201809%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%TCTR20180921%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%TCTR201809210%' limit 10
+select *, main.trial_id as trial_id,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id  = 'TCTR20180921002'
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR20180921002%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR201809210%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR20180921000%' limit 10
+select *, main.trial_id as trial_id,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id  = 'TCTR201809210002'
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR201809210002%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR2018092100%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR20180921000%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR201809210%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR20180921%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR2018092%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR201809%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR20180%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR20%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR2018%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR201%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR20%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR2%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%TCTR%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%SLCTR/2010%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%SLCTR/201%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%SLCTR/2010/00%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%SLCTR/2%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%SLCT%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%SLCTR%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%SLCTR/%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%SLCTR/20%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%SLCTR/2010/%' limit 10
+select distinct main.trial_id as id ,main.reg_name as reg_name,main.date_registration as registration_date , main.primary_sponsor as primary_sponsor, main.public_title as public_title,main.scientific_title as scientific_title, main.recruitment_status as recruitment_status, main.study_type as study_type ,main.scientific_Acronym as scientific_Acronym, main.date_enrolment as date_of_enrolment, main.target_size as target_size from "hsdlc"."tctr_studies" where main.trial_id like '%SLCTR/2010/0%' limit 10
+select *, slctr_registration_number as trial_id from "hsdlc"."slctr_studies" where slctr_registration_number  = 'SLCTR/2010/004'
+select distinct slctr_registration_number as id from "hsdlc"."slctr_studies" where slctr_registration_number like '%SLCTR/%' limit 10
+select distinct slctr_registration_number as id from "hsdlc"."slctr_studies" where slctr_registration_number like '%SLCTR?%' limit 10
+select distinct slctr_registration_number as id from "hsdlc"."slctr_studies" where slctr_registration_number like '%SLCTR%' limit 10
+select distinct slctr_registration_number as id from "hsdlc"."slctr_studies" where slctr_registration_number like '%SLCT%' limit 10
+select distinct slctr_registration_number as id from "hsdlc"."slctr_studies" where slctr_registration_number like '%UMIN000028%' limit 10
+select distinct slctr_registration_number as id from "hsdlc"."slctr_studies" where slctr_registration_number like '%UMIN0000%' limit 10
+select distinct slctr_registration_number as id from "hsdlc"."slctr_studies" where slctr_registration_number like '%UMIN00002826%' limit 10
+select distinct slctr_registration_number as id from "hsdlc"."slctr_studies" where slctr_registration_number like '%UMIN00%' limit 10
+select distinct slctr_registration_number as id from "hsdlc"."slctr_studies" where slctr_registration_number like '%UMIN0000282%' limit 10
+select distinct slctr_registration_number as id from "hsdlc"."slctr_studies" where slctr_registration_number like '%UMIN00002%' limit 10
+select distinct slctr_registration_number as id from "hsdlc"."slctr_studies" where slctr_registration_number like '%UMIN%' limit 10
+select distinct slctr_registration_number as id from "hsdlc"."slctr_studies" where slctr_registration_number like '%UMIN0%' limit 10
+select distinct slctr_registration_number as id from "hsdlc"."slctr_studies" where slctr_registration_number like '%UMIN000%' limit 10
+select * from "hsdlc"."jprn_studies" where  unique_id_issued_by_umin = 'UMIN000028263'
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%UMIN000%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%UMIN0000%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%UMIN00%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%UMIN0%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%UMIN%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%ChiCTR180001%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%ChiCTR180%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%ChiCTR1800%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%ChiCTR18%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%ChiCT%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%ChiCTR1%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%ChiCTR1800016%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%ChiC%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%ChiCTR18000163%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%ChiCTR%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%ChiCTR18000%' limit 10
+select distinct unique_id_issued_by_umin as id from "hsdlc"."jprn_studies" where unique_id_issued_by_umin like '%ChiCTR180001635%' limit 10
+select * from "hsdlc"."ctri_studies" where ctri_number = 'nt'
+select * from "hsdlc"."chictr_studies" where registration_number = 'ChiCTR1800016350'
+select * from "hsdlc"."chictr_studies" where registration_number = 'ChiCTR1800016350'
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR1800%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR18000171%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR180001713%' limit 10
+select * from "hsdlc"."chictr_studies" where registration_number = 'ChiCTR1800017136'
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR1800017136%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR180001713%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR18000171%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR1800017%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR180001%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR18000%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR1800%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR180%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR18%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR1%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCT%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiCTR%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%ChiC%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%KCT00%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%KCT000%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%KCT0000%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%KCT00000%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%KCT0%' limit 10
+select distinct registration_number as id from "hsdlc"."chictr_studies"  where registration_number like '%KCT000000%' limit 10
+select *,cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number = 'KCT0000008'
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%KCT0000008%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%KCT000000%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%KCT00000%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%KCT000%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%KCT0000%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%KCT0%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%KCT00%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%CRIST%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%CRIST%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%CRISTR%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%CRIS%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT201705%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT2017%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT2017051%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT201705130%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT20170513%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT20%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT201%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT20170%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT2%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT20170513033%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT2017051303%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT201705130339%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT2017051303394%' limit 10
+select distinct cris_registration_number as trial_id from "hsdlc"."cris_studies_view" where cris_registration_number like '%IRCT20170513033941%' limit 10
+select * from "hsdlc"."irct_studies" where irct_registrationnumber = 'IRCT20170513033941N'
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%IRCT20170513033941N2%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%IRCT20170513033941N%' limit 10
+select * from "hsdlc"."irct_studies" where irct_registrationnumber = 'IRCT20170513033941N25'
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/06/%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/20%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/201%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/06%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/0%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/06/00%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/06/0%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/06/0088%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%NCT0232%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02325' and p_id='NCT0232'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT023259%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT0232597%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02325973' and p_id='NCT0232'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT02325%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT0232%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT20%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT201%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051nct3033941%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051nct303394%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051nc%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051nct30%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051nct303%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051nct3%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051nct%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051nct30339%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051nct3033%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051nct3033941N%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT20170%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051nct3033941N2%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT201705%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051n%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051nct3033941N25%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051nc3033941N25%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%IRCT2017051n3033941N25%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'hgfgh' and p_id='hgfgh'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%hgfgh%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%hgfg%' limit 10
+select * from "hsdlc"."irct_studies" where irct_registrationnumber = 'IRCT20170513033941N25'
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%IRCT%' limit 10
+select * from "hsdlc"."irct_studies" where irct_registrationnumber = 'IRCT0'
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%IRCT0%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%IRCT%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/06%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/20%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/201%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/06/%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/06/0%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/06/0088%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/0%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/06/00%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/06/008%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%CTRI/2017/06/00880%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%CTRi%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%NCT02%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%NCT0%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%NCT02395%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%NCT023%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%NCT0239%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%NCT023953%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%NCT0239536%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT02395%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT023953%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT02395%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT0239%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02395367' and p_id='NCT0239'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT02395367%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NC02395367%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%N02395367%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%02395367%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%n02395367%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%nc02395367%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'nct02395367' and p_id='nct0239'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%nct02395367%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%nct0239536%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%nct023953%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%nct02395%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%nct0239%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%nct02%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%nct023%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%nct0%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03471234' and p_id='NCT0347'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%1234%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = '12345' and p_id='12345'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%12345%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%1234%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%12344%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02395367' and p_id='NCT0239'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT02395367%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT0239536%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT023953%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT02395%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT0239%' limit 10
+select * from ( select *,row_number() over ()  as RN from hsdlc.global_registries gr where  ( array_join(gr.secondary_id, ',') like  '%NCT%' and gr.trialid like  '%20%') or  ( array_join(gr.secondary_id, ',') like  '%20%' and gr.trialid like  '%NCT%')   ) pr where  RN>=1 and RN <=100 order by trialid
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" limit 10
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'TEST') or upper(array_join(r.secondary_id, ',')) like  '%TEST%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%test%'
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%test%' limit 10
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%2%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, '2') or upper(array_join(r.secondary_id, ',')) like  '%2%'))
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, '1') or upper(array_join(r.secondary_id, ',')) like  '%1%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%1%'
+select * from brtr_studies limit 3
+select * from "hsdlc"."global_registries" where trialid = '123'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00611650' and p_id='NCT0061'
+select * from "hsdlc"."ctri_studies" where ctri_number = 'CTRI/2011/08/001951'
+select * from "hsdlc"."ctri_studies" where ctri_number = 'CTRI/2011/08/001951'
+select distinct trialid as id from "hsdlc"."global_registries"
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT03360279%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT03360279') or upper(array_join(r.secondary_id, ',')) like  '%NCT03360279%'))
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT01398033') or upper(array_join(r.secondary_id, ',')) like  '%NCT01398033%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT01398033%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT00998439') or upper(array_join(r.secondary_id, ',')) like  '%NCT00998439%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00998439%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT03016442') or upper(array_join(r.secondary_id, ',')) like  '%NCT03016442%'))
+select * from fda_product_codes limit 2
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03026621' and p_id='NCT0302'
+select count(1) as num, method from fda_sterilization_method_types cross join unnest(split(replace(replace(replace(trim(sterilizationmethod), '['), ']'), '"'), ',')) as i (method) group by method order by num desc limit 20
+select count(1) as num, method from (select * from fda_sterilization_method_types cross join unnest(split(replace(replace(replace(trim(from_utf8(sterilizationmethod)), '['), ']'), '"'), ',')) as i (method)) group by method order by num desc limit 20
+select sum(num), method from (select count(1) as num, method from fda_sterilization_method_types cross join unnest(split(replace(replace(replace(trim(sterilizationmethod), '['), ']'), '"'), ',')) as i (method) group by method order by num desc limit 20) group by method
+select count(1) as num, method from (select * from fda_sterilization_method_types cross join unnest(split(replace(replace(replace(trim(sterilizationmethod), '['), ']'), '"'), ',')) as i (method)) group by method order by num desc limit 20
+select count(1) as num, method from fda_sterilization_method_types cross join unnest(split(replace(replace(replace(trim(sterilizationmethod), '['), ']'), '"'), ',')) as i (method) group by method order by num desc limit 20
+select count(1) as num, method from fda_sterilization_method_types cross join unnest(split(replace(replace(replace(sterilizationmethod, '['), ']'), '"'), ',')) as i (method) group by method order by num desc limit 20
+select count(1) as num, method from fda_sterilization_method_types cross join unnest(split(replace(replace(sterilizationmethod, '['), ']'), ',')) as i (method) group by method order by num desc limit 20
+select count(1) as num, method from fda_sterilization_method_types cross join unnest(split(replace(sterilizationmethod, '['), ',')) as i (method) group by method order by num desc limit 20
+select count(1) as num, method from fda_sterilization_method_types cross join unnest(split(sterilizationmethod, ',')) as i (method) group by method order by num desc limit 20
+select count(1) as num, method from fda_sterilization_method_types cross join unnest(split(fda_sterilization_method_types, ',')) as i (method) group by method order by num desc limit 20
+select count(1) as num, method from fda_sterilization_method_types cross join unnest(sterilizationmethod) as i (method) group by method order by num desc limit 20
+select count(1) as num, sterilizationmethod from fda_sterilization_method_types group by sterilizationmethod order by num desc
+select count(1) as num, gmdnptname from fda_gmdn_terms group by gmdnptname order by num desc
+select count(1) as num, gmdnptname from fda_gmdn_terms order by num desc
+select * from fda_gmdn_terms limit 2
+select * from gmdn_terms limit 2
+select distinct primarydi as device_id from "vm_devices"."fda_devices" where primarydi like '%00849%' limit 10
+select *,primarydi as device_id from "vm_devices"."fda_devices" where primarydi = '00849111075435'
+select distinct primarydi as device_id from "vm_devices"."fda_devices" where primarydi like '%00849%' limit 10
+select distinct primarydi as device_id from "vm_devices"."fda_devices" where primarydi like '%0084%' limit 10
+select count(1) from fda_devices d, fda_contacts c, fda_device_sizes s, fda_identifiers i, fda_product_codes pc where d.primarydi = c.primarydi and c.primarydi = s.primarydi and s.primarydi = i.primarydi and i.primarydi = pc.primarydi limit 2
+select count(1) from fda_devices d
+select count(1) from fda_devices d, fda_contacts c, fda_device_sizes s, fda_identifiers i, fda_product_codes pc , fda_sterilization_method_types sm where d.primarydi = c.primarydi and c.primarydi = s.primarydi and s.primarydi = i.primarydi and i.primarydi = pc.primarydi and pc.primarydi = sm.primarydi limit 2
+select * from fda_devices d, fda_contacts c, fda_device_sizes s, fda_identifiers i, fda_product_codes pc , fda_sterilization_method_types sm, fda_gmdn_terms t where d.primarydi = c.primarydi and c.primarydi = s.primarydi and s.primarydi = i.primarydi and i.primarydi = pc.primarydi and pc.primarydi = sm.primarydi and sm.primarydi = t.primarydi limit 2
+select * from fda_devices d, fda_contacts c, fda_device_sizes s, fda_identifiers i, fda_product_codes pc , fda_sterilization_method_types sm where d.primarydi = c.primarydi and c.primarydi = s.primarydi and s.primarydi = i.primarydi and i.primarydi = pc.primarydi and pc.primarydi = sm.primarydi limit 2
+select * from fda_devices d, fda_contacts c, fda_device_sizes s, fda_identifiers i, fda_product_codes pc where d.primarydi = c.primarydi and c.primarydi = s.primarydi and s.primarydi = i.primarydi and i.primarydi = pc.primarydi limit 2
+select * from fda_devices d, fda_contacts c, fda_device_sizes s, fda_identifiers i, fda_product_codes pc where d.primarydi = c.primarydi and c.primarydi = s.primarydi and s.primarydi = i.primarydi and i.primaryid = pc.primaryid limit 2
+select * from fda_devices d, fda_contacts c, fda_device_sizes s, fda_identifiers i where d.primarydi = c.primarydi and c.primarydi = s.primarydi and s.primarydi = i.primarydi limit 2
+select * from fda_devices d, fda_contacts c, fda_device_sizes s where d.primarydi = c.primarydi and c.primarydi = s.primarydi limit 2
+select * from fda_devices d, fda_contacts c where d.primarydi = c.primarydi limit 2
+select * from fda_contacts limit 2
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03016442' and p_id='NCT0301'
+select * from links order by cardinality(component) desc
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT03355508%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT03355508') or upper(array_join(r.secondary_id, ',')) like  '%NCT03355508%'))
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT03%' limit 10
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00610077%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT00610077') or upper(array_join(r.secondary_id, ',')) like  '%NCT00610077%'))
+SELECT * FROM "sudheer"."tbl_approveddevices"
+SELECT * FROM "sudheer"."tbl_approveddevices" limit 10
+SELECT * FROM "sudheer"."tbl_approveddevices"
+SELECT * FROM "sudheer"."tbl_approveddevices" limit 10
+SELECT * FROM "sudheer"."dicom" limit 10
+select *,primarydi as device_id from "vm_devices"."fda_devices" where primarydi = 'B52310008852'
+select distinct primarydi as device_id from "vm_devices"."fda_devices" where primarydi like '%000849%' limit 10
+select distinct primarydi as device_id from "vm_devices"."fda_devices" where primarydi like '%00084%' limit 10
+select distinct primarydi as device_id from "vm_devices"."fda_devices" where primarydi like '%00088%' limit 10
+select distinct primarydi as device_id from "vm_devices"."fda_devices" where primarydi like '%0008%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%014916%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%01491%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%0149%' limit 10
+select * from "hsdlc"."actrn_studies" where  trial_id = 'ACTRN12605000015640'
+select * from (select *,row_number() over ()  as RN from "hsdlc"."actrn_studies" ) pr where  RN>=1 and RN <=100 order by trial_id
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01063244' and p_id='NCT0106'
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%getStringValue%' limit 10
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00553215%'
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%sudo sysctl -p --system%' limit 10
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT00553215') or upper(array_join(r.secondary_id, ',')) like  '%NCT00553215%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00553215%'
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00553215%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00553215,%' limit 10
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT01398085') or upper(array_join(r.secondary_id, ',')) like  '%NCT01398085%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT01398085%'
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT01398085%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT01398085,%' limit 10
+select * from links order by cardinality(component) desc
+select * from links order by len(component) desc
+select * from links order by length(component) desc
+select * from links limit 2
+select trialid as id1,  i.item as id2 from hsdlc.global_registries  cross join unnest(secondary_id) as i (item) where i.item != '' and (i.item like 'NCT%' or i.item like 'CTRI%' or i.item like 'IRCT%' or i.item like 'UMIN%' or i.item like 'NTR%' or i.item like 'ACTRN%' or i.item like 'ISRCTN%' or i.item like 'ChiCTR%' or i.item like 'SLCTR%' or i.item like 'RPCEC%' or i.item like 'TCTR%' or i.item like 'PER-%' or i.item like 'RBR-%' or i.item like '\d\d\d\d-\d\d\d\d\d\d-\d\d') and trialid != ''
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02976844') or upper(array_join(r.secondary_id, ',')) like  '%NCT02976844%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02976844%'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT01947478%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT01947478') or upper(array_join(r.secondary_id, ',')) like  '%NCT01947478%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%ACTRN12616000570482%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'ACTRN12616000570482') or upper(array_join(r.secondary_id, ',')) like  '%ACTRN12616000570482%'))
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT00939471') or upper(array_join(r.secondary_id, ',')) like  '%NCT00939471%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00939471%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03239821' and p_id='NCT0323'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02446938%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02446938') or upper(array_join(r.secondary_id, ',')) like  '%NCT02446938%'))
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'CHICTR-ORC-17012134') or upper(array_join(r.secondary_id, ',')) like  '%CHICTR-ORC-17012134%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%ACTRN12618000846224%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'ACTRN12618000846224') or upper(array_join(r.secondary_id, ',')) like  '%ACTRN12618000846224%'))
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02976844' and p_id='NCT0297'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT00815386') or upper(array_join(r.secondary_id, ',')) like  '%NCT00815386%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00815386%'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02760732%'
+select * from "hsdlc"."jprn_studies" where  unique_id_issued_by_umin = 'UMIN000010328'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%UMIN000030660%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'UMIN000030660') or upper(array_join(r.secondary_id, ',')) like  '%UMIN000030660%'))
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02325817') or upper(array_join(r.secondary_id, ',')) like  '%NCT02325817%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02325817%'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02129296%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02578784' and p_id='NCT0257'
+select * from "hsdlc"."actrn_studies" where  trial_id = 'ACTRN12616000570482'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01947478' and p_id='NCT0194'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT00961311') or upper(array_join(r.secondary_id, ',')) like  '%NCT00961311%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00961311%'
+select * from "hsdlc"."actrn_studies" where  trial_id = 'ACTRN12609000917235'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT03428204') or upper(array_join(r.secondary_id, ',')) like  '%NCT03428204%'))
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00939471' and p_id='NCT0093'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT03428204%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'UMIN000000954') or upper(array_join(r.secondary_id, ',')) like  '%UMIN000000954%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%UMIN000000954%'
+select * from "hsdlc"."actrn_studies" where  trial_id = 'ACTRN12618000846224'
+select * from "hsdlc"."chictr_studies" where registration_number = 'ChiCTR1800014259'
+select * from "hsdlc"."jprn_studies" where  unique_id_issued_by_umin = 'UMIN000028264'
+select * from "hsdlc"."actrn_studies" where  trial_id = 'ACTRN12618000510246p'
+select * from "hsdlc"."chictr_studies" where registration_number = 'ChiCTR-ORC-17012134'
+select * from "hsdlc"."jprn_studies" where  unique_id_issued_by_umin = 'UMIN000007851'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03428204' and p_id='NCT0342'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03360279' and p_id='NCT0336'
+select * from "hsdlc"."jprn_studies" where  unique_id_issued_by_umin = 'UMIN000030660'
+select * from "hsdlc"."jprn_studies" where  unique_id_issued_by_umin = 'UMIN000026760'
+select * from "hsdlc"."jprn_studies" where  unique_id_issued_by_umin = 'UMIN000000954'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02325817' and p_id='NCT0232'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00815386' and p_id='NCT0081'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00504036' and p_id='NCT0050'
+select * from "hsdlc"."jprn_studies" where  unique_id_issued_by_umin = 'UMIN000009556'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00961311' and p_id='NCT0096'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02446938' and p_id='NCT0244'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02129296' and p_id='NCT0212'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00935857%'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT02051439%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01763476' and p_id='NCT0176'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT02760732') or upper(array_join(r.secondary_id, ',')) like  '%NCT02760732%'))
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03068845' and p_id='NCT0306'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT01952873%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT01952873') or upper(array_join(r.secondary_id, ',')) like  '%NCT01952873%'))
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01366482' and p_id='NCT0136'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT01594684') or upper(array_join(r.secondary_id, ',')) like  '%NCT01594684%'))
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02760732' and p_id='NCT0276'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT03145662') or upper(array_join(r.secondary_id, ',')) like  '%NCT03145662%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT03145662%'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT03189667%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03473938' and p_id='NCT0347'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01952873' and p_id='NCT0195'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00708253' and p_id='NCT0070'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03087552' and p_id='NCT0308'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03189667' and p_id='NCT0318'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00935857' and p_id='NCT0093'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01594684' and p_id='NCT0159'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02714153' and p_id='NCT0271'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02946320' and p_id='NCT0294'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01412541' and p_id='NCT0141'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02430155' and p_id='NCT0243'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00998439' and p_id='NCT0099'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03145662' and p_id='NCT0314'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00918229' and p_id='NCT0091'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02408822' and p_id='NCT0240'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01398033' and p_id='NCT0139'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT01091285%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT01091285') or upper(array_join(r.secondary_id, ',')) like  '%NCT01091285%'))
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01091285' and p_id='NCT0109'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT01632371%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT01632371') or upper(array_join(r.secondary_id, ',')) like  '%NCT01632371%'))
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01632371' and p_id='NCT0163'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02051439' and p_id='NCT0205'
+select *,primarydi as device_id from (select *,row_number() over ()  as RN from "vm_devices"."fda_devices" ) pr where  RN>=1 and RN <=1000 order by primarydi
+select *,primarydi as device_id from "vm_devices"."fda_devices" where primarydi = 'B167T740043400'
+select * from "hsdlc"."ctri_studies" where ctri_number = 'CTRI/2014/02/004416'
+select * from "hsdlc"."ctri_studies" where ctri_number = 'CTRI/2014/02/004416'
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies"
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%IRYC2011%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%IRYC%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%IRYC201%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%IRYC2011%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%IRYC20111%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%IRYC20%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%IRYC2%' limit 10
+select distinct irct_registrationnumber as id from "hsdlc"."irct_studies" where irct_registrationnumber like '%IRYC%' limit 10
+select id_info.nct_id as nct_id, * from (select *,row_number() over ()  as RN from "hsdlc"."ct_studies" ) pr where  RN>=1 and RN <=10 order by p_id, id_info.nct_id
+select * from "hsdlc"."ctri_studies" where ctri_number = 'CTRI/2018/07/014916'
+select * from ( select *,row_number() over ()  as RN from hsdlc.global_registries gr where  ( array_join(gr.secondary_id, ',') like  '%ChiCTR%' and gr.trialid like  '%undefined%') or  ( array_join(gr.secondary_id, ',') like  '%undefined%' and gr.trialid like  '%ChiCTR%')   ) pr where  RN>=1 and RN <=100 order by trialid
+select * from ( select *,row_number() over ()  as RN from hsdlc.global_registries gr where  ( array_join(gr.secondary_id, ',') like  '%UMIN%' and gr.trialid like  '%undefined%') or  ( array_join(gr.secondary_id, ',') like  '%undefined%' and gr.trialid like  '%UMIN%')   ) pr where  RN>=1 and RN <=100 order by trialid
+select trialid as id1,  i.item as id2 from hsdlc.global_registries  cross join unnest(secondary_id) as i (item) where i.item != '' and (i.item like 'NCT%' or i.item like 'CTRI%' or i.item like 'IRCT%' or i.item like 'UMIN%' or i.item like 'NTR%' or i.item like 'ACTRN%' or i.item like 'ISRCTN%' or i.item like 'ChiCTR%' or i.item like 'SLCTR%' or i.item like 'RPCEC%' or i.item like 'TCTR%' or i.item like 'PER-%' or i.item like 'RBR-%' or i.item like '\d\d\d\d-\d\d\d\d\d\d-\d\d') and trialid != ''
+select studydate, institutionaddress, count (distinct studyid) as num_of_studies from DICOM group by studydate,institutionaddress order by num_of_studies desc
+select studydate, institutionaddress, count (studyid) as num_of_studies from DICOM group by studydate,institutionaddress order by num_of_studies desc
+select count(1) from global_registries
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT0358346' and p_id='NCT0358'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT0358346$' and p_id='NCT0358'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT0358346$%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT0358346%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT%' and p_id='NCT%'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT****' and p_id='NCT****'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT****%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT***%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT*%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT**%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCTS%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCTSA%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCTSAN%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCTSAND' and p_id='NCTSAND'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCTSAND%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCTSAN%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCTSA%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCTS%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03583463' and p_id='NCT0358'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT00099%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT0009%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT000%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT00%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT' and p_id='NCT'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'INTC/100' and p_id='INTC/10'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%INTC/100%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%INTC/10%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%INTC/1%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%INTC/%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'INTC' and p_id='INTC'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%INTC%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this is not%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'SAN' and p_id='SAN'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%SAND%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'SANDY' and p_id='SANDY'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%SANDY%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%SAND%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this is%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'sandeep this is not working' and p_id='sandeep'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this is not working%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this is not work%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this is not wo%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this is not worki%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this is not wor%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this is not workin%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this is not w%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this is no%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this is not%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this i%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this is n%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep thi%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep this is%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep t%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep th%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'sandeep' and p_id='sandeep'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandeep%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sand%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sandee%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%sande%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'malignant neoplasm' and p_id='maligna'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%malignant neoplasm%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'malignant neoplas' and p_id='maligna'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%malignant neoplas%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03359616' and p_id='NCT0335'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00798642' and p_id='NCT0079'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00798661' and p_id='NCT0079'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT00798661%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT0079866%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT007986%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00798670' and p_id='NCT0079'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT00798670%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT0079867%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT007986%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00798688' and p_id='NCT0079'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT0079868%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT00798688%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00798681' and p_id='NCT0079'
+select count(1) from public_ICD10_categories
+select * from public_ICD10_categories limit 3
+select *,cris_registration_number as trial_id from (select *,row_number() over ()  as RN from "hsdlc"."cris_studies_view" ) pr where  RN>=1 and RN <=100 order by cris_registration_number
+select * from ( select *,row_number() over ()  as RN from hsdlc.global_registries gr where  ( array_join(gr.secondary_id, ',') like  '%NCT%' and gr.trialid like  '%CTRI%') or  ( array_join(gr.secondary_id, ',') like  '%CTRI%' and gr.trialid like  '%NCT%')   ) pr where  RN>=1 and RN <=100 order by trialid
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004024 NCT00%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004024 NCT0%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004024 NCT0000%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004024 NCT000%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004024 NCT00%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004024 NCT0%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004024 NCT%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004024 N%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004024 NC%' limit 10
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT00004024') or upper(array_join(r.secondary_id, ',')) like  '%NCT00004024%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00004024%'
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT0000402%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004024%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT000040%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004.21%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004.2%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004.%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03586440' and p_id='NCT0358'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT023%' limit 10
+select count(1) from euctrn_studies
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT02%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT0%' limit 10
+select count(1) from drks_studies
+select count(1) from cubct_studies
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies"
+select count(1) from ctri_studies
+select count(1) from ct_studies
+select * from (select *,row_number() over ()  as RN from "opentrials"."trials" where  identifiers like '%ctri%' ) pr where  RN>=1 and RN <=undefined order by id
+select * from (select *,row_number() over ()  as RN from "opentrials"."trials" where  identifiers like '%actrn%' ) pr where  RN>=1 and RN <=undefined order by id
+select count(1) from cris_studies
+select * from (select *,row_number() over ()  as RN from "opentrials"."trials" where  identifiers like '%actrn%' ) pr where  RN>=1 and RN <=undefined order by id
+select * from (select *,row_number() over ()  as RN from "opentrials"."trials" where  identifiers like '%actrn%' ) pr where  RN>=1 and RN <=undefined order by id
+select * from (select *,row_number() over ()  as RN from "opentrials"."trials" where  identifiers like '%actrn%' ) pr where  RN>=1 and RN <=undefined order by id
+select count(1) from brtr_studies
+select * from (select *,row_number() over ()  as RN from "opentrials"."trials" where  identifiers like '%jprn%' ) pr where  RN>=1 and RN <=undefined order by id
+select count(1) from actrn_studies
+select * from (select *,row_number() over ()  as RN from "opentrials"."trials" where  identifiers like '%euctr%' ) pr where  RN>=1 and RN <=undefined order by id
+select * from (select *,row_number() over ()  as RN from "opentrials"."trials" where  identifiers like '%euctr%' ) pr where  RN>=undefined and RN <=undefined order by id
+select *,primarydi as device_id from "vm_devices"."fda_devices" where primarydi = 'B167T740043400'
+select * from (select *,row_number() over ()  as RN from "hsdlc"."chictr_studies" ) pr where  RN>=1 and RN <=10 order by registration_number
+select count(1) from chictr_studies
+select * from (select *,row_number() over ()  as RN from "hsdlc"."chictr_studies" ) pr where  RN>=1 and RN <=100 order by registration_number
+select * from (select *,row_number() over ()  as RN from "hsdlc"."chictr_studies" ) pr where  RN>=1 and RN <=100 order by registration_number
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03510936' and p_id='NCT0351'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT03510936' and p_id='NCT0351'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00610077' and p_id='NCT0061'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00610077' and p_id='NCT0061'
+select * from "hsdlc"."ctri_studies" limit 10
+select id_info.nct_id as nct_id, * from (select *,row_number() over ()  as RN from "hsdlc"."ct_studies" ) pr where  RN>=1 and RN <=100 order by p_id, id_info.nct_id
+select * from (select *,row_number() over ()  as RN from "hsdlc"."irct_studies" ) pr where  RN>=1 and RN <=100 order by irct_registrationnumber
+select * from "hsdlc"."ctri_studies" where ctri_number = 'CTRI/2008/091/000187'
+select * from "hsdlc"."ctri_studies" where ctri_number = ':id'
+select distinct ctri_number as id from "hsdlc"."ctri_studies"
+select * from "hsdlc"."ctri_studies" where ctri_number = 'CTRI/2014/11/005191'
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%CTRI/2014/11/005191%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'CTRI/2014/11/005191') or upper(array_join(r.secondary_id, ',')) like  '%CTRI/2014/11/005191%'))
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/2014/11/005191%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/2014/11/00519%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/2014/11/005%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/2014/11/0051%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/2014/11/00%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/2014/11/0%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/2014/11/%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/2014/11%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/2014/1%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/2014/%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/20%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/201%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/2014%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/2%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRL%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NcT0356' and p_id='NcT0356'
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NcT0356%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NcT035%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NcT03%' limit 10
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NcT0%' limit 10
+select *,primarydi as device_id from (select *,row_number() over ()  as RN from "vm_devices"."fda_devices" ) pr where  RN>=1 and RN <=100 order by primarydi
+select * from ( select *,row_number() over ()  as RN from hsdlc.global_registries gr where  ( array_join(gr.secondary_id, ',') like  '%CTRI%' and gr.trialid like  '%20%') or  ( array_join(gr.secondary_id, ',') like  '%20%' and gr.trialid like  '%CTRI%')   ) pr where  RN>=1 and RN <=100 order by trialid
+select * from "hsdlc"."global_registries" where trialid = 'NCT01125826'
+select * from "hsdlc"."global_registries" where trialid = 'NCT01127347'
+select * from (select *,row_number() over ( ) as RN from "hsdlc"."ctri_studies"  where ctri_number is not null and ctri_number != ''   ) pr where  RN>=1 and RN <=100 order by ctri_number
+Select institutionname , institutionaddress , studydescription,count(*) from sudheer.dicom where institutionname is not null and institutionaddress is not null and studydescription is not null group by  studydescription, institutionname, institutionaddress having count(*) > 1
+Select institutionname , institutionaddress , studydescription,count(*) from sudheer.dicom where institutionname is not null and institutionaddress is not null and studydescription is not null group by institutionname , institutionaddress , studydescription having count(*) > 1
+Select institutionname,institutionaddress, requestingphysician,substr(studydate,1,6) AS study_date_yyyymm, count(*) AS count from sudheer.dicom where requestingphysician is not null and institutionname is not null and institutionaddress is not null group by institutionname,institutionaddress , requestingphysician, substr(studydate,1,6) having count(*) > 1 order by 4 desc
+Select institutionname,institutionaddress, requestingphysician,substr(studydate,1,6) AS study_date_yyyymm, count(*) AS count from sudheer.dicom where requestingphysician is not null and institutionname is not null and institutionaddress is not null group by institutionname,institutionaddress , requestingphysician, substr(studydate,1,6) having count(*)
+select count(1) from dicom
+select * from global_registries where study_type is null
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02240550' and p_id='NCT0224'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01882829' and p_id='NCT0188'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01712568' and p_id='NCT0171'
+select * from "hsdlc"."jprn_studies" where  unique_id_issued_by_umin = 'UMIN000015764'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'CTRI/2009/091/000798') or upper(array_join(r.secondary_id, ',')) like  '%CTRI/2009/091/000798%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%CTRI/2009/091/000798%'
+select * from "hsdlc"."ctri_studies" where ctri_number = 'CTRI/2009/091/000798'
+select * from "hsdlc"."actrn_studies" where  trial_id = 'ACTRN12607000434493'
+select * from global_registries where study_type = 'Intervention'
+select study_type,count(1) as cnt from global_registries group by study_type order by cnt desc limit 10
+select study_type,count(1) as cnt from global_registries group by study_type order by cnt limit 10
+select study_type,count(1) as cnt from global_registries group by study_type
+select count(1)  from  cris_studies_view
+select count(1)  from  cris_studies
+select trialid as id1,  i.item as id2 from hsdlc.global_registries  cross join unnest(secondary_id) as i (item) where i.item != '' and (i.item like 'NCT%' or i.item like 'CTRI%' or i.item like 'IRCT%' or i.item like 'UMIN%' or i.item like 'NTR%' or i.item like 'ACTRN%' or i.item like 'ISRCTN%' or i.item like 'ChiCTR%' or i.item like 'SLCTR%' or i.item like 'RPCEC%' or i.item like 'TCTR%' or i.item like 'PER-%' or i.item like 'RBR-%' or i.item like '\d\d\d\d-\d\d\d\d\d\d-\d\d') and trialid != ''
+select distinct trial_id as id from "hsdlc"."actrn_studies"
+select *, IRCTN_NUMBER as trial_id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER  = 'ISRCTN52057158'
+select * from  isrctn_studies
+select *, IRCTN_NUMBER as trial_id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER  = 'ISRCTN11108405'
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ISRC%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ISRCT0%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ISRCT%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%ISRC%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%isrct%' limit 10
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER like '%isrc%' limit 10
+SELECT ctri_number,
+SELECT ctri_number,
+select registry, count(1) as cnt from global_registries where upper(recruitmentstatus) like '%RECRUIT%' group by registry order by cnt desc
+select registry, recruitmentstatus, count(1) as cnt from global_registries where upper(recruitmentstatus) like '%RECRUIT%' group by registry,recruitmentstatus order by cnt desc
+select registry, count(1) as cnt from global_registries where upper(recruitmentstatus) like '%RECRUIT%' group by registry order by cnt desc
+select registry, count(1) as cnt from global_registries where upper(recruitment_status) like '%RECRUIT%' group by registry order by cnt desc
+select *, latitude, longitude from ( select count(1), registry, regexp_extract(date_of_registration, '\d\d\d\d') from global_registries group by registry, regexp_extract(date_of_registration, '\d\d\d\d') order by regexp_extract(date_of_registration, '\d\d\d\d') ) p, registry_country rc where p.registry = rc.registry
+select registry, count(1) as count from global_registries group by registry order by count desc
+select study_type, count(1) as cnt from global_registries group by study_type order by cnt desc limit 10
+select * from global_registries limit 3
+select * from "hsdlc"."ctri_studies" where ctri_number = 'CTRI/2017/05/008709'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00415181' and p_id='NCT0041'
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT00415181' and p_id='NCT0041'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT00415181') or upper(array_join(r.secondary_id, ',')) like  '%NCT00415181%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00415181%'
+select * from "hsdlc"."global_registries" where trialid = 'NTR100'
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NTR1%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NTR0%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NTR-%' limit 10
+select * from "hsdlc"."global_registries" where trialid = 'NCT01121159'
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI/%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%CTRI%' limit 10
+select * from registry_country where registry is not null limit 3
+select * from registry_country where registry != null limit 3
+select * from registry_country limit 3
+select * from links limit 3
+select * from global_registries limit 1
+Select studydescription,
+Select studydescription,
+Select studydescription,
+Select studydescription,
+Select studydescription,
+Select studydescription,
+Select cast(replace (upper(patientage),'Y') AS integer),
+Select cast(replace (upper(patientage),'Y') AS integer),
+Select cast(replace (upper(patientage),'Y') AS integer),
+Select distinct  upper(patientage) , cast(replace (upper(patientage),'Y') AS integer)
+Select distinct  upper(patientage) , cast(replace (upper(patientage),'Y') AS int)
+Select distinct  upper(patientage) , replace (upper(patientage),'Y')
+Select distinct  upper(patientage)
+Select distinct  upper(patientage)
+Select studydate , substr(studydate,1,6) --  to_char(to_date(studydate,'YYYYMMDD') ,'MMYYYY') , 
+select * from "hsdlc"."ntr_studies" where ntr_number = 'ntr2003'
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%ntr2003%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%ntr200%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%ntr20%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%ntr2%' limit 10
+Select -- studydate,institutionname,requestingphysician, count(*)
+Select -- studydate,institutionname,requestingphysician, count(*)
+Select -- studydate,institutionname,requestingphysician, count(*)
+Select studydate , substr(studydate,1,6) --  to_char(to_date(studydate,'YYYYMMDD') ,'MMYYYY') , 
+Select -- studydate,institutionname,requestingphysician, count(*)
+Select -- studydate,institutionname,requestingphysician, count(*)
+Select -- studydate,institutionname,requestingphysician, count(*)
+Select -- studydate,institutionname,requestingphysician, count(*)
+Select studydate,institutionname,requestingphysician, count(*)
+Select requestingphysician,institutionname ,studydate, count(*)
+Select requestingphysician,institutionname ,studydate, count(*)
+SELECT  date_parse('20170819', '%Y%m%d')
+SELECT  to_char(date_parse('20170819', '%Y%m%d'),'YYYYmm')
+SELECT  to_char(date_parse('20170819', '%Y%m%d'),'YYYYMM')
+SELECT  date_parse('20170819', '%Y%m%d')
+SELECT  date_parse('20170819', '%Y-%m-%d')
+SELECT  date_parse('20170819', 'YYYYMMDD')
+SELECT  date_parse('20170819', 'YYYYmmdd')
+SELECT  date_parse('20170819', '%YYYY%mm%dd')
+SELECT  date_parse('20170819', '%YYYY-%mm-%dd')
+SELECT to_date('20170103','YYYYMMDD')
+Select studydate , to_date(studydate,'YYYYMMDD') --  to_char(to_date(studydate,'YYYYMMDD') ,'MMYYYY') , 
+Select studydate , cast(date_format(studydate,'YYYYMMDD') AS DATE ) --  to_char(to_date(studydate,'YYYYMMDD') ,'MMYYYY') , 
+Select studydate , cast(studydate AS DATE ) --  to_char(to_date(studydate,'YYYYMMDD') ,'MMYYYY') , 
+Select studydate , date(studydate,'YYYYMMDD') --  to_char(to_date(studydate,'YYYYMMDD') ,'MMYYYY') , 
+Select studydate , to_date(studydate,'YYYYMMDD') --  to_char(to_date(studydate,'YYYYMMDD') ,'MMYYYY') , 
+Select studydate --  to_char(to_date(studydate,'YYYYMMDD') ,'MMYYYY') , 
+Select  to_char(to_date(studydate,'YYYYMMDD') ,'MMYYYY') , studydate
+Select  to_char(studydate ,'MMYYYY') , studydate
+Select  studydate 
+Select  studydate 
+Select institutionname , institutionaddress , studydescription,count(*)
+Select institutionname , institutionaddress , studydescription,count(*)
+Select patientid, bodypartexamined,institutionname, count(*)
+Select patientid, bodypartexamined,requestingphysician, count(*)
+Select patientid, bodypartexamined,count(*)
+Select patientid, count(*)
+select distinct IRCTN_NUMBER as id from "hsdlc"."isrctn_studies"
+select * from ( select *,row_number() over ()  as RN from hsdlc.global_registries gr where  ( array_join(gr.secondary_id, ',') like  '%ACTRN%' and gr.trialid like  '%undefined%') or  ( array_join(gr.secondary_id, ',') like  '%undefined%' and gr.trialid like  '%ACTRN%')   ) pr where  RN>=1 and RN <=100 order by trialid
+select * from ( select *,row_number() over ()  as RN from hsdlc.global_registries gr where  ( array_join(gr.secondary_id, ',') like  '%UMIN%' and gr.trialid like  '%undefined%') or  ( array_join(gr.secondary_id, ',') like  '%undefined%' and gr.trialid like  '%UMIN%')   ) pr where  RN>=1 and RN <=100 order by trialid
+select * from ( select *,row_number() over ()  as RN from hsdlc.global_registries gr where  ( array_join(gr.secondary_id, ',') like  '%20%' and gr.trialid like  '%undefined%') or  ( array_join(gr.secondary_id, ',') like  '%undefined%' and gr.trialid like  '%20%')   ) pr where  RN>=1 and RN <=100 order by trialid
+select * from ( select *,row_number() over ()  as RN from hsdlc.global_registries gr where  ( array_join(gr.secondary_id, ',') like  '%NCT%' and gr.trialid like  '%undefined%') or  ( array_join(gr.secondary_id, ',') like  '%undefined%' and gr.trialid like  '%NCT%')   ) pr where  RN>=1 and RN <=100 order by trialid
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02974088' and p_id='NCT0297'
+select * from "hsdlc"."ctri_studies" where ctri_number = 'CTRI/2010/091/001103'
+select * from "hsdlc"."ctri_studies" where ctri_number = 'CTRI/2010/091/001103'
+select * from ( select *,row_number() over ()  as RN from hsdlc.global_registries gr where  ( array_join(gr.secondary_id, ',') like  '%CTRI%' and gr.trialid like  '%undefined%') or  ( array_join(gr.secondary_id, ',') like  '%undefined%' and gr.trialid like  '%CTRI%')   ) pr where  RN>=1 and RN <=100 order by trialid
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02573532' and p_id='NCT0257'
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%TQPHI%' limit 10
+select distinct ntr_number as id from "hsdlc"."ntr_studies" where ntr_number like '%TQPH%' limit 10
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT02951065' and p_id='NCT0295'
+select * from "hsdlc"."ntr_studies" where ntr_number = 'NTR1431'
+select * from "hsdlc"."irct_studies" where irct_registrationnumber = 'IRCT201102234877N3'
+select count(1) from tctr_studies
+select * from tctr_studies
+select * from tctr_studies
+select * from tctr_studies
+select * from tctr
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'DRKS00000003') or upper(array_join(r.secondary_id, ',')) like  '%DRKS00000003%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%DRKS00000003%'
+select *, drks_id as trial_id from "hsdlc"."drks_studies" where drks_id  = 'DRKS00000003'
+select count(distinct Unique_ID_issued_by_UMIN) from jprn_studies
+select count(distinct IRCTN_NUMBER) from isrctn_studies
+select count(distinct IRCT_RegistrationNumber) from irct_studies
+select count(distinct eudract_number) from euctrn_studies
+select count(distinct DRKS_ID) from drks_studies
+select count(distinct UniqueIDNumber) from cubct_studies
+select count(distinct cris_registration_number) from cris_studies
+select count(distinct Registration_number) from chictr_studies
+select count(distinct main.trial_id) from tctr_studies
+select count(distinct main.trial_id) from brtr_studies
+select count(distinct slctr_registration_number) from slctr_studies
+select count(distinct ctri_number) from ctri_studies
+select count(distinct id_info.nct_id) from ct_studies
+select count(1) from tctr_studies
+select count(distinct Unique_ID_issued_by_UMIN) from jprn_studies
+select count(distinct IRCTN_NUMBER) from isrctn_studies
+select count(distinct IRCT_RegistrationNumber) from irct_studies
+select count(distinct eudract_number) from euctrn_studies
+select count(distinct DRKS_ID) from drks_studies
+select count(distinct UniqueIDNumber) from cubct_studies
+select count(distinct cris_registration_number) from cris_studies
+select count(distinct Registration_number) from chictr_studies
+select count(distinct main.trial_id) from tctr_studies
+select count(distinct main.trial_id) from brtr_studies
+select count(distinct slctr_number) from slctr_studies
+select count(distinct ctri_number) from ctri_studies
+select count(distinct id_info.nct_id) from ct_studies
+select *,  drks_id as trial_id from (select *,row_number() over ()  as RN  from "hsdlc"."drks_studies" ) pr where  RN>=1 and RN <=100 order by drks_id
+select * from "hsdlc"."drks_studies" limit 10
+Select distinct studydescription
+Select count(1) -- distinct protocolname
+Select distinct protocolname
+Select distinct protocolname
+SELECT datapointcolumns,
+       displayedareaselectionsequenceitemreferencedimagesequenceitemreferencedsopclassuid,
+       spectrallyselectedsuppression,
+       spectrallyselectedexcitation,
+SELECT count(*)
+SELECT datapointcolumns,
+       displayedareaselectionsequenceitemreferencedimagesequenceitemreferencedsopclassuid,
+       spectrallyselectedsuppression,
+       spectrallyselectedexcitation,
+SELECT count(*)
+select studydate, institutionaddress, count (studyid) as num_of_studies from DICOM group by studydate,institutionaddress order by num_of_studies desc
+select count(1) from DICOM
+select studydate, institutionaddress, count (studyid) as num_of_studies from DICOM group by studydate,institutionaddress order by num_of_studies desc , institutionaddress desc
+select studydate, institutionaddress, count (studyid) as num_of_studies from DICOM group by studydate,institutionaddress order by num_of_studies, institutionaddress desc
+select studydate, count (studyid) as num_of_studies from DICOM group by studydate order by num_of_studies desc
+select studydate, count (studyid) as num_of_studies from DICOM group by studydate order by num_of_studies
+select protocolname, count (distinct patientname) from DICOM group by protocolname
+select patientname, count (distinct studyID) from DICOM group by patientname
+select count (distinct patientname) from DICOM
+select count(1) from DICOM
+`DisplayedAreaSelectionSequenceItemReferencedImageSequenceItemReferencedSOPClassUID` string,
+`SpectrallySelectedSuppression` string,
+`SpectrallySelectedExcitation` string,
+select count(1) from DICOM
+SELECT trial_id,
+SELECT count(*)
+select count (distinct id_info.nct_id) from ct_studies
+select  count(1)  from ct_Studies
+select  count(1)  from ct_Studies WHERE id_info.nct_id is null
+select  * from ct_Studies WHERE id_info.nct_id is null
+select  * from ct_Studies WHERE id_info.nct_id = 'NCT03598569'
+select  * from ct_Studies WHERE id_info.nct_id = 'NCT03586440'
+select  * from ct_Studies WHERE id_info.nct_id = 'NCT03598569'
+select  distinct p_id from ct_Studies order by p_id asc
+select  distinct p_id from ct_Studies order by p_id desc
+select count(distinct p_id)  from ct_Studies
+select distinct p_id  from ct_Studies
+select * from ct_Studies
+select count(1) from links
+select *, drks_id as trial_id from "hsdlc"."drks_studies" where drks_id  = 'DRKS00009520'
+select *,  drks_id as trial_id from (select *,row_number() over ()  as RN  from "hsdlc"."drks_studies" ) pr where  RN>=1 and RN <=10 order by drks_id
+select *,  drks_id as trial_id from (select *,row_number() over ()  as RN  from "hsdlc"."drks_studies" ) pr where  RN>=1 and RN <=11 order by drks_id
+select *,  drks_id as trial_id from (select *,row_number() over ()  as RN  from "hsdlc"."drks_studies" ) pr where  RN>=1 and RN <=9 order by drks_id
+select *,  drks_id as trial_id from (select *,row_number() over ()  as RN  from "hsdlc"."drks_studies" ) pr where  RN>=1 and RN <=5 order by drks_id
+select *, drks_id as trial_id from "hsdlc"."drks_studies" where drks_id  = 'DRKS00009520'
+select * from (select *,row_number() over ( ) as RN from "hsdlc"."ctri_studies"  where ctri_number is not null and ctri_number != ''   ) pr where  RN>=1 and RN <=10 order by ctri_number
+select *,  drks_id as trial_id from (select *,row_number() over ()  as RN  from "hsdlc"."drks_studies" ) pr where  RN>=1 and RN <=15 order by drks_id
+select *,  drks_id as trial_id from (select *,row_number() over ()  as RN  from "hsdlc"."drks_studies" ) pr where  RN>=1 and RN <=20 order by drks_id
+select *,  drks_id as trial_id from (select *,row_number() over ()  as RN  
+select *,  IRCTN_NUMBER as trial_id from (select *,row_number() over ()  as RN  from "hsdlc"."isrctn_studies" ) pr where  RN>=1 and RN <=10 order by IRCTN_NUMBER
+select *,  drks_id as trial_id from (select *,row_number() over ()  as RN  from "hsdlc"."drks_studies" ) pr where  RN>=1 and RN <=30 order by drks_id
+select *,  drks_id as trial_id from (select *,row_number() over ()  as RN  from "hsdlc"."drks_studies" ) pr where  RN>=1 and RN <=20 order by drks_id
+select *,  drks_id as trial_id from (select *,row_number() over ()  as RN  from "hsdlc"."drks_studies" ) pr where  RN>=1 and RN <=100 order by drks_id
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%DRKS0%' limit 10
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'DRKS00000001') or upper(array_join(r.secondary_id, ',')) like  '%DRKS00000001%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%DRKS00000001%'
+select *, drks_id as trial_id from "hsdlc"."drks_studies" where drks_id  = 'DRKS00000001'
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%DRKS0000000%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%DRKS000000%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%DRKS00000%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%DRKS000%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%DRKS0000%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%DRKS000%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%DRKS00%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%DRKS0%' limit 10
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%DRKS%' limit 10
+select *,  drks_id as trial_id from (select *,row_number() over ()  as RN  from "hsdlc"."drks_studies" ) pr where  RN>=1 and RN <=10 order by drks_id
+select distinct drks_id as id from "hsdlc"."drks_studies" where drks_id like '%DRKS00000001%' limit 10
+select * from drks_studies
+select count(1) from drks_studies
+select * from drks_studies
+select distinct id_info.nct_id as id  from "hsdlc"."ct_studies" where id_info.nct_id like '%NCT0%' limit 10
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT01121159') or upper(array_join(r.secondary_id, ',')) like  '%NCT01121159%'))
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT01121159%'
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT0346%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT03%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT034%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT034696%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT03469%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT0346967%' limit 10
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT03469674%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT03469674') or upper(array_join(r.secondary_id, ',')) like  '%NCT03469674%'))
+select id_info.nct_id as nct_id, * from "hsdlc"."ct_studies" where  id_info.nct_id = 'NCT01325467' and p_id='NCT0132'
+select *, IRCTN_NUMBER as trial_id from "hsdlc"."isrctn_studies" where IRCTN_NUMBER  = 'ISRCTN67840624'
+select trialid as id1,  i.item as id2 from hsdlc.global_registries  cross join unnest(secondary_id) as i (item) where i.item != '' and (i.item like 'NCT%' or i.item like 'CTRI%' or i.item like 'IRCT%' or i.item like 'UMIN%' or i.item like 'NTR%' or i.item like 'ACTRN%' or i.item like 'ISRCTN%' or i.item like 'ChiCTR%' or i.item like 'SLCTR%' or i.item like 'RPCEC%' or i.item like 'TCTR%' or i.item like 'PER-%' or i.item like 'RBR-%' or i.item like '\d\d\d\d-\d\d\d\d\d\d-\d\d') and trialid != ''
+select ctri_number from ctri_studies limit 2
+select count(distinct ctri_number) from ctri_studies limit 2
+select count(*) from drks_studies
+select * from drks_studies
+select cast(component as JSON) as neighbors from hsdlc.links where array_join(component, ',') like '%NCT00094250%'
+select * from hsdlc.global_registries where trialid in ( select neighbor from hsdlc.global_registries r, hsdlc.links l   cross join unnest(l.component) as i(neighbor) where contains(l.component, r.trialid)   and ( contains(l.component, 'NCT00094250') or upper(array_join(r.secondary_id, ',')) like  '%NCT00094250%'))
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT0000%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00004%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT000%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT00%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT0%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT20%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT2%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT20%' limit 10
+select distinct trialid as id from "hsdlc"."global_registries"  where trialid like '%NCT2%' limit 10
+select * from "hsdlc"."ctri_studies" where ctri_number = 'CTRI/2017/06/008802'
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%CTRI/20%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%CTRI/2%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%CTRI/%' limit 10
+select distinct ctri_number as id from "hsdlc"."ctri_studies" where ctri_number like '%CTRI%' limit 10
+select * from drks_studies
+Select * from drks_studies
+Select * from drks_studies
+select * from drks_studies
+SELECT * FROM "hsdlc"."drks_studies" limit 10
+select * from (select *,row_number() over ( ) as RN from "hsdlc"."ctri_studies"  where ctri_number is not null and ctri_number != ''   ) pr where  RN>=1 and RN <=100 order by ctri_number
+select slctr_registration_number from slctr_studies limit 2
+select slctr_registrationnumber from slctr_studies limit 2
+select id_info.nct_id from ct_studies limit 2
+select ntr_number from ntr_studies limit 2
+select count (distinct id_info.nct_id) from ct_studies
+select count (distinct ctri_number) from ctri_studies
+select count (distinct id_info.nct_id) from ct_studies
+select count (distinct unique_id_issued_by_umin) from jprn_studies
+select count (distinct slctr_registration_number) from slctr_studies
+select count (distinct irct_registrationnumber) from irct_studies
+select count (distinct ntr_number) from ntr_studies
+select distinct registration_number as id from "hsdlc"."chictr_studies"
+select * from "hsdlc"."euctrn_studies" where eudract_number = ':id'
+select *, main.trial_id as trial_id from (select *,row_number() over ()  as RN  from "hsdlc"."brtr_studies" ) pr where  RN>=1 and RN <=10 order by main.trial_id
