@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/icij_devices.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/vm_devices/v_fda_devices.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/v_fda_devices.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,28 +32,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snippets/athena-queries.txt">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/v_fda_devices.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48150">
-              <caret line="2675" column="149" selection-start-line="2675" selection-start-column="16" selection-end-line="2675" selection-end-column="149" />
+            <state relative-caret-position="480">
+              <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/v_fda_devices.sql">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/icij_devices.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="35" selection-start-line="35" selection-end-line="41" selection-end-column="15" />
+            <state>
+              <caret selection-end-line="21" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/deviceSizes.sql">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/brtr_ddl.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="270">
+              <caret line="15" column="55" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -70,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/devices.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="34" column="33" selection-start-line="1" selection-end-line="34" selection-end-column="33" />
+            <state relative-caret-position="252">
+              <caret line="14" column="19" selection-end-line="42" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -130,7 +130,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>,</find>
       <find>NCT00004024</find>
       <find>3</find>
       <find>NC</find>
@@ -160,9 +159,9 @@
       <find>join</find>
       <find>fda_devices</find>
       <find>string,</find>
+      <find>\s</find>
     </findStrings>
     <replaceStrings>
-      <replace>&quot;:&quot;&quot;,</replace>
       <replace>.[6]</replace>
       <replace>,  \n&quot;</replace>
       <replace>ls</replace>
@@ -192,6 +191,7 @@
       <replace>` string\,\n `</replace>
       <replace>ictrp</replace>
       <replace>,</replace>
+      <replace>` string,\n`</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/scripts/athena</dir>
@@ -206,7 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/athena/hsdlc/ntr_studies_ddl.sql" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/cris_studies_ddl.sql" />
         <option value="$PROJECT_DIR$/batch/cristr/Makefile" />
         <option value="$PROJECT_DIR$/batch/cristr/html_json.js" />
@@ -257,6 +256,7 @@
         <option value="$PROJECT_DIR$/batch/ictrp/Makefile" />
         <option value="$PROJECT_DIR$/batch/ictrp/README.md" />
         <option value="$PROJECT_DIR$/scripts/athena/vm_devices/v_fda_devices.sql" />
+        <option value="$PROJECT_DIR$/scripts/athena/vm_devices/icij_devices.sql" />
       </list>
     </option>
   </component>
@@ -282,6 +282,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -300,6 +301,13 @@
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="athena" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="athena" type="462c0819:PsiDirectoryNode" />
+              <item name="hsdlc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
@@ -348,7 +356,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,7 +363,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/datasets/datainsights-in/data.gov.in/web-crawler/data.gov.in.html" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545465539936" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545543658511" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQl" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
     <property name="full.screen.before.presentation.mode" value="false" />
@@ -845,6 +852,7 @@
       <workItem from="1545279076610" duration="124000" />
       <workItem from="1545464473217" duration="1078000" />
       <workItem from="1545466102150" duration="1161000" />
+      <workItem from="1545542661885" duration="1306000" />
     </task>
     <servers />
   </component>
@@ -854,13 +862,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1176256000" />
+    <option name="totallyTimeSpent" value="1177562000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989754" visible="true" weight="0.28137094" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989754" visible="true" weight="0.28468767" />
       <window_info id="Structure" order="1" sideWeight="0.5010246" side_tool="true" weight="0.20485175" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -1014,20 +1022,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/cubct_studies_ddl.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="23" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/drks_studies_ddl.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" selection-start-column="23" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/data_quality_checks.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -1255,13 +1249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/devices.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="33" selection-start-line="1" selection-end-line="34" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/ictrp/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -1276,6 +1263,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/imddb_devices.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/analytics/summary_statistics.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="972">
@@ -1286,17 +1280,31 @@
     <entry file="file://$PROJECT_DIR$/batch/ictrp/html_json.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/imddb_devices.sql">
+    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/v_fda_devices.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="480">
+          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/v_fda_devices.sql">
+    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/devices.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="35" selection-start-line="35" selection-end-line="41" selection-end-column="15" />
+        <state relative-caret-position="252">
+          <caret line="14" column="19" selection-end-line="42" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/brtr_ddl.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/icij_devices.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="21" selection-end-column="1" />
         </state>
       </provider>
     </entry>
