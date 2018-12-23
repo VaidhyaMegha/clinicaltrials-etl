@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/imddb_devices.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/v_fda_devices.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics/.~lock.summary_analysis_oral_index_results.csv#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics/Löe_Trials.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/Löe_Trials.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ctd-spa/ctd-spa.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/athena/vm_devices/v_fda_devices.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/v_fda_devices.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,7 +34,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snippets/athena-queries.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="48150">
               <caret line="2675" column="149" selection-start-line="2675" selection-start-column="16" selection-end-line="2675" selection-end-column="149" />
             </state>
           </provider>
@@ -48,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/v_fda_devices.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="50" lean-forward="true" selection-end-column="792" />
+            <state relative-caret-position="624">
+              <caret line="35" selection-start-line="35" selection-end-line="41" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -75,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/devices.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="34" column="33" lean-forward="true" selection-start-line="1" selection-end-line="34" selection-end-column="33" />
+            <state relative-caret-position="612">
+              <caret line="34" column="33" selection-start-line="1" selection-end-line="34" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -287,6 +282,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -353,7 +349,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,7 +356,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/datasets/datainsights-in/data.gov.in/web-crawler/data.gov.in.html" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545465479154" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545465539936" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQl" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
     <property name="full.screen.before.presentation.mode" value="false" />
@@ -848,7 +843,8 @@
       <workItem from="1543851780448" duration="760000" />
       <workItem from="1544161547573" duration="12000" />
       <workItem from="1545279076610" duration="124000" />
-      <workItem from="1545464473217" duration="1006000" />
+      <workItem from="1545464473217" duration="1078000" />
+      <workItem from="1545466102150" duration="1161000" />
     </task>
     <servers />
   </component>
@@ -858,12 +854,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1175023000" />
+    <option name="totallyTimeSpent" value="1176256000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989754" visible="true" weight="0.27805418" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989754" visible="true" weight="0.28137094" />
       <window_info id="Structure" order="1" sideWeight="0.5010246" side_tool="true" weight="0.20485175" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -1237,6 +1234,34 @@
     <entry file="file://$PROJECT_DIR$/batch/ictrp/.bash_profile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/athena-queries.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48150">
+          <caret line="2675" column="149" selection-start-line="2675" selection-start-column="16" selection-end-line="2675" selection-end-column="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/deviceSizes.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/contacts.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/devices.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="33" selection-start-line="1" selection-end-line="34" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/batch/ictrp/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -1251,13 +1276,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/imddb_devices.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/analytics/summary_statistics.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="972">
@@ -1268,38 +1286,17 @@
     <entry file="file://$PROJECT_DIR$/batch/ictrp/html_json.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/athena-queries.txt">
+    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/imddb_devices.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="2675" column="149" selection-start-line="2675" selection-start-column="16" selection-end-line="2675" selection-end-column="149" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/devices.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="34" column="33" lean-forward="true" selection-start-line="1" selection-end-line="34" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/contacts.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/deviceSizes.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="432">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/v_fda_devices.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="50" lean-forward="true" selection-end-column="792" />
+        <state relative-caret-position="624">
+          <caret line="35" selection-start-line="35" selection-end-line="41" selection-end-column="15" />
         </state>
       </provider>
     </entry>
