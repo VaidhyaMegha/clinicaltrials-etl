@@ -10,9 +10,8 @@ prefix_url="http://apps.who.int/trialsearch/Trial2.aspx?TrialID="
 suffix_url=""
 
 
-
- function download_all_htmls(){
-    for num in {00000001..00000288}
+function download_all_htmls(){
+    cat ${context_dir}/links.tsv | while read f
     do
     wget -q ${prefix_url}$num${suffix_url} \
          -O ${html_dir}/$num.html  || true
@@ -29,6 +28,8 @@ source ~/.gvm/scripts/gvm
 gvm use "go1.4"
 
 pushd ${context_dir}
+
+athena --db hsdlc --execute " select trialid from hsdlc.global_registries" --output-format TSV --region 'us-east-1' > links.tsv
 
 if [[ ${download} == 'yes' ]]; then
 

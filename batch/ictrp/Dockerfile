@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM phusion/baseimage:0.11
 
 ENV NVM_DIR /usr/local/nvm
 ENV NODE_VERSION 9.2.0
@@ -17,7 +17,8 @@ RUN  apt-get update &&  apt-get install -y python  && \
 # Install boto( will also install botocore) and awscli
 RUN python --version && \
      pip install boto3 && \
-     pip install awscli
+     pip install awscli && \
+     pip install athena-cli
 
 SHELL ["/bin/bash", "-c"]
 
@@ -47,6 +48,8 @@ SHELL ["/bin/bash", "-c", "source /root/.gvm/scripts/gvm &&  gvm install go1.4 -
 
 ENV PATH $PATH:/usr/local/go/bin
 ENV GOPATH $PATH:/$HOME/go
+
+CMD ["/sbin/my_init", "/bin/bash"]
 
 # Copy python,json and shell scripts
 COPY html_json.js /usr/local/dataintegration/
