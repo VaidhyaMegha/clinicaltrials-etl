@@ -1,7 +1,7 @@
 CREATE EXTERNAL TABLE `fda_premarket_submissions`(
- `primaryDI` string,
- `submissionNumber` string,
- `supplementNumber` string
+ `primarydi` string,
+ `submissionnumber` string,
+ `supplementnumber` string
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '|'

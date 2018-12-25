@@ -1,13 +1,13 @@
 CREATE EXTERNAL TABLE `fda_identifiers`(
- `PrimaryDI` string,
- `deviceId` string,
- `deviceIdType` string,
- `deviceIdIssuingAgency` string,
- `containsDINumber` string,
- `pkgQuantity` string,
- `pkgDiscontinuedate` string,
- `pkgStatus` string,
- `pkgType` string
+ `primarydi` string,
+ `deviceid` string,
+ `deviceidtype` string,
+ `deviceidissuingagency` string,
+ `containsdinumber` string,
+ `pkgquantity` string,
+ `pkgdiscontinuedate` string,
+ `pkgstatus` string,
+ `pkgtype` string
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '|'

@@ -1,6 +1,6 @@
 CREATE EXTERNAL TABLE `fda_sterilization_method_types`(
- `PrimaryDI` string,
- `sterilizationMethod` string
+ `primarydi` string,
+ `sterilizationmethod` string
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '|'

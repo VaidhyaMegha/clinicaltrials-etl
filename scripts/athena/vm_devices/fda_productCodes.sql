@@ -1,7 +1,7 @@
 CREATE EXTERNAL TABLE `fda_product_codes`(
- `PrimaryDI` string,
- `productCode` string,
- `productCodeName` string
+`primarydi` string,
+`productcode` string,
+`productcodename` string
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '|'

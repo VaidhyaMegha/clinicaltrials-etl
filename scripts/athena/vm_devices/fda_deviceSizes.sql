@@ -1,9 +1,9 @@
 CREATE EXTERNAL TABLE `fda_device_sizes`(
- `PrimaryDI` string,
- `sizeType` string,
- `sizeUnit` string,
- `sizeValue` string,
- `sizeText` string
+ `primarydi` string,
+ `sizetype` string,
+ `sizeunit` string,
+ `sizevalue` string,
+ `sizetext` string
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '|'

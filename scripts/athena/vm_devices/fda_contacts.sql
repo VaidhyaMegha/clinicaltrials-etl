@@ -1,7 +1,7 @@
 CREATE EXTERNAL TABLE `fda_contacts`(
-`PrimaryDI` string,
+`primarydi` string,
 `phone` string,
-`phoneExtension` string,
+`phoneextension` string,
 `email` string
 )
 ROW FORMAT DELIMITED

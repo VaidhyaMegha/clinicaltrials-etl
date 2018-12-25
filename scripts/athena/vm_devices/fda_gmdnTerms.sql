@@ -1,7 +1,7 @@
 CREATE EXTERNAL TABLE `fda_gmdn_terms`(
- `PrimaryDI` string,
- `gmdnPTName` string,
- `gmdnPTDefinition` string
+ `primarydi` string,
+ `gmdnptname` string,
+ `gmdnptdefinition` string
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '|'
