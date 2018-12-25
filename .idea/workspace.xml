@@ -4,18 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/vm_devices/contacts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/fda_contacts.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/vm_devices/deviceSizes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/fda_deviceSizes.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/vm_devices/devices.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/fda_devices.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/vm_devices/gmdnTerms.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/fda_gmdnTerms.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/vm_devices/identifiers.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/fda_identifiers.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/vm_devices/imddb_devices.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/vm_devices/premarketSubmissions.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/fda_premarketSubmissions.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/vm_devices/productCodes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/fda_productCodes.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/athena/vm_devices/sterilizationMethodTypes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/fda_sterilizationMethodTypes.sql" afterDir="false" />
-    </list>
+    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_sterilizationMethodTypes.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="53" selection-start-column="23" selection-end-column="53" />
+              <caret selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -340,7 +329,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/datasets/datainsights-in/data.gov.in/web-crawler/data.gov.in.html" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545742102939" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545742590318" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQl" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
     <property name="full.screen.before.presentation.mode" value="false" />
@@ -831,7 +820,7 @@
       <workItem from="1545466102150" duration="1161000" />
       <workItem from="1545542661885" duration="1306000" />
       <workItem from="1545713604456" duration="9806000" />
-      <workItem from="1545741291723" duration="811000" />
+      <workItem from="1545741291723" duration="1154000" />
     </task>
     <servers />
   </component>
@@ -841,7 +830,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1198087000" />
+    <option name="totallyTimeSpent" value="1198430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1307,7 +1296,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_sterilizationMethodTypes.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="53" selection-start-column="23" selection-end-column="53" />
+          <caret selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
