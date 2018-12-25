@@ -1,7 +1,7 @@
 datasets/
 temp/
 temp_*
-.idea/inspectionProfiles/
+.idea/
 scripts/credentials.sh
 AllPublicXMLs/
 htmls/
