@@ -4,7 +4,15 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="" />
+    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/athena/vm_devices/v_icij_devices.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileProcessor/target/classes/com/vaidhyamegha/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileProcessor/target/test-classes/com/vaidhyamegha/AppTest.class" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,82 +38,68 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/icij_devices.sql">
+        <entry file="file://$PROJECT_DIR$/DI_ETL.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="480">
+              <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/icij_events.sql">
+        <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="34" column="63" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_devices.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="20" selection-end-line="42" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_deviceSizes.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="13" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_gmdnTerms.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="11" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_identifiers.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="17" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_premarketSubmissions.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="11" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_productCodes.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="480">
+              <caret line="32" column="63" lean-forward="true" selection-end-line="133" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_sterilizationMethodTypes.sql">
+        <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="741">
+              <caret line="129" column="167" selection-start-line="129" selection-start-column="167" selection-end-line="129" selection-end-column="167" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/bd2c303f-c778-4a0d-b4e8-373f12c95e2a.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/1238f5fd-5a89-4bc1-9efd-6b2222c6794a.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3285" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/a7cec982-743b-4c53-a391-ad3ab03d4bf2.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/06a736aa-dd99-4b4c-8563-200f54b1423f.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8115">
+              <caret line="541" column="9" selection-start-line="541" selection-start-column="6" selection-end-line="541" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FileProcessor/src/test/java/com/vaidhyamegha/AppTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -132,9 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>3</find>
-      <find>NC</find>
-      <find>$(&quot;#</find>
       <find>secondar</find>
       <find>seconday</find>
       <find>[</find>
@@ -162,6 +153,9 @@
       <find>string,</find>
       <find>\s</find>
       <find>athena</find>
+      <find>1.8</find>
+      <find>PI</find>
+      <find>COMMENT 'from deserializer'</find>
     </findStrings>
     <replaceStrings>
       <replace>.[6]</replace>
@@ -208,8 +202,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/batch/pactr/html_json.js" />
         <option value="$PROJECT_DIR$/snippets/html_json.js" />
         <option value="$PROJECT_DIR$/snippets/etl/html_json.js" />
         <option value="$PROJECT_DIR$/batch/discover/Makefile" />
@@ -246,7 +238,6 @@
         <option value="$PROJECT_DIR$/scripts/athena/vm_devices/icij_events.sql" />
         <option value="$PROJECT_DIR$/FileProcessor/README.md" />
         <option value="$PROJECT_DIR$/FileProcessor/src/main/resources/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/FileProcessor/pom.xml" />
         <option value="$PROJECT_DIR$/FileProcessor/src/main/java/com/vaidhyamegha/App.java" />
         <option value="$PROJECT_DIR$/batch/ictrp/html_json.sh" />
         <option value="$PROJECT_DIR$/batch/ictrp/Dockerfile" />
@@ -259,12 +250,32 @@
         <option value="$PROJECT_DIR$/scripts/athena/vm_devices/sterilizationMethodTypes.sql" />
         <option value="$PROJECT_DIR$/scripts/athena/vm_devices/contacts.sql" />
         <option value="$PROJECT_DIR$/scripts/athena/vm_devices/fda_productCodes.sql" />
+        <option value="$PROJECT_DIR$/FileProcessor/pom.xml" />
+        <option value="$PROJECT_DIR$/analytics/predict.sql" />
+        <option value="$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$USER_HOME$/tools/maven/3.6.0" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="FileProcessor" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -280,48 +291,34 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="analytics" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="athena" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="athena" type="462c0819:PsiDirectoryNode" />
-              <item name="hsdlc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="athena" type="462c0819:PsiDirectoryNode" />
-              <item name="vm_devices" type="462c0819:PsiDirectoryNode" />
+              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="analytics" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="predict_clinical_outcome" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -329,33 +326,33 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/datasets/datainsights-in/data.gov.in/web-crawler/data.gov.in.html" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545742590318" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546974639961" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQl" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 2.7.12 (/usr/bin/python)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../birrd-spa" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/FileProcessor/pom.xml" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/batch/EUCTRN/Dockerfile" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets" />
+      <recent name="$PROJECT_DIR$/analytics/predict_clinical_outcome" />
+      <recent name="$PROJECT_DIR$/analytics" />
+      <recent name="$PROJECT_DIR$/batch" />
+      <recent name="$PROJECT_DIR$/scripts/athena" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scripts/athena/vm_devices" />
       <recent name="$PROJECT_DIR$/batch" />
       <recent name="$PROJECT_DIR$/scripts/athena" />
       <recent name="$PROJECT_DIR$/batch/data-cloud-file-orchestration" />
       <recent name="$PROJECT_DIR$/scripts/athena/hsdlc" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/analytics" />
-      <recent name="$PROJECT_DIR$/batch" />
-      <recent name="$PROJECT_DIR$/scripts/athena" />
-      <recent name="$PROJECT_DIR$/snippets/etl" />
-      <recent name="$PROJECT_DIR$/batch/EUCTRN" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -370,7 +367,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Bash.data_quality_checks.sh">
+  <component name="RunManager" selected="Cucumber java.All Features in: pactr">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -611,16 +608,14 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Bash.links.sh" />
       <item itemvalue="Bash.data_quality_checks.sh" />
+      <item itemvalue="Bash.links.sh" />
       <item itemvalue="Cucumber java.All Features in: pactr" />
       <item itemvalue="Python.login_scraper" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Bash.data_quality_checks.sh" />
         <item itemvalue="Cucumber java.All Features in: pactr" />
-        <item itemvalue="Bash.links.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -821,6 +816,10 @@
       <workItem from="1545542661885" duration="1306000" />
       <workItem from="1545713604456" duration="9806000" />
       <workItem from="1545741291723" duration="1154000" />
+      <workItem from="1546882302115" duration="23000" />
+      <workItem from="1546882348775" duration="15000" />
+      <workItem from="1546882386974" duration="1877000" />
+      <workItem from="1546971678423" duration="2796000" />
     </task>
     <servers />
   </component>
@@ -830,14 +829,14 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1198430000" />
+    <option name="totallyTimeSpent" value="1203141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989754" visible="true" weight="0.2714207" />
-      <window_info id="Structure" order="1" sideWeight="0.5010246" side_tool="true" weight="0.20485175" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.28468767" />
+      <window_info id="Structure" order="1" sideWeight="0.5032189" side_tool="true" weight="0.28468767" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
       <window_info id="Project Explorer" order="4" />
@@ -849,7 +848,7 @@
       <window_info id="Learn" order="10" />
       <window_info id="DBHelper" order="11" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32706374" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32618025" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3277487" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -879,7 +878,7 @@
       <window_info anchor="right" id="Database" order="11" weight="0.32946378" />
       <window_info anchor="right" x="0" y="0" width="350" height="604" id="Documentation" order="12" side_tool="true" weight="0.328911" />
       <window_info anchor="right" id="Maven Projects" order="13" side_tool="true" weight="0.32946378" />
-      <window_info anchor="right" id="Maven" order="14" />
+      <window_info anchor="right" id="Maven" order="14" weight="0.32946378" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20485175" />
@@ -990,50 +989,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/analytics/quigley_Trials.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/quiigley_Trials.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/Turesky_Trials.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-908" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/Hein_Index.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/Silness_Trials.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2168" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/Gingivitis_Trials.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3968" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/plaque_Trials.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15902" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/plaque_index_Trials.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6398" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/analysis_oral_index _results.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="102" selection-start-line="23" selection-start-column="96" selection-end-line="23" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/Gingivitis_Severity_Trials.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/analytics/summary_analysis_oral_index_results.csv" />
     <entry file="file://$PROJECT_DIR$/analytics/GSI_Trials.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1137,13 +1092,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FileProcessor/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="84" column="45" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FileProcessor/src/main/java/com/vaidhyamegha/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1223,37 +1171,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/imddb_devices.sql" />
     <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/icij_devices.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        <state relative-caret-position="315">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/icij_events.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="510">
           <caret line="34" column="63" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/imddb_devices.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_contacts.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_devices.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="330">
           <caret line="22" column="20" selection-end-line="42" selection-end-column="1" />
         </state>
       </provider>
@@ -1272,6 +1207,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FileProcessor/FileProcessor.iml" />
     <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_identifiers.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1295,8 +1231,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_sterilizationMethodTypes.sql">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileProcessor/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DI_ETL.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileProcessor/src/test/java/com/vaidhyamegha/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/fda_contacts.sql">
+      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="10" selection-end-column="1" />
+          <caret selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/a7cec982-743b-4c53-a391-ad3ab03d4bf2.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/06a736aa-dd99-4b4c-8563-200f54b1423f.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8115">
+          <caret line="541" column="9" selection-start-line="541" selection-start-column="6" selection-end-line="541" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/1238f5fd-5a89-4bc1-9efd-6b2222c6794a.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3285" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/bd2c303f-c778-4a0d-b4e8-373f12c95e2a.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/athena/hsdlc/ct_studies_ddl.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="63" lean-forward="true" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="129" column="167" selection-start-line="129" selection-start-column="167" selection-end-line="129" selection-end-column="167" />
         </state>
       </provider>
     </entry>
@@ -1317,7 +1316,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Python</last-edited>
+          <last-edited>Detection</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1341,7 +1340,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1358,7 +1357,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1378,7 +1376,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.amazonaws:aws-java-sdk-cognitoidentity:1.11.207</last-edited>
+          <last-edited>Maven: com.amazonaws:aws-java-sdk-dynamodb:1.11.207</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
