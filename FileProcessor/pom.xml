@@ -87,6 +87,31 @@
           </archive>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.6.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>java</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <includeProjectDependencies>true</includeProjectDependencies>
+          <includePluginDependencies>true</includePluginDependencies>
+          <executable>
+            <groupId>com.merck.open</groupId>
+            <artifactId>rdf2x</artifactId>
+          </executable>
+          <mainClass>com.vaidhyamegha.App</mainClass>
+
+        </configuration>
+        <dependencies>
+        </dependencies>
+      </plugin>
+
     </plugins>
   </build>
 </project>

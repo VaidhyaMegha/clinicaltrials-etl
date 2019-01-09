@@ -128,3 +128,8 @@ from hsdlc.ct_studies
 where overall_status != '' and overall_status in ('Completed', 'Approved for marketing', 'Withdrawn', 'Terminated', 'Suspended');
 https://console.aws.amazon.com/athena/query/results/3b876a3c-5151-4c00-b7c8-8d4738a3d809/csv
 aws s3 cp s3://default-query-results-519510601754-us-east-1/3b876a3c-5151-4c00-b7c8-8d4738a3d809.csv ~/projects/ctd/DI_ETL/analytics/predict_clinical_outcome/datasets/
+
+
+mvn exec:java -Dexec.args="/home/mahalaxmi/projects/ctd/DI_ETL/analytics/predict_clinical_outcome/datasets/3b876a3c-5151-4c00-b7c8-8d4738a3d809.csv replaceDelimiter  /home/mahalaxmi/temp/temp3.csv"
+
+
