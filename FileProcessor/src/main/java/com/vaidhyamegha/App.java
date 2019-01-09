@@ -11,7 +11,7 @@ public class App {
     private static BufferedOutputStream bos = new BufferedOutputStream(System.out);
 
     public static void main(String[] args) throws Exception {
-        if(args.length > 1 && "replaceDelimiter".equals(args[1])) {
+        if (args.length > 1 && "replaceDelimiter".equals(args[1])) {
             bos = new BufferedOutputStream(new FileOutputStream(args[2]));
             replaceDelimiter(args[0]);
         } else {
@@ -19,16 +19,16 @@ public class App {
         }
     }
 
-    private static void replaceDelimiter(String fileName){
+    private static void replaceDelimiter(String fileName) {
         try {
             BufferedInputStream bis = readIfFileExists(fileName);
             char current;
             boolean quoteStarted = false;
             while (bis.available() > 0) {
                 current = (char) bis.read();
-                if(current == '"') quoteStarted = !quoteStarted;
+                if (current == '"') quoteStarted = !quoteStarted;
 
-                if(!quoteStarted && current == ',') current = '|';
+                if (!quoteStarted && current == ',') current = '|';
 
                 bos.write(current);
             }
@@ -38,16 +38,16 @@ public class App {
         }
     }
 
-    private static void replaceInnerComma(String fileName){
+    private static void replaceInnerComma(String fileName) {
         try {
             BufferedInputStream bis = readIfFileExists(fileName);
             char current;
             boolean quoteStarted = false;
             while (bis.available() > 0) {
                 current = (char) bis.read();
-                if(current == '"') quoteStarted = !quoteStarted;
+                if (current == '"') quoteStarted = !quoteStarted;
 
-                if(quoteStarted && current == '\n') current = ';';
+                if (quoteStarted && current == '\n') current = ';';
 
                 bos.write(current);
             }
@@ -57,7 +57,7 @@ public class App {
         }
     }
 
-    private  static BufferedInputStream readIfFileExists(String fileName) throws IOException {
+    private static BufferedInputStream readIfFileExists(String fileName) throws IOException {
         File file = new File(fileName);
 
         if (!file.exists()) {
