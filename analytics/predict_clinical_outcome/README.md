@@ -29,7 +29,7 @@
         
         $0.0001 per prediction, rounded up to the nearest penny
         
-        
+- https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-supports-knn-classification-and-regression/      
 - https://aws.amazon.com/sagemaker/faqs/
         
         

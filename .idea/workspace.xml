@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analytics/predict_clinical_outcome/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/predict_clinical_outcome/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
@@ -30,21 +32,21 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="127" column="72" selection-start-line="127" selection-start-column="72" selection-end-line="127" selection-end-column="72" />
+            <state relative-caret-position="840">
+              <caret line="293" column="10" lean-forward="true" selection-start-line="293" selection-start-column="10" selection-end-line="293" selection-end-column="100" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/fb5dfaee-ea61-47e6-be3b-1fed5681364e.csv">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="15">
-              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-end-line="2" />
+        <entry file="file://$PROJECT_DIR$/FileProcessor/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="107" column="32" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -73,16 +75,16 @@
         <entry file="file://$PROJECT_DIR$/FileProcessor/src/main/java/com/vaidhyamegha/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="30" column="64" lean-forward="true" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="65" />
+              <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+            <state relative-caret-position="465">
+              <caret line="31" column="108" selection-start-line="31" selection-start-column="108" selection-end-line="31" selection-end-column="108" />
             </state>
           </provider>
         </entry>
@@ -114,10 +116,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>secondary_outcome</find>
-      <find>[0-9\\.]*</find>
-      <find>[0-9]*\.</find>
-      <find>[0-9]+\.[0-9]</find>
       <find>Japa</find>
       <find>RPCEC</find>
       <find>CTRI/2009/091/000860</find>
@@ -142,12 +140,14 @@
       <find>checkIfFileExists</find>
       <find>id_in</find>
       <find>respons</find>
-      <find>PI</find>
       <find>complete</find>
+      <find>([^:]+)\:string,</find>
+      <find>location</find>
+      <find>responsibl</find>
+      <find>enroll</find>
+      <find>degrees</find>
     </findStrings>
     <replaceStrings>
-      <replace>,  \n&quot;</replace>
-      <replace>ls</replace>
       <replace>lsPrevLineLength</replace>
       <replace>lsCurLineLength</replace>
       <replace>Key</replace>
@@ -176,6 +176,8 @@
       <replace>,</replace>
       <replace>` string,\n`</replace>
       <replace>readIfFileExists</replace>
+      <replace>study_design_info.$1 as $1,</replace>
+      <replace>role</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/scripts/athena</dir>
@@ -239,8 +241,8 @@
         <option value="$PROJECT_DIR$/FileProcessor/pom.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/FileProcessor/src/main/java/com/vaidhyamegha/App.java" />
-        <option value="$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql" />
         <option value="$PROJECT_DIR$/analytics/predict_clinical_outcome/README.md" />
+        <option value="$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql" />
       </list>
     </option>
   </component>
@@ -303,90 +305,6 @@
               <item name="analytics" type="462c0819:PsiDirectoryNode" />
               <item name="predict_clinical_outcome" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="analytics" type="462c0819:PsiDirectoryNode" />
-              <item name="predict_clinical_outcome" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="analytics" type="462c0819:PsiDirectoryNode" />
-              <item name="predict_clinical_outcome" type="462c0819:PsiDirectoryNode" />
-              <item name="screenshots" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-              <item name="ct" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="FileProcessor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="FileProcessor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="FileProcessor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="FileProcessor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="FileProcessor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="vaidhyamegha" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="FileProcessor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="FileProcessor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="FileProcessor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="vaidhyamegha" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -397,6 +315,10 @@
             <path>
               <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="DI_ETL" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="FileProcessor" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
           </expand>
           <select />
@@ -909,7 +831,9 @@
       <workItem from="1546996739082" duration="2969000" />
       <workItem from="1546999793209" duration="896000" />
       <workItem from="1547000713386" duration="79000" />
-      <workItem from="1547000838591" duration="15018000" />
+      <workItem from="1547000838591" duration="17175000" />
+      <workItem from="1547107673910" duration="3109000" />
+      <workItem from="1547112136105" duration="4027000" />
     </task>
     <servers />
   </component>
@@ -919,13 +843,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1224367000" />
+    <option name="totallyTimeSpent" value="1233660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.18960752" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.19402985" />
       <window_info id="Structure" order="1" sideWeight="0.5032189" side_tool="true" weight="0.28468767" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -1262,13 +1186,6 @@
     <entry file="file://$PROJECT_DIR$/scripts/athena/data_quality_checks.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/FileProcessor/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="107" column="32" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FileProcessor/src/test/java/com/vaidhyamegha/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1365,6 +1282,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/fb5dfaee-ea61-47e6-be3b-1fed5681364e.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/3b876a3c-5151-4c00-b7c8-8d4738a3d809.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/oral_index/analysis_oral_index _results.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/oral_index/TMQHI_Trials.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/oral_index/Turesky_Trials.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileProcessor/src/main/java/com/vaidhyamegha/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="108" selection-start-line="31" selection-start-column="108" selection-end-line="31" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/screenshots/VaidhyaMegha - ML- 1- v1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.xslt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7560">
@@ -1372,46 +1325,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/oral_index/Turesky_Trials.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/oral_index/TMQHI_Trials.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/oral_index/analysis_oral_index _results.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/3b876a3c-5151-4c00-b7c8-8d4738a3d809.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/fb5dfaee-ea61-47e6-be3b-1fed5681364e.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="15">
-          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileProcessor/src/main/java/com/vaidhyamegha/App.java">
+    <entry file="file://$PROJECT_DIR$/FileProcessor/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="30" column="64" lean-forward="true" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="65" />
+        <state relative-caret-position="850">
+          <caret line="107" column="32" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/screenshots/VaidhyaMegha - ML- 1- v1.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="127" column="72" selection-start-line="127" selection-start-column="72" selection-end-line="127" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+        <state relative-caret-position="840">
+          <caret line="293" column="10" lean-forward="true" selection-start-line="293" selection-start-column="10" selection-end-line="293" selection-end-column="100" />
         </state>
       </provider>
     </entry>
