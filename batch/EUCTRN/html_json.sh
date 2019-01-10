@@ -6,24 +6,26 @@ download=${2:-'no'}
 s3_bucket=${3:-'s3://hsdlc-results/euctrn-adapter/'}
 context_dir=${4:-'/usr/local/dataintegration'}
 mode=${5:-'cloud'}
+start_date=${6:-'2003-01-01'}
+end_date=${7:-'2019-01-01'}
 
 prefix_url="https://www.clinicaltrialsregister.eu/"
-suffix_url="ctr-search/search?query=&dateFrom=2003-01-01&dateTo=2018-07-01&page="
+suffix_url="ctr-search/search?query=&dateFrom=${start_date}&dateTo=${end_date}&page="
 
  function download_main_index(){
-    wget  -q ${prefix_url}${suffix_url}"1" \
+    wget  -q --no-check-certificate ${prefix_url}${suffix_url}"1" \
          -O ${html_dir}/1.html  || true
 }
 
 function download_index_page(){
-    wget -q ${prefix_url}${suffix_url}${1} -O ${html_dir}/${1}.html  || true
+    wget -q --no-check-certificate ${prefix_url}${suffix_url}${1} -O ${html_dir}/${1}.html  || true
 }
 
 function download_trial(){
     g=${1//ctr-search\/trial\//}
     g=${g//\//_}
 
-    wget -q ${prefix_url}${1} -O ${html_dir}/studies/${g}.html  || true
+    wget -q --no-check-certificate ${prefix_url}${1} -O ${html_dir}/studies/${g}.html  || true
 }
 
 function analyse_trial(){
