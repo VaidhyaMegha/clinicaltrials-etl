@@ -305,23 +305,23 @@ aws s3 cp s3://default-query-results-519510601754-us-east-1/0a8c8d78-4ccf-4da4-a
 -- binary classification ()
 select id_info.nct_id as trial_id, official_title,phase, study_type, number_of_arms, number_of_groups, target_duration,
 
-json_extract_scalar(json_parse(keyword), '$[1]') as first_keyword,
-json_extract_scalar(json_parse(keyword), '$[2]') as second_keyword,
-json_extract_scalar(json_parse(keyword), '$[3]') as third_keyword,
-json_extract_scalar(json_parse(keyword), '$[4]') as fourth_keyword,
-json_extract_scalar(json_parse(keyword), '$[5]') as fifth_keyword,
+lower(json_extract_scalar(json_parse(keyword), '$[1]')) as first_keyword,
+lower(json_extract_scalar(json_parse(keyword), '$[2]')) as second_keyword,
+lower(json_extract_scalar(json_parse(keyword), '$[3]')) as third_keyword,
+lower(json_extract_scalar(json_parse(keyword), '$[4]')) as fourth_keyword,
+lower(json_extract_scalar(json_parse(keyword), '$[5]')) as fifth_keyword,
 
-json_extract_scalar(json_parse(condition_browse), '$[1]') as first_condition,
-json_extract_scalar(json_parse(condition_browse), '$[2]') as second_condition,
-json_extract_scalar(json_parse(condition_browse), '$[3]') as third_condition,
-json_extract_scalar(json_parse(condition_browse), '$[4]') as fourth_condition,
-json_extract_scalar(json_parse(condition_browse), '$[5]') as fifth_condition,
+lower(json_extract_scalar(json_parse(condition_browse), '$[1]')) as first_condition,
+lower(json_extract_scalar(json_parse(condition_browse), '$[2]')) as second_condition,
+lower(json_extract_scalar(json_parse(condition_browse), '$[3]')) as third_condition,
+lower(json_extract_scalar(json_parse(condition_browse), '$[4]')) as fourth_condition,
+lower(json_extract_scalar(json_parse(condition_browse), '$[5]')) as fifth_condition,
 
-json_extract_scalar(json_parse(intervention_browse), '$[1]') as first_intervention,
-json_extract_scalar(json_parse(intervention_browse), '$[2]') as second_intervention,
-json_extract_scalar(json_parse(intervention_browse), '$[3]') as third_intervention,
-json_extract_scalar(json_parse(intervention_browse), '$[4]') as fourth_intervention,
-json_extract_scalar(json_parse(intervention_browse), '$[5]') as fifth_intervention,
+lower(json_extract_scalar(json_parse(intervention_browse), '$[1]')) as first_intervention,
+lower(json_extract_scalar(json_parse(intervention_browse), '$[2]')) as second_intervention,
+lower(json_extract_scalar(json_parse(intervention_browse), '$[3]')) as third_intervention,
+lower(json_extract_scalar(json_parse(intervention_browse), '$[4]')) as fourth_intervention,
+lower(json_extract_scalar(json_parse(intervention_browse), '$[5]')) as fifth_intervention,
 
 study_design_info.allocation as allocation,
 study_design_info.intervention_model as intervention_model,
@@ -338,7 +338,7 @@ element_at(sponsors.collaborator, 4).agency_class as fourth_collaborator_agency_
 element_at(sponsors.collaborator, 5).agency_class as fifth_collaborator_agency_class,
 
 enrollment.type as enrollment_type,
-enrollment.text_node_value as enrollment_value,
+case when enrollment.text_node_value  = '' then '0' else enrollment.text_node_value end as enrollment_value,
 
 element_at(location, 1).facility.address.zip as first_location_zip,
 element_at(location, 1).facility.address.country as first_location_country,
@@ -355,23 +355,23 @@ element_at(location, 4).facility.address.country as fourth_location_country,
 element_at(location, 5).facility.address.zip as fifth_location_zip,
 element_at(location, 5).facility.address.country as fifth_location_country,
 
-element_at(primary_outcome, 1).measure as first_primary_outcome_measure,
-element_at(primary_outcome, 2).measure as second_primary_outcome_measure,
-element_at(primary_outcome, 3).measure as third_primary_outcome_measure,
-element_at(primary_outcome, 4).measure as fourth_primary_outcome_measure,
-element_at(primary_outcome, 5).measure as fifth_primary_outcome_measure,
+lower(element_at(primary_outcome, 1).measure) as first_primary_outcome_measure,
+lower(element_at(primary_outcome, 2).measure) as second_primary_outcome_measure,
+lower(element_at(primary_outcome, 3).measure) as third_primary_outcome_measure,
+lower(element_at(primary_outcome, 4).measure) as fourth_primary_outcome_measure,
+lower(element_at(primary_outcome, 5).measure) as fifth_primary_outcome_measure,
 
-element_at(secondary_outcome, 1).measure as first_secondary_outcome_measure,
-element_at(secondary_outcome, 2).measure as second_secondary_outcome_measure,
-element_at(secondary_outcome, 3).measure as third_secondary_outcome_measure,
-element_at(secondary_outcome, 4).measure as fourth_secondary_outcome_measure,
-element_at(secondary_outcome, 5).measure as fifth_secondary_outcome_measure,
+lower(element_at(secondary_outcome, 1).measure) as first_secondary_outcome_measure,
+lower(element_at(secondary_outcome, 2).measure) as second_secondary_outcome_measure,
+lower(element_at(secondary_outcome, 3).measure) as third_secondary_outcome_measure,
+lower(element_at(secondary_outcome, 4).measure) as fourth_secondary_outcome_measure,
+lower(element_at(secondary_outcome, 5).measure) as fifth_secondary_outcome_measure,
 
-element_at(other_outcome, 1).measure as first_other_outcome_measure,
-element_at(other_outcome, 2).measure as second_other_outcome_measure,
-element_at(other_outcome, 3).measure as third_other_outcome_measure,
-element_at(other_outcome, 4).measure as fourth_other_outcome_measure,
-element_at(other_outcome, 5).measure as fifth_other_outcome_measure,
+lower(element_at(other_outcome, 1).measure) as first_other_outcome_measure,
+lower(element_at(other_outcome, 2).measure) as second_other_outcome_measure,
+lower(element_at(other_outcome, 3).measure) as third_other_outcome_measure,
+lower(element_at(other_outcome, 4).measure) as fourth_other_outcome_measure,
+lower(element_at(other_outcome, 5).measure) as fifth_other_outcome_measure,
 
 eligibility.sampling_method as eligibility_sampling_method,
 eligibility.gender as eligibility_gender,
@@ -380,12 +380,12 @@ eligibility.maximum_age as eligibility_maximum_age,
 eligibility.healthy_volunteers as eligibility_healthy_volunteers,
 
 
-oversight_info.has_dmc has_dmc,
-oversight_info.is_fda_regulated_drug is_fda_regulated_drug,
-oversight_info.is_fda_regulated_device is_fda_regulated_device,
-oversight_info.is_unapproved_device is_unapproved_device,
-oversight_info.is_ppsd is_ppsd,
-oversight_info.is_us_export is_us_export,
+case when oversight_info.has_dmc  = 'Yes' then 1 when oversight_info.has_dmc = 'No' then 0 else 2 end as has_dmc,
+case when oversight_info.is_fda_regulated_drug  = 'Yes' then 1 when oversight_info.is_fda_regulated_drug = 'No' then 0 else 2  end as is_fda_regulated_drug,
+case when oversight_info.is_fda_regulated_device  = 'Yes' then 1 when oversight_info.is_fda_regulated_device = 'No' then 0 else 2  end as is_fda_regulated_device,
+case when oversight_info.is_unapproved_device  = 'Yes' then 1 when oversight_info.is_unapproved_device = 'No' then 0 else 2  end as is_unapproved_device,
+case when oversight_info.is_ppsd  = 'Yes' then 1 when oversight_info.is_ppsd = 'No' then 0 else 2  end as is_ppsd,
+case when oversight_info.is_us_export  = 'Yes' then 1 when oversight_info.is_us_export = 'No' then 0 else 2 end as is_us_export,
 
 responsible_party.responsible_party_type as responsible_party_type,
 responsible_party.investigator_affiliation as investigator_affiliation,
@@ -400,5 +400,6 @@ from hsdlc.ct_studies
 where overall_status in ('Completed', 'Approved for marketing', 'Withdrawn', 'Terminated', 'Suspended') ;
 
 
-https://console.aws.amazon.com/athena/query/results/5e7a096a-0619-46d5-9e38-a41eccf96fa1/csv
-aws s3 cp s3://default-query-results-519510601754-us-east-1/5e7a096a-0619-46d5-9e38-a41eccf96fa1.csv ~/projects/ctd/DI_ETL/analytics/predict_clinical_outcome/datasets/
+https://console.aws.amazon.com/athena/query/results/47c4230f-c11a-4b84-9372-f5e29a467dd3/csv
+aws s3 cp s3://default-query-results-519510601754-us-east-1/47c4230f-c11a-4b84-9372-f5e29a467dd3.csv ~/projects/ctd/DI_ETL/analytics/predict_clinical_outcome/datasets/
+
