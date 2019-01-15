@@ -3,6 +3,7 @@ package com.vaidhyamegha;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.StringJoiner;
 
 public class App {
@@ -61,10 +62,18 @@ public class App {
                 for (String s: line.split("\\t")){
                     String field = headers[i++];
 
-                    if (dictionary.get(field).keySet().size() > 50 ){
+                    if (dictionary.get(field).keySet().size() > 50 || "status".equalsIgnoreCase(field.replaceAll("\"", ""))){
+                        newLine.add(s);
+                    } else if (s.replaceAll("[0-9.\"]","").length() == 0) {
                         newLine.add(s);
                     } else {
-                        newLine.add(field.hashCode() + "");
+                        Set<String> values = dictionary.get(field).keySet();
+                        int j=0;
+                        for(String s1 : values) {
+                            if(s1.equalsIgnoreCase(s)) break;
+                            j++;
+                        }
+                        newLine.add(j + "");
                     }
                 }
                 bos.write((newLine.toString()));

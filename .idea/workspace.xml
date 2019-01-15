@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileProcessor/FileProcessor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FileProcessor/FileProcessor.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileProcessor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FileProcessor/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FileProcessor/src/main/java/com/vaidhyamegha/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileProcessor/src/main/java/com/vaidhyamegha/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
@@ -48,30 +43,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FileProcessor/src/main/java/com/vaidhyamegha/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="58" column="58" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
+            <state relative-caret-position="705">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/io/BufferedReader.class">
+        <entry file="file://$PROJECT_DIR$/FileProcessor/FileProcessor.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FileProcessor/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3555">
-              <caret line="246" column="18" selection-start-line="246" selection-start-column="18" selection-end-line="246" selection-end-column="18" />
+            <state relative-caret-position="900">
+              <caret line="107" column="32" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets/5852f886-6363-41cd-8e08-73c0de5d8dfd.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="98025">
-              <caret line="6535" column="24" selection-start-line="6535" selection-start-column="24" selection-end-line="6535" selection-end-column="24" />
-            </state>
-          </provider>
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" rowLines="3" />
           </provider>
         </entry>
       </file>
@@ -919,7 +907,7 @@
       <workItem from="1547126599210" duration="5220000" />
       <workItem from="1547181317900" duration="27299000" />
       <workItem from="1547311789575" duration="16127000" />
-      <workItem from="1547524952448" duration="4019000" />
+      <workItem from="1547524952448" duration="8100000" />
     </task>
     <servers />
   </component>
@@ -929,7 +917,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1286325000" />
+    <option name="totallyTimeSpent" value="1290406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1163,7 +1151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FileProcessor/FileProcessor.iml" />
     <entry file="file://$PROJECT_DIR$/scripts/athena/vm_devices/v_icij_devices.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -1241,13 +1228,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="48" column="49" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileProcessor/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="107" column="32" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1407,10 +1387,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FileProcessor/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="107" column="32" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileProcessor/FileProcessor.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/FileProcessor/src/main/java/com/vaidhyamegha/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="58" column="58" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
+        <state relative-caret-position="705">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
