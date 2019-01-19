@@ -12,7 +12,7 @@ athena --db hsdlc --execute " select trialid as id1,  i.item as id2 from hsdlc.g
 
 sed -i 's/\t/|/g' links.csv
 
-cat links.csv | java WQUPC > discover.json
+cat links.csv | java -jar GraphProcessor-1.0-SNAPSHOT.jar discoverLinks 600000 discover.json
 
 
 if [[ ${mode} == 'cloud' ]]; then

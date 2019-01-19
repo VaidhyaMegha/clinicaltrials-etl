@@ -11,6 +11,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/FileProcessor/pom.xml" />
+        <option value="$PROJECT_DIR$/GraphProcessor/pom.xml" />
       </list>
     </option>
   </component>

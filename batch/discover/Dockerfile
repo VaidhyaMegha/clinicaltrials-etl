@@ -32,9 +32,8 @@ RUN export JAVA_HOME
 
 CMD ["/sbin/my_init", "/bin/bash"]
 
-COPY WQUPC.class /usr/local/dataintegration/
+COPY GraphProcessor-1.0-SNAPSHOT.jar /usr/local/dataintegration/
 COPY links.sh /usr/local/dataintegration/
-COPY athena.sh.txt /usr/local/bin/athena
 
 RUN chmod +x /usr/local/bin/athena
 RUN chmod +x /usr/local/dataintegration/links.sh
