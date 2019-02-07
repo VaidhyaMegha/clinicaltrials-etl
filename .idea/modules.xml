@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/DI_ETL.iml" filepath="$PROJECT_DIR$/DI_ETL.iml" />
       <module fileurl="file://$PROJECT_DIR$/FileProcessor/FileProcessor.iml" filepath="$PROJECT_DIR$/FileProcessor/FileProcessor.iml" />
       <module fileurl="file://$PROJECT_DIR$/GraphProcessor/GraphProcessor.iml" filepath="$PROJECT_DIR$/GraphProcessor/GraphProcessor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StringSearch/StringSearch.iml" filepath="$PROJECT_DIR$/StringSearch/StringSearch.iml" />
     </modules>
   </component>
 </project>

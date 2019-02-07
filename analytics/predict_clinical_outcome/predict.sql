@@ -115,13 +115,13 @@ https://console.aws.amazon.com/athena/query/results/a10bcb18-bc6a-4e09-af85-7f57
 aws s3 cp s3://default-query-results-519510601754-us-east-1/a10bcb18-bc6a-4e09-af85-7f577861f9fb.csv ~/projects/ctd/DI_ETL/analytics/predict_clinical_outcome/datasets/
 
 select p.mesh_term_condition, count(1) as cnt
-from ct_studies c cross join unnest(cast(json_extract(condition_browse, '$') as array(JSON))) as p(mesh_term_condition)
+from ct_studies c cross join unnest(cast(cast(condition_browse, '$') as array(JSON))) as p(mesh_term_condition)
 group by mesh_term_condition
 https://console.aws.amazon.com/athena/query/results/1238f5fd-5a89-4bc1-9efd-6b2222c6794a/csv
 aws s3 cp s3://default-query-results-519510601754-us-east-1/1238f5fd-5a89-4bc1-9efd-6b2222c6794a.csv ~/projects/ctd/DI_ETL/analytics/predict_clinical_outcome/datasets/
 
 select p.mesh_term_intervention, count(1) as cnt
-from ct_studies c cross join unnest(cast(json_extract(intervention_browse, '$') as array(JSON))) as p(mesh_term_intervention)
+from ct_studies c cross join unnest(cast(cast(intervention_browse, '$') as array(JSON))) as p(mesh_term_intervention)
 group by mesh_term_intervention
 https://console.aws.amazon.com/athena/query/results/a7cec982-743b-4c53-a391-ad3ab03d4bf2/csv
 aws s3 cp s3://default-query-results-519510601754-us-east-1/a7cec982-743b-4c53-a391-ad3ab03d4bf2.csv ~/projects/ctd/DI_ETL/analytics/predict_clinical_outcome/datasets/
@@ -403,3 +403,229 @@ where overall_status in ('Completed', 'Approved for marketing', 'Withdrawn', 'Te
 https://console.aws.amazon.com/athena/query/results/47c4230f-c11a-4b84-9372-f5e29a467dd3/csv
 aws s3 cp s3://default-query-results-519510601754-us-east-1/47c4230f-c11a-4b84-9372-f5e29a467dd3.csv ~/projects/ctd/DI_ETL/analytics/predict_clinical_outcome/datasets/
 
+
+
+
+select
+concat (official_title,phase, study_type, number_of_arms, number_of_groups, target_duration,
+keyword, condition_browse, intervention_browse, cast(cast(study_design_info as json) as varchar), cast(cast(sponsors as json) as varchar ),
+cast(cast(enrollment as json) as varchar), cast(cast( location as json) as varchar), cast(cast( primary_outcome as json) as varchar),
+cast(cast( secondary_outcome as json) as varchar), cast(cast( other_outcome as json) as varchar),
+cast(cast(eligibility as json) as varchar), cast(cast( oversight_info as json) as varchar), cast(cast( responsible_party as json) as varchar )),
+from hsdlc.ct_studies where overall_status in ('Completed', 'Approved for marketing');
+
+
+
+select
+concat (official_title,phase, study_type, number_of_arms, number_of_groups, target_duration,
+keyword, condition_browse, intervention_browse, cast(cast(study_design_info as json) as varchar), cast(cast(sponsors as json) as varchar ),
+cast(cast(enrollment as json) as varchar), cast(cast( location as json) as varchar), cast(cast( primary_outcome as json) as varchar),
+cast(cast( secondary_outcome as json) as varchar), cast(cast( other_outcome as json) as varchar),
+cast(cast(eligibility as json) as varchar), cast(cast( oversight_info as json) as varchar), cast(cast( responsible_party as json) as varchar)),
+from hsdlc.ct_studies where overall_status in ('Withdrawn', 'Terminated', 'Suspended');
+
+
+
+select
+official_title,phase, study_type, number_of_arms, number_of_groups, target_duration,
+keyword, condition_browse, intervention_browse, study_design_info, sponsors,
+enrollment, location, primary_outcome, secondary_outcome, other_outcome,
+eligibility, oversight_info, responsible_party
+from hsdlc.ct_studies where overall_status in ('Completed', 'Approved for marketing');
+
+5f668162-bc92-429b-85d3-37eb34d572a8
+
+select
+official_title,phase, study_type, number_of_arms, number_of_groups, target_duration,
+keyword, condition_browse, intervention_browse, study_design_info, sponsors,
+enrollment, location, primary_outcome, secondary_outcome, other_outcome,
+eligibility, oversight_info, responsible_party
+from hsdlc.ct_studies where overall_status in ('Withdrawn', 'Terminated', 'Suspended');
+
+519ec713-437e-480a-b472-2a111a39f319
+
+
+select official_title,phase, study_type, number_of_arms, number_of_groups, target_duration,
+
+lower(json_extract_scalar(json_parse(keyword), '$[1]')) as first_keyword,
+lower(json_extract_scalar(json_parse(keyword), '$[2]')) as second_keyword,
+lower(json_extract_scalar(json_parse(keyword), '$[3]')) as third_keyword,
+lower(json_extract_scalar(json_parse(keyword), '$[4]')) as fourth_keyword,
+lower(json_extract_scalar(json_parse(keyword), '$[5]')) as fifth_keyword,
+
+lower(json_extract_scalar(json_parse(condition_browse), '$[1]')) as first_condition,
+lower(json_extract_scalar(json_parse(condition_browse), '$[2]')) as second_condition,
+lower(json_extract_scalar(json_parse(condition_browse), '$[3]')) as third_condition,
+lower(json_extract_scalar(json_parse(condition_browse), '$[4]')) as fourth_condition,
+lower(json_extract_scalar(json_parse(condition_browse), '$[5]')) as fifth_condition,
+
+lower(json_extract_scalar(json_parse(intervention_browse), '$[1]')) as first_intervention,
+lower(json_extract_scalar(json_parse(intervention_browse), '$[2]')) as second_intervention,
+lower(json_extract_scalar(json_parse(intervention_browse), '$[3]')) as third_intervention,
+lower(json_extract_scalar(json_parse(intervention_browse), '$[4]')) as fourth_intervention,
+lower(json_extract_scalar(json_parse(intervention_browse), '$[5]')) as fifth_intervention,
+
+study_design_info.allocation as allocation,
+study_design_info.intervention_model as intervention_model,
+study_design_info.primary_purpose as primary_purpose,
+study_design_info.observational_model as observational_model,
+study_design_info.time_perspective as time_perspective,
+study_design_info.masking as masking,
+sponsors.lead_sponsor.agency_class as lead_sponsor_agency_class,
+
+element_at(sponsors.collaborator, 1).agency_class as first_collaborator_agency_class,
+element_at(sponsors.collaborator, 2).agency_class as second_collaborator_agency_class,
+element_at(sponsors.collaborator, 3).agency_class as third_collaborator_agency_class,
+element_at(sponsors.collaborator, 4).agency_class as fourth_collaborator_agency_class,
+element_at(sponsors.collaborator, 5).agency_class as fifth_collaborator_agency_class,
+
+enrollment.type as enrollment_type,
+case when enrollment.text_node_value  = '' then '0' else enrollment.text_node_value end as enrollment_value,
+
+element_at(location, 1).facility.address.zip as first_location_zip,
+element_at(location, 1).facility.address.country as first_location_country,
+
+element_at(location, 2).facility.address.zip as second_location_zip,
+element_at(location, 2).facility.address.country as second_location_country,
+
+element_at(location, 3).facility.address.zip as third_location_zip,
+element_at(location, 3).facility.address.country as third_location_country,
+
+element_at(location, 4).facility.address.zip as fourth_location_zip,
+element_at(location, 4).facility.address.country as fourth_location_country,
+
+element_at(location, 5).facility.address.zip as fifth_location_zip,
+element_at(location, 5).facility.address.country as fifth_location_country,
+
+lower(element_at(primary_outcome, 1).measure) as first_primary_outcome_measure,
+lower(element_at(primary_outcome, 2).measure) as second_primary_outcome_measure,
+lower(element_at(primary_outcome, 3).measure) as third_primary_outcome_measure,
+lower(element_at(primary_outcome, 4).measure) as fourth_primary_outcome_measure,
+lower(element_at(primary_outcome, 5).measure) as fifth_primary_outcome_measure,
+
+lower(element_at(secondary_outcome, 1).measure) as first_secondary_outcome_measure,
+lower(element_at(secondary_outcome, 2).measure) as second_secondary_outcome_measure,
+lower(element_at(secondary_outcome, 3).measure) as third_secondary_outcome_measure,
+lower(element_at(secondary_outcome, 4).measure) as fourth_secondary_outcome_measure,
+lower(element_at(secondary_outcome, 5).measure) as fifth_secondary_outcome_measure,
+
+lower(element_at(other_outcome, 1).measure) as first_other_outcome_measure,
+lower(element_at(other_outcome, 2).measure) as second_other_outcome_measure,
+lower(element_at(other_outcome, 3).measure) as third_other_outcome_measure,
+lower(element_at(other_outcome, 4).measure) as fourth_other_outcome_measure,
+lower(element_at(other_outcome, 5).measure) as fifth_other_outcome_measure,
+
+eligibility.sampling_method as eligibility_sampling_method,
+eligibility.gender as eligibility_gender,
+eligibility.minimum_age as eligibility_minimum_age,
+eligibility.maximum_age as eligibility_maximum_age,
+eligibility.healthy_volunteers as eligibility_healthy_volunteers,
+
+
+case when oversight_info.has_dmc  = 'Yes' then 1 when oversight_info.has_dmc = 'No' then 0 else 2 end as has_dmc,
+case when oversight_info.is_fda_regulated_drug  = 'Yes' then 1 when oversight_info.is_fda_regulated_drug = 'No' then 0 else 2  end as is_fda_regulated_drug,
+case when oversight_info.is_fda_regulated_device  = 'Yes' then 1 when oversight_info.is_fda_regulated_device = 'No' then 0 else 2  end as is_fda_regulated_device,
+case when oversight_info.is_unapproved_device  = 'Yes' then 1 when oversight_info.is_unapproved_device = 'No' then 0 else 2  end as is_unapproved_device,
+case when oversight_info.is_ppsd  = 'Yes' then 1 when oversight_info.is_ppsd = 'No' then 0 else 2  end as is_ppsd,
+case when oversight_info.is_us_export  = 'Yes' then 1 when oversight_info.is_us_export = 'No' then 0 else 2 end as is_us_export,
+
+responsible_party.responsible_party_type as responsible_party_type,
+responsible_party.investigator_affiliation as investigator_affiliation,
+responsible_party.invewastigator_title as invewastigator_title
+
+from hsdlc.ct_studies where overall_status in ('Completed', 'Approved for marketing');
+
+01d9895a-460b-4ffe-a971-649f9f0e7936
+
+
+select official_title,phase, study_type, number_of_arms, number_of_groups, target_duration,
+
+lower(json_extract_scalar(json_parse(keyword), '$[1]')) as first_keyword,
+lower(json_extract_scalar(json_parse(keyword), '$[2]')) as second_keyword,
+lower(json_extract_scalar(json_parse(keyword), '$[3]')) as third_keyword,
+lower(json_extract_scalar(json_parse(keyword), '$[4]')) as fourth_keyword,
+lower(json_extract_scalar(json_parse(keyword), '$[5]')) as fifth_keyword,
+
+lower(json_extract_scalar(json_parse(condition_browse), '$[1]')) as first_condition,
+lower(json_extract_scalar(json_parse(condition_browse), '$[2]')) as second_condition,
+lower(json_extract_scalar(json_parse(condition_browse), '$[3]')) as third_condition,
+lower(json_extract_scalar(json_parse(condition_browse), '$[4]')) as fourth_condition,
+lower(json_extract_scalar(json_parse(condition_browse), '$[5]')) as fifth_condition,
+
+lower(json_extract_scalar(json_parse(intervention_browse), '$[1]')) as first_intervention,
+lower(json_extract_scalar(json_parse(intervention_browse), '$[2]')) as second_intervention,
+lower(json_extract_scalar(json_parse(intervention_browse), '$[3]')) as third_intervention,
+lower(json_extract_scalar(json_parse(intervention_browse), '$[4]')) as fourth_intervention,
+lower(json_extract_scalar(json_parse(intervention_browse), '$[5]')) as fifth_intervention,
+
+study_design_info.allocation as allocation,
+study_design_info.intervention_model as intervention_model,
+study_design_info.primary_purpose as primary_purpose,
+study_design_info.observational_model as observational_model,
+study_design_info.time_perspective as time_perspective,
+study_design_info.masking as masking,
+sponsors.lead_sponsor.agency_class as lead_sponsor_agency_class,
+
+element_at(sponsors.collaborator, 1).agency_class as first_collaborator_agency_class,
+element_at(sponsors.collaborator, 2).agency_class as second_collaborator_agency_class,
+element_at(sponsors.collaborator, 3).agency_class as third_collaborator_agency_class,
+element_at(sponsors.collaborator, 4).agency_class as fourth_collaborator_agency_class,
+element_at(sponsors.collaborator, 5).agency_class as fifth_collaborator_agency_class,
+
+enrollment.type as enrollment_type,
+case when enrollment.text_node_value  = '' then '0' else enrollment.text_node_value end as enrollment_value,
+
+element_at(location, 1).facility.address.zip as first_location_zip,
+element_at(location, 1).facility.address.country as first_location_country,
+
+element_at(location, 2).facility.address.zip as second_location_zip,
+element_at(location, 2).facility.address.country as second_location_country,
+
+element_at(location, 3).facility.address.zip as third_location_zip,
+element_at(location, 3).facility.address.country as third_location_country,
+
+element_at(location, 4).facility.address.zip as fourth_location_zip,
+element_at(location, 4).facility.address.country as fourth_location_country,
+
+element_at(location, 5).facility.address.zip as fifth_location_zip,
+element_at(location, 5).facility.address.country as fifth_location_country,
+
+lower(element_at(primary_outcome, 1).measure) as first_primary_outcome_measure,
+lower(element_at(primary_outcome, 2).measure) as second_primary_outcome_measure,
+lower(element_at(primary_outcome, 3).measure) as third_primary_outcome_measure,
+lower(element_at(primary_outcome, 4).measure) as fourth_primary_outcome_measure,
+lower(element_at(primary_outcome, 5).measure) as fifth_primary_outcome_measure,
+
+lower(element_at(secondary_outcome, 1).measure) as first_secondary_outcome_measure,
+lower(element_at(secondary_outcome, 2).measure) as second_secondary_outcome_measure,
+lower(element_at(secondary_outcome, 3).measure) as third_secondary_outcome_measure,
+lower(element_at(secondary_outcome, 4).measure) as fourth_secondary_outcome_measure,
+lower(element_at(secondary_outcome, 5).measure) as fifth_secondary_outcome_measure,
+
+lower(element_at(other_outcome, 1).measure) as first_other_outcome_measure,
+lower(element_at(other_outcome, 2).measure) as second_other_outcome_measure,
+lower(element_at(other_outcome, 3).measure) as third_other_outcome_measure,
+lower(element_at(other_outcome, 4).measure) as fourth_other_outcome_measure,
+lower(element_at(other_outcome, 5).measure) as fifth_other_outcome_measure,
+
+eligibility.sampling_method as eligibility_sampling_method,
+eligibility.gender as eligibility_gender,
+eligibility.minimum_age as eligibility_minimum_age,
+eligibility.maximum_age as eligibility_maximum_age,
+eligibility.healthy_volunteers as eligibility_healthy_volunteers,
+
+
+case when oversight_info.has_dmc  = 'Yes' then 1 when oversight_info.has_dmc = 'No' then 0 else 2 end as has_dmc,
+case when oversight_info.is_fda_regulated_drug  = 'Yes' then 1 when oversight_info.is_fda_regulated_drug = 'No' then 0 else 2  end as is_fda_regulated_drug,
+case when oversight_info.is_fda_regulated_device  = 'Yes' then 1 when oversight_info.is_fda_regulated_device = 'No' then 0 else 2  end as is_fda_regulated_device,
+case when oversight_info.is_unapproved_device  = 'Yes' then 1 when oversight_info.is_unapproved_device = 'No' then 0 else 2  end as is_unapproved_device,
+case when oversight_info.is_ppsd  = 'Yes' then 1 when oversight_info.is_ppsd = 'No' then 0 else 2  end as is_ppsd,
+case when oversight_info.is_us_export  = 'Yes' then 1 when oversight_info.is_us_export = 'No' then 0 else 2 end as is_us_export,
+
+responsible_party.responsible_party_type as responsible_party_type,
+responsible_party.investigator_affiliation as investigator_affiliation,
+responsible_party.invewastigator_title as invewastigator_title
+
+from hsdlc.ct_studies where overall_status in ('Withdrawn', 'Terminated', 'Suspended');
+
+3f637e84-cc2e-46cc-aa05-d60d6e5a7b51

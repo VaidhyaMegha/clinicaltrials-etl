@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/FileProcessor/pom.xml" />
         <option value="$PROJECT_DIR$/GraphProcessor/pom.xml" />
+        <option value="$PROJECT_DIR$/StringSearch/pom.xml" />
       </list>
     </option>
   </component>
