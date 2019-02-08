@@ -2,7 +2,7 @@ package com.vaidhyamegha;
 
 
 public class TrieST<Value> {
-    private static final int R = 256;        // extended ASCII
+    private static final int R = 4;        // ATCG
     private Node root;      // root of trie
     private int n;          // number of keys in trie
 
@@ -29,8 +29,13 @@ public class TrieST<Value> {
     private Node get(Node x, String key, int d) {
         if (x == null) return null;
         if (d == key.length()) return x;
-        char c = key.charAt(d);
+        int c = charToIndex(key, d);
         return get(x.next[c], key, d + 1);
+    }
+
+    private int charToIndex(String key, int d) {
+        char cd = Character.toUpperCase(key.charAt(d));
+        return (cd == 'A' ? 0 : (cd == 'T' ? 1 : (cd == 'C' ? 2 : 3))) ;
     }
 
     private void put(String key, Value val) {
@@ -46,7 +51,7 @@ public class TrieST<Value> {
             x.val = val;
             return x;
         }
-        char c = key.charAt(d);
+        int c = charToIndex(key, d);
         x.next[c] = put(x.next[c], key, val, d + 1);
         return x;
     }
@@ -74,7 +79,7 @@ public class TrieST<Value> {
         if (x == null) return;
         if (x.val != null) results.enqueue(prefix.toString());
         for (char c = 0; c < R; c++) {
-            prefix.append(c);
+            prefix.append(c == 0 ? 'A' : c == 1 ? 'T' : c == 2 ? 'C' : 'G');
             collect(x.next[c], prefix, results);
             prefix.deleteCharAt(prefix.length() - 1);
         }
@@ -93,15 +98,16 @@ public class TrieST<Value> {
             results.enqueue(prefix.toString());
         if (d == pattern.length())
             return;
-        char c = pattern.charAt(d);
-        if (c == '.') {
+        char cd = pattern.charAt(d);
+        int c = charToIndex(pattern, d);
+        if (cd == '.') {
             for (char ch = 0; ch < R; ch++) {
                 prefix.append(ch);
-                collect(x.next[ch], prefix, pattern, results);
+                collect(x.next[c], prefix, pattern, results);
                 prefix.deleteCharAt(prefix.length() - 1);
             }
         } else {
-            prefix.append(c);
+            prefix.append(cd);
             collect(x.next[c], prefix, pattern, results);
             prefix.deleteCharAt(prefix.length() - 1);
         }
@@ -118,7 +124,7 @@ public class TrieST<Value> {
         if (x == null) return length;
         if (x.val != null) length = d;
         if (d == query.length()) return length;
-        char c = query.charAt(d);
+        int c = charToIndex(query, d);
         return longestPrefixOf(x.next[c], query, d + 1, length);
     }
 
@@ -133,7 +139,7 @@ public class TrieST<Value> {
             if (x.val != null) n--;
             x.val = null;
         } else {
-            char c = key.charAt(d);
+            int c = charToIndex(key, d);
             x.next[c] = delete(x.next[c], key, d + 1);
         }
 

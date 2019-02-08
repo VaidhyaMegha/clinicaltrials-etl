@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/StringSearch/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StringSearch/StringSearch.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StringSearch/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/StdIn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/StdOut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileProcessor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FileProcessor/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphProcessor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GraphProcessor/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java" beforeDir="false" afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
@@ -50,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="96" column="19" lean-forward="true" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+            <state relative-caret-position="210">
+              <caret line="81" column="72" lean-forward="true" selection-start-line="81" selection-start-column="72" selection-end-line="81" selection-end-column="72" />
               <folding>
                 <element signature="e#4954#4955#0" expanded="true" />
                 <element signature="e#4978#4979#0" expanded="true" />
@@ -223,7 +209,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>\s</find>
       <find>athena</find>
       <find>1.8</find>
       <find>PI</find>
@@ -253,6 +238,7 @@
       <find>enrollment</find>
       <find>Professor Dr. med.</find>
       <find>, '$'</find>
+      <find>charAt</find>
     </findStrings>
     <replaceStrings>
       <replace>@</replace>
@@ -382,11 +368,11 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="65" />
     <option name="y" value="28" />
-    <option name="width" value="1602" />
-    <option name="height" value="840" />
+    <option name="width" value="1600" />
+    <option name="height" value="811" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -401,17 +387,6 @@
             <path>
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-              <item name="discover" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
@@ -1071,7 +1046,7 @@
       <workItem from="1548780295217" duration="600000" />
       <workItem from="1549031444260" duration="3902000" />
       <workItem from="1549396553885" duration="2369000" />
-      <workItem from="1549443119250" duration="7292000" />
+      <workItem from="1549443119250" duration="11337000" />
     </task>
     <servers />
   </component>
@@ -1081,13 +1056,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1335759000" />
+    <option name="totallyTimeSpent" value="1339804000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="65" y="28" width="1600" height="811" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.24820343" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.2889318" />
       <window_info id="Structure" order="1" sideWeight="0.5032189" side_tool="true" weight="0.28468767" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -1623,8 +1598,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="96" column="19" lean-forward="true" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+        <state relative-caret-position="210">
+          <caret line="81" column="72" lean-forward="true" selection-start-line="81" selection-start-column="72" selection-end-line="81" selection-end-column="72" />
           <folding>
             <element signature="e#4954#4955#0" expanded="true" />
             <element signature="e#4978#4979#0" expanded="true" />
