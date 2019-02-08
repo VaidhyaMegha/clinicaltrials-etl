@@ -16,7 +16,7 @@
       <module name="demo" target="1.8" />
       <module name="FileProcessor" target="8" />
       <module name="GraphProcessor" target="8" />
-      <module name="StringSearch" target="8" />
+      <module name="StringSearch" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

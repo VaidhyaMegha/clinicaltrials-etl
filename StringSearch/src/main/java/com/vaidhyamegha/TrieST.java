@@ -1,6 +1,9 @@
 package com.vaidhyamegha;
 
 
+import java.io.*;
+import java.nio.ByteBuffer;
+
 public class TrieST<Value> {
     private static final int R = 4;        // ATCG
     private Node root;      // root of trie
@@ -152,7 +155,6 @@ public class TrieST<Value> {
     }
 
     public static void main(String[] args) {
-
         // build symbol table from standard input
         TrieST<Integer> st = new TrieST<>();
         for (int i = 0; !StdIn.isEmpty(); i++) {
@@ -169,6 +171,23 @@ public class TrieST<Value> {
             StdOut.println();
         }
 
+        int ml = Integer.parseInt(args[1]);
+
+        try (BufferedInputStream r = new BufferedInputStream(new FileInputStream(new File(args[0])))) {
+            byte[] l = new byte[ml];
+            int rc = -1;
+
+            while ((rc = r.read(l)) !=  -1){
+                String m = new String(l);
+
+                StdOut.println("-----------------------");
+                StdOut.println("keysWithPrefix(" + m + "):");
+                st.keysWithPrefix(m).forEach(StdOut::println);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
         StdOut.println("longestPrefixOf(\"CTGAC\"):");
         StdOut.println(st.longestPrefixOf("CTGAC"));
         StdOut.println();
