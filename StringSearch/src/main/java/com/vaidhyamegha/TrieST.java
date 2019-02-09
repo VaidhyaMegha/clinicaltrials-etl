@@ -3,6 +3,10 @@ package com.vaidhyamegha;
 
 import java.io.*;
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class TrieST<Value> {
     private static final int R = 4;        // ATCG
@@ -173,17 +177,42 @@ public class TrieST<Value> {
 
         int ml = Integer.parseInt(args[1]);
 
+        Map<String, List<String>> map = new HashMap<>();
+
         try (BufferedInputStream r = new BufferedInputStream(new FileInputStream(new File(args[0])))) {
-            byte[] l = new byte[ml];
             int rc = -1;
+            StringBuilder sb = new StringBuilder();
 
-            while ((rc = r.read(l)) !=  -1){
-                String m = new String(l);
+            while ((rc = r.read()) !=  -1){
+                char c = Character.toUpperCase((char) rc);
+                if(c == '\r' || c == '\n') continue;
+                else if(c != 'A' && c != 'T' && c != 'C' && c != 'G') {
+                    if (sb.length() > 0) sb.delete(0, sb.length());
+                    continue;
+                }
 
-                StdOut.println("-----------------------");
-                StdOut.println("keysWithPrefix(" + m + "):");
-                st.keysWithPrefix(m).forEach(StdOut::println);
+                sb.append(c);
+
+                if(sb.length() < ml) continue;
+
+                String m = sb.toString();
+                Iterable<String> i = st.keysWithPrefix(m);
+
+                i.forEach(s -> {
+                    map.computeIfAbsent(m, k -> new ArrayList<>());
+                    map.get(m).add(s);
+                });
+
+                sb.deleteCharAt(0);
             }
+
+            map.forEach((k,v) -> {
+                StdOut.println("-----------------------");
+                StdOut.println("keys With Prefix(" + k + "):");
+
+                v.forEach(StdOut::println);
+            });
+
         } catch (IOException e) {
             e.printStackTrace();
         }
