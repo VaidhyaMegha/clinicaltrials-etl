@@ -187,24 +187,24 @@ public class TrieST<Value> {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
-        StdOut.println("longestPrefixOf(\"CTGAC\"):");
-        StdOut.println(st.longestPrefixOf("CTGAC"));
-        StdOut.println();
 
-        StdOut.println("longestPrefixOf(\"AGTCAC\"):");
-        StdOut.println(st.longestPrefixOf("AGTCAC"));
-        StdOut.println();
-
-        StdOut.println("keysThatMatch(\".*ATGGCGCGGGTTACC.*\"):");
-        st.keysThatMatch(".*ATGGCGCGGGTTACC.*").forEach(StdOut::println);
-        StdOut.println();
-
-        StdOut.println("keysWithPrefix(\"GCT\"):");
-        st.keysWithPrefix("GCT").forEach(StdOut::println);
-        StdOut.println();
-
-        StdOut.println("keysThatMatch(\".AC.G.\"):");
-        st.keysThatMatch(".AC.G.").forEach(StdOut::println);
+//        StdOut.println("longestPrefixOf(\"CTGAC\"):");
+//        StdOut.println(st.longestPrefixOf("CTGAC"));
+//        StdOut.println();
+//
+//        StdOut.println("longestPrefixOf(\"AGTCAC\"):");
+//        StdOut.println(st.longestPrefixOf("AGTCAC"));
+//        StdOut.println();
+//
+//        StdOut.println("keysThatMatch(\".*ATGGCGCGGGTTACC.*\"):");
+//        st.keysThatMatch(".*ATGGCGCGGGTTACC.*").forEach(StdOut::println);
+//        StdOut.println();
+//
+//        StdOut.println("keysWithPrefix(\"GCT\"):");
+//        st.keysWithPrefix("GCT").forEach(StdOut::println);
+//        StdOut.println();
+//
+//        StdOut.println("keysThatMatch(\".AC.G.\"):");
+//        st.keysThatMatch(".AC.G.").forEach(StdOut::println);
     }
 }
