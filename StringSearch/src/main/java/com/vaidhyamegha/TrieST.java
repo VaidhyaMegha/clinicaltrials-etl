@@ -1,14 +1,7 @@
 package com.vaidhyamegha;
 
 
-import java.io.*;
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-public class TrieST<Value> {
+public class TrieST<T> {
     private static final int R = 4;        // ATCG
     private Node root;      // root of trie
     private int n;          // number of keys in trie
@@ -21,11 +14,11 @@ public class TrieST<Value> {
     public TrieST() {
     }
 
-    private Value get(String key) {
+    public T get(String key) {
         if (key == null) throw new IllegalArgumentException("argument to get() is null");
         Node x = get(root, key, 0);
         if (x == null) return null;
-        return (Value) x.val;
+        return (T) x.val;
     }
 
     public boolean contains(String key) {
@@ -45,13 +38,13 @@ public class TrieST<Value> {
         return (cd == 'A' ? 0 : (cd == 'T' ? 1 : (cd == 'C' ? 2 : 3))) ;
     }
 
-    private void put(String key, Value val) {
+    public void put(String key, T val) {
         if (key == null) throw new IllegalArgumentException("first argument to put() is null");
         if (val == null) delete(key);
         else root = put(root, key, val, 0);
     }
 
-    private Node put(Node x, String key, Value val, int d) {
+    private Node put(Node x, String key, T val, int d) {
         if (x == null) x = new Node();
         if (d == key.length()) {
             if (x.val == null) n++;
@@ -158,82 +151,4 @@ public class TrieST<Value> {
         return null;
     }
 
-    public static void main(String[] args) {
-        // build symbol table from standard input
-        TrieST<Integer> st = new TrieST<>();
-        for (int i = 0; !StdIn.isEmpty(); i++) {
-            String key = StdIn.readString();
-            st.put(key, i);
-        }
-
-        // print results
-        if (st.size() < 100) {
-            StdOut.println("keys(\"\"):");
-            for (String key : st.keys()) {
-                StdOut.println(key + " " + st.get(key));
-            }
-            StdOut.println();
-        }
-
-        int ml = Integer.parseInt(args[1]);
-
-        Map<String, List<String>> map = new HashMap<>();
-
-        try (BufferedInputStream r = new BufferedInputStream(new FileInputStream(new File(args[0])))) {
-            int rc = -1;
-            StringBuilder sb = new StringBuilder();
-
-            while ((rc = r.read()) !=  -1){
-                char c = Character.toUpperCase((char) rc);
-                if(c == '\r' || c == '\n') continue;
-                else if(c != 'A' && c != 'T' && c != 'C' && c != 'G') {
-                    if (sb.length() > 0) sb.delete(0, sb.length());
-                    continue;
-                }
-
-                sb.append(c);
-
-                if(sb.length() < ml) continue;
-
-                String m = sb.toString();
-                Iterable<String> i = st.keysWithPrefix(m);
-
-                i.forEach(s -> {
-                    map.computeIfAbsent(m, k -> new ArrayList<>());
-                    map.get(m).add(s);
-                });
-
-                sb.deleteCharAt(0);
-            }
-
-            map.forEach((k,v) -> {
-                StdOut.println("-----------------------");
-                StdOut.println("keys With Prefix(" + k + "):");
-
-                v.forEach(StdOut::println);
-            });
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-//        StdOut.println("longestPrefixOf(\"CTGAC\"):");
-//        StdOut.println(st.longestPrefixOf("CTGAC"));
-//        StdOut.println();
-//
-//        StdOut.println("longestPrefixOf(\"AGTCAC\"):");
-//        StdOut.println(st.longestPrefixOf("AGTCAC"));
-//        StdOut.println();
-//
-//        StdOut.println("keysThatMatch(\".*ATGGCGCGGGTTACC.*\"):");
-//        st.keysThatMatch(".*ATGGCGCGGGTTACC.*").forEach(StdOut::println);
-//        StdOut.println();
-//
-//        StdOut.println("keysWithPrefix(\"GCT\"):");
-//        st.keysWithPrefix("GCT").forEach(StdOut::println);
-//        StdOut.println();
-//
-//        StdOut.println("keysThatMatch(\".AC.G.\"):");
-//        st.keysThatMatch(".AC.G.").forEach(StdOut::println);
-    }
 }
