@@ -59,10 +59,12 @@ class Trie {
     private void collect(Node x, StringBuilder prefix, Queue<String> results) {
         if (x == null) return;
         if (x.next == null) results.enqueue(prefix.toString());
-        for (char c = 0; c < R; c++) {
-            prefix.append(c == 0 ? 'A' : c == 1 ? 'T' : c == 2 ? 'C' : 'G');
-            collect(x.next[c], prefix, results);
-            prefix.deleteCharAt(prefix.length() - 1);
+        else {
+            for (char c = 0; c < R; c++) {
+                prefix.append(c == 0 ? 'A' : c == 1 ? 'T' : c == 2 ? 'C' : 'G');
+                collect(x.next[c], prefix, results);
+                prefix.deleteCharAt(prefix.length() - 1);
+            }
         }
     }
 }
