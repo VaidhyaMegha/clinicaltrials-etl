@@ -5,9 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.*;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.*;
 import java.util.stream.IntStream;
 
 public class App {
@@ -32,21 +30,20 @@ public class App {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
         String fileName = args[0];
         ml = Integer.parseInt(args[1]);
         THRESHOLD = args.length > 2 ? Integer.parseInt(args[2]) : 10;
         bq = args.length > 3 ? new LinkedBlockingQueue<>(Integer.parseInt(args[3])) : new LinkedBlockingQueue<>();
-        int N_CONSUMERS = Runtime.getRuntime().availableProcessors();
-        Thread[] threads = new Thread[N_CONSUMERS];
+        int numConsumers =  args.length > 4 ? Integer.parseInt(args[4]) : 4;
+
+        ExecutorService executor = Executors.newFixedThreadPool(numConsumers);
+        CompletionService completion = new ExecutorCompletionService<>(executor);
 
         st = buildTrie();
 
         try (BufferedInputStream r = new BufferedInputStream(new FileInputStream(new File(fileName)))) {
-            IntStream.range(0, N_CONSUMERS).forEach(j -> {
-                threads[j] = new Thread(new Consumer());
-                threads[j].start();
-            });
+            IntStream.range(0, numConsumers).forEach(j -> completion.submit(new Consumer()));
 
             readStream(r);
         } catch (IOException e) {
@@ -55,7 +52,11 @@ public class App {
 
         reading = false;
 
-        for (Thread thread : threads) thread.join();
+        // wait for all tasks to complete.
+        for (int i = 0; i < numConsumers; ++i)
+            StdOut.println("****************" + completion.take().get() + " completed *****************"); // will block until the next sub task has completed.
+
+        executor.shutdown();
 
         map.forEach((k,v) -> {
             StdOut.println("-----------------------");
@@ -88,10 +89,10 @@ public class App {
         }
     }
 
-    private static class Consumer implements Runnable {
+    private static class Consumer implements Callable {
 
         @Override
-        public void run() {
+        public Boolean call() {
             try {
                 while(bq.size() > 0 || reading) {
                     StringWithLocation full = bq.take();
@@ -106,10 +107,13 @@ public class App {
                         map.get(full.str).add(new StringWithLocation(at, s));
                     });
                 }
+                return true;
             } catch (InterruptedException e) {
                 e.printStackTrace();
+                return false;
             }
         }
+
     }
 
     private static Trie buildTrie() {
