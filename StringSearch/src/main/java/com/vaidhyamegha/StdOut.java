@@ -129,5 +129,4 @@ public final class StdOut {
         StdOut.println(true);
         StdOut.printf("%.6f\n", 1.0 / 7.0);
     }
-
 }
