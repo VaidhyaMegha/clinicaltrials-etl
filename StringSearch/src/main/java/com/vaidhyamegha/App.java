@@ -87,10 +87,7 @@ public class App {
         // print results
         if (st.size() < 100) {
             StdOut.println("keys(\"\"):");
-            for (String key : st.keys()) {
-                StdOut.println(key);
-            }
-            StdOut.println();
+            st.keys().forEach(StdOut::println);
         }
         return st;
     }

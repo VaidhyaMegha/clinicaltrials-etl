@@ -7,7 +7,7 @@ class Trie {
     private int n;          // number of keys in trie
 
     private static class Node {
-        private Node[] next = new Node[R];
+        private Node[] next;
     }
 
     Trie() { }
@@ -51,13 +51,14 @@ class Trie {
             return x;
         }
         int c = charToIndex(key, d);
+        if (x.next == null) x.next = new Node[R];
         x.next[c] = put(x.next[c], key,d + 1);
         return x;
     }
 
     private void collect(Node x, StringBuilder prefix, Queue<String> results) {
         if (x == null) return;
-        results.enqueue(prefix.toString());
+        if (x.next == null) results.enqueue(prefix.toString());
         for (char c = 0; c < R; c++) {
             prefix.append(c == 0 ? 'A' : c == 1 ? 'T' : c == 2 ? 'C' : 'G');
             collect(x.next[c], prefix, results);

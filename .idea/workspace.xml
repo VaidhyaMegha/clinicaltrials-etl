@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StringSearch/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/StringSearch/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
@@ -40,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+            <state relative-caret-position="690">
+              <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
               <folding>
                 <element signature="e#1528#1529#0" expanded="true" />
                 <element signature="e#1569#1570#0" expanded="true" />
@@ -53,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="710">
-              <caret line="90" column="34" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
+            <state relative-caret-position="870">
+              <caret line="89" column="47" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
               <folding>
                 <element signature="e#445#446#0" expanded="true" />
                 <element signature="e#531#532#0" expanded="true" />
@@ -119,7 +117,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StringSearch/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="165">
               <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
@@ -272,9 +270,9 @@
         <option value="$PROJECT_DIR$/StringSearch/pom.xml" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/SimpleTrie.java" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/StdOut.java" />
-        <option value="$PROJECT_DIR$/StringSearch/README.md" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java" />
+        <option value="$PROJECT_DIR$/StringSearch/README.md" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java" />
       </list>
     </option>
@@ -950,7 +948,7 @@
       <workItem from="1549396553885" duration="2369000" />
       <workItem from="1549443119250" duration="18219000" />
       <workItem from="1549704028200" duration="31000" />
-      <workItem from="1549704068519" duration="17418000" />
+      <workItem from="1549704068519" duration="19808000" />
     </task>
     <servers />
   </component>
@@ -960,7 +958,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1364135000" />
+    <option name="totallyTimeSpent" value="1366525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1495,15 +1493,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StringSearch/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="165">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="90" column="34" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
+        <state relative-caret-position="870">
+          <caret line="89" column="47" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
           <folding>
             <element signature="e#445#446#0" expanded="true" />
             <element signature="e#531#532#0" expanded="true" />
@@ -1513,8 +1511,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+        <state relative-caret-position="690">
+          <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
           <folding>
             <element signature="e#1528#1529#0" expanded="true" />
             <element signature="e#1569#1570#0" expanded="true" />
