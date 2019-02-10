@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StringSearch/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/StringSearch/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
@@ -34,20 +37,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-910">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="480">
+              <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+              <folding>
+                <element signature="e#1528#1529#0" expanded="true" />
+                <element signature="e#1569#1570#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+            <state relative-caret-position="710">
+              <caret line="90" column="34" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
+              <folding>
+                <element signature="e#445#446#0" expanded="true" />
+                <element signature="e#531#532#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/StdOut.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="785">
+              <caret line="130" column="5" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StringSearch/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="108" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="108" />
+            <state relative-caret-position="150">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -126,7 +149,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>1.8</find>
       <find>PI</find>
       <find>COMMENT 'from deserializer'</find>
       <find>checkIfFileExists</find>
@@ -155,6 +177,7 @@
       <find>Professor Dr. med.</find>
       <find>, '$'</find>
       <find>charAt</find>
+      <find>new No</find>
       <find>CTGATGCATGGGAAACATAATTTGATCATTTTTAAGTTACAGTCCAAATCTTTTTGTACCTGAATAACATGTTGCCCAGTCAGTCTCTCTT</find>
     </findStrings>
     <replaceStrings>
@@ -241,18 +264,18 @@
         <option value="$PROJECT_DIR$/batch/discover/links.sh" />
         <option value="$PROJECT_DIR$/GraphProcessor/src/main/java/com/vaidhyamegha/WQUPC.java" />
         <option value="$PROJECT_DIR$/analytics/predict_clinical_outcome/predict.sql" />
-        <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/StdIn.java" />
-        <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/StdOut.java" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Queue.java" />
         <option value="$PROJECT_DIR$/FileProcessor/pom.xml" />
         <option value="$PROJECT_DIR$/GraphProcessor/pom.xml" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/App.java" />
         <option value="$PROJECT_DIR$/StringSearch/pom.xml" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/SimpleTrie.java" />
-        <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java" />
+        <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/StdOut.java" />
         <option value="$PROJECT_DIR$/StringSearch/README.md" />
+        <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java" />
+        <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java" />
       </list>
     </option>
   </component>
@@ -432,8 +455,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrieST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.TrieST" />
+    <configuration name="Trie" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.Trie" />
       <module name="StringSearch" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -927,7 +950,7 @@
       <workItem from="1549396553885" duration="2369000" />
       <workItem from="1549443119250" duration="18219000" />
       <workItem from="1549704028200" duration="31000" />
-      <workItem from="1549704068519" duration="14318000" />
+      <workItem from="1549704068519" duration="17418000" />
     </task>
     <servers />
   </component>
@@ -937,7 +960,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1361035000" />
+    <option name="totallyTimeSpent" value="1364135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1319,37 +1342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/StdOut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-820">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3569#3570#0" expanded="true" />
-            <element signature="e#3748#3749#0" expanded="true" />
-            <element signature="e#3778#3779#0" expanded="true" />
-            <element signature="e#3956#3957#0" expanded="true" />
-            <element signature="e#3986#3987#0" expanded="true" />
-            <element signature="e#4165#4166#0" expanded="true" />
-            <element signature="e#4195#4196#0" expanded="true" />
-            <element signature="e#4370#4371#0" expanded="true" />
-            <element signature="e#4400#4401#0" expanded="true" />
-            <element signature="e#4577#4578#0" expanded="true" />
-            <element signature="e#4607#4608#0" expanded="true" />
-            <element signature="e#4782#4783#0" expanded="true" />
-            <element signature="e#4812#4813#0" expanded="true" />
-            <element signature="e#4981#4982#0" expanded="true" />
-            <element signature="e#5011#5012#0" expanded="true" />
-            <element signature="e#5191#5192#0" expanded="true" />
-            <element signature="e#5221#5222#0" expanded="true" />
-            <element signature="e#5456#5457#0" expanded="true" />
-            <element signature="e#5486#5487#0" expanded="true" />
-            <element signature="e#5568#5569#0" expanded="true" />
-            <element signature="e#5595#5596#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FileProcessor/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1491,24 +1483,42 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java">
+    <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/StdOut.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-910">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="785">
+          <caret line="130" column="5" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StringSearch/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="108" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="108" />
+        <state relative-caret-position="150">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+        <state relative-caret-position="710">
+          <caret line="90" column="34" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
+          <folding>
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding>
+            <element signature="e#1528#1529#0" expanded="true" />
+            <element signature="e#1569#1570#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -19,12 +19,12 @@ public class App {
         }
 
         public String toString(){
-            return "Match at location" + location + " for string " + match;
+            return "Match at location " + location + " for string " + match;
         }
     }
 
     public static void main(String[] args) {
-        TrieST<Integer> st = buildTrie();
+        Trie st = buildTrie();
 
         int ml = Integer.parseInt(args[1]);
 
@@ -45,7 +45,7 @@ public class App {
         }
     }
 
-    private static void readStream(TrieST<Integer> st, int ml, Map<String, List<Match>> map, BufferedInputStream r) throws IOException {
+    private static void readStream(Trie st, int ml, Map<String, List<Match>> map, BufferedInputStream r) throws IOException {
         int rc = -1; long l = -1;
         StringBuilder sb = new StringBuilder();
 
@@ -76,19 +76,19 @@ public class App {
         }
     }
 
-    private static TrieST<Integer> buildTrie() {
+    private static Trie buildTrie() {
         // build symbol table from standard input
-        TrieST<Integer> st = new TrieST<>();
+        Trie st = new Trie();
         for (int i = 0; !StdIn.isEmpty(); i++) {
             String key = StdIn.readString();
-            st.put(key, i);
+            st.put(key);
         }
 
         // print results
         if (st.size() < 100) {
             StdOut.println("keys(\"\"):");
             for (String key : st.keys()) {
-                StdOut.println(key + " " + st.get(key));
+                StdOut.println(key);
             }
             StdOut.println();
         }
