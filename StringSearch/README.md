@@ -11,7 +11,7 @@ grep "^@" -A 1 SRR8278846_1.fastq | grep -v "^@" | grep -v "^#" | grep -v "-" | 
 
 
 # works
-head -n 1000 hg38.fa.cleaned > hg38.fa.cleaned.3.head1000
+head -n 10000 hg38.fa.cleaned > hg38.fa.cleaned.3.head10000
 grep "^@" -A 1 SRR8278846_1.fastq | grep -v "^@" | grep -v "^#" | grep -v "-" | head -n 100000 | java -jar -Xmx4G StringSearch-1.0-SNAPSHOT.jar hg38.fa.cleaned.3.head10000 101  | less
 
 

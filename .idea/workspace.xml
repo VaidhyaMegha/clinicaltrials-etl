@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileProcessor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FileProcessor/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphProcessor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GraphProcessor/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StringSearch/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StringSearch/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java" beforeDir="false" afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StringSearch/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/StringSearch/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
@@ -50,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="66" column="44" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
+            <state relative-caret-position="495">
+              <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -95,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StringSearch/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+            <state relative-caret-position="210">
+              <caret line="14" column="91" selection-start-line="14" selection-start-column="91" selection-end-line="14" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -246,12 +242,12 @@
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Queue.java" />
         <option value="$PROJECT_DIR$/FileProcessor/pom.xml" />
         <option value="$PROJECT_DIR$/GraphProcessor/pom.xml" />
-        <option value="$PROJECT_DIR$/StringSearch/README.md" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/App.java" />
         <option value="$PROJECT_DIR$/StringSearch/pom.xml" />
-        <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/SimpleTrie.java" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieST.java" />
+        <option value="$PROJECT_DIR$/StringSearch/README.md" />
+        <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java" />
       </list>
     </option>
   </component>
@@ -926,7 +922,7 @@
       <workItem from="1549396553885" duration="2369000" />
       <workItem from="1549443119250" duration="18219000" />
       <workItem from="1549704028200" duration="31000" />
-      <workItem from="1549704068519" duration="11145000" />
+      <workItem from="1549704068519" duration="12652000" />
     </task>
     <servers />
   </component>
@@ -936,7 +932,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1357862000" />
+    <option name="totallyTimeSpent" value="1359369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1469,20 +1465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StringSearch/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StringSearch/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/SimpleTrie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1504,10 +1486,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/StringSearch/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StringSearch/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="91" selection-start-line="14" selection-start-column="91" selection-end-line="14" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="66" column="44" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
+        <state relative-caret-position="495">
+          <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
         </state>
       </provider>
     </entry>

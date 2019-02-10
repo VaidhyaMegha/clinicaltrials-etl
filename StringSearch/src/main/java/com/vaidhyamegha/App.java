@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 public class App {
+    private static final int THRESHOLD = 10;
+
     public static void main(String[] args) {
         TrieST<Integer> st = buildTrie();
 
@@ -46,7 +48,7 @@ public class App {
 
             sb.append(c);
 
-            if(sb.length() < ml) continue;
+            if(sb.length() < ml - THRESHOLD) continue;
 
             String m = sb.toString();
             Iterable<String> i = st.keysWithPrefix(m);
