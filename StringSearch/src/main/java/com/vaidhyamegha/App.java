@@ -36,7 +36,7 @@ public class App {
         String fileName = args[0];
         ml = Integer.parseInt(args[1]);
         THRESHOLD = args.length > 2 ? Integer.parseInt(args[2]) : 10;
-        bq = args.length > 3 ? new LinkedBlockingQueue<>(Integer.parseInt(args[3])) : new LinkedBlockingDeque<>(100);
+        bq = args.length > 3 ? new LinkedBlockingQueue<>(Integer.parseInt(args[3])) : new LinkedBlockingQueue<>();
         int N_CONSUMERS = Runtime.getRuntime().availableProcessors();
         Thread[] threads = new Thread[N_CONSUMERS];
 
@@ -56,7 +56,7 @@ public class App {
         reading = false;
 
         for (Thread thread : threads) thread.join();
-        
+
         map.forEach((k,v) -> {
             StdOut.println("-----------------------");
             StdOut.println("Partial matches > threshold for (" + k + "):");
