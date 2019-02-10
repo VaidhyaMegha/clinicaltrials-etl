@@ -13,7 +13,7 @@ public class App {
     private static BlockingQueue<StringWithLocation> bq = null;
     private static Trie st = null;
     private static int ml;
-    private static Map<String, List<StringWithLocation>> map = new HashMap<>();
+    private static Map<String, List<StringWithLocation>> map = new ConcurrentHashMap<>();
     private static boolean reading = true;
 
     private static class StringWithLocation {
@@ -38,7 +38,7 @@ public class App {
         int numConsumers =  args.length > 4 ? Integer.parseInt(args[4]) : 4;
 
         ExecutorService executor = Executors.newFixedThreadPool(numConsumers);
-        CompletionService completion = new ExecutorCompletionService<>(executor);
+        CompletionService completion = new ExecutorCompletionService(executor);
 
         st = buildTrie();
 
