@@ -5,47 +5,67 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.*;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.stream.IntStream;
 
 public class App {
-    private static final int THRESHOLD = 10;
+    private static int THRESHOLD;
+    private static BlockingQueue<StringWithLocation> bq = null;
+    private static Trie st = null;
+    private static int ml;
+    private static Map<String, List<StringWithLocation>> map = new HashMap<>();
+    private static boolean reading = true;
 
-    private static class Match {
+    private static class StringWithLocation {
         long location;
-        String match;
+        String str;
 
-        Match(long l, String m){
+        StringWithLocation(long l, String m){
             this.location = l;
-            this.match = m;
+            this.str = m;
         }
 
         public String toString(){
-            return "Match at location " + location + " for string " + match;
+            return "StringWithLocation at location " + location + " for string " + str;
         }
     }
 
-    public static void main(String[] args) {
-        Trie st = buildTrie();
+    public static void main(String[] args) throws InterruptedException {
+        String fileName = args[0];
+        ml = Integer.parseInt(args[1]);
+        THRESHOLD = args.length > 2 ? Integer.parseInt(args[2]) : 10;
+        bq = args.length > 3 ? new LinkedBlockingQueue<>(Integer.parseInt(args[3])) : new LinkedBlockingDeque<>(100);
+        int N_CONSUMERS = Runtime.getRuntime().availableProcessors();
+        Thread[] threads = new Thread[N_CONSUMERS];
 
-        int ml = Integer.parseInt(args[1]);
+        st = buildTrie();
 
-        Map<String, List<Match>> map = new HashMap<>();
-
-        try (BufferedInputStream r = new BufferedInputStream(new FileInputStream(new File(args[0])))) {
-            readStream(st, ml, map, r);
-
-            map.forEach((k,v) -> {
-                StdOut.println("-----------------------");
-                StdOut.println("Partial matches > threshold for (" + k + "):");
-
-                v.forEach(m -> StdOut.println(m.toString()));
+        try (BufferedInputStream r = new BufferedInputStream(new FileInputStream(new File(fileName)))) {
+            IntStream.range(0, N_CONSUMERS).forEach(j -> {
+                threads[j] = new Thread(new Consumer());
+                threads[j].start();
             });
 
+            readStream(r);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        reading = false;
+
+        for (Thread thread : threads) thread.join();
+        
+        map.forEach((k,v) -> {
+            StdOut.println("-----------------------");
+            StdOut.println("Partial matches > threshold for (" + k + "):");
+
+            v.forEach(m -> StdOut.println(m.toString()));
+        });
     }
 
-    private static void readStream(Trie st, int ml, Map<String, List<Match>> map, BufferedInputStream r) throws IOException {
+    private static void readStream(BufferedInputStream r) throws IOException {
         int rc = -1; long l = -1;
         StringBuilder sb = new StringBuilder();
 
@@ -62,17 +82,33 @@ public class App {
 
             if(sb.length() < ml) continue;
 
-            String partial = sb.substring(0, ml - THRESHOLD);
-            Iterable<String> i = st.keysWithPrefix(partial);
-
-            long at = l;
-            i.forEach(s -> {
-                String full = sb.toString();
-                map.computeIfAbsent(full, k -> new ArrayList<>());
-                map.get(full).add(new Match(at,s));
-            });
+            bq.add(new StringWithLocation(l, sb.toString()));
 
             sb.deleteCharAt(0);
+        }
+    }
+
+    private static class Consumer implements Runnable {
+
+        @Override
+        public void run() {
+            try {
+                while(bq.size() > 0 || reading) {
+                    StringWithLocation full = bq.take();
+
+                    String partial = full.str.substring(0, ml - THRESHOLD);
+                    Iterable<String> i = st.keysWithPrefix(partial);
+
+                    long at = full.location;
+
+                    i.forEach(s -> {
+                        map.computeIfAbsent(full.str, k -> new ArrayList<>());
+                        map.get(full.str).add(new StringWithLocation(at, s));
+                    });
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
