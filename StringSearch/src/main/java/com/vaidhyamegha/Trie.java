@@ -9,14 +9,16 @@ class Trie {
     private Node root;      // root of trie
     private int n;          // number of keys in trie
     private int w;
+    private int q;
 
     private static class Node {
         private Map<Integer, Node> next;
     }
 
     Trie(int r) {
-        this.R = 4*4*4*4;
-        this.w = r/4 + ( r % 4 != 0 ? 1 : 0);
+        this.R = 4 * 4 * 4 * 4;
+        this.q = r;
+        this.w = r / 4 + (r % 4 != 0 ? 1 : 0);
     }
 
     void put(String key) {
@@ -30,19 +32,20 @@ class Trie {
 
         byte[] bytes = new byte[w];
 
-        for (int i = 0; i < (chars.length + 4) && (i/4 < w); i = i + 4) {
+        for (int i = 0; i < (chars.length + 4) && (i / 4 < w); i = i + 4) {
             byte b = 0;
 
             for (int j = 0; j < 4 && ((i + j) < chars.length); j++)
                 b = (byte) ((b << 2) | encode(chars[i + j]));
 
-            bytes[i/4] = b;
+            bytes[i / 4] = b;
         }
 
+        System.out.println("key is " + key + "decoded key is " + decode(bytes) + " --- " + key.equals(decode(bytes)));
         return bytes;
     }
 
-    private byte encode(char cd){
+    private byte encode(char cd) {
         char c = Character.toUpperCase(cd);
         return (byte) (c == 'A' ? 0 : c == 'T' ? 1 : c == 'C' ? 2 : 3);
     }
@@ -78,7 +81,7 @@ class Trie {
         }
         int c = (255 & key[d]);
         if (x.next == null) x.next = new HashMap<>();
-        x.next.put(c, put(x.next.get(c), key,d + 1));
+        x.next.put(c, put(x.next.get(c), key, d + 1));
         return x;
     }
 
@@ -96,9 +99,8 @@ class Trie {
 
     private String decode(byte[] bytes) {
         StringBuilder sb = new StringBuilder();
-        int j = 0;
 
-        for (int i = 0; i < bytes.length && sb.length() <= w; i++) {
+        for (int i = 0; i < bytes.length && sb.length() <= q; i++) {
             byte b = bytes[i];
 
             decodeByte(sb, b);
@@ -110,17 +112,18 @@ class Trie {
     private int decodeByte(StringBuilder sb, byte b) {
         int k = 0;
 
-        for (; k < 4 && sb.length() <= w ; k++) {
-            byte temp = (byte) (192 & b);
+        for (; k < 4 && sb.length() <= q; k++) {
+            int temp = (192 & b);
 
-            if(temp == 0) sb.append('A');
-            else if (temp == 1) sb.append('T');
-            else if (temp == 2) sb.append('C');
-            else  sb.append('G');
+            if (temp == 0) sb.append('A');
+            else if (temp == 64) sb.append('T');
+            else if (temp == 128) sb.append('C');
+            else sb.append('G');
 
-            b = (byte)(b << 2);
+            b = (byte) (b << 2);
         }
-        
+
         return k - 1;
     }
 }
+

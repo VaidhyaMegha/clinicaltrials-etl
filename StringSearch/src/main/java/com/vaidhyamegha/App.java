@@ -61,8 +61,8 @@ public class App {
 
         // print results
         if (st.size() < 100) {
-            StdOut.println("keys(\"\"):");
-            st.keys().forEach(StdOut::println);
+            System.out.println("keys(\"\"):");
+            st.keys().forEach(System.out::println);
         }
         return st;
     }
