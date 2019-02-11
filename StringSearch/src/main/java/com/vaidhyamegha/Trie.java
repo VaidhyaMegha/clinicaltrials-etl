@@ -32,7 +32,7 @@ class Trie {
 
         byte[] bytes = new byte[w];
 
-        for (int i = 0; i <= (chars.length + 4) && (i / 4 < w); i = i + 4) {
+        for (int i = 0; i < (chars.length + 4) && (i / 4 < w); i = i + 4) {
             byte b = 0;
 
             for (int j = 0; j < 4 && ((i + j) < chars.length); j++)
@@ -40,6 +40,8 @@ class Trie {
 
             bytes[i / 4] = b;
         }
+
+        if (q % 4 != 0)  for (int i = 4; i > q % 4 ; i--) bytes[w - 1] = (byte) (bytes[w - 1] << 2);
 
         System.out.println("key is " + key + "decoded key is " + decode(bytes) + " --- " + key.equals(decode(bytes)));
         return bytes;
