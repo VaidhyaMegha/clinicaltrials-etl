@@ -57,7 +57,8 @@ class Trie {
 
     Iterable<String> keysWithPrefix(String prefix) {
         Queue<String> results = new Queue<>();
-        Node x = get(root, getBytes(prefix), 0);
+        byte[] bytes = getBytes(prefix);
+        Node x = get(root, bytes, 0);
         collect(x, new StringBuilder(prefix), results);
         return results;
     }
@@ -83,11 +84,14 @@ class Trie {
 
     private void collect(Node x, StringBuilder prefix, Queue<String> results) {
         if (x == null) return;
-        if (x.next == null) results.enqueue(decode(prefix.toString().getBytes()));
+        if (x.next == null) results.enqueue(prefix.toString());
         else {
-            for (char c = 0; c < R; c++) {
-                prefix.append(c);
-                collect(x.next.get(c), prefix, results);
+            for (byte c = 0; c < R; c++) {
+                decodeByte(prefix, c);
+                collect(x.next.get(255 | c), prefix, results);
+                prefix.deleteCharAt(prefix.length() - 1);
+                prefix.deleteCharAt(prefix.length() - 1);
+                prefix.deleteCharAt(prefix.length() - 1);
                 prefix.deleteCharAt(prefix.length() - 1);
             }
         }
@@ -97,21 +101,26 @@ class Trie {
         StringBuilder sb = new StringBuilder();
         int j = 0;
 
-        for (int i = 0; i < bytes.length && sb.length() <= R; i++) {
+        for (int i = 0; i < bytes.length && sb.length() <= w; i++) {
             byte b = bytes[i];
 
-            for (int k = 0; k < 4 && sb.length() <= R ; k++) {
-                byte temp = (byte) (192 & b);
-
-                if(temp == 0) sb.append('A');
-                else if (temp == 1) sb.append('T');
-                else if (temp == 2) sb.append('C');
-                else  sb.append('G');
-
-                b = (byte)(b << 2);
-            }
+            decodeByte(sb, b);
         }
 
         return sb.toString();
+    }
+
+    private void decodeByte(StringBuilder sb, byte b) {
+
+        for (int k = 0; k < 4 && sb.length() <= w ; k++) {
+            byte temp = (byte) (192 & b);
+
+            if(temp == 0) sb.append('A');
+            else if (temp == 1) sb.append('T');
+            else if (temp == 2) sb.append('C');
+            else  sb.append('G');
+
+            b = (byte)(b << 2);
+        }
     }
 }
