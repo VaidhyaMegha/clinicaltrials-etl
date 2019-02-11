@@ -5,27 +5,29 @@ class Trie {
     private int R;
     private Node root;      // root of trie
     private int n;          // number of keys in trie
+    private int w;
 
     private static class Node {
         private Node[] next;
     }
 
     Trie(int r) {
-        this.R = r/4 + ( r % 4 != 0 ? 1 : 0);
+        this.R = 4*4*4*4;
+        this.w = r/4 + ( r % 4 != 0 ? 1 : 0);
     }
 
     void put(String key) {
         if (key == null) throw new IllegalArgumentException("first argument to put() is null");
 
-        root = put(root, new String(getBytes(key)), 0);
+        root = put(root, getBytes(key), 0);
     }
 
     private byte[] getBytes(String key) {
         char[] chars = key.toCharArray();
 
-        byte[] bytes = new byte[R];
+        byte[] bytes = new byte[w];
 
-        for (int i = 0; i < (chars.length + 4) && (i/4 < R); i = i + 4) {
+        for (int i = 0; i < (chars.length + 4) && (i/4 < w); i = i + 4) {
             byte b = 0;
 
             for (int j = 0; j < 4 && ((i + j) < chars.length); j++)
@@ -52,25 +54,25 @@ class Trie {
 
     Iterable<String> keysWithPrefix(String prefix) {
         Queue<String> results = new Queue<>();
-        Node x = get(root, new String(getBytes(prefix)), 0);
+        Node x = get(root, getBytes(prefix), 0);
         collect(x, new StringBuilder(prefix), results);
         return results;
     }
 
-    private Node get(Node x, String key, int d) {
+    private Node get(Node x, byte[] key, int d) {
         if (x == null) return null;
-        if (d == key.length()) return x;
-        int c = key.charAt(d);
+        if (d == key.length) return x;
+        int c = (255 & key[d]);
         return get(x.next[c], key, d + 1);
     }
 
-    private Node put(Node x, String key, int d) {
+    private Node put(Node x, byte[] key, int d) {
         if (x == null) x = new Node();
-        if (d == key.length()) {
+        if (d == key.length) {
             n++;
             return x;
         }
-        int c = key.charAt(d);
+        int c = (255 & key[d]);
         if (x.next == null) x.next = new Node[R];
         x.next[c] = put(x.next[c], key,d + 1);
         return x;
