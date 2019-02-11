@@ -56,7 +56,8 @@ public class App {
         Trie st = new Trie(ml);
         for (int i = 0; !StdIn.isEmpty(); i++) {
             String key = StdIn.readString();
-            st.put(key);
+            if(!key.toUpperCase().matches("[ATCG]*")) continue;
+            st.put(key.toUpperCase());
         }
 
         // print results

@@ -18,7 +18,7 @@ class Trie {
     Trie(int r) {
         this.R = 4 * 4 * 4 * 4;
         this.q = r;
-        this.w = r / 4 + (r % 4 != 0 ? 1 : 0);
+        this.w = (r / 4) + ((r % 4 != 0) ? 1 : 0);
     }
 
     void put(String key) {
@@ -32,7 +32,7 @@ class Trie {
 
         byte[] bytes = new byte[w];
 
-        for (int i = 0; i < (chars.length + 4) && (i / 4 < w); i = i + 4) {
+        for (int i = 0; i <= (chars.length + 4) && (i / 4 < w); i = i + 4) {
             byte b = 0;
 
             for (int j = 0; j < 4 && ((i + j) < chars.length); j++)
@@ -100,7 +100,7 @@ class Trie {
     private String decode(byte[] bytes) {
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < bytes.length && sb.length() <= q; i++) {
+        for (int i = 0; i < bytes.length && sb.length() < q; i++) {
             byte b = bytes[i];
 
             decodeByte(sb, b);
@@ -112,7 +112,7 @@ class Trie {
     private int decodeByte(StringBuilder sb, byte b) {
         int k = 0;
 
-        for (; k < 4 && sb.length() <= q; k++) {
+        for (; k < 4 && sb.length() < q; k++) {
             int temp = (192 & b);
 
             if (temp == 0) sb.append('A');
@@ -126,4 +126,3 @@ class Trie {
         return k - 1;
     }
 }
-
