@@ -1,52 +1,28 @@
 package com.vaidhyamegha;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.*;
+import java.io.*;
 
 public class App {
     private static final int THRESHOLD = 10;
 
-    private static class Match {
-        long location;
-        String match;
-
-        Match(long l, String m){
-            this.location = l;
-            this.match = m;
-        }
-
-        public String toString(){
-            return "Match at location " + location + " for string " + match;
-        }
-    }
-
     public static void main(String[] args) {
+        String faFileName = args[0];
+        int ml = Integer.parseInt(args[1]);
+        String outputFileName = args[2];
+
         Trie st = buildTrie();
 
-        int ml = Integer.parseInt(args[1]);
+        try (BufferedInputStream r = new BufferedInputStream(new FileInputStream(new File(faFileName)))) {
+            BufferedWriter bw = new BufferedWriter(new FileWriter(new File(outputFileName)));
 
-        Map<String, List<Match>> map = new HashMap<>();
-
-        try (BufferedInputStream r = new BufferedInputStream(new FileInputStream(new File(args[0])))) {
-            readStream(st, ml, map, r);
-
-            map.forEach((k,v) -> {
-                StdOut.println("-----------------------");
-                StdOut.println("Partial matches > threshold for (" + k + "):");
-
-                v.forEach(m -> StdOut.println(m.toString()));
-            });
-
+            readStream(st, ml, bw, r);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private static void readStream(Trie st, int ml, Map<String, List<Match>> map, BufferedInputStream r) throws IOException {
-        int rc = -1; long l = -1;
+    private static void readStream(Trie st, int ml, BufferedWriter bw, BufferedInputStream r) throws IOException {
+        int rc ; long l = -1;
         StringBuilder sb = new StringBuilder();
 
         while ((rc = r.read()) !=  -1){
@@ -66,11 +42,10 @@ public class App {
             Iterable<String> i = st.keysWithPrefix(partial);
 
             long at = l;
-            i.forEach(s -> {
+            for (String s : i) {
                 String full = sb.toString();
-                map.computeIfAbsent(full, k -> new ArrayList<>());
-                map.get(full).add(new Match(at,s));
-            });
+                bw.write(at + "\t" + full + "\t" + partial + "\t" + s + "\n");
+            }
 
             sb.deleteCharAt(0);
         }
