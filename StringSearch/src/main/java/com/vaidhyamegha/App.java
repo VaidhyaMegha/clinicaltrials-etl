@@ -4,10 +4,11 @@ import java.io.*;
 
 public class App {
     private static final int THRESHOLD = 10;
+    private static int ml;
 
     public static void main(String[] args) {
         String faFileName = args[0];
-        int ml = Integer.parseInt(args[1]);
+        ml = Integer.parseInt(args[1]);
         String outputFileName = args[2];
 
         Trie st = buildTrie();
@@ -39,7 +40,7 @@ public class App {
             if(sb.length() < ml) continue;
 
             String full = sb.toString();
-            String partial = sb.substring(0, ml - THRESHOLD);
+            String partial = sb.substring(0, ml - THRESHOLD/4);
             Iterable<String> i = st.keysWithPrefix(partial);
 
             for (String s : i) bw.write(l + "\t" + full + "\t" + s + "\n");
@@ -52,7 +53,7 @@ public class App {
 
     private static Trie buildTrie() {
         // build symbol table from standard input
-        Trie st = new Trie();
+        Trie st = new Trie(ml/4);
         for (int i = 0; !StdIn.isEmpty(); i++) {
             String key = StdIn.readString();
             st.put(key);
