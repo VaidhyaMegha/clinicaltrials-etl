@@ -87,12 +87,9 @@ class Trie {
         if (x.next == null) results.enqueue(prefix.toString());
         else {
             for (byte c = 0; c < R; c++) {
-                decodeByte(prefix, c);
+                int numOfChars = decodeByte(prefix, c);
                 collect(x.next.get(255 | c), prefix, results);
-                prefix.deleteCharAt(prefix.length() - 1);
-                prefix.deleteCharAt(prefix.length() - 1);
-                prefix.deleteCharAt(prefix.length() - 1);
-                prefix.deleteCharAt(prefix.length() - 1);
+                for (int i = 0; i < numOfChars; i++) prefix.deleteCharAt(prefix.length() - 1);
             }
         }
     }
@@ -110,9 +107,10 @@ class Trie {
         return sb.toString();
     }
 
-    private void decodeByte(StringBuilder sb, byte b) {
+    private int decodeByte(StringBuilder sb, byte b) {
+        int k = 0;
 
-        for (int k = 0; k < 4 && sb.length() <= w ; k++) {
+        for (; k < 4 && sb.length() <= w ; k++) {
             byte temp = (byte) (192 & b);
 
             if(temp == 0) sb.append('A');
@@ -122,5 +120,7 @@ class Trie {
 
             b = (byte)(b << 2);
         }
+        
+        return k - 1;
     }
 }

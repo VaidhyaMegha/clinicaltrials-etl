@@ -4,9 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java" afterDir="false" />
-    </list>
+    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
     <ignored path="$PROJECT_DIR$/GraphProcessor/target/" />
@@ -969,7 +967,7 @@
       <workItem from="1549396553885" duration="2369000" />
       <workItem from="1549443119250" duration="18219000" />
       <workItem from="1549704028200" duration="31000" />
-      <workItem from="1549704068519" duration="68870000" />
+      <workItem from="1549704068519" duration="69502000" />
     </task>
     <servers />
   </component>
@@ -979,7 +977,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1415587000" />
+    <option name="totallyTimeSpent" value="1416219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
