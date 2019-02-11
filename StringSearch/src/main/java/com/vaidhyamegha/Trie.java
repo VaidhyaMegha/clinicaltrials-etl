@@ -1,6 +1,9 @@
 package com.vaidhyamegha;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 class Trie {
     private int R;
     private Node root;      // root of trie
@@ -8,7 +11,7 @@ class Trie {
     private int w;
 
     private static class Node {
-        private Node[] next;
+        private Map<Integer, Node> next;
     }
 
     Trie(int r) {
@@ -63,7 +66,7 @@ class Trie {
         if (x == null) return null;
         if (d == key.length) return x;
         int c = (255 & key[d]);
-        return get(x.next[c], key, d + 1);
+        return get(x.next.get(c), key, d + 1);
     }
 
     private Node put(Node x, byte[] key, int d) {
@@ -73,8 +76,8 @@ class Trie {
             return x;
         }
         int c = (255 & key[d]);
-        if (x.next == null) x.next = new Node[R];
-        x.next[c] = put(x.next[c], key,d + 1);
+        if (x.next == null) x.next = new HashMap<>();
+        x.next.put(c, put(x.next.get(c), key,d + 1));
         return x;
     }
 
@@ -84,7 +87,7 @@ class Trie {
         else {
             for (char c = 0; c < R; c++) {
                 prefix.append(c);
-                collect(x.next[c], prefix, results);
+                collect(x.next.get(c), prefix, results);
                 prefix.deleteCharAt(prefix.length() - 1);
             }
         }
