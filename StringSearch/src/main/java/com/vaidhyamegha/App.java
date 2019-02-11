@@ -40,7 +40,7 @@ public class App {
             if(sb.length() < ml) continue;
 
             String full = sb.toString();
-            String partial = sb.substring(0, ml - THRESHOLD/4);
+            String partial = sb.substring(0, ml - THRESHOLD);
             Iterable<String> i = st.keysWithPrefix(partial);
 
             for (String s : i) bw.write(l + "\t" + full + "\t" + s + "\n");
@@ -53,7 +53,7 @@ public class App {
 
     private static Trie buildTrie() {
         // build symbol table from standard input
-        Trie st = new Trie(ml/4);
+        Trie st = new Trie(ml);
         for (int i = 0; !StdIn.isEmpty(); i++) {
             String key = StdIn.readString();
             st.put(key);

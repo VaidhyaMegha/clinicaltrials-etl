@@ -11,7 +11,7 @@ class Trie {
     }
 
     Trie(int r) {
-        this.R = (int) Math.round(Math.ceil(((double)r)*2/8));
+        this.R = r/4 + ( r % 4 != 0 ? 1 : 0);
     }
 
     void put(String key) {
@@ -25,7 +25,7 @@ class Trie {
 
         byte[] bytes = new byte[R];
 
-        for (int i = 0; i < (chars.length + 4); i = i + 4) {
+        for (int i = 0; i < (chars.length + 4) && (i/4 < R); i = i + 4) {
             byte b = 0;
 
             for (int j = 0; j < 4 && ((i + j) < chars.length); j++)
