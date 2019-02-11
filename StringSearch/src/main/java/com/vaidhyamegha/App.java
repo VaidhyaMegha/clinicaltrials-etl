@@ -42,7 +42,7 @@ public class App {
             String partial = sb.substring(0, ml - THRESHOLD);
             Iterable<String> i = st.keysWithPrefix(partial);
 
-            for (String s : i) bw.write(l + "\t" + full + "\t" + partial + "\t" + s + "\n");
+            for (String s : i) bw.write(l + "\t" + full + "\t" + s + "\n");
 
             sb.deleteCharAt(0);
         }
