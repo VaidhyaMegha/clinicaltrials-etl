@@ -49,6 +49,8 @@ public class App {
 
             sb.deleteCharAt(0);
         }
+
+        bw.flush();
     }
 
     private static Trie buildTrie() {
