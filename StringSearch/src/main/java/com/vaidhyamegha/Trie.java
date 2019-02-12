@@ -8,7 +8,6 @@ class Trie {
     private int R;
     private Node root;      // root of trie
     private int n;          // number of keys in trie
-    private int w;
     private int q;
 
     private static class Node {
@@ -18,7 +17,6 @@ class Trie {
     Trie(int r) {
         this.R = 4 * 4 * 4 * 4;
         this.q = r;
-        this.w = (r / 4) + ((r % 4 != 0) ? 1 : 0);
     }
 
     void put(String key) {
@@ -90,13 +88,16 @@ class Trie {
 
     private void collect(Node x, StringBuilder prefix, Queue<String> results) {
         if (x == null) return;
-        if (x.next == null) results.enqueue(prefix.toString());
+        if (x.next == null) {
+            System.out.println("I came here 1" + prefix.toString());
+            results.enqueue(prefix.toString());
+        }
         else {
-            for (byte c = 0; c < R; c++) {
-                int numOfChars = decodeByte(prefix, c);
-                collect(x.next.get(255 | c), prefix, results);
+            x.next.forEach((c,v) -> {
+                int numOfChars = decodeByte(prefix, c.byteValue());
+                collect(x.next.get(255 & c), prefix, results);
                 for (int i = 0; i < numOfChars; i++) prefix.deleteCharAt(prefix.length() - 1);
-            }
+            });
         }
     }
 
@@ -126,6 +127,6 @@ class Trie {
             b = (byte) (b << 2);
         }
 
-        return k - 1;
+        return k;
     }
 }

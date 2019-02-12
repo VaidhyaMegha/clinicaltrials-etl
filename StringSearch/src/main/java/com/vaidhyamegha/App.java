@@ -40,10 +40,9 @@ public class App {
             if(sb.length() < ml) continue;
 
             String full = sb.toString();
-            String partial = sb.substring(0, ml - THRESHOLD);
-            Iterable<String> i = st.keysWithPrefix(partial);
+            String partial = sb.substring(0, ((ml - THRESHOLD)/4)*4 );
 
-            for (String s : i) bw.write(l + "\t" + full + "\t" + s + "\n");
+            for (String s : st.keysWithPrefix(partial)) bw.write(l + "\t" + full + "\t" + s + "\n");
 
             sb.deleteCharAt(0);
         }
