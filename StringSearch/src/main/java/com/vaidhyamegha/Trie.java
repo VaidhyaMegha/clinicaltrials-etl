@@ -5,17 +5,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Trie {
-    private int R;
     private Node root;      // root of trie
     private int n;          // number of keys in trie
     private int q;
 
     private static class Node {
-        private Map<Integer, Node> next;
+        private Map<Byte, Node> next;
     }
 
     Trie(int r) {
-        this.R = 4 * 4 * 4 * 4;
         this.q = r;
     }
 
@@ -69,7 +67,7 @@ class Trie {
     private Node get(Node x, byte[] key, int d) {
         if (x == null) return null;
         if (d == key.length) return x;
-        int c = (255 & key[d]);
+        byte c = key[d];
         return get(x.next.get(c), key, d + 1);
     }
 
@@ -79,7 +77,7 @@ class Trie {
             n++;
             return x;
         }
-        int c = (255 & key[d]);
+        byte c = key[d];
         if (x.next == null) x.next = new HashMap<>();
         x.next.put(c, put(x.next.get(c), key, d + 1));
         return x;
@@ -88,13 +86,12 @@ class Trie {
     private void collect(Node x, StringBuilder prefix, Queue<String> results) {
         if (x == null) return;
         if (x.next == null) {
-            System.out.println("I came here 1" + prefix.toString());
             results.enqueue(prefix.toString());
         }
         else {
             x.next.forEach((c,v) -> {
-                int numOfChars = decodeByte(prefix, c.byteValue());
-                collect(x.next.get(255 & c), prefix, results);
+                int numOfChars = decodeByte(prefix, c);
+                collect(x.next.get(c), prefix, results);
                 for (int i = 0; i < numOfChars; i++) prefix.deleteCharAt(prefix.length() - 1);
             });
         }
