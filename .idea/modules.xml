@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/FileProcessor/FileProcessor.iml" filepath="$PROJECT_DIR$/FileProcessor/FileProcessor.iml" />
       <module fileurl="file://$PROJECT_DIR$/GraphProcessor/GraphProcessor.iml" filepath="$PROJECT_DIR$/GraphProcessor/GraphProcessor.iml" />
       <module fileurl="file://$PROJECT_DIR$/StringSearch/StringSearch.iml" filepath="$PROJECT_DIR$/StringSearch/StringSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch/container.iml" filepath="$PROJECT_DIR$/batch/container.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scripts/query.iml" filepath="$PROJECT_DIR$/scripts/query.iml" />
     </modules>
   </component>
 </project>
