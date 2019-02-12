@@ -42,7 +42,6 @@ class Trie {
 
         if (len % 4 != 0)  for (int i = 4; i > len % 4 ; i--) bytes[numOfBytes - 1] = (byte) (bytes[numOfBytes - 1] << 2);
 
-        System.out.println("key is " + key + "decoded key is " + decode(bytes) + " --- " + key.equals(decode(bytes)));
         return bytes;
     }
 
