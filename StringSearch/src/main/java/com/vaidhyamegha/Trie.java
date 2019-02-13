@@ -24,8 +24,7 @@ class Trie {
     }
 
     private byte[] getBytes(String key) {
-        char[] chars = key.toCharArray();
-        int len = chars.length;
+        int len = key.length();
         int numOfBytes = (len / 4) + ((len % 4 != 0) ? 1 : 0);
         byte[] bytes = new byte[numOfBytes];
 
@@ -33,7 +32,7 @@ class Trie {
             byte b = 0;
 
             for (int j = 0; j < 4 && ((i + j) < len); j++)
-                b = (byte) ((b << 2) | encode(chars[i + j]));
+                b = (byte) ((b << 2) | encode(key.charAt(i + j)));
 
             bytes[i / 4] = b;
         }
