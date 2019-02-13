@@ -11,7 +11,13 @@ public class App {
         ml = Integer.parseInt(args[1]);
         String outputFileName = args[2];
 
+        long beforeUsedMem = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+
         Trie st = buildTrie();
+
+        long afterUsedMem = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+
+        System.out.println("Trie built -- Memory consumed thus far : " + (afterUsedMem - beforeUsedMem));
 
         try (BufferedInputStream r = new BufferedInputStream(new FileInputStream(new File(faFileName)))) {
             BufferedWriter bw = new BufferedWriter(new FileWriter(new File(outputFileName)));

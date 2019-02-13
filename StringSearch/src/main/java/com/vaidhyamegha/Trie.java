@@ -91,7 +91,7 @@ class Trie {
                 int numOfChars = decodeByte(prefix, c);
                 collect(v, prefix, results);
                 int len = prefix.length();
-                prefix.delete(len - numOfChars, len - 1);
+                if (numOfChars > 0) prefix.delete(len - numOfChars, len - 1);
             });
         }
     }
