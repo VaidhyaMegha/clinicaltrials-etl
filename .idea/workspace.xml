@@ -36,14 +36,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1950">
-              <caret line="130" column="74" lean-forward="true" selection-start-line="130" selection-start-column="74" selection-end-line="130" selection-end-column="74" />
+            <state relative-caret-position="525">
+              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#301#302#0" expanded="true" />
                 <element signature="e#327#328#0" expanded="true" />
-                <element signature="e#1490#1491#0" expanded="true" />
-                <element signature="e#1562#1563#0" expanded="true" />
+                <element signature="e#1263#1264#0" expanded="true" />
+                <element signature="e#1287#1288#0" expanded="true" />
+                <element signature="e#1318#1319#0" expanded="true" />
+                <element signature="e#1359#1360#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -952,7 +954,7 @@
       <workItem from="1549704028200" duration="31000" />
       <workItem from="1549704068519" duration="80634000" />
       <workItem from="1549965249591" duration="5238000" />
-      <workItem from="1549988173116" duration="18733000" />
+      <workItem from="1549988173116" duration="19465000" />
     </task>
     <servers />
   </component>
@@ -962,11 +964,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1451322000" />
+    <option name="totallyTimeSpent" value="1452054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.18352681" />
       <window_info id="Structure" order="1" sideWeight="0.5032189" side_tool="true" weight="0.28468767" />
@@ -1490,14 +1491,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="130" column="74" lean-forward="true" selection-start-line="130" selection-start-column="74" selection-end-line="130" selection-end-column="74" />
+        <state relative-caret-position="525">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#301#302#0" expanded="true" />
             <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-            <element signature="e#1562#1563#0" expanded="true" />
+            <element signature="e#1263#1264#0" expanded="true" />
+            <element signature="e#1287#1288#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1359#1360#0" expanded="true" />
           </folding>
         </state>
       </provider>
