@@ -36,12 +36,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="112" column="32" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="32" />
+            <state relative-caret-position="1950">
+              <caret line="130" column="74" lean-forward="true" selection-start-line="130" selection-start-column="74" selection-end-line="130" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#301#302#0" expanded="true" />
                 <element signature="e#327#328#0" expanded="true" />
+                <element signature="e#1490#1491#0" expanded="true" />
+                <element signature="e#1562#1563#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,8 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>complete</find>
-      <find>([^:]+)\:string,</find>
       <find>location</find>
       <find>responsibl</find>
       <find>degrees</find>
@@ -173,6 +173,8 @@
       <find>192</find>
       <find>&amp;</find>
       <find>came</find>
+      <find>?</find>
+      <find>if</find>
     </findStrings>
     <replaceStrings>
       <replace>@</replace>
@@ -950,7 +952,7 @@
       <workItem from="1549704028200" duration="31000" />
       <workItem from="1549704068519" duration="80634000" />
       <workItem from="1549965249591" duration="5238000" />
-      <workItem from="1549988173116" duration="14631000" />
+      <workItem from="1549988173116" duration="18733000" />
     </task>
     <servers />
   </component>
@@ -960,7 +962,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1447220000" />
+    <option name="totallyTimeSpent" value="1451322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1488,12 +1490,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="112" column="32" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="32" />
+        <state relative-caret-position="1950">
+          <caret line="130" column="74" lean-forward="true" selection-start-line="130" selection-start-column="74" selection-end-line="130" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#301#302#0" expanded="true" />
             <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#1562#1563#0" expanded="true" />
           </folding>
         </state>
       </provider>

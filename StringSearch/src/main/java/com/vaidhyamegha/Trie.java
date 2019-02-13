@@ -44,7 +44,21 @@ class Trie {
 
     private byte encode(char cd) {
         char c = Character.toUpperCase(cd);
-        return (byte) (c == 'A' ? 0 : c == 'T' ? 1 : c == 'C' ? 2 : 3);
+        byte b = 3;
+
+        switch (c) {
+            case 'A':
+                b = 0;
+                break;
+            case 'T':
+                b = 1;
+                break;
+            case 'C':
+                b = 2;
+                break;
+        }
+
+        return b;
     }
 
     int size() {
@@ -112,24 +126,24 @@ class Trie {
 
         for (; k < 4 && sb.length() < q; k++) {
             int temp = (192 & b);
+            char c = 'G';
 
             //would making this a switch statement save time? it should...
             //https://stackoverflow.com/questions/767821/is-else-if-faster-than-switch-case
             //https://stackoverflow.com/questions/6705955/why-switch-is-faster-than-if
             switch (temp) {
                 case 0:
-                    sb.append('A');
+                    c = 'A';
                     break;
                 case 64:
-                    sb.append('T');
+                    c = 'T';
                     break;
                 case 128:
-                    sb.append('C');
-                    break;
-                default:
-                    sb.append('G');
+                    c = 'C';
                     break;
             }
+
+            sb.append(c);
 
             b = (byte) (b << 2);
         }
