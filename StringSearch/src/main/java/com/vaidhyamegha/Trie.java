@@ -38,7 +38,7 @@ class Trie {
             bytes[i / 4] = b;
         }
 
-        if (len % 4 != 0)  for (int i = 4; i > len % 4 ; i--) bytes[numOfBytes - 1] = (byte) (bytes[numOfBytes - 1] << 2);
+        if (len % 4 != 0) bytes[numOfBytes - 1] = (byte) (bytes[numOfBytes - 1] << 2*(4 - (len % 4)));
 
         return bytes;
     }
