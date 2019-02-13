@@ -85,14 +85,13 @@ class Trie {
 
     private void collect(Node x, StringBuilder prefix, Queue<String> results) {
         if (x == null) return;
-        if (x.next == null) {
-            results.enqueue(prefix.toString());
-        }
+        else if (x.next == null) results.enqueue(prefix.toString());
         else {
             x.next.forEach((c,v) -> {
                 int numOfChars = decodeByte(prefix, c);
-                collect(x.next.get(c), prefix, results);
-                for (int i = 0; i < numOfChars; i++) prefix.deleteCharAt(prefix.length() - 1);
+                collect(v, prefix, results);
+                int len = prefix.length();
+                prefix.delete(len - numOfChars, len - 1);
             });
         }
     }
