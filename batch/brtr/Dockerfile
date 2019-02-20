@@ -12,6 +12,10 @@ RUN python --version && \
      pip install boto3 && \
      pip install awscli
 
+     ENV GVM_VERSION=1.0.22
+
+     SHELL ["/bin/bash", "-c"]
+
 RUN apt-get install -y  curl \
                         git \
                         mercurial \
@@ -24,7 +28,12 @@ RUN apt-get install -y  curl \
     apt-get clean all && \
     rm -rf /var/lib/apt/lists/*
 
+
+
+
+
 # Copy python,json and shell scripts
+COPY keys.json /usr/local/dataintegration/
 COPY html_json.sh /usr/local/dataintegration/
 #
 #
