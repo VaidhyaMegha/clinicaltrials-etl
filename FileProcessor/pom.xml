@@ -104,7 +104,7 @@
             <groupId>com.merck.open</groupId>
             <artifactId>rdf2x</artifactId>
           </executable>
-          <mainClass>com.vaidhyamegha.com.vaidhyamegha.App</mainClass>
+          <mainClass>com.vaidhyamegha.App</mainClass>
 
         </configuration>
         <dependencies>
