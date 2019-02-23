@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.11
+FROM ubuntu:16.04
 
 ENV NVM_DIR /usr/local/nvm
 ENV NODE_VERSION 9.2.0
