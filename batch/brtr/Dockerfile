@@ -1,4 +1,8 @@
-FROM ubuntu:16.04
+FROM phusion/baseimage:0.11
+
+ENV NVM_DIR /usr/local/nvm
+ENV NODE_VERSION 9.2.0
+ENV GVM_VERSION=1.0.22
 
 # Install python pip
 RUN  apt-get update &&  apt-get install -y python  && \
@@ -29,11 +33,15 @@ RUN apt-get install -y  curl \
     rm -rf /var/lib/apt/lists/*
 
 
-
+RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash \
+    && source $NVM_DIR/nvm.sh \
+    && nvm install $NODE_VERSION \
+    && nvm alias default $NODE_VERSION \
+    && nvm use default \
+    && npm install -g xml2json-command
 
 
 # Copy python,json and shell scripts
-COPY keys.json /usr/local/dataintegration/
 COPY html_json.sh /usr/local/dataintegration/
 #
 #
