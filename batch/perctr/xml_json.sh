@@ -8,7 +8,7 @@ end_year=${4:-`date +'%Y'`}
 s3_bucket=${5:-'s3://hsdlc-results/perct-adapter/'}
 context_dir=${6:-'/usr/local/dataintegration'}
 prefix_url="http://www.ins.gob.pe/ensayosclinicos/rpec/XML/"
-suffix_url="xmlall"
+suffix_url="xmlall.xml"
 
 function download_xml_page(){
     wget  -q ${prefix_url}${suffix_url}${1}.xml \
