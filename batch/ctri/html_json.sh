@@ -130,13 +130,8 @@ cat ${1} | pup 'table tr td table:nth-of-type(2) tr td:nth-of-type(2) json{}' | 
 
 pushd ${context_dir}
 
-source "/root/.gvm/scripts/gvm"
-
-gvm install go1.4 --binary
-
-gvm use "go1.4"
-
-go get -u -f github.com/ericchiang/pup
+source ~/.gvm/scripts/gvm
+gvm use "go1.9"
 
 if [[ ${download} == 'yes' ]]; then
 
