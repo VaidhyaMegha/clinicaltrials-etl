@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/batch/chictr/html_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/chictr/html_json.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/brtr/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/batch/brtr/Dockerfile" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
@@ -42,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/chictr/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
@@ -74,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/batch/brtr/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="720">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
@@ -102,11 +102,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
-              <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -126,7 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>block</find>
       <find>secondary</find>
       <find>outcome_outcome</find>
       <find>why</find>
@@ -156,6 +155,7 @@
       <find>http://www.ins.gob.pe/ensayosclinicos/rpec/XML/</find>
       <find>analysis</find>
       <find>gvm</find>
+      <find>1.4</find>
     </findStrings>
     <replaceStrings>
       <replace>@</replace>
@@ -247,12 +247,12 @@
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie.java" />
         <option value="$PROJECT_DIR$/batch/StringSearch/stringsearch.sh" />
         <option value="$PROJECT_DIR$/batch/StringSearch/Makefile" />
-        <option value="$PROJECT_DIR$/batch/brtr/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/brtr/Makefile" />
         <option value="$PROJECT_DIR$/batch/perctr/xml_json.sh" />
         <option value="$PROJECT_DIR$/batch/brtr/html_json.sh" />
         <option value="$PROJECT_DIR$/batch/chictr/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/chictr/html_json.sh" />
+        <option value="$PROJECT_DIR$/batch/brtr/Dockerfile" />
       </list>
     </option>
   </component>
@@ -390,14 +390,14 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 2.7 (vm_prototypes)" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/StringSearch/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/batch/brtr/Dockerfile" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="VisualVMLauncher" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/batch/EUCTRN/Dockerfile" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/batch/brtr/Dockerfile" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -951,7 +951,7 @@
       <workItem from="1550571602062" duration="179000" />
       <workItem from="1550655443402" duration="1417000" />
       <workItem from="1550664744757" duration="1484000" />
-      <workItem from="1550847119617" duration="15792000" />
+      <workItem from="1550847119617" duration="16520000" />
     </task>
     <servers />
   </component>
@@ -961,11 +961,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1477395000" />
+    <option name="totallyTimeSpent" value="1478123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.18960752" />
       <window_info id="Structure" order="1" sideWeight="0.5032189" side_tool="true" weight="0.28468767" />
@@ -1342,10 +1341,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/brtr/Dockerfile">
+    <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="495">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1356,17 +1355,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/batch/brtr/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/batch/chictr/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="45" column="87" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/chictr/html_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
         </state>
       </provider>
     </entry>

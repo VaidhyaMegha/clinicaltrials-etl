@@ -4,6 +4,9 @@ ENV NVM_DIR /usr/local/nvm
 ENV NODE_VERSION 9.2.0
 ENV GVM_VERSION=1.0.22
 
+# Replace shell with bash so we can source files
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
 # Install python pip
 RUN  apt-get update &&  apt-get install -y python  && \
      apt-get install -y python-pip && \
@@ -16,9 +19,7 @@ RUN python --version && \
      pip install boto3 && \
      pip install awscli
 
-     ENV GVM_VERSION=1.0.22
-
-     SHELL ["/bin/bash", "-c"]
+SHELL ["/bin/bash", "-c"]
 
 RUN apt-get install -y  curl \
                         git \
@@ -32,7 +33,6 @@ RUN apt-get install -y  curl \
     apt-get clean all && \
     rm -rf /var/lib/apt/lists/*
 
-
 RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash \
     && source $NVM_DIR/nvm.sh \
     && nvm install $NODE_VERSION \
@@ -40,6 +40,14 @@ RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | b
     && nvm use default \
     && npm install -g xml2json-command
 
+ENV NODE_PATH $NVM_DIR/versions/node/v$NODE_VERSION/lib/node_modules
+ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
+ENV PATH $PATH:/root/.gvm/bin/
+
+SHELL ["/bin/bash", "-c", "source /root/.gvm/scripts/gvm &&  gvm install go1.9 --binary &&  gvm use go1.9 &&  go get -u -f github.com/ericchiang/pup"]
+
+ENV PATH $PATH:/usr/local/go/bin
+ENV GOPATH $PATH:/$HOME/go
 
 # Copy python,json and shell scripts
 COPY html_json.sh /usr/local/dataintegration/
