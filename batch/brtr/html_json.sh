@@ -64,8 +64,6 @@ sed -i 's/@$/\]}}/g' ${3}
 
 pushd ${context_dir}
 
-nvm use default
-nvm version
 node --version
 npm --version
 

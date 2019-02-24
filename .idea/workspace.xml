@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/batch/brtr/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/batch/brtr/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/brtr/html_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/brtr/html_json.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
@@ -33,16 +33,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/brtr/html_json.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+            <state relative-caret-position="450">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/chictr/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
@@ -73,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/brtr/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="795">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
             </state>
           </provider>
         </entry>
@@ -249,10 +249,10 @@
         <option value="$PROJECT_DIR$/batch/StringSearch/Makefile" />
         <option value="$PROJECT_DIR$/batch/brtr/Makefile" />
         <option value="$PROJECT_DIR$/batch/perctr/xml_json.sh" />
-        <option value="$PROJECT_DIR$/batch/brtr/html_json.sh" />
         <option value="$PROJECT_DIR$/batch/chictr/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/chictr/html_json.sh" />
         <option value="$PROJECT_DIR$/batch/brtr/Dockerfile" />
+        <option value="$PROJECT_DIR$/batch/brtr/html_json.sh" />
       </list>
     </option>
   </component>
@@ -951,7 +951,7 @@
       <workItem from="1550571602062" duration="179000" />
       <workItem from="1550655443402" duration="1417000" />
       <workItem from="1550664744757" duration="1484000" />
-      <workItem from="1550847119617" duration="16520000" />
+      <workItem from="1550847119617" duration="16864000" />
     </task>
     <servers />
   </component>
@@ -961,10 +961,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1478123000" />
+    <option name="totallyTimeSpent" value="1478467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.18960752" />
       <window_info id="Structure" order="1" sideWeight="0.5032189" side_tool="true" weight="0.28468767" />
@@ -1348,24 +1349,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/brtr/html_json.sh">
+    <entry file="file://$PROJECT_DIR$/batch/chictr/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+        <state relative-caret-position="675">
+          <caret line="45" column="87" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="87" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/brtr/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="795">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/chictr/Dockerfile">
+    <entry file="file://$PROJECT_DIR$/batch/brtr/html_json.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="87" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="87" />
+        <state relative-caret-position="450">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>
