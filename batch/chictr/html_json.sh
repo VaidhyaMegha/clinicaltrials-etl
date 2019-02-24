@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -x
+set -ex
 
 html_dir=${1}
 download=${2:-'no'}
