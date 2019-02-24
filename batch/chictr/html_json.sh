@@ -31,7 +31,7 @@ function download_and_analyse_trial(){
 }
 
 source ~/.gvm/scripts/gvm
-gvm use "go1.4"
+gvm use "go1.9"
 
 pushd ${context_dir}
 
