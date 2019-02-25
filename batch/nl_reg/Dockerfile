@@ -1,5 +1,10 @@
 FROM ubuntu:16.04
 
+#madhavi added below command
+ENV GVM_VERSION=1.0.22
+
+
+
 # Install python pip
 RUN  apt-get update &&  apt-get install -y python  && \
      apt-get install -y python-pip && \
@@ -12,7 +17,7 @@ RUN python --version && \
      pip install boto3 && \
      pip install awscli
 
-ENV GVM_VERSION=1.0.22
+
 
 SHELL ["/bin/bash", "-c"]
 
