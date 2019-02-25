@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-#madhavi added the below
+
 ENV GVM_VERSION=1.0.22
 # Install python pip
 RUN  apt-get update &&  apt-get install -y python  && \

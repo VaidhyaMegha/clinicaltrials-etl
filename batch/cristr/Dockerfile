@@ -19,7 +19,7 @@ RUN python --version && \
      pip install boto3 && \
      pip install awscli
 
-# ENV GVM_VERSION=1.0.22 ---madhavi commented bcoz it is already defned in 3rd line top
+
 
 SHELL ["/bin/bash", "-c"]
 

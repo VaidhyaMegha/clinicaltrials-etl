@@ -18,7 +18,7 @@ RUN python --version && \
      pip install boto3 && \
      pip install awscli
 
-# ENV GVM_VERSION=1.0.22 # madhavi commented
+
 
 SHELL ["/bin/bash", "-c"]
 

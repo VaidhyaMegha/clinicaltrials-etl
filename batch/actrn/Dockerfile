@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-#madhavi--added below
+
 ENV GVM_VERSION=1.0.22
 
 # Replace shell with bash so we can source files
@@ -35,10 +35,6 @@ RUN apt-get install -y  curl \
 
 ENV PATH $PATH:/root/.gvm/bin/
 
-#SHELL ["/bin/bash", "-c", "source /root/.gvm/scripts/gvm"] --madhavi
-#RUN gvm install go1.9 --binary --madhavi
-#RUN gvm use go1.9 --madhavi
-
 
 SHELL ["/bin/bash", "-c", "source /root/.gvm/scripts/gvm &&  gvm install go1.9 --binary &&  gvm use go1.9 &&  go get -u -f github.com/ericchiang/pup"]
 
@@ -46,7 +42,6 @@ SHELL ["/bin/bash", "-c", "source /root/.gvm/scripts/gvm &&  gvm install go1.9 -
 ENV PATH $PATH:/usr/local/go/bin
 ENV GOPATH $PATH:/$HOME/go
 
-#RUN go get -u -f github.com/ericchiang/pup --madhavi
 
 # Copy python,json and shell scripts
 COPY keys.json /usr/local/dataintegration/

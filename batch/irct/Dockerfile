@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-#Madhavi added below line
+
 ENV GVM_VERSION=1.0.22
 
 # Install python pip

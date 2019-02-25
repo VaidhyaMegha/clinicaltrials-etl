@@ -1,6 +1,5 @@
 FROM ubuntu:16.04
 
-#madhavi added below command
 ENV GVM_VERSION=1.0.22
 
 

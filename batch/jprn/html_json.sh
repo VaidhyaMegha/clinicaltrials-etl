@@ -169,13 +169,8 @@ function download_and_analyse_trial(){
 
 pushd ${context_dir}
 
-source "/root/.gvm/scripts/gvm"
-
-gvm install go1.9 --binary
-
+source ~/.gvm/scripts/gvm
 gvm use "go1.9"
-
-go get -u -f github.com/ericchiang/pup
 
 if [[ ${download} == 'yes' ]]; then
 

@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-# madhavi --added below command
+
 ENV GVM_VERSION=1.0.22
 
 # Replace shell with bash so we can source files
