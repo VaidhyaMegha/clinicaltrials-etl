@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -ex
-set +H
+
 
 html_dir=${1}
 download=${2:-'no'}
@@ -40,7 +40,7 @@ jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json  >> ${2}/studies.json
 }
 
 #source ~/.gvm/scripts/gvm
-#gvm use "go1.4"
+#gvm use "go1.9"
 
 pushd ${context_dir}
 

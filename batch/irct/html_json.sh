@@ -73,7 +73,7 @@ pushd ${context_dir}
 
 
 source ~/.gvm/scripts/gvm
-gvm use "go1.4"
+gvm use "go1.9"
 
 if [[ ${download} == 'yes' ]]; then
 

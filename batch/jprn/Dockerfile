@@ -31,8 +31,8 @@ RUN apt-get install -y  curl \
 ENV PATH $PATH:/root/.gvm/bin/
 
 SHELL ["/bin/bash", "-c", "source /root/.gvm/scripts/gvm"]
-RUN gvm install go1.4 --binary
-RUN gvm use go1.4
+RUN gvm install go1.9 --binary
+RUN gvm use go1.9
 
 ENV PATH $PATH:/usr/local/go/bin
 ENV GOPATH $PATH:/$HOME/go

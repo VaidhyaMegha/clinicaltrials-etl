@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -x
+set -ex
 
 html_dir=${1}
 download=${2:-'no'}
@@ -53,7 +53,7 @@ function analyse_trial(){
 }
 
 source ~/.gvm/scripts/gvm
-gvm use "go1.4"
+gvm use "go1.9"
 
 pushd ${context_dir}
 

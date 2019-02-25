@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-set -x
-set +H
+set -ex
+
 
 
 html_dir=${1}
@@ -24,9 +24,9 @@ pushd ${context_dir}
 
 source "/root/.gvm/scripts/gvm"
 
-gvm install go1.4 --binary
+gvm install go1.9 --binary
 
-gvm use "go1.4"
+gvm use "go1.9"
 
 go get -u -f github.com/ericchiang/pup
 

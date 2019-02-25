@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -ex
-set +H
+
 
 html_dir=${1}
 download=${2:-'no'}
@@ -31,7 +31,7 @@ function analyse_file() {
    cat ${1} | pup 'div json{}' | grep '"text":' | ./html_json.js | jq -c '.' >> ${2}/studies.json
 }
 source ~/.gvm/scripts/gvm
-gvm use "go1.4"
+gvm use "go1.9"
 
 pushd ${context_dir}
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -ex
-set +H
+
 
 
 html_dir=${1}

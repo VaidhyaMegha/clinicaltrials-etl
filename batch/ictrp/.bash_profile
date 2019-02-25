@@ -1,1 +1,1 @@
-gvm use go1.4
+gvm use go1.9

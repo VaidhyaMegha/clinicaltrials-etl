@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -ex
-set +H
+
 
 html_dir=${1}
 download=${2:-'no'}
@@ -42,7 +42,7 @@ cat ${html_dir}/studies/${g}.html | pup 'div div div div  json{}' | grep  '"text
 }
 
 source ~/.gvm/scripts/gvm
-gvm use "go1.4"
+gvm use "go1.9"
 
 pushd ${context_dir}
 
