@@ -25,14 +25,14 @@ function download_and_analyse_trial(){
     sed 's/：/@/g' ${html_dir}/studies/${g}.html > ${html_dir}/studies/${g}_1.html
 
     cat ${html_dir}/studies/${g}_1.html  | pup 'div.ProjetInfo_ms tr json{}' |  grep 'text' | \
-        grep -P '^[[:ascii:]]+@?"?$' | ./html_json.js  | jq -s -c add >> ${2}/studies.json
+        grep -P '^[[:ascii:]]+@?"?$' | ${context_dir}/html_json.js  | jq -s -c add >> ${2}/studies.json
 
     rm ${html_dir}/studies/${g}_1.html
 }
 
 pushd ${context_dir}
 
-chmod +x html_json.js
+chmod +x ${context_dir}/html_json.js
 
 source ~/.gvm/scripts/gvm
 gvm use "go1.9"
