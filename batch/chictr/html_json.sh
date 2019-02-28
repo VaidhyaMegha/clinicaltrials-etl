@@ -8,7 +8,7 @@ context_dir=${4:-'/usr/local/dataintegration'}
 prefix_url="http://www.chictr.org.cn/"
 suffix_url="searchprojen.aspx?page="
 
- function download_main_index(){
+function download_main_index(){
     wget  -q -T 30 ${prefix_url}${suffix_url}"1" \
          -O ${html_dir}/1.html  || true
 }
@@ -30,10 +30,12 @@ function download_and_analyse_trial(){
     rm ${html_dir}/studies/${g}_1.html
 }
 
+pushd ${context_dir}
+
+chmod +x html_json.js
+
 source ~/.gvm/scripts/gvm
 gvm use "go1.9"
-
-pushd ${context_dir}
 
 if [[ ${download} == 'yes' ]]; then
 
