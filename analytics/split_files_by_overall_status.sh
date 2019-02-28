@@ -37,6 +37,36 @@ cat ${file_to_read}".json" | while read f
  k="${k}"$'\n'"Gender is "`echo ${f} | jq -r '.eligibility.gender'`
  k="${k}"$'\n'"Minimum age is "`echo ${f} | jq -r '.eligibility.minimum_age'`
  k="${k}"$'\n'"Maximum age is "`echo ${f} | jq -r '.eligibility.maximum_age'`
+ k="${k}"$'\n'"Primary Outcome 1 is "`echo ${f} | jq -r '.primary_outcome[0].description'`
+ k="${k}"$'\n'"Primary Outcome 2 is "`echo ${f} | jq -r '.primary_outcome[1].description'`
+ k="${k}"$'\n'"Primary Outcome 3 is "`echo ${f} | jq -r '.primary_outcome[2].description'`
+ k="${k}"$'\n'"Primary Outcome 4 is "`echo ${f} | jq -r '.primary_outcome[3].description'` 
+ k="${k}"$'\n'"Primary Outcome 5 is "`echo ${f} | jq -r '.primary_outcome[4].description'`
+ k="${k}"$'\n'"Secondary Outcome 1 is "`echo ${f} | jq -r '.secondary_outcome[0].description'`
+ k="${k}"$'\n'"Secondary Outcome 2 is "`echo ${f} | jq -r '.secondary_outcome[1].description'`
+ k="${k}"$'\n'"Secondary Outcome 3 is "`echo ${f} | jq -r '.secondary_outcome[2].description'`
+ k="${k}"$'\n'"Secondary Outcome 4 is "`echo ${f} | jq -r '.secondary_outcome[3].description'`
+ k="${k}"$'\n'"Secondary Outcome 5 is "`echo ${f} | jq -r '.secondary_outcome[4].description'`
+ k="${k}"$'\n'"Other Outcome 1 is "`echo ${f} | jq -r '.other_outcome[0].description'`
+ k="${k}"$'\n'"Other Outcome 2 is "`echo ${f} | jq -r '.other_outcome[1].description'`
+ k="${k}"$'\n'"Other Outcome 3 is "`echo ${f} | jq -r '.other_outcome[2].description'`
+ k="${k}"$'\n'"Other Outcome 4 is "`echo ${f} | jq -r '.other_outcome[3].description'`
+ k="${k}"$'\n'"Other Outcome 5 is "`echo ${f} | jq -r '.other_outcome[4].description'`
+ k="${k}"$'\n'"Keyword 1 is "`echo ${f} | jq -r '.keyword[0]'`
+ k="${k}"$'\n'"Keyword 2 is "`echo ${f} | jq -r '.keyword[1]'`
+ k="${k}"$'\n'"Keyword 3 is "`echo ${f} | jq -r '.keyword[2]'`
+ k="${k}"$'\n'"Keyword 4 is "`echo ${f} | jq -r '.keyword[3]'`
+ k="${k}"$'\n'"Keyword 5 is "`echo ${f} | jq -r '.keyword[4]'`
+ k="${k}"$'\n'"Condition 1 is "`echo ${f} | jq -r '.condition_browse[0]'`
+ k="${k}"$'\n'"Condition 2 is "`echo ${f} | jq -r '.condition_browse[1]'`
+ k="${k}"$'\n'"Condition 3 is "`echo ${f} | jq -r '.condition_browse[2]'`
+ k="${k}"$'\n'"Condition 4 is "`echo ${f} | jq -r '.condition_browse[3]'`
+ k="${k}"$'\n'"Condition 5 is "`echo ${f} | jq -r '.condition_browse[4]'`
+ k="${k}"$'\n'"Intervention 1 is "`echo ${f} | jq -r '.intervention_browse[0]'`
+ k="${k}"$'\n'"Intervention 2 is "`echo ${f} | jq -r '.intervention_browse[1]'`
+ k="${k}"$'\n'"Intervention 3 is "`echo ${f} | jq -r '.intervention_browse[2]'`
+ k="${k}"$'\n'"Intervention 4 is "`echo ${f} | jq -r '.intervention_browse[3]'`
+ k="${k}"$'\n'"Intervention 5 is "`echo ${f} | jq -r '.intervention_browse[4]'`
 
  if [[ $h == *"overall_status:Completed"* ]]; then
     echo "${k}" >> completed/${g}.txt

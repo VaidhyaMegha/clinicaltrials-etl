@@ -18,7 +18,7 @@ function download_trial(){
 
     wget  -q ${prefix_url}${g}${suffix_url} \
          -O ${html_dir}/actrn/studies/${g}.html  || true
-    sleep 0.001s
+#    sleep 0.001s
 }
 
 pushd ${context_dir}
