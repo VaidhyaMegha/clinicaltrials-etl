@@ -340,8 +340,8 @@ jq -c '{"trialid":.cris_registration_number,"secondary_id":[.Secondary_Id],"Date
 done
 
 
-  if [ -d ${html_dir}isrctn ]; then
-        rm -rf ${html_dir}isrctn
+  if [ -d ${html_dir}cristr ]; then
+        rm -rf ${html_dir}cristr
   fi
 
 
