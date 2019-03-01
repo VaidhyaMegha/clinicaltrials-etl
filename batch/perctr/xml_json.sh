@@ -7,11 +7,11 @@ start_year=${3:-'1995'}
 end_year=${4:-`date +'%Y'`}
 s3_bucket=${5:-'s3://hsdlc-results/perct-adapter/'}
 context_dir=${6:-'/usr/local/dataintegration'}
-prefix_url="http://www.ins.gob.pe/ensayosclinicos/rpec/XML/"
-suffix_url="xmlall.xml"
+    prefix_url="http://www.ins.gob.pe/ensayosclinicos/rpec/XML/"
+suffix_url="xmlall"
 
 function download_xml_page(){
-    wget  -q ${prefix_url}${suffix_url}${1}.xml \
+    wget   -q --no-check-certificate ${prefix_url}${suffix_url}${1}.xml \
          -O ${xml_dir}/studies/xml/${1}.xml  || true
 }
 
