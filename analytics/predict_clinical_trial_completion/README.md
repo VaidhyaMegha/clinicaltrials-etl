@@ -1,5 +1,9 @@
-# Results
-[Predict Clinical Trial Outcome based on study design](screenshots/VaidhyaMegha-ML-1-v1.jpg)
+# Predict Clinical Trial Completion based on study design - Results
+[Logistic Regression - Base Version](screenshots/VaidhyaMegha-ML-1-v1.jpg)
+[Neural Networks - Text Classification - Based on Title alone](screenshots/AutoML-v1-clinicaltrials_gov_Only_title.png)
+[Neural Networks - Text Classification - Based on Title and eligibility](screenshots/AutoML-v2-clinicaltrials_gov_title_eligibility.png)
+[Neural Networks - Text Classification - Based on Title, eligibility and several other attributes](screenshots/AutoML-v3-clinicaltrials_gov_title_and_lot_more_attributes.png)
+
 
 # References
 - https://aws.amazon.com/aml/faqs/
