@@ -32,7 +32,7 @@ if [[ ${download} == 'yes' ]]; then
         download_xml_page ${i}
     done
 
-    find ${xml_dir}/studies/xml -type f -maxdepth 1 -name "*.xml" | while read f
+    find ${xml_dir}/studies/xml -type f -maxdepth 1 -name "*.xml" ! -size 0 | while read f
     do
      cat ${f} | node ${xml_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${xml_dir}/studies/json/studies.json
     done
@@ -42,7 +42,7 @@ if [[ ${download} == 'yes' ]]; then
 
 else
 
-    find ${xml_dir} -type f -name "*.xml" | while read f
+    find ${xml_dir} -type f -name "*.xml" ! -size 0 | while read f
     do
      cat ${f} | node ${xml_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${xml_dir}/studies/json/studies.json
     done
