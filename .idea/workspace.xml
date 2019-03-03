@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/tctr/xml_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/tctr/xml_json.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/tctr/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/batch/tctr/Dockerfile" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
@@ -34,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/tctr/xml_json.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="615">
-              <caret line="41" selection-start-line="41" selection-end-line="46" selection-end-column="8" />
+              <caret line="41" selection-start-line="41" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -60,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/tctr/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="570">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -75,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/perctr/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="810">
@@ -257,8 +256,8 @@
         <option value="$PROJECT_DIR$/analytics/predict_clinical_trial_completion/README.md" />
         <option value="$PROJECT_DIR$/batch/perctr/xml_json.sh" />
         <option value="$PROJECT_DIR$/batch/tctr/Makefile" />
-        <option value="$PROJECT_DIR$/batch/tctr/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/tctr/xml_json.sh" />
+        <option value="$PROJECT_DIR$/batch/tctr/Dockerfile" />
       </list>
     </option>
   </component>
@@ -1010,7 +1009,7 @@
       <workItem from="1551422920100" duration="3167000" />
       <workItem from="1551443904402" duration="2425000" />
       <workItem from="1551525059488" duration="1619000" />
-      <workItem from="1551599338230" duration="8560000" />
+      <workItem from="1551599338230" duration="9144000" />
     </task>
     <servers />
   </component>
@@ -1020,11 +1019,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1516476000" />
+    <option name="totallyTimeSpent" value="1517060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.24267551" />
       <window_info id="Structure" order="1" sideWeight="0.5032189" side_tool="true" weight="0.28468767" />
@@ -1427,13 +1425,6 @@
     <entry file="file://$PROJECT_DIR$/batch/perctr/public.xsd">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/tctr/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/tctr/etl/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1454,20 +1445,6 @@
     <entry file="file://$PROJECT_DIR$/batch/perctr/etl/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/perctr/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/perctr/etl/xml_json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch/tctr/etl/xml_json.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -1478,7 +1455,28 @@
     <entry file="file://$PROJECT_DIR$/batch/tctr/xml_json.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
-          <caret line="41" selection-start-line="41" selection-end-line="46" selection-end-column="8" />
+          <caret line="41" selection-start-line="41" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/perctr/etl/xml_json.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/tctr/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/perctr/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>

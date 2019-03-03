@@ -38,17 +38,10 @@ RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | b
     && source $NVM_DIR/nvm.sh \
     && nvm install $NODE_VERSION \
     && nvm alias default $NODE_VERSION \
-    && nvm use default \
-    && npm install -g xml2json-command
+    && nvm use default
 
 ENV NODE_PATH $NVM_DIR/versions/node/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
-ENV PATH $PATH:/root/.gvm/bin/
-
-SHELL ["/bin/bash", "-c", "source /root/.gvm/scripts/gvm &&  gvm install go1.9 --binary &&  gvm use go1.9 &&  go get -u -f github.com/ericchiang/pup"]
-
-ENV PATH $PATH:/usr/local/go/bin
-ENV GOPATH $PATH:/$HOME/go
 
 # Copy python,json and shell scripts
 ADD  etl /usr/local/dataintegration/etl
