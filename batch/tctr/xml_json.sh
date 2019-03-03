@@ -12,7 +12,7 @@ prefix_url="www.clinicaltrials.in.th/export/xmlv02/"
 suffix_url=${3}
 
 function download_xml_page(){
-    wget  -q ${prefix_url}${suffix_url} || true
+    wget  -q ${prefix_url}${suffix_url} -O index.html || true
 }
 
 pushd ${context_dir}
@@ -27,6 +27,13 @@ if [[ ${download} == 'yes' ]]; then
    mkdir ${xml_dir}/studies/xml
 
     download_xml_page
+
+    cat index.html | grep -oE 'href="*.zip"' | while read f
+    do
+        g=`echo ${f} | sed 's/href="//g; s/"//g;'`
+        wget -q ${prefix_url}${suffix_url}/${g} -O ${xml_dir}/${g}
+    done
+
     find ${xml_dir} -type f -maxdepth 1 -name "*.zip" | while read f
     do
     unzip -o ${f} -d ${xml_dir}/studies/xml/
