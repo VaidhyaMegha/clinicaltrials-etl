@@ -9,7 +9,7 @@ day=${4:-`date +'%d'`}
 s3_bucket=${5:-'s3://hsdlc-results/tctr-adapter/'}
 context_dir=${6:-'/usr/local/dataintegration'}
 prefix_url="www.clinicaltrials.in.th/export/xmlv02/"
-suffix_url=${3}
+suffix_url=""
 
 function download_xml_page(){
     wget  -q ${prefix_url}${suffix_url} -O index.html || true
@@ -28,10 +28,10 @@ if [[ ${download} == 'yes' ]]; then
 
     download_xml_page
 
-    cat index.html | grep -oE 'href="*.zip"' | while read f
+    cat index.html | grep -oE 'href="[^\.]*\.zip"' | while read f
     do
         g=`echo ${f} | sed 's/href="//g; s/"//g;'`
-        wget -q ${prefix_url}${suffix_url}/${g} -O ${xml_dir}/${g}
+        wget -q ${prefix_url}${suffix_url}${g} -O ${xml_dir}/${g}
     done
 
     find ${xml_dir} -type f -maxdepth 1 -name "*.zip" | while read f
