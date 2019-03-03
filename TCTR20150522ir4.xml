@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<trials>
+	<trial>
+		<main>
+			<trial_id>TCTR20120000007</trial_id>
+			<utrn></utrn>
+			<reg_name>TCTR</reg_name>
+			<date_registration>12/06/2012</date_registration>
+			<primary_sponsor> Research Management and Development Division, Mahidol University.</primary_sponsor>
+			<public_title>Monitoring of Urinary Cytokine Levels as Biomarker for Disease Activity in Thai Lupus Nephritis patients</public_title>
+			<acronym></acronym>
+			<scientific_title>Monitoring of Urinary Cytokine Levels as Biomarker for Disease Activity in Thai Lupus Nephritis patients</scientific_title>
+			<date_enrolment>24/01/2011</date_enrolment>
+			<type_enrolment>Anticipated</type_enrolment>
+			<target_size>146</target_size>
+			<recruitment_status>Active, not recruiting</recruitment_status>
+			<url>http://www.clinicaltrials.in.th/index.php?tp=regtrials&amp;menu=trialsearch&amp;smenu=fulltext&amp;task=search&amp;task2=view1&amp;id=730</url>
+			<study_type>Observational</study_type>
+			<study_design>Non-randomized</study_design>
+			<phase>N/A</phase>
+			<hc_freetext>active proliferative lupus nephritis (LN)
+inactive LN
+healthy volunteers
+the other glomerulonephritis patients</hc_freetext>
+			<i_freetext>Healthy volunteers are normal population with no underlying diseases including diabetes mellitus and hypertension, Inactive lupus nephritis patients are the patients were biopsy proven proliferative LN previously and were successfully treated described by normal renal function and urine sediment., Active lupus nephritis patients are the currently active proliferative LN characterized by active urine sediment and biopsy proven by ISN/RPS 2003 classification., The other glomerulonephritis patients are the active glomerulonephritis proven by the pathology excluding diabetes mellitus.</i_freetext>
+		</main>
+		<contacts>
+			<contact>
+				<type>public</type>
+				<firstname>Ratana</firstname>
+				<middlename></middlename>
+				<lastname>Chawanasuntorapoj</lastname>
+				<address>2 Prannok Rd, Bangkoknoi Bangkok 10700</address>
+				<city>Bangkok</city>
+				<country1>Thailand</country1>
+				<zip>10700</zip>
+				<telephone> </telephone>
+				<email></email>
+				<affiliation>Faculty of Medicine Siriraj Hospital</affiliation>
+			</contact>
+			<contact>
+				<type>scientific</type>
+				<firstname>Ratana</firstname>
+				<middlename></middlename>
+				<lastname>Chawanasuntorapoj</lastname>
+				<address>2 Prannok Rd, Bangkoknoi Bangkok 10700</address>
+				<city>Bangkok</city>
+				<country1>Thailand</country1>
+				<zip>10700</zip>
+				<telephone>024197340 </telephone>
+				<email>ratana99@gmail.com</email>
+				<affiliation>Faculty of Medicine Siriraj Hospital</affiliation>
+			</contact>
+		</contacts>
+		<countries>
+			<country2>Thailand</country2>
+		</countries>
+		<criteria>
+			<inclusion_criteria>1. biopsy proven proliferative lupus nephritis, other glomerulonephritis
+2. inactive proliferative lupus nephritis
+3. volunteer</inclusion_criteria>
+			<agemin>18 Years</agemin>
+			<agemax>80 Years</agemax>
+			<gender>Both</gender>
+			<exclusion_criteria>1. no underlying diseases: diabetes mellitus, malignancy
+2. active infection especially, urinary tract infection
+3. not willing</exclusion_criteria>
+		</criteria>
+		<health_condition_code>
+			<hc_code>			</hc_code>
+		</health_condition_code>
+		<health_condition_keyword>
+			<hc_keyword>active proliferative lupus nephritis (LN)
+inactive LN
+healthy volunteers
+the other glomerulonephritis patients
+kidney biopsy</hc_keyword>
+		</health_condition_keyword>
+		<intervention_code>
+			<i_code></i_code>
+		</intervention_code>
+		<intervention_keyword>
+			<i_keyword></i_keyword>
+		</intervention_keyword>
+		<primary_outcome>
+			<prim_outcome>Lupus nephritis activity [Timeframe 2 years Urinary cytokine levels]			</prim_outcome>
+		</primary_outcome>
+		<secondary_outcome>
+			<sec_outcome>Pathology correlation [Timeframe 2 years Urinary cytokine levels]			</sec_outcome>
+		</secondary_outcome>
+		<secondary_sponsor>
+			<sponsor_name>National Research council of Thailand (NRCT)</sponsor_name>
+		</secondary_sponsor>
+		<secondary_ids>
+			<secondary_id>
+				<sec_id>NRCT</sec_id>
+				<issuing_authority></issuing_authority>
+			</secondary_id>
+		</secondary_ids>
+		<source_support>
+			<source_name> Research Management and Development Division, Mahidol University</source_name>
+		</source_support>
+	</trial>
+</trials>

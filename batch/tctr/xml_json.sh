@@ -39,10 +39,11 @@ if [[ ${download} == 'yes' ]]; then
     unzip -o ${f} -d ${xml_dir}/studies/xml/
     done
 
-
-    find ${xml_dir}/studies/xml -type f -name "*.xml" | while read f
+    find ${xml_dir}/studies/xml -type f -name "*.xml" ! -size 0 | while read f
     do
-    cat ${f} | node etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${xml_dir}/studies/json/studies.json
+    g=${f//\.xml/\.new}
+    iconv -f us-ascii -t UTF-8//TRANSLIT ${f} -o ${g}
+    cat ${g} | node ${xml_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${xml_dir}/studies/json/studies.json
     done
 
     aws s3 sync  ${xml_dir} ${s3_bucket} --delete
