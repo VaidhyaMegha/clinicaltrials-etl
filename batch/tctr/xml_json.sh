@@ -42,7 +42,7 @@ if [[ ${download} == 'yes' ]]; then
 
     find ${xml_dir}/studies/xml -type f -name "*.xml" | while read f
     do
-    cat ${f} | node ${xml_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${xml_dir}/studies/json/studies.json
+    cat ${f} | node etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${xml_dir}/studies/json/studies.json
     done
 
     aws s3 sync  ${xml_dir} ${s3_bucket} --delete
