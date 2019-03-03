@@ -18,7 +18,7 @@ image:
 
 run: image
 	$(call blue, "Running Docker image locally...")
-	docker run -i -t --rm -p 49180:8080 ${name}:${version}
+	docker run -i -t --rm ${name}:${version}
 
 ecr-login:
 	aws ecr get-login --no-include-email | sh -
