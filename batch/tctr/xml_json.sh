@@ -34,13 +34,13 @@ if [[ ${download} == 'yes' ]]; then
         wget -q ${prefix_url}${suffix_url}${g} -O ${xml_dir}/${g}
     done
 
-    find ${xml_dir} -type f -maxdepth 1 -name "*.zip" | while read f
+    find ${xml_dir} -type f -name "*.zip" | while read f
     do
     unzip -o ${f} -d ${xml_dir}/studies/xml/
     done
 
 
-    find ${xml_dir}/studies/xml -type f -maxdepth 1 -name "*.xml" | while read f
+    find ${xml_dir}/studies/xml -type f -name "*.xml" | while read f
     do
     cat ${f} | node ${xml_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${xml_dir}/studies/json/studies.json
     done
