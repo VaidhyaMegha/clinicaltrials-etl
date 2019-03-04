@@ -62,6 +62,8 @@ if [[ ${download} == 'yes' ]]; then
     fi
 
     mkdir -p ${html_dir}/studies
+    mkdir ${html_dir}/studies/json
+
     download_main_index
 
     NUM_OF_PAGES=`cat ${html_dir}/1.html | grep -oE 'of [0-9]*</span>' | grep -oE '[0-9]*' | sort -u | head -n 1`
@@ -75,6 +77,16 @@ if [[ ${download} == 'yes' ]]; then
     do
         download_trial ${f}
     done
+
+    find ${html_dir}/studies -type f -name "*.html" -printf "%f\n" | while read f
+        do
+            analyse_trial ${f} ${html_dir}/studies/json
+        done
+
+        if [[ ${mode} == 'cloud' ]]; then
+            aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
+
+        fi
 else
 
     if [ -d ${html_dir}/studies/json ]; then
@@ -88,9 +100,9 @@ else
         analyse_trial ${f} ${html_dir}/studies/json
     done
 
-    if [[ ${mode} == 'cloud' ]]; then
-        aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
-    fi
+   # if [[ ${mode} == 'cloud' ]]; then
+    #    aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
+   # fi
 fi
 popd
 
