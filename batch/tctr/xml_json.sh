@@ -38,7 +38,7 @@ if [[ ${download} == 'yes' ]]; then
 
         if [[ -s ${xml_dir}/studies/xml/${h} ]]
         then
-            g=${i//\.xml/\.new}
+            g=${h//\.xml/\.new}
             iconv -f us-ascii -t UTF-8//TRANSLIT ${xml_dir}/studies/xml/${h} -o ${g} || true
             cat ${g} | node ${context_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${xml_dir}/studies/json/studies.json
             rm -f ${g}

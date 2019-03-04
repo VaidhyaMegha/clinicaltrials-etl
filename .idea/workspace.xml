@@ -4,9 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/batch/tctr/xml_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/tctr/xml_json.sh" afterDir="false" />
-    </list>
+    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
     <ignored path="$PROJECT_DIR$/GraphProcessor/target/" />
@@ -1010,7 +1008,7 @@
       <workItem from="1551443904402" duration="2425000" />
       <workItem from="1551525059488" duration="1619000" />
       <workItem from="1551599338230" duration="10009000" />
-      <workItem from="1551675877615" duration="3976000" />
+      <workItem from="1551675877615" duration="4255000" />
     </task>
     <servers />
   </component>
@@ -1020,7 +1018,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1521901000" />
+    <option name="totallyTimeSpent" value="1522180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
