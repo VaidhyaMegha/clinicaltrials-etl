@@ -34,11 +34,11 @@ if [[ ${download} == 'yes' ]]; then
         wget -q ${prefix_url}${suffix_url}${i} -O ${i}
 
         unzip -o ${i} -d ${xml_dir}/studies/xml/
-        h=${f//\.zip/\.xml}
+        h=${i//\.zip/\.xml}
 
         if [[ -s ${xml_dir}/studies/xml/${h} ]]
         then
-            g=${h//\.xml/\.new}
+            g=${i//\.xml/\.new}
             iconv -f us-ascii -t UTF-8//TRANSLIT ${xml_dir}/studies/xml/${h} -o ${g}
             cat ${g} | node ${context_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${xml_dir}/studies/json/studies.json
             rm -f ${g}
