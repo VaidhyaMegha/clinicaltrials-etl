@@ -50,8 +50,8 @@ function analyse_trial(){
     rm ${2}/studies1.json
 }
 
-#source ~/.gvm/scripts/gvm
-#gvm use "go1.9"
+source ~/.gvm/scripts/gvm
+gvm use "go1.9"
 
 pushd ${context_dir}
 
