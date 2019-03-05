@@ -30,20 +30,23 @@ if [[ ${download} == 'yes' ]]; then
 
     cat index.html | grep -oE 'href="[^\.]*\.zip"' | while read f
     do
-        g=`echo ${f} | sed 's/href="//g; s/"//g;'`
-        wget -q ${prefix_url}${suffix_url}${g} -O ${xml_dir}/${g}
-    done
+        i=`echo ${f} | sed 's/href="//g; s/"//g;'`
+        wget -q ${prefix_url}${suffix_url}${i} -O ${i}
 
-    find ${xml_dir} -type f -name "*.zip" | while read f
-    do
-    unzip -o ${f} -d ${xml_dir}/studies/xml/
-    done
+        unzip -o ${i} -d ${xml_dir}/studies/xml/
+        h=${i//\.zip/\.xml}
 
-    find ${xml_dir}/studies/xml -type f -name "*.xml" ! -size 0 | while read f
-    do
-    g=${f//\.xml/\.new}
-    iconv -f us-ascii -t UTF-8//TRANSLIT ${f} -o ${g}
-    cat ${g} | node ${xml_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${xml_dir}/studies/json/studies.json
+        if [[ -s ${xml_dir}/studies/xml/${h} ]]
+        then
+            g=${h//\.xml/\.new}
+            iconv -f us-ascii -t UTF-8//TRANSLIT ${xml_dir}/studies/xml/${h} -o ${g} || true
+            cat ${g} | node ${context_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${xml_dir}/studies/json/studies.json
+            rm -f ${g}
+        fi
+
+        rm -f ${i}
+        rm -f ${xml_dir}/studies/xml/${h}
+
     done
 
     aws s3 sync  ${xml_dir} ${s3_bucket} --delete
