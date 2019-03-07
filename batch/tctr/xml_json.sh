@@ -46,6 +46,8 @@ if [[ ${download} == 'yes' ]]; then
             mkdir -p ${path_str}
 
             cat ${g} | node ${context_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${path_str}/studies.json
+
+            aws s3 cp ${xml_dir}/studies/xml/${h} ${s3_bucket}/studies/xml/
             rm -f ${g}
         fi
 
@@ -54,6 +56,6 @@ if [[ ${download} == 'yes' ]]; then
 
     done
 
-    aws s3 sync  ${xml_dir} ${s3_bucket} --delete
+    aws s3 sync  ${xml_dir}/studies/json/ ${s3_bucket}/studies/json/ --delete
 fi
 popd
