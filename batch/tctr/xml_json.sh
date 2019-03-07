@@ -40,7 +40,12 @@ if [[ ${download} == 'yes' ]]; then
         then
             g=${h//\.xml/\.new}
             iconv -f iso-8859-1 -t UTF-8//TRANSLIT ${xml_dir}/studies/xml/${h} -o ${g} || true
-            cat ${g} | node ${context_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${xml_dir}/studies/json/studies.json
+
+            tctr_id_prefix=${i:0:8}
+            path_str=`echo "${xml_dir}/studies/json/p_id=${tctr_id_prefix}/"`
+            mkdir -p ${path_str}
+
+            cat ${g} | node ${context_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${path_str}/studies.json
             rm -f ${g}
         fi
 
