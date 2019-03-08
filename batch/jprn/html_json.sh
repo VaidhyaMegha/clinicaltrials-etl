@@ -194,7 +194,7 @@ if [[ ${download} == 'yes' ]]; then
         download_and_analyse_trial ${f} ${html_dir}/studies/json
     done
 
-   aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
+  aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
 
 else
     cat ${html_dir}/*.html | grep -oE "ctr_view.cgi\?recptno=[^\"]*" | while read f
