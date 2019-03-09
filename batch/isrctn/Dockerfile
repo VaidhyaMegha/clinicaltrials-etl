@@ -53,10 +53,12 @@ ENV GOPATH $PATH:/$HOME/go
 
 COPY html_json.sh /usr/local/dataintegration/
 COPY html_json.js /usr/local/dataintegration/
+COPY driving.sh /usr/local/dataintegration/
 #
 #
 RUN chmod +x /usr/local/dataintegration/html_json.sh
 RUN chmod +x /usr/local/dataintegration/html_json.js
+RUN chmod +x /usr/local/dataintegration/driving.sh
 
 
 

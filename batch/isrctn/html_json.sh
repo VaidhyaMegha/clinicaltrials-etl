@@ -53,7 +53,7 @@ function analyse_trial(){
 source ~/.gvm/scripts/gvm
 gvm use "go1.9"
 
-pushd ${context_dir}
+# pushd ${context_dir}
 
 if [[ ${download} == 'yes' ]]; then
 
@@ -104,5 +104,5 @@ else
     #    aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
    # fi
 fi
-popd
+# popd
 

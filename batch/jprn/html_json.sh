@@ -167,7 +167,7 @@ function download_and_analyse_trial(){
     rm ${2}/${g}_2.json
 }
 
-pushd ${context_dir}
+# pushd ${context_dir}
 
 source ~/.gvm/scripts/gvm
 gvm use "go1.9"
@@ -204,4 +204,4 @@ actrn
     done
 fi
 
-popd
+#popd

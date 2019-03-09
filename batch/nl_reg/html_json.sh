@@ -77,7 +77,7 @@ fi
 source ~/.gvm/scripts/gvm
 gvm use "go1.9"
 
-pushd ${context_dir}
+#pushd ${context_dir}
 
 if [[ ${download} == 'yes' ]]; then
 
@@ -121,5 +121,5 @@ if [[ ${download} == 'yes' ]]; then
 
 aws s3 sync  ${html_dir}/studies ${s3_bucket} --delete
 fi
-popd
+#popd
 
