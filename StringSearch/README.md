@@ -1,4 +1,4 @@
-mvn clean package
+dmvn clean package
 scp madhavi@tingri.me:/root/datasets/result8.tsv ~/datasets/
 ssh madhavi@tingri.me
 sudo su
