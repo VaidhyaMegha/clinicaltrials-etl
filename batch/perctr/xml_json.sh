@@ -15,7 +15,7 @@ function download_xml_page(){
          -O ${xml_dir}/studies/xml/${1}.xml  || true
 }
 
-pushd ${context_dir}
+#pushd ${context_dir}
 
 if [[ ${download} == 'yes' ]]; then
 
@@ -52,4 +52,4 @@ fi
 
 
 
-popd
+#popd
