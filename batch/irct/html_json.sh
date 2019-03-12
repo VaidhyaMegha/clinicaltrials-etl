@@ -69,7 +69,7 @@ function download_and_analyse_trial() {
 "PersonResponsibleForUpdatingData":[[{"Name_of_organization_or_entity":.[12].children[1].children[].children[1].children[0].children[2].children[1].text }], [{"Full_name_of_responsible_person":.[12].children[1].children[].children[1].children[0].children[4].children[1].text  }],[{"Position":.[12].children[1].children[].children[1].children[0].children[6].children[1].text  }],[{"Other_areas_of_specialty_work": .[12].children[1].children[].children[1].children[0].children[8].children[1].text  }],  [{"Street_address":.[12].children[1].children[].children[1].children[0].children[10].children[1].text  }],[{"City":.[12].children[1].children[].children[1].children[0].children[12].children[1].text  }],[{"Country": .[12].children[1].children[].children[1].children[0].children[14].children[1].text  }],[{"PostalCode":.[12].children[1].children[].children[1].children[0].children[16].children[1].text  }],[{"Phone":.[12].children[1].children[].children[1].children[0].children[18].children[1].text  }],[{"Fax":.[12].children[1].children[].children[1].children[0].children[20].children[1].text  }],[{"Email":.[12].children[1].children[].children[1].children[0].children[22].children[1].text  }]]| transpose| map(add)}'  >> ${2}/studies.json
 }
 
-pushd ${context_dir}
+#pushd ${context_dir}
 
 
 source ~/.gvm/scripts/gvm
@@ -107,4 +107,4 @@ else
         download_and_analyse_trial ${f} ${html_dir}/studies/json ${html_dir}/studies/analysis/${f}
     done
 fi
-popd
+#popd

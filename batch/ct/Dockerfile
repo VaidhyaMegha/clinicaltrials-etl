@@ -18,7 +18,10 @@ RUN python --version && \
 COPY xml_json.xslt /usr/local/dataintegration/
 COPY xml_json.sh /usr/local/dataintegration/
 COPY xml_json_test.sh /usr/local/dataintegration/
+COPY wrapper.sh /usr/local/dataintegration/
 
+
+RUN chmod +x /usr/local/dataintegration/wrapper.sh
 
 RUN chmod +x /usr/local/dataintegration/xml_json.sh
 RUN chmod +x /usr/local/dataintegration/xml_json_test.sh

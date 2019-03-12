@@ -15,7 +15,7 @@ function download_xml_page(){
     wget  -q ${prefix_url}${suffix_url} -O index.html || true
 }
 
-pushd ${context_dir}
+#pushd ${context_dir}
 
 if [[ ${download} == 'yes' ]]; then
 
@@ -58,4 +58,4 @@ if [[ ${download} == 'yes' ]]; then
 
     aws s3 sync  ${xml_dir}/studies/json/ ${s3_bucket}/studies/json/ --delete
 fi
-popd
+#popd

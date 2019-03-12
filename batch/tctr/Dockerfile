@@ -49,9 +49,10 @@ WORKDIR /usr/local/dataintegration/etl
 RUN npm install
 
 COPY xml_json.sh /usr/local/dataintegration/
+COPY wrapper.sh /usr/local/dataintegration/
 
 RUN chmod +x /usr/local/dataintegration/etl/xml_json.js
 RUN chmod +x /usr/local/dataintegration/xml_json.sh
-
+RUN chmod +x /usr/local/dataintegration/wrapper.sh
 
 

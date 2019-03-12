@@ -30,7 +30,7 @@ function genJSON(){
     rm ${g}.json
 }
 
-pushd ${context_dir}
+#pushd ${context_dir}
 
 if [[ ${download} == 'yes' ]]; then
     wget https://clinicaltrials.gov/AllPublicXML.zip
@@ -55,4 +55,4 @@ else
 
 fi
 
-popd
+#popd

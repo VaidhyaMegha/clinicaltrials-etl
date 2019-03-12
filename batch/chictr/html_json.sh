@@ -30,7 +30,7 @@ function download_and_analyse_trial(){
     rm ${html_dir}/studies/${g}_1.html
 }
 
-pushd ${context_dir}
+#pushd ${context_dir}
 
 chmod +x ${context_dir}/html_json.js
 
@@ -69,4 +69,4 @@ else
     done
 fi
 
-popd
+#popd

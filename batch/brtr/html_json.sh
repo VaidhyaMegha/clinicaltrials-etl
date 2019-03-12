@@ -62,7 +62,7 @@ sed -i 's/\]@$/\]}}/g' ${3}
 sed -i 's/@$/\]}}/g' ${3}
 }
 
-pushd ${context_dir}
+#pushd ${context_dir}
 
 node --version
 npm --version
@@ -88,4 +88,4 @@ else
    analyse_trial_xml ${html_dir}/studies/RBR-ictrp.xml ${html_dir}/studies/json
    
 fi
-popd
+#popd
