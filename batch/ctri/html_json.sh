@@ -128,7 +128,7 @@ cat ${1} | pup 'table tr td table:nth-of-type(2) tr td:nth-of-type(2) json{}' | 
 
 }
 
-pushd ${context_dir}
+#pushd ${context_dir}
 
 source ~/.gvm/scripts/gvm
 gvm use "go1.9"
@@ -175,5 +175,5 @@ if [[ ${download} == 'yes' ]]; then
 
 aws s3 sync  ${html_dir}/studies ${s3_bucket} --delete
 fi
-popd
+#popd
 

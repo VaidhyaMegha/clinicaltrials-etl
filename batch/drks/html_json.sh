@@ -44,7 +44,7 @@ cat ${html_dir}/studies/${g}.html | pup 'div div div div  json{}' | grep  '"text
 source ~/.gvm/scripts/gvm
 gvm use "go1.9"
 
-pushd ${context_dir}
+#pushd ${context_dir}
 
 if [[ ${download} == 'yes' ]]; then
 
@@ -78,5 +78,5 @@ fi
 
 aws s3 sync  ${html_dir}/studies ${s3_bucket} --delete
 
-popd
+#popd
 

@@ -50,7 +50,10 @@ ENV GOPATH $PATH:/$HOME/go
 
 # Copy python,json and shell scripts
 COPY html_json.js /usr/local/dataintegration/
-COPY html_json.sh /usr/local/dataintegration/ 
+COPY html_json.sh /usr/local/dataintegration/
+COPY wrapper.sh /usr/local/dataintegration/
+
+RUN chmod +x /usr/local/dataintegration/wrapper.sh
 
 RUN chmod +x /usr/local/dataintegration/html_json.js
 RUN chmod +x /usr/local/dataintegration/html_json.sh

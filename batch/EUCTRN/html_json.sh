@@ -55,7 +55,7 @@ function analyse_trial(){
 source ~/.gvm/scripts/gvm
 gvm use "go1.9"
 
-pushd ${context_dir}
+#pushd ${context_dir}
 
 if [ -d ${html_dir} ]; then
     rm -rf ${html_dir}
@@ -96,5 +96,5 @@ if [[ ${mode} == 'cloud' ]]; then
     aws s3 sync  ${html_dir}/studies/ ${s3_bucket} --delete
 fi
 
-popd
+#popd
 
