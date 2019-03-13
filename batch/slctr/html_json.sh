@@ -11,6 +11,8 @@ start_id=${6:-911}
 #prefix_url="http://www.slctr.lk/trials"
 prefix_url="https://slctr.lk/trials"
 suffix_url="?page="
+count=0
+count_multiple=1
 
 function download_main_index(){
     wget  -q ${prefix_url} \
@@ -67,6 +69,16 @@ if [[ ${download} == 'yes' ]]; then
     cat ${html_dir}/*.html | grep -oE "/trials/slctr-[0-9]*-[0-9]*" | grep -oE "slctr-[0-9]*-[0-9]*" | while read f
     do
         download_trial ${f} ${html_dir}/studies/analysis/${f}
+         count=$((count+1))
+                if [[ ${count} == 100 ]]; then
+                      aws dynamodb put-item --table-name batch-job --item '{
+                     "Jobname": {"S": "slctr"},
+                     "Count": {"S": "$((count*count_multiple))"} ,
+                     "Date": {"S": "$(date +%y-%m-%d-%H:%M:%S)"} }' --return-consumed-capacity TOTAL;
+                     count_multiple=$((count_multiple+1))
+                     count=0
+                fi
+
     done
 
 
