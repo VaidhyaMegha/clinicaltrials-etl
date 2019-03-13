@@ -8,7 +8,8 @@ s3_bucket=${3:-'s3://hsdlc-results/slctr-adapter/studies'}
 context_dir=${4:-'/usr/local/dataintegration'}
 max_id=${5:-28}
 start_id=${6:-911}
-prefix_url="http://www.slctr.lk/trials"
+#prefix_url="http://www.slctr.lk/trials"
+prefix_url="https://slctr.lk/trials"
 suffix_url="?page="
 
 function download_main_index(){
@@ -62,7 +63,7 @@ if [[ ${download} == 'yes' ]]; then
     done
 
 
-    cat ${html_dir}/*.html | grep -oE '/trials/[0-9]*' | grep -oE "[0-9]*" | while read f
+   cat ${html_dir}/*.html | grep -oE '/trials/[0-9]*' | grep -oE "[0-9]*" | while read f
     do
         download_trial ${f} ${html_dir}/studies/analysis/${f}
     done
