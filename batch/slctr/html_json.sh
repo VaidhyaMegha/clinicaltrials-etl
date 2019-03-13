@@ -64,7 +64,7 @@ if [[ ${download} == 'yes' ]]; then
 
 
   # cat ${html_dir}/*.html | grep -oE '/trials/[0-9]*' | grep -oE "[0-9]*" | while read f
-    cat ${html_dir}/*.html | grep -oE "/trials/slctr-[0-9]*-[0-9]*" | grep -oE "slctr-[0-9]*-[0-9]*"
+    cat ${html_dir}/*.html | grep -oE "/trials/slctr-[0-9]*-[0-9]*" | grep -oE "slctr-[0-9]*-[0-9]*" | while read f
     do
         download_trial ${f} ${html_dir}/studies/analysis/${f}
     done
