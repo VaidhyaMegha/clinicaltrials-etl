@@ -72,9 +72,9 @@ if [[ ${download} == 'yes' ]]; then
          count=$((count+1))
                 if [[ ${count} == 100 ]]; then
                       aws dynamodb put-item --table-name batch-job --item '{
-                     "Jobname": {"S": "slctr"},
-                     "Count": {"S": "$((count*count_multiple))"} ,
-                     "Date": {"S": "$(date +%y-%m-%d-%H:%M:%S)"} }' --return-consumed-capacity TOTAL;
+                                          "Jobname": {"S": "slctr"},
+                                          "Count": {"S": '\"$((count*count_multiple))\"'} ,
+                                          "Date": {"S": '\"$(date +%y-%m-%d-%H:%M:%S)\"'} }' --return-consumed-capacity TOTAL;
                      count_multiple=$((count_multiple+1))
                      count=0
                 fi

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -x
 
 NOW=$(date +%y-%m-%d-%H:%M:%S)
 LOGFILE='TCTR-LOG-'$NOW
