@@ -10,7 +10,7 @@ max_id=${5:-8000}
 start_id=${6:-22}
 
 #prefix_url="http://www.trialregister.nl/trialreg/admin/rctview.asp?TC="
-prefix_url="https://www.trialregister.nl/trial/"
+prefix_url="https://api.trialregister.nl/trials/public.trials/"
 suffix_url=""
 
 function download_trial(){
@@ -21,7 +21,7 @@ function download_trial(){
 }
 
 function Delete_Invalid_files() {
-  grep -lrIZ 'Registratie-nummer' ${1} | xargs -0 rm -f --
+  grep -lrIZ 'Registratie-nummer' ${1} | xargs -0 rm -f --gr
 }
 
 function analyse_file() {
