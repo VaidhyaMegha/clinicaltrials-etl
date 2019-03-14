@@ -54,7 +54,7 @@ ENV GOPATH $PATH:/$HOME/go
 
 COPY html_json.sh /usr/local/dataintegration/
 COPY html_json.js /usr/local/dataintegration/
-COPY wrapper.sh /usr/local/dataintegratio
+COPY wrapper.sh /usr/local/dataintegration/
 #
 #
 RUN chmod +x /usr/local/dataintegration/html_json.sh

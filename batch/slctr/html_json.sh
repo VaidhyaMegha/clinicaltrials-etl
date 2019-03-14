@@ -71,7 +71,7 @@ if [[ ${download} == 'yes' ]]; then
         download_trial ${f} ${html_dir}/studies/analysis/${f}
          count=$((count+1))
                 if [[ ${count} == 100 ]]; then
-                      aws dynamodb put-item --table-name batch-job --item '{
+                      aws --region=us-east-1 dynamodb put-item --table-name batch-job --item '{
                                           "Jobname": {"S": "slctr"},
                                           "Count": {"S": '\"$((count*count_multiple))\"'} ,
                                           "Date": {"S": '\"$(date +%y-%m-%d-%H:%M:%S)\"'} }' --return-consumed-capacity TOTAL;
