@@ -9,6 +9,7 @@
         <module name="demo" />
         <module name="FileProcessor" />
         <module name="GraphProcessor" />
+        <module name="LSH" />
         <module name="StringSearch" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
       <module name="demo" target="1.8" />
       <module name="FileProcessor" target="8" />
       <module name="GraphProcessor" target="8" />
+      <module name="LSH" target="8" />
       <module name="StringSearch" target="1.8" />
     </bytecodeTargetLevel>
   </component>

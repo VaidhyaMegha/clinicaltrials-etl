@@ -41,13 +41,14 @@ if [[ ${download} == 'yes' ]]; then
             g=${h//\.xml/\.new}
             iconv -f iso-8859-1 -t UTF-8//TRANSLIT ${xml_dir}/studies/xml/${h} -o ${g} || true
 
-            tctr_id_prefix=${i:0:8}
-            path_str=`echo "${xml_dir}/studies/json/p_id=${tctr_id_prefix}/"`
-            mkdir -p ${path_str}
+            tctr_id_prefix=${i//\.zip/}
 
-            cat ${g} | node ${context_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  ${path_str}/studies.json
+            cat ${g} | node ${context_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  study.json
 
             aws s3 cp ${xml_dir}/studies/xml/${h} ${s3_bucket}/studies/xml/
+            aws s3 cp study.json ${s3_bucket}/studies/json/"p_id=${tctr_id_prefix}"/study.json
+
+            rm -f study.json
             rm -f ${g}
         fi
 
@@ -56,6 +57,6 @@ if [[ ${download} == 'yes' ]]; then
 
     done
 
-    aws s3 sync  ${xml_dir}/studies/json/ ${s3_bucket}/studies/json/ --delete
+     --delete
 fi
 #popd
