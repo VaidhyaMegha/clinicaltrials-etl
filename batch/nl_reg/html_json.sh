@@ -9,7 +9,8 @@ context_dir=${4:-'/usr/local/dataintegration'}
 max_id=${5:-8000}
 start_id=${6:-22}
 
-prefix_url="http://www.trialregister.nl/trialreg/admin/rctview.asp?TC="
+#prefix_url="http://www.trialregister.nl/trialreg/admin/rctview.asp?TC="
+prefix_url="https://www.trialregister.nl/trial/"
 suffix_url=""
 
 function download_trial(){
