@@ -2,9 +2,9 @@
 set -x
 
 NOW=$(date +%y-%m-%d-%H:%M:%S)
-LOGFILE='NTR-LOG-'$NOW
+LOGFILE='ACTRN-LOG-'$NOW
 context_dir=${4:-'/usr/local/dataintegration'}
-s3_bucket_log=${7:-'s3://hsdlc-results/rapid-prototype/'}
+s3_bucket_log=${5:-'s3://hsdlc-results/rapid-prototype/'}
 
 pushd ${context_dir}
 
@@ -16,6 +16,8 @@ else
   tail $context_dir/$LOGFILE.log
    exit 1
  fi
+
+
 popd
 
 

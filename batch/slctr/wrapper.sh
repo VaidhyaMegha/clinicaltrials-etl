@@ -3,8 +3,8 @@ set -x
 
 NOW=$(date +%y-%m-%d-%H:%M:%S)
 LOGFILE='SLCTR-LOG-'$NOW
-context_dir=${3:-'/usr/local/dataintegration'}
-s3_bucket_log=${4:-'s3://hsdlc-results/rapid-prototype/'}
+context_dir=${4:-'/usr/local/dataintegration'}
+s3_bucket_log=${7:-'s3://hsdlc-results/rapid-prototype/'}
 
 pushd ${context_dir}
 
