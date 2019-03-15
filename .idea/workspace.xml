@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/LSH/LSH.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LSH/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/SimpleLSHMinHashExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphProcessor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GraphProcessor/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/tctr/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/batch/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/tctr/xml_json.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/tctr/xml_json.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
@@ -62,10 +51,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch/tctr/wrapper.sh">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -80,15 +74,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/UTDM/Makefile">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch/perctr/etl/xml_json.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -332,58 +317,6 @@
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
               <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-              <item name="ct" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-              <item name="tctr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="LSH" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="LSH" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="LSH" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="LSH" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="LSH" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="vaidhyamegha" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -416,12 +349,12 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.vaidhyamegha" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/analytics/predict_clinical_trial_completion/text_classification" />
-      <recent name="$PROJECT_DIR$/analytics/oral_index" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets" />
-      <recent name="$PROJECT_DIR$/analytics/predict_clinical_outcome" />
-      <recent name="$PROJECT_DIR$/analytics" />
+      <recent name="$PROJECT_DIR$/batch/discover" />
+      <recent name="$PROJECT_DIR$/GraphProcessor/src/main/java/com/vaidhyamegha" />
+      <recent name="$PROJECT_DIR$/scripts/athena/vm_devices" />
+      <recent name="$PROJECT_DIR$/batch" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="App" />
@@ -429,12 +362,12 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.vaidhyamegha" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets" />
-      <recent name="$PROJECT_DIR$/batch/discover" />
-      <recent name="$PROJECT_DIR$/GraphProcessor/src/main/java/com/vaidhyamegha" />
-      <recent name="$PROJECT_DIR$/scripts/athena/vm_devices" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/batch" />
+      <recent name="$PROJECT_DIR$/analytics/predict_clinical_trial_completion/text_classification" />
+      <recent name="$PROJECT_DIR$/analytics/oral_index" />
+      <recent name="$PROJECT_DIR$/analytics/predict_clinical_outcome/datasets" />
+      <recent name="$PROJECT_DIR$/analytics/predict_clinical_outcome" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -997,7 +930,7 @@
       <workItem from="1552115840853" duration="20000" />
       <workItem from="1552198624428" duration="1895000" />
       <workItem from="1552289230064" duration="2025000" />
-      <workItem from="1552537255742" duration="2668000" />
+      <workItem from="1552537255742" duration="4047000" />
     </task>
     <servers />
   </component>
@@ -1007,7 +940,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1544148000" />
+    <option name="totallyTimeSpent" value="1545527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1196,9 +1129,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_trial_completion/predict.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_trial_completion/text_classification/split_files_by_overall_status.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1050">
@@ -1406,6 +1336,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/batch/tctr/wrapper.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/batch/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1415,8 +1348,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
