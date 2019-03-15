@@ -13,7 +13,8 @@ if [ $? -eq 0 ]; then
   aws s3 cp $context_dir/$LOGFILE.log ${s3_bucket_log}
 else
   aws s3 cp $context_dir/$LOGFILE.log ${s3_bucket_log}
-  set -e
+  tail $context_dir/$LOGFILE.log
+   exit 1
  fi
 
 
