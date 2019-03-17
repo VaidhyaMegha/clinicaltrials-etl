@@ -45,8 +45,8 @@ if [[ ${download} == 'yes' ]]; then
 
             cat ${g} | node ${context_dir}/etl/xml_json.js  | jq -c '.trials.trial[]' >>  study.json
 
-            aws s3 cp ${xml_dir}/studies/xml/${h} ${s3_bucket}/studies/xml/
-            aws s3 cp study.json ${s3_bucket}/studies/json/"p_id=${tctr_id_prefix}"/study.json
+            aws s3 cp ${xml_dir}/studies/xml/${h} ${s3_bucket}studies/xml/
+            aws s3 cp study.json ${s3_bucket}studies/json/"p_id=${tctr_id_prefix}"/study.json
 
             rm -f study.json
             rm -f ${g}
@@ -56,7 +56,5 @@ if [[ ${download} == 'yes' ]]; then
         rm -f ${xml_dir}/studies/xml/${h}
 
     done
-
-     --delete
 fi
 #popd
