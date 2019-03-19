@@ -15,8 +15,13 @@ CREATE EXTERNAL TABLE `tctr_studies`(
    `source_support` Array<Map<string,string>>
 
  )
+  PARTITIONED BY (
+      p_id string
+      )
   ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
       LOCATION 's3://hsdlc-results/tctr-adapter/studies/json'
       TBLPROPERTIES (
       'ignore.malformed.json'= 'true'
       );
+
+MSCK REPAIR TABLE tctr_studies;
