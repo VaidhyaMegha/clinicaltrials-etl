@@ -18,6 +18,15 @@ function download_trial(){
          -O ${html_dir}/studies/analysis/${g}.json  || true
 }
 
+function analyse_trial() {
+
+    sed -i 's/\<_[a-zA-Z0-9]*\>//g' ${html_dir}/studies/analysis/${1}
+    sed -i 's/{"":"[a-zA-Z]*","":"[a-zA-Z]*.[a-zA-Z]*","":"[0-9]*","":[0-9]*,"found":[a-zA-Z]*,""://g' ${html_dir}/studies/analysis/${1}
+    sed -i 's/}}/}/g' $f
+    cat ${html_dir}/studies/analysis/${1} >> ${html_dir}/studies/json/studies.json
+    echo "" >> ${html_dir}/studies/json/studies.json
+}
+
 source ~/.gvm/scripts/gvm
 gvm use "go1.9"
 
@@ -47,8 +56,8 @@ if [[ ${download} == 'yes' ]]; then
 
    find ${html_dir}/studies/analysis -type f -maxdepth 1 -name "*.json" ! -size 0 | while read f
    do
-   cat $f >> ${html_dir}/studies/json/studies.json
-   done
+   analyse_trial ${f} ${html_dir}/studies/json
+    done
 
    aws s3 sync  ${html_dir}/studies ${s3_bucket} --delete
 fi
