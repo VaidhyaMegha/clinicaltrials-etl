@@ -10,6 +10,8 @@ RUN python --version && \
      pip install awscli
 
 COPY global_registry.sh /usr/local/dataintegration/
+COPY wrapper.sh /usr/local/dataintegration/
 
 RUN chmod +x /usr/local/dataintegration/global_registry.sh
+RUN chmod +x /usr/local/dataintegration/wrapper.sh
 

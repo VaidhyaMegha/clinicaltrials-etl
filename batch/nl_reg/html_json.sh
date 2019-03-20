@@ -20,11 +20,11 @@ function download_trial(){
 
 function analyse_trial() {
 
-    sed -i 's/\<_[a-zA-Z0-9]*\>//g' ${html_dir}/studies/analysis/${1}
-    sed -i 's/{"":"[a-zA-Z]*","":"[a-zA-Z]*.[a-zA-Z]*","":"[0-9]*","":[0-9]*,"found":[a-zA-Z]*,""://g' ${html_dir}/studies/analysis/${1}
-    sed -i 's/}}/}/g' $f
-    cat ${html_dir}/studies/analysis/${1} >> ${html_dir}/studies/json/studies.json
-    echo "" >> ${html_dir}/studies/json/studies.json
+    sed -i 's/\<_[a-zA-Z0-9]*\>//g' ${1}
+    sed -i 's/{"":"[a-zA-Z]*","":"[a-zA-Z]*.[a-zA-Z]*","":"[0-9]*","":[0-9]*,"found":[a-zA-Z]*,""://g' ${1}
+    sed -i 's/}}/}/g' ${1}
+    cat ${1} >> ${2}/studies.json
+    echo "" >> ${2}/studies.json
 }
 
 source ~/.gvm/scripts/gvm
