@@ -3,6 +3,7 @@ package com.vaidhyamegha;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -70,5 +71,33 @@ public class UtilitiesTest {
         assertEquals("CCCATTC", Utilities.NumberToPattern(5437, 7));
         assertEquals("ACCCATTC", Utilities.NumberToPattern(5437, 8));
 
+    }
+
+    @Test
+    public void frequencyArray() {
+        assertEquals("[2, 1, 0, 0, 0, 0, 2, 2, 1, 2, 1, 0, 0, 1, 1, 0]", Arrays.toString(Utilities.FrequencyArray("ACGCGGCTCTGAAA", 2)));
+        assertEquals("[0, 1, 1, 0, 1, 0, 0, 2, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 3, 0, 0, 2, 1, 0, 3, 0, 2, 0, 0, 1, 0, 0, 1, 2, 0, 1, 1, 0, 1, 1, 3, 0, 1, 0, 1, 2, 0, 0, 1, 0, 2, 1, 0, 0, 0, 0, 0, 0, 2, 2, 0, 1, 0, 0, 0, 3, 0, 3, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0, 1, 0, 0, 0, 1, 1, 1, 3, 1, 0, 0, 1, 2, 1, 0, 0, 1, 1, 0, 1, 0, 3, 3, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 3, 0, 1, 0, 3, 2, 0, 0, 3, 1, 0, 1, 2, 0, 0, 1, 1, 0, 1, 0, 0, 2, 0, 0, 0, 0, 0, 3, 0, 0, 1, 0, 1, 1, 1, 2, 0, 0, 0, 2, 0, 0, 2, 1, 1, 2, 2, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 2, 0, 1, 0, 1, 0, 0, 1, 1, 0, 2, 2, 0, 2, 1, 0, 1, 0, 2, 1, 0, 0, 0, 0, 3, 0, 0, 1, 1, 0, 3, 1, 1, 2, 1, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 2, 1, 0, 0, 2, 1, 0, 0, 0, 1, 1, 1, 2, 0, 0, 0, 2, 0, 1, 2, 0, 0, 0, 0, 3, 1, 0, 1, 1, 2, 1, 2, 3, 0, 1, 0, 0, 1, 1, 2, 0, 1, 0, 2, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 3, 2, 1, 0, 2, 1, 1, 2, 0, 1, 1, 0, 3, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 2, 2, 3, 3, 0, 2, 0, 0, 0, 0, 2, 0, 0, 1, 0, 0, 4, 1, 1, 0, 3, 3, 1, 2, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2, 1, 2, 1, 0, 0, 0, 3, 0, 0, 0, 0, 1, 0, 1, 1, 2, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 2, 0, 1, 0, 1, 0, 1, 1, 0, 2, 0, 0, 1, 0, 2, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 2, 1, 0, 1, 2, 3, 0, 1, 1, 0, 4, 1, 2, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 2, 3, 0, 0, 0, 2, 0, 0, 1, 0, 1, 0, 0, 0, 2, 1, 0, 1, 0, 3, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 2, 2, 0, 0, 1, 2, 2, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 3, 0, 0, 1, 2, 1, 0, 1, 1, 0, 1, 2, 0, 0, 0, 2, 1, 1, 2, 2, 0, 0, 0, 4, 1, 0, 2, 0, 0, 2, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 2, 0, 0, 2, 1, 1, 0, 1, 1, 1, 1, 1, 1, 3, 0, 1, 0, 0, 1, 1, 0, 0, 0, 2, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 3, 0, 1, 1, 0, 0, 2, 1, 0, 0, 2, 2, 0, 3, 1, 2, 0, 0, 0, 2, 1, 0, 1, 2, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 1, 0, 2, 1, 0, 0, 0, 1, 0, 2, 1, 0, 1, 2, 0, 1, 1, 0, 1, 0, 0, 1, 2, 1, 2, 1, 1, 0, 2, 1, 0, 2, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 2, 1, 0, 0, 2, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 2, 0, 0, 2, 0, 0, 2, 0, 0, 2, 4, 2, 0, 0, 0, 2, 2, 1, 0, 1, 2, 1, 0, 0, 2, 0, 1, 0, 0, 0, 0, 1, 0, 2, 1, 0, 1, 0, 2, 0, 1, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 2, 0, 0, 1, 2, 1, 0, 1, 1, 2, 0, 0, 1, 0, 1, 1, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 2, 2, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 2, 1, 0, 4, 0, 1, 1, 2, 2, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 4, 0, 2, 0, 0, 1, 1, 0, 0, 2, 0, 0, 1, 2, 0, 1, 1, 0, 2, 2, 0, 0, 0, 0, 1, 0, 0, 3, 1, 0, 0, 0, 1, 0, 0, 2, 0, 0, 2, 3, 1, 0, 1, 1, 0, 1, 0, 2, 1, 4, 0, 0, 0, 0, 1, 1, 0, 0, 3, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 1, 0, 2, 0, 1, 2, 3, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 2, 0, 3, 2, 0, 0, 1, 0, 1, 2, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 3, 0, 2, 4, 0, 4, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0]", Arrays.toString(Utilities.FrequencyArray("ATCAGTTGACATAACCCACCAATGTTGCAGTCTCATCCCCCAAACTGGACTTTACGGAATAACCGACCTCGTGCAGTCGTGTTCAAACTTTGAGAGGCTCGACGTGTGTCTGCGTTGAGTAATATTGACTTGCGTTATTCTTAGAATTAGATTATTTGCAATACAGGACAGGTGCAGTGTGGGCGGAGTCTTACGTCGACAATGTGTGCTTCGGGATCGCGCCACCCCCCAAGGGCACTCCATCCTCGATTGGAATCGACGTTCCGCGTAGGCATCCCAGGCTACACGCAAGTATTTGAGAAGACCTTCCAGGCAACTGGCGCAGGCGTACTGGTTCACCCCTCTCATGTGTTTATATTGCAGCGAGGTCGACTTACAGGGATCCCCTGACTTGTCCAACGTCGCTGCGAGTGCTGCAACGTCCAAAAGACGCAGAAGTTTGCACCTTCTTCTACCTGACATAAGGGGAATACCTTCGTCATATTAGAAGACGGTTTAGCTAAATACACATAGGACGATACTTGAGAGCTCCAACGAAGATAGCGTTCTTAGCTCCAATGCCTGCGTCCCAATCCGGATGATAAGATTGGTTATGATGGGAAAACACAATCGATCATCTATGGCTGAGCCCCAAGTCAGGGACGGCACGCCGTACTAACGTGAACCTATCTATAGCCCCGTGTGGGGCCGCGAGCCCGCGTCGGGCTACGTGTCTAAGGCCAAGCGGCGGAAAG", 5)));
+    }
+
+    @Test
+    public void fasterFrequentWords() {
+        //should be 2 sized Arraylist
+        List<String> frequentWords = Utilities.FasterFrequentWords("ACGTTGCATGTCGCATGATGCATGAGAGCT", 4);
+        System.out.println(frequentWords);
+        assertTrue(frequentWords.contains("CATG"));
+        assertTrue(frequentWords.contains("GCAT"));
+        assertEquals(2, frequentWords.size());
+
+        //should be 6 sized Arraylist
+        frequentWords = Utilities.FasterFrequentWords("GGAATTGGTAGCCGCTCGGCAAACGACGGCAAACGACGGCAAACGACAGCCGCTCGGCAAACGACAACAGGTCATAGCCGCTCGGCAAACGACGTCACGCGGGTCACGCGGGGCAAACGACGTCACGCGGGGAATTGGTGGCAAACGACGTCACGCGGGTCACGCGGAGCCGCTCGTCACGCGGAACAGGTCATGTCACGCGGGGCAAACGACGGAATTGGTGGCAAACGACGTCACGCGGGGCAAACGACAACAGGTCATAGCCGCTCAGCCGCTCGTCACGCGGGGCAAACGACAACAGGTCATGGCAAACGACGGCAAACGACGGAATTGGTGGAATTGGTGTCACGCGGGGAATTGGTGGAATTGGTGGCAAACGACGTCACGCGGGTCACGCGGAGCCGCTCGTCACGCGGAGCCGCTCAACAGGTCATAACAGGTCATGTCACGCGGAGCCGCTCAACAGGTCATAGCCGCTCGGAATTGGTGGCAAACGACGGCAAACGACAGCCGCTCGGCAAACGACGGAATTGGTAACAGGTCATAACAGGTCATGTCACGCGGGGAATTGGTGGAATTGGTGGAATTGGTGGCAAACGACGTCACGCGGGGAATTGGTGTCACGCGGGTCACGCGGAGCCGCTCAGCCGCTCAGCCGCTCAGCCGCTCAGCCGCTCGTCACGCGGAACAGGTCATAACAGGTCATGGAATTGGTGGAATTGGTGTCACGCGGAGCCGCTCGTCACGCGGAGCCGCTCAGCCGCTCAGCCGCTCGGCAAACGACGGAATTGGTAGCCGCTCGGCAAACGACGTCACGCGGGTCACGCGGAGCCGCTCAGCCGCTCAGCCGCTCGGCAAACGACGGAATTGGTAACAGGTCATGGCAAACGACGTCACGCGGAACAGGTCATGGAATTGGT", 12);
+        System.out.println(frequentWords);
+        //[GGCAAACGACGG, AGCCGCTCAGCC, GCCGCTCAGCCG, CCGCTCAGCCGC, CGCTCAGCCGCT, GCTCAGCCGCTC]
+        assertTrue(frequentWords.contains("GGCAAACGACGG"));
+        assertTrue(frequentWords.contains("AGCCGCTCAGCC"));
+        assertTrue(frequentWords.contains("GCCGCTCAGCCG"));
+        assertTrue(frequentWords.contains("CCGCTCAGCCGC"));
+        assertTrue(frequentWords.contains("CGCTCAGCCGCT"));
+        assertTrue(frequentWords.contains("GCTCAGCCGCTC"));
+        assertEquals(6, frequentWords.size());
     }
 }

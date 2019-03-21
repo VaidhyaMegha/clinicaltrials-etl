@@ -1,8 +1,6 @@
 package com.vaidhyamegha;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Utilities {
 
@@ -125,10 +123,31 @@ public class Utilities {
 
         return new String(pattern);
     }
-    public static void main(String[] s){
 
+    public static int[] FrequencyArray(String text, int k){
+        int[] freq = new int[(int)(Math.pow(4,k))];
+        int len = text.length();
+
+        for (int i = 0; i <= (len - k) ; i++) {
+            String pattern = text.substring(i, i + k);
+            freq[PatternToNumber(pattern)]++;
+        }
+
+        return freq;
     }
 
+    public static ArrayList<String> FasterFrequentWords(String text, int k){
+        int[] freq = FrequencyArray(text, k);
+        ArrayList<String> list = new ArrayList<>();
 
+        OptionalInt maxInt = Arrays.stream(freq).max();
 
+        if (maxInt.isPresent()){
+            int max = Arrays.stream(freq).max().getAsInt();
+
+            for (int i = 0; i < freq.length; i++) if (freq[i] == max) list.add(NumberToPattern(i, k));
+        }
+
+        return  list;
+    }
 }
