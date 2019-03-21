@@ -1,6 +1,7 @@
 package com.vaidhyamegha;
 
 import java.util.*;
+import java.util.stream.IntStream;
 
 public class Utilities {
 
@@ -149,5 +150,37 @@ public class Utilities {
         }
 
         return  list;
+    }
+
+    public static ArrayList<String> FasterFrequentWordsBySorting(String text, int k) {
+        int len = text.length();
+        int[] patternIndexes;
+        ArrayList<String> freqPatterns = new ArrayList<>();
+
+        patternIndexes = IntStream.range(0, len - k).map(i -> PatternToNumber(text.substring(i, i + k))).toArray();
+
+        Arrays.sort(patternIndexes);
+
+        Map<Integer, Integer> patternCount = new HashMap<>();
+
+        for (int patternIndex : patternIndexes) {
+            if (patternCount.containsKey(patternIndex)) {
+                patternCount.put(patternIndex, patternCount.get(patternIndex) + 1);
+            } else {
+                patternCount.put(patternIndex, 1);
+            }
+        }
+
+        Collection<Integer> counts = patternCount.values();
+        int max = Collections.max(counts);
+
+        Set<Integer> distinctPatternIndexes = patternCount.keySet();
+
+        for (int patternIndex: distinctPatternIndexes) {
+            if(patternCount.get(patternIndex) == max)
+                freqPatterns.add(NumberToPattern(patternIndex, k));
+        }
+
+        return freqPatterns;
     }
 }
