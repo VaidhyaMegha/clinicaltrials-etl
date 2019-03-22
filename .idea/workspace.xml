@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
+            <state relative-caret-position="298">
+              <caret line="270" selection-start-line="270" selection-end-line="270" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,11 +75,11 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="167" column="162" selection-start-line="167" selection-start-column="162" selection-end-line="167" selection-end-column="162" />
+            <state relative-caret-position="328">
+              <caret line="195" selection-start-line="195" selection-end-line="195" />
             </state>
           </provider>
         </entry>
@@ -468,7 +469,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UtilitiesTest.patternMatching">
+  <component name="RunManager" selected="JUnit.UtilitiesTest.betterClumpFinding">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -517,7 +518,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.numberToPattern" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.betterClumpFinding" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -527,7 +528,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="numberToPattern" />
+      <option name="METHOD_NAME" value="betterClumpFinding" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilitiesTest.clumpFinding" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LSH" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vaidhyamegha.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
+      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
+      <option name="METHOD_NAME" value="clumpFinding" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -545,23 +563,6 @@
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
       <option name="METHOD_NAME" value="patternMatching" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UtilitiesTest.patternToNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LSH" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vaidhyamegha.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
-      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="patternToNumber" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -734,19 +735,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.UtilitiesTest.patternToNumber" />
       <item itemvalue="JUnit.UtilitiesTest" />
-      <item itemvalue="JUnit.UtilitiesTest.numberToPattern" />
       <item itemvalue="JUnit.UtilitiesTest.reverseComplement" />
       <item itemvalue="JUnit.UtilitiesTest.patternMatching" />
+      <item itemvalue="JUnit.UtilitiesTest.clumpFinding" />
+      <item itemvalue="JUnit.UtilitiesTest.betterClumpFinding" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UtilitiesTest.betterClumpFinding" />
+        <item itemvalue="JUnit.UtilitiesTest.clumpFinding" />
         <item itemvalue="JUnit.UtilitiesTest.patternMatching" />
         <item itemvalue="JUnit.UtilitiesTest" />
         <item itemvalue="JUnit.UtilitiesTest.reverseComplement" />
-        <item itemvalue="JUnit.UtilitiesTest.numberToPattern" />
-        <item itemvalue="JUnit.UtilitiesTest.patternToNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -1039,44 +1040,44 @@
       <workItem from="1553165222750" duration="13502000" />
       <workItem from="1553186124724" duration="411000" />
       <workItem from="1553186544507" duration="1688000" />
-      <workItem from="1553237652176" duration="4784000" />
+      <workItem from="1553237652176" duration="12319000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UtilitiesTest - 2019.03.22 at 15h 08m 09s.xml">
-      <configuration name="UtilitiesTest" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_clumpFinding - 2019.03.22 at 16h 43m 28s.xml">
+      <configuration name="UtilitiesTest.clumpFinding" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest - 2019.03.22 at 15h 08m 43s.xml">
-      <configuration name="UtilitiesTest" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFinding - 2019.03.22 at 16h 47m 45s.xml">
+      <configuration name="UtilitiesTest.betterClumpFinding" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 11m 00s.xml">
-      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFinding - 2019.03.22 at 16h 48m 37s.xml">
+      <configuration name="UtilitiesTest.betterClumpFinding" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 11m 19s.xml">
-      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFinding - 2019.03.22 at 16h 50m 47s.xml">
+      <configuration name="UtilitiesTest.betterClumpFinding" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 18m 48s.xml">
-      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFinding - 2019.03.22 at 16h 52m 23s.xml">
+      <configuration name="UtilitiesTest.betterClumpFinding" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 19m 14s.xml">
-      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFinding - 2019.03.22 at 17h 11m 34s.xml">
+      <configuration name="UtilitiesTest.betterClumpFinding" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 19m 41s.xml">
-      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFinding - 2019.03.22 at 17h 12m 41s.xml">
+      <configuration name="UtilitiesTest.betterClumpFinding" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 23m 14s.xml">
-      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFinding - 2019.03.22 at 17h 13m 52s.xml">
+      <configuration name="UtilitiesTest.betterClumpFinding" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 24m 02s.xml">
-      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFinding - 2019.03.22 at 17h 20m 09s.xml">
+      <configuration name="UtilitiesTest.betterClumpFinding" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 26m 51s.xml">
-      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFinding - 2019.03.22 at 18h 12m 07s.xml">
+      <configuration name="UtilitiesTest.betterClumpFinding" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1581836000" />
+    <option name="totallyTimeSpent" value="1589371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
@@ -1096,8 +1097,8 @@
       <window_info id="DBHelper" order="11" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3260188" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32706374" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39916405" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32706374" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39916405" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1263,6 +1264,15 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>text.length()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/batch/perctr/keys.json" />
@@ -1483,20 +1493,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
+    <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="328">
+          <caret line="195" selection-start-line="195" selection-end-line="195" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="167" column="162" selection-start-line="167" selection-start-column="162" selection-end-line="167" selection-end-column="162" />
+        <state relative-caret-position="298">
+          <caret line="270" selection-start-line="270" selection-end-line="270" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

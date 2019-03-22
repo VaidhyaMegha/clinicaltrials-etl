@@ -232,4 +232,46 @@ public class Utilities {
 
         return positions;
     }
+
+    //Place your ClumpFinding() function here along with any subroutines you need.
+    public static List<String> ClumpFinding(String text, int k, int L, int t) {
+        int len = text.length();
+        Set<String> patterns = new HashSet<>();
+
+        for (int i = 0; i <= (len - L) ; i++) {
+            String window = text.substring(i, i + L);
+
+            int[] freqArray = FrequencyArray(window, k);
+
+            for (int j = 0; j < freqArray.length; j++) {
+                if(freqArray[j] >= t) patterns.add(NumberToPattern(j, k));
+            }
+
+        }
+
+        return new ArrayList<>(patterns);
+    }
+
+    public static List<String> BetterClumpFinding(String text, int k, int L, int t){
+        int len = text.length();
+        Set<String> patterns = new HashSet<>();
+
+        int[] freqArray = FrequencyArray(text.substring(0,  L), k);
+
+        for (int i = 0; i <= (len - L) ; i++) {
+            String firstPattern = text.substring(i, i + k);
+            int index1 = (int)PatternToNumber(firstPattern);
+            freqArray[index1]--;
+
+            String lastPattern = text.substring(i + L - k , i + L);
+            int index2 = (int)PatternToNumber(lastPattern);
+            freqArray[index2]++;
+
+            for (int j = 0; j < freqArray.length; j++) {
+                if(freqArray[j] >= t) patterns.add(NumberToPattern(j, k));
+            }
+        }
+
+        return new ArrayList<>(patterns);
+    }
 }
