@@ -62,7 +62,7 @@ public class Utilities {
         return list;
     }
 
-    public static int PatternToNumber(String pattern) {
+    public static long PatternToNumber(String pattern) {
         int k = pattern.length();
         int[] patternNumbers = new int[k];
 
@@ -88,11 +88,13 @@ public class Utilities {
             patternNumbers[i] = cnum;
         }
 
-        int index = 0;
+        long index = 0;
 
-        for (int i = 0; i < k ; i++) index = index + ((patternNumbers[i] + 1) * (int) (Math.pow(4, k - (i + 1))));
+        for (int i = 0; i < k ; i++) {
+            index = index + (patternNumbers[k - i - 1] + 1) * (long) (Math.pow(4, i));
+        }
 
-        return index - ((int)Math.pow(4, k)- 1)/3;
+        return index - ((long)Math.pow(4, k)- 1)/3;
     }
 
     public static String NumberToPattern(int index, int k){
@@ -131,7 +133,7 @@ public class Utilities {
 
         for (int i = 0; i <= (len - k) ; i++) {
             String pattern = text.substring(i, i + k);
-            freq[PatternToNumber(pattern)]++;
+            freq[(int)PatternToNumber(pattern)]++;
         }
 
         return freq;
@@ -157,7 +159,7 @@ public class Utilities {
         int[] patternIndexes;
         ArrayList<String> freqPatterns = new ArrayList<>();
 
-        patternIndexes = IntStream.range(0, len - k).map(i -> PatternToNumber(text.substring(i, i + k))).toArray();
+        patternIndexes = LongStream.range(0, len - k).map(i -> PatternToNumber(text.substring(i, i + k))).toArray();
 
         Arrays.sort(patternIndexes);
 
