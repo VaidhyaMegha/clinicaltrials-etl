@@ -38,7 +38,9 @@ rl.on('close', function () {
         finalRecord['date_of_last_modification'] = cleanLine(study, i++);
 
         if (is(study, i, '"Trial Status"') && !is(study, ++i, '"Application Summary"'))
-        finalRecord['TrialStatus'] = cleanLine(study, i++);
+        { finalRecord['TrialStatus'] = cleanLine(study, i++);}
+        else if (is(study, i, '"Trial Status"'))
+        { finalRecord['TrialStatus']=null; i++; }
 
         if (is(study, i, '"Application Summary"'))
         i++

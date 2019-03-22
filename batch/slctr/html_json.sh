@@ -33,8 +33,8 @@ function download_trial(){
 function analyse_file() {
    cat ${1} | pup 'div json{}' | grep '"text":' | ./html_json.js | jq -c '.' >> ${2}/studies.json
 }
-source ~/.gvm/scripts/gvm
-gvm use "go1.9"
+    source ~/.gvm/scripts/gvm
+    gvm use "go1.9"
 
 #pushd ${context_dir}
 
@@ -69,15 +69,7 @@ if [[ ${download} == 'yes' ]]; then
     cat ${html_dir}/*.html | grep -oE "/trials/slctr-[0-9]*-[0-9]*" | grep -oE "slctr-[0-9]*-[0-9]*" | while read f
     do
         download_trial ${f} ${html_dir}/studies/analysis/${f}
-         count=$((count+1))
-                if [[ ${count} == 100 ]]; then
-                      aws --region=us-east-1 dynamodb put-item --table-name batch-job --item '{
-                                          "Jobname": {"S": "slctr"},
-                                          "Count": {"S": '\"$((count*count_multiple))\"'} ,
-                                          "Date": {"S": '\"$(date +%y-%m-%d-%H:%M:%S)\"'} }' --return-consumed-capacity TOTAL;
-                     count_multiple=$((count_multiple+1))
-                     count=0
-                fi
+
 
     done
 

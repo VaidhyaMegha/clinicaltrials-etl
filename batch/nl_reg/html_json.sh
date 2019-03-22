@@ -7,7 +7,7 @@ download=${2:-'no'}
 s3_bucket=${3:-'s3://hsdlc-results/ntr-adapter/studies'}
 context_dir=${4:-'/usr/local/dataintegration'}
 max_id=${5:-8000}
-start_id=${6:-22}
+start_id=${6:-1}
 prefix_url="https://api.trialregister.nl/trials/public.trials/"
 suffix_url=""
 
