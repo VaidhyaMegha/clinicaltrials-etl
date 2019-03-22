@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="138" column="79" selection-start-line="138" selection-start-column="79" selection-end-line="138" selection-end-column="79" />
+            <state relative-caret-position="458">
+              <caret line="167" column="162" selection-start-line="167" selection-start-column="162" selection-end-line="167" selection-end-column="162" />
             </state>
           </provider>
         </entry>
@@ -128,7 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>enrollment</find>
       <find>Professor Dr. med.</find>
       <find>, '$'</find>
       <find>charAt</find>
@@ -158,6 +156,7 @@
       <find>tctr</find>
       <find>s3_bucket</find>
       <find>p_id</find>
+      <find>len - k</find>
     </findStrings>
     <replaceStrings>
       <replace>is(line,</replace>
@@ -1040,44 +1039,44 @@
       <workItem from="1553165222750" duration="13502000" />
       <workItem from="1553186124724" duration="411000" />
       <workItem from="1553186544507" duration="1688000" />
-      <workItem from="1553237652176" duration="3643000" />
+      <workItem from="1553237652176" duration="4784000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UtilitiesTest_numberToPattern - 2019.03.22 at 14h 35m 04s.xml">
-      <configuration name="UtilitiesTest.numberToPattern" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UtilitiesTest_numberToPattern - 2019.03.22 at 14h 36m 40s.xml">
-      <configuration name="UtilitiesTest.numberToPattern" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UtilitiesTest_numberToPattern - 2019.03.22 at 14h 36m 51s.xml">
-      <configuration name="UtilitiesTest.numberToPattern" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UtilitiesTest_reverseComplement - 2019.03.22 at 14h 51m 43s.xml">
-      <configuration name="UtilitiesTest.reverseComplement" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UtilitiesTest_reverseComplement - 2019.03.22 at 14h 51m 56s.xml">
-      <configuration name="UtilitiesTest.reverseComplement" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UtilitiesTest_reverseComplement - 2019.03.22 at 14h 53m 22s.xml">
-      <configuration name="UtilitiesTest.reverseComplement" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UtilitiesTest_reverseComplement - 2019.03.22 at 14h 54m 06s.xml">
-      <configuration name="UtilitiesTest.reverseComplement" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UtilitiesTest_reverseComplement - 2019.03.22 at 14h 54m 22s.xml">
-      <configuration name="UtilitiesTest.reverseComplement" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 05m 02s.xml">
-      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UtilitiesTest - 2019.03.22 at 15h 08m 09s.xml">
       <configuration name="UtilitiesTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UtilitiesTest - 2019.03.22 at 15h 08m 43s.xml">
+      <configuration name="UtilitiesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 11m 00s.xml">
+      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 11m 19s.xml">
+      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 18m 48s.xml">
+      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 19m 14s.xml">
+      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 19m 41s.xml">
+      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 23m 14s.xml">
+      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 24m 02s.xml">
+      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 26m 51s.xml">
+      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1580695000" />
+    <option name="totallyTimeSpent" value="1581836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
@@ -1496,8 +1495,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="138" column="79" selection-start-line="138" selection-start-column="79" selection-end-line="138" selection-end-column="79" />
+        <state relative-caret-position="458">
+          <caret line="167" column="162" selection-start-line="167" selection-start-column="162" selection-end-line="167" selection-end-column="162" />
         </state>
       </provider>
     </entry>
