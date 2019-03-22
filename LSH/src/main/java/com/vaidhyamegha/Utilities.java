@@ -159,7 +159,7 @@ public class Utilities {
         int[] patternIndexes;
         ArrayList<String> freqPatterns = new ArrayList<>();
 
-        patternIndexes = LongStream.range(0, len - k).map(i -> PatternToNumber(text.substring(i, i + k))).toArray();
+        patternIndexes = IntStream.rangeClosed(0, len - k).map(i -> (int)PatternToNumber(text.substring(i, i + k))).toArray();
 
         Arrays.sort(patternIndexes);
 
@@ -184,5 +184,52 @@ public class Utilities {
         }
 
         return freqPatterns;
+    }
+
+    //Fill in your ReverseComplement() function here, along with any necessary subroutines.
+    public static String ReverseComplement(String pattern) {
+        int len = pattern.length();
+        StringBuilder str = new StringBuilder();
+
+        for (int i = 0; i < len ; i++) {
+            char c = pattern.charAt(i);
+            char cc = '-';
+
+            switch (c){
+                case 'A' :
+                    cc = 'T';
+                    break;
+                case 'C' :
+                    cc = 'G';
+                    break;
+                case 'G' :
+                    cc = 'C';
+                    break;
+                case 'T' :
+                    cc = 'A';
+                    break;
+            }
+
+            str.append(cc);
+        }
+
+        return str.reverse().toString();
+    }
+
+    // Fill in your PatternMatching() function here along with any subroutines you need.
+    public static ArrayList<Integer> PatternMatching(String pattern, String genome) {
+        ArrayList<Integer> positions = new ArrayList<>();
+        int len = genome.length();
+        int k = pattern.length();
+        long patternIndex = PatternToNumber(pattern);
+
+        for (int i = 0; i <= (len - k ); i++) {
+            String kmer = genome.substring(i, i + k);
+            long kmerIndex = PatternToNumber(kmer);
+
+            if(patternIndex == kmerIndex) positions.add(i);
+        }
+
+        return positions;
     }
 }

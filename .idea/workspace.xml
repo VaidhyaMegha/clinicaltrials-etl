@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
@@ -35,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+            <state relative-caret-position="187">
+              <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,11 +75,11 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+            <state relative-caret-position="473">
+              <caret line="138" column="79" selection-start-line="138" selection-start-column="79" selection-end-line="138" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -254,8 +254,8 @@
         <option value="$PROJECT_DIR$/batch/tctr/xml_json.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/tctr_studies_ddl.sql" />
         <option value="$PROJECT_DIR$/adminsitration/clean-dynamo-table.sh" />
-        <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" />
+        <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" />
       </list>
     </option>
   </component>
@@ -469,7 +469,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UtilitiesTest">
+  <component name="RunManager" selected="JUnit.UtilitiesTest.patternMatching">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -518,7 +518,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.fasterFrequentWords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.numberToPattern" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -528,14 +528,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="fasterFrequentWords" />
+      <option name="METHOD_NAME" value="numberToPattern" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.fasterFrequentWordsBySorting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.patternMatching" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -545,24 +545,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="fasterFrequentWordsBySorting" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UtilitiesTest.frequencyArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LSH" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vaidhyamegha.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
-      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="frequencyArray" />
+      <option name="METHOD_NAME" value="patternMatching" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -580,6 +563,23 @@
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
       <option name="METHOD_NAME" value="patternToNumber" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilitiesTest.reverseComplement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LSH" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vaidhyamegha.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
+      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
+      <option name="METHOD_NAME" value="reverseComplement" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -736,18 +736,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.UtilitiesTest.patternToNumber" />
-      <item itemvalue="JUnit.UtilitiesTest.frequencyArray" />
-      <item itemvalue="JUnit.UtilitiesTest.fasterFrequentWords" />
-      <item itemvalue="JUnit.UtilitiesTest.fasterFrequentWordsBySorting" />
       <item itemvalue="JUnit.UtilitiesTest" />
+      <item itemvalue="JUnit.UtilitiesTest.numberToPattern" />
+      <item itemvalue="JUnit.UtilitiesTest.reverseComplement" />
+      <item itemvalue="JUnit.UtilitiesTest.patternMatching" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UtilitiesTest.patternMatching" />
         <item itemvalue="JUnit.UtilitiesTest" />
+        <item itemvalue="JUnit.UtilitiesTest.reverseComplement" />
+        <item itemvalue="JUnit.UtilitiesTest.numberToPattern" />
         <item itemvalue="JUnit.UtilitiesTest.patternToNumber" />
-        <item itemvalue="JUnit.UtilitiesTest.fasterFrequentWordsBySorting" />
-        <item itemvalue="JUnit.UtilitiesTest.fasterFrequentWords" />
-        <item itemvalue="JUnit.UtilitiesTest.frequencyArray" />
       </list>
     </recent_temporary>
   </component>
@@ -1040,50 +1040,50 @@
       <workItem from="1553165222750" duration="13502000" />
       <workItem from="1553186124724" duration="411000" />
       <workItem from="1553186544507" duration="1688000" />
-      <workItem from="1553237652176" duration="1309000" />
+      <workItem from="1553237652176" duration="3643000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UtilitiesTest_frequencyArray - 2019.03.21 at 18h 55m 30s.xml">
-      <configuration name="UtilitiesTest.frequencyArray" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_numberToPattern - 2019.03.22 at 14h 35m 04s.xml">
+      <configuration name="UtilitiesTest.numberToPattern" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_frequencyArray - 2019.03.21 at 18h 56m 00s.xml">
-      <configuration name="UtilitiesTest.frequencyArray" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_numberToPattern - 2019.03.22 at 14h 36m 40s.xml">
+      <configuration name="UtilitiesTest.numberToPattern" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_frequencyArray - 2019.03.21 at 18h 59m 03s.xml">
-      <configuration name="UtilitiesTest.frequencyArray" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_numberToPattern - 2019.03.22 at 14h 36m 51s.xml">
+      <configuration name="UtilitiesTest.numberToPattern" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_frequencyArray - 2019.03.21 at 18h 59m 16s.xml">
-      <configuration name="UtilitiesTest.frequencyArray" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_reverseComplement - 2019.03.22 at 14h 51m 43s.xml">
+      <configuration name="UtilitiesTest.reverseComplement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_frequencyArray - 2019.03.21 at 19h 00m 26s.xml">
-      <configuration name="UtilitiesTest.frequencyArray" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_reverseComplement - 2019.03.22 at 14h 51m 56s.xml">
+      <configuration name="UtilitiesTest.reverseComplement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_frequencyArray - 2019.03.21 at 19h 00m 46s.xml">
-      <configuration name="UtilitiesTest.frequencyArray" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_reverseComplement - 2019.03.22 at 14h 53m 22s.xml">
+      <configuration name="UtilitiesTest.reverseComplement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_fasterFrequentWords - 2019.03.21 at 21h 17m 03s.xml">
-      <configuration name="UtilitiesTest.fasterFrequentWords" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_reverseComplement - 2019.03.22 at 14h 54m 06s.xml">
+      <configuration name="UtilitiesTest.reverseComplement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_fasterFrequentWordsBySorting - 2019.03.21 at 22h 03m 58s.xml">
-      <configuration name="UtilitiesTest.fasterFrequentWordsBySorting" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_reverseComplement - 2019.03.22 at 14h 54m 22s.xml">
+      <configuration name="UtilitiesTest.reverseComplement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_fasterFrequentWordsBySorting - 2019.03.21 at 22h 04m 54s.xml">
-      <configuration name="UtilitiesTest.fasterFrequentWordsBySorting" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_patternMatching - 2019.03.22 at 15h 05m 02s.xml">
+      <configuration name="UtilitiesTest.patternMatching" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_fasterFrequentWordsBySorting - 2019.03.21 at 22h 09m 58s.xml">
-      <configuration name="UtilitiesTest.fasterFrequentWordsBySorting" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest - 2019.03.22 at 15h 08m 09s.xml">
+      <configuration name="UtilitiesTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1578361000" />
+    <option name="totallyTimeSpent" value="1580695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.27915975" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.27915975" />
       <window_info id="Structure" order="1" sideWeight="0.5032189" side_tool="true" weight="0.28468767" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -1097,7 +1097,7 @@
       <window_info id="DBHelper" order="11" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3260188" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32706374" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32706374" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39916405" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1484,20 +1484,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+        <state relative-caret-position="187">
+          <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="138" column="79" selection-start-line="138" selection-start-column="79" selection-end-line="138" selection-end-column="79" />
         </state>
       </provider>
     </entry>
