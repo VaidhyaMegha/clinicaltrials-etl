@@ -211,6 +211,7 @@ public class UtilitiesTest {
     public void skew() {
         assertEquals("[0, -1, -1, -1, 0, 1, 2, 1, 1, 1, 0, 1, 2, 1, 0, 0, 0, 0, -1, 0, -1, -2]", Utilities.skew("CATGGGCATCGGCCATACGCC").toString());
         assertEquals("[0, 1, 1, 2, 1, 0, 0, -1, -2, -1, -2, -1, -1, -1, -1]", Utilities.skew("GAGCCACCGCGATA").toString());
+        assertEquals("[0, 1, 0, 0, 0, 0, -1, -1, -2, -2, -2, -3, -4, -5, -5, -4, -4, -4, -3, -2, -2, -2, -3, -3, -2]", Utilities.skew("GCATACACTTCCCAGTAGGTACTG").toString());
     }
 
     @Test
@@ -236,6 +237,7 @@ public class UtilitiesTest {
     @Test
     public void hammingDistance() {
         assertEquals(3, Utilities.HammingDistance("GGGCCGTTGGT", "GGACCGTTGAC"));
+        assertEquals(36, Utilities.HammingDistance("CTACAGCAATACGATCATATGCGGATCCGCAGTGGCCGGTAGACACACGT", "CTACCCCGCTGCTCAATGACCGGGACTAAAGAGGCGAAGATTATGGTGTG"));
 
         try{
             BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/datasets/BioInformatics/dataset_9_3.txt"));
@@ -275,6 +277,8 @@ public class UtilitiesTest {
         assertEquals(11, Utilities.ApproximatePatternCount("AACAAGCTGATAAACATTTAAAGAG",
                 "AAAAA", 2));
 
+        assertEquals(8, Utilities.ApproximatePatternCount("CGTGACAGTGTATGGGCATCTTT",
+                "TGT", 1));
         try{
             BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/datasets/BioInformatics/dataset_9_6.txt"));
             String str1 = br.readLine();
@@ -292,6 +296,7 @@ public class UtilitiesTest {
     @Test
     public void neighbors() {
         assertEquals("[AA, AC, AT, AG, GA, TA, CA]", Utilities.Neighbors("AA", 1).toString());
+        assertEquals("[CTAGTCAATG, CCAGTCAGTG, CAAGTCAATG, CCAGTCTATG, CCAGTCACTG, CCAGTCAATG, CCAGTCCATG, CCAGTGAATG, CCAGTCAATC, CCAGTCAATA, CCTGTCAATG, CCAGTCGATG, CGAGTCAATG, CCAGTCATTG, CCCGTCAATG, CCGGTCAATG, CCAGACAATG, CCAGTCAATT, CCAGTTAATG, CCAATCAATG, CCATTCAATG, CCAGGCAATG, GCAGTCAATG, CCACTCAATG, ACAGTCAATG, CCAGCCAATG, CCAGTAAATG, CCAGTCAAAG, CCAGTCAACG, TCAGTCAATG, CCAGTCAAGG]", Utilities.Neighbors("CCAGTCAATG", 1).toString());
 
         try{
             BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/datasets/BioInformatics/dataset_3014_4.txt"));

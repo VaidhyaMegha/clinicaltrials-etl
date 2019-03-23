@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="447" column="17" lean-forward="true" selection-start-line="442" selection-start-column="16" selection-end-line="447" selection-end-column="17" />
+            <state relative-caret-position="247">
+              <caret line="442" selection-start-line="442" selection-end-line="447" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,8 +81,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="326" column="37" selection-start-line="326" selection-start-column="37" selection-end-line="326" selection-end-column="37" />
+            <state relative-caret-position="292">
+              <caret line="238" column="101" selection-start-line="238" selection-start-column="101" selection-end-line="238" selection-end-column="101" />
             </state>
           </provider>
         </entry>
@@ -258,8 +257,8 @@
         <option value="$PROJECT_DIR$/batch/tctr/xml_json.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/tctr_studies_ddl.sql" />
         <option value="$PROJECT_DIR$/adminsitration/clean-dynamo-table.sh" />
-        <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" />
+        <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" />
       </list>
     </option>
   </component>
@@ -473,7 +472,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement">
+  <component name="RunManager" selected="JUnit.UtilitiesTest.neighbors">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -506,23 +505,6 @@
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="UtilitiesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LSH" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vaidhyamegha.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
-      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="approximatePatternMatching" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UtilitiesTest.approximatePatternCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
@@ -534,23 +516,6 @@
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
       <option name="METHOD_NAME" value="approximatePatternCount" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UtilitiesTest.frequentWordsWithMismatches" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LSH" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vaidhyamegha.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
-      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="frequentWordsWithMismatches" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -574,6 +539,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UtilitiesTest.hammingDistance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LSH" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vaidhyamegha.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
+      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
+      <option name="METHOD_NAME" value="hammingDistance" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UtilitiesTest.neighbors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
@@ -585,6 +567,23 @@
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
       <option name="METHOD_NAME" value="neighbors" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilitiesTest.skew" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LSH" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vaidhyamegha.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
+      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
+      <option name="METHOD_NAME" value="skew" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -740,19 +739,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.UtilitiesTest" />
+      <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" />
+      <item itemvalue="JUnit.UtilitiesTest.hammingDistance" />
+      <item itemvalue="JUnit.UtilitiesTest.skew" />
       <item itemvalue="JUnit.UtilitiesTest.approximatePatternCount" />
       <item itemvalue="JUnit.UtilitiesTest.neighbors" />
-      <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatches" />
-      <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" />
-        <item itemvalue="JUnit.UtilitiesTest" />
-        <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatches" />
         <item itemvalue="JUnit.UtilitiesTest.neighbors" />
         <item itemvalue="JUnit.UtilitiesTest.approximatePatternCount" />
+        <item itemvalue="JUnit.UtilitiesTest.skew" />
+        <item itemvalue="JUnit.UtilitiesTest.hammingDistance" />
+        <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" />
       </list>
     </recent_temporary>
   </component>
@@ -1047,17 +1046,11 @@
       <workItem from="1553186544507" duration="1688000" />
       <workItem from="1553237652176" duration="13094000" />
       <workItem from="1553265834774" duration="713000" />
-      <workItem from="1553313846312" duration="17539000" />
+      <workItem from="1553313846312" duration="17879000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UtilitiesTest_frequentWordsWithMismatches - 2019.03.23 at 14h 07m 10s.xml">
-      <configuration name="UtilitiesTest.frequentWordsWithMismatches" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UtilitiesTest_frequentWordsWithMismatches - 2019.03.23 at 14h 09m 34s.xml">
-      <configuration name="UtilitiesTest.frequentWordsWithMismatches" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UtilitiesTest_frequentWordsWithMismatches - 2019.03.23 at 14h 10m 32s.xml">
       <configuration name="UtilitiesTest.frequentWordsWithMismatches" configurationId="JUnit" />
     </history-entry>
@@ -1082,9 +1075,15 @@
     <history-entry file="UtilitiesTest - 2019.03.23 at 14h 33m 04s.xml">
       <configuration name="UtilitiesTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 15h 00m 51s.xml">
+      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 15h 01m 35s.xml">
+      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1608398000" />
+    <option name="totallyTimeSpent" value="1608738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
@@ -1531,8 +1530,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="447" column="17" lean-forward="true" selection-start-line="442" selection-start-column="16" selection-end-line="447" selection-end-column="17" />
+        <state relative-caret-position="247">
+          <caret line="442" selection-start-line="442" selection-end-line="447" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1541,8 +1540,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="326" column="37" selection-start-line="326" selection-start-column="37" selection-end-line="326" selection-end-column="37" />
+        <state relative-caret-position="292">
+          <caret line="238" column="101" selection-start-line="238" selection-start-column="101" selection-end-line="238" selection-end-column="101" />
         </state>
       </provider>
     </entry>
