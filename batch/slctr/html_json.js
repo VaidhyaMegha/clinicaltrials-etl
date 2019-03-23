@@ -240,6 +240,40 @@ i++;
         finalRecord['SecondarySponsors'] = source;
         }
 
+i=i+2;
+
+
+        if (is(study, i, '"IPD sharing plan description"') && !is(study, ++i, '"Study protocol available"'))
+            finalRecord['IPDsharingplandescription'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Study protocol available"') && !is(study, ++i, '"Protocol version and date"'))
+            finalRecord['Studyprotocolavailable'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Protocol version and date"') && !is(study, ++i, '"Protocol URL"'))
+            finalRecord['Protocolversionanddate'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Protocol URL"') && !is(study, ++i, '"Results summary available"'))
+            finalRecord['ProtocolURL'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Results summary available"') && !is(study, ++i, '"Date of posting results"'))
+            finalRecord['Resultssummaryavailable'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Date of posting results"') && !is(study, ++i, '"Date of study completion"'))
+            finalRecord['Dateofpostingresults'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Date of study completion"') && !is(study, ++i, '"Final sample size"'))
+            finalRecord['Dateofstudycompletion'] = cleanLine(study, i++);
+        if (is(study, i, '"Final sample size"') && !is(study, ++i, '"Date of first publication"'))
+            finalRecord['Finalsamplesize'] = cleanLine(study, i++);
+        if (is(study, i, '"Date of first publication"') && !is(study, ++i, '"Link to results"'))
+            finalRecord['Dateoffirstpublication'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Link to results"') && !is(study, ++i, '"Brief summary of results"'))
+            finalRecord['Linktoresults'] = cleanLine(study, i++);
+        if (is(study, i, '"Brief summary of results"') && !is(study, ++i, '"Trial Options"'))
+            finalRecord['Briefsummaryofresults'] = cleanLine(study, i++);
+
+
 
 
       process.stdout.write(JSON.stringify(finalRecord) + '\n');
