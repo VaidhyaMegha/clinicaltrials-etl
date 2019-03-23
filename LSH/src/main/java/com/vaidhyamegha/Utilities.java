@@ -17,9 +17,11 @@ public class Utilities {
      */
     public static int PatternCount(String text, String pattern) {
         int count = 0;
+        int tlen = text.length();
+        int plen = pattern.length();
 
-        for (int i = 0; i <= (text.length() - pattern.length()); i++){
-            if(text.substring(i, i + pattern.length()).equals(pattern)){
+        for (int i = 0; i <= (tlen - plen); i++){
+            if(text.substring(i, i + plen).equals(pattern)){
                 count = count + 1;
             }
         }
@@ -274,4 +276,94 @@ public class Utilities {
 
         return new ArrayList<>(patterns);
     }
+
+    // Fill in your MinimumSkew() function along with any subroutines you need.
+    public static List<Integer> skew(String genome) {
+        List<Integer> list = new ArrayList<>();
+        int len = genome.length();
+        int runningSkew = 0;
+
+        list.add(0);
+        for (int i = 0; i < len ; i++) {
+            char c = genome.charAt(i);
+
+            switch (c) {
+                case 'G':
+                    runningSkew++;
+                    break;
+                case 'C':
+                    runningSkew--;
+                    break;
+            }
+
+            list.add(runningSkew);
+        }
+
+        return list;
+    }
+
+    public static List<Integer> MinimumSkew(List<Integer> skewarray) {
+        int len = skewarray.size();
+        OptionalInt min = IntStream.range(0, len).map(skewarray::get).min();
+        List<Integer> list = new ArrayList<>();
+
+        if(min.isPresent())
+            for (int i = 0; i < len; i++)
+                if (skewarray.get(i) == min.getAsInt()) list.add(i);
+
+        return list;
+    }
+
+
+    // Fill in your HammingDistance() function here.
+    public static int HammingDistance(String p, String q) {
+        int len1 = p.length();
+        int len2 = q.length();
+        int distance = 0;
+
+        if (len1 != len2) return  -1;
+
+        for (int i = 0; i < len1 ; i++) {
+            if (p.charAt(i) != q.charAt(i)) distance++;
+        }
+
+        return distance;
+    }
+
+
+    //fill in your ApproximatePatternMatching() function here with any subroutines you need.
+    public static List<Integer> ApproximatePatternMatching(String text, String pattern, int match) {
+        List<Integer> list = new ArrayList<>();
+        int tlen = text.length();
+        int plen = pattern.length();
+
+        for (int i = 0; i <= tlen - plen; i++) {
+            String subtext = text.substring(i, i + plen);
+
+            if(Math.abs(HammingDistance(subtext, pattern)) <= match)
+                list.add(i);
+        }
+
+        return list;
+    }
+
+    //fill in your ApproximatePatternCount() function here with any subroutines you need.
+    public static int ApproximatePatternCount(String text, String pattern, int match) {
+        int count = 0;
+        int tlen = text.length();
+        int plen = pattern.length();
+
+        for (int i = 0; i <= (tlen - plen); i++)
+            if (Math.abs(HammingDistance(text.substring(i, i + plen), pattern)) <= match)
+                count++;
+
+        return count;
+    }
+
+    // place your FrequentWordsWithMismatches() function here along with any needed subroutines
+    public static List<String> FrequentWordsWithMismatches(String text, int k, int d) {
+        return null;
+    }
+
+
 }
