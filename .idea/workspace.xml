@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" afterDir="false" />
     </list>
@@ -39,27 +38,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="364" column="8" selection-start-line="364" selection-start-column="8" selection-end-line="364" selection-end-column="8" />
+            <state relative-caret-position="322">
+              <caret line="447" column="17" lean-forward="true" selection-start-line="442" selection-start-column="16" selection-end-line="447" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#11295#11296#0" expanded="true" />
-                <element signature="e#11322#11323#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1995.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/function/IntUnaryOperator.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/Map.class">
+        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state relative-caret-position="70">
+              <caret line="688" column="18" selection-start-line="688" selection-start-column="18" selection-end-line="688" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -81,8 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="263" column="306" selection-start-line="263" selection-start-column="306" selection-end-line="263" selection-end-column="306" />
+            <state relative-caret-position="217">
+              <caret line="326" column="37" selection-start-line="326" selection-start-column="37" selection-end-line="326" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -257,8 +258,8 @@
         <option value="$PROJECT_DIR$/batch/tctr/xml_json.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/tctr_studies_ddl.sql" />
         <option value="$PROJECT_DIR$/adminsitration/clean-dynamo-table.sh" />
-        <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" />
         <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" />
+        <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" />
       </list>
     </option>
   </component>
@@ -472,7 +473,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UtilitiesTest">
+  <component name="RunManager" selected="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -522,7 +523,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.approximatePatternMatching" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.approximatePatternCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -532,14 +533,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="approximatePatternMatching" />
+      <option name="METHOD_NAME" value="approximatePatternCount" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.hammingDistance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.frequentWordsWithMismatches" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -549,14 +550,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="hammingDistance" />
+      <option name="METHOD_NAME" value="frequentWordsWithMismatches" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.minimumSkew" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -566,14 +567,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="minimumSkew" />
+      <option name="METHOD_NAME" value="frequentWordsWithMismatchesAndReverseComplement" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.skew" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.neighbors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -583,7 +584,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="skew" />
+      <option name="METHOD_NAME" value="neighbors" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -739,19 +740,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.UtilitiesTest.skew" />
-      <item itemvalue="JUnit.UtilitiesTest.minimumSkew" />
-      <item itemvalue="JUnit.UtilitiesTest.hammingDistance" />
-      <item itemvalue="JUnit.UtilitiesTest.approximatePatternMatching" />
       <item itemvalue="JUnit.UtilitiesTest" />
+      <item itemvalue="JUnit.UtilitiesTest.approximatePatternCount" />
+      <item itemvalue="JUnit.UtilitiesTest.neighbors" />
+      <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatches" />
+      <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" />
         <item itemvalue="JUnit.UtilitiesTest" />
-        <item itemvalue="JUnit.UtilitiesTest.approximatePatternMatching" />
-        <item itemvalue="JUnit.UtilitiesTest.hammingDistance" />
-        <item itemvalue="JUnit.UtilitiesTest.minimumSkew" />
-        <item itemvalue="JUnit.UtilitiesTest.skew" />
+        <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatches" />
+        <item itemvalue="JUnit.UtilitiesTest.neighbors" />
+        <item itemvalue="JUnit.UtilitiesTest.approximatePatternCount" />
       </list>
     </recent_temporary>
   </component>
@@ -1046,50 +1047,50 @@
       <workItem from="1553186544507" duration="1688000" />
       <workItem from="1553237652176" duration="13094000" />
       <workItem from="1553265834774" duration="713000" />
-      <workItem from="1553313846312" duration="4731000" />
+      <workItem from="1553313846312" duration="17539000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UtilitiesTest_approximatePatternMatching - 2019.03.23 at 10h 12m 10s.xml">
-      <configuration name="UtilitiesTest.approximatePatternMatching" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_frequentWordsWithMismatches - 2019.03.23 at 14h 07m 10s.xml">
+      <configuration name="UtilitiesTest.frequentWordsWithMismatches" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_approximatePatternCount - 2019.03.23 at 10h 18m 42s.xml">
-      <configuration name="UtilitiesTest.approximatePatternCount" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_frequentWordsWithMismatches - 2019.03.23 at 14h 09m 34s.xml">
+      <configuration name="UtilitiesTest.frequentWordsWithMismatches" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_approximatePatternCount - 2019.03.23 at 10h 18m 57s.xml">
-      <configuration name="UtilitiesTest.approximatePatternCount" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_frequentWordsWithMismatches - 2019.03.23 at 14h 10m 32s.xml">
+      <configuration name="UtilitiesTest.frequentWordsWithMismatches" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_approximatePatternCount - 2019.03.23 at 10h 20m 05s.xml">
-      <configuration name="UtilitiesTest.approximatePatternCount" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 14h 26m 47s.xml">
+      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_approximatePatternCount - 2019.03.23 at 10h 20m 32s.xml">
-      <configuration name="UtilitiesTest.approximatePatternCount" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 14h 27m 07s.xml">
+      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_skew - 2019.03.23 at 11h 04m 15s.xml">
-      <configuration name="UtilitiesTest.skew" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 14h 29m 17s.xml">
+      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_minimumSkew - 2019.03.23 at 11h 07m 37s.xml">
-      <configuration name="UtilitiesTest.minimumSkew" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 14h 30m 21s.xml">
+      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_minimumSkew - 2019.03.23 at 11h 08m 29s.xml">
-      <configuration name="UtilitiesTest.minimumSkew" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 14h 31m 24s.xml">
+      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_hammingDistance - 2019.03.23 at 11h 10m 23s.xml">
-      <configuration name="UtilitiesTest.hammingDistance" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 14h 32m 19s.xml">
+      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_approximatePatternMatching - 2019.03.23 at 11h 12m 29s.xml">
-      <configuration name="UtilitiesTest.approximatePatternMatching" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest - 2019.03.23 at 14h 33m 04s.xml">
+      <configuration name="UtilitiesTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1595590000" />
+    <option name="totallyTimeSpent" value="1608398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.28579324" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.28579324" />
       <window_info id="Structure" order="1" sideWeight="0.5032189" side_tool="true" weight="0.28468767" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -1103,7 +1104,7 @@
       <window_info id="DBHelper" order="11" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3260188" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32706374" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32706374" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39916405" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1275,6 +1276,12 @@
           <option name="temporary" value="true" />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java</url>
+          <line>462</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -1292,8 +1299,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/batch/perctr/keys.json" />
-    <entry file="file://$PROJECT_DIR$/batch/perctr/public.xsd" />
     <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_trial_completion/screenshots/Screenshot from 2019-03-03 21-46-50.png" />
     <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_trial_completion/screenshots/Screenshot from 2019-03-03 21-47-18.png" />
     <entry file="file://$PROJECT_DIR$/batch/perctr/etl/README.md">
@@ -1510,22 +1515,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="688" column="18" selection-start-line="688" selection-start-column="18" selection-end-line="688" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/function/IntUnaryOperator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="364" column="8" selection-start-line="364" selection-start-column="8" selection-end-line="364" selection-end-column="8" />
+        <state relative-caret-position="322">
+          <caret line="447" column="17" lean-forward="true" selection-start-line="442" selection-start-column="16" selection-end-line="447" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#11295#11296#0" expanded="true" />
-            <element signature="e#11322#11323#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="263" column="306" selection-start-line="263" selection-start-column="306" selection-end-line="263" selection-end-column="306" />
+        <state relative-caret-position="217">
+          <caret line="326" column="37" selection-start-line="326" selection-start-column="37" selection-end-line="326" selection-end-column="37" />
         </state>
       </provider>
     </entry>

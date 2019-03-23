@@ -337,12 +337,9 @@ public class Utilities {
         int tlen = text.length();
         int plen = pattern.length();
 
-        for (int i = 0; i <= tlen - plen; i++) {
-            String subtext = text.substring(i, i + plen);
-
-            if(Math.abs(HammingDistance(subtext, pattern)) <= match)
+        for (int i = 0; i <= tlen - plen; i++)
+            if(Math.abs(HammingDistance(text.substring(i, i + plen), pattern)) <= match)
                 list.add(i);
-        }
 
         return list;
     }
@@ -360,10 +357,118 @@ public class Utilities {
         return count;
     }
 
-    // place your FrequentWordsWithMismatches() function here along with any needed subroutines
-    public static List<String> FrequentWordsWithMismatches(String text, int k, int d) {
-        return null;
+    /**
+     * Code Challenge: Implement Neighbors to find the d-neighborhood of a string.
+     *
+     * Input: A string Pattern and an integer d.
+     * Output: The collection of strings Neighbors(Pattern, d). (You may return the strings in any order, but each line should contain only one string.)
+     */
+    public static Set<String> Neighbors(String pattern, int d){
+        Set<String> neighbors = new HashSet<>();
+        if(d == 0) {
+            neighbors.add(pattern);
+        } else {
+            int len = pattern.length();
+            String[] alphabet = new String[]{"A", "C", "G", "T"};
+
+            if(len > 1) {
+                Set<String> suffixNeighbors = Neighbors(pattern.substring(1, len), d);
+                for (String s : suffixNeighbors){
+                    for(String al : alphabet) {
+                        String neighbor = al + s;
+
+                        if (HammingDistance(pattern, neighbor) <= d)
+                            neighbors.add(neighbor);
+                    }
+                }
+            } else
+                Collections.addAll(neighbors, alphabet);
+
+        }
+
+        return neighbors;
     }
 
+    // place your FrequentWordsWithMismatches() function here along with any needed subroutines
+    public static List<String> FrequentWordsWithMismatches(String text, int k, int d) {
+        int len = text.length();
 
+        ArrayList<String> freqPatterns = new ArrayList<>();
+        Map<String, Integer> patternCount = new HashMap<>();
+
+        for (int i = 0; i <= (len - k) ; i++) {
+            String kmer = text.substring(i, i + k);
+            Set<String> neighbors = Neighbors(kmer, d);
+
+            for(String s: neighbors){
+                if(patternCount.containsKey(s)){
+                    patternCount.put(s, patternCount.get(s) + 1);
+                } else {
+                    patternCount.put(s, 1);
+                }
+            }
+        }
+
+        Optional<Integer> max = patternCount.values().stream().max(Comparator.comparingInt(i -> i));
+
+        if(max.isPresent()){
+            int maximum = max.get();
+
+            for(String s: patternCount.keySet()){
+                if(patternCount.get(s) == maximum)
+                    freqPatterns.add(s);
+            }
+        }
+
+        return freqPatterns;
+    }
+
+    public static List<String> FrequentWordsWithMismatchesAndReverseComplement(String text, int k, int d) {
+        int len = text.length();
+
+        ArrayList<String> freqPatterns = new ArrayList<>();
+        Map<String, Integer> patternCount = new HashMap<>();
+
+        for (int i = 0; i <= (len - k) ; i++) {
+            String kmer = text.substring(i, i + k);
+            Set<String> neighbors = Neighbors(kmer, d);
+
+            for(String s: neighbors){
+                if(patternCount.containsKey(s)){
+                    patternCount.put(s, patternCount.get(s) + 1);
+                } else {
+                    patternCount.put(s, 1);
+                }
+
+                String rc = ReverseComplement(s);
+                if (patternCount.containsKey(rc)) {
+                    patternCount.put(rc, patternCount.get(rc) + 1);
+                } else {
+                    patternCount.put(rc, 1);
+                }
+
+            }
+        }
+
+        int maximum = -1;
+
+        for(String s: patternCount.keySet()){
+            Integer i = patternCount.get(ReverseComplement(s));
+            int count = patternCount.get(s) + ((i == null) ? 0 : i);
+
+            if(count > maximum)
+                maximum = count;
+        }
+
+        for(String s: patternCount.keySet()){
+            Integer i = patternCount.get(s);
+            Integer j = patternCount.get(ReverseComplement(s));
+            int j1 = ((j == null) ? 0 : j);
+
+            if( (i + j1) == maximum)
+                freqPatterns.add(s);
+        }
+
+        return freqPatterns;
+    }
 }
