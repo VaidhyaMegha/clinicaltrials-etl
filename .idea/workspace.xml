@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="442" selection-start-line="442" selection-end-line="447" selection-end-column="17" />
+            <state relative-caret-position="337">
+              <caret line="497" column="29" selection-start-line="497" selection-start-column="29" selection-end-line="497" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,10 +49,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/function/IntUnaryOperator.class">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state relative-caret-position="210">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -58,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
+            <state relative-caret-position="9510">
               <caret line="688" column="18" selection-start-line="688" selection-start-column="18" selection-end-line="688" selection-end-column="18" />
             </state>
           </provider>
@@ -81,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="238" column="101" selection-start-line="238" selection-start-column="101" selection-end-line="238" selection-end-column="101" />
+            <state relative-caret-position="52">
+              <caret line="149" column="53" selection-start-line="149" selection-start-column="51" selection-end-line="149" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -131,11 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Professor Dr. med.</find>
-      <find>, '$'</find>
-      <find>charAt</find>
-      <find>new No</find>
-      <find>take</find>
       <find>CTGATGCATGGGAAACATAATTTGATCATTTTTAAGTTACAGTCCAAATCTTTTTGTACCTGAATAACATGTTGCCCAGTCAGTCTCTCTT</find>
       <find>--color=auto</find>
       <find>192</find>
@@ -161,6 +158,11 @@
       <find>s3_bucket</find>
       <find>p_id</find>
       <find>len - k</find>
+      <find>TTATC</find>
+      <find>TTATCCACA</find>
+      <find>GGATCCTGG</find>
+      <find>TGTGG</find>
+      <find>10</find>
     </findStrings>
     <replaceStrings>
       <replace>is(line,</replace>
@@ -257,8 +259,8 @@
         <option value="$PROJECT_DIR$/batch/tctr/xml_json.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/tctr_studies_ddl.sql" />
         <option value="$PROJECT_DIR$/adminsitration/clean-dynamo-table.sh" />
-        <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" />
         <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" />
+        <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" />
       </list>
     </option>
   </component>
@@ -303,16 +305,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+      <pane id="PackagesPane">
+        <subPane>
           <expand>
             <path>
-              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DI_ETL" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="DI_ETL" type="58d84e3e:PackageViewProjectNode" />
+              <item name="LSH" type="616d4139:PackageViewModuleNode" />
             </path>
             <path>
-              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="FileProcessor" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="DI_ETL" type="58d84e3e:PackageViewProjectNode" />
+              <item name="LSH" type="616d4139:PackageViewModuleNode" />
+              <item name="com.vaidhyamegha" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -388,17 +391,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="DI_ETL" type="58d84e3e:PackageViewProjectNode" />
-              <item name="LSH" type="616d4139:PackageViewModuleNode" />
+              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="DI_ETL" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
             <path>
-              <item name="DI_ETL" type="58d84e3e:PackageViewProjectNode" />
-              <item name="LSH" type="616d4139:PackageViewModuleNode" />
-              <item name="com.vaidhyamegha" type="1f31426a:PackageElementNode" />
+              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="FileProcessor" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
           </expand>
           <select />
@@ -472,7 +474,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UtilitiesTest.neighbors">
+  <component name="RunManager" selected="JUnit.UtilitiesTest.betterClumpFindingWithMismatchesAndRC">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -505,6 +507,23 @@
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="UtilitiesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LSH" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vaidhyamegha.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
+      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
+      <option name="METHOD_NAME" value="neighbors" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UtilitiesTest.approximatePatternCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
@@ -522,7 +541,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -532,24 +551,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="frequentWordsWithMismatchesAndReverseComplement" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UtilitiesTest.hammingDistance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LSH" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vaidhyamegha.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
-      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="hammingDistance" />
+      <option name="METHOD_NAME" value="betterClumpFindingWithMismatchesAndRC" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -739,19 +741,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" />
-      <item itemvalue="JUnit.UtilitiesTest.hammingDistance" />
       <item itemvalue="JUnit.UtilitiesTest.skew" />
       <item itemvalue="JUnit.UtilitiesTest.approximatePatternCount" />
       <item itemvalue="JUnit.UtilitiesTest.neighbors" />
+      <item itemvalue="JUnit.UtilitiesTest" />
+      <item itemvalue="JUnit.UtilitiesTest.betterClumpFindingWithMismatchesAndRC" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UtilitiesTest.betterClumpFindingWithMismatchesAndRC" />
+        <item itemvalue="JUnit.UtilitiesTest" />
         <item itemvalue="JUnit.UtilitiesTest.neighbors" />
         <item itemvalue="JUnit.UtilitiesTest.approximatePatternCount" />
         <item itemvalue="JUnit.UtilitiesTest.skew" />
-        <item itemvalue="JUnit.UtilitiesTest.hammingDistance" />
-        <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" />
       </list>
     </recent_temporary>
   </component>
@@ -1046,51 +1048,51 @@
       <workItem from="1553186544507" duration="1688000" />
       <workItem from="1553237652176" duration="13094000" />
       <workItem from="1553265834774" duration="713000" />
-      <workItem from="1553313846312" duration="17879000" />
+      <workItem from="1553313846312" duration="19192000" />
+      <workItem from="1553347051979" duration="3884000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UtilitiesTest_frequentWordsWithMismatches - 2019.03.23 at 14h 10m 32s.xml">
-      <configuration name="UtilitiesTest.frequentWordsWithMismatches" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 11m 19s.xml">
+      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 14h 26m 47s.xml">
-      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 11m 59s.xml">
+      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 14h 27m 07s.xml">
-      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 12m 05s.xml">
+      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 14h 29m 17s.xml">
-      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 13m 23s.xml">
+      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 14h 30m 21s.xml">
-      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 15m 42s.xml">
+      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 14h 31m 24s.xml">
-      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 16m 26s.xml">
+      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 14h 32m 19s.xml">
-      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 24m 13s.xml">
+      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest - 2019.03.23 at 14h 33m 04s.xml">
-      <configuration name="UtilitiesTest" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 25m 47s.xml">
+      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 15h 00m 51s.xml">
-      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 29m 51s.xml">
+      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_frequentWordsWithMismatchesAndReverseComplement - 2019.03.23 at 15h 01m 35s.xml">
-      <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 30m 59s.xml">
+      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1608738000" />
+    <option name="totallyTimeSpent" value="1613935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.28579324" />
-      <window_info id="Structure" order="1" sideWeight="0.5032189" side_tool="true" weight="0.28468767" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49529782" visible="true" weight="0.28911" />
+      <window_info id="Structure" order="1" sideWeight="0.5047022" side_tool="true" weight="0.28579324" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
       <window_info id="Project Explorer" order="4" />
@@ -1277,9 +1279,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java</url>
-          <line>462</line>
+          <line>488</line>
           <properties />
-          <option name="timeStamp" value="10" />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java</url>
+          <line>492</line>
+          <properties />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1291,6 +1299,11 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>minimumSkew.size()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>text.length()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -1298,7 +1311,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_trial_completion/screenshots/Screenshot from 2019-03-03 21-46-50.png" />
     <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_trial_completion/screenshots/Screenshot from 2019-03-03 21-47-18.png" />
     <entry file="file://$PROJECT_DIR$/batch/perctr/etl/README.md">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1484,6 +1496,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/function/IntUnaryOperator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9510">
+          <caret line="688" column="18" selection-start-line="688" selection-start-column="18" selection-end-line="688" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/Arrays.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1514,24 +1540,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="688" column="18" selection-start-line="688" selection-start-column="18" selection-end-line="688" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/function/IntUnaryOperator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="210">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="442" selection-start-line="442" selection-end-line="447" selection-end-column="17" />
+        <state relative-caret-position="337">
+          <caret line="497" column="29" selection-start-line="497" selection-start-column="29" selection-end-line="497" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1540,8 +1559,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="238" column="101" selection-start-line="238" selection-start-column="101" selection-end-line="238" selection-end-column="101" />
+        <state relative-caret-position="52">
+          <caret line="149" column="53" selection-start-line="149" selection-start-column="51" selection-end-line="149" selection-end-column="53" />
         </state>
       </provider>
     </entry>
