@@ -105,27 +105,32 @@ rl.on('close', function () {
         if (is(study, i, '"Study Phase"') && !is(study, ++i, '"Intervention(s) planned"'))
             finalRecord['Purpose'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Intervention(s) planned"') && !is(study, ++i, '"Inclusion criteria"'))
-        finalRecord['InterventionsPlanned'] = cleanLine(study, i++);
-
-        if (is(study, i, '"Inclusion criteria"') && !is(study, ++i, '"Exclusion criteria"'))
+        if (is(study, i, '"Intervention(s) planned"'))
+        {
+            source = [];
+            while (!is(study, ++i, '"Inclusion criteria"')) {
+                source.push(cleanLine(study, i));
+            }
+            finalRecord['InterventionsPlanned'] = source;
+        }
+        if (is(study, i, '"Inclusion criteria"') )
         { source = [];
             while (!is(study, ++i, '"Exclusion criteria"')) {
                 source.push(cleanLine(study, i));
             }
             finalRecord['InclusionCriteria'] =source;}
 
-        if (is(study, i, '"Exclusion criteria"') && !is(study, ++i, '"Primary outcome(s)"'))
-        {  finalRecord['ExclusionCriteria'] ='[';
-            while (!is(study, i, '"Primary outcome(s)"')) {
-                finalRecord['ExclusionCriteria'] +=cleanLine(study, i++);
+        if (is(study, i, '"Exclusion criteria"') )
+        {  source = [];
+            while (!is(study, ++i, '"Primary outcome(s)"')) {
+                source.push(cleanLine(study, i));;
             }
 
-            finalRecord['ExclusionCriteria']+=']';
+            finalRecord['ExclusionCriteria']=source ;
         }
 
 
-        if (is(study, i, '"Primary outcome(s)"') && !is(study, ++i, '"Secondary outcome(s)"'))
+        if (is(study, i, '"Primary outcome(s)"') )
         { source = [];
             while (!is(study, ++i, '"Secondary outcome(s)"')) {
                 source.push(cleanLine(study, i));
@@ -134,7 +139,7 @@ rl.on('close', function () {
             finalRecord['PrimaryOutcome'] =source;
         }
 
-        if (is(study, i, '"Secondary outcome(s)"') && !is(study, ++i, '"Target number/sample size"'))
+        if (is(study, i, '"Secondary outcome(s)"') )
         { source = [];
             while (!is(study, ++i, '"Target number/sample size"')) {
                 source.push(cleanLine(study, i));
