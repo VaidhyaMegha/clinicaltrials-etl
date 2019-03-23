@@ -36,24 +36,23 @@ rl.on('close', function () {
 
         if (is(study, i, '"The date of last modification"') && !is(study, ++i, '"Trial Status"'))
         finalRecord['date_of_last_modification'] = cleanLine(study, i++);
+        if (is(study, i, '"View original TRDS"') )
+            i=i+2;
 
         if (is(study, i, '"Trial Status"') && !is(study, ++i, '"Application Summary"'))
         { finalRecord['TrialStatus'] = cleanLine(study, i++);}
 
-        if (is(study, i, '"Trial Status"') && is(study, ++i, '"Application Summary"'))
-        { finalRecord['TrialStatus']=null;
-        i++; }
 
         if (is(study, i, '"Application Summary"'))
-        i++
+        i++;
 
         if (is(study, i, '"Scientific Title of Trial"') && !is(study, ++i, '"Public Title of Trial"'))
         finalRecord['ScientificTitleOftrial'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Public Title of Trial"') && !is(study, ++i, '"Disease of Health Condition(s) Studied"'))
+        if (is(study, i, '"Public Title of Trial"') && !is(study, ++i, '"Disease or Health Condition(s) Studied"'))
         finalRecord['PublicTitleOftrial'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Disease of Health Condition(s) Studied"') && !is(study, ++i, '"Scientific Acronym"'))
+        if (is(study, i, '"Disease or Health Condition(s) Studied"') && !is(study, ++i, '"Scientific Acronym"'))
         finalRecord['DiseaseOfHealthConditionStudied'] = cleanLine(study, i++);
 
         if (is(study, i, '"Scientific Acronym"') && !is(study, ++i, '"Public Acronym"'))
@@ -62,10 +61,10 @@ rl.on('close', function () {
         if (is(study, i, '"Public Acronym"') && !is(study, ++i, '"Brief title"'))
         finalRecord['PublicAcronym'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Brief title"') && !is(study, ++i, '"Universal Trail Number"'))
+        if (is(study, i, '"Brief title"') && !is(study, ++i, '"Universal Trial Number"'))
         finalRecord['BriefTitle'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Universal Trail Number"') && !is(study, ++i, '"Any other number(s) assigned to the trial and issuing authority"'))
+        if (is(study, i, '"Universal Trial Number"') && !is(study, ++i, '"Any other number(s) assigned to the trial and issuing authority"'))
         finalRecord['UniversalTrialNumber'] = cleanLine(study, i++);
 
         if (is(study, i, '"Any other number(s) assigned to the trial and issuing authority"') && !is(study, ++i, '"Trial Details"'))
@@ -100,34 +99,51 @@ rl.on('close', function () {
         if (is(study, i, '"Assignment"') && !is(study, ++i, '"Purpose"'))
         finalRecord['Assignment'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Purpose"') && !is(study, ++i, '"Intervention(s) planned"'))
+        if (is(study, i, '"Purpose"') && !is(study, ++i, '"Study Phase"'))
         finalRecord['Purpose'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Study Phase"') && !is(study, ++i, '"Intervention(s) planned"'))
+            finalRecord['Purpose'] = cleanLine(study, i++);
 
         if (is(study, i, '"Intervention(s) planned"') && !is(study, ++i, '"Inclusion criteria"'))
         finalRecord['InterventionsPlanned'] = cleanLine(study, i++);
 
         if (is(study, i, '"Inclusion criteria"') && !is(study, ++i, '"Exclusion criteria"'))
-        finalRecord['InclusionCriteria'] = cleanLine(study, i++);
+        { source = [];
+            while (!is(study, ++i, '"Exclusion criteria"')) {
+                source.push(cleanLine(study, i));
+            }
+            finalRecord['InclusionCriteria'] =source;}
 
         if (is(study, i, '"Exclusion criteria"') && !is(study, ++i, '"Primary outcome(s)"'))
-        finalRecord['ExclusionCriteria'] = cleanLine(study, i++);
+        {  finalRecord['ExclusionCriteria'] ='[';
+            while (!is(study, i, '"Primary outcome(s)"')) {
+                finalRecord['ExclusionCriteria'] +=cleanLine(study, i++);
+            }
+
+            finalRecord['ExclusionCriteria']+=']';
+        }
 
 
-        if (is(study, i, '"Primary outcome(s)"') && !is(study, ++i, '"Primary outcome(s) - Time of assessment(s)"'))
-        finalRecord['PrimaryOutcome'] = cleanLine(study, i++);
+        if (is(study, i, '"Primary outcome(s)"') && !is(study, ++i, '"Secondary outcome(s)"'))
+        { source = [];
+            while (!is(study, ++i, '"Secondary outcome(s)"')) {
+                source.push(cleanLine(study, i));
+            }
 
+            finalRecord['PrimaryOutcome'] =source;
+        }
 
-        if (is(study, i, '"Primary outcome(s) - Time of assessment(s)"') && !is(study, ++i, '"Secondary outcome"'))
-        finalRecord['PrimaryOutcomeTime'] = cleanLine(study, i++);
+        if (is(study, i, '"Secondary outcome(s)"') && !is(study, ++i, '"Target number/sample size"'))
+        { source = [];
+            while (!is(study, ++i, '"Target number/sample size"')) {
+                source.push(cleanLine(study, i));
+            }
 
+                finalRecord['SecondaryOutcome'] =source;
+        }
 
-        if (is(study, i, '"Secondary outcome"') && !is(study, ++i, '"Secondary outcome(s) - Time of assessment(s)"'))
-        finalRecord['SecondaryOutcome'] = cleanLine(study, i++);
-
-        if (is(study, i, '"Secondary outcome(s) - Time of assessment(s)"') && !is(study, ++i, '"Target number/sample size"'))
-        finalRecord['SecondaryOutcomeTime'] = cleanLine(study, i++);
-
-        if (is(study, i, '"Target number/sample size"') && !is(study, ++i, '"Countries of recruitment"'))
+         if (is(study, i, '"Target number/sample size"') && !is(study, ++i, '"Countries of recruitment"'))
         finalRecord['TargetNumber'] = cleanLine(study, i++);
 
         if (is(study, i, '"Countries of recruitment"') && !is(study, ++i, '"Anticipated start date"'))
@@ -137,8 +153,18 @@ rl.on('close', function () {
         if (is(study, i, '"Anticipated start date"') && !is(study, ++i, '"Anticipated end date"'))
         finalRecord['AnticipatedStartDate'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Anticipated end date"') && !is(study, ++i, '"Recruitment status"'))
+        if (is(study, i, '"Anticipated end date"') && !is(study, ++i, '"Date of first enrollment"'))
         finalRecord['AnticipatedEndDate'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Date of first enrollment"') && !is(study, ++i, '"Date of study completion"'))
+            finalRecord['Dateoffirstenrollment'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Date of study completion"') && !is(study, ++i, '"Recruitment status"'))
+            finalRecord['Dateofstudycompletion'] = cleanLine(study, i++);
+
+
+
+
 
         if (is(study, i, '"Recruitment status"') && !is(study, ++i, '"State of ethics review approval"'))
         finalRecord['RecruitmentStatus'] = cleanLine(study, i++);
@@ -147,10 +173,39 @@ rl.on('close', function () {
         if (is(study, i, '"State of ethics review approval"') && !is(study, ++i, '"Funding source"'))
         finalRecord['StateOfEthicsApproval'] = cleanLine(study, i++);
 
-        if (is(study, i, '"Funding source"') && !is(study, ++i, '"Contact \u0026amp; Sponsor Information"'))
+        if (is(study, i, '"Funding source"') && !is(study, ++i, '"Regulatory approvals"'))
         finalRecord['FundingSource'] = cleanLine(study, i++);
 
+        if (is(study, i, '"Regulatory approvals"') && !is(study, ++i, '"State of Ethics Review Approval"'))
+            finalRecord['Regulatoryapprovals'] = cleanLine(study, i++);
+
         i++;
+
+        if (is(study, i, '"Status"') && !is(study, ++i, '"Date of Approval"'))
+            finalRecord['Status'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Date of Approval"') && !is(study, ++i, '"Approval number"'))
+            finalRecord['DateofApproval'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Approval number"') && !is(study, ++i, '"Details of Ethics Review Committee"'))
+            finalRecord['Approvalnumber'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Details of Ethics Review Committee"') )
+            i++;
+
+        if (is(study, i, '"Name:"') && !is(study, ++i, '"Institutional Address:"'))
+            finalRecord['Name'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Institutional Address:"') && !is(study, ++i, '"Telephone:"'))
+            finalRecord['InstitutionalAddress'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Telephone:"') && !is(study, ++i, '"Email:"'))
+            finalRecord['Telephone'] = cleanLine(study, i++);
+
+        if (is(study, i, '"Email:"') && !is(study, ++i, '"Contact & Sponsor Information"'))
+            finalRecord['Email'] = cleanLine(study, i++);
+i++;
+
         if (is(study, i, "Contact person for Scientific Queries/Principal Investigator")) {
         source = [];
         while (!is(study, ++i, '"Contact Person for Public Queries"')) {
@@ -179,11 +234,12 @@ rl.on('close', function () {
 
         if (is(study, i, "Secondary study sponsor (If any)")) {
         source = [];
-        while (!is(study, ++i, '"Trial Options"')) {
+        while (!is(study, ++i, '"Trial Completion details"')) {
             source.push(cleanLine(study, i));
             }
         finalRecord['SecondarySponsors'] = source;
         }
+
 
 
       process.stdout.write(JSON.stringify(finalRecord) + '\n');
