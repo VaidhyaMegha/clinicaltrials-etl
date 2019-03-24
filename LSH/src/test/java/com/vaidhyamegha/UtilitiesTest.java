@@ -366,6 +366,14 @@ public class UtilitiesTest {
         }
     }
 
+
+    @Test
+    public void probabilityOfOccurrence(){
+        double prob = Utilities.ProbabilityOfOccurrrence(500, 1000, 9, 0.25);
+        System.out.println(prob);
+        assertTrue( (prob - 1.89208984375) < 0.0001);
+    }
+
 }
 
 

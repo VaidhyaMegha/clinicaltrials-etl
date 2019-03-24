@@ -39,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="497" column="29" selection-start-line="497" selection-start-column="29" selection-end-line="497" selection-end-column="29" />
+            <state relative-caret-position="457">
+              <caret line="519" column="28" selection-start-line="519" selection-start-column="28" selection-end-line="519" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="149" column="53" selection-start-line="149" selection-start-column="51" selection-end-line="149" selection-end-column="53" />
+            <state relative-caret-position="412">
+              <caret line="373" column="41" selection-start-line="373" selection-start-column="41" selection-end-line="373" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -259,8 +259,8 @@
         <option value="$PROJECT_DIR$/batch/tctr/xml_json.sh" />
         <option value="$PROJECT_DIR$/scripts/athena/hsdlc/tctr_studies_ddl.sql" />
         <option value="$PROJECT_DIR$/adminsitration/clean-dynamo-table.sh" />
-        <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" />
+        <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" />
       </list>
     </option>
   </component>
@@ -474,7 +474,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UtilitiesTest.betterClumpFindingWithMismatchesAndRC">
+  <component name="RunManager" selected="JUnit.UtilitiesTest.probabilityOfOccurrence">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -575,7 +575,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.skew" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.probabilityOfOccurrence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -585,7 +585,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="skew" />
+      <option name="METHOD_NAME" value="probabilityOfOccurrence" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -741,19 +741,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.UtilitiesTest.skew" />
       <item itemvalue="JUnit.UtilitiesTest.approximatePatternCount" />
       <item itemvalue="JUnit.UtilitiesTest.neighbors" />
       <item itemvalue="JUnit.UtilitiesTest" />
       <item itemvalue="JUnit.UtilitiesTest.betterClumpFindingWithMismatchesAndRC" />
+      <item itemvalue="JUnit.UtilitiesTest.probabilityOfOccurrence" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UtilitiesTest.probabilityOfOccurrence" />
         <item itemvalue="JUnit.UtilitiesTest.betterClumpFindingWithMismatchesAndRC" />
         <item itemvalue="JUnit.UtilitiesTest" />
         <item itemvalue="JUnit.UtilitiesTest.neighbors" />
         <item itemvalue="JUnit.UtilitiesTest.approximatePatternCount" />
-        <item itemvalue="JUnit.UtilitiesTest.skew" />
       </list>
     </recent_temporary>
   </component>
@@ -1049,50 +1049,52 @@
       <workItem from="1553237652176" duration="13094000" />
       <workItem from="1553265834774" duration="713000" />
       <workItem from="1553313846312" duration="19192000" />
-      <workItem from="1553347051979" duration="3884000" />
+      <workItem from="1553347051979" duration="4806000" />
+      <workItem from="1553399459249" duration="2101000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 11m 19s.xml">
-      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 43m 37s.xml">
+      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 11m 59s.xml">
-      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 44m 01s.xml">
+      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 12m 05s.xml">
-      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 48m 28s.xml">
+      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 13m 23s.xml">
-      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 49m 25s.xml">
+      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 15m 42s.xml">
-      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 49m 41s.xml">
+      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 16m 26s.xml">
-      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 50m 09s.xml">
+      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 24m 13s.xml">
-      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 50m 41s.xml">
+      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 25m 47s.xml">
-      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 50m 58s.xml">
+      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 29m 51s.xml">
-      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 52m 10s.xml">
+      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_betterClumpFindingWithMismatchesAndRC - 2019.03.23 at 19h 30m 59s.xml">
-      <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 52m 27s.xml">
+      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1613935000" />
+    <option name="totallyTimeSpent" value="1616958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49529782" visible="true" weight="0.28911" />
-      <window_info id="Structure" order="1" sideWeight="0.5047022" side_tool="true" weight="0.28579324" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49223602" visible="true" weight="0.29242676" />
+      <window_info id="Structure" order="1" sideWeight="0.507764" side_tool="true" visible="true" weight="0.29242676" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
       <window_info id="Project Explorer" order="4" />
@@ -1105,10 +1107,10 @@
       <window_info id="DBHelper" order="11" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3260188" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32706374" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39916405" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32706374" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.39916405" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="DB Execution Console" order="8" />
@@ -1272,7 +1274,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java</url>
-          <line>204</line>
+          <line>202</line>
           <properties />
           <option name="temporary" value="true" />
           <option name="timeStamp" value="9" />
@@ -1289,6 +1291,12 @@
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java</url>
+          <line>373</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -1297,7 +1305,34 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>prob - 4.08748</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>prob - 4.08748</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>prob - 4.08748 &lt; 0.00002</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>prob - 4.08748 &lt; 1</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>prob - 4.08748 &lt; 0</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>minimumSkew.size()</expression-string>
         <language-id>JAVA</language-id>
@@ -1503,6 +1538,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9510">
@@ -1540,17 +1582,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="497" column="29" selection-start-line="497" selection-start-column="29" selection-end-line="497" selection-end-column="29" />
+        <state relative-caret-position="457">
+          <caret line="519" column="28" selection-start-line="519" selection-start-column="28" selection-end-line="519" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1559,8 +1594,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="149" column="53" selection-start-line="149" selection-start-column="51" selection-end-line="149" selection-end-column="53" />
+        <state relative-caret-position="412">
+          <caret line="373" column="41" selection-start-line="373" selection-start-column="41" selection-end-line="373" selection-end-column="41" />
         </state>
       </provider>
     </entry>

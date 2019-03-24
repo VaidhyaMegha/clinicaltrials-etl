@@ -505,4 +505,18 @@ public class Utilities {
         return patterns;
     }
 
+    /**
+     * Exercise Break: What is the expected number of occurrences of a 9-mer in 500 random DNA strings, each of length
+     * 1000? Assume that the sequences are formed by selecting each nucleotide (A, C, G, T) with the same probability (0.25).
+     *
+     * Note: Express your answer as a decimal; allowable error = 0.0001.
+     * @param numOfStrings
+     * @param len
+     * @param k
+     * @param alphabetProbability
+     * @return
+     */
+    public static double ProbabilityOfOccurrrence(int numOfStrings, int len, int k, double alphabetProbability) {
+        return ((len - k + 1) * (Math.pow(alphabetProbability, k)) * numOfStrings) ;
+    }
 }
