@@ -20,6 +20,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/DI_ETL$UtilitiesTest.ic" NAME="UtilitiesTest Coverage Results" MODIFIED="1553430267198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.vaidhyamegha.*</FILTER>
+    </SUITE>
+  </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_DATA_SOURCES" value="true" />
@@ -34,13 +39,17 @@
     <expand />
     <select />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/datasets" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="519" column="28" selection-start-line="519" selection-start-column="28" selection-end-line="519" selection-end-column="28" />
+            <state relative-caret-position="356">
+              <caret line="570" selection-start-line="570" selection-end-line="570" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="373" column="41" selection-start-line="373" selection-start-column="41" selection-end-line="373" selection-end-column="41" />
+            <state relative-caret-position="266">
+              <caret line="397" column="124" selection-start-line="397" selection-start-column="124" selection-end-line="397" selection-end-column="124" />
             </state>
           </provider>
         </entry>
@@ -133,8 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CTGATGCATGGGAAACATAATTTGATCATTTTTAAGTTACAGTCCAAATCTTTTTGTACCTGAATAACATGTTGCCCAGTCAGTCTCTCTT</find>
-      <find>--color=auto</find>
       <find>192</find>
       <find>&amp;</find>
       <find>came</find>
@@ -163,6 +170,8 @@
       <find>GGATCCTGG</find>
       <find>TGTGG</find>
       <find>10</find>
+      <find>Math.ab</find>
+      <find>Math.</find>
     </findStrings>
     <replaceStrings>
       <replace>is(line,</replace>
@@ -285,6 +294,20 @@
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="FileProcessor" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="LSH" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="LSH" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="LSH" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
       </expand>
       <select />
     </treeState>
@@ -293,11 +316,11 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="y" value="24" />
+    <option name="width" value="1853" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -422,13 +445,13 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 2.7 (vm_prototypes)" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/LSH/src/main/java" />
-    <property name="last_opened_file_path" value="$USER_HOME$/datasets/BioInformatics/Vibrio_cholerae.txt" />
+    <property name="last_opened_file_path" value="$USER_HOME$/datasets" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="VisualVMLauncher" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/batch/perctr/etl/package.json" />
   </component>
   <component name="RecentsManager">
@@ -474,7 +497,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UtilitiesTest.probabilityOfOccurrence">
+  <component name="RunManager" selected="JUnit.UtilitiesTest.motifEnumeration">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -524,23 +547,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.approximatePatternCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LSH" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vaidhyamegha.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
-      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="approximatePatternCount" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
@@ -558,7 +564,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.neighbors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -568,7 +574,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="neighbors" />
+      <option name="METHOD_NAME" value="frequentWordsWithMismatchesAndReverseComplement" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilitiesTest.motifEnumeration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LSH" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vaidhyamegha.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
+      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
+      <option name="METHOD_NAME" value="motifEnumeration" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -741,19 +764,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.UtilitiesTest.approximatePatternCount" />
-      <item itemvalue="JUnit.UtilitiesTest.neighbors" />
       <item itemvalue="JUnit.UtilitiesTest" />
       <item itemvalue="JUnit.UtilitiesTest.betterClumpFindingWithMismatchesAndRC" />
       <item itemvalue="JUnit.UtilitiesTest.probabilityOfOccurrence" />
+      <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" />
+      <item itemvalue="JUnit.UtilitiesTest.motifEnumeration" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UtilitiesTest.motifEnumeration" />
+        <item itemvalue="JUnit.UtilitiesTest" />
+        <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" />
         <item itemvalue="JUnit.UtilitiesTest.probabilityOfOccurrence" />
         <item itemvalue="JUnit.UtilitiesTest.betterClumpFindingWithMismatchesAndRC" />
-        <item itemvalue="JUnit.UtilitiesTest" />
-        <item itemvalue="JUnit.UtilitiesTest.neighbors" />
-        <item itemvalue="JUnit.UtilitiesTest.approximatePatternCount" />
       </list>
     </recent_temporary>
   </component>
@@ -1050,51 +1073,52 @@
       <workItem from="1553265834774" duration="713000" />
       <workItem from="1553313846312" duration="19192000" />
       <workItem from="1553347051979" duration="4806000" />
-      <workItem from="1553399459249" duration="2101000" />
+      <workItem from="1553399459249" duration="3475000" />
+      <workItem from="1553429544030" duration="5853000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 43m 37s.xml">
-      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 08m 16s.xml">
+      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 44m 01s.xml">
-      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 09m 55s.xml">
+      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 48m 28s.xml">
-      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 10m 20s.xml">
+      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 49m 25s.xml">
-      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 37m 48s.xml">
+      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 49m 41s.xml">
-      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 38m 34s.xml">
+      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 50m 09s.xml">
-      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 42m 41s.xml">
+      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 50m 41s.xml">
-      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 44m 25s.xml">
+      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 50m 58s.xml">
-      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 44m 47s.xml">
+      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 52m 10s.xml">
-      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 45m 42s.xml">
+      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_probabilityOfOccurrence - 2019.03.24 at 09h 52m 27s.xml">
-      <configuration name="UtilitiesTest.probabilityOfOccurrence" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 46m 00s.xml">
+      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1616958000" />
+    <option name="totallyTimeSpent" value="1624185000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
+    <frame x="65" y="24" width="1853" height="1055" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49223602" visible="true" weight="0.29242676" />
-      <window_info id="Structure" order="1" sideWeight="0.507764" side_tool="true" visible="true" weight="0.29242676" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49103943" visible="true" weight="0.29607084" />
+      <window_info id="Structure" order="1" sideWeight="0.50896055" side_tool="true" visible="true" weight="0.29607084" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
       <window_info id="Project Explorer" order="4" />
@@ -1105,12 +1129,13 @@
       <window_info id="Image Layers" order="9" />
       <window_info id="Learn" order="10" />
       <window_info id="DBHelper" order="11" />
+      <window_info anchor="bottom" id="EvoSuite" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3260188" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32706374" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33728448" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.39916405" />
+      <window_info active="true" anchor="bottom" id="Debug" order="5" visible="true" weight="0.39870688" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="DB Execution Console" order="8" />
@@ -1122,6 +1147,7 @@
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" weight="0.32991803" />
       <window_info anchor="bottom" id="AWS Tail" order="16" />
+      <window_info anchor="right" id="Coverage" sideWeight="0.500813" side_tool="true" weight="0.32927504" />
       <window_info anchor="right" id="Connector for AWS Lambda" order="0" side_tool="true" weight="0.32946378" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1135,7 +1161,7 @@
       <window_info anchor="right" id="Data View" order="10" />
       <window_info anchor="right" id="Database" order="11" weight="0.32946378" />
       <window_info anchor="right" id="Maven Projects" order="12" side_tool="true" weight="0.32946378" />
-      <window_info anchor="right" id="Maven" order="13" weight="0.32946378" />
+      <window_info anchor="right" id="Maven" order="13" sideWeight="0.499187" weight="0.32927504" />
       <window_info anchor="right" x="0" y="0" width="350" height="604" id="Documentation" order="14" side_tool="true" weight="0.2819237" />
     </layout>
     <layout-to-restore>
@@ -1274,7 +1300,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java</url>
-          <line>202</line>
+          <line>199</line>
           <properties />
           <option name="temporary" value="true" />
           <option name="timeStamp" value="9" />
@@ -1293,7 +1319,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java</url>
-          <line>373</line>
+          <line>376</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
@@ -1538,13 +1564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9510">
@@ -1562,13 +1581,6 @@
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/FrequencyArray.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/FrequentWords.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1582,10 +1594,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="519" column="28" selection-start-line="519" selection-start-column="28" selection-end-line="519" selection-end-column="28" />
+        <state relative-caret-position="356">
+          <caret line="570" selection-start-line="570" selection-end-line="570" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1594,8 +1620,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="373" column="41" selection-start-line="373" selection-start-column="41" selection-end-line="373" selection-end-column="41" />
+        <state relative-caret-position="266">
+          <caret line="397" column="124" selection-start-line="397" selection-start-column="124" selection-end-line="397" selection-end-column="124" />
         </state>
       </provider>
     </entry>

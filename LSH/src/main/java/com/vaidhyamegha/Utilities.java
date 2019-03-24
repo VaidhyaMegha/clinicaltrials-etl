@@ -519,4 +519,64 @@ public class Utilities {
     public static double ProbabilityOfOccurrrence(int numOfStrings, int len, int k, double alphabetProbability) {
         return ((len - k + 1) * (Math.pow(alphabetProbability, k)) * numOfStrings) ;
     }
+
+    /**
+     * A brute force algorithm for motif finding
+     * Given a collection of strings Dna and an integer d, a k-mer is a (k,d)-motif if it appears in every string from
+     * Dna with at most d mismatches. For example, the implanted 15-mer in the strings above represents a (15,4)-motif.
+     *
+     * 1 "atgaccgggatactgatAgAAgAAAGGttGGGggcgtacacattagataaacgtatgaagtacgttagactcggcgccgccg"
+     * 2 "acccctattttttgagcagatttagtgacctggaaaaaaaatttgagtacaaaacttttccgaatacAAtAAAAcGGcGGGa"
+     * 3 "tgagtatccctgggatgacttAAAAtAAtGGaGtGGtgctctcccgatttttgaatatgtaggatcattcgccagggtccga"
+     * 4 "gctgagaattggatgcAAAAAAAGGGattGtccacgcaatcgcgaaccaacgcggacccaaaggcaagaccgataaaggaga"
+     * 5 "tcccttttgcggtaatgtgccgggaggctggttacgtagggaagccctaacggacttaatAtAAtAAAGGaaGGGcttatag"
+     * 6 "gtcaatcatgttcttgtgaatggatttAAcAAtAAGGGctGGgaccgcttggcgcacccaaattcagtgtgggcgagcgcaa"
+     * 7 "cggttttggcccttgttagaggcccccgtAtAAAcAAGGaGGGccaattatgagagagctaatctatcgcgtgcgtgttcat"
+     * 8 "aacttgagttAAAAAAtAGGGaGccctggggcacatacaagaggagtcttccttatcagttaatgctgtatgacactatgta"
+     * 9 "ttggcccattggctaaaagcccaacttgacaaatggaagatagaatccttgcatActAAAAAGGaGcGGaccgaaagggaag"
+     * 10 "ctggtgagcaacgacagattcttacgtgcattagctcgcttccggggatctaatagcacgaagcttActAAAAAGGaGcGGa"
+     *
+     *  --- AAAAAAAAGGGGGGG ---
+     *
+     * Implanted Motif Problem: Find all (k, d)-motifs in a collection of strings.
+     *
+     * Input: A collection of strings Dna, and integers k and d.
+     * Output: All (k, d)-motifs in Dna.
+     * Brute force (also known as exhaustive search) is a general problem-solving technique that explores all possible
+     * solution candidates and checks whether each candidate solves the problem. Such algorithms require little effort
+     * to design and are guaranteed to produce a correct solution, but they may take an enormous amount of time, and
+     * the number of candidates may be too large to check.
+     *
+     * A brute force approach for solving the Implanted Motif Problem is based on the observation that any (k, d)-motif
+     * must be at most d mismatches apart from some k-mer appearing in the first string in Dna. Therefore, we can
+     * generate all such k-mers and then check which of them are (k, d)-motifs.
+     */
+    public static Set<String> MotifEnumeration(List<String> dnas, int k, int d) {
+        String first = dnas.get(0);
+        int len = first.length();
+        int n = dnas.size();
+        Set<String> motifs = new HashSet<>();
+
+        for (int i = 0; i <= (len - k) ; i++) {
+            String pattern = first.substring(i, i + k);
+            Set<String> neighbors = Neighbors(pattern, d);
+
+            Loop1 : for (String s : neighbors) {
+               Loop2 : for (int j = 1; j < n; j++) {
+                   String text = dnas.get(j);
+                   int tlen = text.length();
+
+                   for (int m = 0; m <= (tlen - k); m++)
+                       if (HammingDistance(text.substring(m, m + k), s) <= d)
+                           continue Loop2;
+
+                   continue Loop1;
+               }
+
+               motifs.add(s);
+           }
+        }
+
+        return motifs;
+    }
 }

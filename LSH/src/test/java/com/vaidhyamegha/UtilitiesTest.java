@@ -5,10 +5,7 @@ import org.junit.Test;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
@@ -328,7 +325,11 @@ public class UtilitiesTest {
 
     @Test
     public void frequentWordsWithMismatchesAndReverseComplement() {
-        assertEquals("[ATGT, ACAT]", Utilities.FrequentWordsWithMismatchesAndReverseComplement("ACGTTGCATGTCGCATGATGCATGAGAGCT", 4, 1).toString());
+        List<String> ls = Utilities.FrequentWordsWithMismatchesAndReverseComplement("ACGTTGCATGTCGCATGATGCATGAGAGCT", 4, 1);
+
+        assertEquals(2, ls.size());
+        assertTrue(ls.contains("ATGT"));
+        assertTrue(ls.contains("ACAT"));
 
 
         try {
@@ -336,9 +337,11 @@ public class UtilitiesTest {
             String str1 = br.readLine();
             String str2 = br.readLine();
 
-            assertEquals("[ATTAA, TTAAT]",
-                    Utilities.FrequentWordsWithMismatchesAndReverseComplement(str1, Integer.parseInt(str2.split(" ")[0]), Integer.parseInt(str2.split(" ")[1])).toString());
+            ls = Utilities.FrequentWordsWithMismatchesAndReverseComplement(str1, Integer.parseInt(str2.split(" ")[0]), Integer.parseInt(str2.split(" ")[1]));
 
+            assertEquals(2, ls.size());
+            assertTrue(ls.contains("ATTAA"));
+            assertTrue(ls.contains("TTAAT"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -374,6 +377,39 @@ public class UtilitiesTest {
         assertTrue( (prob - 1.89208984375) < 0.0001);
     }
 
+    @Test
+    public void motifEnumeration() {
+        List<String> dnas = new ArrayList<>();
+        dnas.add("ATTTGGC");
+        dnas.add("TGCCTTA");
+        dnas.add("CGGTATC");
+        dnas.add("GAAAATT");
+
+        Set<String> set = Utilities.MotifEnumeration(dnas, 3, 1);
+
+        System.out.println(set.toString());
+        assertEquals(4, set.size());
+        assertTrue(set.contains("ATA"));
+        assertTrue(set.contains("ATT"));
+        assertTrue(set.contains("GTT"));
+        assertTrue(set.contains("TTT"));
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/datasets/BioInformatics/dataset_156_8.txt"));
+            String str = "";
+
+            String s = br.readLine(); //ignore first line.
+            List<String> ls = new ArrayList<>();
+            while ((str = br.readLine()) != null) {
+                ls.add(str);
+            }
+
+            assertEquals("", Utilities.MotifEnumeration(ls, Integer.parseInt(s.split(" ")[0]), Integer.parseInt(s.split(" ")[1])).toString());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 
