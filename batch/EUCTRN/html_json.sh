@@ -43,7 +43,7 @@ function analyse_trial(){
     jq -c -s '.[0] * .[1]' ${2}/${g}_1.json ${2}/${g}_2.json > ${2}/${g}_3.json
 
     tr '[:upper:]' '[:lower:]' < ${2}/${g}_3.json > ${2}/${g}.json
-    sed -i 's/ /_/g; s/(//g; s/)//g; s/\\n//g; s/&gt\;//g; s/&lt\;//g; s/&#39\;//g; s/__*/_/g' ${2}/${g}.json
+    sed -i 's/ /_/g; s/(//g; s/)//g; s/\\n//g; s/&gt\;//g; s/&lt\;//g; s/&#39\;//g; s/__*/_/g; s/:":"/":"/g' ${2}/${g}.json
 
     cat ${2}/${g}.json >> ${dir_path}/studies.json
 

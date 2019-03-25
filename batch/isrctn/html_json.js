@@ -191,26 +191,28 @@ rl.on('close', function () {
               finalRecord['OverallTrialEndDate'] = cleanLine(study, i++);
 
         if (is(study, i, '"Reason abandoned (if study stopped)"') && !is(study, ++i, '"Participant inclusion criteria"'))
-              finalRecord['ReasonAbandoned '] = cleanLine(study, i++);
+              finalRecord['ReasonAbandoned'] = cleanLine(study, i++);
+        
+
 
         if (is(study, i, '"Participant inclusion criteria"')) {
             while (!is(study, ++i, '"Participant type"'))  {
-                finalRecord['ParticipantInclusionCriteria '] = cleanLine(study, i++);
+                finalRecord['ParticipantInclusionCriteria'] = cleanLine(study, i++);
                 if (is(study, i, '"Participant type"')) break;
             }
         }
 
         if (is(study, i, '"Participant type"') && !is(study, ++i, '"Age group"'))
-              finalRecord['ParticipantType '] = cleanLine(study, i++);
+              finalRecord['ParticipantType'] = cleanLine(study, i++);
 
         if (is(study, i, '"Age group"') && !is(study, ++i, '"Gender"'))
-              finalRecord['AgeGroup '] = cleanLine(study, i++);
+              finalRecord['AgeGroup'] = cleanLine(study, i++);
 
         if (is(study, i, '"Gender"') && !is(study, ++i, '"Target number of participants"'))
-              finalRecord['Gender '] = cleanLine(study, i++);
+              finalRecord['Gender'] = cleanLine(study, i++);
 
         if (is(study, i, '"Target number of participants"') && !is(study, ++i, '"Participant exclusion criteria"'))
-              finalRecord['TargetNumberOfParticipants '] = cleanLine(study, i++);
+              finalRecord['TargetNumberOfParticipants'] = cleanLine(study, i++);
 
         if (is(study, i, "Participant exclusion criteria")) {
               source = [];
@@ -221,10 +223,10 @@ rl.on('close', function () {
         }
 
         if (is(study, i, '"Recruitment start date"') && !is(study, ++i, '"Recruitment end date"'))
-              finalRecord['RecruitmentStartDate '] = cleanLine(study, i++);
+              finalRecord['RecruitmentStartDate'] = cleanLine(study, i++);
 
         if (is(study, i, '"Recruitment end date"') && !is(study, ++i, '"Countries of recruitment"'))
-              finalRecord['RecruitmentEndDate '] = cleanLine(study, i++);
+              finalRecord['RecruitmentEndDate'] = cleanLine(study, i++);
 
         if (is(study, i, "Countries of recruitment")) {
               source = [];
@@ -243,7 +245,7 @@ rl.on('close', function () {
         }
 
         if (is(study, i, '"Organisation"') && !is(study, ++i, '"Sponsor details"'))
-              finalRecord['Organisation '] = cleanLine(study, i++);
+              finalRecord['Organisation'] = cleanLine(study, i++);
 
         if (is(study, i, "Sponsor details")) {
               source = [];
@@ -255,7 +257,7 @@ rl.on('close', function () {
 
         if (is(study, i, '"Sponsor type"') ){
          while (!is(study, ++i, '"Website"')){
-            finalRecord['SponsorType '] = cleanLine(study, i++);
+            finalRecord['SponsorType'] = cleanLine(study, i++);
             if (is(study, i, '"Website"') )break;
          }
          }
@@ -269,7 +271,7 @@ rl.on('close', function () {
 
         if (is(study, i, '"Funder type"') ){
           while (!is(study, ++i, '"Funder name"')){
-            finalRecord['FunderType '] = cleanLine(study, i++);
+            finalRecord['FunderType'] = cleanLine(study, i++);
              if (is(study, i, '"Funder name"')) break;
           }
         }
