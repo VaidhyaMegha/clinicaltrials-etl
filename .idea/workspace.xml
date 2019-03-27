@@ -7,6 +7,9 @@
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSH/src/main/notes/FrequentWordsInVibrioCholerae.png" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/notes/FrequentWordsInVibrioCholerae.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-03-22 15-36-07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-03-24 19-26-01.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,40 +51,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="570" selection-start-line="570" selection-end-line="570" />
+            <state relative-caret-position="488">
+              <caret line="625" column="34" selection-start-line="625" selection-start-column="34" selection-end-line="625" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#countAlphabets#0;class#Utilities#0" />
+                <element signature="method#frequentWordsWithMismatchesAndRCMap#0;class#Utilities#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Math.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="292">
+              <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+              <folding>
+                <element signature="e#1491#1492#0" expanded="true" />
+                <element signature="e#1534#1535#0" expanded="true" />
+                <element signature="e#11019#11020#0" expanded="true" />
+                <element signature="e#11064#11065#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
+        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/StrictMath.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9510">
-              <caret line="688" column="18" selection-start-line="688" selection-start-column="18" selection-end-line="688" selection-end-column="18" />
+            <state relative-caret-position="310">
+              <caret line="225" column="32" selection-start-line="225" selection-start-column="32" selection-end-line="225" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/Arrays.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/DnaABoxVibrioCholerae_PatternMatching.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -92,19 +99,27 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="397" column="124" selection-start-line="397" selection-start-column="124" selection-end-line="397" selection-end-column="124" />
+            <state relative-caret-position="427">
+              <caret line="520" column="21" lean-forward="true" selection-start-line="520" selection-start-column="21" selection-end-line="520" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LSH/pom.xml">
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/SimpleLSHMinHashExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+            <state relative-caret-position="45">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/MotifFinding.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -113,17 +128,8 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FileProcessor/README.md">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch/nl_reg/html_json.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/FrequentWordsBySortingPatternIndexes.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -142,8 +148,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>192</find>
-      <find>&amp;</find>
       <find>came</find>
       <find>?</find>
       <find>if</find>
@@ -172,6 +176,8 @@
       <find>10</find>
       <find>Math.ab</find>
       <find>Math.</find>
+      <find>max(</find>
+      <find>E_C</find>
     </findStrings>
     <replaceStrings>
       <replace>is(line,</replace>
@@ -316,11 +322,11 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1853" />
-    <option name="height" value="1055" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -339,6 +345,21 @@
               <item name="DI_ETL" type="58d84e3e:PackageViewProjectNode" />
               <item name="LSH" type="616d4139:PackageViewModuleNode" />
               <item name="com.vaidhyamegha" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="DI_ETL" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="FileProcessor" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
           </expand>
           <select />
@@ -414,21 +435,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DI_ETL" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="FileProcessor" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -497,7 +503,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UtilitiesTest.motifEnumeration">
+  <component name="RunManager" selected="JUnit.UtilitiesTest.entropy">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -547,7 +553,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.betterClumpFindingWithMismatchesAndRC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.consensus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -557,14 +563,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="betterClumpFindingWithMismatchesAndRC" />
+      <option name="METHOD_NAME" value="consensus" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.count" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -574,14 +580,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="frequentWordsWithMismatchesAndReverseComplement" />
+      <option name="METHOD_NAME" value="count" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.motifEnumeration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.entropy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -591,14 +597,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="motifEnumeration" />
+      <option name="METHOD_NAME" value="entropy" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.probabilityOfOccurrence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.profile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSH" />
       <extension name="coverage">
         <pattern>
@@ -608,7 +614,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.UtilitiesTest" />
-      <option name="METHOD_NAME" value="probabilityOfOccurrence" />
+      <option name="METHOD_NAME" value="profile" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -765,18 +771,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.UtilitiesTest" />
-      <item itemvalue="JUnit.UtilitiesTest.betterClumpFindingWithMismatchesAndRC" />
-      <item itemvalue="JUnit.UtilitiesTest.probabilityOfOccurrence" />
-      <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" />
-      <item itemvalue="JUnit.UtilitiesTest.motifEnumeration" />
+      <item itemvalue="JUnit.UtilitiesTest.count" />
+      <item itemvalue="JUnit.UtilitiesTest.profile" />
+      <item itemvalue="JUnit.UtilitiesTest.consensus" />
+      <item itemvalue="JUnit.UtilitiesTest.entropy" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UtilitiesTest.motifEnumeration" />
+        <item itemvalue="JUnit.UtilitiesTest.entropy" />
+        <item itemvalue="JUnit.UtilitiesTest.consensus" />
         <item itemvalue="JUnit.UtilitiesTest" />
-        <item itemvalue="JUnit.UtilitiesTest.frequentWordsWithMismatchesAndReverseComplement" />
-        <item itemvalue="JUnit.UtilitiesTest.probabilityOfOccurrence" />
-        <item itemvalue="JUnit.UtilitiesTest.betterClumpFindingWithMismatchesAndRC" />
+        <item itemvalue="JUnit.UtilitiesTest.profile" />
+        <item itemvalue="JUnit.UtilitiesTest.count" />
       </list>
     </recent_temporary>
   </component>
@@ -1074,51 +1080,54 @@
       <workItem from="1553313846312" duration="19192000" />
       <workItem from="1553347051979" duration="4806000" />
       <workItem from="1553399459249" duration="3475000" />
-      <workItem from="1553429544030" duration="5853000" />
+      <workItem from="1553429544030" duration="7880000" />
+      <workItem from="1553516484007" duration="1083000" />
+      <workItem from="1553572130588" duration="10776000" />
+      <workItem from="1553683450128" duration="2125000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 08m 16s.xml">
-      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropy - 2019.03.27 at 16h 41m 18s.xml">
+      <configuration name="UtilitiesTest.entropy" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 09m 55s.xml">
-      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropy - 2019.03.27 at 16h 41m 44s.xml">
+      <configuration name="UtilitiesTest.entropy" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 10m 20s.xml">
-      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropy - 2019.03.27 at 16h 42m 59s.xml">
+      <configuration name="UtilitiesTest.entropy" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 37m 48s.xml">
-      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropy - 2019.03.27 at 16h 43m 20s.xml">
+      <configuration name="UtilitiesTest.entropy" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 38m 34s.xml">
-      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropy - 2019.03.27 at 16h 43m 24s.xml">
+      <configuration name="UtilitiesTest.entropy" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 42m 41s.xml">
-      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropy - 2019.03.27 at 16h 48m 24s.xml">
+      <configuration name="UtilitiesTest.entropy" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 44m 25s.xml">
-      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropy - 2019.03.27 at 16h 48m 51s.xml">
+      <configuration name="UtilitiesTest.entropy" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 44m 47s.xml">
-      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropy - 2019.03.27 at 16h 49m 13s.xml">
+      <configuration name="UtilitiesTest.entropy" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 45m 42s.xml">
-      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropy - 2019.03.27 at 16h 50m 32s.xml">
+      <configuration name="UtilitiesTest.entropy" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_motifEnumeration - 2019.03.24 at 19h 46m 00s.xml">
-      <configuration name="UtilitiesTest.motifEnumeration" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropy - 2019.03.27 at 16h 50m 43s.xml">
+      <configuration name="UtilitiesTest.entropy" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1624185000" />
+    <option name="totallyTimeSpent" value="1640196000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1853" height="1055" extended-state="0" />
+    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49103943" visible="true" weight="0.29607084" />
-      <window_info id="Structure" order="1" sideWeight="0.50896055" side_tool="true" visible="true" weight="0.29607084" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49007314" visible="true" weight="0.30569375" />
+      <window_info id="Structure" order="1" sideWeight="0.50992686" side_tool="true" weight="0.30237702" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
       <window_info id="Project Explorer" order="4" />
@@ -1129,25 +1138,24 @@
       <window_info id="Image Layers" order="9" />
       <window_info id="Learn" order="10" />
       <window_info id="DBHelper" order="11" />
-      <window_info anchor="bottom" id="EvoSuite" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3260188" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33728448" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4991699" visible="true" weight="0.32706374" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Debug" order="5" visible="true" weight="0.39870688" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.39870688" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="DB Execution Console" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4997236" weight="0.35146442" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3291536" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32810867" />
       <window_info anchor="bottom" id="DBOutput" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4997236" weight="0.33437827" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5002764" side_tool="true" weight="0.3253138" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5008301" side_tool="true" weight="0.33728448" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" weight="0.32991803" />
       <window_info anchor="bottom" id="AWS Tail" order="16" />
-      <window_info anchor="right" id="Coverage" sideWeight="0.500813" side_tool="true" weight="0.32927504" />
+      <window_info anchor="bottom" id="EvoSuite" order="17" />
       <window_info anchor="right" id="Connector for AWS Lambda" order="0" side_tool="true" weight="0.32946378" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1163,6 +1171,7 @@
       <window_info anchor="right" id="Maven Projects" order="12" side_tool="true" weight="0.32946378" />
       <window_info anchor="right" id="Maven" order="13" sideWeight="0.499187" weight="0.32927504" />
       <window_info anchor="right" x="0" y="0" width="350" height="604" id="Documentation" order="14" side_tool="true" weight="0.2819237" />
+      <window_info anchor="right" id="Coverage" order="15" sideWeight="0.500813" side_tool="true" weight="0.32927504" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.2458221" />
@@ -1300,26 +1309,14 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java</url>
-          <line>199</line>
+          <line>200</line>
           <properties />
           <option name="temporary" value="true" />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java</url>
-          <line>488</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java</url>
-          <line>492</line>
-          <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java</url>
-          <line>376</line>
+          <line>377</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
@@ -1372,56 +1369,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_trial_completion/screenshots/Screenshot from 2019-03-03 21-47-18.png" />
-    <entry file="file://$PROJECT_DIR$/batch/perctr/etl/README.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/perctr/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/ct/keys.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/ct/Makefile" />
-    <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.xslt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/UTDM/global_registry.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4680">
-          <caret line="312" selection-start-line="312" selection-end-line="312" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/perctr/xml_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/ct/xml_json_test.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/ct/xml_json.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="24" selection-start-line="19" selection-start-column="4" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch/perctr/etl/xml_json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_trial_completion/screenshots/Cholera-symptoms-2.png" />
     <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_trial_completion/screenshots/Screenshot from 2019-03-12 20-11-49.png" />
     <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_trial_completion/screenshots/Cholera-Symptoms.png" />
     <entry file="file://$PROJECT_DIR$/batch/UTDM/Makefile" />
@@ -1537,16 +1484,6 @@
     <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_trial_completion/screenshots/Screenshot from 2019-03-17 16-31-23.png" />
     <entry file="file://$PROJECT_DIR$/analytics/predict_clinical_trial_completion/screenshots/Screenshot from 2019-03-14 20-19-33.png" />
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-03-21 21-25-39.png" />
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/SimpleLSHMinHashExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1995.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1564,6 +1501,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-03-24 19-26-01.png" />
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-03-25 12-52-28.png" />
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-03-22 15-36-07.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9510">
@@ -1578,11 +1527,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/FrequencyArray.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/FrequentWords.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/LSH/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FileProcessor/README.md">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1594,34 +1544,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/ClumpFinding.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/DirectionalityOfDNAStrands.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/stream/Stream.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="165">
+          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/DnaA_DnaAbox.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/DnaABoxVibrioCholerae_PatternMatching.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/FrequencyArray.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/SimpleLSHMinHashExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="570" selection-start-line="570" selection-end-line="570" />
+        <state relative-caret-position="45">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/MotifFinding.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/FrequentWords.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/StrictMath.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="225" column="32" selection-start-line="225" selection-start-column="32" selection-end-line="225" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/FrequentWordsBySortingPatternIndexes.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Math.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+          <folding>
+            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#1534#1535#0" expanded="true" />
+            <element signature="e#11019#11020#0" expanded="true" />
+            <element signature="e#11064#11065#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/Utilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="625" column="34" selection-start-line="625" selection-start-column="34" selection-end-line="625" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#countAlphabets#0;class#Utilities#0" />
+            <element signature="method#frequentWordsWithMismatchesAndRCMap#0;class#Utilities#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="397" column="124" selection-start-line="397" selection-start-column="124" selection-end-line="397" selection-end-column="124" />
+        <state relative-caret-position="427">
+          <caret line="520" column="21" lean-forward="true" selection-start-line="520" selection-start-column="21" selection-end-line="520" selection-end-column="21" />
         </state>
       </provider>
     </entry>

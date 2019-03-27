@@ -8,6 +8,20 @@ public class Utilities {
     // fill in your PatternCount() function here.
 
     /**
+     *
+     * Code Challenge: Implement PatternCount (reproduced below).
+     *      Input: Strings Text and Pattern.
+     *      Output: Count(Text, Pattern).
+     *
+     * Sample Input:
+     *
+     * GCGCG
+     * GCG
+     *
+     * Sample Output:
+     *
+     * 2
+     *
      * Count(Text, Pattern), our plan is to “slide a window” down Text, checking whether each k-mer substring of Text
      * matches Pattern. We will therefore refer to the k-mer starting at position i of Text as Text(i, k).
      * Throughout this book, we will often use 0-based indexing, meaning that we count starting at 0 instead of 1.
@@ -425,62 +439,9 @@ public class Utilities {
 
     public static List<String> FrequentWordsWithMismatchesAndReverseComplement(String text, int k, int d) {
 
-        Map<String, Integer> freqPatterns = FrequentWordsWithMismatchesAndReverseComplementMap(text, k, d);
+        Map<String, Integer> freqPatterns = frequentWordsWithMismatchesAndRCMap(text, k, d);
 
-        ArrayList<String> patterns = new ArrayList<>();
-
-        patterns.addAll(freqPatterns.keySet());
-
-        return patterns;
-    }
-
-    public static Map<String, Integer> FrequentWordsWithMismatchesAndReverseComplementMap(String text, int k, int d) {
-        int len = text.length();
-
-        Map<String, Integer> freqPatterns = new HashMap<>();
-        Map<String, Integer> patternCount = new HashMap<>();
-
-        for (int i = 0; i <= (len - k); i++) {
-            String kmer = text.substring(i, i + k);
-            Set<String> neighbors = Neighbors(kmer, d);
-
-            for (String s : neighbors) {
-                if (patternCount.containsKey(s)) {
-                    patternCount.put(s, patternCount.get(s) + 1);
-                } else {
-                    patternCount.put(s, 1);
-                }
-
-                String rc = ReverseComplement(s);
-                if (patternCount.containsKey(rc)) {
-                    patternCount.put(rc, patternCount.get(rc) + 1);
-                } else {
-                    patternCount.put(rc, 1);
-                }
-
-            }
-        }
-
-        int maximum = -1;
-
-        for (String s : patternCount.keySet()) {
-            Integer i = patternCount.get(ReverseComplement(s));
-            int count = patternCount.get(s) + ((i == null) ? 0 : i);
-
-            if (count > maximum)
-                maximum = count;
-        }
-
-        for (String s : patternCount.keySet()) {
-            Integer i = patternCount.get(s);
-            Integer j = patternCount.get(ReverseComplement(s));
-            int j1 = ((j == null) ? 0 : j);
-
-            if ((i + j1) == maximum)
-                freqPatterns.put(s, maximum);
-        }
-
-        return freqPatterns;
+        return new ArrayList<>(freqPatterns.keySet());
     }
 
     public static Map<String, Integer> ClumpFindingWithSkewMismatchesAndRC(String text, int k, int L, int d) {
@@ -491,12 +452,12 @@ public class Utilities {
         System.out.println(minimumSkew.toString());
 
         for (int index : minimumSkew) {
-            Map<String, Integer> freqPatterns = FrequentWordsWithMismatchesAndReverseComplementMap(text.substring(index -1 , index + L), k, d);
+            Map<String, Integer> freqPatterns = frequentWordsWithMismatchesAndRCMap(text.substring(index -1 , index + L), k, d);
 
             patterns.putAll(freqPatterns);
 
             if (index > L - 1) {
-                freqPatterns = FrequentWordsWithMismatchesAndReverseComplementMap(text.substring(index - L - 1, index), k, d);
+                freqPatterns = frequentWordsWithMismatchesAndRCMap(text.substring(index - L - 1, index), k, d);
                 patterns.putAll(freqPatterns);
             }
         }
@@ -579,4 +540,155 @@ public class Utilities {
 
         return motifs;
     }
+
+    public static int Score(List<String> motifs){
+        int len = motifs.get(0).length();
+        int num = motifs.size();
+        int score = 0;
+
+        for(int i = 0 ; i < len; i++){
+            Map<Character, Integer> chars = countAlphabets(motifs, i);
+
+            OptionalInt max = chars.values().stream().mapToInt(Integer::intValue).max();
+
+            if(max.isPresent()) score += num - max.getAsInt();
+        }
+
+        return score;
+    }
+    public static Map<Character, Integer>[] Count(List<String> motifs){
+        int len = motifs.get(0).length();
+        Map[] counts = new Map[len];
+
+        for(int i = 0 ; i < len; i++)
+            counts[i] =  countAlphabets(motifs, i);
+
+        return counts;
+    }
+
+    public static Map<Character, Double>[] Profile(List<String> motifs){
+        int len = motifs.get(0).length();
+        Map[] profiles = new Map[len];
+
+        for(int i = 0 ; i < len; i++){
+            Map<Character, Integer> chars = countAlphabets(motifs, i);
+            Map<Character, Double> profileChars = new TreeMap<>();
+
+            int sum = chars.values().stream().mapToInt(Integer::intValue).sum();
+
+            for(char c : chars.keySet())
+                profileChars.put(c, (double)chars.get(c)/sum);
+
+            profiles[i] = profileChars;
+        }
+
+        return profiles;
+    }
+
+    public static String Consensus(List<String> motifs){
+        int len = motifs.get(0).length();
+        StringBuffer consensus = new StringBuffer();
+
+        for(int i = 0 ; i < len; i++){
+            Map<Character, Integer> chars = countAlphabets(motifs, i);
+            Map.Entry<Character, Integer> maxEntry = null;
+
+            for(Map.Entry<Character, Integer> entry : chars.entrySet())
+                if (maxEntry == null || entry.getValue().compareTo(maxEntry.getValue()) > 0) {
+                    maxEntry = entry;
+                }
+
+            consensus.append(maxEntry.getKey());
+        }
+
+        return consensus.toString();
+    }
+
+    public static double Entropy(List<String> motifs){
+        double[] entropies = EntropyOfColumns(motifs);
+
+        return Arrays.stream(entropies).sum();
+    }
+
+    private static double[] EntropyOfColumns(List<String> motifs){
+        Map<Character, Double>[] profile = Profile(motifs);
+        int len = profile.length;
+        double[] entropies = new double[len];
+
+        for(int i = 0; i < len ; i++) {
+            Map<Character, Double> map = profile[i];
+            double entropy = 0;
+            for (Map.Entry<Character, Double> entry : map.entrySet()){
+                double p = entry.getValue();
+                entropy += (p == 0)? 0 : p * (Math.log(p)/Math.log(2));
+            }
+
+            entropies[i] = (-1) * entropy;
+        }
+
+        return entropies;
+    }
+
+    private static Map<Character, Integer> countAlphabets(List<String> motifs, int i) {
+        Map<Character, Integer> chars = new TreeMap<>();
+
+        for (String s : motifs) {
+            char c = s.charAt(i);
+            Integer k = chars.get(c);
+            chars.put(c, (k == null) ? 1 : k + 1);
+        }
+
+        return chars;
+    }
+
+    private static Map<String, Integer> frequentWordsWithMismatchesAndRCMap(String text, int k, int d) {
+        int len = text.length();
+
+        Map<String, Integer> freqPatterns = new HashMap<>();
+        Map<String, Integer> patternCount = new HashMap<>();
+
+        for (int i = 0; i <= (len - k); i++) {
+            String kmer = text.substring(i, i + k);
+            Set<String> neighbors = Neighbors(kmer, d);
+
+            for (String s : neighbors) {
+                if (patternCount.containsKey(s)) {
+                    patternCount.put(s, patternCount.get(s) + 1);
+                } else {
+                    patternCount.put(s, 1);
+                }
+
+                String rc = ReverseComplement(s);
+                if (patternCount.containsKey(rc)) {
+                    patternCount.put(rc, patternCount.get(rc) + 1);
+                } else {
+                    patternCount.put(rc, 1);
+                }
+
+            }
+        }
+
+        int maximum = -1;
+
+        for (String s : patternCount.keySet()) {
+            Integer i = patternCount.get(ReverseComplement(s));
+            int count = patternCount.get(s) + ((i == null) ? 0 : i);
+
+            if (count > maximum)
+                maximum = count;
+        }
+
+        for (String s : patternCount.keySet()) {
+            Integer i = patternCount.get(s);
+            Integer j = patternCount.get(ReverseComplement(s));
+            int j1 = ((j == null) ? 0 : j);
+
+            if ((i + j1) == maximum)
+                freqPatterns.put(s, maximum);
+        }
+
+        return freqPatterns;
+    }
+
+
 }
