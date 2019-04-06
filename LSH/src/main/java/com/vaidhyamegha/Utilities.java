@@ -610,6 +610,30 @@ public class Utilities {
         return Arrays.stream(entropies).sum();
     }
 
+
+    /**
+     * Motif Finding Problem: Given a collection of strings, find a set of k-mers, one from each string, that minimizes
+     * the score of the resulting motif.
+     *
+     * Input: A collection of strings Dna and an integer k.
+     * Output: A collection Motifs of k-mers, one from each string in Dna, minimizing Score(Motifs) among all possible
+     * choices of k-mers.
+     *
+     * A brute force algorithm for the Motif Finding Problem (referred to as BruteForceMotifSearch) considers every
+     * possible choice of k-mers Motifs from Dna (one k-mer from each string of n nucleotides) and returns the
+     * collection Motifs having minimum score. Because there are n - k + 1 choices of k-mers in each of t sequences,
+     * there are (n - k + 1)t different ways to form Motifs. For each choice of Motifs, the algorithm calculates
+     * Score(Motifs), which requires k · t steps. Thus, assuming that k is smaller than n, the overall running
+     * time of the algorithm is O(nt · k · t). We need to come up with a faster algorithm!
+     *
+     */
+    public static String FindLeastScoreMotif(List<String> dnas, int k){
+        String motif = "";
+
+
+        return  motif;
+    }
+
     private static double[] EntropyOfColumns(List<String> motifs){
         Map<Character, Double>[] profile = Profile(motifs);
         int len = profile.length;

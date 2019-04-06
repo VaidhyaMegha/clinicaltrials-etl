@@ -1,0 +1,10 @@
+{
+  "name": "dydbimport",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.437.0",
+    "csv-parse": "^2.5.0"
+  }
+}
