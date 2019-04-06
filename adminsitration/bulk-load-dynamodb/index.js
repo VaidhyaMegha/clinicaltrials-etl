@@ -20,6 +20,7 @@ const data = parse(contents, {columns: true});
 
 data.forEach((item) => {
     if(!item.maybeempty) delete item.maybeempty; //need to remove empty items
+    Object.keys(item).forEach((key) => (item[key] == null || item[key] === '') && delete item[key]);
     // docClient.put({TableName: '<Table>', Item: item}, (err, res) => {
     docClient.put({TableName: args.tableName, Item: item}, (err, res) => {
         if(err) console.log(err)
