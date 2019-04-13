@@ -1,4 +1,4 @@
-package com.vaidhyamegha;
+package com.vaidhyamegha.bioinformatics;
 
 import java.util.*;
 import java.util.stream.IntStream;
@@ -82,33 +82,11 @@ public class Utilities {
         int k = pattern.length();
         int[] patternNumbers = new int[k];
 
-        for (int i = 0; i < k; i++) {
-            char c = pattern.charAt(i);
-            int cnum = -1;
-
-            switch (c) {
-                case 'A':
-                    cnum = 0;
-                    break;
-                case 'C':
-                    cnum = 1;
-                    break;
-                case 'G':
-                    cnum = 2;
-                    break;
-                case 'T':
-                    cnum = 3;
-                    break;
-            }
-
-            patternNumbers[i] = cnum;
-        }
+        for (int i = 0; i < k; i++) patternNumbers[i] = charToIndex(pattern.charAt(i));
 
         long index = 0;
 
-        for (int i = 0; i < k; i++) {
-            index = index + (patternNumbers[k - i - 1] + 1) * (long) (Math.pow(4, i));
-        }
+        for (int i = 0; i < k; i++) index = index + (patternNumbers[k - i - 1] + 1) * (long) (Math.pow(4, i));
 
         return index - ((long) Math.pow(4, k) - 1) / 3;
     }
@@ -117,27 +95,8 @@ public class Utilities {
         char[] pattern = new char[k];
 
         for (int i = 0; i < k; i++) {
-            int num = index % 4;
-            char c = '-';
-
-            switch (num) {
-                case 0:
-                    c = 'A';
-                    break;
-                case 1:
-                    c = 'C';
-                    break;
-                case 2:
-                    c = 'G';
-                    break;
-                case 3:
-                    c = 'T';
-                    break;
-            }
-
+            pattern[k - i - 1] = indexToChar(index % 4);
             index = index / 4;
-
-            pattern[k - i - 1] = c;
         }
 
         return new String(pattern);
@@ -628,10 +587,177 @@ public class Utilities {
      *
      */
     public static String FindLeastScoreMotif(List<String> dnas, int k){
+        return  MedianString(dnas, k);
+    }
+
+    /**
+     * Code Challenge: Implement MedianString.
+     *
+     * Input: An integer k, followed by a collection of strings Dna.
+     * Output: A k-mer Pattern that minimizes d(Pattern, Dna) among all possible choices of k-mers. (If there are multiple such strings Pattern, then you may return any one.)
+     *
+     * Sample Input:
+     *
+     * 3
+     * AAATTGACGCAT
+     * GACGACCACGTT
+     * CGTCAGCGCCTG
+     * GCTGAGCACCGG
+     * AGTTCGGGACAG
+     *
+     *
+     * Sample Output:
+     *
+     * GAC
+     *
+     * We now give the pseudocode for a brute force solution to the Median String Problem.
+     *
+     *     MedianString(Dna, k)
+     *         distance ← ∞
+     *         for each k-mer Pattern from AA…AA to TT…TT
+     *             if distance > d(Pattern, Dna)
+     *                  distance ← d(Pattern, Dna)
+     *                  Median ← Pattern
+     *         return Median
+     *
+     * Although this pseudocode is short, it is not without potential pitfalls. Check out Charging Station: Solving the Median String Problem if you fall into one of them.
+     *
+     * STOP and Think: Instead of making a time-consuming search through all possible k-mers in MedianString, can you only search through all k-mers that appear in Dna?
+     *
+     * @param dnas
+     * @param k
+     * @return
+     */
+    public static String MedianString(List<String> dnas, int k){
+        //brute force
+        // find all k-mers - 4^k possibilities
+        // loop through each kmer
+        // loop through each dna
+
+        // Alternative suggested is to use just the kmers found in dna... not quite sure if that is sufficient.
+//        Map<String, Integer> pDistances = new HashMap<>();
+//
+//        for (String dna : dnas) {
+//            int dnaLen = dna.length();
+//
+//            for (int l = 0; l <= (dnaLen - k); l++) {
+//                pDistances.put(dna.substring(l, l + k), Integer.MAX_VALUE);
+//            }
+//        }
+
+        Map<String, Integer> pDistances = new HashMap<>();
+
+        for(int i=0 ; i < ((int)Math.pow(4,k) - 1); i++){
+            String p = NumberToPattern(i, k);
+            int sumOfDistances = 0;
+
+            for (String dna : dnas) {
+                int distance = Integer.MAX_VALUE;
+                int dnaLen = dna.length();
+
+                for (int l = 0; l <= (dnaLen - k); l++) {
+                    String ssCandidate = dna.substring(l, l + k);
+                    int d = HammingDistance(p, ssCandidate);
+                    if (d < distance) distance = d;
+                }
+
+                sumOfDistances += distance;
+            }
+
+            pDistances.put(p, sumOfDistances);
+        }
+
+        int minSumOfDistances = Integer.MAX_VALUE;
         String motif = "";
 
+        for (Map.Entry<String, Integer> entry : pDistances.entrySet()){
+            int d = entry.getValue();
+            if (d < minSumOfDistances){
+           // if (d <= minSumOfDistances){ // Stepik needs this for this coding challenge : https://stepik.org/lesson/10965/step/2?discussion=120926&reply=826143&unit
+               motif = entry.getKey();
+               minSumOfDistances = d;
+            }
+        }
 
-        return  motif;
+        return motif;
+    }
+
+    public static String ProfileMostProbablekmer(String text, int k, Map<Character, List <Double>> profile) {
+        double max = 0.0;
+        String mostProbable = "";
+        int len = text.length();
+
+        for(int i=0 ; i <= (len - k); i++) {
+            String p = text.substring(i, i + k);
+            double prob = ProbabilityOfProfile(profile, p);
+
+            if(prob > max) {
+                max = prob;
+                mostProbable = p;
+            }
+        }
+
+        return mostProbable;
+    }
+
+    public static double ProbabilityOfProfile(Map<Character, List <Double>> profileMatrix, String pattern) {
+        double prob = 1;
+        int j = 0;
+
+        for (char c : pattern.toCharArray()) prob *= profileMatrix.get(c).get(j++);
+
+        return prob;
+    }
+
+    public static double ProbabilityOfProfile(double[][] profileMatrix, String pattern) {
+        int len  = profileMatrix[0].length;
+        double prob = 1;
+
+        for (int j = 0; j < len ; j++) prob *= profileMatrix[charToIndex(pattern.charAt(j))][j];
+
+        return prob;
+    }
+
+    private static int charToIndex(char c) {
+        int cnum = -1;
+
+        switch (c) {
+            case 'A':
+                cnum = 0;
+                break;
+            case 'C':
+                cnum = 1;
+                break;
+            case 'G':
+                cnum = 2;
+                break;
+            case 'T':
+                cnum = 3;
+                break;
+        }
+
+        return cnum;
+    }
+
+    private static char indexToChar(int num) {
+        char c = '-';
+
+        switch (num) {
+            case 0:
+                c = 'A';
+                break;
+            case 1:
+                c = 'C';
+                break;
+            case 2:
+                c = 'G';
+                break;
+            case 3:
+                c = 'T';
+                break;
+        }
+
+        return c;
     }
 
     private static double[] EntropyOfColumns(List<String> motifs){
