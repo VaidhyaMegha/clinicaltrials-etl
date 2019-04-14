@@ -6,18 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="BioInformatics" />
         <module name="demo" />
         <module name="FileProcessor" />
         <module name="GraphProcessor" />
-        <module name="LSH" />
         <module name="StringSearch" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="BioInformatics" target="8" />
       <module name="demo" target="1.8" />
       <module name="FileProcessor" target="8" />
       <module name="GraphProcessor" target="8" />
-      <module name="LSH" target="8" />
       <module name="StringSearch" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -544,9 +544,28 @@ public class Utilities {
         return profiles;
     }
 
+    public static Map<Character, List<Double>> ProfileMap(List<String> motifs){
+        int len = motifs.get(0).length();
+        Map<Character, List<Double>> profiles = new TreeMap<>();
+        Double[] d = new Double[len];
+
+        for(int i = 0 ; i < len; i++){
+            Map<Character, Integer> chars = countAlphabets(motifs, i);
+
+            int sum = chars.values().stream().mapToInt(Integer::intValue).sum();
+
+            for(char c : chars.keySet()) {
+                profiles.computeIfAbsent(c, k -> new ArrayList<>(Arrays.asList(d)));
+                profiles.get(c).add(i, (double) chars.get(c) / sum);
+            }
+        }
+
+        return profiles;
+    }
+
     public static String Consensus(List<String> motifs){
         int len = motifs.get(0).length();
-        StringBuffer consensus = new StringBuffer();
+        StringBuilder consensus = new StringBuilder();
 
         for(int i = 0 ; i < len; i++){
             Map<Character, Integer> chars = countAlphabets(motifs, i);
@@ -682,14 +701,68 @@ public class Utilities {
         return motif;
     }
 
+    /**
+     *
+     * GreedyMotifSearch, starts by forming a motif matrix from arbitrarily selected k-mers in each string from Dna
+     * (which in our specific implementation is the first k-mer in each string). It then attempts to improve this
+     * initial motif matrix by trying each of the k-mers in Dna1 as the first motif. For a given choice of k-mer
+     * Motif1 in Dna1, it builds a profile matrix Profile for this lone k-mer, and sets Motif2 equal to the
+     * Profile-most probable k-mer in Dna2. It then iterates by updating Profile as the profile matrix formed
+     * from Motif1 and Motif2, and sets Motif3 equal to the Profile-most probable k-mer in Dna3. In general,
+     * after finding i − 1 k-mers Motifs in the first i − 1 strings of Dna, GreedyMotifSearch constructs
+     * Profile(Motifs) and selects the Profile-most probable k-mer from Dnai based on this profile matrix.
+     *
+     * After obtaining a k-mer from each string to obtain a collection Motifs, GreedyMotifSearch tests to see whether
+     * Motifs outscores the current best scoring collection of motifs and then moves Motif1 one symbol over in Dna1,
+     * beginning the entire process of generating Motifs again.
+     *
+     *     GreedyMotifSearch(Dna, k, t)
+     *         BestMotifs ← motif matrix formed by first k-mers in each string from Dna
+     *         for each k-mer Motif in the first string from Dna
+     *             Motif1 ← Motif
+     *             for i = 2 to t
+     *                 form Profile from motifs Motif1, …, Motifi - 1
+     *                 Motifi ← Profile-most probable k-mer in the i-th string in Dna
+     *             Motifs ← (Motif1, …, Motift)
+     *             if Score(Motifs) < Score(BestMotifs)
+     *                 BestMotifs ← Motifs
+     *         return BestMotifs
+     *
+     */
+    public static List<String> GreedyMotifSearch(List<String> dna, int k, int t){
+        int len = dna.get(0).length();
+        List<String> f = new ArrayList<>();
+        int score = Integer.MAX_VALUE;
+
+        List<String> motifs = new ArrayList<>();
+
+        for (String d : dna) motifs.add(d.substring(0, k));
+
+        L1: for (int j = 0; j <= (len - k); j++) {
+            motifs.set(0, dna.get(0).substring(j, j + k));
+
+            for (int i = 1; i < t; i++) motifs.set(i, ProfileMostProbablekmer(dna.get(i), k, ProfileMap(motifs.subList(0, i))));
+
+
+            int s = Score(motifs);
+
+            if (s < score) {
+                f = new ArrayList<>(motifs);
+                score = s;
+            }
+        }
+
+        return f;
+    }
+
     public static String ProfileMostProbablekmer(String text, int k, Map<Character, List <Double>> profile) {
         double max = 0.0;
-        String mostProbable = "";
+        String mostProbable = text.substring(0, k);
         int len = text.length();
 
         for(int i=0 ; i <= (len - k); i++) {
             String p = text.substring(i, i + k);
-            double prob = ProbabilityOfProfile(profile, p);
+            double prob = ProbabilityOfPatternInAProfile(profile, p);
 
             if(prob > max) {
                 max = prob;
@@ -700,20 +773,28 @@ public class Utilities {
         return mostProbable;
     }
 
-    public static double ProbabilityOfProfile(Map<Character, List <Double>> profileMatrix, String pattern) {
+    public static double ProbabilityOfPatternInAProfile(Map<Character, List <Double>> profile, String pattern) {
         double prob = 1;
-        int j = 0;
 
-        for (char c : pattern.toCharArray()) prob *= profileMatrix.get(c).get(j++);
+        char[] charArray = pattern.toCharArray();
+
+        for (int i = 0; i < charArray.length; i++) {
+            char c = charArray[i];
+
+            if(profile.get(c) == null || profile.get(c).size() <= i || profile.get(c).get(i) == null)
+                return 0;
+
+            prob *= profile.get(c).get(i);
+        }
 
         return prob;
     }
 
-    public static double ProbabilityOfProfile(double[][] profileMatrix, String pattern) {
-        int len  = profileMatrix[0].length;
+    public static double ProbabilityOfPatternInAProfile(double[][] profile, String pattern) {
+        int len  = pattern.length();
         double prob = 1;
 
-        for (int j = 0; j < len ; j++) prob *= profileMatrix[charToIndex(pattern.charAt(j))][j];
+        for (int j = 0; j < len ; j++) prob *= profile[charToIndex(pattern.charAt(j))][j];
 
         return prob;
     }
