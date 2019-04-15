@@ -563,6 +563,25 @@ public class Utilities {
         return profiles;
     }
 
+    public static Map<Character, List<Double>> ProfileWithPseudoCount(List<String> motifs){
+        int len = motifs.get(0).length();
+        Map<Character, List<Double>> profiles = new TreeMap<>();
+        Double[] d = new Double[len];
+
+        for(int i = 0 ; i < len; i++){
+            Map<Character, Integer> chars = countAlphabetsWithPseudoCount(motifs, i);
+
+            int sum = chars.values().stream().mapToInt(Integer::intValue).sum();
+
+            for(char c : chars.keySet()) {
+                profiles.computeIfAbsent(c, k -> new ArrayList<>(Arrays.asList(d)));
+                profiles.get(c).add(i, (double) chars.get(c) / sum);
+            }
+        }
+
+        return profiles;
+    }
+
     public static String Consensus(List<String> motifs){
         int len = motifs.get(0).length();
         StringBuilder consensus = new StringBuilder();
@@ -670,41 +689,49 @@ public class Utilities {
             String p = NumberToPattern(i, k);
             int sumOfDistances = 0;
 
-            for (String dna : dnas) {
-                int distance = Integer.MAX_VALUE;
-                int dnaLen = dna.length();
-
-                for (int l = 0; l <= (dnaLen - k); l++) {
-                    String ssCandidate = dna.substring(l, l + k);
-                    int d = HammingDistance(p, ssCandidate);
-                    if (d < distance) distance = d;
-                }
-
-                sumOfDistances += distance;
-            }
+            sumOfDistances = DistanceBetweenPatternAndStrings(dnas, p);
 
             pDistances.put(p, sumOfDistances);
         }
 
         int minSumOfDistances = Integer.MAX_VALUE;
-        String motif = "";
+        String median = "";
 
         for (Map.Entry<String, Integer> entry : pDistances.entrySet()){
             int d = entry.getValue();
             if (d < minSumOfDistances){
            // if (d <= minSumOfDistances){ // Stepik needs this for this coding challenge : https://stepik.org/lesson/10965/step/2?discussion=120926&reply=826143&unit
-               motif = entry.getKey();
+               median = entry.getKey();
                minSumOfDistances = d;
             }
         }
 
-        return motif;
+        return median;
+    }
+
+    public static int DistanceBetweenPatternAndStrings(List<String> dnas, String p) {
+        int sumOfDistances = 0;
+        int k = p.length();
+
+        for (String dna : dnas) {
+            int distance = Integer.MAX_VALUE;
+            int dnaLen = dna.length();
+
+            for (int l = 0; l <= (dnaLen - k); l++) {
+                String ssCandidate = dna.substring(l, l + k);
+                int d = HammingDistance(p, ssCandidate);
+                if (d < distance) distance = d;
+            }
+
+            sumOfDistances += distance;
+        }
+        return sumOfDistances;
     }
 
     /**
      *
      * GreedyMotifSearch, starts by forming a motif matrix from arbitrarily selected k-mers in each string from Dna
-     * (which in our specific implementation is the first k-mer in each string). It then attempts to improve this
+     * (whicammh in our specific implementation is the first k-mer in each string). It then attempts to improve this
      * initial motif matrix by trying each of the k-mers in Dna1 as the first motif. For a given choice of k-mer
      * Motif1 in Dna1, it builds a profile matrix Profile for this lone k-mer, and sets Motif2 equal to the
      * Profile-most probable k-mer in Dna2. It then iterates by updating Profile as the profile matrix formed
@@ -754,6 +781,33 @@ public class Utilities {
 
         return f;
     }
+
+    public static List<String> GreedyMotifSearchWithPseudoCount(List<String> dna, int k, int t){
+        int len = dna.get(0).length();
+        List<String> f = new ArrayList<>();
+        int score = Integer.MAX_VALUE;
+
+        List<String> motifs = new ArrayList<>();
+
+        for (String d : dna) motifs.add(d.substring(0, k));
+
+        L1: for (int j = 0; j <= (len - k); j++) {
+            motifs.set(0, dna.get(0).substring(j, j + k));
+
+            for (int i = 1; i < t; i++) motifs.set(i, ProfileMostProbablekmer(dna.get(i), k, ProfileWithPseudoCount(motifs.subList(0, i))));
+
+
+            int s = Score(motifs);
+
+            if (s < score) {
+                f = new ArrayList<>(motifs);
+                score = s;
+            }
+        }
+
+        return f;
+    }
+
 
     public static String ProfileMostProbablekmer(String text, int k, Map<Character, List <Double>> profile) {
         double max = 0.0;
@@ -872,6 +926,23 @@ public class Utilities {
         return chars;
     }
 
+
+    private static Map<Character, Integer> countAlphabetsWithPseudoCount(List<String> motifs, int i) {
+        Map<Character, Integer> chars = new TreeMap<>();
+        chars.put('A', 1);
+        chars.put('C', 1);
+        chars.put('T', 1);
+        chars.put('G', 1);
+
+        for (String s : motifs) {
+            char c = s.charAt(i);
+            Integer k = chars.get(c);
+            chars.put(c, (k == null) ? 1 : k + 1);
+        }
+
+        return chars;
+    }
+
     private static Map<String, Integer> frequentWordsWithMismatchesAndRCMap(String text, int k, int d) {
         int len = text.length();
 
@@ -922,4 +993,7 @@ public class Utilities {
     }
 
 
+    public static double entropy(double[] distribution){
+        return (-1) * Arrays.stream(distribution).map(d -> d == 0 ? 0 : d * Math.log(d) / Math.log(2)).sum();
+    }
 }

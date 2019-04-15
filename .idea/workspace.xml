@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LSH/LSH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/BioInformatics.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/UtilitiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/UtilitiesTest.java" afterDir="false" />
     </list>
@@ -54,10 +51,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/ShannonEntropy.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="791" lean-forward="true" selection-start-line="732" selection-start-column="1" selection-end-line="791" />
+            <state relative-caret-position="382">
+              <caret line="993" lean-forward="true" selection-start-line="993" selection-end-line="993" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,28 +68,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/List.class">
+        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/OptionalInt.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
+            <state relative-caret-position="90">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/Map.class">
+        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/TreeMap.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+            <state relative-caret-position="205">
+              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+              <folding>
+                <element signature="e#1113#1114#0" expanded="true" />
+                <element signature="e#1151#1152#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/UtilitiesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="626" column="25" selection-start-line="626" selection-start-column="25" selection-end-line="626" selection-end-column="25" />
+            <state relative-caret-position="247">
+              <caret line="744" column="9" lean-forward="true" selection-start-line="744" selection-start-column="9" selection-end-line="744" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,27 +129,13 @@
         <option value="XSLT Stylesheet" />
         <option value="Python Script" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>http://www.ins.gob.pe/ensayosclinicos/rpec/XML/</find>
-      <find>analysis</find>
-      <find>gvm</find>
-      <find>1.4</find>
-      <find>go1.4</find>
-      <find>set -x</find>
-      <find>set +H</find>
-      <find>go1.9</find>
-      <find>html_json.</find>
-      <find>/usr/local/dataintegration/Download_html.sh</find>
-      <find>primary</find>
-      <find>&quot;</find>
-      <find>xml2json</find>
-      <find>tctr</find>
       <find>s3_bucket</find>
       <find>p_id</find>
       <find>len - k</find>
@@ -160,6 +152,20 @@
       <find>+ k</find>
       <find />
       <find>$USER_HOME$/datasets/BioInformatics/</find>
+      <find>countAlphabets</find>
+      <find>Ps</find>
+      <find>Score</find>
+      <find>Optiona</find>
+      <find>Hamming</find>
+      <find>GGTTACT</find>
+      <find>CGTGTAA</find>
+      <find>TCTGAAG</find>
+      <find>AATCCTA</find>
+      <find>GTAGGAA</find>
+      <find>GATGAGT</find>
+      <find>AACGCTG</find>
+      <find>HammingDistance</find>
+      <find>ATAACGG</find>
     </findStrings>
     <replaceStrings>
       <replace>is($1)</replace>
@@ -207,7 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Queue.java" />
         <option value="$PROJECT_DIR$/StringSearch/README.md" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/Trie2.java" />
         <option value="$PROJECT_DIR$/StringSearch/src/main/java/com/vaidhyamegha/TrieArray.java" />
@@ -256,6 +261,7 @@
         <option value="$PROJECT_DIR$/adminsitration/bulk-load-dynamodb/index.js" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/UtilitiesTest.java" />
         <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/UtilitiesTest.java" />
+        <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/Test.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/Utilities.java" />
         <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/UtilitiesTest.java" />
       </list>
@@ -387,15 +393,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="vaidhyamegha" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
-              <item name="LSH" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="bioinformatics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -498,7 +495,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UtilitiesTest.greedyMotifSearch">
+  <component name="RunManager" selected="JUnit.UtilitiesTest.entropyOfDistribution">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -548,7 +545,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.greedyMotifSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.distanceBetweenPatternAndStrings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BioInformatics" />
       <extension name="coverage">
         <pattern>
@@ -558,14 +555,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha.bioinformatics" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.bioinformatics.UtilitiesTest" />
-      <option name="METHOD_NAME" value="greedyMotifSearch" />
+      <option name="METHOD_NAME" value="distanceBetweenPatternAndStrings" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.probabilityOfProfile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.entropyOfDistribution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BioInformatics" />
       <extension name="coverage">
         <pattern>
@@ -575,14 +572,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha.bioinformatics" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.bioinformatics.UtilitiesTest" />
-      <option name="METHOD_NAME" value="probabilityOfProfile" />
+      <option name="METHOD_NAME" value="entropyOfDistribution" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.profileMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.greedyMotifSearchWithPseudoCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BioInformatics" />
       <extension name="coverage">
         <pattern>
@@ -592,14 +589,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha.bioinformatics" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.bioinformatics.UtilitiesTest" />
-      <option name="METHOD_NAME" value="profileMap" />
+      <option name="METHOD_NAME" value="greedyMotifSearchWithPseudoCount" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilitiesTest.profileMostProbablekmer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.medianString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BioInformatics" />
       <extension name="coverage">
         <pattern>
@@ -609,7 +606,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha.bioinformatics" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.bioinformatics.UtilitiesTest" />
-      <option name="METHOD_NAME" value="profileMostProbablekmer" />
+      <option name="METHOD_NAME" value="medianString" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -766,18 +763,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.UtilitiesTest" />
-      <item itemvalue="JUnit.UtilitiesTest.probabilityOfProfile" />
-      <item itemvalue="JUnit.UtilitiesTest.profileMostProbablekmer" />
-      <item itemvalue="JUnit.UtilitiesTest.greedyMotifSearch" />
-      <item itemvalue="JUnit.UtilitiesTest.profileMap" />
+      <item itemvalue="JUnit.UtilitiesTest.greedyMotifSearchWithPseudoCount" />
+      <item itemvalue="JUnit.UtilitiesTest.distanceBetweenPatternAndStrings" />
+      <item itemvalue="JUnit.UtilitiesTest.medianString" />
+      <item itemvalue="JUnit.UtilitiesTest.entropyOfDistribution" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UtilitiesTest.greedyMotifSearch" />
+        <item itemvalue="JUnit.UtilitiesTest.entropyOfDistribution" />
         <item itemvalue="JUnit.UtilitiesTest" />
-        <item itemvalue="JUnit.UtilitiesTest.profileMostProbablekmer" />
-        <item itemvalue="JUnit.UtilitiesTest.profileMap" />
-        <item itemvalue="JUnit.UtilitiesTest.probabilityOfProfile" />
+        <item itemvalue="JUnit.UtilitiesTest.medianString" />
+        <item itemvalue="JUnit.UtilitiesTest.distanceBetweenPatternAndStrings" />
+        <item itemvalue="JUnit.UtilitiesTest.greedyMotifSearchWithPseudoCount" />
       </list>
     </recent_temporary>
   </component>
@@ -1092,50 +1089,51 @@
       <workItem from="1555163215704" duration="17540000" />
       <workItem from="1555226752116" duration="12338000" />
       <workItem from="1555239676548" duration="18000" />
-      <workItem from="1555239723811" duration="535000" />
+      <workItem from="1555239723811" duration="10896000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UtilitiesTest_greedyMotifSearch - 2019.04.14 at 16h 22m 21s.xml">
-      <configuration name="UtilitiesTest.greedyMotifSearch" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_medianString - 2019.04.15 at 12h 08m 56s.xml">
+      <configuration name="UtilitiesTest.medianString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_greedyMotifSearch - 2019.04.14 at 16h 30m 53s.xml">
-      <configuration name="UtilitiesTest.greedyMotifSearch" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest - 2019.04.15 at 12h 15m 06s.xml">
+      <configuration name="UtilitiesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_greedyMotifSearch - 2019.04.14 at 16h 35m 47s.xml">
-      <configuration name="UtilitiesTest.greedyMotifSearch" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropyOfDistribution - 2019.04.15 at 12h 36m 36s.xml">
+      <configuration name="UtilitiesTest.entropyOfDistribution" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_greedyMotifSearch - 2019.04.14 at 16h 36m 30s.xml">
-      <configuration name="UtilitiesTest.greedyMotifSearch" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropyOfDistribution - 2019.04.15 at 12h 37m 17s.xml">
+      <configuration name="UtilitiesTest.entropyOfDistribution" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_greedyMotifSearch - 2019.04.14 at 16h 36m 41s.xml">
-      <configuration name="UtilitiesTest.greedyMotifSearch" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropyOfDistribution - 2019.04.15 at 12h 37m 26s.xml">
+      <configuration name="UtilitiesTest.entropyOfDistribution" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_greedyMotifSearch - 2019.04.14 at 16h 36m 54s.xml">
-      <configuration name="UtilitiesTest.greedyMotifSearch" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropyOfDistribution - 2019.04.15 at 12h 37m 48s.xml">
+      <configuration name="UtilitiesTest.entropyOfDistribution" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_greedyMotifSearch - 2019.04.14 at 16h 37m 23s.xml">
-      <configuration name="UtilitiesTest.greedyMotifSearch" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropyOfDistribution - 2019.04.15 at 12h 38m 00s.xml">
+      <configuration name="UtilitiesTest.entropyOfDistribution" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_greedyMotifSearch - 2019.04.14 at 16h 40m 31s.xml">
-      <configuration name="UtilitiesTest.greedyMotifSearch" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropyOfDistribution - 2019.04.15 at 12h 43m 57s.xml">
+      <configuration name="UtilitiesTest.entropyOfDistribution" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_greedyMotifSearch - 2019.04.14 at 16h 42m 55s.xml">
-      <configuration name="UtilitiesTest.greedyMotifSearch" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropyOfDistribution - 2019.04.15 at 12h 45m 39s.xml">
+      <configuration name="UtilitiesTest.entropyOfDistribution" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UtilitiesTest_greedyMotifSearch - 2019.04.14 at 16h 43m 18s.xml">
-      <configuration name="UtilitiesTest.greedyMotifSearch" configurationId="JUnit" />
+    <history-entry file="UtilitiesTest_entropyOfDistribution - 2019.04.15 at 12h 45m 49s.xml">
+      <configuration name="UtilitiesTest.entropyOfDistribution" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1690554000" />
+    <option name="totallyTimeSpent" value="1700915000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48447204" visible="true" weight="0.2106136" />
-      <window_info id="Structure" order="1" sideWeight="0.51552796" side_tool="true" visible="true" weight="0.2106136" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48447204" visible="true" weight="0.2106136" />
+      <window_info id="Structure" order="1" sideWeight="0.51552796" side_tool="true" weight="0.2106136" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
       <window_info id="Project Explorer" order="4" />
@@ -1150,7 +1148,7 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.3260188" />
       <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.498618" visible="true" weight="0.32706374" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.498618" visible="true" weight="0.32706374" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.498618" weight="0.39811912" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Console" order="7" />
@@ -1317,21 +1315,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/Utilities.java</url>
-          <line>691</line>
+          <line>699</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/Utilities.java</url>
-          <line>748</line>
+          <line>775</line>
           <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/Utilities.java</url>
-          <line>759</line>
+          <line>813</line>
           <properties />
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/UtilitiesTest.java</url>
+          <line>704</line>
+          <properties />
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1387,20 +1391,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-04 15-20-43.png" />
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-04 15-20-55.png" />
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Pipeline.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/LRB_Apps_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/LRB_Apps_2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/LRB_Databases_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/LRB_Databases_2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1478,9 +1468,6 @@
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-11 05-57-53.png" />
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-11 06-03-44.png" />
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-11 05-54-16.png" />
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-09 21-27-42.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/List.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1200">
@@ -1508,20 +1495,60 @@
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/ClockGene.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/Utilities.java">
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/TreeMap.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="791" lean-forward="true" selection-start-line="732" selection-start-column="1" selection-end-line="791" />
+        <state relative-caret-position="205">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding>
+            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#1151#1152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/OptionalInt.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-14 20-00-25.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-14 20-25-04.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-09 21-27-42.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/ShannonEntropy.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/UtilitiesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="626" column="25" selection-start-line="626" selection-start-column="25" selection-end-line="626" selection-end-column="25" />
+        <state relative-caret-position="247">
+          <caret line="744" column="9" lean-forward="true" selection-start-line="744" selection-start-column="9" selection-end-line="744" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/Utilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="993" lean-forward="true" selection-start-line="993" selection-end-line="993" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

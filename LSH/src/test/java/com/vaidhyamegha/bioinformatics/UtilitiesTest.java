@@ -553,6 +553,27 @@ public class UtilitiesTest {
 
         Assert.assertEquals("GAC", Utilities.MedianString(motifs, 3));
 
+        motifs = new ArrayList<>();
+
+        motifs.add("CTCGATGAGTAGGAAAGTAGTTTCACTGGGCGAACCACCCCGGCGCTAATCCTAGTGCCC");
+        motifs.add("GCAATCCTACCCGAGGCCACATATCAGTAGGAACTAGAACCACCACGGGTGGCTAGTTTC");
+        motifs.add("GGTGTTGAACCACGGGGTTAGTTTCATCTATTGTAGGAATCGGCTTCAAATCCTACACAG");
+
+
+
+
+        Assert.assertEquals(7, Utilities.DistanceBetweenPatternAndStrings(motifs, "ATAACGG"));
+        Assert.assertEquals(9, Utilities.DistanceBetweenPatternAndStrings(motifs, "CGTGTAA"));
+        Assert.assertEquals(0, Utilities.DistanceBetweenPatternAndStrings(motifs, "TAGTTTC"));
+        Assert.assertEquals(8, Utilities.DistanceBetweenPatternAndStrings(motifs, "TCTGAAG"));
+        Assert.assertEquals(4, Utilities.DistanceBetweenPatternAndStrings(motifs, "GATGAGT"));
+        Assert.assertEquals(0, Utilities.DistanceBetweenPatternAndStrings(motifs, "GTAGGAA"));
+        Assert.assertEquals(0, Utilities.DistanceBetweenPatternAndStrings(motifs, "AATCCTA"));
+        Assert.assertEquals(9, Utilities.DistanceBetweenPatternAndStrings(motifs, "GTCAGCG"));
+        Assert.assertEquals(9, Utilities.DistanceBetweenPatternAndStrings(motifs, "AACGCTG"));
+        Assert.assertEquals(6, Utilities.DistanceBetweenPatternAndStrings(motifs, "GGTTACT"));
+        Assert.assertEquals(0, Utilities.DistanceBetweenPatternAndStrings(motifs, "GAACCAC"));
+
         try {
             BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/projects/ctd/DI_ETL/LSH/src/main/datasets/dataset_158_9.txt"));
             String str = "";
@@ -654,6 +675,84 @@ public class UtilitiesTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void distanceBetweenPatternAndStrings() {
+        List<String> patterns = new ArrayList<>();
+        patterns.add("TTACCTTAAC");
+        patterns.add("GATATCTGTC");
+        patterns.add("ACGGCGTTCG");
+        patterns.add("CGTCAGAGGT");
+
+        assertEquals(5, Utilities.DistanceBetweenPatternAndStrings(patterns, "AAA"));
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/projects/ctd/DI_ETL/LSH/src/main/datasets/dataset_5164_1.txt"));
+            String str = br.readLine();
+
+
+            String k = str;
+
+            List<String> ls = new ArrayList<>();
+
+            while ((str = br.readLine()) != null) {
+                System.out.println(str);
+                ls.addAll(Arrays.asList(str.split(" ")));
+            }
+
+            assertEquals(42,
+                    Utilities.DistanceBetweenPatternAndStrings(ls, k ));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void greedyMotifSearchWithPseudoCount() {
+        List<String> dna = new ArrayList<>();
+        dna.add("GGCGTTCAGGCA");
+        dna.add("AAGAATCAGTCA");
+        dna.add("CAAGGAGTTCGC");
+        dna.add("CACGTCAATCAC");
+        dna.add("CAATAATATTCG");
+
+        assertEquals("[TTC, ATC, TTC, ATC, TTC]", Utilities.GreedyMotifSearchWithPseudoCount(dna, 3, 5).toString());
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/projects/ctd/DI_ETL/LSH/src/main/datasets/dataset_160_9.txt"));
+            String str = br.readLine();
+
+
+            int k = Integer.parseInt(str.split(" ")[0]);
+            int t = Integer.parseInt(str.split(" ")[1]);
+
+            List<String> ls = new ArrayList<>();
+
+            while ((str = br.readLine()) != null) {
+                ls.add(str);
+            }
+
+            assertEquals("[GAGGCGTGTTAT, GAGCCGTGGTAT, GAGACATGTTAT, GAGTCTTTTTAT, GAGACATCCTAT, GAGCCGTTTTAT, GAGCCGTGATAT, GAGGCCTCTTAT, GAGACCTAGTAT, GAGGCATTCTAT, TAGCCGTTTTAT, GAGACCTAGTAT, GAGACGTCGTAT, GAGTCATTATAT, GAGGCCTCATAT, GAGGCTTTATAT, GAGCCTTATTAT, GAGCCCTGTTAT, GAGCCTTTCTAT, GAGGCATCCTAT, GAGCCATATTAT, GAGACATATTAT, GAGACCTACTAT, GAGTCCTGGTAT, GAGGCATCGTAT]",
+                    Utilities.GreedyMotifSearchWithPseudoCount(ls, k, t).toString());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void entropyOfDistribution() {
+        double[] d1 = {0.5, 0, 0, 0.5};
+        double[] d2 = {0.25,0.25,0.25,0.25};
+        double[] d3 = {0, 0, 0, 1};
+        double[] d4 = {0.25, 0, 0.5, 0.25};
+
+        assertEquals(1.0, Utilities.entropy(d1));
+        assertEquals(2.0, Utilities.entropy(d2));
+        assertEquals(-0.0, Utilities.entropy(d3));
+        assertEquals(1.5, Utilities.entropy(d4));
     }
 }
 
