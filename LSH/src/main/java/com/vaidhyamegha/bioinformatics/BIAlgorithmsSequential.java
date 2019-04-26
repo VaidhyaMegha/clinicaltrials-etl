@@ -1029,27 +1029,25 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     @Override
     public List<String> GibbsSampler(List<String> dna, int k, int t, int N) {
         List<String> bestMotifs = getFirstSetOfRandomMotifs(dna, k);
-        Map<Character, List<Double>> profile = profileWithPseudoCount(bestMotifs);
-        List<Double> prob = new ArrayList<>();
 
-        for(String s: bestMotifs) prob.add(ProbabilityOfPatternInAProfile(profile, s));
+        for (int j = 0; j < N; j++) {
+            List<String> newMotifs = new ArrayList<>(bestMotifs);
+            int i = (int) Math.floor(Math.random() * t);
+            newMotifs.remove(i);
 
-        int score = Score(bestMotifs);
+            Map<Character, List<Double>> profile = profileWithPseudoCount(newMotifs);
 
-        for (int j = 1; j < N; j++) {
-            List<String> tempMotifs = new ArrayList<>(bestMotifs);
+            List<Double> prob = new ArrayList<>();
+            String s = dna.get(i);
 
-            tempMotifs.remove(biasedRandomGenerator(prob));
+            for(int l = 0; l <= (s.length() - k) ; l++)
+                prob.add(ProbabilityOfPatternInAProfile(profile, s.substring(l,l + k)));
 
-            Map<Character, List<Double>> profile1 = profileWithPseudoCount(tempMotifs);
+            int m = biasedRandomGenerator(prob);
 
-            List<String> newMotifs = dna.stream().map(s -> ProfileMostProbablekmer(s, k, profile1)).collect(Collectors.toList());
-            int newScore = Score(newMotifs);
+            newMotifs.add(i, s.substring(m, m + k));
 
-            if(newScore < score) {
-                score = newScore;
-                bestMotifs = newMotifs;
-            }
+            if(Score(newMotifs) < Score(bestMotifs)) bestMotifs = newMotifs;
         }
 
         return bestMotifs;

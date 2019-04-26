@@ -858,7 +858,63 @@ public class BIAlgorithmsTest {
         dna.add("TAGATCAAGTTTCAGGTGCACGTCGGTGAACC");
         dna.add("AATCCACCAGCTCCACGTGCAATGTTGGCCTA");
 
-        assertEquals("[TCTCGGGG, CCAAGGTG, TACAGGCG, TTCAGGTG, TCCACGTG]", alg.GibbsSampler(dna, 8,5, 100));
+        List<List<String>> motifs = new ArrayList<>();
+        int minScore = Integer.MAX_VALUE;
+        int k = 0;
+
+        for (int i = 0; i < 100; i++) {
+            List<String> motifs1 = alg.GibbsSampler(dna, 8,5, 100);
+            motifs.add(motifs1);
+
+            int score = alg.Score(motifs1);
+            if(score < minScore) {
+                minScore = score;
+                k = i;
+            }
+
+//            System.out.println(i + " th score is " + minScore);
+        }
+
+        assertEquals("[TCTCGGGG, CCAAGGTG, TACAGGCG, TTCAGGTG, TCCACGTG]", motifs.get(k).toString());
+
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/projects/ctd/DI_ETL/LSH/src/main/datasets/dataset_163_4.txt"));
+            String str = br.readLine();
+
+
+            k = Integer.parseInt(str.split(" ")[0]);
+            int t = Integer.parseInt(str.split(" ")[1]);
+            int N = Integer.parseInt(str.split(" ")[2]);
+
+            List<String> ls = new ArrayList<>();
+
+            while ((str = br.readLine()) != null) {
+                ls.add(str);
+            }
+
+
+            motifs = new ArrayList<>();
+            minScore = Integer.MAX_VALUE;
+            int p = 0;
+
+            for (int i = 0; i < 20; i++) {
+                List<String> motifs1 = alg.GibbsSampler(ls, k, t, N);
+                motifs.add(motifs1);
+
+                int score = alg.Score(motifs1);
+                if(score < minScore) {
+                    minScore = score;
+                    p = i;
+                }
+            }
+
+            assertEquals("[TAGACAGTCAAGGCA, TAATATGTTTAGGCG, TAACCAGTTTAACGG, AGACCAGTTTAGGCC, TAACCAGTTTAGTAT, TACAAAGTTTAGGCG, TAACCAGTACTGGCG, TAACCATCGTAGGCG, TAACCTTATTAGGCG, TTGTCAGTTTAGGCG, AAACCAGTTTAGGTC, TAACCAGTTAGCGCG, TAACGCATTTAGGCG, TAACATATTTAGGCG, TAAGTCGTTTAGGCG, CGTCCAGTTTAGGCG, TAACCAGTTTCAACG, TAACCTAATTAGGCG, TAACCACCCTAGGCG, TAACCAGACGAGGCG]",
+                    motifs.get(p).toString());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 }
