@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/DNAAlphabetUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlphabet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-09 21-27-42.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/UtilitiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
@@ -62,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="63" column="28" selection-start-line="63" selection-end-line="64" />
+            <state relative-caret-position="589">
+              <caret line="1045" column="50" lean-forward="true" selection-start-line="1045" selection-start-column="50" selection-end-line="1045" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,10 +70,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/DNAAlphabetUtility.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+            <state relative-caret-position="1020">
+              <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4704">
+            <state relative-caret-position="7140">
               <caret line="476" column="36" selection-start-line="476" selection-start-column="36" selection-end-line="476" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -98,11 +114,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LSH/.attach_pid6848">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -121,7 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>countAlphabets</find>
       <find>Ps</find>
       <find>Optiona</find>
       <find>Hamming</find>
@@ -143,7 +153,6 @@
       <find>Algorithms.</find>
       <find>static</find>
       <find>getF</find>
-      <find>'A'</find>
       <find>'T'</find>
       <find>ArrayList</find>
       <find>Assert.</find>
@@ -151,6 +160,8 @@
       <find>alp</find>
       <find>A</find>
       <find>Alp</find>
+      <find>'A'</find>
+      <find>'C'</find>
     </findStrings>
     <replaceStrings>
       <replace>,\n&quot;</replace>
@@ -181,8 +192,8 @@
       <replace>alg.</replace>
       <replace>BI</replace>
       <replace>A</replace>
-      <replace>T</replace>
       <replace>List</replace>
+      <replace>T</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/scripts/athena</dir>
@@ -241,13 +252,13 @@
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithms.java" />
         <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/AlgorithmsTest.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/Algorithms.java" />
-        <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlphabet.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlphabetUtility.java" />
         <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java" />
-        <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlphabet.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/DNAAlphabetUtility.java" />
+        <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" />
+        <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java" />
       </list>
     </option>
@@ -352,7 +363,16 @@
               <item name="LSH" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="notes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DI_ETL" type="462c0819:PsiDirectoryNode" />
+              <item name="LSH" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bioinformatics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DI_ETL" type="b2602c69:ProjectViewProjectNode" />
@@ -474,7 +494,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.BIAlgorithmsTest.gibbsSampler">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -524,23 +544,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BIAlgorithmsTest.betterClumpFinding" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BioInformatics" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vaidhyamegha.bioinformatics.BIAlgorithmsSequential" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vaidhyamegha.bioinformatics" />
-      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.bioinformatics.BIAlgorithmsTest" />
-      <option name="METHOD_NAME" value="betterClumpFinding" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BIAlgorithmsTest.computeProbability" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BioInformatics" />
       <extension name="coverage">
@@ -552,6 +555,23 @@
       <option name="PACKAGE_NAME" value="com.vaidhyamegha.bioinformatics" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.bioinformatics.BIAlgorithmsTest" />
       <option name="METHOD_NAME" value="computeProbability" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BIAlgorithmsTest.gibbsSampler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BioInformatics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vaidhyamegha.bioinformatics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vaidhyamegha.bioinformatics" />
+      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.bioinformatics.BIAlgorithmsTest" />
+      <option name="METHOD_NAME" value="gibbsSampler" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -742,18 +762,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.BIAlgorithmsTest" />
-      <item itemvalue="JUnit.BIAlgorithmsTest.betterClumpFinding" />
       <item itemvalue="JUnit.BIAlgorithmsTest.patternCount" />
       <item itemvalue="JUnit.BIAlgorithmsTest.randomizedMotifSearch" />
       <item itemvalue="JUnit.BIAlgorithmsTest.computeProbability" />
+      <item itemvalue="JUnit.BIAlgorithmsTest.gibbsSampler" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BIAlgorithmsTest.gibbsSampler" />
         <item itemvalue="JUnit.BIAlgorithmsTest" />
         <item itemvalue="JUnit.BIAlgorithmsTest.randomizedMotifSearch" />
         <item itemvalue="JUnit.BIAlgorithmsTest.computeProbability" />
         <item itemvalue="JUnit.BIAlgorithmsTest.patternCount" />
-        <item itemvalue="JUnit.BIAlgorithmsTest.betterClumpFinding" />
       </list>
     </recent_temporary>
   </component>
@@ -1080,7 +1100,7 @@
       <workItem from="1556041575217" duration="1441000" />
       <workItem from="1556173202394" duration="1067000" />
       <workItem from="1556208605617" duration="2790000" />
-      <workItem from="1556260953626" duration="7812000" />
+      <workItem from="1556260953626" duration="16510000" />
     </task>
     <servers />
   </component>
@@ -1117,7 +1137,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1734705000" />
+    <option name="totallyTimeSpent" value="1743403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -1461,16 +1481,6 @@
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#5413#5414#0" expanded="true" />
-            <element signature="e#5466#5467#0" expanded="true" />
-            <element signature="e#21839#21840#0" expanded="true" />
-            <element signature="e#21884#21885#0" expanded="true" />
-            <element signature="e#29838#29839#0" expanded="true" />
-            <element signature="e#29861#29862#0" expanded="true" />
-            <element signature="e#30259#30260#0" expanded="true" />
-            <element signature="e#30306#30307#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1481,24 +1491,7 @@
           <caret line="109" selection-start-line="109" selection-end-line="109" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#5413#5414#0" expanded="true" />
-            <element signature="e#5466#5467#0" expanded="true" />
-            <element signature="e#21839#21840#0" expanded="true" />
-            <element signature="e#21884#21885#0" expanded="true" />
-            <element signature="e#29838#29839#0" expanded="true" />
-            <element signature="e#29861#29862#0" expanded="true" />
-            <element signature="e#30259#30260#0" expanded="true" />
-            <element signature="e#30306#30307#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1508,46 +1501,6 @@
           <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/DNAAlphabetUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="63" column="28" selection-start-line="63" selection-end-line="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="631" column="18" selection-start-line="631" selection-start-column="18" selection-end-line="631" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#5413#5414#0" expanded="true" />
-            <element signature="e#5466#5467#0" expanded="true" />
-            <element signature="e#21839#21840#0" expanded="true" />
-            <element signature="e#21884#21885#0" expanded="true" />
-            <element signature="e#29838#29839#0" expanded="true" />
-            <element signature="e#29861#29862#0" expanded="true" />
-            <element signature="e#30259#30260#0" expanded="true" />
-            <element signature="e#30306#30307#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1579,9 +1532,12 @@
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-16 14-21-26.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/.attach_pid6848">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4704">
+        <state relative-caret-position="7140">
           <caret line="476" column="36" selection-start-line="476" selection-start-column="36" selection-end-line="476" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1591,8 +1547,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/.attach_pid6848">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/DNAAlphabetUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="1045" column="50" lean-forward="true" selection-start-line="1045" selection-start-column="50" selection-end-line="1045" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

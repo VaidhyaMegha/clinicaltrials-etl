@@ -848,6 +848,19 @@ public class BIAlgorithmsTest {
         assertEquals(0.01693439692910992, alg.computeProbability1());
         assertEquals(0.0001298567056758973, alg.computeProbability2());
     }
+
+    @Test
+    public void gibbsSampler(){
+        List<String> dna = new ArrayList<>();
+        dna.add("CGCCCCTCTCGGGGGTGTTCAGTAAACGGCCA");
+        dna.add("GGGCGAGGTATGTGTAAGTGCCAAGGTGCCAG");
+        dna.add("TAGTACCGAGACCGAAAGAAGTATACAGGCGT");
+        dna.add("TAGATCAAGTTTCAGGTGCACGTCGGTGAACC");
+        dna.add("AATCCACCAGCTCCACGTGCAATGTTGGCCTA");
+
+        assertEquals("[TCTCGGGG, CCAAGGTG, TACAGGCG, TTCAGGTG, TCCACGTG]", alg.GibbsSampler(dna, 8,5, 100));
+
+    }
 }
 
 

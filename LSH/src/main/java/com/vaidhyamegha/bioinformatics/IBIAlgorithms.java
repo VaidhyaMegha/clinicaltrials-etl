@@ -87,7 +87,5 @@ public interface IBIAlgorithms extends IBIStatistics, IBIAlphabet {
 
     double computeProbability2();
 
-    double Random(double... p);
-
-    List<String> GibbsSampler(List<String> dna, int k, int t);
+    List<String> GibbsSampler(List<String> dna, int k, int t, int N);
 }

@@ -8,4 +8,6 @@ public interface IBIStatistics {
     double[] entropyOfColumns(List<String> strings);
 
     double entropy(double[] distribution);
+
+    int biasedRandomGenerator(List<Double> p);
 }

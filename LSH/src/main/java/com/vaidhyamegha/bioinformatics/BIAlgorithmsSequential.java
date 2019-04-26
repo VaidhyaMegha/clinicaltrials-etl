@@ -236,7 +236,6 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
         return new ArrayList<>(patterns);
     }
 
-    // Fill in your minimumSkew() function along with any subroutines you need.
     @Override
     public List<Integer> skew(String genome) {
         List<Integer> list = new ArrayList<>();
@@ -244,6 +243,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
         int runningSkew = 0;
 
         list.add(0);
+
         for (int i = 0; i < len; i++) {
             char c = genome.charAt(i);
 
@@ -275,8 +275,6 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
         return list;
     }
 
-
-    // Fill in your HammingDistance() function here.
     @Override
     public int HammingDistance(String p, String q) {
         int len1 = p.length();
@@ -292,8 +290,6 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
         return distance;
     }
 
-
-    //fill in your ApproximatePatternMatching() function here with any subroutines you need.
     @Override
     public List<Integer> ApproximatePatternMatching(String text, String pattern, int match) {
         List<Integer> list = new ArrayList<>();
@@ -307,7 +303,6 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
         return list;
     }
 
-    //fill in your ApproximatePatternCount() function here with any subroutines you need.
     @Override
     public int ApproximatePatternCount(String text, String pattern, int match) {
         int count = 0;
@@ -354,7 +349,6 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
         return neighbors;
     }
 
-    // place your FrequentWordsWithMismatches() function here along with any needed subroutines
     @Override
     public List<String> FrequentWordsWithMismatches(String text, int k, int d) {
         int len = text.length();
@@ -778,7 +772,6 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
 
             for (int i = 1; i < t; i++) motifs.set(i, ProfileMostProbablekmer(dna.get(i), k, profileMap(motifs.subList(0, i))));
 
-
             int s = Score(motifs);
 
             if (s < score) {
@@ -804,7 +797,6 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
             motifs.set(0, dna.get(0).substring(j, j + k));
 
             for (int i = 1; i < t; i++) motifs.set(i, ProfileMostProbablekmer(dna.get(i), k, profileWithPseudoCount(motifs.subList(0, i))));
-
 
             int s = Score(motifs);
 
@@ -963,12 +955,12 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
 
     @Override
     public List<String> RandomizedMotifSearch(List<String> dna, int k, int t){
-        List<String> bestMotifs = getFirstSetOfMotifs(dna, k);
+        List<String> bestMotifs = getFirstSetOfRandomMotifs(dna, k);
 
         return RandomizedMotifSearch(dna, bestMotifs, k, t);
     }
 
-    private List<String> getFirstSetOfMotifs(List<String> dna, int k) {
+    private List<String> getFirstSetOfRandomMotifs(List<String> dna, int k) {
         List<String> bestMotifs = new ArrayList<>();
 
         for (String s : dna) {
@@ -1020,31 +1012,46 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     @Override
-    public double Random(double... p) {
-        double sum = Arrays.stream(p).sum();
-        double[] distribution = Arrays.stream(p).map(p1 -> p1/sum).toArray();
+    public int biasedRandomGenerator(List<Double> p) {
+        double sum = p.stream().mapToDouble(Double::doubleValue).sum();
+        double r = Math.random();
+        Object[] distribution = p.stream().map(p1 -> p1 / sum).toArray();
 
-        return distribution[(int) (Math.random() * distribution.length)];
+        for (int i = 0; i < distribution.length; i++) {
+            distribution[i] = (Double) distribution[i] + (i == 0 ? 0 : (Double)distribution[i - 1]);
+
+            if ((Double) distribution[i] > r) return i;
+        }
+
+        return 0;
     }
 
     @Override
-    public List<String> GibbsSampler(List<String> dna, int k, int t) {
-        List<String> bestMotifs = getFirstSetOfMotifs(dna, k);
+    public List<String> GibbsSampler(List<String> dna, int k, int t, int N) {
+        List<String> bestMotifs = getFirstSetOfRandomMotifs(dna, k);
+        Map<Character, List<Double>> profile = profileWithPseudoCount(bestMotifs);
+        List<Double> prob = new ArrayList<>();
+
+        for(String s: bestMotifs) prob.add(ProbabilityOfPatternInAProfile(profile, s));
 
         int score = Score(bestMotifs);
 
-        while(true){
+        for (int j = 1; j < N; j++) {
+            List<String> tempMotifs = new ArrayList<>(bestMotifs);
 
-            Map<Character, List<Double>> profile = profileWithPseudoCount(bestMotifs);
-            List<String> newMotifs = dna.stream().map(s -> ProfileMostProbablekmer(s, k, profile)).collect(Collectors.toList());
+            tempMotifs.remove(biasedRandomGenerator(prob));
+
+            Map<Character, List<Double>> profile1 = profileWithPseudoCount(tempMotifs);
+
+            List<String> newMotifs = dna.stream().map(s -> ProfileMostProbablekmer(s, k, profile1)).collect(Collectors.toList());
             int newScore = Score(newMotifs);
 
             if(newScore < score) {
                 score = newScore;
                 bestMotifs = newMotifs;
-            } else {
-                return bestMotifs;
             }
         }
+
+        return bestMotifs;
     }
 }
