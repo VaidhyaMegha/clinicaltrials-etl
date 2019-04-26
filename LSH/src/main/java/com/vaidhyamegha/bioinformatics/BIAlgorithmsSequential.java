@@ -1,17 +1,21 @@
 package com.vaidhyamegha.bioinformatics;
 
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class Utilities {
+public class BIAlgorithmsSequential implements IBIAlgorithms {
+    private final IBIAlphabet alphabet;
 
-    // fill in your PatternCount() function here.
+    public BIAlgorithmsSequential(IBIAlphabet alphabet){
+        this.alphabet  = alphabet;
+    }
 
     /**
      *
-     * Code Challenge: Implement PatternCount (reproduced below).
+     * Code Challenge: Implement patternCount (reproduced below).
      *      Input: Strings Text and Pattern.
-     *      Output: Count(Text, Pattern).
+     *      Output: count(Text, Pattern).
      *
      * Sample Input:
      *
@@ -22,14 +26,15 @@ public class Utilities {
      *
      * 2
      *
-     * Count(Text, Pattern), our plan is to “slide a window” down Text, checking whether each k-mer substring of Text
+     * count(Text, Pattern), our plan is to “slide a window” down Text, checking whether each k-mer substring of Text
      * matches Pattern. We will therefore refer to the k-mer starting at position i of Text as Text(i, k).
      * Throughout this book, we will often use 0-based indexing, meaning that we count starting at 0 instead of 1.
      * In this case, Text begins at position 0 and ends at position |Text| − 1 (|Text| denotes the number of symbols
      * in Text). For example, if Text = GACCATACTG, then Text(4, 3) = ATA. Note that the last k-mer of Text begins at
      * position |Text| − k, e.g., the last 3-mer of GACCATACTG starts at position 10 − 3 = 7.
      */
-    public static int PatternCount(String text, String pattern) {
+    @Override
+    public int patternCount(String text, String pattern) {
         int count = 0;
         int tlen = text.length();
         int plen = pattern.length();
@@ -43,24 +48,23 @@ public class Utilities {
         return count;
     }
 
-    // Place your FrequentWords() function here along with any subroutines that you need.
-
     /**
      * Frequent Words Problem: Find the most frequent k-mers in a string.
      * <p>
      * Input: A string Text and an integer k.
      * Output: All most frequent k-mers in Text.
      * <p>
-     * Refer notes/FrequentWords.png
+     * Refer notes/frequentWords.png
      */
-    public static ArrayList<String> FrequentWords(String text, int k) {
+    @Override
+    public ArrayList<String> frequentWords(String text, int k) {
         Set<String> freqPatterns = new HashSet<>();
         int[] count = new int[text.length() - k];
         ArrayList<String> list = new ArrayList<>();
 
         for (int i = 0; i < text.length() - k; i++) {
             String pattern = text.substring(i, i + k);
-            count[i] = PatternCount(text, pattern);
+            count[i] = patternCount(text, pattern);
         }
 
         int max = -1;
@@ -78,7 +82,8 @@ public class Utilities {
         return list;
     }
 
-    public static long PatternToNumber(String pattern) {
+    @Override
+    public long patternToNumber(String pattern) {
         int k = pattern.length();
         int[] patternNumbers = new int[k];
 
@@ -91,7 +96,8 @@ public class Utilities {
         return index - ((long) Math.pow(4, k) - 1) / 3;
     }
 
-    public static String NumberToPattern(int index, int k) {
+    @Override
+    public String numberToPattern(int index, int k) {
         char[] pattern = new char[k];
 
         for (int i = 0; i < k; i++) {
@@ -102,20 +108,22 @@ public class Utilities {
         return new String(pattern);
     }
 
-    public static int[] FrequencyArray(String text, int k) {
+    @Override
+    public int[] frequencyArray(String text, int k) {
         int[] freq = new int[(int) (Math.pow(4, k))];
         int len = text.length();
 
         for (int i = 0; i <= (len - k); i++) {
             String pattern = text.substring(i, i + k);
-            freq[(int) PatternToNumber(pattern)]++;
+            freq[(int) patternToNumber(pattern)]++;
         }
 
         return freq;
     }
 
-    public static ArrayList<String> FasterFrequentWords(String text, int k) {
-        int[] freq = FrequencyArray(text, k);
+    @Override
+    public ArrayList<String> fasterFrequentWords(String text, int k) {
+        int[] freq = frequencyArray(text, k);
         ArrayList<String> list = new ArrayList<>();
 
         OptionalInt maxInt = Arrays.stream(freq).max();
@@ -123,18 +131,19 @@ public class Utilities {
         if (maxInt.isPresent()) {
             int max = Arrays.stream(freq).max().getAsInt();
 
-            for (int i = 0; i < freq.length; i++) if (freq[i] == max) list.add(NumberToPattern(i, k));
+            for (int i = 0; i < freq.length; i++) if (freq[i] == max) list.add(numberToPattern(i, k));
         }
 
         return list;
     }
 
-    public static ArrayList<String> FasterFrequentWordsBySorting(String text, int k) {
+    @Override
+    public ArrayList<String> fasterFrequentWordsBySorting(String text, int k) {
         int len = text.length();
         int[] patternIndexes;
         ArrayList<String> freqPatterns = new ArrayList<>();
 
-        patternIndexes = IntStream.rangeClosed(0, len - k).map(i -> (int) PatternToNumber(text.substring(i, i + k))).toArray();
+        patternIndexes = IntStream.rangeClosed(0, len - k).map(i -> (int) patternToNumber(text.substring(i, i + k))).toArray();
 
         Arrays.sort(patternIndexes);
 
@@ -155,52 +164,27 @@ public class Utilities {
 
         for (int patternIndex : distinctPatternIndexes) {
             if (patternCount.get(patternIndex) == max)
-                freqPatterns.add(NumberToPattern(patternIndex, k));
+                freqPatterns.add(numberToPattern(patternIndex, k));
         }
 
         return freqPatterns;
     }
 
-    //Fill in your ReverseComplement() function here, along with any necessary subroutines.
-    public static String ReverseComplement(String pattern) {
-        int len = pattern.length();
-        StringBuilder str = new StringBuilder();
-
-        for (int i = 0; i < len; i++) {
-            char c = pattern.charAt(i);
-            char cc = '-';
-
-            switch (c) {
-                case 'A':
-                    cc = 'T';
-                    break;
-                case 'C':
-                    cc = 'G';
-                    break;
-                case 'G':
-                    cc = 'C';
-                    break;
-                case 'T':
-                    cc = 'A';
-                    break;
-            }
-
-            str.append(cc);
-        }
-
-        return str.reverse().toString();
+    @Override
+    public String reverseComplement(String pattern) {
+        return alphabet.reverseComplement(pattern);
     }
 
-    // Fill in your PatternMatching() function here along with any subroutines you need.
-    public static ArrayList<Integer> PatternMatching(String pattern, String genome) {
+    @Override
+    public ArrayList<Integer> patternMatching(String pattern, String genome) {
         ArrayList<Integer> positions = new ArrayList<>();
         int len = genome.length();
         int k = pattern.length();
-        long patternIndex = PatternToNumber(pattern);
+        long patternIndex = patternToNumber(pattern);
 
         for (int i = 0; i <= (len - k); i++) {
             String kmer = genome.substring(i, i + k);
-            long kmerIndex = PatternToNumber(kmer);
+            long kmerIndex = patternToNumber(kmer);
 
             if (patternIndex == kmerIndex) positions.add(i);
         }
@@ -208,18 +192,19 @@ public class Utilities {
         return positions;
     }
 
-    //Place your ClumpFinding() function here along with any subroutines you need.
-    public static List<String> ClumpFinding(String text, int k, int L, int t) {
+    //Place your clumpFinding() function here along with any subroutines you need.
+    @Override
+    public List<String> clumpFinding(String text, int k, int L, int t) {
         int len = text.length();
         Set<String> patterns = new HashSet<>();
 
         for (int i = 0; i <= (len - L); i++) {
             String window = text.substring(i, i + L);
 
-            int[] freqArray = FrequencyArray(window, k);
+            int[] freqArray = frequencyArray(window, k);
 
             for (int j = 0; j < freqArray.length; j++) {
-                if (freqArray[j] >= t) patterns.add(NumberToPattern(j, k));
+                if (freqArray[j] >= t) patterns.add(numberToPattern(j, k));
             }
 
         }
@@ -227,31 +212,33 @@ public class Utilities {
         return new ArrayList<>(patterns);
     }
 
-    public static List<String> BetterClumpFinding(String text, int k, int L, int t) {
+    @Override
+    public List<String> betterClumpFinding(String text, int k, int L, int t) {
         int len = text.length();
         Set<String> patterns = new HashSet<>();
 
-        int[] freqArray = FrequencyArray(text.substring(0, L), k);
+        int[] freqArray = frequencyArray(text.substring(0, L), k);
 
         for (int i = 0; i <= (len - L); i++) {
             String firstPattern = text.substring(i, i + k);
-            int index1 = (int) PatternToNumber(firstPattern);
+            int index1 = (int) patternToNumber(firstPattern);
             freqArray[index1]--;
 
             String lastPattern = text.substring(i + L - k, i + L);
-            int index2 = (int) PatternToNumber(lastPattern);
+            int index2 = (int) patternToNumber(lastPattern);
             freqArray[index2]++;
 
             for (int j = 0; j < freqArray.length; j++) {
-                if (freqArray[j] >= t) patterns.add(NumberToPattern(j, k));
+                if (freqArray[j] >= t) patterns.add(numberToPattern(j, k));
             }
         }
 
         return new ArrayList<>(patterns);
     }
 
-    // Fill in your MinimumSkew() function along with any subroutines you need.
-    public static List<Integer> skew(String genome) {
+    // Fill in your minimumSkew() function along with any subroutines you need.
+    @Override
+    public List<Integer> skew(String genome) {
         List<Integer> list = new ArrayList<>();
         int len = genome.length();
         int runningSkew = 0;
@@ -275,7 +262,8 @@ public class Utilities {
         return list;
     }
 
-    public static List<Integer> MinimumSkew(List<Integer> skewarray) {
+    @Override
+    public List<Integer> minimumSkew(List<Integer> skewarray) {
         int len = skewarray.size();
         OptionalInt min = IntStream.range(0, len).map(skewarray::get).min();
         List<Integer> list = new ArrayList<>();
@@ -289,7 +277,8 @@ public class Utilities {
 
 
     // Fill in your HammingDistance() function here.
-    public static int HammingDistance(String p, String q) {
+    @Override
+    public int HammingDistance(String p, String q) {
         int len1 = p.length();
         int len2 = q.length();
         int distance = 0;
@@ -305,7 +294,8 @@ public class Utilities {
 
 
     //fill in your ApproximatePatternMatching() function here with any subroutines you need.
-    public static List<Integer> ApproximatePatternMatching(String text, String pattern, int match) {
+    @Override
+    public List<Integer> ApproximatePatternMatching(String text, String pattern, int match) {
         List<Integer> list = new ArrayList<>();
         int tlen = text.length();
         int plen = pattern.length();
@@ -318,7 +308,8 @@ public class Utilities {
     }
 
     //fill in your ApproximatePatternCount() function here with any subroutines you need.
-    public static int ApproximatePatternCount(String text, String pattern, int match) {
+    @Override
+    public int ApproximatePatternCount(String text, String pattern, int match) {
         int count = 0;
         int tlen = text.length();
         int plen = pattern.length();
@@ -336,7 +327,8 @@ public class Utilities {
      * Input: A string Pattern and an integer d.
      * Output: The collection of strings Neighbors(Pattern, d). (You may return the strings in any order, but each line should contain only one string.)
      */
-    public static Set<String> Neighbors(String pattern, int d) {
+    @Override
+    public Set<String> Neighbors(String pattern, int d) {
         Set<String> neighbors = new HashSet<>();
         if (d == 0) {
             neighbors.add(pattern);
@@ -363,7 +355,8 @@ public class Utilities {
     }
 
     // place your FrequentWordsWithMismatches() function here along with any needed subroutines
-    public static List<String> FrequentWordsWithMismatches(String text, int k, int d) {
+    @Override
+    public List<String> FrequentWordsWithMismatches(String text, int k, int d) {
         int len = text.length();
 
         ArrayList<String> freqPatterns = new ArrayList<>();
@@ -396,17 +389,19 @@ public class Utilities {
         return freqPatterns;
     }
 
-    public static List<String> FrequentWordsWithMismatchesAndReverseComplement(String text, int k, int d) {
+    @Override
+    public List<String> FrequentWordsWithMismatchesAndReverseComplement(String text, int k, int d) {
 
         Map<String, Integer> freqPatterns = frequentWordsWithMismatchesAndRCMap(text, k, d);
 
         return new ArrayList<>(freqPatterns.keySet());
     }
 
-    public static Map<String, Integer> ClumpFindingWithSkewMismatchesAndRC(String text, int k, int L, int d) {
+    @Override
+    public Map<String, Integer> ClumpFindingWithSkewMismatchesAndRC(String text, int k, int L, int d) {
         Map<String, Integer> patterns = new HashMap<>();
 
-        List<Integer> minimumSkew = MinimumSkew(skew(text));
+        List<Integer> minimumSkew = minimumSkew(skew(text));
 
         System.out.println(minimumSkew.toString());
 
@@ -436,7 +431,8 @@ public class Utilities {
      * @param alphabetProbability
      * @return
      */
-    public static double ProbabilityOfOccurrrence(int numOfStrings, int len, int k, double alphabetProbability) {
+    @Override
+    public double probabilityOfOccurrrence(int numOfStrings, int len, int k, double alphabetProbability) {
         return ((len - k + 1) * (Math.pow(alphabetProbability, k)) * numOfStrings) ;
     }
 
@@ -471,7 +467,8 @@ public class Utilities {
      * must be at most d mismatches apart from some k-mer appearing in the first string in Dna. Therefore, we can
      * generate all such k-mers and then check which of them are (k, d)-motifs.
      */
-    public static Set<String> MotifEnumeration(List<String> dnas, int k, int d) {
+    @Override
+    public Set<String> MotifEnumeration(List<String> dnas, int k, int d) {
         String first = dnas.get(0);
         int len = first.length();
         int n = dnas.size();
@@ -500,7 +497,8 @@ public class Utilities {
         return motifs;
     }
 
-    public static int Score(List<String> motifs){
+    @Override
+    public int Score(List<String> motifs){
         int len = motifs.get(0).length();
         int num = motifs.size();
         int score = 0;
@@ -515,7 +513,8 @@ public class Utilities {
 
         return score;
     }
-    public static Map<Character, Integer>[] Count(List<String> motifs){
+    @Override
+    public Map<Character, Integer>[] count(List<String> motifs){
         int len = motifs.get(0).length();
         Map[] counts = new Map[len];
 
@@ -525,7 +524,8 @@ public class Utilities {
         return counts;
     }
 
-    public static Map<Character, Double>[] Profile(List<String> motifs){
+    @Override
+    public Map<Character, Double>[] profile(List<String> motifs){
         int len = motifs.get(0).length();
         Map[] profiles = new Map[len];
 
@@ -544,7 +544,8 @@ public class Utilities {
         return profiles;
     }
 
-    public static Map<Character, List<Double>> ProfileMap(List<String> motifs){
+    @Override
+    public Map<Character, List<Double>> profileMap(List<String> motifs){
         int len = motifs.get(0).length();
         Map<Character, List<Double>> profiles = new TreeMap<>();
         Double[] d = new Double[len];
@@ -552,18 +553,14 @@ public class Utilities {
         for(int i = 0 ; i < len; i++){
             Map<Character, Integer> chars = countAlphabets(motifs, i);
 
-            int sum = chars.values().stream().mapToInt(Integer::intValue).sum();
-
-            for(char c : chars.keySet()) {
-                profiles.computeIfAbsent(c, k -> new ArrayList<>(Arrays.asList(d)));
-                profiles.get(c).add(i, (double) chars.get(c) / sum);
-            }
+            buildProfile(profiles, d, i, chars);
         }
 
         return profiles;
     }
 
-    public static Map<Character, List<Double>> ProfileWithPseudoCount(List<String> motifs){
+    @Override
+    public Map<Character, List<Double>> profileWithPseudoCount(List<String> motifs){
         int len = motifs.get(0).length();
         Map<Character, List<Double>> profiles = new TreeMap<>();
         Double[] d = new Double[len];
@@ -571,18 +568,24 @@ public class Utilities {
         for(int i = 0 ; i < len; i++){
             Map<Character, Integer> chars = countAlphabetsWithPseudoCount(motifs, i);
 
-            int sum = chars.values().stream().mapToInt(Integer::intValue).sum();
-
-            for(char c : chars.keySet()) {
-                profiles.computeIfAbsent(c, k -> new ArrayList<>(Arrays.asList(d)));
-                profiles.get(c).add(i, (double) chars.get(c) / sum);
-            }
+            buildProfile(profiles, d, i, chars);
         }
 
         return profiles;
     }
 
-    public static String Consensus(List<String> motifs){
+    @Override
+    public void buildProfile(Map<Character, List<Double>> profiles, Double[] d, int i, Map<Character, Integer> chars) {
+        int sum = chars.values().stream().mapToInt(Integer::intValue).sum();
+
+        for (char c : chars.keySet()) {
+            profiles.computeIfAbsent(c, k -> new ArrayList<>(Arrays.asList(d)));
+            profiles.get(c).add(i, (double) chars.get(c) / sum);
+        }
+    }
+
+    @Override
+    public String Consensus(List<String> motifs){
         int len = motifs.get(0).length();
         StringBuilder consensus = new StringBuilder();
 
@@ -601,8 +604,9 @@ public class Utilities {
         return consensus.toString();
     }
 
-    public static double Entropy(List<String> motifs){
-        double[] entropies = EntropyOfColumns(motifs);
+    @Override
+    public double entropy(List<String> motifs){
+        double[] entropies = entropyOfColumns(motifs);
 
         return Arrays.stream(entropies).sum();
     }
@@ -624,7 +628,8 @@ public class Utilities {
      * time of the algorithm is O(nt · k · t). We need to come up with a faster algorithm!
      *
      */
-    public static String FindLeastScoreMotif(List<String> dnas, int k){
+    @Override
+    public String FindLeastScoreMotif(List<String> dnas, int k){
         return  MedianString(dnas, k);
     }
 
@@ -666,7 +671,8 @@ public class Utilities {
      * @param k
      * @return
      */
-    public static String MedianString(List<String> dnas, int k){
+    @Override
+    public String MedianString(List<String> dnas, int k){
         //brute force
         // find all k-mers - 4^k possibilities
         // loop through each kmer
@@ -686,7 +692,7 @@ public class Utilities {
         Map<String, Integer> pDistances = new HashMap<>();
 
         for(int i=0 ; i < ((int)Math.pow(4,k) - 1); i++){
-            String p = NumberToPattern(i, k);
+            String p = numberToPattern(i, k);
             int sumOfDistances = 0;
 
             sumOfDistances = DistanceBetweenPatternAndStrings(dnas, p);
@@ -709,7 +715,8 @@ public class Utilities {
         return median;
     }
 
-    public static int DistanceBetweenPatternAndStrings(List<String> dnas, String p) {
+    @Override
+    public int DistanceBetweenPatternAndStrings(List<String> dnas, String p) {
         int sumOfDistances = 0;
         int k = p.length();
 
@@ -733,11 +740,11 @@ public class Utilities {
      * GreedyMotifSearch, starts by forming a motif matrix from arbitrarily selected k-mers in each string from Dna
      * (whicammh in our specific implementation is the first k-mer in each string). It then attempts to improve this
      * initial motif matrix by trying each of the k-mers in Dna1 as the first motif. For a given choice of k-mer
-     * Motif1 in Dna1, it builds a profile matrix Profile for this lone k-mer, and sets Motif2 equal to the
-     * Profile-most probable k-mer in Dna2. It then iterates by updating Profile as the profile matrix formed
-     * from Motif1 and Motif2, and sets Motif3 equal to the Profile-most probable k-mer in Dna3. In general,
+     * Motif1 in Dna1, it builds a profile matrix profile for this lone k-mer, and sets Motif2 equal to the
+     * profile-most probable k-mer in Dna2. It then iterates by updating profile as the profile matrix formed
+     * from Motif1 and Motif2, and sets Motif3 equal to the profile-most probable k-mer in Dna3. In general,
      * after finding i − 1 k-mers Motifs in the first i − 1 strings of Dna, GreedyMotifSearch constructs
-     * Profile(Motifs) and selects the Profile-most probable k-mer from Dnai based on this profile matrix.
+     * profile(Motifs) and selects the profile-most probable k-mer from Dnai based on this profile matrix.
      *
      * After obtaining a k-mer from each string to obtain a collection Motifs, GreedyMotifSearch tests to see whether
      * Motifs outscores the current best scoring collection of motifs and then moves Motif1 one symbol over in Dna1,
@@ -748,15 +755,16 @@ public class Utilities {
      *         for each k-mer Motif in the first string from Dna
      *             Motif1 ← Motif
      *             for i = 2 to t
-     *                 form Profile from motifs Motif1, …, Motifi - 1
-     *                 Motifi ← Profile-most probable k-mer in the i-th string in Dna
+     *                 form profile from motifs Motif1, …, Motifi - 1
+     *                 Motifi ← profile-most probable k-mer in the i-th string in Dna
      *             Motifs ← (Motif1, …, Motift)
      *             if Score(Motifs) < Score(BestMotifs)
      *                 BestMotifs ← Motifs
      *         return BestMotifs
      *
      */
-    public static List<String> GreedyMotifSearch(List<String> dna, int k, int t){
+    @Override
+    public List<String> GreedyMotifSearch(List<String> dna, int k, int t){
         int len = dna.get(0).length();
         List<String> f = new ArrayList<>();
         int score = Integer.MAX_VALUE;
@@ -768,7 +776,7 @@ public class Utilities {
         L1: for (int j = 0; j <= (len - k); j++) {
             motifs.set(0, dna.get(0).substring(j, j + k));
 
-            for (int i = 1; i < t; i++) motifs.set(i, ProfileMostProbablekmer(dna.get(i), k, ProfileMap(motifs.subList(0, i))));
+            for (int i = 1; i < t; i++) motifs.set(i, ProfileMostProbablekmer(dna.get(i), k, profileMap(motifs.subList(0, i))));
 
 
             int s = Score(motifs);
@@ -782,7 +790,8 @@ public class Utilities {
         return f;
     }
 
-    public static List<String> GreedyMotifSearchWithPseudoCount(List<String> dna, int k, int t){
+    @Override
+    public List<String> GreedyMotifSearchWithPseudoCount(List<String> dna, int k, int t){
         int len = dna.get(0).length();
         List<String> f = new ArrayList<>();
         int score = Integer.MAX_VALUE;
@@ -794,7 +803,7 @@ public class Utilities {
         L1: for (int j = 0; j <= (len - k); j++) {
             motifs.set(0, dna.get(0).substring(j, j + k));
 
-            for (int i = 1; i < t; i++) motifs.set(i, ProfileMostProbablekmer(dna.get(i), k, ProfileWithPseudoCount(motifs.subList(0, i))));
+            for (int i = 1; i < t; i++) motifs.set(i, ProfileMostProbablekmer(dna.get(i), k, profileWithPseudoCount(motifs.subList(0, i))));
 
 
             int s = Score(motifs);
@@ -809,7 +818,8 @@ public class Utilities {
     }
 
 
-    public static String ProfileMostProbablekmer(String text, int k, Map<Character, List <Double>> profile) {
+    @Override
+    public String ProfileMostProbablekmer(String text, int k, Map<Character, List<Double>> profile) {
         double max = 0.0;
         String mostProbable = text.substring(0, k);
         int len = text.length();
@@ -827,7 +837,8 @@ public class Utilities {
         return mostProbable;
     }
 
-    public static double ProbabilityOfPatternInAProfile(Map<Character, List <Double>> profile, String pattern) {
+    @Override
+    public double ProbabilityOfPatternInAProfile(Map<Character, List<Double>> profile, String pattern) {
         double prob = 1;
 
         char[] charArray = pattern.toCharArray();
@@ -844,7 +855,8 @@ public class Utilities {
         return prob;
     }
 
-    public static double ProbabilityOfPatternInAProfile(double[][] profile, String pattern) {
+    @Override
+    public double ProbabilityOfPatternInAProfile(double[][] profile, String pattern) {
         int len  = pattern.length();
         double prob = 1;
 
@@ -853,50 +865,19 @@ public class Utilities {
         return prob;
     }
 
-    private static int charToIndex(char c) {
-        int cnum = -1;
-
-        switch (c) {
-            case 'A':
-                cnum = 0;
-                break;
-            case 'C':
-                cnum = 1;
-                break;
-            case 'G':
-                cnum = 2;
-                break;
-            case 'T':
-                cnum = 3;
-                break;
-        }
-
-        return cnum;
+    @Override
+    public int charToIndex(char c) {
+        return alphabet.charToIndex(c);
     }
 
-    private static char indexToChar(int num) {
-        char c = '-';
-
-        switch (num) {
-            case 0:
-                c = 'A';
-                break;
-            case 1:
-                c = 'C';
-                break;
-            case 2:
-                c = 'G';
-                break;
-            case 3:
-                c = 'T';
-                break;
-        }
-
-        return c;
+    @Override
+    public char indexToChar(int num) {
+       return alphabet.indexToChar(num);
     }
 
-    private static double[] EntropyOfColumns(List<String> motifs){
-        Map<Character, Double>[] profile = Profile(motifs);
+    @Override
+    public double[] entropyOfColumns(List<String> motifs){
+        Map<Character, Double>[] profile = profile(motifs);
         int len = profile.length;
         double[] entropies = new double[len];
 
@@ -914,36 +895,18 @@ public class Utilities {
         return entropies;
     }
 
-    private static Map<Character, Integer> countAlphabets(List<String> motifs, int i) {
-        Map<Character, Integer> chars = new TreeMap<>();
-
-        for (String s : motifs) {
-            char c = s.charAt(i);
-            Integer k = chars.get(c);
-            chars.put(c, (k == null) ? 1 : k + 1);
-        }
-
-        return chars;
+    @Override
+    public Map<Character, Integer> countAlphabets(List<String> motifs, int i) {
+        return alphabet.countAlphabets(motifs, i);
     }
 
-
-    private static Map<Character, Integer> countAlphabetsWithPseudoCount(List<String> motifs, int i) {
-        Map<Character, Integer> chars = new TreeMap<>();
-        chars.put('A', 1);
-        chars.put('C', 1);
-        chars.put('T', 1);
-        chars.put('G', 1);
-
-        for (String s : motifs) {
-            char c = s.charAt(i);
-            Integer k = chars.get(c);
-            chars.put(c, (k == null) ? 1 : k + 1);
-        }
-
-        return chars;
+    @Override
+    public Map<Character, Integer> countAlphabetsWithPseudoCount(List<String> motifs, int i) {
+        return alphabet.countAlphabetsWithPseudoCount(motifs, i);
     }
 
-    private static Map<String, Integer> frequentWordsWithMismatchesAndRCMap(String text, int k, int d) {
+    @Override
+    public Map<String, Integer> frequentWordsWithMismatchesAndRCMap(String text, int k, int d) {
         int len = text.length();
 
         Map<String, Integer> freqPatterns = new HashMap<>();
@@ -960,7 +923,7 @@ public class Utilities {
                     patternCount.put(s, 1);
                 }
 
-                String rc = ReverseComplement(s);
+                String rc = reverseComplement(s);
                 if (patternCount.containsKey(rc)) {
                     patternCount.put(rc, patternCount.get(rc) + 1);
                 } else {
@@ -973,7 +936,7 @@ public class Utilities {
         int maximum = -1;
 
         for (String s : patternCount.keySet()) {
-            Integer i = patternCount.get(ReverseComplement(s));
+            Integer i = patternCount.get(reverseComplement(s));
             int count = patternCount.get(s) + ((i == null) ? 0 : i);
 
             if (count > maximum)
@@ -982,7 +945,7 @@ public class Utilities {
 
         for (String s : patternCount.keySet()) {
             Integer i = patternCount.get(s);
-            Integer j = patternCount.get(ReverseComplement(s));
+            Integer j = patternCount.get(reverseComplement(s));
             int j1 = ((j == null) ? 0 : j);
 
             if ((i + j1) == maximum)
@@ -993,7 +956,95 @@ public class Utilities {
     }
 
 
-    public static double entropy(double[] distribution){
+    @Override
+    public double entropy(double[] distribution){
         return (-1) * Arrays.stream(distribution).map(d -> d == 0 ? 0 : d * Math.log(d) / Math.log(2)).sum();
+    }
+
+    @Override
+    public List<String> RandomizedMotifSearch(List<String> dna, int k, int t){
+        List<String> bestMotifs = getFirstSetOfMotifs(dna, k);
+
+        return RandomizedMotifSearch(dna, bestMotifs, k, t);
+    }
+
+    private List<String> getFirstSetOfMotifs(List<String> dna, int k) {
+        List<String> bestMotifs = new ArrayList<>();
+
+        for (String s : dna) {
+            int j = (int) Math.round(Math.random() * (s.length() - k));
+
+            bestMotifs.add(s.substring(j, j + k));
+        }
+        return bestMotifs;
+    }
+
+    @Override
+    public List<String> RandomizedMotifSearch(List<String> dna, List<String> bestMotifs, int k, int t){
+        int score = Score(bestMotifs);
+
+        while(true){
+            Map<Character, List<Double>> profile = profileWithPseudoCount(bestMotifs);
+            List<String> newMotifs = dna.stream().map(s -> ProfileMostProbablekmer(s, k, profile)).collect(Collectors.toList());
+            int newScore = Score(newMotifs);
+
+            if(newScore < score) {
+                score = newScore;
+                bestMotifs = newMotifs;
+            } else {
+                return bestMotifs;
+            }
+        }
+    }
+
+    /**
+     * Exercise Break: Compute the probability that ten randomly selected 15-mers from the ten 600-nucleotide
+     * long strings in the Subtle Motif Problem capture at least one implanted 15-mer. (Allowable error: 0.000001)
+     *
+     * @return
+     */
+    @Override
+    public double computeProbability1() {
+       return (1 - ((Math.pow((double)(((600 - 15) + 1) - 1), (double)10)) / (Math.pow((double)((600 - 15) + 1), (double)10))));
+    }
+
+    /**
+     * Exercise Break: Compute the probability that ten randomly selected 15-mers from the ten 600-nucleotide
+     * long strings in the Subtle Motif Problem capture at least two implanted 15-mer. (Allowable error: 0.000001)
+     *
+     * @return
+     */
+    @Override
+    public double computeProbability2() {
+        return (computeProbability1() - 10*((Math.pow((double)(((600 - 15) + 1) - 1), (double)9)) / (Math.pow((double)((600 - 15) + 1), (double)10))));
+    }
+
+    @Override
+    public double Random(double... p) {
+        double sum = Arrays.stream(p).sum();
+        double[] distribution = Arrays.stream(p).map(p1 -> p1/sum).toArray();
+
+        return distribution[(int) (Math.random() * distribution.length)];
+    }
+
+    @Override
+    public List<String> GibbsSampler(List<String> dna, int k, int t) {
+        List<String> bestMotifs = getFirstSetOfMotifs(dna, k);
+
+        int score = Score(bestMotifs);
+
+        while(true){
+
+            Map<Character, List<Double>> profile = profileWithPseudoCount(bestMotifs);
+            List<String> newMotifs = dna.stream().map(s -> ProfileMostProbablekmer(s, k, profile)).collect(Collectors.toList());
+            int newScore = Score(newMotifs);
+
+            if(newScore < score) {
+                score = newScore;
+                bestMotifs = newMotifs;
+            } else {
+                return bestMotifs;
+            }
+        }
     }
 }
