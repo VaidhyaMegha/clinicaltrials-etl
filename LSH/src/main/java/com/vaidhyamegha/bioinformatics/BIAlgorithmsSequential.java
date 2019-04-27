@@ -291,7 +291,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     @Override
-    public List<Integer> ApproximatePatternMatching(String text, String pattern, int match) {
+    public List<Integer> approximatePatternMatching(String text, String pattern, int match) {
         List<Integer> list = new ArrayList<>();
         int tlen = text.length();
         int plen = pattern.length();
@@ -304,7 +304,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     @Override
-    public int ApproximatePatternCount(String text, String pattern, int match) {
+    public int approximatePatternCount(String text, String pattern, int match) {
         int count = 0;
         int tlen = text.length();
         int plen = pattern.length();
@@ -317,13 +317,13 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     /**
-     * Code Challenge: Implement Neighbors to find the d-neighborhood of a string.
+     * Code Challenge: Implement neighbors to find the d-neighborhood of a string.
      * <p>
      * Input: A string Pattern and an integer d.
-     * Output: The collection of strings Neighbors(Pattern, d). (You may return the strings in any order, but each line should contain only one string.)
+     * Output: The collection of strings neighbors(Pattern, d). (You may return the strings in any order, but each line should contain only one string.)
      */
     @Override
-    public Set<String> Neighbors(String pattern, int d) {
+    public Set<String> neighbors(String pattern, int d) {
         Set<String> neighbors = new HashSet<>();
         if (d == 0) {
             neighbors.add(pattern);
@@ -332,7 +332,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
             String[] alphabet = new String[]{"A", "C", "G", "T"};
 
             if (len > 1) {
-                Set<String> suffixNeighbors = Neighbors(pattern.substring(1, len), d);
+                Set<String> suffixNeighbors = neighbors(pattern.substring(1, len), d);
                 for (String s : suffixNeighbors) {
                     for (String al : alphabet) {
                         String neighbor = al + s;
@@ -350,7 +350,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     @Override
-    public List<String> FrequentWordsWithMismatches(String text, int k, int d) {
+    public List<String> frequentWordsWithMismatches(String text, int k, int d) {
         int len = text.length();
 
         ArrayList<String> freqPatterns = new ArrayList<>();
@@ -358,7 +358,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
 
         for (int i = 0; i <= (len - k); i++) {
             String kmer = text.substring(i, i + k);
-            Set<String> neighbors = Neighbors(kmer, d);
+            Set<String> neighbors = neighbors(kmer, d);
 
             for (String s : neighbors) {
                 if (patternCount.containsKey(s)) {
@@ -384,7 +384,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     @Override
-    public List<String> FrequentWordsWithMismatchesAndReverseComplement(String text, int k, int d) {
+    public List<String> frequentWordsWithMismatchesAndReverseComplement(String text, int k, int d) {
 
         Map<String, Integer> freqPatterns = frequentWordsWithMismatchesAndRCMap(text, k, d);
 
@@ -392,7 +392,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     @Override
-    public Map<String, Integer> ClumpFindingWithSkewMismatchesAndRC(String text, int k, int L, int d) {
+    public Map<String, Integer> clumpFindingWithSkewMismatchesAndRC(String text, int k, int L, int d) {
         Map<String, Integer> patterns = new HashMap<>();
 
         List<Integer> minimumSkew = minimumSkew(skew(text));
@@ -462,7 +462,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
      * generate all such k-mers and then check which of them are (k, d)-motifs.
      */
     @Override
-    public Set<String> MotifEnumeration(List<String> dnas, int k, int d) {
+    public Set<String> motifEnumeration(List<String> dnas, int k, int d) {
         String first = dnas.get(0);
         int len = first.length();
         int n = dnas.size();
@@ -470,7 +470,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
 
         for (int i = 0; i <= (len - k) ; i++) {
             String pattern = first.substring(i, i + k);
-            Set<String> neighbors = Neighbors(pattern, d);
+            Set<String> neighbors = neighbors(pattern, d);
 
             Loop1 : for (String s : neighbors) {
                Loop2 : for (int j = 1; j < n; j++) {
@@ -492,7 +492,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     @Override
-    public int Score(List<String> motifs){
+    public int score(List<String> motifs){
         int len = motifs.get(0).length();
         int num = motifs.size();
         int score = 0;
@@ -579,7 +579,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     @Override
-    public String Consensus(List<String> motifs){
+    public String consensus(List<String> motifs){
         int len = motifs.get(0).length();
         StringBuilder consensus = new StringBuilder();
 
@@ -611,14 +611,14 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
      * the score of the resulting motif.
      *
      * Input: A collection of strings Dna and an integer k.
-     * Output: A collection Motifs of k-mers, one from each string in Dna, minimizing Score(Motifs) among all possible
+     * Output: A collection Motifs of k-mers, one from each string in Dna, minimizing score(Motifs) among all possible
      * choices of k-mers.
      *
      * A brute force algorithm for the Motif Finding Problem (referred to as BruteForceMotifSearch) considers every
      * possible choice of k-mers Motifs from Dna (one k-mer from each string of n nucleotides) and returns the
      * collection Motifs having minimum score. Because there are n - k + 1 choices of k-mers in each of t sequences,
      * there are (n - k + 1)t different ways to form Motifs. For each choice of Motifs, the algorithm calculates
-     * Score(Motifs), which requires k · t steps. Thus, assuming that k is smaller than n, the overall running
+     * score(Motifs), which requires k · t steps. Thus, assuming that k is smaller than n, the overall running
      * time of the algorithm is O(nt · k · t). We need to come up with a faster algorithm!
      *
      */
@@ -731,20 +731,20 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
 
     /**
      *
-     * GreedyMotifSearch, starts by forming a motif matrix from arbitrarily selected k-mers in each string from Dna
+     * greedyMotifSearch, starts by forming a motif matrix from arbitrarily selected k-mers in each string from Dna
      * (whicammh in our specific implementation is the first k-mer in each string). It then attempts to improve this
      * initial motif matrix by trying each of the k-mers in Dna1 as the first motif. For a given choice of k-mer
      * Motif1 in Dna1, it builds a profile matrix profile for this lone k-mer, and sets Motif2 equal to the
      * profile-most probable k-mer in Dna2. It then iterates by updating profile as the profile matrix formed
      * from Motif1 and Motif2, and sets Motif3 equal to the profile-most probable k-mer in Dna3. In general,
-     * after finding i − 1 k-mers Motifs in the first i − 1 strings of Dna, GreedyMotifSearch constructs
+     * after finding i − 1 k-mers Motifs in the first i − 1 strings of Dna, greedyMotifSearch constructs
      * profile(Motifs) and selects the profile-most probable k-mer from Dnai based on this profile matrix.
      *
-     * After obtaining a k-mer from each string to obtain a collection Motifs, GreedyMotifSearch tests to see whether
+     * After obtaining a k-mer from each string to obtain a collection Motifs, greedyMotifSearch tests to see whether
      * Motifs outscores the current best scoring collection of motifs and then moves Motif1 one symbol over in Dna1,
      * beginning the entire process of generating Motifs again.
      *
-     *     GreedyMotifSearch(Dna, k, t)
+     *     greedyMotifSearch(Dna, k, t)
      *         BestMotifs ← motif matrix formed by first k-mers in each string from Dna
      *         for each k-mer Motif in the first string from Dna
      *             Motif1 ← Motif
@@ -752,13 +752,13 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
      *                 form profile from motifs Motif1, …, Motifi - 1
      *                 Motifi ← profile-most probable k-mer in the i-th string in Dna
      *             Motifs ← (Motif1, …, Motift)
-     *             if Score(Motifs) < Score(BestMotifs)
+     *             if score(Motifs) < score(BestMotifs)
      *                 BestMotifs ← Motifs
      *         return BestMotifs
      *
      */
     @Override
-    public List<String> GreedyMotifSearch(List<String> dna, int k, int t){
+    public List<String> greedyMotifSearch(List<String> dna, int k, int t){
         int len = dna.get(0).length();
         List<String> f = new ArrayList<>();
         int score = Integer.MAX_VALUE;
@@ -772,7 +772,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
 
             for (int i = 1; i < t; i++) motifs.set(i, ProfileMostProbablekmer(dna.get(i), k, profileMap(motifs.subList(0, i))));
 
-            int s = Score(motifs);
+            int s = score(motifs);
 
             if (s < score) {
                 f = new ArrayList<>(motifs);
@@ -784,7 +784,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     @Override
-    public List<String> GreedyMotifSearchWithPseudoCount(List<String> dna, int k, int t){
+    public List<String> greedyMotifSearchWithPseudoCount(List<String> dna, int k, int t){
         int len = dna.get(0).length();
         List<String> f = new ArrayList<>();
         int score = Integer.MAX_VALUE;
@@ -798,7 +798,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
 
             for (int i = 1; i < t; i++) motifs.set(i, ProfileMostProbablekmer(dna.get(i), k, profileWithPseudoCount(motifs.subList(0, i))));
 
-            int s = Score(motifs);
+            int s = score(motifs);
 
             if (s < score) {
                 f = new ArrayList<>(motifs);
@@ -906,7 +906,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
 
         for (int i = 0; i <= (len - k); i++) {
             String kmer = text.substring(i, i + k);
-            Set<String> neighbors = Neighbors(kmer, d);
+            Set<String> neighbors = neighbors(kmer, d);
 
             for (String s : neighbors) {
                 if (patternCount.containsKey(s)) {
@@ -954,10 +954,10 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     @Override
-    public List<String> RandomizedMotifSearch(List<String> dna, int k, int t){
+    public List<String> randomizedMotifSearch(List<String> dna, int k, int t){
         List<String> bestMotifs = getFirstSetOfRandomMotifs(dna, k);
 
-        return RandomizedMotifSearch(dna, bestMotifs, k, t);
+        return randomizedMotifSearch(dna, bestMotifs, k, t);
     }
 
     private List<String> getFirstSetOfRandomMotifs(List<String> dna, int k) {
@@ -972,13 +972,13 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     @Override
-    public List<String> RandomizedMotifSearch(List<String> dna, List<String> bestMotifs, int k, int t){
-        int score = Score(bestMotifs);
+    public List<String> randomizedMotifSearch(List<String> dna, List<String> bestMotifs, int k, int t){
+        int score = score(bestMotifs);
 
         while(true){
             Map<Character, List<Double>> profile = profileWithPseudoCount(bestMotifs);
             List<String> newMotifs = dna.stream().map(s -> ProfileMostProbablekmer(s, k, profile)).collect(Collectors.toList());
-            int newScore = Score(newMotifs);
+            int newScore = score(newMotifs);
 
             if(newScore < score) {
                 score = newScore;
@@ -1047,7 +1047,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
 
             newMotifs.add(i, s.substring(m, m + k));
 
-            if(Score(newMotifs) < Score(bestMotifs)) bestMotifs = newMotifs;
+            if(score(newMotifs) < score(bestMotifs)) bestMotifs = newMotifs;
         }
 
         return bestMotifs;

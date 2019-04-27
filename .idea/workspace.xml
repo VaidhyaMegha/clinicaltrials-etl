@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/LSH/src/main/notes/logo1-250.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LSH/src/main/notes/logo2-250-MEME.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,22 +49,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlphabet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="962" selection-start-line="962" selection-end-line="971" selection-end-column="5" />
+            <state relative-caret-position="1605">
+              <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,20 +63,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+            <state relative-caret-position="105">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -93,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/DNAAlphabetUtility.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="91" selection-start-line="91" selection-end-line="108" selection-end-column="5" />
+            <state relative-caret-position="1215">
+              <caret line="83" column="2" selection-start-line="83" selection-start-column="2" selection-end-line="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,14 +85,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo1-250.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo2-250-MEME.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo3.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo4-100.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo5-500.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo6-1000.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="876" lean-forward="true" selection-start-line="876" selection-end-line="876" />
+            <state relative-caret-position="600">
+              <caret line="911" selection-start-line="911" selection-end-line="911" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#377#378#0" expanded="true" />
-                <element signature="e#414#415#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,7 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Optiona</find>
       <find>Hamming</find>
       <find>GGTTACT</find>
       <find>CGTGTAA</find>
@@ -145,7 +154,6 @@
       <find>ATAACGG</find>
       <find>Clump</find>
       <find>int t</find>
-      <find>Score</find>
       <find>subtle</find>
       <find>Collectors</find>
       <find>throw</find>
@@ -162,6 +170,8 @@
       <find>'A'</find>
       <find>'C'</find>
       <find>CountAl</find>
+      <find>Score</find>
+      <find>countAl</find>
     </findStrings>
     <replaceStrings>
       <replace>,\n&quot;</replace>
@@ -256,10 +266,10 @@
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlphabetUtility.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlphabet.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/DNAAlphabetUtility.java" />
-        <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java" />
         <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java" />
+        <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" />
       </list>
     </option>
   </component>
@@ -317,21 +327,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DI_ETL" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="FileProcessor" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -418,6 +413,21 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="DI_ETL" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="FileProcessor" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -494,7 +504,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BIAlgorithmsTest.gibbsSampler">
+  <component name="RunManager" selected="JUnit.BIAlgorithmsTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -769,8 +779,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BIAlgorithmsTest.gibbsSampler" />
         <item itemvalue="JUnit.BIAlgorithmsTest" />
+        <item itemvalue="JUnit.BIAlgorithmsTest.gibbsSampler" />
         <item itemvalue="JUnit.BIAlgorithmsTest.randomizedMotifSearch" />
         <item itemvalue="JUnit.BIAlgorithmsTest.computeProbability" />
         <item itemvalue="JUnit.BIAlgorithmsTest.patternCount" />
@@ -1100,14 +1110,13 @@
       <workItem from="1556041575217" duration="1441000" />
       <workItem from="1556173202394" duration="1067000" />
       <workItem from="1556208605617" duration="2790000" />
-      <workItem from="1556260953626" duration="19736000" />
+      <workItem from="1556260953626" duration="20448000" />
+      <workItem from="1556340139872" duration="2279000" />
+      <workItem from="1556345264800" duration="600000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BIAlgorithmsTest_gibbsSampler - 2019.04.26 at 19h 11m 55s.xml">
-      <configuration name="BIAlgorithmsTest.gibbsSampler" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BIAlgorithmsTest_gibbsSampler - 2019.04.26 at 19h 11m 57s.xml">
       <configuration name="BIAlgorithmsTest.gibbsSampler" configurationId="JUnit" />
     </history-entry>
@@ -1135,15 +1144,18 @@
     <history-entry file="BIAlgorithmsTest_gibbsSampler - 2019.04.26 at 19h 14m 25s.xml">
       <configuration name="BIAlgorithmsTest.gibbsSampler" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BIAlgorithmsTest - 2019.04.27 at 11h 34m 01s.xml">
+      <configuration name="BIAlgorithmsTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1746629000" />
+    <option name="totallyTimeSpent" value="1750220000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4832" visible="true" weight="0.2412839" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4832" visible="true" weight="0.24679486" />
       <window_info id="Structure" order="1" sideWeight="0.5168" side_tool="true" weight="0.2412839" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -1156,10 +1168,10 @@
       <window_info id="Learn" order="10" />
       <window_info id="DBHelper" order="11" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.325054" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32464713" />
       <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.498618" visible="true" weight="0.325054" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.498618" visible="true" weight="0.32464713" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.498618" weight="0.39740822" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Console" order="7" />
@@ -1188,7 +1200,7 @@
       <window_info anchor="right" id="Database" order="11" weight="0.32946378" />
       <window_info anchor="right" id="Maven Projects" order="12" side_tool="true" weight="0.32946378" />
       <window_info anchor="right" id="Coverage" order="13" sideWeight="0.500813" side_tool="true" weight="0.32927504" />
-      <window_info anchor="right" x="0" y="0" width="350" height="604" id="Documentation" order="14" side_tool="true" weight="0.28057554" />
+      <window_info anchor="right" x="0" y="0" width="350" height="604" id="Documentation" order="14" side_tool="true" visible="true" weight="0.2804487" />
       <window_info anchor="right" id="Maven" order="15" sideWeight="0.499187" weight="0.328911" />
     </layout>
     <layout-to-restore>
@@ -1385,10 +1397,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-11 06-14-21.png" />
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-11 06-14-58.png" />
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-11 06-15-14.png" />
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-11 06-15-42.png" />
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-11 06-27-52.png" />
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-11 06-28-47.png" />
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-11 06-42-21.png" />
@@ -1476,77 +1484,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1560">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/cloud.png" />
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/ceres.png" />
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-09 21-27-42.png" />
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-15 22-03-28.png" />
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-16 11-14-58.png" />
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-16 11-15-14.png" />
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-16 11-22-45.png" />
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-16 13-00-41.png" />
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-16 14-21-26.png" />
+    <entry file="file://$PROJECT_DIR$/LSH/.attach_pid6848" />
     <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlphabet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="165">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/cloud.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/ceres.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-09 21-27-42.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-15 22-03-28.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-16 11-14-58.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-16 11-15-14.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-16 11-22-45.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-16 13-00-41.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/Screenshot from 2019-04-16 14-21-26.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/.attach_pid6848">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+        <state relative-caret-position="105">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1555,30 +1533,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/DNAAlphabetUtility.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="91" selection-start-line="91" selection-end-line="108" selection-end-column="5" />
+        <state relative-caret-position="1215">
+          <caret line="83" column="2" selection-start-line="83" selection-start-column="2" selection-end-line="88" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo1-250.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo2-250-MEME.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo4-100.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo5-500.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo6-1000.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="876" lean-forward="true" selection-start-line="876" selection-end-line="876" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="962" selection-start-line="962" selection-end-line="971" selection-end-column="5" />
+        <state relative-caret-position="600">
+          <caret line="911" selection-start-line="911" selection-end-line="911" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

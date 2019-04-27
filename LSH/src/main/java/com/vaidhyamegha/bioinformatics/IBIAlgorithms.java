@@ -7,23 +7,31 @@ import java.util.Set;
 public interface IBIAlgorithms extends IBIStatistics, IBIAlphabet {
     int patternCount(String text, String pattern);
 
+    long patternToNumber(String pattern);
+
+    String numberToPattern(int index, int k);
+
+    List<Integer> patternMatching(String pattern, String genome);
+
+    int[] frequencyArray(String text, int k);
+
     List<String> frequentWords(String text, int k);
 
     List<String> fasterFrequentWords(String text, int k);
 
     List<String> fasterFrequentWordsBySorting(String text, int k);
 
-    long patternToNumber(String pattern);
+    List<String> frequentWordsWithMismatches(String text, int k, int d);
 
-    String numberToPattern(int index, int k);
+    List<String> frequentWordsWithMismatchesAndReverseComplement(String text, int k, int d);
 
-    int[] frequencyArray(String text, int k);
-
-    List<Integer> patternMatching(String pattern, String genome);
+    Map<String, Integer> frequentWordsWithMismatchesAndRCMap(String text, int k, int d);
 
     List<String> clumpFinding(String text, int k, int L, int t);
 
     List<String> betterClumpFinding(String text, int k, int L, int t);
+
+    Map<String, Integer> clumpFindingWithSkewMismatchesAndRC(String text, int k, int L, int d);
 
     List<Integer> skew(String genome);
 
@@ -31,23 +39,17 @@ public interface IBIAlgorithms extends IBIStatistics, IBIAlphabet {
 
     int HammingDistance(String p, String q);
 
-    List<Integer> ApproximatePatternMatching(String text, String pattern, int match);
+    List<Integer> approximatePatternMatching(String text, String pattern, int match);
 
-    int ApproximatePatternCount(String text, String pattern, int match);
+    int approximatePatternCount(String text, String pattern, int match);
 
-    Set<String> Neighbors(String pattern, int d);
-
-    List<String> FrequentWordsWithMismatches(String text, int k, int d);
-
-    List<String> FrequentWordsWithMismatchesAndReverseComplement(String text, int k, int d);
-
-    Map<String, Integer> ClumpFindingWithSkewMismatchesAndRC(String text, int k, int L, int d);
+    Set<String> neighbors(String pattern, int d);
 
     double probabilityOfOccurrrence(int numOfStrings, int len, int k, double alphabetProbability);
 
-    Set<String> MotifEnumeration(List<String> dnas, int k, int d);
+    Set<String> motifEnumeration(List<String> dnas, int k, int d);
 
-    int Score(List<String> motifs);
+    int score(List<String> motifs);
 
     Map<Character, Integer>[] count(List<String> motifs);
 
@@ -59,7 +61,7 @@ public interface IBIAlgorithms extends IBIStatistics, IBIAlphabet {
 
     void buildProfile(Map<Character, List<Double>> profiles, Double[] d, int i, Map<Character, Integer> chars);
 
-    String Consensus(List<String> motifs);
+    String consensus(List<String> motifs);
 
     String FindLeastScoreMotif(List<String> dnas, int k);
 
@@ -67,9 +69,9 @@ public interface IBIAlgorithms extends IBIStatistics, IBIAlphabet {
 
     int DistanceBetweenPatternAndStrings(List<String> dnas, String p);
 
-    List<String> GreedyMotifSearch(List<String> dna, int k, int t);
+    List<String> greedyMotifSearch(List<String> dna, int k, int t);
 
-    List<String> GreedyMotifSearchWithPseudoCount(List<String> dna, int k, int t);
+    List<String> greedyMotifSearchWithPseudoCount(List<String> dna, int k, int t);
 
     String ProfileMostProbablekmer(String text, int k, Map<Character, List<Double>> profile);
 
@@ -77,11 +79,9 @@ public interface IBIAlgorithms extends IBIStatistics, IBIAlphabet {
 
     double ProbabilityOfPatternInAProfile(double[][] profile, String pattern);
 
-    Map<String, Integer> frequentWordsWithMismatchesAndRCMap(String text, int k, int d);
+    List<String> randomizedMotifSearch(List<String> dna, int k, int t);
 
-    List<String> RandomizedMotifSearch(List<String> dna, int k, int t);
-
-    List<String> RandomizedMotifSearch(List<String> dna, List<String> bestMotifs, int k, int t);
+    List<String> randomizedMotifSearch(List<String> dna, List<String> bestMotifs, int k, int t);
 
     double computeProbability1();
 
