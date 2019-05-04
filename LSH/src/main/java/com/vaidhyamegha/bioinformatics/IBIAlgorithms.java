@@ -73,11 +73,11 @@ public interface IBIAlgorithms extends IBIStatistics, IBIAlphabet {
 
     List<String> greedyMotifSearchWithPseudoCount(List<String> dna, int k, int t);
 
-    String ProfileMostProbablekmer(String text, int k, Map<Character, List<Double>> profile);
+    String profileMostProbablekmer(String text, int k, Map<Character, List<Double>> profile);
 
-    double ProbabilityOfPatternInAProfile(Map<Character, List<Double>> profile, String pattern);
+    double probabilityOfPatternInAProfile(Map<Character, List<Double>> profile, String pattern);
 
-    double ProbabilityOfPatternInAProfile(double[][] profile, String pattern);
+    double probabilityOfPatternInAProfile(double[][] profile, String pattern);
 
     List<String> randomizedMotifSearch(List<String> dna, int k, int t);
 
@@ -88,4 +88,6 @@ public interface IBIAlgorithms extends IBIStatistics, IBIAlphabet {
     double computeProbability2();
 
     List<String> GibbsSampler(List<String> dna, int k, int t, int N);
+
+    List<String> composition(String text, int k);
 }

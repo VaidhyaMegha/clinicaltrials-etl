@@ -3,9 +3,7 @@ package com.vaidhyamegha.bioinformatics;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 import static junit.framework.TestCase.assertEquals;
@@ -610,7 +608,7 @@ public class BIAlgorithmsTest {
         } ;
 
 
-        assertEquals(0.0, alg.ProbabilityOfPatternInAProfile(d, "TCGTGGATTTCC"));
+        assertEquals(0.0, alg.probabilityOfPatternInAProfile(d, "TCGTGGATTTCC"));
     }
     @Test
     public void profileMostProbablekmer() {
@@ -623,7 +621,7 @@ public class BIAlgorithmsTest {
         d.put('T', Arrays.asList(0.1, 0.2, 0.1, 0.1, 0.2));
 
 
-        assertEquals("CCGAG", alg.ProfileMostProbablekmer("ACCTGTTTATTGCCTAAGTTCCGAACAAACCCAATATAGCCCGAGGGCCT", 5, d));
+        assertEquals("CCGAG", alg.profileMostProbablekmer("ACCTGTTTATTGCCTAAGTTCCGAACAAACCCAATATAGCCCGAGGGCCT", 5, d));
 
         try {
             BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/projects/ctd/DI_ETL/LSH/src/main/datasets/dataset_159_3.txt"));
@@ -645,7 +643,7 @@ public class BIAlgorithmsTest {
                 }
             }
 
-            assertEquals("GCTCTCGGTTTAT", alg.ProfileMostProbablekmer(text, k, map));
+            assertEquals("GCTCTCGGTTTAT", alg.profileMostProbablekmer(text, k, map));
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -877,7 +875,6 @@ public class BIAlgorithmsTest {
 
         assertEquals("[TCTCGGGG, CCAAGGTG, TACAGGCG, TTCAGGTG, TCCACGTG]", motifs.get(k).toString());
 
-
         try {
             BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/projects/ctd/DI_ETL/LSH/src/main/datasets/dataset_163_4.txt"));
             String str = br.readLine();
@@ -915,7 +912,36 @@ public class BIAlgorithmsTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    @Test
+    public void composition(){
+        assertEquals("[AATCC, ATCCA, CAATC, CCAAC, TCCAA]", alg.composition("CAATCCAAC", 5).toString());
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/projects/ctd/DI_ETL/LSH/src/main/datasets/dataset_197_3.txt"));
+            String str = br.readLine();
+
+
+            int k = Integer.parseInt(str.split(" ")[0]);
+
+            str = br.readLine();
+
+
+//            assertEquals("[TAGACAGTCAAGGCA, TAATATGTTTAGGCG, TAACCAGTTTAACGG, AGACCAGTTTAGGCC, TAACCAGTTTAGTAT, TACAAAGTTTAGGCG, TAACCAGTACTGGCG, TAACCATCGTAGGCG, TAACCTTATTAGGCG, TTGTCAGTTTAGGCG, AAACCAGTTTAGGTC, TAACCAGTTAGCGCG, TAACGCATTTAGGCG, TAACATATTTAGGCG, TAAGTCGTTTAGGCG, CGTCCAGTTTAGGCG, TAACCAGTTTCAACG, TAACCTAATTAGGCG, TAACCACCCTAGGCG, TAACCAGACGAGGCG]",
+//                    alg.composition(str, k).toString());
+
+            BufferedWriter bw = new BufferedWriter(new FileWriter("/tmp/composition.txt"));
+
+            for (String s: alg.composition(str, k))
+                bw.write(s + "\n");
+
+            bw.flush();
+
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 

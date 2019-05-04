@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/LSH/src/main/notes/logo1-250.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LSH/src/main/notes/logo2-250-MEME.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileProcessor/FileProcessor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FileProcessor/FileProcessor.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java" afterDir="false" />
@@ -42,6 +41,10 @@
     <expand />
     <select />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="ExportToHTMLSettings">
     <option name="OPEN_IN_BROWSER" value="true" />
     <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/datasets" />
@@ -51,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="17" />
+            <state relative-caret-position="15780">
+              <caret line="1064" column="35" selection-start-line="1064" selection-start-column="24" selection-end-line="1064" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            <state relative-caret-position="780">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,7 +107,7 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo5-500.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
@@ -114,11 +117,11 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="911" selection-start-line="911" selection-end-line="911" />
+            <state relative-caret-position="13470">
+              <caret line="907" selection-start-line="907" selection-end-line="907" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -267,9 +270,9 @@
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlphabet.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/DNAAlphabetUtility.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java" />
-        <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" />
+        <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java" />
       </list>
     </option>
   </component>
@@ -317,9 +320,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="y" value="24" />
+    <option name="width" value="1598" />
+    <option name="height" value="796" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -327,6 +330,21 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="DI_ETL" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="FileProcessor" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -413,24 +431,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DI_ETL" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="FileProcessor" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/sandeep/projects/DI_ETL/scripts/athena/ctri/parse_html_gen_csv_record.sh" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/datasets/datainsights-in/data.gov.in/web-crawler/data.gov.in.html" />
@@ -445,6 +449,9 @@
     <property name="jdk.selected.PYTHON_MODULE" value="Python 2.7 (vm_prototypes)" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../leucinerichbio/gx-bugspeaks-prototype" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -504,7 +511,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BIAlgorithmsTest">
+  <component name="RunManager" selected="JUnit.BIAlgorithmsTest.composition">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -554,6 +561,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BIAlgorithmsTest.composition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BioInformatics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vaidhyamegha.bioinformatics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vaidhyamegha.bioinformatics" />
+      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.bioinformatics.BIAlgorithmsTest" />
+      <option name="METHOD_NAME" value="composition" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BIAlgorithmsTest.computeProbability" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BioInformatics" />
       <extension name="coverage">
@@ -582,23 +606,6 @@
       <option name="PACKAGE_NAME" value="com.vaidhyamegha.bioinformatics" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.bioinformatics.BIAlgorithmsTest" />
       <option name="METHOD_NAME" value="gibbsSampler" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BIAlgorithmsTest.patternCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BioInformatics" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vaidhyamegha.bioinformatics.BIAlgorithmsSequential" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vaidhyamegha.bioinformatics" />
-      <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.bioinformatics.BIAlgorithmsTest" />
-      <option name="METHOD_NAME" value="patternCount" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -772,18 +779,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.BIAlgorithmsTest" />
-      <item itemvalue="JUnit.BIAlgorithmsTest.patternCount" />
       <item itemvalue="JUnit.BIAlgorithmsTest.randomizedMotifSearch" />
       <item itemvalue="JUnit.BIAlgorithmsTest.computeProbability" />
       <item itemvalue="JUnit.BIAlgorithmsTest.gibbsSampler" />
+      <item itemvalue="JUnit.BIAlgorithmsTest.composition" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BIAlgorithmsTest.composition" />
         <item itemvalue="JUnit.BIAlgorithmsTest" />
         <item itemvalue="JUnit.BIAlgorithmsTest.gibbsSampler" />
         <item itemvalue="JUnit.BIAlgorithmsTest.randomizedMotifSearch" />
         <item itemvalue="JUnit.BIAlgorithmsTest.computeProbability" />
-        <item itemvalue="JUnit.BIAlgorithmsTest.patternCount" />
       </list>
     </recent_temporary>
   </component>
@@ -1112,26 +1119,17 @@
       <workItem from="1556208605617" duration="2790000" />
       <workItem from="1556260953626" duration="20448000" />
       <workItem from="1556340139872" duration="2279000" />
-      <workItem from="1556345264800" duration="600000" />
+      <workItem from="1556345264800" duration="1336000" />
+      <workItem from="1556386195980" duration="2622000" />
+      <workItem from="1556418967067" duration="2758000" />
+      <workItem from="1556538274745" duration="599000" />
+      <workItem from="1556595221165" duration="598000" />
+      <workItem from="1556622731461" duration="598000" />
+      <workItem from="1556721167444" duration="36000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BIAlgorithmsTest_gibbsSampler - 2019.04.26 at 19h 11m 57s.xml">
-      <configuration name="BIAlgorithmsTest.gibbsSampler" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BIAlgorithmsTest_gibbsSampler - 2019.04.26 at 19h 12m 00s.xml">
-      <configuration name="BIAlgorithmsTest.gibbsSampler" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BIAlgorithmsTest_gibbsSampler - 2019.04.26 at 19h 12m 02s.xml">
-      <configuration name="BIAlgorithmsTest.gibbsSampler" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BIAlgorithmsTest_gibbsSampler - 2019.04.26 at 19h 12m 05s.xml">
-      <configuration name="BIAlgorithmsTest.gibbsSampler" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BIAlgorithmsTest_gibbsSampler - 2019.04.26 at 19h 12m 07s.xml">
-      <configuration name="BIAlgorithmsTest.gibbsSampler" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BIAlgorithmsTest_gibbsSampler - 2019.04.26 at 19h 13m 59s.xml">
       <configuration name="BIAlgorithmsTest.gibbsSampler" configurationId="JUnit" />
     </history-entry>
@@ -1147,15 +1145,30 @@
     <history-entry file="BIAlgorithmsTest - 2019.04.27 at 11h 34m 01s.xml">
       <configuration name="BIAlgorithmsTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BIAlgorithmsTest_composition - 2019.04.27 at 23h 39m 00s.xml">
+      <configuration name="BIAlgorithmsTest.composition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BIAlgorithmsTest_composition - 2019.04.27 at 23h 44m 19s.xml">
+      <configuration name="BIAlgorithmsTest.composition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BIAlgorithmsTest - 2019.04.27 at 23h 48m 03s.xml">
+      <configuration name="BIAlgorithmsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BIAlgorithmsTest_composition - 2019.04.27 at 23h 53m 51s.xml">
+      <configuration name="BIAlgorithmsTest.composition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BIAlgorithmsTest_composition - 2019.04.27 at 23h 55m 46s.xml">
+      <configuration name="BIAlgorithmsTest.composition" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1750220000" />
+    <option name="totallyTimeSpent" value="1758167000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4832" visible="true" weight="0.24679486" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4832" visible="true" weight="0.26592797" />
       <window_info id="Structure" order="1" sideWeight="0.5168" side_tool="true" weight="0.2412839" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -1171,7 +1184,7 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.32464713" />
       <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.498618" visible="true" weight="0.32464713" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.498618" visible="true" weight="0.3243243" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.498618" weight="0.39740822" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Console" order="7" />
@@ -1200,7 +1213,7 @@
       <window_info anchor="right" id="Database" order="11" weight="0.32946378" />
       <window_info anchor="right" id="Maven Projects" order="12" side_tool="true" weight="0.32946378" />
       <window_info anchor="right" id="Coverage" order="13" sideWeight="0.500813" side_tool="true" weight="0.32927504" />
-      <window_info anchor="right" x="0" y="0" width="350" height="604" id="Documentation" order="14" side_tool="true" visible="true" weight="0.2804487" />
+      <window_info anchor="right" x="0" y="0" width="350" height="604" id="Documentation" order="14" side_tool="true" visible="true" weight="0.28033242" />
       <window_info anchor="right" id="Maven" order="15" sideWeight="0.499187" weight="0.328911" />
     </layout>
     <layout-to-restore>
@@ -1339,7 +1352,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java</url>
-          <line>704</line>
+          <line>702</line>
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
@@ -1513,8 +1526,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="17" />
+        <state relative-caret-position="15780">
+          <caret line="1064" column="35" selection-start-line="1064" selection-start-column="24" selection-end-line="1064" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1523,8 +1536,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="780">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1553,21 +1566,21 @@
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo4-100.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo5-500.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo6-1000.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="911" selection-start-line="911" selection-end-line="911" />
+        <state relative-caret-position="13470">
+          <caret line="907" selection-start-line="907" selection-end-line="907" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo5-500.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
   <component name="masterDetails">

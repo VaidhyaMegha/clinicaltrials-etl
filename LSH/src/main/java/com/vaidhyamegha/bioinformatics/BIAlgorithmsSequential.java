@@ -770,7 +770,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
         L1: for (int j = 0; j <= (len - k); j++) {
             motifs.set(0, dna.get(0).substring(j, j + k));
 
-            for (int i = 1; i < t; i++) motifs.set(i, ProfileMostProbablekmer(dna.get(i), k, profileMap(motifs.subList(0, i))));
+            for (int i = 1; i < t; i++) motifs.set(i, profileMostProbablekmer(dna.get(i), k, profileMap(motifs.subList(0, i))));
 
             int s = score(motifs);
 
@@ -796,7 +796,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
         L1: for (int j = 0; j <= (len - k); j++) {
             motifs.set(0, dna.get(0).substring(j, j + k));
 
-            for (int i = 1; i < t; i++) motifs.set(i, ProfileMostProbablekmer(dna.get(i), k, profileWithPseudoCount(motifs.subList(0, i))));
+            for (int i = 1; i < t; i++) motifs.set(i, profileMostProbablekmer(dna.get(i), k, profileWithPseudoCount(motifs.subList(0, i))));
 
             int s = score(motifs);
 
@@ -811,14 +811,14 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
 
 
     @Override
-    public String ProfileMostProbablekmer(String text, int k, Map<Character, List<Double>> profile) {
+    public String profileMostProbablekmer(String text, int k, Map<Character, List<Double>> profile) {
         double max = 0.0;
         String mostProbable = text.substring(0, k);
         int len = text.length();
 
         for(int i=0 ; i <= (len - k); i++) {
             String p = text.substring(i, i + k);
-            double prob = ProbabilityOfPatternInAProfile(profile, p);
+            double prob = probabilityOfPatternInAProfile(profile, p);
 
             if(prob > max) {
                 max = prob;
@@ -830,7 +830,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     @Override
-    public double ProbabilityOfPatternInAProfile(Map<Character, List<Double>> profile, String pattern) {
+    public double probabilityOfPatternInAProfile(Map<Character, List<Double>> profile, String pattern) {
         double prob = 1;
 
         char[] charArray = pattern.toCharArray();
@@ -848,7 +848,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
     }
 
     @Override
-    public double ProbabilityOfPatternInAProfile(double[][] profile, String pattern) {
+    public double probabilityOfPatternInAProfile(double[][] profile, String pattern) {
         int len  = pattern.length();
         double prob = 1;
 
@@ -977,7 +977,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
 
         while(true){
             Map<Character, List<Double>> profile = profileWithPseudoCount(bestMotifs);
-            List<String> newMotifs = dna.stream().map(s -> ProfileMostProbablekmer(s, k, profile)).collect(Collectors.toList());
+            List<String> newMotifs = dna.stream().map(s -> profileMostProbablekmer(s, k, profile)).collect(Collectors.toList());
             int newScore = score(newMotifs);
 
             if(newScore < score) {
@@ -1041,7 +1041,7 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
             String s = dna.get(i);
 
             for(int l = 0; l <= (s.length() - k) ; l++)
-                prob.add(ProbabilityOfPatternInAProfile(profile, s.substring(l,l + k)));
+                prob.add(probabilityOfPatternInAProfile(profile, s.substring(l,l + k)));
 
             int m = biasedRandomGenerator(prob);
 
@@ -1051,5 +1051,25 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
         }
 
         return bestMotifs;
+    }
+
+    /**
+     * Solve the String Composition Problem.
+     *      Input: An integer k and a string Text.
+     *      Output: Compositionk(Text) (the k-mers can be provided in any order).
+     *
+     * @param text
+     * @return
+     */
+    @Override
+    public List<String> composition(String text, int k) {
+        List<String> kmers = new ArrayList<>();
+        int len = text.length();
+
+        for (int i = 0; i <= (len - k); i++) kmers.add(text.substring(i, i + k));
+
+        Collections.sort(kmers);
+
+        return kmers;
     }
 }
