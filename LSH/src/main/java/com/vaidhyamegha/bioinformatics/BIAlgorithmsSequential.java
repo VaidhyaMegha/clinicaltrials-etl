@@ -1072,4 +1072,44 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
 
         return kmers;
     }
+
+    /**
+     * String Spelled by a Genome Path Problem. Reconstruct a string from its genome path.
+     *      Input: A sequence path of k-mers Pattern1, … ,Patternn such that the last k - 1 symbols of Patterni are equal to the first k-1 symbols
+     *                 of Patterni+1 for 1 ≤ i ≤ n-1.
+     *      Output: A string Text of length k+n-1 such that the i-th k-mer in Text is equal to Patterni (for 1 ≤ i ≤ n).
+     */
+    @Override
+    public String pathToGenome(List<String> kmers){
+        StringBuilder sb = new StringBuilder();
+
+        for(String s : kmers)
+            sb.append(s.charAt(s.length() - 1));
+
+        String s1 = kmers.get(0);
+
+        return s1.substring(0, s1.length() - 1)+ sb.toString();
+    }
+
+    /**
+     * Overlap Graph Problem: Construct the overlap graph of a collection of k-mers.
+     *      Input: A collection Patterns of k-mers.
+     *      Output: The overlap graph Overlap(Patterns).
+     */
+    @Override
+    public Map<String, List<String>> overlapGraph(List<String> kmers){
+        Map<String, List<String>> m = new HashMap<>();
+
+        for(String k1 : kmers) {
+            for(String k2 : kmers){
+                if(k1.substring(1).equals(k2.substring(0, k2.length() - 1))){
+                    m.computeIfAbsent(k1, k -> new ArrayList<>());
+
+                    m.get(k1).add(k2);
+                }
+            }
+        }
+
+        return m;
+    }
 }

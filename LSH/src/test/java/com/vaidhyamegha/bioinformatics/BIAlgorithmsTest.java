@@ -10,7 +10,7 @@ import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class BIAlgorithmsTest {
-    private static IBIAlgorithms alg ;
+    private static IBIAlgorithms alg;
 
     @BeforeClass
     public static void setup() {
@@ -566,8 +566,6 @@ public class BIAlgorithmsTest {
         motifs.add("GGTGTTGAACCACGGGGTTAGTTTCATCTATTGTAGGAATCGGCTTCAAATCCTACACAG");
 
 
-
-
         assertEquals(7, alg.DistanceBetweenPatternAndStrings(motifs, "ATAACGG"));
         assertEquals(9, alg.DistanceBetweenPatternAndStrings(motifs, "CGTGTAA"));
         assertEquals(0, alg.DistanceBetweenPatternAndStrings(motifs, "TAGTTTC"));
@@ -601,15 +599,16 @@ public class BIAlgorithmsTest {
     @Test
     public void probabilityOfProfile() {
         double[][] d = {
-            {.2, .2, 0, 0,  0, 0, .9, .1, .1, .1, .3,  0},
-            {.1, .6, 0, 0,  0, 0,  0, .4, .1, .2, .4, .6},
-            { 0,  0, 1, 1, .9,.9, .1,  0,  0,  0,  0,  0},
-            {.7, .2, 0, 0, .1,.1,  0, .5, .8, .7, .3, .4},
-        } ;
+                {.2, .2, 0, 0, 0, 0, .9, .1, .1, .1, .3, 0},
+                {.1, .6, 0, 0, 0, 0, 0, .4, .1, .2, .4, .6},
+                {0, 0, 1, 1, .9, .9, .1, 0, 0, 0, 0, 0},
+                {.7, .2, 0, 0, .1, .1, 0, .5, .8, .7, .3, .4},
+        };
 
 
         assertEquals(0.0, alg.probabilityOfPatternInAProfile(d, "TCGTGGATTTCC"));
     }
+
     @Test
     public void profileMostProbablekmer() {
 
@@ -632,12 +631,12 @@ public class BIAlgorithmsTest {
 
             Map<Character, List<Double>> map = new HashMap<>();
 
-            int j =0;
+            int j = 0;
 
             while ((str = br.readLine()) != null) {
                 char c = alg.numberToPattern(j++, 1).charAt(0);
 
-                for(String s : str.split(" ")){
+                for (String s : str.split(" ")) {
                     map.computeIfAbsent(c, k1 -> new ArrayList<>());
                     map.get(c).add(Double.parseDouble(s));
                 }
@@ -708,7 +707,7 @@ public class BIAlgorithmsTest {
             }
 
             assertEquals(42,
-                    alg.DistanceBetweenPatternAndStrings(ls, k ));
+                    alg.DistanceBetweenPatternAndStrings(ls, k));
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -751,7 +750,7 @@ public class BIAlgorithmsTest {
     @Test
     public void entropyOfDistribution() {
         double[] d1 = {0.5, 0, 0, 0.5};
-        double[] d2 = {0.25,0.25,0.25,0.25};
+        double[] d2 = {0.25, 0.25, 0.25, 0.25};
         double[] d3 = {0, 0, 0, 1};
         double[] d4 = {0.25, 0, 0.5, 0.25};
 
@@ -762,7 +761,7 @@ public class BIAlgorithmsTest {
     }
 
     @Test
-    public void randomizedMotifSearch(){
+    public void randomizedMotifSearch() {
         List<String> dna = new ArrayList<>();
         dna.add("CGCCCCTCTCGGGGGTGTTCAGTAAACGGCCA");
         dna.add("GGGCGAGGTATGTGTAAGTGCCAAGGTGCCAG");
@@ -779,7 +778,7 @@ public class BIAlgorithmsTest {
             motifs.add(motifs1);
 
             int score = alg.score(motifs1);
-            if(score < minScore) {
+            if (score < minScore) {
                 minScore = score;
                 k = i;
             }
@@ -828,7 +827,7 @@ public class BIAlgorithmsTest {
                 motifs.add(motifs1);
 
                 int score = alg.score(motifs1);
-                if(score < minScore) {
+                if (score < minScore) {
                     minScore = score;
                     p = i;
                 }
@@ -842,13 +841,13 @@ public class BIAlgorithmsTest {
     }
 
     @Test
-    public void computeProbability(){
+    public void computeProbability() {
         assertEquals(0.01693439692910992, alg.computeProbability1());
         assertEquals(0.0001298567056758973, alg.computeProbability2());
     }
 
     @Test
-    public void gibbsSampler(){
+    public void gibbsSampler() {
         List<String> dna = new ArrayList<>();
         dna.add("CGCCCCTCTCGGGGGTGTTCAGTAAACGGCCA");
         dna.add("GGGCGAGGTATGTGTAAGTGCCAAGGTGCCAG");
@@ -861,11 +860,11 @@ public class BIAlgorithmsTest {
         int k = 0;
 
         for (int i = 0; i < 100; i++) {
-            List<String> motifs1 = alg.GibbsSampler(dna, 8,5, 100);
+            List<String> motifs1 = alg.GibbsSampler(dna, 8, 5, 100);
             motifs.add(motifs1);
 
             int score = alg.score(motifs1);
-            if(score < minScore) {
+            if (score < minScore) {
                 minScore = score;
                 k = i;
             }
@@ -900,7 +899,7 @@ public class BIAlgorithmsTest {
                 motifs.add(motifs1);
 
                 int score = alg.score(motifs1);
-                if(score < minScore) {
+                if (score < minScore) {
                     minScore = score;
                     p = i;
                 }
@@ -915,7 +914,7 @@ public class BIAlgorithmsTest {
     }
 
     @Test
-    public void composition(){
+    public void composition() {
         assertEquals("[AATCC, ATCCA, CAATC, CCAAC, TCCAA]", alg.composition("CAATCCAAC", 5).toString());
 
         try {
@@ -933,7 +932,7 @@ public class BIAlgorithmsTest {
 
             BufferedWriter bw = new BufferedWriter(new FileWriter("/tmp/composition.txt"));
 
-            for (String s: alg.composition(str, k))
+            for (String s : alg.composition(str, k))
                 bw.write(s + "\n");
 
             bw.flush();
@@ -943,6 +942,88 @@ public class BIAlgorithmsTest {
             e.printStackTrace();
         }
     }
-}
 
+    @Test
+    public void pathToGenome() {
+        List<String> patterns = new ArrayList<>();
+
+        patterns.add("ACCGA");
+        patterns.add("CCGAA");
+        patterns.add("CGAAG");
+        patterns.add("GAAGC");
+        patterns.add("AAGCT");
+
+        assertEquals("ACCGAAGCT", alg.pathToGenome(patterns).toString());
+
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/projects/ctd/DI_ETL/LSH/src/main/datasets/dataset_198_3.txt"));
+
+            List<String> ls = new ArrayList<>();
+            String str = "";
+
+            while ((str = br.readLine()) != null) {
+                ls.add(str);
+            }
+
+            assertEquals("CCTGAGGCGGGGTTTATAACTGGCCCGTCCATAAATGGGGCGGAAGCAGACTCCTATGACGCCGCACCTCGTAGCTGGCGTGCCCCTTACACCATCGTTCTTCATGCCGAGTACCGGGAAGCTCAGCGCGGTTTGTATGTAGAGCAATCTATCAATTAGCCAGGTGCGAAACTCCTCCCGTCCCGGGTCTTCCATGAAAAGGACAGCTATATATTGATGACCACCTCGCAAGCAACACTGACGAGTAAAGTAATGATTAGGGAAGCAGGTCACCGTTACCAGACTAGTTGTGTGAGAAACCTTGGAGGTGTAAACATATAGATGGGGCGAATATCGGTTCATAAGCAAGGGGGAAATGCAGTGCACCTTGCGACTTTGCCAACATGCTAGGTTCGTAAGAGCGATAGCCTATCTCTTAGAATAATGCAGCCAGATGGCTGCGCCCTGTAACGGACGGTGCACTCGCGCAAATTGACGCAATACAAGTTACGGGGCATTGCCAAGCGATGCTTACGGTCGCCTCCGCGTTGTCCAACTTGCGTCGCACCGCCGAGTGCATTTTAGAAAACTCGGAGGAATAATCACGTTAGAGTACTGTTGCCCCCATGGATCAATGCGCAATACTAGCCTCAACCTTCATATCCCCCCGTGCAAGAGATCTAAGCAATCTTGACATAGCTCACCCAAATTCATGGGCCGGAAAGCCCGATTATCCACGTGCTCTTCACTCATAGCTGAAGGCACCAGAGAGCGGTAGAGTCCAGCCATCCGCCGGTCCACCTGTATCCAACCTGTTGGGTTACCGACGGGGTAATTTGTTTACTCTAATGCTGACTCACGGGCTGGGCTTTGTGCTCGGATAGAATGCAAGTTTCTGCGAATTCTACTACTAATACAGTGACCAGATAAAATAGAGGACCCACCGTAATATAAAATTAATATAGTGCGGTTGCAGCCGTGCATCCCAAGATCATTGTGCTTACTACTTTCTACTCACCAGACGAAAGGAGTACCCCGGCGCTTACCCGATAACCCCACCGCAATCAGTACAGACGACTACCCAAACGTGACGGTGATTTGTAATCCACTAACACCACAAATAATGACCCGTCGCAGCATGGTTTAAGGACTGAATGTCTAATTGTATCTCGTGAACCCTAGGCCGCGGGGAGCTCTAAGGGATTTGTCCGGTCTAAGCCCTTCGTGAAAACAGTGGCCGGCAAGATGTAAAACCTACAGCGAAACGTTGCCCATTAGGCACCACCGAAACCGCGCAAGCTAAGGCGCGGACAGCATTCATCCTGTGACAAACCATAGTTGATTTGCGTGAGTATCCTTTTCCCAGGCACTAACGCCATTGCTGCCCACACTCTTCTACTTTGTTGGTCGGGCTTCAGAACTGACTAGCAATATGCTCGGCATAATATTTCCACCACCTCGGTTTACACCATAGTGTTGCATGTGTTATTCTGTGACTCACCAACGCAGCCAGTCAGGAGTCGTCTCATGTGTACCGGTCCCACTGCCGCACCAAGCTTCTCACTAAAACGTACAGAGCTGACAAGTACGCTTCCACTTTCACCAGTTGTGCGTGAAACCCAGAGGGCCAGCATGAATCTTCAGTTCACGTTACTTAGTCGGCGAGTGCTTTCATAAAGCTACAGAAGCTTTGACCCATAGCAAGTATGCGGCGATTCTTTTATACATGTTTTGATCCTCCTAGCGCGTCTTAGAAGAGAGTTGACAGGATAGGAATGTGGAAGCTTGACGTACCCCCCCGTGACATTGCAGAAGGATAGTTCGTTGCATGTCAATTATGGAGGACGCGGGGATCCAGAAGTTTTGTTACCGTCATCCCAATCGGCACCTCCATTAAGCTCCACCAATGTAACGGGGGGGTCGAGACATTCGAGGGACAGCGGGACTCATCTAAATGCTCCACTGTACTTCCGGTTTTAAACCCTTGGGCTCCGCTCGCAGCCCGGCTGATATTATCAAAGTTAATCCGTGAGGTGCGCGCCCTAGCCATTAAGGCCCCGACAGCTACGCCGCGGCAGGATCATAACGTTTATGCATGGGTCTCGACCCGGGCTATGTCGGGTAGTCTTTGAGGGCAGAGATAGTTCCACCAGGGGAACTGTTCTAAAACCAAGATGGTCAATATTTGAATCGGCGATCGTCGCAGTGCGAAAGAAATAAAGCAAGGGCTAGTCGTCATAAAATAAATACTGTGACTGCTGCTTGAGCATCGGAGAGAATCCGCGGGTGGGAATAAATTGTCCCCTGTATGGAATGTGTCTTTCCGGAGATTTCCTACGCAGTTACGACGAACTTCGCGCTGCGGTCTTATAATGAGGCTGCTTCACATCCTTATCCAGCGCCAACATGCTTAACGTAGGTTTACAACCAAACGAACGAGAAGCTAGAGTTGCTCGTCTAACTAGGTTGGGGGGCTGTTCGAGGGACACTTGCCACCCGGTATATACCCTGTTCCTTTCTCGACCGGGGCATGTCCCCGCCCGACCGTGGATGATGGGAGGCTATCTGGTCAGCCAAAAGTAGTGGGATTTGGCGCAAATAGGTGTCTGCATTTCGACTCTGTGTGTATGAGTCTTTAACATTGCTCGAGTCCACCTAATTACATGTAGATAGTCAAGGCACAGGGGAAATACAATGACGCATCTCTCGTGTCACCTCAAGTAGATAACGCGCGTCAAGAGGCTGCTAAATCTACGGCGCCTACGATCACCCTTGTCATTACAATACTTGCTGAGTATCCGTGAAAAAAGTTTCAGATTTGTATGGCCTGGGCGTCACTGCTCTGACGTATAGACTCAAGGGGAACTGCACTGTAATTAAGCTAGAGTAAGACGCAAACTCGCATAGTGAGAGAAGGTGAACCTGAAACTACCCCGGACGCGAGTTCAACATTAGCGTGCATCGGTCGTACTGCTCATGAGTTACTGAACGCACTCCCATCCGTAACATCGACGATACGGCTGGGCGACCGACGGCTATATTAAAAGGTTAGCGACCTGCAACGTTATGTCAAAGGCGAACACTAGCATCCCGCCGTCTCTTGACTGTAGGCACTCATACATACGTCTACGGTTGGTGGTGTGCGATCTCACTATTTATTGCGTCTCCTTCGCTAGTTTGGGCTATATCAACTAGTTGGGTGGGATTGAGGTACATGTCTTTTTGATCAGCTTAGCATTACACGCGCCAGGAGTTGAGCAGTTCAGGACCGTTCCCAAGTCACACTCCCACATATCCACGCGGGCGACGCAGTGATTGAATTGTTACTGGTGTGAATCATTATGGTTCGTTCCCGCCGGGGCTGGGCCCGCGCGGTCCACCGGGAACTGGCCATAGTGGAGACGAAGATTCGCTCGGTGGGTATCAGTGTTTCCTAGGATACTCTTCAGACGTAAAGATTCCAGAGGCATGGCGTTAAGCTGTTGAGCCGGCTTTTTGTGAGGCAGCGTGAATGTACACTAGGACAACTTTTTCGCCCGGTGGATATGCTTGTCTTGGTCAGAATAGCAAGCCCAGCTTAGCATATGAGGCGCAGGACGTAATCTCGTGACCGAACTTATTGCTTCTTCTCTAAAGGGCAGGTAGCCCTCATCCTGGACCTAAGCTCAGGACCTTGTCACCCGTGTGCGTACCAAGCTGATTCTGCGTCATTGACTGGTGGTGCGTGTAGGCGAAGGTCAGCATACATTGAAATCTTTAATGGTGATGCTGGCGGACGTCTATAGACCTGAATGCAATAATGAGATACAAGGCCCGAGCTCAATTGTGGTGTCGTTCCCAAGCTCGCGATGCCACACAGAACGAACGACCGTCAATTAGCGCGAGAAAAAATTGATGCCTGTGTTCTCATCCCCCGGCACTATAGTTTGGCCCGGGTTGATTCCGGGTATGCAAGAAGTTGGTTGATAGTCGTGACCTTCGCCGCGCGACCCAGCGCTAGACGGGTATAAAACGCCCAATCCTGTGAGATGCAGCTGGGATCCTGCCCTCTCTGCGCGATAAATCGCATACTAAGGTCCACACCGAGTCGTCGAGTTCACTGGGCAGCGGCCTTCTTACATGAAACGCAGTGAAAAAGTTTTCGGCCCCTCGTCCACAAAATTCAATCTCATAGAGGTTTTCGCAGGTCACGAAACACGAAATTGCCGCATACGAATGGTAGGTGTATAAATGATCAACATCAGTCAAAAGTAGCGCGGTGTGAGCTAGTCCGTAGCTTAGTGGTGGGCTTCATATCCTACCACCTAGTTGGTCCTTTGAGCACGTTGTTTCTGGCCTTTAAATTTCTTTTACTTTGCGCCTTGAGCATGTAAACTGGTTGGAGAGTATACACGGGACTTAAAGGATGACGGGCTGTTACCCTGCCCATCGGGCGCCAAACATTGCGCAGGTGATAAGCATGCCTTAGGCAATCGGCCTTAGCAAGGGTTGACTGATCCTGAAAGCTCCTAGATGGCGGGGAGGGCCACATCGGTCGGGCACTCGACCATGGGGACTTCTTTGGACAATACCAACGCAGTACTATAGAATTCGCGGCCAGGGCTTTCTTACATGACACACCTCCGACATTCAAATGACGGCCGGGCCCGTAGCTGTGGAGTTGCGGTTTGTCGTATGTTCCCCCTAGTTCATCAACGTCGCTCCTTACTTCCTACGGATCTACGCCCAATAAGTCTGCAAGGGTTTATTACTGAGAAATTCATGACTCTCTAGTGTGGTCAATCCCCTTGGAAAGACGAAGATAACTTTCTCCCATGTGCGGAACGAACAATATAACGAAGGAATTCAAGCGAGAGCCTACAGCCGGTATGCCTAAGTGGATTAACGTTACATAAAACAATATCACCTCTGCATGACTCTGCTCTAGCAGGCCTTTTCTATATTAAATCGCCTGGACAGCGTATTCCAGGGCAACCATGACCTGATAGCGGGGTTCGTGGCTTCCATCGCATGTTTGTTTA",
+                    alg.pathToGenome(ls));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Test
+    public void overlapGraph() {
+        List<String> patterns = new ArrayList<>();
+
+
+        patterns.add("ATGCG");
+        patterns.add("GCATG");
+        patterns.add("CATGC");
+        patterns.add("AGGCA");
+        patterns.add("GGCAT");
+        patterns.add("GGCAC");
+
+        assertEquals("{AGGCA=[GGCAT, GGCAC], CATGC=[ATGCG], GGCAT=[GCATG], GCATG=[CATGC]}", alg.overlapGraph(patterns).toString());
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/projects/ctd/DI_ETL/LSH/src/main/datasets/dataset_198_10.txt"));
+
+            List<String> ls = new ArrayList<>();
+            String str = "";
+
+            while ((str = br.readLine()) != null) {
+                ls.add(str);
+            }
+
+            Map<String, List<String>> g =  alg.overlapGraph(ls);
+
+//            assertEquals("", g);
+
+            BufferedWriter bw = new BufferedWriter(new FileWriter("/tmp/overlapGraph.txt"));
+
+            for (String s : g.keySet()) {
+                bw.write(s + " -> " + String.join(",", g.get(s)) + "\n");
+
+            }
+
+            bw.flush();
+
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+
+
+
+
+
+
+}
 

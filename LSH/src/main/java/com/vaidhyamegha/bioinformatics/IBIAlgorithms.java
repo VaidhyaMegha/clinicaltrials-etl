@@ -90,4 +90,8 @@ public interface IBIAlgorithms extends IBIStatistics, IBIAlphabet {
     List<String> GibbsSampler(List<String> dna, int k, int t, int N);
 
     List<String> composition(String text, int k);
+
+    String pathToGenome(List<String> patterns);
+
+    Map<String, List<String>> overlapGraph(List<String> kmers);
 }
