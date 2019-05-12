@@ -98,4 +98,6 @@ public interface IBIAlgorithms extends IBIStatistics, IBIAlphabet {
 //    List<String> hamiltonianPath(List<String> kmers);
 
     String kUniversalString(int k);
+
+    Map<String, List<String>> debruijnGraph(String text, int k);
 }

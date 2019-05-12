@@ -1047,5 +1047,46 @@ public class BIAlgorithmsTest {
         assertEquals("0001110100", alg.kUniversalString(3));
         assertEquals("0000111101100101000", alg.kUniversalString(4));
     }
+
+
+    @Test
+    public void deburuijnGraph() {
+        assertEquals("{AAG=[AGA, AGA], AGA=[GAT], ATT=[TTC], CTA=[TAA], CTC=[TCT], GAT=[ATT], TAA=[AAG], TCT=[CTA, CTC], TTC=[TCT]}",
+                alg.debruijnGraph("AAGATTCTCTAAGA", 4).toString());
+        assertEquals("{ACG=[CGA], ATA=[TAC], TAC=[ACG]}", alg.debruijnGraph("ATACGA", 4).toString());
+        assertEquals("{GG=[GG, GG]}", alg.debruijnGraph("GGGG", 3).toString());
+
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/projects/ctd/DI_ETL/LSH/src/main/datasets/dataset_199_6.txt"));
+
+            String k = br.readLine();
+            StringBuilder text = new StringBuilder();
+            String str = "";
+
+            while ((str = br.readLine()) != null) {
+                text.append(str);
+            }
+
+            Map<String, List<String>> g =  alg.debruijnGraph(text.toString(), Integer.parseInt(k));
+
+//            assertEquals("", g);
+
+            BufferedWriter bw = new BufferedWriter(new FileWriter("/tmp/debruijnGraph.txt"));
+
+            for (String s : g.keySet()) {
+                List<String> ls = g.get(s);
+                Collections.sort(ls);
+                bw.write(s + " -> " + String.join(",", ls) + "\n");
+            }
+
+            bw.flush();
+
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
 

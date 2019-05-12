@@ -1,5 +1,7 @@
 package com.vaidhyamegha.bioinformatics;
 
+import sun.reflect.generics.tree.Tree;
+
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -1203,11 +1205,49 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
             s = sb.substring(sb.length() - k + 1) + s1.charAt(s1.length() - 1);
             if (sb.indexOf(s) == -1) sb.append(s1.charAt(s1.length() - 1));
 
-            if(sb.length() >= (Math.pow(2, k) + k - 1)) break;
+            if(sb.length() == (Math.pow(2, k) + k - 1)) break;
         }
 
         return sb.toString();
     }
 
+
+    /**
+     * De Bruijn Graph from a String Problem: Construct the de Bruijn graph of a string.
+     *      Input: An integer k and a string Text.
+     *      Output: DeBruijnk(Text).
+     */
+    @Override
+    public Map<String, List<String>> debruijnGraph(String text, int k){
+        List<String> c = new ArrayList<>();
+        int len = text.length();
+
+        for (int i = 0; i <= (len - k); i++) c.add(text.substring(i, i + k));
+
+        List<String> kmers  = new ArrayList<>();
+
+        for(String s : c) kmers.add(s.substring(0, k - 1));
+
+        kmers.add(c.get(c.size() - 1).substring(1));
+
+        Map<String, List<String>> g = new TreeMap<>();
+
+        for (int i = 0; i < kmers.size() - 1; i++) {
+            String k1 = kmers.get(i);
+            List<String> l1 = new ArrayList<>();
+
+            String k2 = kmers.get(i + 1);
+            if (k1.substring(1).equals(k2.substring(0, k2.length() - 1))) l1.add(k2);
+
+            if (g.get(k1) != null) {
+                List<String> l2 = g.get(k1);
+                l1.addAll(l2);
+            }
+
+            if(l1.size() > 0) g.put(k1, l1);
+        }
+
+        return g;
+    }
 
 }
