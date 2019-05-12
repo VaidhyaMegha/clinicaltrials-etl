@@ -1105,11 +1105,109 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
                 if(k1.substring(1).equals(k2.substring(0, k2.length() - 1))){
                     m.computeIfAbsent(k1, k -> new ArrayList<>());
 
-                    m.get(k1).add(k2);
+                    if(!m.get(k1).contains(k2)) m.get(k1).add(k2);
                 }
             }
         }
 
         return m;
     }
+
+    /**
+     * Hamiltonian Path Problem: Construct a Hamiltonian path in a graph.
+     *      Input: A directed graph.
+     *      Output: A path visiting every node in the graph exactly once (if such a path exists).
+     */
+//    @Override
+//    public List<String> hamiltonianPath(List<String> kmers){
+//        int len = kmers.size();
+//        List<String> path = new LinkedList<>(kmers);
+//        Map<String, List<String>> g = overlapGraph(kmers);
+//
+//        int i = 1;
+//        while (i < len - 1){
+//            String k0 = path.get(i - 1);
+//            String k1 = path.get(i);
+//            String k2 = path.get(i + 1);
+//
+//            List<String> l0 = g.get(k0);
+//            List<String> l1 = g.get(k1);
+//            List<String> l2 = g.get(k2);
+//
+//            if (l0 != null && l0.contains(k1) && l1 != null && l1.contains(k2)){
+//                i++;
+//            } else if (l0 != null && l0.contains(k2) && l2 != null && l2.contains(k1)) {
+//                path.set(i, k2);
+//                path.set(i + 1, k1);
+//                i++;
+//            } else if (l1 != null && l1.contains(k0) && l0 != null && l0.contains(k2)) {
+//                path.set(i -1, k1);
+//                path.set(i, k0);
+//                i++;
+//            } else if (l1 != null && l1.contains(k2) && l2 != null && l2.contains(k0)) {
+//                path.set(i -1, k1);
+//                path.set(i, k2);
+//                path.set(i + 1, k0);
+//                i++;
+//            } else if (l2 != null && l2.contains(k0) && l1 != null && l1.contains(k0)) {
+//                path.set(i - 1, k2);
+//                path.set(i + 1, k0);
+//                i++;
+//            } else if (l2 != null && l2.contains(k0) && l0 != null && l0.contains(k1)) {
+//                path.set(i -1, k2);
+//                path.set(i, k0);
+//                path.set(i + 1, k1);
+//                i++;
+//            } else {
+//                i++;
+//            }
+//        }
+//
+//        return path;
+//    }
+
+    /**
+     * A binary string is a string composed only of 0’s and 1’s; a binary string is k-universal if it contains every binary
+     * k-mer exactly once.
+     *
+     * For example, 0001110100 is a 3-universal string, as it contains each of the eight binary
+     * 3-mers (000, 001, 011, 111, 110, 101, 010, and 100) exactly once.
+     *
+     * Construct a 4-universal string.
+     */
+    @Override
+    public String kUniversalString(int k){
+        StringBuilder sb = new StringBuilder();
+
+        List<String> ls = new ArrayList<>();
+
+        for (int i = 0 ; i < (Math.pow(2, k)) ; i++)
+            ls.add(String.format("%" + k + "s", Integer.toBinaryString(i)).replace(' ', '0'));
+
+        Map<String, List<String>> g = overlapGraph(ls);
+        String s = String.format("%" + k + "s", "0").replace(' ', '0');
+        sb.append(s);
+
+        while(true) {
+            List<String> temp = g.get(s);
+            String s1 = "";
+
+            if (sb.indexOf(temp.get(1)) == -1 && !s.equals(temp.get(1))) {
+                s1 =  temp.get(1);
+            } else if (sb.indexOf(temp.get(0)) == -1 && !s.equals(temp.get(0))) {
+                s1 =  temp.get(0);
+            }
+
+            if ("".equals(s1)) throw new RuntimeException("Don't expect this");
+
+            s = sb.substring(sb.length() - k + 1) + s1.charAt(s1.length() - 1);
+            if (sb.indexOf(s) == -1) sb.append(s1.charAt(s1.length() - 1));
+
+            if(sb.length() >= (Math.pow(2, k) + k - 1)) break;
+        }
+
+        return sb.toString();
+    }
+
+
 }

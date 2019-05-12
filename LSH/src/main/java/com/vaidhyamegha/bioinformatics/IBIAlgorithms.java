@@ -94,4 +94,8 @@ public interface IBIAlgorithms extends IBIStatistics, IBIAlphabet {
     String pathToGenome(List<String> patterns);
 
     Map<String, List<String>> overlapGraph(List<String> kmers);
+
+//    List<String> hamiltonianPath(List<String> kmers);
+
+    String kUniversalString(int k);
 }

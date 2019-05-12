@@ -1019,11 +1019,33 @@ public class BIAlgorithmsTest {
 
     }
 
+//    @Test
+//    public void hamiltonianPath() {
+//        List<String> kmers = new ArrayList<>();
+//
+//        kmers.add("AAT");
+//        kmers.add("ATG");
+//        kmers.add("ATG");
+//        kmers.add("ATG");
+//        kmers.add("CAT");
+//        kmers.add("CCA");
+//        kmers.add("GAT");
+//        kmers.add("GCC");
+//        kmers.add("GGA");
+//        kmers.add("GGG");
+//        kmers.add("GTT");
+//        kmers.add("TAA");
+//        kmers.add("TGC");
+//        kmers.add("TGG");
+//        kmers.add("TGT");
+//
+//        assertEquals("[]", alg.hamiltonianPath(kmers).toString());
+//    }
 
-
-
-
-
-
+    @Test
+    public void kUniversalString() {
+        assertEquals("0001110100", alg.kUniversalString(3));
+        assertEquals("0000111101100101000", alg.kUniversalString(4));
+    }
 }
 
