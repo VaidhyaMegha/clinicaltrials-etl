@@ -1250,4 +1250,41 @@ public class BIAlgorithmsSequential implements IBIAlgorithms {
         return g;
     }
 
+
+    /**
+     * DeBruijn Graph from k-mers Problem: Construct the de Bruijn graph from a set of k-mers.
+     *      Input: A collection of k-mers Patterns.
+     *      Output: The adjacency list of the de Bruijn graph DeBruijn(Patterns).
+     */
+    @Override
+    public Map<String, List<String>> debruijnGraph(List<String> kmers){
+        List<String> nodes  = new ArrayList<>();
+        int k = kmers.get(0).length();
+
+        for(String s : kmers) {
+            String node = s.substring(0, k - 1);
+            if(!nodes.contains(node)) nodes.add(node);
+
+            node = s.substring(1);
+            if(!nodes.contains(node)) nodes.add(node);
+        }
+
+
+        Map<String, List<String>> g = new TreeMap<>();
+
+        for (String s : kmers) {
+            String prefix = s.substring(0, k-1);
+            String suffix = s.substring(1);
+
+            g.computeIfAbsent(prefix, k1 -> new ArrayList<>());
+
+            g.get(prefix).add(suffix);
+
+        }
+
+
+        return g;
+    }
+
+
 }

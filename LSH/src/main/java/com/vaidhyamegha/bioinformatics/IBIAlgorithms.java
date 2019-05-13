@@ -100,4 +100,6 @@ public interface IBIAlgorithms extends IBIStatistics, IBIAlphabet {
     String kUniversalString(int k);
 
     Map<String, List<String>> debruijnGraph(String text, int k);
+
+    Map<String, List<String>> debruijnGraph(List<String> kmers);
 }

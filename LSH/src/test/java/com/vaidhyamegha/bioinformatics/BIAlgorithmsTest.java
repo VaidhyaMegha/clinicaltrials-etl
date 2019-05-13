@@ -1088,5 +1088,49 @@ public class BIAlgorithmsTest {
         }
 
     }
+
+
+    @Test
+    public void deburuijnGraphKmers() {
+        List<String> kmers = new ArrayList<>();
+
+        kmers.add("GAGG");
+        kmers.add("CAGG");
+        kmers.add("GGGG");
+        kmers.add("GGGA");
+        kmers.add("CAGG");
+        kmers.add("AGGG");
+        kmers.add("GGAG");
+
+
+        assertEquals("{AGG=[GGG], CAG=[AGG, AGG], GAG=[AGG], GGA=[GAG], GGG=[GGG, GGA]}", alg.debruijnGraph(kmers).toString());
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("/home/mahalaxmi/projects/ctd/DI_ETL/LSH/src/main/datasets/dataset_200_8.txt"));
+            List<String> ls = new ArrayList<>();
+            String str = "";
+
+            while ((str = br.readLine()) != null) {
+                ls.add(str);
+            }
+
+            Map<String, List<String>> g =  alg.debruijnGraph(ls);
+
+//            assertEquals("", g);
+
+            BufferedWriter bw = new BufferedWriter(new FileWriter("/tmp/debruijnGraphKmers.txt"));
+
+            for (String s : g.keySet()) {
+                bw.write(s + " -> " + String.join(",", g.get(s)) + "\n");
+            }
+
+            bw.flush();
+
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
 

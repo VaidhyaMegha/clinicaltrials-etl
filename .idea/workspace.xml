@@ -55,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="433">
-              <caret line="101" column="30" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
+              <caret line="103" column="30" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="1056" column="46" selection-start-line="1056" selection-start-column="46" selection-end-line="1056" selection-end-column="46" />
+              <caret line="1105" column="98" selection-start-line="1105" selection-start-column="98" selection-end-line="1105" selection-end-column="98" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,8 +112,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="1234" column="44" selection-start-line="1234" selection-start-column="44" selection-end-line="1234" selection-end-column="44" />
+            <state relative-caret-position="463">
+              <caret line="1284" lean-forward="true" selection-start-line="1284" selection-end-line="1284" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -293,8 +293,8 @@
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/DNAAlphabetUtility.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" />
         <option value="/tmp/debruijnGraph.txt" />
+        <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java" />
         <option value="$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java" />
         <option value="$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java" />
       </list>
@@ -452,7 +452,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BIAlgorithmsTest.deburuijnGraph">
+  <component name="RunManager" selected="JUnit.BIAlgorithmsTest.deburuijnGraphKmers">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -519,7 +519,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BIAlgorithmsTest.hamiltonianPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BIAlgorithmsTest.deburuijnGraphKmers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BioInformatics" />
       <extension name="coverage">
         <pattern>
@@ -529,7 +529,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vaidhyamegha.bioinformatics" />
       <option name="MAIN_CLASS_NAME" value="com.vaidhyamegha.bioinformatics.BIAlgorithmsTest" />
-      <option name="METHOD_NAME" value="hamiltonianPath" />
+      <option name="METHOD_NAME" value="deburuijnGraphKmers" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -721,17 +721,17 @@
     <list>
       <item itemvalue="JUnit.BIAlgorithmsTest" />
       <item itemvalue="JUnit.BIAlgorithmsTest.overlapGraph" />
-      <item itemvalue="JUnit.BIAlgorithmsTest.hamiltonianPath" />
       <item itemvalue="JUnit.BIAlgorithmsTest.kUniversalString" />
       <item itemvalue="JUnit.BIAlgorithmsTest.deburuijnGraph" />
+      <item itemvalue="JUnit.BIAlgorithmsTest.deburuijnGraphKmers" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BIAlgorithmsTest.deburuijnGraphKmers" />
         <item itemvalue="JUnit.BIAlgorithmsTest.deburuijnGraph" />
         <item itemvalue="JUnit.BIAlgorithmsTest" />
         <item itemvalue="JUnit.BIAlgorithmsTest.overlapGraph" />
         <item itemvalue="JUnit.BIAlgorithmsTest.kUniversalString" />
-        <item itemvalue="JUnit.BIAlgorithmsTest.hamiltonianPath" />
       </list>
     </recent_temporary>
   </component>
@@ -1083,44 +1083,44 @@
       <workItem from="1557580196382" duration="4054000" />
       <workItem from="1557629844708" duration="13026000" />
       <workItem from="1557665528129" duration="5613000" />
-      <workItem from="1557679868746" duration="16235000" />
+      <workItem from="1557679868746" duration="25166000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BIAlgorithmsTest_deburuijnGraph - 2019.05.13 at 02h 53m 14s.xml">
-      <configuration name="BIAlgorithmsTest.deburuijnGraph" configurationId="JUnit" />
+    <history-entry file="BIAlgorithmsTest_deburuijnGraphKmers - 2019.05.13 at 04h 57m 46s.xml">
+      <configuration name="BIAlgorithmsTest.deburuijnGraphKmers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BIAlgorithmsTest_deburuijnGraph - 2019.05.13 at 02h 53m 34s.xml">
-      <configuration name="BIAlgorithmsTest.deburuijnGraph" configurationId="JUnit" />
+    <history-entry file="BIAlgorithmsTest_deburuijnGraphKmers - 2019.05.13 at 04h 58m 17s.xml">
+      <configuration name="BIAlgorithmsTest.deburuijnGraphKmers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BIAlgorithmsTest_deburuijnGraph - 2019.05.13 at 02h 54m 18s.xml">
-      <configuration name="BIAlgorithmsTest.deburuijnGraph" configurationId="JUnit" />
+    <history-entry file="BIAlgorithmsTest_deburuijnGraphKmers - 2019.05.13 at 04h 58m 53s.xml">
+      <configuration name="BIAlgorithmsTest.deburuijnGraphKmers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BIAlgorithmsTest_deburuijnGraph - 2019.05.13 at 02h 54m 40s.xml">
-      <configuration name="BIAlgorithmsTest.deburuijnGraph" configurationId="JUnit" />
+    <history-entry file="BIAlgorithmsTest_deburuijnGraphKmers - 2019.05.13 at 04h 59m 23s.xml">
+      <configuration name="BIAlgorithmsTest.deburuijnGraphKmers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BIAlgorithmsTest_deburuijnGraph - 2019.05.13 at 02h 55m 42s.xml">
-      <configuration name="BIAlgorithmsTest.deburuijnGraph" configurationId="JUnit" />
+    <history-entry file="BIAlgorithmsTest_deburuijnGraphKmers - 2019.05.13 at 05h 00m 56s.xml">
+      <configuration name="BIAlgorithmsTest.deburuijnGraphKmers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BIAlgorithmsTest_deburuijnGraph - 2019.05.13 at 02h 56m 32s.xml">
-      <configuration name="BIAlgorithmsTest.deburuijnGraph" configurationId="JUnit" />
+    <history-entry file="BIAlgorithmsTest_deburuijnGraphKmers - 2019.05.13 at 05h 03m 21s.xml">
+      <configuration name="BIAlgorithmsTest.deburuijnGraphKmers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BIAlgorithmsTest_deburuijnGraph - 2019.05.13 at 02h 58m 48s.xml">
-      <configuration name="BIAlgorithmsTest.deburuijnGraph" configurationId="JUnit" />
+    <history-entry file="BIAlgorithmsTest_deburuijnGraphKmers - 2019.05.13 at 05h 06m 24s.xml">
+      <configuration name="BIAlgorithmsTest.deburuijnGraphKmers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BIAlgorithmsTest_deburuijnGraph - 2019.05.13 at 02h 59m 22s.xml">
-      <configuration name="BIAlgorithmsTest.deburuijnGraph" configurationId="JUnit" />
+    <history-entry file="BIAlgorithmsTest_deburuijnGraphKmers - 2019.05.13 at 05h 08m 36s.xml">
+      <configuration name="BIAlgorithmsTest.deburuijnGraphKmers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BIAlgorithmsTest_deburuijnGraph - 2019.05.13 at 02h 59m 35s.xml">
-      <configuration name="BIAlgorithmsTest.deburuijnGraph" configurationId="JUnit" />
+    <history-entry file="BIAlgorithmsTest_deburuijnGraphKmers - 2019.05.13 at 05h 09m 55s.xml">
+      <configuration name="BIAlgorithmsTest.deburuijnGraphKmers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BIAlgorithmsTest_deburuijnGraph - 2019.05.13 at 02h 59m 43s.xml">
-      <configuration name="BIAlgorithmsTest.deburuijnGraph" configurationId="JUnit" />
+    <history-entry file="BIAlgorithmsTest_deburuijnGraphKmers - 2019.05.13 at 05h 10m 21s.xml">
+      <configuration name="BIAlgorithmsTest.deburuijnGraphKmers" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1817316000" />
+    <option name="totallyTimeSpent" value="1826247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -1319,12 +1319,6 @@
           <line>1196</line>
           <properties />
           <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java</url>
-          <line>1243</line>
-          <properties />
-          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1570,20 +1564,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java">
+    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="1056" column="46" selection-start-line="1056" selection-start-column="46" selection-end-line="1056" selection-end-column="46" />
+        <state relative-caret-position="433">
+          <caret line="103" column="30" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlgorithms.java">
+    <entry file="file://$PROJECT_DIR$/LSH/src/test/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="101" column="30" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
+        <state relative-caret-position="184">
+          <caret line="1105" column="98" selection-start-line="1105" selection-start-column="98" selection-end-line="1105" selection-end-column="98" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1592,8 +1586,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/BIAlgorithmsSequential.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="1234" column="44" selection-start-line="1234" selection-start-column="44" selection-end-line="1234" selection-end-column="44" />
+        <state relative-caret-position="463">
+          <caret line="1284" lean-forward="true" selection-start-line="1284" selection-end-line="1284" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
