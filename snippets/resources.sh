@@ -12,3 +12,4 @@ wget --load-cookies cookies.txt \
      http://server.com/interesting/article.php
 
 # find /home/sandeep/temp/AllPublicXMLs/ | grep "json$" | tee /dev/tty |  xargs -I {} cat {} | jq ".id_info.nct_id" > ~/temp/processed.log
+    
