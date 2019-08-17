@@ -162,7 +162,7 @@ if [[ ${download} == 'yes' ]]; then
     aws s3 cp ${s3_perct_bucket}json ${html_dir}perct/studies/json --recursive
     aws s3 cp ${s3_slctr_bucket}json ${html_dir}slctr/studies/json --recursive
     aws s3 cp ${s3_isrctn_bucket}json ${html_dir}isrctn/studies/json --recursive
-    aws s3 cp ${s3_tctr_bucket}json ${html_dir}tctr/studies/json --recursive
+#    aws s3 cp ${s3_tctr_bucket}json ${html_dir}tctr/studies/json --recursive
     aws s3 cp ${s3_cristr_bucket}json ${html_dir}cristr/studies/json --recursive
 fi
 #########################    CT    ######################################
@@ -306,17 +306,17 @@ done
 
 
 #########################   TCTR   #####################################
-find ${html_dir}tctr/studies/json/ -type f -name "*.json"  | while read f
-do
+# find ${html_dir}tctr/studies/json/ -type f -name "*.json"  | while read f
+# do
 
-jq -c '{"trialid":.main.trial_id,"secondary_id":[.secondary_ids[].secondary_id],"Date_of_Registration":.main.date_registration,"Public_Title":.main.public_title,"Scientific_Title":.main.scientific_title,"study_type":.main.study_type,"date_of_first_enrollment":.main.date_enrolment,"RecruitmentStatus":.main.recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [.main.primary_sponsor],   "person": [],"address":[]},"SecondarySponsors":{"name": [.secondary_sponsor[].sponsor_name],   "person": [],"address":[]}, "Contact":[], "registry": "TCTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
+# jq -c '{"trialid":.main.trial_id,"secondary_id":[.secondary_ids[].secondary_id],"Date_of_Registration":.main.date_registration,"Public_Title":.main.public_title,"Scientific_Title":.main.scientific_title,"study_type":.main.study_type,"date_of_first_enrollment":.main.date_enrolment,"RecruitmentStatus":.main.recruitment_status,"completionDate":"" ,"PrimarySponsors":{"name": [.main.primary_sponsor],   "person": [],"address":[]},"SecondarySponsors":{"name": [.secondary_sponsor[].sponsor_name],   "person": [],"address":[]}, "Contact":[], "registry": "TCTR", "source_json": tojson}' ${f} >> ${html_dir}output/json/utdm_json.json
 
-done
+# done
 
 
-  if [ -d ${html_dir}tctr ]; then
-        rm -rf ${html_dir}tctr
-  fi
+  # if [ -d ${html_dir}tctr ]; then
+    #    rm -rf ${html_dir}tctr
+  # fi
 
 #########################   ISRCTN   #####################################
 find ${html_dir}isrctn/studies/json/ -type f -name "*.json"  | while read f

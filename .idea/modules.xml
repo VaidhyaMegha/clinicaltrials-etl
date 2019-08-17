@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LSH/BioInformatics.iml" filepath="$PROJECT_DIR$/LSH/BioInformatics.iml" />
       <module fileurl="file://$PROJECT_DIR$/DI_ETL.iml" filepath="$PROJECT_DIR$/DI_ETL.iml" />
       <module fileurl="file://$PROJECT_DIR$/FileProcessor/FileProcessor.iml" filepath="$PROJECT_DIR$/FileProcessor/FileProcessor.iml" />
       <module fileurl="file://$PROJECT_DIR$/GraphProcessor/GraphProcessor.iml" filepath="$PROJECT_DIR$/GraphProcessor/GraphProcessor.iml" />
