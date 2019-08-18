@@ -4,9 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/batch/UTDM/global_registry.sh" beforeDir="false" afterPath="$PROJECT_DIR$/batch/UTDM/global_registry.sh" afterDir="false" />
-    </list>
+    <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
     <ignored path="$PROJECT_DIR$/GraphProcessor/target/" />
@@ -49,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch/UTDM/global_registry.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="808">
-              <caret line="348" lean-forward="true" selection-start-line="348" selection-end-line="348" />
+            <state relative-caret-position="4065">
+              <caret line="271" column="20" lean-forward="true" selection-start-line="271" selection-start-column="20" selection-end-line="271" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -127,7 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Clump</find>
       <find>int t</find>
       <find>subtle</find>
       <find>Collectors</find>
@@ -157,9 +154,9 @@
       <find>source_support</find>
       <find>source_name</find>
       <find>brtr</find>
+      <find>ct/st</find>
     </findStrings>
     <replaceStrings>
-      <replace>&quot;|&quot;</replace>
       <replace>\</replace>
       <replace>document.getElementById(&quot;</replace>
       <replace>` string,\n</replace>
@@ -189,6 +186,7 @@
       <replace>T</replace>
       <replace>ethics_reviews</replace>
       <replace>ethics_review</replace>
+      <replace>jq -c -R 'fromjson? |</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/scripts/athena</dir>
@@ -1095,7 +1093,7 @@
       <workItem from="1563934581269" duration="1208000" />
       <workItem from="1563955172063" duration="47000" />
       <workItem from="1566047601386" duration="1721000" />
-      <workItem from="1566106247588" duration="5919000" />
+      <workItem from="1566106247588" duration="8035000" />
     </task>
     <servers />
   </component>
@@ -1132,7 +1130,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1853116000" />
+    <option name="totallyTimeSpent" value="1855232000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -1534,8 +1532,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/UTDM/global_registry.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="808">
-          <caret line="348" lean-forward="true" selection-start-line="348" selection-end-line="348" />
+        <state relative-caret-position="4065">
+          <caret line="271" column="20" lean-forward="true" selection-start-line="271" selection-start-column="20" selection-end-line="271" selection-end-column="20" />
         </state>
       </provider>
     </entry>

@@ -162,7 +162,7 @@ if [[ ${download} == 'yes' ]]; then
     aws s3 cp ${s3_perct_bucket}json ${html_dir}perct/studies/json --recursive
     aws s3 cp ${s3_slctr_bucket}json ${html_dir}slctr/studies/json --recursive
     aws s3 cp ${s3_isrctn_bucket}json ${html_dir}isrctn/studies/json --recursive
-#    aws s3 cp ${s3_tctr_bucket}json ${html_dir}tctr/studies/json --recursive
+    aws s3 cp ${s3_tctr_bucket}json ${html_dir}tctr/studies/json --recursive
     aws s3 cp ${s3_cristr_bucket}json ${html_dir}cristr/studies/json --recursive
 fi
 #########################    CT    ######################################
