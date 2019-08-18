@@ -48,14 +48,22 @@ sed -i 's/},"secondary_sponsor"/\]},"secondary_sponsor"/g' ${3}
 sed -i 's/\]\]},"secondary_sponsor"/\]},"secondary_sponsor"/g' ${3}
 sed -i 's/"secondary_sponsor":{"sponsor_name":/"secondary_sponsor":{"sponsor_name":\[/g' ${3}
 sed -i 's/"secondary_sponsor":{"sponsor_name":\[\[/"secondary_sponsor":{"sponsor_name":\[/g' ${3}
+
 sed -i 's/},"secondary_ids"/\]},"secondary_ids"/g' ${3}
 sed -i 's/\]\]},"secondary_ids"/\]},"secondary_ids"/g' ${3}
 sed -i 's/"secondary_ids":{"secondary_id":/"secondary_ids":{"secondary_id":\[/g' ${3}
 sed -i 's/"secondary_ids":{"secondary_id":\[\[/"secondary_ids":{"secondary_id":\[/g' ${3}
+
 sed -i 's/},"source_support"/\]},"source_support"/g' ${3}
 sed -i 's/\]\]},"source_support"/\]},"source_support"/g' ${3}
 sed -i 's/"source_support":{"source_name":/"source_support":{"source_name":\[/g' ${3}
 sed -i 's/"source_support":{"source_name":\[\[/"source_support":{"source_name":\[/g' ${3}
+
+sed -i 's/},"ethics_reviews"/\]},"ethics_reviews"/g' ${3}
+sed -i 's/\]\]},"ethics_reviews"/\]},"ethics_reviews"/g' ${3}
+sed -i 's/"ethics_reviews":{"ethics_review":/"ethics_reviews":{"ethics_review":\[/g' ${3}
+sed -i 's/"ethics_reviews":{"ethics_review":\[\[/"ethics_reviews":{"ethics_review":\[/g' ${3}
+
 sed -i 's/}}$/@/g' ${3}
 sed -i 's/\]}$/\]}}/g' ${3}
 sed -i 's/\]@$/\]}}/g' ${3}
