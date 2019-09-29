@@ -45,6 +45,8 @@
     <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-dynamodb:1.11.207" level="project" />
     <orderEntry type="library" name="Maven: com.amazonaws:aws-lambda-java-core:1.1.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.1" level="project" />
+    <orderEntry type="library" name="R User Library" level="project" />
+    <orderEntry type="library" name="R Skeletons" level="application" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="renderExternalDocumentation" value="true" />
