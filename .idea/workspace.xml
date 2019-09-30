@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="41669499-7263-4583-82f4-b7718e94fe80" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DI_ETL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DI_ETL.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileProcessor/FileProcessor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FileProcessor/FileProcessor.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphProcessor/GraphProcessor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GraphProcessor/GraphProcessor.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StringSearch/StringSearch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StringSearch/StringSearch.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/batch/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/container.iml" beforeDir="false" afterPath="$PROJECT_DIR$/batch/container.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/query.iml" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/query.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/Dockerfile" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/FileProcessor/target/" />
@@ -54,35 +48,35 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/nrhm-mis.nic.in/convert2csv.sh">
+        <entry file="file://$PROJECT_DIR$/batch/actrn/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="675">
+              <caret line="45" selection-start-line="45" selection-end-line="54" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch/actrn/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/batch/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="793">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/batch/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch/actrn/wrapper.sh">
+        <entry file="file://$PROJECT_DIR$/batch/Makefile">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch/brtr/wrapper.sh">
+        <entry file="file://$PROJECT_DIR$/ref.puml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/study.json">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -139,12 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>subtle</find>
-      <find>Collectors</find>
-      <find>throw</find>
-      <find>Algorithms.</find>
-      <find>static</find>
-      <find>getF</find>
       <find>'T'</find>
       <find>ArrayList</find>
       <find>Assert.</find>
@@ -169,10 +157,14 @@
       <find>brtr</find>
       <find>ct/st</find>
       <find>FROM</find>
+      <find># Copy python,json and shell scripts</find>
+      <find>From [^\n]*</find>
+      <find>\n\n</find>
+      <find>SHELL [&quot;/bin/bash&quot;, &quot;-c&quot;]</find>
+      <find>SHELL [&quot;/bin/bash&quot;, &quot;-c&quot;, &quot;source /root/.gvm/scripts/gvm &amp;&amp;  gvm install go1.9 --binary &amp;&amp;  gvm use go1.9 &amp;&amp;  go get -u -f github.com/ericchiang/pup&quot;]</find>
+      <find>\n\n+</find>
     </findStrings>
     <replaceStrings>
-      <replace>\</replace>
-      <replace>document.getElementById(&quot;</replace>
       <replace>` string,\n</replace>
       <replace>data-cloud</replace>
       <replace>`</replace>
@@ -201,6 +193,8 @@
       <replace>ethics_reviews</replace>
       <replace>ethics_review</replace>
       <replace>jq -c -R 'fromjson? |</replace>
+      <replace>\n</replace>
+      <replace>\n\n</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/scripts/athena</dir>
@@ -219,7 +213,6 @@
         <option value="$PROJECT_DIR$/batch/slctr/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/jprn/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/irct/Dockerfile" />
-        <option value="$PROJECT_DIR$/batch/actrn/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/hsdlc/global_registry.sh" />
         <option value="$PROJECT_DIR$/batch/chictr/html_json.sh" />
         <option value="$PROJECT_DIR$/batch/actrn/Download_html.sh" />
@@ -266,6 +259,7 @@
         <option value="$PROJECT_DIR$/batch/brtr/test.json" />
         <option value="$PROJECT_DIR$/batch/brtr/html_json.sh" />
         <option value="$PROJECT_DIR$/batch/UTDM/global_registry.sh" />
+        <option value="$PROJECT_DIR$/batch/actrn/Dockerfile" />
         <option value="$PROJECT_DIR$/batch/Dockerfile" />
       </list>
     </option>
@@ -320,48 +314,34 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="vaidhyamegha-etl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vaidhyamegha-etl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vaidhyamegha-etl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vaidhyamegha-etl" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vaidhyamegha-etl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vaidhyamegha-etl" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-              <item name="actrn" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="BioInformatics" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="vaidhyamegha-etl" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/projects/VaidhyaMegha/vaidhyamegha-etl" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="DI_ETL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DI_ETL" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="vaidhyamegha-etl" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/projects/VaidhyaMegha/vaidhyamegha-etl" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="batch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="vaidhyamegha-etl" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/projects/VaidhyaMegha/vaidhyamegha-etl" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="batch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="actrn" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1110,7 +1090,10 @@
       <workItem from="1567667199080" duration="2888000" />
       <workItem from="1567746611330" duration="951000" />
       <workItem from="1567828908609" duration="1575000" />
-      <workItem from="1569747447273" duration="1404000" />
+      <workItem from="1569747447273" duration="2040000" />
+      <workItem from="1569759351908" duration="1032000" />
+      <workItem from="1569814712159" duration="507000" />
+      <workItem from="1569815228068" duration="3542000" />
     </task>
     <servers />
   </component>
@@ -1147,13 +1130,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1864768000" />
+    <option name="totallyTimeSpent" value="1870485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4832" visible="true" weight="0.21108033" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4832" visible="true" weight="0.21939059" />
       <window_info id="Structure" order="1" sideWeight="0.5168" side_tool="true" weight="0.2412839" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -1166,7 +1149,7 @@
       <window_info id="Learn" order="10" />
       <window_info id="DBHelper" order="11" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32464713" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3243243" />
       <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Run" order="4" sideWeight="0.498618" weight="0.34594595" />
@@ -1193,7 +1176,7 @@
       <window_info anchor="right" id="Ant Build" order="6" weight="0.2498618" />
       <window_info anchor="right" id="SciView" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="PlantUML" order="9" weight="0.32991913" />
+      <window_info anchor="right" id="PlantUML" order="9" weight="0.32963988" />
       <window_info anchor="right" id="Data View" order="10" />
       <window_info anchor="right" id="Database" order="11" weight="0.32946378" />
       <window_info anchor="right" id="Maven Projects" order="12" side_tool="true" weight="0.32946378" />
@@ -1403,10 +1386,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIAlphabet.java" />
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/java/com/vaidhyamegha/bioinformatics/IBIStatistics.java" />
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo1-250.png" />
-    <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo2-250-MEME.png" />
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo3.png" />
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo4-100.png" />
     <entry file="file://$PROJECT_DIR$/LSH/src/main/notes/logo6-1000.png" />
@@ -1498,9 +1477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/Makefile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/snippets/resources.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1523,6 +1499,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/brtr/wrapper.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/nrhm-mis.nic.in/convert2csv.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/actrn/Download_html.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/container.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/actrn/wrapper.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/UTDM/global_registry.sql">
@@ -1552,25 +1548,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/nrhm-mis.nic.in/convert2csv.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/ref.puml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch/actrn/wrapper.sh">
+    <entry file="file://$PROJECT_DIR$/study.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/actrn/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" selection-start-line="45" selection-end-line="54" selection-end-column="50" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+        <state relative-caret-position="793">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch/Makefile">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
