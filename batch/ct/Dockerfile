@@ -27,4 +27,4 @@ RUN chmod +x /usr/local/dataintegration/xml_json.sh
 RUN chmod +x /usr/local/dataintegration/xml_json_test.sh
 
 
-
+CMD bash "/usr/local/dataintegration/wrapper.sh"  "AllPublicXMLs" "yes"
