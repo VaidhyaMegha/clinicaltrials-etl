@@ -58,5 +58,6 @@ RUN chmod +x /usr/local/dataintegration/wrapper.sh
 RUN chmod +x /usr/local/dataintegration/html_json.js
 RUN chmod +x /usr/local/dataintegration/html_json.sh
 
+CMD ["/bin/bash", "/usr/local/dataintegration/wrapper.sh", "/usr/local/dataintegration", "yes"]
 
 
