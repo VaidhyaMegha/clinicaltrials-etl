@@ -54,5 +54,5 @@ RUN chmod +x /usr/local/dataintegration/etl/xml_json.js
 RUN chmod +x /usr/local/dataintegration/xml_json.sh
 RUN chmod +x /usr/local/dataintegration/wrapper.sh
 
-
+CMD ["/bin/bash", "/usr/local/dataintegration/wrapper.sh", "/usr/local/dataintegration", "yes"]
 
