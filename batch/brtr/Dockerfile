@@ -57,4 +57,5 @@ COPY wrapper.sh /usr/local/dataintegration/
 RUN chmod +x /usr/local/dataintegration/html_json.sh
 RUN chmod +x /usr/local/dataintegration/wrapper.sh
 
+CMD ["/bin/bash", "/usr/local/dataintegration/wrapper.sh", "/usr/local/dataintegration", "yes"]
 
