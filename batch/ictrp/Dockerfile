@@ -55,7 +55,6 @@ CMD ["/sbin/my_init", "/bin/bash"]
 COPY html_json.js /usr/local/dataintegration/
 COPY html_json.sh /usr/local/dataintegration/
 COPY wrapper.sh /usr/local/dataintegration/
-COPY .bash_profile /
 
 RUN chmod +x /usr/local/dataintegration/wrapper.sh
 
